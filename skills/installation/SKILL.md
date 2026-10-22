@@ -8,7 +8,8 @@ description: Installe et personnalise l'AIOS. Reprend le profil déposé dans in
 1. Lis `README.md` et `AGENTS.md`.
 2. Vérifie les liens `.claude/skills` et `.agents/skills` ; s'ils manquent, lance `systeme/scripts/liens.sh`.
 3. Si `.env` manque, copie `.env.example` en `.env`.
-4. Cherche un profil dans `inbox/` : un fichier dont l'en-tête dit `type: profil` (gabarit : `references/profil.md`).
+4. Si le distant `origin` est encore le socle (l'adresse du `README.md`), renomme-le `socle` : on ne pousse jamais dans le socle.
+5. Le profil : celui que l'utilisateur t'a donné (un chemin, une pièce jointe), que tu copies dans `inbox/` ; sinon un fichier de `inbox/` dont l'en-tête dit `type: profil` (gabarit : `references/profil.md`).
 
 ## Avec un profil
 - Reprends chaque réponse là où elle fait foi (`references/questions.md`, colonne « Où l'écrire »). Montre ce que tu vas écrire, bloc par bloc, et fais valider.
@@ -40,3 +41,4 @@ description: Installe et personnalise l'AIOS. Reprend le profil déposé dans in
 - 2026-10-22 · création · questions imposées pour remplir AGENTS.md
 - 2026-10-22 · l'entretien passe par grill-me · une seule façon de poser des questions
 - 2026-10-22 · reprise d'un profil déposé dans inbox/ · préparer avant un atelier, installer ensuite
+- 2026-10-22 · profil donné avec l'adresse du socle, distant renommé `socle` · installer en une phrase

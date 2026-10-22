@@ -3,6 +3,21 @@
 Un workspace agentique portable : les mêmes fichiers servent Claude Code, Codex et Gemini CLI.
 Seule la commande qui lance l'agent change.
 
+## Installer en une phrase
+
+Dans Claude Code (ou un autre agent qui a accès à tes fichiers), donne l'adresse du socle et ton profil :
+
+> Installe-moi l'AIOS : https://github.com/thomrichard/aios-V2. Mon profil est ici : <chemin du fichier>. Installe-le dans <dossier>.
+
+L'agent fait tout : il récupère le socle, dépose ton profil dans `inbox/` et lance l'installation. Sans profil, il te pose les questions.
+
+### Pour l'agent qui installe
+
+1. Clone le socle dans le dossier choisi par l'utilisateur (par défaut `~/aios`).
+2. Renomme le distant `origin` en `socle` : on ne pousse jamais dans le socle, et `git pull socle main` récupérera plus tard ses mises à jour.
+3. Copie le profil de l'utilisateur dans `inbox/`, s'il en a donné un.
+4. Lis `skills/installation/SKILL.md` et suis-le.
+
 ## Ce que tu touches
 
 - `inbox/` : tu y déposes tout (fichiers, liens, notes, dictées). Elle est vidée chaque nuit à 2 h.
@@ -21,12 +36,11 @@ Le reste est rangé pour l'IA. Tu n'as jamais besoin de l'ouvrir.
 ## Le parcours
 
 1. **Préparer son profil.** Avec la skill `grill-me` et la liste `skills/installation/references/questions.md`, on répond aux questions imposées. On obtient un profil, sur le gabarit `skills/installation/references/profil.md`. C'est l'étape à faire avant un atelier ; sans dépôt sous la main, on peut donner ces trois fichiers à n'importe quel Claude.
-2. **Créer son dépôt à partir du socle.** Sur GitHub, « Use this template », ou un clone.
-3. **Installer.** On dépose son profil dans `inbox/` et on dit à son agent « installe l'AIOS ». L'installation reprend le profil, ne pose que les questions restantes, et range chaque réponse à sa place.
+2. **Installer en une phrase.** On donne à son agent l'adresse du socle et son profil (voir plus haut). L'installation reprend le profil, ne pose que les questions restantes, et range chaque réponse à sa place.
 
-## L'installation, pas à pas (à donner à ton agent)
+## L'installation à la main
 
-1. Clone le dépôt et ouvre-le dans ton agent.
+1. Clone le dépôt, renomme le distant `origin` en `socle`, et ouvre le dossier dans ton agent.
 2. Vérifie les liens vers `skills/`. S'ils manquent :
    - Mac / Linux : `sh systeme/scripts/liens.sh`
    - Windows (jonction, sans droits admin) : `mklink /J .claude\skills skills` puis `mklink /J .agents\skills skills`
