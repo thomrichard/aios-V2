@@ -2,10 +2,40 @@
   "_note": "Généré par systeme/scripts/index.py depuis la carte des domaines d'AGENTS.md et l'en-tête des projets et des process : ne pas modifier à la main.",
   "departments": [
     {
+      "key": "contenu",
+      "label": "Contenu",
+      "color": "#00bcd4",
+      "icon": "pen"
+    },
+    {
+      "key": "communaute",
+      "label": "Communaute",
+      "color": "#e040fb",
+      "icon": "people"
+    },
+    {
+      "key": "consulting",
+      "label": "Consulting",
+      "color": "#fdd835",
+      "icon": "build"
+    },
+    {
+      "key": "produits",
+      "label": "Produits",
+      "color": "#43a047",
+      "icon": "data"
+    },
+    {
       "key": "operations",
       "label": "Operations",
-      "color": "#00bcd4",
+      "color": "#f44336",
       "icon": "coin"
+    },
+    {
+      "key": "perso",
+      "label": "Perso",
+      "color": "#ec407a",
+      "icon": "book"
     }
   ],
   "layers": [
@@ -41,12 +71,60 @@
   "projectPrefixes": {},
   "pathRules": [
     {
+      "prefix": "domaines/contenu/",
+      "dept": "contenu"
+    },
+    {
+      "prefix": "routers/contenu.md",
+      "dept": "contenu"
+    },
+    {
+      "prefix": "domaines/communaute/",
+      "dept": "communaute"
+    },
+    {
+      "prefix": "routers/communaute.md",
+      "dept": "communaute"
+    },
+    {
+      "prefix": "domaines/consulting/",
+      "dept": "consulting"
+    },
+    {
+      "prefix": "routers/consulting.md",
+      "dept": "consulting"
+    },
+    {
+      "prefix": "domaines/produits/",
+      "dept": "produits"
+    },
+    {
+      "prefix": "routers/produits.md",
+      "dept": "produits"
+    },
+    {
       "prefix": "domaines/operations/",
       "dept": "operations"
     },
     {
       "prefix": "routers/operations.md",
       "dept": "operations"
+    },
+    {
+      "prefix": "domaines/perso/",
+      "dept": "perso"
+    },
+    {
+      "prefix": "routers/perso.md",
+      "dept": "perso"
+    },
+    {
+      "prefix": "projets/socle-aios-membres.md",
+      "dept": "produits"
+    },
+    {
+      "prefix": "projets/video-brevo.md",
+      "dept": "contenu"
     },
     {
       "prefix": "processus/installation.md",

@@ -18,9 +18,17 @@
     },
     {
       "id": "veille",
-      "name": "Veille (exemple)",
+      "name": "Veille",
       "source": "planificateur",
-      "desc": "lundi, 1 h · skill veille · passive",
+      "desc": "lundi, 1 h · skill veille · passive : dépose ses captures dans `inbox/`",
+      "status": "paused",
+      "cron": "0 1 * * 1"
+    },
+    {
+      "id": "stats-youtube",
+      "name": "Stats YouTube",
+      "source": "planificateur",
+      "desc": "lundi, 1 h · skill stats-youtube · passive : signale une vidéo qui décroche ou surperforme",
       "status": "paused",
       "cron": "0 1 * * 1"
     },
