@@ -1,0 +1,5 @@
+{
+  "_note": "Real connections only: MCP servers, command-line tools that talk to a service, APIs with stored keys. Local runtimes (node, python, ffmpeg) do not belong here. Optional per app: mcp (the server name as your agent logs it), command (the CLI word, for usage counts), path (a 24x24 brand path) or svg (a 48x48 stroke drawing). BRAIN.md step 3.",
+  "_example": { "id": "app:github", "label": "GitHub CLI", "kind": "cli", "command": "gh", "access": "local", "status": "live", "desc": "repos, pull requests, issues" },
+  "apps": []
+}

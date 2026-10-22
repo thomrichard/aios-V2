@@ -25,6 +25,15 @@ L'agent fait tout : il récupère le socle, dépose ton profil dans `inbox/` et 
 
 Le reste est rangé pour l'IA. Tu n'as jamais besoin de l'ouvrir.
 
+## L'interface
+
+`interface/` contient le RUBRIC Agentic OS v2 de Jay E | RoboNuggets (licence MIT), déjà branché sur le workspace : page d'accueil, second cerveau en 3D, vues Routines, Skills et Applications. Il faut Node.js 18 ou plus.
+
+1. `node interface/refresh/run.mjs` construit la carte du workspace.
+2. `node interface/server.js` lance l'interface ; ouvre `http://localhost:50000`.
+
+Le reste (skills deck, agenda, e-mails, stats) se branche avec les guides de `interface/`. Nos changements au kit sont dans `interface/MODIFS.md`.
+
 ## Comment l'IA s'y retrouve
 
 1. `AGENTS.md` est la seule source : règles, carte des domaines, projets actifs. `CLAUDE.md` ne fait que l'importer ; `.gemini/settings.json` le désigne à Gemini CLI.

@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Génère les _index.md depuis les en-têtes des fichiers, et la page outbox/index.html (sorties, process, skills).
+"""Génère les _index.md depuis les en-têtes des fichiers, la page outbox/index.html (sorties, process, skills),
+et les réglages de l'interface (départements et routines) depuis AGENTS.md et systeme/routines.md.
 
 Usage : python3 systeme/scripts/index.py [--check]
   --check : n'écrit rien, liste les index qui ne sont plus à jour (code 1 s'il y en a).
 """
 import html
+import json
 import os
 import re
 import sys
@@ -13,6 +15,14 @@ RACINE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file_
 DOSSIERS = ["projets", "processus", "domaines", "savoir", "bibliotheques"]
 IGNORES = {"_index.md", "_images.md"}
 AVERTISSEMENT = "<!-- Généré par systeme/scripts/index.py : ne pas modifier à la main. -->"
+COULEURS = ["#00bcd4", "#e040fb", "#fdd835", "#43a047", "#f44336", "#ec407a", "#26a69a", "#8d6e63"]
+ICONES = ["pen", "people", "build", "data", "pulse", "book", "visual", "clock", "api"]
+COUCHES = [
+    {"key": "A", "label": "Applications", "color": "#3f8fd4", "shape": "hex", "blurb": "MCP servers, CLIs and APIs your agent can reach"},
+    {"key": "R", "label": "Routines", "color": "#d99a1f", "shape": "ringdot", "blurb": "Scheduled automations that run without being asked"},
+    {"key": "M", "label": "Memory", "color": "#9a66e0", "shape": "chip", "blurb": "Every file of context, clustered by department"},
+    {"key": "S", "label": "Skills", "color": "#ff6b1a", "shape": "diamond", "blurb": "Capabilities your agent can run on demand"},
+]
 
 
 def lire_entete(chemin):
@@ -45,6 +55,28 @@ def cellule(texte):
 def texte_html(texte):
     """Échappe le texte, et garde les `chemins` en code."""
     return re.sub(r"`([^`]+)`", r"<code>\1</code>", html.escape(texte or ""))
+
+
+def tableau(chemin, premiere_colonne):
+    """Le premier tableau Markdown dont la première colonne porte ce titre : une liste de dicts."""
+    try:
+        with open(chemin, encoding="utf-8") as f:
+            lignes = f.read().splitlines()
+    except (OSError, UnicodeDecodeError):
+        return []
+    entetes, rangs = None, []
+    for ligne in lignes:
+        if not ligne.startswith("|"):
+            if entetes:
+                break
+            continue
+        cases = [c.strip() for c in ligne.strip().strip("|").split("|")]
+        if entetes is None:
+            if cases[0] == premiere_colonne:
+                entetes = cases
+        elif not set(cases[0]) <= set("-: "):
+            rangs.append(dict(zip(entetes, cases)))
+    return rangs
 
 
 def etapes(chemin):
@@ -286,6 +318,49 @@ document.getElementById('q').addEventListener('input', function () {{
 """
 
 
+def departements_interface():
+    """config/departments.json de l'interface : un département par domaine de la carte d'AGENTS.md."""
+    noms = [r["Domaine"].strip("`") for r in tableau(os.path.join(RACINE, "AGENTS.md"), "Domaine") if r.get("Domaine")]
+    departements, regles = [], []
+    for i, nom in enumerate(noms):
+        icone = "coin" if nom == "operations" else ICONES[i % len(ICONES)]
+        departements.append({"key": nom, "label": nom.capitalize(), "color": COULEURS[i % len(COULEURS)], "icon": icone})
+        regles += [{"prefix": f"domaines/{nom}/", "dept": nom}, {"prefix": f"routers/{nom}.md", "dept": nom}]
+    for dossier in ("projets", "processus"):
+        depart = os.path.join(RACINE, dossier)
+        for f in sorted(os.listdir(depart)) if os.path.isdir(depart) else []:
+            if f.endswith(".md") and f not in IGNORES:
+                domaine = lire_entete(os.path.join(depart, f)).get("domaine")
+                if domaine in noms:
+                    regles.append({"prefix": f"{dossier}/{f}", "dept": domaine})
+    contenu = {
+        "_note": "Généré par systeme/scripts/index.py depuis la carte des domaines d'AGENTS.md et l'en-tête "
+                 "des projets et des process : ne pas modifier à la main.",
+        "departments": departements, "layers": COUCHES, "projectPrefixes": {}, "pathRules": regles,
+        "memoryKeywords": [], "default": "operations" if "operations" in noms or not noms else noms[0],
+    }
+    return json.dumps(contenu, indent=2, ensure_ascii=False) + "\n"
+
+
+def routines_interface():
+    """snapshots/routines.json de l'interface, depuis le tableau de systeme/routines.md."""
+    routines = []
+    for r in tableau(os.path.join(RACINE, "systeme", "routines.md"), "Routine"):
+        skill, etat = r.get("Skill", "").strip("`"), r.get("État", "").lower()
+        routine = {"id": skill or r["Routine"].lower().replace(" ", "-"), "name": r["Routine"], "source": "planificateur",
+                   "desc": " · ".join(x for x in (r.get("Quand", ""), f"skill {skill}" if skill else "", r.get("Type", "")) if x),
+                   "status": "active" if etat.startswith("en place") else "ondemand" if "demande" in etat else "paused"}
+        cron = r.get("Cron", "").strip("`")
+        if cron and cron not in ("—", "-"):
+            routine["cron"] = cron
+        routines.append(routine)
+    contenu = {
+        "_note": "Généré par systeme/scripts/index.py depuis systeme/routines.md : ne pas modifier à la main.",
+        "timezone": "", "sources": [{"key": "planificateur", "label": "PLANIFICATEUR"}], "routines": routines,
+    }
+    return json.dumps(contenu, indent=2, ensure_ascii=False) + "\n"
+
+
 def cibles():
     """Chaque fichier généré et son contenu attendu."""
     for dossier in tous_les_dossiers():
@@ -294,6 +369,9 @@ def cibles():
         yield os.path.join(RACINE, "skills", "_index.md"), index_skills()
     if os.path.isdir(os.path.join(RACINE, "outbox")):
         yield os.path.join(RACINE, "outbox", "index.html"), page_outbox()
+    if os.path.isdir(os.path.join(RACINE, "interface", "config")):
+        yield os.path.join(RACINE, "interface", "config", "departments.json"), departements_interface()
+        yield os.path.join(RACINE, "interface", "snapshots", "routines.json"), routines_interface()
 
 
 def main():

@@ -1,0 +1,4 @@
+{
+  "_note": "Optional. Set who can reach a folder: { \"prefix\": \"notes/private/\", \"access\": \"local\" }. Access is local (this computer only), remote (a remote agent only) or both.",
+  "overrides": []
+}

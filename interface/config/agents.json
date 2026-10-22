@@ -1,0 +1,4 @@
+{
+  "_note": "Optional. An agent on another machine that sees your synced folders gets kind 'vps' and access 'synced' (its reach is counted from sharedPrefixes in workspace.json). A helper agent with set skills and notes gets 'skills' and 'memory' lists of node ids.",
+  "agents": []
+}

@@ -1,0 +1,15 @@
+{
+  "_note": "An example. Your agent writes the real file as snapshots/routines.json (ROUTINES.md). Rows with cron use the 5-field cron format; rows with days and times use 24-hour times. status: active, paused or ondemand.",
+  "timezone": "",
+  "sources": [
+    { "key": "agent", "label": "MY AGENT" },
+    { "key": "server", "label": "HOME SERVER" }
+  ],
+  "routines": [
+    { "id": "morning-digest", "name": "Morning digest", "source": "agent", "cron": "0 7 * * *", "desc": "Sum up my inbox and calendar in one note" },
+    { "id": "backup-sweep", "name": "Backup sweep", "source": "server", "days": ["mon", "wed", "fri"], "times": ["18:30"], "desc": "Copy the workspace to backup storage" },
+    { "id": "monthly-report", "name": "Monthly report", "source": "agent", "cron": "0 8 1 * *", "desc": "Fires on the 1st of the month" },
+    { "id": "inbox-check", "name": "Inbox check", "source": "agent", "cron": "0 9-17 * * 1-5", "desc": "Hourly through the work day" },
+    { "id": "weekly-review", "name": "Weekly review", "source": "agent", "status": "ondemand", "desc": "Runs when I ask" }
+  ]
+}

@@ -1,0 +1,25 @@
+/* Hairline hex cursor family, the same set as the homepage (os.html, the chosen look 2026-08-14),
+   so the Second Brain shell, the brain frame and the tabs frame feel like one product
+  . Thin outline default (no dot), dot fills in on clickables, split
+   brackets on draggable canvases, clamped brackets + dot while dragging. Text cursors stay
+   native. brain/port.js sets the canvas hover and drag states inline with the same vars.
+   Linked last in each page so it wins over the frames' own pointer and grab rules. */
+:root {
+  --cur-hex: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cpath d='M14 3l9.5 5.5v11L14 25 4.5 19.5v-11z' fill='none' stroke='%23ff6b1a' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E") 14 14;
+  --cur-hex-click: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cpath d='M14 3l9.5 5.5v11L14 25 4.5 19.5v-11z' fill='none' stroke='%23ff6b1a' stroke-width='1.6' stroke-linejoin='round'/%3E%3Ccircle cx='14' cy='14' r='5' fill='%23ff6b1a'/%3E%3C/svg%3E") 14 14;
+  --cur-hex-grab: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cpath d='M12.5 3.9 4.5 8.5v11l8 4.6' fill='none' stroke='%23ff6b1a' stroke-width='1.6' stroke-linejoin='round' transform='translate(-2 0)'/%3E%3Cpath d='M15.5 3.9l8 4.6v11l-8 4.6' fill='none' stroke='%23ff6b1a' stroke-width='1.6' stroke-linejoin='round' transform='translate(2 0)'/%3E%3C/svg%3E") 14 14;
+  --cur-hex-drag: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cpath d='M12.5 3.9 4.5 8.5v11l8 4.6' fill='none' stroke='%23ff6b1a' stroke-width='2.2' stroke-linejoin='round'/%3E%3Cpath d='M15.5 3.9l8 4.6v11l-8 4.6' fill='none' stroke='%23ff6b1a' stroke-width='2.2' stroke-linejoin='round'/%3E%3Ccircle cx='14' cy='14' r='4.5' fill='%23ff6b1a'/%3E%3C/svg%3E") 14 14;
+}
+html, body { cursor: var(--cur-hex), auto; }
+
+/* Clickables: the shell, the brain frame and the tabs frame */
+button, a[href], select, summary, label, [role=button], input[type=range], input[type=checkbox],
+input[type=radio], input[type=color], .dropdown label, .res, .nrow, .lg-row, .lg-remote, .chk,
+.fab, #card-close, .v-close, #timeline-legend button, .ub-node, .ub-row, .blur, #view .clickable
+  { cursor: var(--cur-hex-click), pointer !important; }
+.dropdown label:has(input:disabled), button:disabled { cursor: var(--cur-hex), default !important; }
+input[type=text], input[type=search], input:not([type]), textarea { cursor: text; }
+
+/* Draggable canvases: 3D, 2D and Timeline (brain), Routines, Skills and Applications (tabs) */
+#port-canvas, #brain-canvas, #view { cursor: var(--cur-hex-grab), grab; }
+#port-canvas:active, #brain-canvas:active, #view:active { cursor: var(--cur-hex-drag), grabbing; }

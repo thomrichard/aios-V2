@@ -1,0 +1,36 @@
+{
+  "_note": "Généré par systeme/scripts/index.py depuis systeme/routines.md : ne pas modifier à la main.",
+  "timezone": "",
+  "sources": [
+    {
+      "key": "planificateur",
+      "label": "PLANIFICATEUR"
+    }
+  ],
+  "routines": [
+    {
+      "id": "rangement",
+      "name": "Rangement de nuit",
+      "source": "planificateur",
+      "desc": "chaque nuit, 2 h · skill rangement · active : le point du jour",
+      "status": "paused",
+      "cron": "0 2 * * *"
+    },
+    {
+      "id": "veille",
+      "name": "Veille (exemple)",
+      "source": "planificateur",
+      "desc": "lundi, 1 h · skill veille · passive",
+      "status": "paused",
+      "cron": "0 1 * * 1"
+    },
+    {
+      "id": "audit",
+      "name": "Audit",
+      "source": "planificateur",
+      "desc": "le 1er du mois, 1 h · skill audit · passive",
+      "status": "paused",
+      "cron": "0 1 1 * *"
+    }
+  ]
+}

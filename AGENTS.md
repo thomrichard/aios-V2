@@ -106,6 +106,12 @@ Avant de dire « c'est fait », vérifie : relance le test ou relis le fichier. 
 - Quand tu suis un process, note le passage dans `journal/log.md` : `- AAAA-MM-JJ · processus <slug> | <sujet>`.
 - Quand une même suite de skills revient deux fois, propose d'en faire un process.
 
+## Interface
+
+- `interface/` : le RUBRIC Agentic OS v2 de Jay E | RoboNuggets (licence MIT), branché sur ce workspace. Lancer : `node interface/server.js`, puis ouvrir `http://localhost:50000`.
+- Ses départements et ses routines sont générés par `systeme/scripts/index.py` depuis la carte des domaines et `systeme/routines.md`. Nos changements au kit : `interface/MODIFS.md`.
+- Pour la modifier ou la réparer : `interface/skills/agenticos/SKILL.md` et les guides de `interface/`.
+
 ## Routines
 
 - Une routine = un prompt qui appelle une skill, lancé par `systeme/scripts/lancer.py` depuis un planificateur neutre (cron, Hermes).

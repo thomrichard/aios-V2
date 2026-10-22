@@ -1,0 +1,3 @@
+{"at":"2026-01-05T07:00:12Z","kind":"routine","name":"morning-digest","tokens":18400,"cost":0.05}
+{"at":"2026-01-05T10:21:40Z","kind":"skill","name":"weekly-review","tokens":42100,"cost":0.12}
+{"at":"2026-01-05T10:24:03Z","kind":"app","name":"app:github","calls":3}

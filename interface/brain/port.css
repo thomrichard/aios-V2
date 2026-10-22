@@ -1,0 +1,6 @@
+@font-face{font-family:Outfit;src:url('vendor/outfit.woff2');font-weight:100 900;font-display:swap}
+#port-canvas{position:fixed;inset:0;width:100%;height:100%;z-index:3;cursor:grab;touch-action:none}#port-canvas:active{cursor:grabbing}
+
+#timeline-legend{position:fixed;left:25px;right:25px;top:calc(var(--chrome-top,112px) + 5px);z-index:5;display:flex;gap:22px;align-items:center;flex-wrap:wrap}#timeline-legend[hidden]{display:none}#timeline-legend button{display:flex;gap:7px;align-items:center;border:0;background:transparent;padding:3px 0;color:#aaa;font:400 11px Outfit;cursor:pointer}#timeline-legend i{width:6px;height:6px;border-radius:50%;background:var(--dept)}#timeline-legend [aria-pressed=false]{opacity:.3}
+/* zoom in from the homepage: see-through until the black fades in, so the brain grows out of the homepage orb */
+html.see-through,html.see-through body{background:rgba(0,0,0,var(--port-bg,0))!important}

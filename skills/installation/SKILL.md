@@ -28,7 +28,8 @@ description: Installe et personnalise l'AIOS. Reprend le profil déposé dans in
 4. Lance `systeme/scripts/index.py`, puis `systeme/scripts/verifier.py`, jusqu'à « Tout est en ordre ».
 5. Active le contrôle avant chaque commit : `git config core.hooksPath systeme/hooks`.
 6. Rappelle de laisser vide le `CLAUDE.md` global de la machine.
-7. Termine par un résumé : ce qui est rempli, ce qui reste « À définir ».
+7. L'interface : si `node --version` donne 18 ou plus, lance `node interface/refresh/run.mjs` et indique `node interface/server.js` ; sinon, dis comment installer Node.
+8. Termine par un résumé : ce qui est rempli, ce qui reste « À définir ».
 
 ## Garde-fous
 - Si une section est déjà remplie, montre-la et demande s'il faut la garder.
@@ -42,3 +43,4 @@ description: Installe et personnalise l'AIOS. Reprend le profil déposé dans in
 - 2026-10-22 · l'entretien passe par grill-me · une seule façon de poser des questions
 - 2026-10-22 · reprise d'un profil déposé dans inbox/ · préparer avant un atelier, installer ensuite
 - 2026-10-22 · profil donné avec l'adresse du socle, distant renommé `socle` · installer en une phrase
+- 2026-10-22 · étape interface · le kit de Jay est dans le socle, branché sur le workspace

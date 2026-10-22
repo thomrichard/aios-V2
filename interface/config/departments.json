@@ -1,0 +1,62 @@
+{
+  "_note": "Généré par systeme/scripts/index.py depuis la carte des domaines d'AGENTS.md et l'en-tête des projets et des process : ne pas modifier à la main.",
+  "departments": [
+    {
+      "key": "operations",
+      "label": "Operations",
+      "color": "#00bcd4",
+      "icon": "coin"
+    }
+  ],
+  "layers": [
+    {
+      "key": "A",
+      "label": "Applications",
+      "color": "#3f8fd4",
+      "shape": "hex",
+      "blurb": "MCP servers, CLIs and APIs your agent can reach"
+    },
+    {
+      "key": "R",
+      "label": "Routines",
+      "color": "#d99a1f",
+      "shape": "ringdot",
+      "blurb": "Scheduled automations that run without being asked"
+    },
+    {
+      "key": "M",
+      "label": "Memory",
+      "color": "#9a66e0",
+      "shape": "chip",
+      "blurb": "Every file of context, clustered by department"
+    },
+    {
+      "key": "S",
+      "label": "Skills",
+      "color": "#ff6b1a",
+      "shape": "diamond",
+      "blurb": "Capabilities your agent can run on demand"
+    }
+  ],
+  "projectPrefixes": {},
+  "pathRules": [
+    {
+      "prefix": "domaines/operations/",
+      "dept": "operations"
+    },
+    {
+      "prefix": "routers/operations.md",
+      "dept": "operations"
+    },
+    {
+      "prefix": "processus/installation.md",
+      "dept": "operations"
+    },
+    {
+      "prefix": "processus/rangement.md",
+      "dept": "operations"
+    }
+  ],
+  "memoryKeywords": [],
+  "default": "operations"
+}
