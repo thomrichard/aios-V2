@@ -12,4 +12,8 @@ Pilotage (OKR, revue hebdo, revenus), admin et finances, et l'AIOS comme outil d
 
 ## Skills
 
+## Process
+- Installation : `processus/installation.md` · à la demande, après le clonage
+- Rangement de nuit : `processus/rangement.md` · chaque nuit à 2 h · à construire
+
 ## Projets actifs

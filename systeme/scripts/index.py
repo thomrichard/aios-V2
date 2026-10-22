@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
-"""Génère les _index.md depuis les en-têtes des fichiers, et la page outbox/index.html.
+"""Génère les _index.md depuis les en-têtes des fichiers, et la page outbox/index.html (sorties, process, skills).
 
 Usage : python3 systeme/scripts/index.py [--check]
   --check : n'écrit rien, liste les index qui ne sont plus à jour (code 1 s'il y en a).
 """
 import html
 import os
+import re
 import sys
 
 RACINE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-DOSSIERS = ["projets", "domaines", "savoir", "bibliotheques"]
+DOSSIERS = ["projets", "processus", "domaines", "savoir", "bibliotheques"]
 IGNORES = {"_index.md", "_images.md"}
 AVERTISSEMENT = "<!-- Généré par systeme/scripts/index.py : ne pas modifier à la main. -->"
 
@@ -41,6 +42,60 @@ def cellule(texte):
     return (texte or "").replace("|", "/").replace("\n", " ").strip()
 
 
+def texte_html(texte):
+    """Échappe le texte, et garde les `chemins` en code."""
+    return re.sub(r"`([^`]+)`", r"<code>\1</code>", html.escape(texte or ""))
+
+
+def etapes(chemin):
+    """Le tableau des étapes d'un process : (étape, skills, ce qu'on décide, qui décide) par ligne."""
+    trouvees = []
+    try:
+        with open(chemin, encoding="utf-8") as f:
+            lignes = f.read().splitlines()
+    except (OSError, UnicodeDecodeError):
+        return trouvees
+    for ligne in lignes:
+        if not ligne.startswith("|"):
+            continue
+        cases = [c.strip() for c in ligne.strip().strip("|").split("|")]
+        if len(cases) < 4 or cases[0] == "Étape" or set(cases[0]) <= set("-: "):
+            continue
+        noms = [n.strip().strip("`") for n in cases[1].split(",")]
+        trouvees.append((cases[0], [n for n in noms if n and n not in ("—", "-")], cases[2], cases[3]))
+    return trouvees
+
+
+def les_processus():
+    """Chaque process : son nom, son en-tête, ses étapes."""
+    depart = os.path.join(RACINE, "processus")
+    if not os.path.isdir(depart):
+        return []
+    return [(nom[:-3], lire_entete(os.path.join(depart, nom)), etapes(os.path.join(depart, nom)))
+            for nom in sorted(os.listdir(depart)) if nom.endswith(".md") and nom not in IGNORES]
+
+
+def skills_utilisees(liste_etapes):
+    vues = []
+    for _, noms, _, _ in liste_etapes:
+        vues += [n for n in noms if n not in vues]
+    return vues
+
+
+def passages():
+    """Les passages notés dans journal/log.md (« processus <nom> | <sujet> »), du plus récent au plus ancien."""
+    trouves = {}
+    chemin = os.path.join(RACINE, "journal", "log.md")
+    if not os.path.exists(chemin):
+        return trouves
+    with open(chemin, encoding="utf-8") as f:
+        for ligne in f:
+            m = re.match(r"- (\d{4}-\d{2}-\d{2}) · processus ([a-z0-9-]+) \| (.*)", ligne.strip())
+            if m:
+                trouves.setdefault(m.group(2), []).insert(0, (m.group(1), m.group(3)))
+    return trouves
+
+
 def index_dossier(dossier):
     """Contenu de l'_index.md d'un dossier."""
     relatif = os.path.relpath(dossier, RACINE)
@@ -58,6 +113,11 @@ def index_dossier(dossier):
         for nom, e in projets:
             lignes.append(f"| [{nom[:-3]}]({nom}) | {cellule(e.get('domaine'))} | {cellule(e.get('statut'))} "
                           f"| {cellule(e.get('echeance'))} | {cellule(e.get('prochaine_etape'))} |")
+    elif relatif == "processus":
+        lignes += ["| Process | Domaine | Skills | Déclencheur | Statut |", "|---|---|---|---|---|"]
+        for nom, e, liste in les_processus():
+            lignes.append(f"| [{nom}]({nom}.md) | {cellule(e.get('domaine'))} | {cellule(', '.join(skills_utilisees(liste)))} "
+                          f"| {cellule(e.get('declencheur'))} | {cellule(e.get('statut'))} |")
     else:
         lignes += ["| Fichier | Résumé | Statut | Projet | Maj |", "|---|---|---|---|---|"]
         notes = [(f, lire_entete(os.path.join(dossier, f))) for f in fichiers]
@@ -129,6 +189,25 @@ def index_skills():
     return "\n".join(lignes) + "\n"
 
 
+def ligne_processus(nom, e, liste, derniers):
+    """Une ligne du tableau des process de l'outbox."""
+    items = []
+    for etape, noms, decision, qui in liste:
+        item = texte_html(etape)
+        if noms:
+            item += " · <code>" + html.escape(", ".join(noms)) + "</code>"
+        if decision not in ("—", "-", ""):
+            item += " · " + texte_html(decision)
+        items.append(f'<li>{item} <span class="qui">({html.escape(qui)})</span></li>')
+    infos = [e.get("domaine", ""), e.get("declencheur", "")]
+    if e.get("statut") and e.get("statut") != "actif":
+        infos.append(e["statut"])
+    passes = "<br>".join(f"{html.escape(d)} · {texte_html(s)}" for d, s in derniers[:3]) or "—"
+    return (f'<tr><td><a href="../processus/{html.escape(nom)}.md">{html.escape(nom)}</a><br>'
+            f'<span class="qui">{html.escape(" · ".join(i for i in infos if i))}</span></td>'
+            f'<td><ol>{"".join(items)}</ol></td><td>{passes}</td></tr>')
+
+
 def page_outbox():
     points_dir = os.path.join(RACINE, "outbox", "points")
     points = sorted((p for p in os.listdir(points_dir) if p.endswith(".md")), reverse=True) \
@@ -146,6 +225,10 @@ def page_outbox():
         f'<tr><td>{html.escape(nom)}</td><td>{html.escape(description)}</td>'
         f'<td><a href="../skills/{html.escape(fichier)}">skills/{html.escape(fichier)}</a></td></tr>'
         for nom, description, fichier in skills()) or '<tr><td colspan="3">Aucune skill.</td></tr>'
+    tous_passages = passages()
+    corps_processus = "\n".join(
+        ligne_processus(nom, e, liste, tous_passages.get(nom, []))
+        for nom, e, liste in les_processus()) or '<tr><td colspan="3">Aucun process.</td></tr>'
     return f"""<!doctype html>
 <html lang="fr">
 <head>
@@ -158,10 +241,12 @@ body {{ font-family: system-ui, sans-serif; margin: 24px; color: #1e1e1e; backgr
 h1 {{ font-size: 22px; }} h2 {{ font-size: 17px; margin-top: 28px; }}
 input {{ width: 100%; max-width: 480px; padding: 8px; font-size: 15px; margin-bottom: 16px; }}
 table {{ border-collapse: collapse; width: 100%; background: #fff; }}
-td, th {{ border-bottom: 1px solid #e5e5e5; padding: 8px; text-align: left; font-size: 14px; }}
+td, th {{ border-bottom: 1px solid #e5e5e5; padding: 8px; text-align: left; font-size: 14px; vertical-align: top; }}
+ol {{ margin: 0; padding-left: 18px; }} li {{ margin-bottom: 4px; }} code {{ font-size: 13px; }}
+.qui {{ color: #777; font-size: 13px; }}
 @media (prefers-color-scheme: dark) {{
   body {{ color: #eee; background: #161616; }} table {{ background: #1f1f1f; }} td, th {{ border-color: #333; }}
-  a {{ color: #8ab4ff; }}
+  a {{ color: #8ab4ff; }} .qui {{ color: #999; }}
 }}
 </style>
 </head>
@@ -174,6 +259,13 @@ td, th {{ border-bottom: 1px solid #e5e5e5; padding: 8px; text-align: left; font
 {corps}
 </tbody>
 </table>
+<h2>Process</h2>
+<table>
+<thead><tr><th>Process</th><th>Étapes · skill · ce qu'on décide (qui)</th><th>Derniers passages</th></tr></thead>
+<tbody id="processus">
+{corps_processus}
+</tbody>
+</table>
 <h2>Skills</h2>
 <table>
 <thead><tr><th>Skill</th><th>Ce qu'elle fait</th><th>Fichier</th></tr></thead>
@@ -184,7 +276,7 @@ td, th {{ border-bottom: 1px solid #e5e5e5; padding: 8px; text-align: left; font
 <script>
 document.getElementById('q').addEventListener('input', function () {{
   var t = this.value.toLowerCase();
-  document.querySelectorAll('#lignes tr, #skills tr').forEach(function (r) {{
+  document.querySelectorAll('#lignes tr, #processus tr, #skills tr').forEach(function (r) {{
     r.style.display = r.textContent.toLowerCase().indexOf(t) === -1 ? 'none' : '';
   }});
 }});

@@ -10,10 +10,12 @@ body { font-family: system-ui, sans-serif; margin: 24px; color: #1e1e1e; backgro
 h1 { font-size: 22px; } h2 { font-size: 17px; margin-top: 28px; }
 input { width: 100%; max-width: 480px; padding: 8px; font-size: 15px; margin-bottom: 16px; }
 table { border-collapse: collapse; width: 100%; background: #fff; }
-td, th { border-bottom: 1px solid #e5e5e5; padding: 8px; text-align: left; font-size: 14px; }
+td, th { border-bottom: 1px solid #e5e5e5; padding: 8px; text-align: left; font-size: 14px; vertical-align: top; }
+ol { margin: 0; padding-left: 18px; } li { margin-bottom: 4px; } code { font-size: 13px; }
+.qui { color: #777; font-size: 13px; }
 @media (prefers-color-scheme: dark) {
   body { color: #eee; background: #161616; } table { background: #1f1f1f; } td, th { border-color: #333; }
-  a { color: #8ab4ff; }
+  a { color: #8ab4ff; } .qui { color: #999; }
 }
 </style>
 </head>
@@ -24,6 +26,14 @@ td, th { border-bottom: 1px solid #e5e5e5; padding: 8px; text-align: left; font-
 <thead><tr><th>Date</th><th>Quoi</th><th>Fichier</th><th>Statut</th></tr></thead>
 <tbody id="lignes">
 <tr><td colspan="4">Rien pour l'instant.</td></tr>
+</tbody>
+</table>
+<h2>Process</h2>
+<table>
+<thead><tr><th>Process</th><th>Étapes · skill · ce qu'on décide (qui)</th><th>Derniers passages</th></tr></thead>
+<tbody id="processus">
+<tr><td><a href="../processus/installation.md">installation</a><br><span class="qui">operations · à la demande, une fois après le clonage</span></td><td><ol><li>Préparer son profil, avant l&#x27;atelier · <code>grill-me</code> · chaque réponse, ou « À définir » <span class="qui">(toi)</span></li><li>Récupérer le socle et déposer le profil dans <code>inbox/</code> · <code>installation</code> · le dossier où installer <span class="qui">(toi)</span></li><li>Reprendre le profil, bloc par bloc · <code>installation</code> · garder ou corriger chaque bloc <span class="qui">(toi)</span></li><li>Poser les questions restantes · <code>grill-me</code> · chaque réponse, ou « À définir » <span class="qui">(toi)</span></li><li>Créer les routeurs, les domaines et les projets · <code>installation</code> <span class="qui">(l&#x27;IA)</span></li><li>Vérifier le workspace · <code>installation</code> <span class="qui">(l&#x27;IA)</span></li></ol></td><td>—</td></tr>
+<tr><td><a href="../processus/rangement.md">rangement</a><br><span class="qui">operations · routine, chaque nuit à 2 h · a-construire</span></td><td><ol><li>Classer chaque élément de l&#x27;inbox · <code>rangement</code> · où il va, ou s&#x27;il part aux archives <span class="qui">(l&#x27;IA)</span></li><li>Archiver les points du jour cochés ou vieux de plus de 7 jours · <code>rangement</code> <span class="qui">(l&#x27;IA)</span></li><li>Écrire le point du jour · <code>rangement</code> · ce qui mérite ton attention <span class="qui">(l&#x27;IA)</span></li><li>Lire le point du jour · valider, corriger ou cocher <span class="qui">(toi)</span></li></ol></td><td>—</td></tr>
 </tbody>
 </table>
 <h2>Skills</h2>
@@ -37,7 +47,7 @@ td, th { border-bottom: 1px solid #e5e5e5; padding: 8px; text-align: left; font-
 <script>
 document.getElementById('q').addEventListener('input', function () {
   var t = this.value.toLowerCase();
-  document.querySelectorAll('#lignes tr, #skills tr').forEach(function (r) {
+  document.querySelectorAll('#lignes tr, #processus tr, #skills tr').forEach(function (r) {
     r.style.display = r.textContent.toLowerCase().indexOf(t) === -1 ? 'none' : '';
   });
 });

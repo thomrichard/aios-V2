@@ -45,6 +45,7 @@ Aucun pour l'instant. Format : `- [<slug>](projets/<slug>.md) · <domaine> · <p
 |---|---|
 | Un domaine | son routeur dans `routers/` |
 | Une skill, par son nom | `skills/_index.md` (généré) |
+| Un process : ses étapes, ses skills, ce qu'on décide | `processus/_index.md` (généré) |
 | Un inventaire ou un statut | l'`_index.md` du dossier |
 | Une image ou un média | l'`_images.md` du dossier |
 | Les objectifs du trimestre | `domaines/operations/okr.md` |
@@ -97,6 +98,13 @@ Avant de dire « c'est fait », vérifie : relance le test ou relis le fichier. 
 - `.claude/skills` et `.agents/skills` sont des liens vers `skills/`. Sans ces liens, pour lancer une skill, lis son `SKILL.md` et suis-le.
 - Le modèle d'une skill est dans `systeme/modeles.md`, jamais dans la skill.
 - Un retour à mettre de côté va dans `skills/<nom>/feedback.md` (`/note`) ; il est appliqué quand l'utilisateur le demande.
+
+## Process
+
+- Un process enchaîne des skills, avec ce qu'on décide à chaque étape et qui le décide : `processus/<slug>.md` (gabarit : `systeme/gabarits/processus.md`).
+- Ce n'est pas un domaine : son en-tête dit quel domaine le porte, et le routeur de ce domaine le cite.
+- Quand tu suis un process, note le passage dans `journal/log.md` : `- AAAA-MM-JJ · processus <slug> | <sujet>`.
+- Quand une même suite de skills revient deux fois, propose d'en faire un process.
 
 ## Routines
 
