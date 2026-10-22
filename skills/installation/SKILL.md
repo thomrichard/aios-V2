@@ -10,8 +10,8 @@ description: Installe et personnalise l'AIOS. Pose les questions imposées une �
 3. Si `.env` manque, copie `.env.example` en `.env`.
 
 ## Les questions
-- Lance la skill `grill-me` avec la liste imposée `references/questions.md` : elle pose les questions une à une, fait valider chaque réponse et tient la fiche de l'entretien.
-- Chaque réponse confirmée s'écrit là où elle fait foi (colonne « Où l'écrire »), tout de suite : une interruption ne perd rien.
+- Lance la skill `grill-me` avec la liste imposée `references/questions.md` : chaque bloc devient une branche, et la fiche d'entretien garde chaque réponse, même si la session s'interrompt.
+- À la fin de chaque bloc, écris les réponses confirmées là où elles font foi (colonne « Où l'écrire »).
 - Une réponse « je ne sais pas » s'écrit « À définir » ; elle reviendra dans le point du jour.
 - Si une section est déjà remplie, montre-la et demande s'il faut la garder.
 

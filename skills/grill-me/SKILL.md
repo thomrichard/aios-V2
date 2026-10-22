@@ -1,33 +1,48 @@
 ---
 name: grill-me
-description: Entretien serré, une question à la fois, pour faire sortir ce que l'utilisateur sait et le ranger au bon endroit. Prend soit une liste de questions imposées (par exemple celle de la skill installation), soit un sujet à creuser. Déclencheurs : « grill me », « grille-moi », « pose-moi des questions », « éprouve ce plan ».
+description: Interviewe l'utilisateur en profondeur sur un plan, un design ou une idée, ou lui pose une liste de questions imposées (installation), en enregistrant chaque réponse dans une fiche de capture. Déclencheurs : « grill me », « grille-moi », « cuisine-moi », « challenge mon plan », « stress-teste cette idée », « brainstorm », « session de discovery », « vider ma tête sur [sujet] ».
 ---
 # grill-me
 
-## Deux façons de l'appeler
-- Avec une liste : une autre skill lui passe un fichier de questions (ex. `skills/installation/references/questions.md`). Pose-les toutes, dans l'ordre.
-- Sur un sujet : pose tes propres questions, de la plus large à la plus précise, jusqu'à ce que l'utilisateur dise stop ou que tu n'apprennes plus rien.
+Faire passer ce que l'utilisateur a en tête dans un fichier durable. La fiche, pas ton contexte, fait foi : si le contexte saute, elle contient déjà tout.
 
-## Pour chaque question
-1. Une seule question à la fois : pas de liste, pas de question double.
-2. Si la réponse est floue, relance une fois (« concrètement ? », « un exemple ? », « combien ? »).
-3. Reformule la réponse en une ligne et fais-la valider.
-4. Enregistre-la tout de suite dans la fiche de l'entretien, avant la question suivante.
+## Avant la première question
+1. Cherche une session à reprendre dans `journal/entretiens/` (par slug, puis recherche texte).
+   - Trouvée : relis-la, résume en 3 à 5 lignes (décisions, flags ouverts, branches non couvertes), fais confirmer, reprends là. Pas de nouveau fichier.
+   - Rien : crée `journal/entretiens/AAAA-MM-JJ-<sujet>.md` (date : `date +%F`), structure dans `references/fiche.md`.
+2. Dresse la carte des branches, chacune avec un statut : ⬜ à faire, 🟡 partiel, ✅ couvert, 🅿️ parqué. Écris-la et montre-la avant Q1 : l'utilisateur peut réordonner, élaguer, ajouter.
+   - Avec une liste imposée (ex. `skills/installation/references/questions.md`), chaque bloc est une branche et aucune ne se retire ; une question sans réponse est parquée « À définir ».
+3. Annonce l'emplacement de la fiche en une ligne, puis pose Q1.
 
-## La fiche de l'entretien
-- `journal/entretiens/AAAA-MM-JJ-<sujet>.md`, avec un en-tête (gabarit `systeme/gabarits/fiche.md`, type `entretien`).
-- Une ligne par question : la question, la réponse validée, et son étiquette `confirmé` ou `provisoire`.
-- Reprenable : après une interruption, reprends à la première question sans réponse.
+## Le checkpoint (non négociable)
+Après chaque réponse, avant la question suivante :
+- Ajoute une entrée au log Q&A : la question, les faits et décisions captés (dans ses mots quand la formulation compte), les flags (point sans réponse → qui peut répondre).
+- Le log ne se réécrit jamais : si une réponse change une entrée, ajoute « Correctif de Qn » (ce qui change, et pourquoi).
+- Une réponse = un checkpoint. Jamais de lot.
 
-## Ranger les réponses
-- Seules les réponses `confirmé` quittent la fiche, là où elles font foi : la colonne « Où l'écrire » de la liste imposée, ou `systeme/doctrine.md` pour un sujet libre.
-- Chaque réponse rangée garde un lien vers la fiche de l'entretien.
-- Les réponses `provisoire` restent dans la fiche ; elles reviennent dans le point du jour.
+La synthèse se réécrit aux jalons seulement : fin de branche (avec le statut dans la carte) et fin de session.
+
+## L'entretien
+- Une question à la fois, avec ta réponse recommandée (ta meilleure inférence), à confirmer, corriger ou rediriger.
+- La décision en amont avant celles qui en dépendent.
+- Si le workspace répond (carte, routeurs, `memory/`, un document), lis-le au lieu de demander.
+- Pas de réponse : un flag avec son owner, et on avance.
+- Contradiction avec une réponse antérieure : confronte-la tout de suite (« En Q3 tu as dit X, là Y : lequel tient ? »). Ne lisse jamais en silence dans la fiche.
+- Environ une posture par branche, annoncée (« Posture : avocat du diable — ») : voir `references/postures.md`.
+
+## Fin de session
+1. Passe la carte branche par branche : ce qui reste 🟡 ou ⬜ est couvert ou parqué explicitement.
+2. Relis la fiche : contradictions et trous se réconcilient avec l'utilisateur.
+3. Réécris la synthèse finale.
+4. Propose les deux sorties :
+   - le livrable propre (plan, spec, décision), rangé selon `systeme/doctrine.md` ; avec une liste imposée, chaque réponse écrite là où elle fait foi (colonne « Où l'écrire »). La fiche brute reste dans `journal/entretiens/` ;
+   - les flags ouverts, transformés en actions concrètes vers leur owner ; ceux qui attendent l'utilisateur remontent dans le point du jour.
+5. Ajoute une ligne à `journal/log.md` : `- AAAA-MM-JJ · entretien | <sujet>`.
 
 ## Garde-fous
-- Ne suggère pas la réponse dans la question.
-- Ne mélange jamais un fait confirmé et une suggestion de ta part.
+- Les pièges à éviter : `references/pieges.md`.
 - Ne demande jamais une clé ou un mot de passe.
 
 ## Journal des changements
-- 2026-10-22 · création · entretien une question à la fois, avec liste imposée ou sujet libre
+- 2026-10-22 · création · entretien une question à la fois
+- 2026-10-22 · reprise de la grill-me de Thomas, adaptée à AIOS v2 (chemins, socle neutre, liste imposée) · sa version est plus complète
