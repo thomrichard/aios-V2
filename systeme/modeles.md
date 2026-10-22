@@ -14,6 +14,7 @@ Une skill absente de ce tableau prend le niveau `moyen`.
 | calibrate | moyen | moyen |
 | audit | grand | haut |
 | installation | moyen | moyen |
+| grill-me | moyen | moyen |
 
 L'effort est indicatif : `lancer.py` ne le transmet pas encore à l'agent.
 

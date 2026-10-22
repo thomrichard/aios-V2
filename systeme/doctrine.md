@@ -25,6 +25,7 @@
 | Un projet | `projets/<slug>.md` ; ses fichiers restent dans leur domaine |
 | Une connaissance durable | `savoir/concepts/` ou `savoir/sources/` |
 | Un média généré, un composant d'interface | `bibliotheques/medias/`, `bibliotheques/composants/` |
+| Un entretien (`grill-me`) | `journal/entretiens/AAAA-MM-JJ-<sujet>.md` |
 | Un élément de l'inbox déjà traité | `archives/inbox/AAAA-MM/` |
 | Un point du jour coché ou vieux de plus de 7 jours | `archives/outbox/` |
 

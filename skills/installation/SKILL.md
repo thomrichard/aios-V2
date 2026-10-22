@@ -10,9 +10,8 @@ description: Installe et personnalise l'AIOS. Pose les questions imposées une �
 3. Si `.env` manque, copie `.env.example` en `.env`.
 
 ## Les questions
-- Elles sont dans `references/questions.md`. Pose-les une à la fois, dans l'ordre, sans en sauter.
-- Reformule chaque réponse en une ligne et fais-la valider avant de l'écrire.
-- Écris la réponse là où elle fait foi (colonne « Où l'écrire »), tout de suite : une interruption ne perd rien.
+- Lance la skill `grill-me` avec la liste imposée `references/questions.md` : elle pose les questions une à une, fait valider chaque réponse et tient la fiche de l'entretien.
+- Chaque réponse confirmée s'écrit là où elle fait foi (colonne « Où l'écrire »), tout de suite : une interruption ne perd rien.
 - Une réponse « je ne sais pas » s'écrit « À définir » ; elle reviendra dans le point du jour.
 - Si une section est déjà remplie, montre-la et demande s'il faut la garder.
 
@@ -32,3 +31,4 @@ description: Installe et personnalise l'AIOS. Pose les questions imposées une �
 
 ## Journal des changements
 - 2026-10-22 · création · questions imposées pour remplir AGENTS.md
+- 2026-10-22 · l'entretien passe par grill-me · une seule façon de poser des questions
