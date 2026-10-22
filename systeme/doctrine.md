@@ -10,6 +10,7 @@
 | Projet | `projets/<slug>.md` | `projets/_index.md` (généré) |
 | Souvenir | `memory/<type>_<sujet>.md` | `memory/MEMORY.md` |
 | Skill | `skills/<nom>/SKILL.md` | `skills/_index.md` (généré), et le routeur du domaine qui l'utilise |
+| Process | le tableau des étapes de `processus/<slug>.md` | `processus/_index.md` (généré), et le routeur du domaine qui le porte |
 | Modèle d'une skill | `systeme/modeles.md` | — |
 | Routine | `systeme/routines.md` | — |
 | Connexion | `systeme/connexions.md` | — |
@@ -23,6 +24,7 @@
 | Une production datée (post, newsletter) | `domaines/<domaine>/<type>/AAAA-MM-JJ-<slug>.md` |
 | Un livrable, texte ou visuel | dans son domaine, jamais dans `outbox/` |
 | Un projet | `projets/<slug>.md` ; ses fichiers restent dans leur domaine |
+| Un process (une suite de skills qui revient) | `processus/<slug>.md` ; ses skills restent dans `skills/` |
 | Une connaissance durable | `savoir/concepts/` ou `savoir/sources/` |
 | Un média généré, un composant d'interface | `bibliotheques/medias/`, `bibliotheques/composants/` |
 | Une capture de l'extérieur (veille, e-mail) | `inbox/`, avec `source:` dans l'en-tête ; le rangement de 2 h la classe |

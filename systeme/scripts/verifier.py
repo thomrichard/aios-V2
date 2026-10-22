@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Contrôle le workspace : source unique, liens vers skills/, index d'images, mémoire, plafonds, index à jour.
+"""Contrôle le workspace : source unique, liens vers skills/, index d'images, mémoire, process, plafonds, index à jour.
 
 Usage : python3 systeme/scripts/verifier.py
 Code de sortie 1 s'il y a une erreur ; les avertissements ne bloquent pas.
@@ -8,6 +8,8 @@ import os
 import re
 import subprocess
 import sys
+
+from index import les_processus, skills_utilisees
 
 RACINE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 IMAGES = (".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg")
@@ -49,7 +51,7 @@ def controler_liens():
 
 
 def controler_images():
-    for base in ("projets", "domaines", "savoir", "bibliotheques", "skills"):
+    for base in ("projets", "processus", "domaines", "savoir", "bibliotheques", "skills"):
         depart = chemin(base)
         if not os.path.isdir(depart):
             continue
@@ -87,6 +89,22 @@ def controler_memoire():
             avertissements.append(f"memory/{nom} n'a pas sa ligne dans MEMORY.md")
 
 
+def controler_processus():
+    """Chaque skill citée par un process existe, et le routeur de son domaine le cite."""
+    for nom, e, liste in les_processus():
+        rel = f"processus/{nom}.md"
+        if not liste:
+            avertissements.append(f"{rel} n'a pas de tableau d'étapes")
+        manquantes = [s for s in skills_utilisees(liste) if not os.path.exists(chemin("skills", s, "SKILL.md"))]
+        if manquantes and e.get("statut") not in ("a-construire", "clos"):
+            erreurs.append(f"{rel} cite une skill qui n'existe pas : {', '.join(manquantes)}")
+        routeur = f"routers/{e.get('domaine', '')}.md"
+        if not os.path.exists(chemin(routeur)):
+            erreurs.append(f"{rel} : le domaine « {e.get('domaine', '')} » n'a pas de routeur")
+        elif rel not in "\n".join(lignes_de(routeur)):
+            avertissements.append(f"{routeur} ne cite pas {rel}")
+
+
 def controler_plafonds():
     plafonds = list(PLAFONDS)
     if os.path.isdir(chemin("routers")):
@@ -115,6 +133,7 @@ def main():
     controler_liens()
     controler_images()
     controler_memoire()
+    controler_processus()
     controler_plafonds()
     controler_index()
     for e in erreurs:

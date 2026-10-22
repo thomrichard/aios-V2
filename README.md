@@ -21,7 +21,7 @@ L'agent fait tout : il récupère le socle, dépose ton profil dans `inbox/` et 
 ## Ce que tu touches
 
 - `inbox/` : tu y déposes tout (fichiers, liens, notes, dictées). Elle est vidée chaque nuit à 2 h.
-- `outbox/` : tu y lis le point du jour (`outbox/points/`) et la page `outbox/index.html`, qui montre tout ce qui est sorti.
+- `outbox/` : tu y lis le point du jour (`outbox/points/`) et la page `outbox/index.html`, qui montre tout ce qui est sorti, tes process et tes skills.
 
 Le reste est rangé pour l'IA. Tu n'as jamais besoin de l'ouvrir.
 
@@ -32,6 +32,7 @@ Le reste est rangé pour l'IA. Tu n'as jamais besoin de l'ouvrir.
 3. Chaque dossier a un `_index.md`, généré depuis l'en-tête de chaque fichier ; chaque dossier d'images a son `_images.md`.
 4. La mémoire vit dans `memory/`, une ligne par souvenir dans `memory/MEMORY.md`.
 5. Les skills existent une seule fois, dans `skills/` ; `.claude/skills` et `.agents/skills` sont des liens.
+6. Chaque process (une suite de skills, avec ce qu'on décide à chaque étape) a son fichier dans `processus/`.
 
 ## Le parcours
 
