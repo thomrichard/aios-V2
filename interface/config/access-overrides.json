@@ -1,4 +1,4 @@
 {
-  "_note": "Optional. Set who can reach a folder: { \"prefix\": \"notes/private/\", \"access\": \"local\" }. Access is local (this computer only), remote (a remote agent only) or both.",
+  "_note": "Facultatif. Choisis qui peut atteindre un dossier : { \"prefix\": \"notes/private/\", \"access\": \"local\" }. access vaut local (cet ordinateur seulement), remote (un agent distant seulement) ou both (les deux).",
   "overrides": []
 }

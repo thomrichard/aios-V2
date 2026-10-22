@@ -20,7 +20,7 @@
   // over http a file's text comes from the live engine through the server's /local/file; the bundled
   // bodies are only the fallback (file://, or the engine is down)
   const realFetch=window.fetch.bind(window),live=location.protocol.startsWith('http');
-  const bundled=id=>{const content=data.bodies[id];return body(content?{content,ext:'.md',size:content.length}:{error:'This snapshot includes file metadata and connections. The body of this file is not bundled in the standalone preview.'})};
+  const bundled=id=>{const content=data.bodies[id];return body(content?{content,ext:'.md',size:content.length}:{error:'Cet instantané contient les infos des fichiers et leurs liens. Le contenu de ce fichier n’est pas inclus dans l’aperçu autonome.'})};
   window.fetch=(input,options={})=>{
     const u=new URL(String(input),'http://brain.local'),method=(options.method||'GET').toUpperCase(),edit=load();
     if(u.pathname==='/api/graph'){const g=clone(data.graph);g.nodes=g.nodes.filter(n=>!edit.hidden.includes(n.id)).map(n=>({...n,...edit.edits[n.id]}));g.meta.hiddenCount=edit.hidden.length;return body(g)}
@@ -29,8 +29,8 @@
     if(u.pathname==='/api/file'){const id=u.searchParams.get('path');if(!live)return bundled(id);return realFetch('/local/file?path='+encodeURIComponent(id)).then(r=>r.ok?r.json():null).then(d=>d&&typeof d.content==='string'?body(d):data.bodies[id]?bundled(id):d?.error?body(d):bundled(id)).catch(()=>bundled(id))}
     if(u.pathname==='/api/tweak'&&method==='POST'){const x=JSON.parse(options.body);if(x.action==='edit')edit.edits[x.id]={label:x.label,desc:x.desc};if(x.action==='hide'&&!edit.hidden.includes(x.id))edit.hidden.push(x.id);if(x.action==='unhide-all')edit.hidden=[];localStorage.setItem('unified-brain-copy-edits',JSON.stringify(edit));return body({ok:true})}
     if(u.pathname==='/api/bake'){localStorage.setItem('unified-brain-copy-bake',options.body);const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([options.body],{type:'application/json'}));a.download='quiet-geometry-settings.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);return body({ok:true,path:'quiet-geometry-settings.json'})}
-    if(u.pathname==='/api/open'){if(!live)return body({error:'Opened as a file: use Copy path to open this file.'});let p={};try{p=JSON.parse(options.body||'{}')}catch{}return realFetch('/api/open',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({path:p.path||''})}).then(r=>r.json()).then(d=>body(d.opened?{ok:true}:d)).catch(()=>body({error:'Could not reach the OS.'}))}
+    if(u.pathname==='/api/open'){if(!live)return body({error:'Ouvert comme fichier : utilise « Copier le chemin » pour ouvrir ce fichier.'});let p={};try{p=JSON.parse(options.body||'{}')}catch{}return realFetch('/api/open',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({path:p.path||''})}).then(r=>r.json()).then(d=>body(d.opened?{ok:true}:d)).catch(()=>body({error:'Impossible de joindre l’OS.'}))}
     if(u.pathname==='/api/rescan')return body({ok:true});
-    return body({error:'Offline prototype: request not available'},404);
+    return body({error:'Prototype hors ligne : requête indisponible'},404);
   };
 })();

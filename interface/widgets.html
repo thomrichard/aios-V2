@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RUBRIC Widget Library</title>
+<title>SM4RT · Bibliothèque de widgets</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><rect width='48' height='48' fill='%23050504'/><path d='M24 6l18 10v16L24 42 6 32V16Z' fill='none' stroke='%23ff6b1a' stroke-width='3'/></svg>">
 <style>@font-face{font-family:Outfit;src:url('/assets/outfit.woff2')}@font-face{font-family:Doto;src:url('/assets/doto.woff2')}</style>
 <style>
@@ -151,12 +151,12 @@
 <div id="board"></div>
 
 <div id="ov"><div id="pop">
-  <div class="pk">Send to your agent</div>
+  <div class="pk">Envoie à ton agent</div>
   <h2 id="popT">Widget</h2>
-  <div class="pi">Copy this prompt and paste it into your agent. It names the board file and the rules, so the widget lands looking native.</div>
+  <div class="pi">Copie ce prompt et colle-le dans ton agent. Il donne le fichier du tableau de bord et les règles : le widget arrive avec le bon style.</div>
   <pre id="popP"></pre>
-  <div class="row"><button class="copy" id="popCopy">COPY PROMPT</button>
-    <button class="x" id="popX">CLOSE</button></div>
+  <div class="row"><button class="copy" id="popCopy">COPIER LE PROMPT</button>
+    <button class="x" id="popX">FERMER</button></div>
 </div></div>
 
 <script>
@@ -187,23 +187,23 @@ const LAY = Object.assign(JSON.parse(JSON.stringify(DEF)),
 const save = () => localStorage.setItem(LKEY, JSON.stringify(LAY));
 
 /* ================= widget definitions ================= */
-const BOARD_PATH = 'os.html (in this OS folder)';
+const BOARD_PATH = 'os.html (dans le dossier de cet OS)';
 const promptFor = (name, size, data, extra) =>
-`Add the ${name} widget to the RUBRIC Agentic OS main board.
+`Ajoute le widget ${name} au tableau de bord principal du SM4RT Agentic OS.
 
-Board: ${BOARD_PATH} (served by node server.js in the same folder, at the port in os-config.json).
-Rules: follow THE WIDGET RULES card at the top of the widget library (/widgets) exactly - boxless editorial chrome, header anatomy, orange-only accent, real data. Register the widget in DEFLAY and its body in APPBODIES the way the existing widgets do.
-Size: ${size} on the 16-column grid.
-Data: ${data}
+Tableau : ${BOARD_PATH} (servi par node server.js depuis le même dossier, sur le port indiqué dans os-config.json).
+Règles : suis à la lettre la carte LES RÈGLES DES WIDGETS en haut de la bibliothèque de widgets (/widgets) : habillage éditorial sans cadre, anatomie de l’en-tête, orange comme seul accent, vraies données. Inscris le widget dans DEFLAY et son contenu dans APPBODIES, comme les widgets existants.
+Taille : ${size} sur la grille de 16 colonnes.
+Données : ${data}
 ${extra}
-Verify before finishing: open the OS headless - zero console errors, every button live, content stays inside the widget box. Do not touch TWDEF, storage keys, or any other widget.`;
+Vérifie avant de finir : ouvre l’OS en headless ; zéro erreur dans la console, chaque bouton actif, le contenu reste dans le cadre du widget. Ne touche pas à TWDEF, aux clés de stockage ni à aucun autre widget.`;
 
 const APPS_H = [
-  { n:'GALLERY', url:'http://localhost:PORT/your-app',
+  { n:'GALERIE', url:'http://localhost:PORT/your-app',
     ic:'<rect x="3" y="4" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M3 16l5-4 4 3 5-5 4 4"/>' },
   { n:'NOTES', url:'http://localhost:PORT/another-app',
     ic:'<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M7 8h10M7 12h7"/><path d="M12 16v4M8 20h8"/>' },
-  { n:'FLOWS', url:'http://localhost:PORT/third-app',
+  { n:'FLUX', url:'http://localhost:PORT/third-app',
     ic:'<circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7 7.5l3.5 8M17 7.5l-3.5 8"/>' },
   { n:'CONSOLE', url:'http://localhost:PORT/fourth-app',
     ic:'<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9l3 3-3 3M12 15h5"/>' },
@@ -211,81 +211,81 @@ const APPS_H = [
 
 const WIDGETS = {
   'w-title': { kind:'title' },
-  'w-rules': { name:'THE WIDGET RULES', ic:'<path d="M9 11l2 2 4-5"/><rect x="3" y="3" width="18" height="18" rx="2"/>',
-    tick:'every widget follows these',
+  'w-rules': { name:'LES RÈGLES DES WIDGETS', ic:'<path d="M9 11l2 2 4-5"/><rect x="3" y="3" width="18" height="18" rx="2"/>',
+    tick:'chaque widget les suit',
     body:`<div class="rgrid">
-      <div class="it"><i>01</i><span><b>Boxless chrome.</b> 2px cream rule, 88px orange hover underline.</span></div>
-      <div class="it"><i>02</i><span><b>One accent.</b> Orange only; cream text, muted labels.</span></div>
-      <div class="it"><i>03</i><span><b>Header anatomy.</b> icon &rarr; tracked name &rarr; live tick.</span></div>
-      <div class="it"><i>04</i><span><b>Type scale.</b> 32px orange bignums, 10px caps, 9px sync foot.</span></div>
-      <div class="it"><i>05</i><span><b>4x3 default.</b> content scales, never reflows.</span></div>
-      <div class="it"><i>06</i><span><b>Real data only.</b> /api/* or add the endpoint.</span></div>
-      <div class="it"><i>07</i><span><b>Rows are links.</b> one primary action max.</span></div>
-      <div class="it"><i>08</i><span><b>Board-safe.</b> zero console errors to ship.</span></div>
+      <div class="it"><i>01</i><span><b>Sans cadre.</b> filet crème de 2px, soulignement orange de 88px au survol.</span></div>
+      <div class="it"><i>02</i><span><b>Un seul accent.</b> Orange seulement ; texte crème, libellés atténués.</span></div>
+      <div class="it"><i>03</i><span><b>Anatomie de l’en-tête.</b> icône &rarr; nom espacé &rarr; indicateur en direct.</span></div>
+      <div class="it"><i>04</i><span><b>Échelle du texte.</b> gros chiffres orange de 32px, capitales de 10px, pied de synchro de 9px.</span></div>
+      <div class="it"><i>05</i><span><b>4x3 par défaut.</b> le contenu s’adapte, sans se réorganiser.</span></div>
+      <div class="it"><i>06</i><span><b>Vraies données seulement.</b> /api/* ou ajoute la route.</span></div>
+      <div class="it"><i>07</i><span><b>Les lignes sont des liens.</b> une action principale au plus.</span></div>
+      <div class="it"><i>08</i><span><b>Sans risque pour le tableau.</b> zéro erreur console pour livrer.</span></div>
     </div>` },
-  'w-happ': { name:'MICRO APPS · HORIZONTAL', ic:'<rect x="2" y="8" width="4.5" height="8" rx="1.5"/><rect x="8" y="8" width="4.5" height="8" rx="1.5"/><rect x="14" y="8" width="4.5" height="8" rx="1.5"/><path d="M20 10v4"/>',
-    tick:'live · click an app', live:true,
-    prompt:['MICRO APPS - HORIZONTAL', '8 x 2',
-      'no feed - four static app buttons, each with its real local URL.',
-      `Body: a single row of 4 rounded-rectangle buttons (14px radius, 1.5px hairline border, hover = orange border + icon + 2px lift), each an icon over a 9px tracked uppercase label:
-GALLERY -> http://localhost:PORT/your-app
+  'w-happ': { name:'MICRO-APPS · HORIZONTAL', ic:'<rect x="2" y="8" width="4.5" height="8" rx="1.5"/><rect x="8" y="8" width="4.5" height="8" rx="1.5"/><rect x="14" y="8" width="4.5" height="8" rx="1.5"/><path d="M20 10v4"/>',
+    tick:'en direct · clique une app', live:true,
+    prompt:['MICRO-APPS - HORIZONTAL', '8 x 2',
+      'aucun flux : quatre boutons d’app fixes, chacun avec sa vraie URL locale.',
+      `Contenu : une seule rangée de 4 boutons à coins arrondis (rayon 14px, bordure fine de 1.5px ; au survol, bordure et icône orange, et le bouton monte de 2px), chacun avec une icône au-dessus d’un libellé de 9px en capitales espacées :
+GALERIE -> http://localhost:PORT/your-app
 NOTES -> http://localhost:PORT/another-app
-FLOWS -> http://localhost:PORT/third-app
+FLUX -> http://localhost:PORT/third-app
 CONSOLE -> http://localhost:PORT/fourth-app
-This replaces or sits alongside the vertical MICRO APPS - ask the user which.`],
+Il remplace le widget MICRO-APPS vertical ou se place à côté : demande à l’utilisateur.`],
     body:`<div class="happ">` + APPS_H.map(a =>
       `<a data-url="${a.url}"><svg viewBox="0 0 24 24">${a.ic}</svg><b>${a.n}</b></a>`).join('') + `</div>` },
-  'w-x-apps': { name:'MICRO APPS', ic:'<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M17.5 14v7M14 17.5h7"/>',
-    tick:'on board', prompt:['MICRO APPS', '4 x 3', 'static rows; each row carries its data-url to a real local app.',
-      'Rows come from GET /api/apps (RUBRIC Recos plus os-config.json microApps); a click logs the open. + ADD APP opens the paste-ready prompt.'],
-    body:`<div class="why">Vertical launcher - rows open the real localhost tools.</div>
-      <div class="prev"><div class="prow"><span class="nm">RUBRIC Recos</span><span class="rt">:50013 &rarr;</span></div>
-      <div class="prow"><span class="nm">Your app</span><span class="rt">:PORT &rarr;</span></div>
-      <div class="prow"><span class="nm">Add more</span><span class="rt">+</span></div></div>` },
-  'w-x-cal': { name:'CALENDAR', ic:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
-    tick:'on board', prompt:['CALENDAR', '4 x 3', 'GET /api/calendar (tools/google-calendar.js -> snapshots/calendar.json fallback).',
-      'Live local clock, world times, next event countdown, one orange action: OPEN CAL.'],
-    body:`<div class="why">Live clock, next real event, one orange action.</div>
-      <div class="prev"><span class="clock">14:05:29</span><span class="cap" style="margin-left:10px">LOCAL TIME</span>
-      <div class="cap" style="margin-top:8px">WHAT'S NEXT</div>
-      <div class="prow"><span class="nm">Team call</span><span class="rt">in 2h 46m</span></div></div>` },
+  'w-x-apps': { name:'MICRO-APPS', ic:'<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M17.5 14v7M14 17.5h7"/>',
+    tick:'en place', prompt:['MICRO-APPS', '4 x 3', 'lignes fixes ; chaque ligne porte son data-url vers une vraie app locale.',
+      'Les lignes viennent de GET /api/apps (les microApps d’os-config.json) ; un clic note l’ouverture. + AJOUTER UNE APP ouvre le prompt prêt à coller.'],
+    body:`<div class="why">Lanceur vertical : les lignes ouvrent les vrais outils en localhost.</div>
+      <div class="prev"><div class="prow"><span class="nm">Mon app</span><span class="rt">:3000 &rarr;</span></div>
+      <div class="prow"><span class="nm">Ton app</span><span class="rt">:PORT &rarr;</span></div>
+      <div class="prow"><span class="nm">Ajouter</span><span class="rt">+</span></div></div>` },
+  'w-x-cal': { name:'AGENDA', ic:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
+    tick:'en place', prompt:['AGENDA', '4 x 3', 'GET /api/calendar (tools/google-calendar.js, sinon repli sur snapshots/calendar.json).',
+      'Horloge locale en direct, heures du monde, compte à rebours jusqu’au prochain événement, une seule action orange : OUVRIR.'],
+    body:`<div class="why">Horloge en direct, prochain vrai événement, une action orange.</div>
+      <div class="prev"><span class="clock">14:05:29</span><span class="cap" style="margin-left:10px">HEURE LOCALE</span>
+      <div class="cap" style="margin-top:8px">À VENIR</div>
+      <div class="prow"><span class="nm">Appel d’équipe</span><span class="rt">dans 2 h 46</span></div></div>` },
   'w-x-yt': { name:'STATS', ic:'<rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9l6 3-6 3z"/>',
-    tick:'on board', prompt:['STATS', '4 x 3', 'GET /api/stats (snapshots/stats.json - any numbers you care about; WIRING.md has a YouTube recipe).',
-      'One headline number, a two-line caption, and a this-month dots grid with today ringed.'],
-    body:`<div class="why">Any number you care about, plus a days grid.</div>
-      <div class="prev"><div style="display:flex; gap:22px"><div><div class="bignum">12,345</div><div class="cap">YOUR NUMBER</div></div>
-      <div><div class="bignum">3</div><div class="cap">THIS MONTH</div></div></div>
+    tick:'en place', prompt:['STATS', '4 x 3', 'GET /api/stats (snapshots/stats.json : les chiffres qui comptent pour toi ; WIRING.md donne une recette YouTube).',
+      'Un chiffre phare, une légende sur deux lignes et une grille de points pour ce mois, avec aujourd’hui entouré.'],
+    body:`<div class="why">Le chiffre qui compte pour toi, plus une grille des jours.</div>
+      <div class="prev"><div style="display:flex; gap:22px"><div><div class="bignum">12 345</div><div class="cap">TON CHIFFRE</div></div>
+      <div><div class="bignum">3</div><div class="cap">CE MOIS-CI</div></div></div>
       <div class="dots"><i class="on"></i><i></i><i class="on"></i><i></i><i></i><i class="on"></i><i></i><i></i></div></div>` },
-  'w-x-mail': { name:'EMAIL', ic:'<rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 8 10-8"/>',
-    tick:'on board', prompt:['EMAIL', '4 x 3', 'GET /api/email (gws gmail, lead classification, warm cache).',
-      'Total + leads waiting + flagged rows that open the real Gmail thread; SYNCED footer.'],
-    body:`<div class="why">Inbox past 24h - flagged rows open your webmail.</div>
-      <div class="prev"><div class="bignum">18</div><div class="cap">EMAILS PAST 24H &middot; <span style="color:var(--accent)">15 leads</span></div>
-      <div class="prow" style="margin-top:6px"><span class="lead">LEAD</span><span class="nm">Partnership enquiry</span><span class="rt">2h</span></div></div>` },
-  'w-x-rt': { name:'ROUTINES · FIRING BOARD', ic:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 3"/>',
-    tick:'on board', prompt:['ROUTINES FIRING BOARD', '4 x 2', 'GET /api/routines (snapshots/routines.json plus your agent scheduler).',
-      'Departures board: split-flap times, FIRED/QUEUED, NEXT FIRE countdown, source legend.'],
-    body:`<div class="why">The day's automations as a departures board.</div>
-      <div class="prev"><div class="prow"><span class="rt">07:00</span><span class="nm">morning digest</span><span class="rt">FIRED</span></div>
-      <div class="prow"><span class="rt">17:30</span><span class="nm">evening digest</span><span class="rt" style="color:var(--accent)">T-2H 41M</span></div></div>` },
-  'w-x-sk': { name:'SKILLS DECK', ic:'<path d="M13 2L4 14h6l-2 8 9-12h-6z"/>',
-    tick:'on board', prompt:['SKILLS DECK', '4 x 3', 'GET /api/skills; POST /api/run writes the report artifact.',
-      'Four skill cards, model x effort adjuster, ▶ run -> HTML report lands on the ring as a ball.'],
-    body:`<div class="why">Run skills; finished runs become balls on the ring.</div>
+  'w-x-mail': { name:'E-MAILS', ic:'<rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 8 10-8"/>',
+    tick:'en place', prompt:['E-MAILS', '4 x 3', 'GET /api/email (gws gmail, tri des prospects, cache chaud).',
+      'Total + prospects en attente + lignes signalées qui ouvrent le vrai fil Gmail ; pied SYNCHRO.'],
+    body:`<div class="why">Boîte de réception sur 24 h : les lignes signalées ouvrent ton webmail.</div>
+      <div class="prev"><div class="bignum">18</div><div class="cap">E-MAILS SUR 24 H &middot; <span style="color:var(--accent)">15 prospects</span></div>
+      <div class="prow" style="margin-top:6px"><span class="lead">PROSPECT</span><span class="nm">Demande de partenariat</span><span class="rt">2 h</span></div></div>` },
+  'w-x-rt': { name:'ROUTINES · DÉPARTS', ic:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 3"/>',
+    tick:'en place', prompt:['ROUTINES · DÉPARTS', '4 x 2', 'GET /api/routines (snapshots/routines.json plus le planificateur de ton agent).',
+      'Tableau des départs : heures en volets rotatifs, LANCÉE/EN ATTENTE, compte à rebours jusqu’à la PROCHAINE, légende des sources.'],
+    body:`<div class="why">Les automatisations du jour, en tableau des départs.</div>
+      <div class="prev"><div class="prow"><span class="rt">07:00</span><span class="nm">résumé du matin</span><span class="rt">LANCÉE</span></div>
+      <div class="prow"><span class="rt">17:30</span><span class="nm">résumé du soir</span><span class="rt" style="color:var(--accent)">T-2H 41M</span></div></div>` },
+  'w-x-sk': { name:'DECK DE SKILLS', ic:'<path d="M13 2L4 14h6l-2 8 9-12h-6z"/>',
+    tick:'en place', prompt:['DECK DE SKILLS', '4 x 3', 'GET /api/skills ; POST /api/run écrit le livrable du rapport.',
+      'Quatre cartes de skills, réglage modèle x effort, ▶ lancer -> le rapport HTML arrive sur l’anneau sous forme de boule.'],
+    body:`<div class="why">Lance des skills ; chaque exécution finie devient une boule sur l’anneau.</div>
       <div class="prev"><div class="mini">
-      <div class="mk"><div class="n"><i>/</i>morning-brief</div><div class="c">OPUS &middot; HIGH</div></div>
-      <div class="mk"><div class="n"><i>/</i>weekly-review</div><div class="c">OPUS &middot; HIGH</div></div>
-      <div class="mk"><div class="n"><i>/</i>research</div><div class="c">FABLE &middot; HIGH</div></div>
-      <div class="mk"><div class="n"><i>/</i>tidy-inbox</div><div class="c">HAIKU &middot; LOW</div></div></div></div>` },
-  'w-x-wheel': { name:'ACTION WHEEL', ic:'<circle cx="12" cy="12" r="8" stroke-dasharray="9 4"/><circle cx="12" cy="12" r="1.6"/>',
-    tick:'off board', prompt:['ACTION WHEEL', '2 x 2', 'no feed - quadrants call board functions.',
-      'Click + hold radial menu: SCAN / RUN / STORE / INSPECT, release runs the lit quadrant.'],
-    body:`<div class="why">Click + hold radial menu. Currently off the board.</div>
+      <div class="mk"><div class="n"><i>/</i>point-du-matin</div><div class="c">OPUS &middot; HIGH</div></div>
+      <div class="mk"><div class="n"><i>/</i>revue-hebdo</div><div class="c">OPUS &middot; HIGH</div></div>
+      <div class="mk"><div class="n"><i>/</i>recherche</div><div class="c">FABLE &middot; HIGH</div></div>
+      <div class="mk"><div class="n"><i>/</i>ranger-inbox</div><div class="c">HAIKU &middot; LOW</div></div></div></div>` },
+  'w-x-wheel': { name:'ROUE D’ACTIONS', ic:'<circle cx="12" cy="12" r="8" stroke-dasharray="9 4"/><circle cx="12" cy="12" r="1.6"/>',
+    tick:'retiré', prompt:['ROUE D’ACTIONS', '2 x 2', 'aucun flux : les quadrants appellent des fonctions du tableau.',
+      'Menu radial clic + maintien : SCANNER / LANCER / RANGER / INSPECTER ; relâcher lance le quadrant allumé.'],
+    body:`<div class="why">Menu radial clic + maintien. Retiré du tableau pour l’instant.</div>
       <div class="prev"><div class="wheelprev"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="15" stroke-dasharray="18 5"/><circle cx="24" cy="24" r="3.2"/></svg></div>
-      <div class="cap" style="text-align:center">CLICK + HOLD &middot; RELEASE TO RUN</div></div>` },
-  'w-x-new': { name:'ADD YOUR OWN WIDGET', ic:'<rect x="3" y="3" width="18" height="18" rx="2" stroke-dasharray="4 3"/><path d="M12 8v8M8 12h8"/>',
-    tick:'click me to start', blank:true,
-    body:`<div class="prev" style="cursor:pointer"><div class="cap" style="text-align:center; padding:16px 0"><b>Click here</b> to get your starter prompt.<br>Describe your widget - your agent builds it to the board's rules.</div></div>` },
+      <div class="cap" style="text-align:center">CLIQUE + MAINTIENS &middot; RELÂCHE POUR LANCER</div></div>` },
+  'w-x-new': { name:'AJOUTE TON WIDGET', ic:'<rect x="3" y="3" width="18" height="18" rx="2" stroke-dasharray="4 3"/><path d="M12 8v8M8 12h8"/>',
+    tick:'clique pour commencer', blank:true,
+    body:`<div class="prev" style="cursor:pointer"><div class="cap" style="text-align:center; padding:16px 0"><b>Clique ici</b> pour obtenir ton prompt de départ.<br>Décris ton widget : ton agent le construit selon les règles du tableau.</div></div>` },
 };
 
 /* ================= build ================= */
@@ -300,18 +300,18 @@ function buildWidgets() {
     el.id = w.id;
     if (def.kind === 'title') {
       el.innerHTML = `<div class="wh tb" style="display:block">
-        <h1><svg class="hexlogo" viewBox="0 0 48 48" fill="none" stroke="#ff6b1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l18 10v16L24 42 6 32V16Z"/><path d="M24 6v16l18 10" opacity="0.5"/><path d="M24 22L6 32" opacity="0.5"/></svg>RUBRIC <span>Widget Library</span></h1>
-        <div class="sub">copy a prompt &middot; paste it to your agent &middot; it lands on the board</div>
+        <h1><svg class="hexlogo" viewBox="0 0 48 48" fill="none" stroke="#ff6b1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l18 10v16L24 42 6 32V16Z"/><path d="M24 6v16l18 10" opacity="0.5"/><path d="M24 22L6 32" opacity="0.5"/></svg>SM4RT <span>Bibliothèque de widgets</span></h1>
+        <div class="sub">copie un prompt &middot; colle-le dans ton agent &middot; il arrive sur le tableau</div>
         <div class="tbar">
-          <button id="editBtn" title="Edit layout"><svg viewBox="0 0 24 24"><path d="M17 3l4 4L8 20l-5 1 1-5Z"/></svg></button>
-          <button id="homeBtn" title="Back to the OS"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7"/><path d="M6 9.5V20h12V9.5"/></svg></button>
-          <button id="resetBtn" title="Reset layout" style="display:none"><svg viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 2 6"/><path d="M4 5v5h5"/></svg></button>
+          <button id="editBtn" title="Modifier la disposition"><svg viewBox="0 0 24 24"><path d="M17 3l4 4L8 20l-5 1 1-5Z"/></svg></button>
+          <button id="homeBtn" title="Retour à l’OS"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7"/><path d="M6 9.5V20h12V9.5"/></svg></button>
+          <button id="resetBtn" title="Réinitialiser la disposition" style="display:none"><svg viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 2 6"/><path d="M4 5v5h5"/></svg></button>
         </div>
         <div id="restoreRow"></div></div>`;
     } else {
       el.innerHTML = `<div class="wh"><svg class="wic" viewBox="0 0 24 24">${def.ic}</svg>
         <span>${def.name}</span><span class="tick">${def.tick || ''}</span>
-        <button class="pbtn" data-p="${w.id}">COPY PROMPT</button></div>
+        <button class="pbtn" data-p="${w.id}">COPIER</button></div>
         <div class="wb">${def.body}</div>
         <button class="wx">×</button><div class="rs"></div>`;
     }
@@ -446,9 +446,9 @@ let curPrompt = '';
 function openPrompt(id) {
   const def = WIDGETS[id];
   curPrompt = def.blank
-    ? promptFor('[describe your widget - e.g. SUBSTACK: subscribers, open rate, last send]',
-        '4 x 3 (default)', 'describe the source; add a server.js endpoint if none fits.',
-        'Replace the bracketed line with what you want on the board, then paste.')
+    ? promptFor('[décris ton widget, par ex. SUBSTACK : abonnés, taux d’ouverture, dernier envoi]',
+        '4 x 3 (par défaut)', 'décris la source ; ajoute une route dans server.js si aucune ne convient.',
+        'Remplace la ligne entre crochets par ce que tu veux sur le tableau, puis colle.')
     : promptFor(...def.prompt);
   document.getElementById('popT').textContent = def.name;
   document.getElementById('popP').textContent = curPrompt;
@@ -456,8 +456,8 @@ function openPrompt(id) {
 }
 document.getElementById('popCopy').onclick = e => {
   navigator.clipboard.writeText(curPrompt);
-  e.target.textContent = 'COPIED ✓';
-  setTimeout(() => e.target.textContent = 'COPY PROMPT', 1400);
+  e.target.textContent = 'COPIÉ ✓';
+  setTimeout(() => e.target.textContent = 'COPIER LE PROMPT', 1400);
 };
 document.getElementById('popX').onclick = () => document.getElementById('ov').classList.remove('show');
 document.getElementById('ov').addEventListener('pointerdown', e => {

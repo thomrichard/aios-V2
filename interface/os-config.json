@@ -17,7 +17,7 @@
   "clocks": [
     { "label": "USA PT", "tz": "America/Los_Angeles" },
     { "label": "USA ET", "tz": "America/New_York" },
-    { "label": "LONDON", "tz": "Europe/London" }
+    { "label": "LONDRES", "tz": "Europe/London" }
   ],
   "readers": { "claudeCode": "auto" },
   "email": { "enabled": false, "command": "gws" },

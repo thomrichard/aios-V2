@@ -27,7 +27,7 @@ body {
 /* HUD top-left */
 #brain-hud { position: fixed; top: 22px; left: 26px; z-index: 20; pointer-events: none; max-width: 400px; }
 .hud-brand { display: flex; align-items: center; gap: 10px; }
-.hud-rubric { font-weight: 900; font-size: 21px; letter-spacing: 4px; }
+.hud-sm4rt { font-weight: 900; font-size: 21px; letter-spacing: 4px; }
 .hud-product { font-weight: 200; font-size: 21px; letter-spacing: 4px; color: var(--muted); }
 .hud-skin { font-weight: 600; font-size: 10.5px; letter-spacing: 2.2px; color: var(--accent); margin-top: 7px; }
 .hud-title { font-weight: 700; font-size: 17px; letter-spacing: 2.5px; }

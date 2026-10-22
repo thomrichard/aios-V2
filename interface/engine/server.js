@@ -20,7 +20,7 @@ const path = require('path');
 const scan = require('./scan');
 
 const [major] = process.versions.node.split('.').map(Number);
-if (major < 18) { console.error('Requires Node.js 18 or newer. You are running ' + process.version); process.exit(1); }
+if (major < 18) { console.error('Il faut Node.js 18 ou plus récent. Tu as la version ' + process.version); process.exit(1); }
 
 let CFG = {};
 try { CFG = JSON.parse(fs.readFileSync(path.join(scan.KIT, 'os-config.json'), 'utf8')); } catch { }
@@ -55,7 +55,7 @@ const server = http.createServer(async (req, res) => {
     if (!LOCAL_HOST.test(String(req.headers.host || ''))) return sendJSON(res, { error: 'local requests only' }, 403);
     const url = new URL(req.url, 'http://localhost');
     const p = url.pathname;
-    if (p === '/' && req.method === 'GET') return sendJSON(res, { engine: 'RUBRIC Second Brain engine', endpoints: ['/api/graph', '/api/expand', '/api/search', '/api/file', '/api/meta'] });
+    if (p === '/' && req.method === 'GET') return sendJSON(res, { engine: 'SM4RT Second Brain engine', endpoints: ['/api/graph', '/api/expand', '/api/search', '/api/file', '/api/meta'] });
     if (p === '/api/graph' && req.method === 'GET') {
       if (url.searchParams.get('fresh') === '1' && Date.now() - scanStartedAt > 30000) startScan();
       const r = await current();
@@ -67,7 +67,7 @@ const server = http.createServer(async (req, res) => {
       if (r.error) return sendJSON(res, { error: r.error }, 500);
       const rel = (url.searchParams.get('path') || '').replace(/\\/g, '/');
       const children = scan.expandDir(r.model, r.cfg, rel);
-      return children ? sendJSON(res, { path: rel, nodes: children }) : sendJSON(res, { error: 'Unknown folder' }, 404);
+      return children ? sendJSON(res, { path: rel, nodes: children }) : sendJSON(res, { error: 'Dossier inconnu' }, 404);
     }
     if (p === '/api/search' && req.method === 'GET') {
       const r = await current();
@@ -79,13 +79,13 @@ const server = http.createServer(async (req, res) => {
       const r = await current();
       const rel = String(url.searchParams.get('path') || '');
       const abs = inside(r.root, rel);
-      if (!abs) return sendJSON(res, { error: 'Not found' }, 404);
-      if (scan.isSecret(path.relative(r.root, abs).replace(/\\/g, '/'))) return sendJSON(res, { error: 'This file looks like a secret, so the viewer does not show it.' }, 403);
-      let st; try { st = fs.statSync(abs); } catch { return sendJSON(res, { error: 'Not found' }, 404); }
-      if (!st.isFile()) return sendJSON(res, { error: 'Not a file' }, 400);
+      if (!abs) return sendJSON(res, { error: 'Introuvable' }, 404);
+      if (scan.isSecret(path.relative(r.root, abs).replace(/\\/g, '/'))) return sendJSON(res, { error: 'Ce fichier ressemble à un secret : la visionneuse ne l’affiche pas.' }, 403);
+      let st; try { st = fs.statSync(abs); } catch { return sendJSON(res, { error: 'Introuvable' }, 404); }
+      if (!st.isFile()) return sendJSON(res, { error: 'Ce n’est pas un fichier' }, 400);
       const ext = path.extname(abs).toLowerCase();
       if (!TEXT_EXT.has(ext) && ext !== '') return sendJSON(res, { error: 'binary', ext, size: st.size }, 400);
-      if (st.size > FILE_MAX) return sendJSON(res, { error: 'File too large for the viewer (' + Math.round(st.size / 1024) + ' KB)' }, 400);
+      if (st.size > FILE_MAX) return sendJSON(res, { error: 'Fichier trop lourd pour la visionneuse (' + Math.round(st.size / 1024) + ' Ko)' }, 400);
       return sendJSON(res, { content: fs.readFileSync(abs, 'utf8'), ext, size: st.size });
     }
     if (p === '/api/meta' && req.method === 'GET') {
@@ -96,20 +96,20 @@ const server = http.createServer(async (req, res) => {
       const r = await startScan();
       return sendJSON(res, r.error ? { error: r.error } : { ok: true, meta: r.meta });
     }
-    sendJSON(res, { error: 'Unknown endpoint' }, 404);
+    sendJSON(res, { error: 'Route inconnue' }, 404);
   } catch (e) {
     try { sendJSON(res, { error: e.message }, 500); } catch { }
   }
 });
 server.on('error', e => {
-  if (e.code === 'EADDRINUSE') { console.error('Second Brain engine: port ' + PORT + ' is in use. Change "brainPort" in os-config.json.'); process.exit(2); }
+  if (e.code === 'EADDRINUSE') { console.error('Moteur du second cerveau : le port ' + PORT + ' est déjà pris. Change "brainPort" dans os-config.json.'); process.exit(2); }
   throw e;
 });
 server.listen(PORT, '127.0.0.1', () => {
-  console.log('Second Brain engine -> http://127.0.0.1:' + PORT);
+  console.log('Moteur du second cerveau -> http://127.0.0.1:' + PORT);
   startScan().then(r => {
-    if (r.error) console.log('Scan failed:', r.error);
-    else if (!r.meta.workspaceSet) console.log('No workspace set yet: put your workspace path in config/workspace.json ("root").');
-    else console.log(`Scan: ${r.meta.totalFiles} files, ${r.meta.mdLinks} markdown links, ${r.meta.visibleNodes} map nodes in ${r.meta.scanMs} ms`);
+    if (r.error) console.log('Échec du scan :', r.error);
+    else if (!r.meta.workspaceSet) console.log('Aucun workspace défini : mets son chemin dans config/workspace.json ("root").');
+    else console.log(`Scan : ${r.meta.totalFiles} fichiers, ${r.meta.mdLinks} liens markdown, ${r.meta.visibleNodes} nœuds sur la carte, en ${r.meta.scanMs} ms`);
   });
 });

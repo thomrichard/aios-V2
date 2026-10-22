@@ -31,7 +31,7 @@ const REDIRECT_URI = `http://localhost:${REDIRECT_PORT}/oauth2callback`;
 
 function loadCreds() {
   if (!existsSync(CREDS_PATH)) {
-    console.error(`Missing credentials file: ${CREDS_PATH} - see OAUTH.md`);
+    console.error(`Fichier d’identifiants introuvable : ${CREDS_PATH} (voir OAUTH.md)`);
     process.exit(1);
   }
   return JSON.parse(readFileSync(CREDS_PATH, 'utf8'));
@@ -56,7 +56,7 @@ async function auth() {
     prompt: 'consent',
   });
 
-  console.log('\nOpening browser for authorization - pick the account whose calendar you use\n');
+  console.log('\nOuverture du navigateur pour l’autorisation : choisis le compte de ton agenda\n');
   console.log(authUrl);
   const opener = process.platform === 'win32' ? `start "" "${authUrl}"`
     : process.platform === 'darwin' ? `open "${authUrl}"` : `xdg-open "${authUrl}"`;
@@ -72,13 +72,13 @@ async function auth() {
           writeFileSync(TOKEN_PATH, JSON.stringify(tokens, null, 2));
           oauth2Client.setCredentials(tokens);
           res.writeHead(200, { 'Content-Type': 'text/html' });
-          res.end('<h1>Google Calendar authorized! You can close this tab.</h1>');
-          console.log('\nAuthorization successful! Token saved.');
+          res.end('<meta charset="utf-8"><h1>Google Calendar est autorisé. Tu peux fermer cet onglet.</h1>');
+          console.log('\nAutorisation réussie. Jeton enregistré.');
           server.close();
           resolve(oauth2Client);
         } else {
           res.writeHead(400);
-          res.end('No code received');
+          res.end('Aucun code transmis');
         }
       }
     });
@@ -89,7 +89,7 @@ async function auth() {
 function getClientOrDie() {
   const oauth2Client = getOAuth2Client();
   if (!loadToken(oauth2Client)) {
-    console.error('Not authorized yet. Run: node tools/google-calendar.js auth');
+    console.error('Pas encore autorisé. Lance : node tools/google-calendar.js auth');
     process.exit(1);
   }
   return oauth2Client;
@@ -107,7 +107,7 @@ async function next() {
     cal.events.list({ calendarId: c.id, timeMin, singleEvents: true,
                       orderBy: 'startTime', maxResults: 10 })
       .then(r => (r.data.items || []).map(e => ({
-        title: e.summary || '(no title)',
+        title: e.summary || '(sans titre)',
         start: e.start?.dateTime || e.start?.date,
         allDay: !e.start?.dateTime,
         cal: c.summaryOverride || c.summary,
@@ -129,4 +129,4 @@ async function next() {
 const cmd = process.argv[2];
 if (cmd === 'auth') auth();
 else if (cmd === 'next') next().catch(e => { console.error(e.message); process.exit(1); });
-else console.log('Usage: node tools/google-calendar.js auth | next');
+else console.log('Utilisation : node tools/google-calendar.js auth | next');

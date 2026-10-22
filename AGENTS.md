@@ -108,7 +108,7 @@ Avant de dire « c'est fait », vérifie : relance le test ou relis le fichier. 
 
 ## Interface
 
-- `interface/` : le RUBRIC Agentic OS v2 de Jay E | RoboNuggets (licence MIT), branché sur ce workspace. Lancer : `node interface/server.js`, puis ouvrir `http://localhost:50000`.
+- `interface/` : SM4RT, l'interface tirée de l'Agentic OS v2 de Jay E | RoboNuggets (licence MIT), branchée sur ce workspace. Lancer : `node interface/server.js`, puis ouvrir `http://localhost:50000`.
 - Ses départements et ses routines sont générés par `systeme/scripts/index.py` depuis la carte des domaines et `systeme/routines.md`. Nos changements au kit : `interface/MODIFS.md`.
 - Pour la modifier ou la réparer : `interface/skills/agenticos/SKILL.md` et les guides de `interface/`.
 

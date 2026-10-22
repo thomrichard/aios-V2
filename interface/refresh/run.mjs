@@ -12,7 +12,7 @@ let ok = true;
 for (const step of STEPS) {
   const t = Date.now();
   const r = spawnSync(process.execPath, ['--no-warnings', path.join(HERE, step)], { stdio: 'inherit', windowsHide: true });
-  console.log(`${r.status === 0 ? 'done' : 'FAILED'}  ${step}  ${Date.now() - t} ms`);
+  console.log(`${r.status === 0 ? 'fait' : 'ÉCHEC'}  ${step}  ${Date.now() - t} ms`);
   if (r.status !== 0) { ok = false; break; }
 }
 process.exit(ok ? 0 : 1);

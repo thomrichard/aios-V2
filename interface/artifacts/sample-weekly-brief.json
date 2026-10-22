@@ -1,8 +1,8 @@
 {
-  "title": "Sample: weekly brief",
+  "title": "Exemple : point de la semaine",
   "icon": "report",
   "kind": "report",
   "created": "2026-01-01T00:00:02.000Z",
-  "note": "what a recurring agent-written brief looks like as a ball",
+  "note": "à quoi ressemble, en boule, un point régulier écrit par ton agent",
   "svg": "<rect x=\"12\" y=\"7\" width=\"24\" height=\"34\" rx=\"3\"/><path d=\"M18 17h12M18 24h12M18 31h7\"/>"
 }

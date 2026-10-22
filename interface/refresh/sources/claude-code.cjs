@@ -67,10 +67,10 @@ function scheduledTasks() {
     return {
       id: taskRoutineId(id), name: String(t.displayName || id).replace(/[-_]+/g, ' ').slice(0, 100), desc: describe(file).slice(0, 300),
       cron, once, times: [], days: null, dom: null, status, path: fs.existsSync(file) ? file : null,
-      sourceAsOf: t._asOf || null, origin: 'desktop scheduler', scheduleText: cron ? 'cron ' + cron : once ? 'once' : 'On demand',
+      sourceAsOf: t._asOf || null, origin: 'app de bureau', scheduleText: cron ? 'cron ' + cron : once ? 'une fois' : 'À la demande',
     };
   });
-  return { key: 'agent-tasks', label: 'SCHEDULED TASKS', routines };
+  return { key: 'agent-tasks', label: 'TÂCHES PLANIFIÉES', routines };
 }
 
 /* ---------- session logs ---------- */

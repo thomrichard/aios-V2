@@ -27,7 +27,7 @@ Le reste est rangé pour l'IA. Tu n'as jamais besoin de l'ouvrir.
 
 ## L'interface
 
-`interface/` contient le RUBRIC Agentic OS v2 de Jay E | RoboNuggets (licence MIT), déjà branché sur le workspace : page d'accueil, second cerveau en 3D, vues Routines, Skills et Applications. Il faut Node.js 18 ou plus.
+`interface/` contient SM4RT, l'interface tirée de l'Agentic OS v2 de Jay E | RoboNuggets (licence MIT), déjà branchée sur le workspace : page d'accueil, second cerveau en 3D, vues Routines, Skills et Applications. Il faut Node.js 18 ou plus.
 
 1. `node interface/refresh/run.mjs` construit la carte du workspace.
 2. `node interface/server.js` lance l'interface ; ouvre `http://localhost:50000`.

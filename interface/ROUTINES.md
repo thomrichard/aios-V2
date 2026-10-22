@@ -1,57 +1,57 @@
-# ROUTINES.md - list everything that runs on a schedule
+# ROUTINES.md - lister tout ce qui tourne à heure fixe
 
-Routines show in three places: the homepage ROUTINES widget (today's fires, with a countdown to the next one), the Second Brain's Routines tab (a Monday to Sunday week with every fire), and the gold ring of the 3D and 2D maps.
+Les routines s'affichent à trois endroits : le widget ROUTINES de la page d'accueil (les déclenchements du jour, avec un compte à rebours jusqu'au prochain), l'onglet Routines du second cerveau (une semaine du lundi au dimanche, avec chaque déclenchement), et le cercle doré des cartes 3D et 2D.
 
-They come from two kinds of source.
+Elles viennent de deux types de sources.
 
-## 1. Your agent's own scheduler (read for you when a reader exists)
+## 1. Le planificateur de ton agent (lu pour toi quand un lecteur existe)
 
-- **If your agent is Claude Code:** its scheduled tasks are read for you. The task list comes from `~/.claude/scheduled-tasks/` (each task's `SKILL.md` gives its description). The schedule comes from the desktop app's `scheduled-tasks.json` files, found up to three folders deep under `claude-code-sessions`: `%APPDATA%\Claude\claude-code-sessions` on Windows, `~/Library/Application Support/Claude/claude-code-sessions` on macOS, `~/.config/Claude/claude-code-sessions` on Linux. Nothing to set up.
-- **To turn that reader off** (you are not on Claude Code, or you do not want those folders read): set `"readers": { "claudeCode": false }` in `os-config.json`. The default, `"auto"`, reads them only when they exist.
-- **Any other agent:** write its routines into the routines file below. To teach the OS to read another scheduler by itself, add a reader in `refresh/sources/` that returns `{ key, label, routines: [...] }` and list it in `READERS` in `refresh/lib/sources.cjs`, with its own switch under `"readers"`.
+- **Si ton agent est Claude Code :** ses tâches planifiées sont lues pour toi. La liste des tâches vient de `~/.claude/scheduled-tasks/` (le `SKILL.md` de chaque tâche donne sa description). Les horaires viennent des fichiers `scheduled-tasks.json` de l'app de bureau, cherchés jusqu'à trois niveaux de dossiers sous `claude-code-sessions` : `%APPDATA%\Claude\claude-code-sessions` sous Windows, `~/Library/Application Support/Claude/claude-code-sessions` sous macOS, `~/.config/Claude/claude-code-sessions` sous Linux. Rien à installer.
+- **Pour couper ce lecteur** (tu n'es pas sur Claude Code, ou tu ne veux pas que ces dossiers soient lus) : mets `"readers": { "claudeCode": false }` dans `os-config.json`. La valeur par défaut, `"auto"`, ne les lit que s'ils existent.
+- **Tout autre agent :** écris ses routines dans le fichier de routines ci-dessous. Pour apprendre à l'OS à lire seul un autre planificateur, ajoute un lecteur dans `refresh/sources/` qui renvoie `{ key, label, routines: [...] }` et inscris-le dans `READERS`, dans `refresh/lib/sources.cjs`, avec son propre interrupteur sous `"readers"`.
 
-## 2. The routines file: `snapshots/routines.json`
+## 2. Le fichier de routines : `snapshots/routines.json`
 
-One simple file that any agent or scheduler can write. Use what you know about your user's schedulers (cron, Windows Task Scheduler, launchd, systemd timers, a server, cloud jobs, other agents) to fill it, and refresh it whenever a schedule changes. A starter copy ships as `snapshots/routines.example.json`.
+Un seul fichier simple, que n'importe quel agent ou planificateur peut écrire. Sers-toi de ce que tu sais des planificateurs de ton utilisateur (cron, Planificateur de tâches Windows, launchd, minuteurs systemd, un serveur, des tâches cloud, d'autres agents) pour le remplir, et mets-le à jour chaque fois qu'un horaire change. Un exemple de départ est livré : `snapshots/routines.example.json`.
 
 ```json
 {
   "timezone": "",
   "sources": [
-    { "key": "agent",  "label": "MY AGENT" },
-    { "key": "server", "label": "HOME SERVER" }
+    { "key": "agent",  "label": "MON AGENT" },
+    { "key": "server", "label": "SERVEUR MAISON" }
   ],
   "routines": [
-    { "id": "morning-digest", "name": "Morning digest", "source": "agent",  "cron": "0 7 * * *", "desc": "Sum up my inbox and calendar" },
-    { "id": "backup-sweep",   "name": "Backup sweep",   "source": "server", "days": ["mon", "wed", "fri"], "times": ["18:30"], "desc": "Copy the workspace to backup" },
-    { "id": "inbox-check",    "name": "Inbox check",    "source": "agent",  "cron": "0 9-17 * * 1-5", "desc": "Hourly through the work day" },
-    { "id": "weekly-review",  "name": "Weekly review",  "source": "agent",  "status": "ondemand", "desc": "Runs when I ask" }
+    { "id": "morning-digest", "name": "Résumé du matin", "source": "agent",  "cron": "0 7 * * *", "desc": "Résumer mes e-mails et mon agenda" },
+    { "id": "backup-sweep",   "name": "Sauvegarde",      "source": "server", "days": ["mon", "wed", "fri"], "times": ["18:30"], "desc": "Copier le workspace en sauvegarde" },
+    { "id": "inbox-check",    "name": "Point e-mails",   "source": "agent",  "cron": "0 9-17 * * 1-5", "desc": "Toutes les heures pendant la journée de travail" },
+    { "id": "weekly-review",  "name": "Revue hebdo",     "source": "agent",  "status": "ondemand", "desc": "Se lance quand je le demande" }
   ]
 }
 ```
 
-- `timezone`: an IANA name such as `Europe/London`. Blank means this computer's time zone.
-- `sources`: any names, any number. The label shows beside each routine and on the widget's legend.
-- Each routine needs a `name` and either a `cron` (5 fields: minute, hour, day of month, month, day of week) or `days` plus `times` (24-hour). A routine with neither is "on demand".
-- `status`: `active` (the default when it has a schedule), `paused` or `ondemand`. Paused and on-demand routines are listed but not placed on the week.
-- `id` keeps the same routine matched to its usage figures (USAGE.md). Use short lowercase words with dashes.
+- `timezone` : un nom IANA, comme `Europe/London`. Vide veut dire le fuseau horaire de cet ordinateur.
+- `sources` : n'importe quels noms, en n'importe quel nombre. L'étiquette s'affiche à côté de chaque routine et dans la légende du widget.
+- Chaque routine a besoin d'un `name` et soit d'un `cron` (5 champs : minute, heure, jour du mois, mois, jour de la semaine), soit de `days` plus `times` (sur 24 heures). Une routine sans l'un ni l'autre est « à la demande ».
+- `status` : `active` (par défaut quand elle a un horaire), `paused` ou `ondemand`. Les routines en pause et à la demande sont listées, mais pas placées sur la semaine.
+- `id` garde la même routine reliée à ses chiffres d'usage (USAGE.md). Utilise des mots courts en minuscules, avec des tirets.
 
-v1 rows still work, so a v1 `snapshots/routines.json` can be copied straight across:
+Les lignes de la v1 marchent toujours : un `snapshots/routines.json` de la v1 peut être recopié tel quel.
 
 ```json
-{ "t": "07:00", "d": "daily", "src": "agent", "n": "morning digest", "desc": "..." }
+{ "t": "07:00", "d": "daily", "src": "agent", "n": "résumé du matin", "desc": "..." }
 ```
 
-(`d` is `daily`, day names like `mon,thu`, or `dom:1` for a day of the month.)
+(`d` vaut `daily`, des noms de jours comme `mon,thu`, ou `dom:1` pour un jour du mois.)
 
-## Costs and runs
+## Coûts et exécutions
 
-The Routines tab shows each routine's runs, tokens and API $ for the last 7 days only when something measured them (USAGE.md). Otherwise it says "not measured". Nothing is estimated.
+L'onglet Routines affiche les exécutions, les tokens et les $ API de chaque routine sur les 7 derniers jours, seulement quand quelque chose les a mesurés (USAGE.md). Sinon, il affiche « non mesuré ». Rien n'est estimé.
 
-## Keeping it fresh
+## Le garder à jour
 
-Add one line to your instructions, with the absolute path of the OS folder in the slot: "When a schedule changes, update <path-to-your-os>/snapshots/routines.json." The homepage widget reads it within a minute. The Routines tab reads it each time the page loads or you press the refresh icon, and the map picks it up on that refresh.
+Ajoute une ligne à tes instructions, avec le chemin absolu du dossier de l'OS dans l'emplacement prévu : « Quand un horaire change, mets à jour <chemin-de-ton-os>/snapshots/routines.json. » Le widget de la page d'accueil le lit en moins d'une minute. L'onglet Routines le lit à chaque chargement de la page ou quand tu appuies sur l'icône d'actualisation, et la carte le prend en compte à cette actualisation.
 
-## No routines yet?
+## Pas encore de routines ?
 
-Then this is your nudge. A morning digest, an evening log, a weekly report: each is one sentence to your agent ("every day at 7am, do X"). Start with one. Visible routines survive.
+Alors c'est le moment de t'y mettre. Un résumé du matin, un journal du soir, un rapport hebdo : chacun tient en une phrase à ton agent (« chaque jour à 7 h, fais X »). Commence par une seule. Une routine visible est une routine qui dure.

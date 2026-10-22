@@ -5,7 +5,7 @@
 window.BrainCore = (function () {
   const F = window.F2;
   const ACC = { remote: '#58abf5', local: '#ff7a2e', both: '#d7dcea' };
-  const ACCL = { remote: 'Remote agent only', local: 'This computer only', both: 'This computer + remote agent' };
+  const ACCL = { remote: 'Agent distant seul', local: 'Cet ordinateur seul', both: 'Cet ordinateur + agent distant' };
   const TEXT_EXT = new Set(['.md', '.txt', '.json', '.js', '.ts', '.jsx', '.tsx', '.html', '.htm', '.css', '.py', '.yaml', '.yml', '.toml', '.csv', '.xml', '.bat', '.sh', '.ps1', '.svg', '.log', '.mjs', '.cjs', '.vtt', '.srt']);
 
   // ======================= state =======================
@@ -43,14 +43,14 @@ window.BrainCore = (function () {
     S.st = Object.assign({}, DEFAULT_ST, skin.st || {}, persisted);
     buildDOM();
     applyTheme();
-    splash(true, 'Scanning the workspace');
+    splash(true, 'Analyse du workspace');
     let data;
     try {
       const r = await fetch('/api/graph?fresh=1');
       data = await r.json();
       if (data.error) throw new Error(data.error);
     } catch (e) {
-      splash(true, 'Scan failed: ' + e.message + ' - is server.js running?');
+      splash(true, 'Échec de l’analyse : ' + e.message + ' - server.js est-il lancé ?');
       return;
     }
     ingest(data);
@@ -204,11 +204,11 @@ window.BrainCore = (function () {
       const r = await fetch('/api/expand?path=' + encodeURIComponent(id));
       data = await r.json();
       if (data.error) { toast(data.error); return; }
-    } catch (e) { toast('Expand failed: ' + e.message); return; }
+    } catch (e) { toast('Échec du dépliage : ' + e.message); return; }
     insertChildren(dir, data.nodes);
     reaggregate();
     refreshLayout(0.5);
-    if (!quiet) toast('Expanded ' + dir.label + ' - ' + data.nodes.length + ' items');
+    if (!quiet) toast('Dossier ' + dir.label + ' déplié : ' + data.nodes.length + ' éléments');
   }
 
   function collapseDir(id) {
@@ -239,10 +239,10 @@ window.BrainCore = (function () {
 
   async function expandAll() {
     const targets = S.visible.filter(n => n.type === 'dir' && !n.expanded && !n._hidden);
-    if (!targets.length) { toast('Nothing left to expand'); return; }
+    if (!targets.length) { toast('Plus rien à déplier'); return; }
     const projected = S.visible.length + targets.reduce((s, d) => s + Math.min(d.files || 0, 60), 0);
-    if (projected > 6500 && !confirm('This expands roughly ' + projected + ' nodes and may get heavy. Continue?')) return;
-    splash(true, 'Expanding ' + targets.length + ' folders');
+    if (projected > 6500 && !confirm('Cela déplie environ ' + projected + ' nœuds : ça peut devenir lourd. Continuer ?')) return;
+    splash(true, 'Dépliage de ' + targets.length + ' dossiers');
     const results = await Promise.all(targets.map(d =>
       fetch('/api/expand?path=' + encodeURIComponent(d.id)).then(r => r.json()).catch(() => null)));
     targets.forEach((dir, i) => {
@@ -253,7 +253,7 @@ window.BrainCore = (function () {
     reaggregate();
     refreshLayout(0.6);
     splash(false);
-    toast('Expanded one level: ' + targets.length + ' folders · ' + S.visible.length.toLocaleString() + ' nodes');
+    toast('Un niveau déplié : ' + targets.length + ' dossiers · ' + S.visible.length.toLocaleString() + ' nœuds');
   }
 
   function collapseAll() {
@@ -265,7 +265,7 @@ window.BrainCore = (function () {
     if (S.sel && S.sel._hidden) select(null);
     reaggregate();
     refreshLayout(0.5);
-    toast('Collapsed to the default view');
+    toast('Retour à la vue par défaut');
   }
 
   async function ensureVisible(path) {
@@ -324,7 +324,7 @@ window.BrainCore = (function () {
     if (kind === 'rings') initRings();
     else buildSim(kind);
     syncSegButtons();
-    const names = { rings: 'Rings layout', force: 'Force layout', circle: 'Circle layout', hex: 'Hexagon layout', deck: 'Deck layout' };
+    const names = { rings: 'Disposition Anneaux', force: 'Disposition Force', circle: 'Disposition Cercle', hex: 'Disposition Hexa', deck: 'Disposition Deck' };
     if (!first) toast(names[kind] || kind);
   }
 
@@ -934,15 +934,15 @@ window.BrainCore = (function () {
   }
 
   // ======================= render loop =======================
-  // Embedded power gate: the RUBRIC OS keeps this page preloaded inside a
+  // Embedded power gate: the SM4RT OS keeps this page preloaded inside a
   // hidden iframe. Without this, the whole graph kept rendering at full rate
   // behind the dashboard and dragged BOTH pages under 45fps. The OS says
   // sleep/wake over postMessage; asleep we stop the rAF chain entirely.
   let OS_SLEEP = false;
   if (window.top !== window.self) addEventListener('message', e => {
     const t = e.data && e.data.type;
-    if (t === 'rubric-os:sleep') OS_SLEEP = true;
-    if (t === 'rubric-os:wake' && OS_SLEEP) { OS_SLEEP = false; requestAnimationFrame(loop); }
+    if (t === 'sm4rt-os:sleep') OS_SLEEP = true;
+    if (t === 'sm4rt-os:wake' && OS_SLEEP) { OS_SLEEP = false; requestAnimationFrame(loop); }
   });
   function loop() {
     if (OS_SLEEP) return;       // wake restarts the chain
@@ -1083,7 +1083,7 @@ window.BrainCore = (function () {
     if (now - S.perf.last > 1000) {
       S.perf.fps = S.perf.frames; S.perf.frames = 0; S.perf.last = now;
       const el = document.getElementById('brain-fps');
-      if (el) el.textContent = S.perf.fps + ' fps · ' + S.visible.length + ' nodes';
+      if (el) el.textContent = S.perf.fps + ' fps · ' + S.visible.length + ' nœuds';
     }
     requestAnimationFrame(loop);
   }
@@ -1124,16 +1124,16 @@ window.BrainCore = (function () {
 
   function fmtBytes(b) {
     if (b == null) return '';
-    if (b > 1048576) return (b / 1048576).toFixed(1) + ' MB';
-    if (b > 1024) return Math.round(b / 1024) + ' KB';
-    return b + ' B';
+    if (b > 1048576) return (b / 1048576).toFixed(1) + ' Mo';
+    if (b > 1024) return Math.round(b / 1024) + ' Ko';
+    return b + ' o';
   }
   function timeAgo(ms) {
     if (!ms) return '';
     const d = Date.now() - ms;
-    if (d < 3600e3) return Math.max(1, Math.round(d / 60e3)) + 'm ago';
-    if (d < 86400e3) return Math.round(d / 3600e3) + 'h ago';
-    return Math.round(d / 86400e3) + 'd ago';
+    if (d < 3600e3) return 'il y a ' + Math.max(1, Math.round(d / 60e3)) + ' min';
+    if (d < 86400e3) return 'il y a ' + Math.round(d / 3600e3) + ' h';
+    return 'il y a ' + Math.round(d / 86400e3) + ' j';
   }
 
   function accBadge(n) {
@@ -1142,16 +1142,16 @@ window.BrainCore = (function () {
 
   function tipHTML(n) {
     const c = colorOf(n);
-    if (n.type === 'router') return '<b>AGENTS md</b><div class="tmut">Last edited '+new Date(n.mtime).toLocaleString('en-AU')+'</div>'+((n.editAliases||[]).map(a=>'<div class="tfaint">'+a.name.replace('.md',' md')+': '+new Date(a.mtime).toLocaleString('en-AU')+'</div>').join(''));
+    if (n.type === 'router') return '<b>AGENTS md</b><div class="tmut">Modifié le '+new Date(n.mtime).toLocaleString('fr-FR')+'</div>'+((n.editAliases||[]).map(a=>'<div class="tfaint">'+a.name.replace('.md',' md')+' : '+new Date(a.mtime).toLocaleString('fr-FR')+'</div>').join(''));
     if (n.type === 'agent') {
-      if (n.reach) return `<b style="color:${c}">${n.label} - VPS agent</b><div class="tmut">Reaches ${n.reachTotal} synced files over Syncthing. ${n.secretsExcluded} secret files locked out.</div>${accBadge(n)}`;
-      return `<b style="color:${c}">${n.label} - employee agent</b><div class="tmut">${n.desc || ''}</div><div class="tfaint">${(n.links || []).length} skills + memory grants · click to spotlight</div>`;
+      if (n.reach) return `<b style="color:${c}">${n.label} - agent VPS</b><div class="tmut">Atteint ${n.reachTotal} fichiers synchronisés via Syncthing. ${n.secretsExcluded} fichiers secrets exclus.</div>${accBadge(n)}`;
+      return `<b style="color:${c}">${n.label} - agent employé</b><div class="tmut">${n.desc || ''}</div><div class="tfaint">${(n.links || []).length} accès (skills + mémoire) · clique pour le mettre en avant</div>`;
     }
-    if (n.type === 'hub') return `<b>${n.label}</b><div class="tmut">${n.hubKind === 'dept' ? 'Department - click to filter' : S.layerLabel[n.layer]}</div>`;
-    if (n.type === 'app') return `<b>${n.label}</b><div class="tmut">${n.kind.toUpperCase()} · ${n.desc || ''}</div>${accBadge(n)}${n.status === 'needs-auth' ? '<span class="badge" style="border-color:#f5a623;color:#f5a623">needs auth</span>' : ''}`;
-    if (n.type === 'routine') return `<b>${n.label}</b><div class="tmut">${n.schedule} · runs on ${n.runner}</div>${accBadge(n)}`;
-    if (n.type === 'dir') return `<b style="color:${c}">${n.label}/</b><div class="tmut">${n.files} files · ${n.mdFiles} md · ${fmtBytes(n.size)}</div><div class="tmut">${n.path}</div><div class="tfaint">click to ${n.expanded ? 'collapse' : 'expand'}</div>${accBadge(n)}`;
-    return `<b style="color:${c}">${n.label}</b><div class="tmut">${S.deptLabel[n.dept] || ''} · ${fmtBytes(n.size)} · ${timeAgo(n.mtime)}</div><div class="tmut">${n.path}</div><div class="tfaint">click to inspect · double-click to fly</div>${accBadge(n)}${n.secret ? '<span class="badge" style="border-color:#ef4444;color:#ef4444">secret - never syncs</span>' : ''}`;
+    if (n.type === 'hub') return `<b>${n.label}</b><div class="tmut">${n.hubKind === 'dept' ? 'Domaine - clique pour filtrer' : S.layerLabel[n.layer]}</div>`;
+    if (n.type === 'app') return `<b>${n.label}</b><div class="tmut">${n.kind.toUpperCase()} · ${n.desc || ''}</div>${accBadge(n)}${n.status === 'needs-auth' ? '<span class="badge" style="border-color:#f5a623;color:#f5a623">à autoriser</span>' : ''}`;
+    if (n.type === 'routine') return `<b>${n.label}</b><div class="tmut">${n.schedule} · lanceur : ${n.runner}</div>${accBadge(n)}`;
+    if (n.type === 'dir') return `<b style="color:${c}">${n.label}/</b><div class="tmut">${n.files} fichiers · ${n.mdFiles} md · ${fmtBytes(n.size)}</div><div class="tmut">${n.path}</div><div class="tfaint">clique pour ${n.expanded ? 'replier' : 'déplier'}</div>${accBadge(n)}`;
+    return `<b style="color:${c}">${n.label}</b><div class="tmut">${S.deptLabel[n.dept] || ''} · ${fmtBytes(n.size)} · ${timeAgo(n.mtime)}</div><div class="tmut">${n.path}</div><div class="tfaint">clique pour inspecter · double-clic pour y aller</div>${accBadge(n)}${n.secret ? '<span class="badge" style="border-color:#ef4444;color:#ef4444">secret - jamais synchronisé</span>' : ''}`;
   }
 
   // ======================= selection + detail card =======================
@@ -1165,26 +1165,26 @@ window.BrainCore = (function () {
     if (n.type === 'file') {
       // /name skill nodes carry no ext of their own; their path (…/SKILL.md) says what they are
       const ext = n.ext || (/\.[a-z0-9]+$/i.exec(n.path || '') || [''])[0].toLowerCase();
-      stats = `${fmtBytes(n.size)} · ${timeAgo(n.mtime)} · ${ext || 'file'}`;
+      stats = `${fmtBytes(n.size)} · ${timeAgo(n.mtime)} · ${ext || 'fichier'}`;
       const viewable = TEXT_EXT.has(ext);
-      actions = `${viewable ? `<button class="act" data-act="view">View here</button>` : ''}<button class="act" data-act="open">Open on device</button><button class="act" data-act="copy">Copy path</button>`;
+      actions = `${viewable ? `<button class="act" data-act="view">Voir ici</button>` : ''}<button class="act" data-act="open">Ouvrir sur l’appareil</button><button class="act" data-act="copy">Copier le chemin</button>`;
     } else if (n.type === 'dir') {
       title += '/';
-      stats = `${n.files} files · ${n.mdFiles} md · ${fmtBytes(n.size)}`;
-      actions = `<button class="act" data-act="toggle">${n.expanded ? 'Collapse' : 'Expand'}</button><button class="act" data-act="open">Open folder</button><button class="act" data-act="copy">Copy path</button>`;
+      stats = `${n.files} fichiers · ${n.mdFiles} md · ${fmtBytes(n.size)}`;
+      actions = `<button class="act" data-act="toggle">${n.expanded ? 'Replier' : 'Déplier'}</button><button class="act" data-act="open">Ouvrir le dossier</button><button class="act" data-act="copy">Copier le chemin</button>`;
     } else if (n.type === 'app') {
       stats = `${n.kind.toUpperCase()} · ${n.status}`;
     } else if (n.type === 'routine') {
-      stats = `${n.schedule} · runs on ${n.runner}`;
+      stats = `${n.schedule} · lanceur : ${n.runner}`;
     } else if (n.type === 'agent') {
       stats = n.reach
-        ? `${n.reachTotal} files reachable · ${n.secretsExcluded} secrets locked out`
-        : `Employee agent · ${(n.links || []).length} scoped grants (skills + memory)`;
+        ? `${n.reachTotal} fichiers accessibles · ${n.secretsExcluded} secrets exclus`
+        : `Agent employé · ${(n.links || []).length} accès ciblés (skills + mémoire)`;
     } else if (n.type === 'router') {
-      stats = 'The single front door - routes every request';
-      actions = `<button class="act" data-act="view">View here</button><button class="act" data-act="open">Open on device</button>`;
+      stats = 'La porte d’entrée unique : elle aiguille chaque demande';
+      actions = `<button class="act" data-act="view">Voir ici</button><button class="act" data-act="open">Ouvrir sur l’appareil</button>`;
     } else if (n.type === 'hub') {
-      stats = n.hubKind === 'dept' ? 'Department cluster' : S.layers.find(l => l.key === n.layer)?.blurb || '';
+      stats = n.hubKind === 'dept' ? 'Groupe du domaine' : S.layers.find(l => l.key === n.layer)?.blurb || '';
     }
     // neighbors
     const neigh = [];
@@ -1194,7 +1194,7 @@ window.BrainCore = (function () {
     }
     neigh.sort((a, b) => (b.w || 1) - (a.w || 1));
     const rows = neigh.slice(0, 16).map(e =>
-      `<div class="nrow" data-id="${escapeAttr(e.n.id)}"><span class="dot" style="background:${colorOf(e.n)}"></span><span class="nlab">${e.n.label}</span><span class="nkind">${e.k}${e.w > 1 ? ' ×' + e.w : ''}</span></div>`).join('');
+      `<div class="nrow" data-id="${escapeAttr(e.n.id)}"><span class="dot" style="background:${colorOf(e.n)}"></span><span class="nlab">${e.n.label}</span><span class="nkind">${LINK_KIND[e.k] || e.k}${e.w > 1 ? ' ×' + e.w : ''}</span></div>`).join('');
     card.innerHTML = `
       <div class="card-head">
         <div>
@@ -1210,27 +1210,27 @@ window.BrainCore = (function () {
       <div class="card-stats">${stats}</div>
       ${n.desc ? `<div class="card-desc">${n.desc}</div>` : ''}
       ${n.path ? `<div class="card-path">${n.path}</div>` : ''}
-      <div class="card-actions">${actions}<button class="act" data-act="fly">Fly to</button>${(n.type === 'app' || n.type === 'routine' || n.type === 'agent') ? '<button class="act" data-act="edit">Edit</button>' : ''}${n.type !== 'router' ? '<button class="act" data-act="remove" style="border-color:#ef4444;color:#ef4444">Remove</button>' : ''}</div>
-      ${rows ? `<div class="card-sub">Connections</div><div class="card-neigh">${rows}</div>` : ''}`;
+      <div class="card-actions">${actions}<button class="act" data-act="fly">Y aller</button>${(n.type === 'app' || n.type === 'routine' || n.type === 'agent') ? '<button class="act" data-act="edit">Modifier</button>' : ''}${n.type !== 'router' ? '<button class="act" data-act="remove" style="border-color:#ef4444;color:#ef4444">Retirer</button>' : ''}</div>
+      ${rows ? `<div class="card-sub">Connexions</div><div class="card-neigh">${rows}</div>` : ''}`;
     card.querySelector('#card-close').onclick = () => select(null);
     card.querySelectorAll('.act').forEach(b => b.onclick = async () => {
       const act = b.dataset.act;
       if (act === 'view') openViewer(n.path || (S.router && S.router.path));
       if (act === 'open') apiOpen(n.path);
-      if (act === 'copy') { navigator.clipboard.writeText((window.QUIET_SNAPSHOT?.root ? QUIET_SNAPSHOT.root + '/' : '') + (n.path || '')); toast('Path copied'); }
+      if (act === 'copy') { navigator.clipboard.writeText((window.QUIET_SNAPSHOT?.root ? QUIET_SNAPSHOT.root + '/' : '') + (n.path || '')); toast('Chemin copié'); }
       if (act === 'toggle') { n.expanded ? collapseDir(n.id) : expandDir(n.id); select(n); }
       if (act === 'fly') flyToNode(n);
       if (act === 'edit') { // /tweak principle: pick an item, change it, it sticks
-        const label = prompt('Label for this item:', n.label);
+        const label = prompt('Nom de cet élément :', n.label);
         if (label === null) return;
-        const desc = prompt('Description (blank to keep):', n.desc || '');
+        const desc = prompt('Description (vide pour garder) :', n.desc || '');
         await fetch('/api/tweak', { method: 'POST', body: JSON.stringify({ action: 'edit', id: n.id, label: label.trim() || n.label, desc: desc === null ? n.desc : desc }) });
-        select(null); S.refreshData('Saving edit');
+        select(null); S.refreshData('Enregistrement de la modification');
       }
       if (act === 'remove') { // /tweak principle: delete items you don't want on the map
-        if (!confirm(`Remove "${n.label}" from the brain map?\n(Nothing is deleted on disk - restore any time from Tweak > Restore.)`)) return;
+        if (!confirm(`Retirer « ${n.label} » de la carte du cerveau ?\n(Rien n’est supprimé sur le disque : tu peux tout restaurer via Réglages > Restaurer.)`)) return;
         await fetch('/api/tweak', { method: 'POST', body: JSON.stringify({ action: 'hide', id: n.id }) });
-        select(null); S.refreshData('Removing from the map');
+        select(null); S.refreshData('Retrait de la carte');
       }
     });
     card.querySelectorAll('.nrow').forEach(r => r.onclick = () => {
@@ -1239,6 +1239,8 @@ window.BrainCore = (function () {
     });
   }
 
+  // display names for the link kinds in the card's Connections list (the kinds stay as they are)
+  const LINK_KIND = { link: 'lien', xlink: 'lien croisé', route: 'route', spoke: 'rattaché', sync: 'synchro', wire: 'branché' };
   function escapeAttr(s) { return s.replace(/"/g, '&quot;'); }
 
   async function apiOpen(path) {
@@ -1246,8 +1248,8 @@ window.BrainCore = (function () {
     try {
       const r = await fetch('/api/open', { method: 'POST', body: JSON.stringify({ path }) });
       const d = await r.json();
-      toast(d.ok ? 'Opened on device' : (d.error || 'Could not open'));
-    } catch (e) { toast('Open failed'); }
+      toast(d.ok ? 'Ouvert sur l’appareil' : (d.error || 'Impossible d’ouvrir'));
+    } catch (e) { toast('Échec de l’ouverture'); }
   }
 
   // ======================= viewer drawer =======================
@@ -1260,13 +1262,13 @@ window.BrainCore = (function () {
     drawer.querySelector('.v-title').textContent = path.split('/').pop();
     drawer.querySelector('.v-path').innerHTML = escapeHTML(path).replace(/\//g, '/<wbr>');   // wraps at folders, never mid-name
     const body = drawer.querySelector('.v-body');
-    body.innerHTML = '<div class="v-loading">Loading…</div>';
+    body.innerHTML = '<div class="v-loading">Chargement…</div>';
     drawer.querySelector('.v-open').onclick = () => apiOpen(path);
-    drawer.querySelector('.v-copy').onclick = () => { navigator.clipboard.writeText((window.QUIET_SNAPSHOT?.root ? QUIET_SNAPSHOT.root + '/' : '') + path); toast('Path copied'); };
+    drawer.querySelector('.v-copy').onclick = () => { navigator.clipboard.writeText((window.QUIET_SNAPSHOT?.root ? QUIET_SNAPSHOT.root + '/' : '') + path); toast('Chemin copié'); };
     try {
       const r = await fetch('/api/file?path=' + encodeURIComponent(path));
       const d = await r.json();
-      if (d.error === 'binary') { body.innerHTML = '<div class="v-loading">Binary file - opening on device instead.</div>'; apiOpen(path); return; }
+      if (d.error === 'binary') { body.innerHTML = '<div class="v-loading">Fichier binaire : ouverture sur l’appareil à la place.</div>'; apiOpen(path); return; }
       if (d.error) { body.innerHTML = '<div class="v-loading">' + d.error + '</div>'; return; }
       if (ext === '.md' && window.marked) {
         // a skill or memory file opens with a YAML header (--- name / description ---); show it as a tidy
@@ -1288,7 +1290,7 @@ window.BrainCore = (function () {
         body.innerHTML = '<pre class="code-body"></pre>';
         body.querySelector('pre').textContent = d.content;
       }
-    } catch (e) { body.innerHTML = '<div class="v-loading">Failed: ' + e.message + '</div>'; }
+    } catch (e) { body.innerHTML = '<div class="v-loading">Échec : ' + e.message + '</div>'; }
   }
 
   function escapeHTML(s) { return String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
@@ -1318,7 +1320,7 @@ window.BrainCore = (function () {
 
   async function jumpTo(path) {
     const n = await ensureVisible(path);
-    if (!n) { toast('Not in the graph: ' + path); return; }
+    if (!n) { toast('Absent de la carte : ' + path); return; }
     refreshLayout(0.4);
     select(n);
     setTimeout(() => flyToNode(n), 60);
@@ -1328,13 +1330,13 @@ window.BrainCore = (function () {
   function buildDOM() {
     document.body.insertAdjacentHTML('beforeend', `
       <canvas id="brain-canvas"></canvas>
-      <div id="brain-splash"><div class="sp-inner"><div class="sp-pulse"></div><div class="sp-text">Loading</div></div></div>
+      <div id="brain-splash"><div class="sp-inner"><div class="sp-pulse"></div><div class="sp-text">Chargement</div></div></div>
       <div id="brain-tip"></div>
       <div id="brain-hud"></div>
       <div id="brain-card" style="display:none"></div>
       <div id="brain-panel"></div>
       <div id="brain-legend"></div>
-      <div id="brain-viewer"><div class="v-head"><div class="v-meta"><div class="v-title"></div><div class="v-path"></div></div><div class="v-btns"><button class="v-open act">Open on device</button><button class="v-copy act">Copy path</button><button class="v-close act" onclick="this.closest('#brain-viewer').classList.remove('open')">×</button></div></div><div class="v-body"></div></div>
+      <div id="brain-viewer"><div class="v-head"><div class="v-meta"><div class="v-title"></div><div class="v-path"></div></div><div class="v-btns"><button class="v-open act">Ouvrir sur l’appareil</button><button class="v-copy act">Copier le chemin</button><button class="v-close act" onclick="this.closest('#brain-viewer').classList.remove('open')">×</button></div></div><div class="v-body"></div></div>
       <div id="brain-toast"></div>`);
   }
 
@@ -1374,10 +1376,10 @@ window.BrainCore = (function () {
 
   function buildPanels() {
     const skin = S.skin;
-    // HUD (top-left): Rubric brand block
+    // HUD (top-left): SM4RT brand block
     const hexSvg = `<svg viewBox="0 0 48 48" width="30" height="30" fill="none" stroke="#ff6b1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l18 10v16L24 42 6 32V16Z"/><path d="M24 6v16l18 10" opacity="0.5"/><path d="M24 22L6 32" opacity="0.5"/></svg>`;
     document.getElementById('brain-hud').innerHTML = `
-      <div class="hud-brand">${hexSvg}<span class="hud-rubric">RUBRIC</span><span class="hud-product">SECOND BRAIN</span></div>
+      <div class="hud-brand">${hexSvg}<span class="hud-sm4rt">SM4RT</span><span class="hud-product">SECOND CERVEAU</span></div>
       <div class="hud-skin">${skin.title}</div>
       <div class="hud-tag">${skin.tagline}</div>
       <div class="hud-stats" id="brain-stats"></div>
@@ -1386,51 +1388,51 @@ window.BrainCore = (function () {
     // control panel (top-right)
     const st = S.st;
     const sliders = [
-      { k: 'size', label: 'Node size' }, { k: 'link', label: 'Link opacity' }, { k: 'labels', label: 'Labels' },
-      { k: 'spin', label: 'Ring spin' }, { k: 'gap', label: 'Ring gap' }, { k: 'span', label: 'Arc spread' },
-      { k: 'armsSize', label: 'Apps + routines size' }, { k: 'bandLabels', label: 'Layer headers' }, { k: 'ringWidth', label: 'Ring lines' }, { k: 'msat', label: 'Memory saturation' },
-      { k: 'transSpd', label: 'Transition speed' }, { k: 'boundSize', label: 'Circle / Hex size' },
-      { k: 'nodeAlpha', label: 'Node opacity' }, { k: 'hubSize', label: 'Hub size' },
+      { k: 'size', label: 'Taille des nœuds' }, { k: 'link', label: 'Opacité des liens' }, { k: 'labels', label: 'Étiquettes' },
+      { k: 'spin', label: 'Rotation des anneaux' }, { k: 'gap', label: 'Écart des anneaux' }, { k: 'span', label: 'Ouverture des arcs' },
+      { k: 'armsSize', label: 'Taille apps + routines' }, { k: 'bandLabels', label: 'Titres des couches' }, { k: 'ringWidth', label: 'Traits des anneaux' }, { k: 'msat', label: 'Saturation de la mémoire' },
+      { k: 'transSpd', label: 'Vitesse des transitions' }, { k: 'boundSize', label: 'Taille cercle / hexa' },
+      { k: 'nodeAlpha', label: 'Opacité des nœuds' }, { k: 'hubSize', label: 'Taille des hubs' },
       ...(skin.sliders || []),
       // gravity pull, one dial per department + one per ARMS scatter layer
-      ...S.departments.map(d => ({ k: 'grav_' + d.key, label: d.label + ' pull' })),
-      { k: 'grav_S', label: 'Skills pull' }, { k: 'grav_R', label: 'Routines pull' }, { k: 'grav_A', label: 'Apps pull' },
+      ...S.departments.map(d => ({ k: 'grav_' + d.key, label: 'Attraction ' + d.label })),
+      { k: 'grav_S', label: 'Attraction skills' }, { k: 'grav_R', label: 'Attraction routines' }, { k: 'grav_A', label: 'Attraction apps' },
       // distance of each department cluster from the central AGENTS md
       // (low = hugs the router, high = pushed to the rim)
-      ...S.departments.map(d => ({ k: 'dist_' + d.key, label: d.label + ' distance' })),
+      ...S.departments.map(d => ({ k: 'dist_' + d.key, label: 'Distance ' + d.label })),
     ];
     document.getElementById('brain-panel').innerHTML = `
       <div class="p-search" data-sec="search">
-        <input id="brain-search" placeholder="Search ${(S.meta.totalFiles || 0).toLocaleString()} files… ( / )" autocomplete="off">
+        <input id="brain-search" placeholder="Rechercher parmi ${(S.meta.totalFiles || 0).toLocaleString()} fichiers… ( / )" autocomplete="off">
         <div id="brain-results"></div>
       </div>
-      <div data-sec="layout"><div class="p-sub">Layout</div>
-      ${seg('seg-layout', [{ v: 'force', label: 'Force' }, { v: 'circle', label: 'Circle' }, { v: 'hex', label: 'Hex' }, { v: 'rings', label: 'Rings' }, { v: 'deck', label: 'Deck' }], st.layout)}</div>
-      <div data-sec="view"><div class="p-sub">View</div>
-      ${seg('seg-view', [{ v: 'context', label: 'Departments' }, { v: 'folders', label: 'Folders' }], st.view)}</div>
-      <div data-sec="color"><div class="p-sub">Colour by</div>
-      ${seg('seg-color', [{ v: 'dept', label: 'Department' }, { v: 'access', label: 'Access' }], st.colorBy)}</div>
-      <div data-sec="acc"><div class="p-sub">Access filter</div>
-      ${seg('seg-acc', [{ v: 'all', label: 'All' }, { v: 'remote', label: 'Remote' }, { v: 'local', label: 'This computer' }], st.acc)}</div>
+      <div data-sec="layout"><div class="p-sub">Disposition</div>
+      ${seg('seg-layout', [{ v: 'force', label: 'Force' }, { v: 'circle', label: 'Cercle' }, { v: 'hex', label: 'Hexa' }, { v: 'rings', label: 'Anneaux' }, { v: 'deck', label: 'Deck' }], st.layout)}</div>
+      <div data-sec="view"><div class="p-sub">Vue</div>
+      ${seg('seg-view', [{ v: 'context', label: 'Domaines' }, { v: 'folders', label: 'Dossiers' }], st.view)}</div>
+      <div data-sec="color"><div class="p-sub">Couleur par</div>
+      ${seg('seg-color', [{ v: 'dept', label: 'Domaine' }, { v: 'access', label: 'Accès' }], st.colorBy)}</div>
+      <div data-sec="acc"><div class="p-sub">Filtre d’accès</div>
+      ${seg('seg-acc', [{ v: 'all', label: 'Tout' }, { v: 'remote', label: 'Distant' }, { v: 'local', label: 'Cet ordinateur' }], st.acc)}</div>
       ${skin.variantSeg ? `<div data-sec="variant"><div class="p-sub">${skin.variantSeg.label}</div>` + seg('seg-variant', skin.variantSeg.options, st[skin.variantSeg.key]) + '</div>' : ''}
-      <div data-sec="colours"><div class="p-sub row"><span>Colours</span><button id="clr-toggle" class="mini">show</button></div>
+      <div data-sec="colours"><div class="p-sub row"><span>Couleurs</span><button id="clr-toggle" class="mini">voir</button></div>
       <div id="clr-body" style="display:none"></div></div>
-      <div data-sec="tweak"><div class="p-sub row"><span>Tweak</span><button id="tweak-toggle" class="mini">show</button></div>
+      <div data-sec="tweak"><div class="p-sub row"><span>Réglages</span><button id="tweak-toggle" class="mini">voir</button></div>
       <div id="tweak-body" style="display:none">
         ${sliders.map(s => `
           <div class="sl"><div class="sl-head"><span>${s.label}</span><span class="sl-val" id="v-${s.k}">${(st[s.k] ?? 0.5).toFixed(2)}</span></div>
           <input type="range" min="0" max="100" value="${(st[s.k] ?? 0.5) * 100}" data-k="${s.k}"></div>`).join('')}
-        <label class="chk"><input type="checkbox" id="chk-cross" ${st.cross ? 'checked' : ''}> Note-to-note links</label>
-        <label class="chk"><input type="checkbox" id="chk-trans" ${st.transOn ? 'checked' : ''}> Layout transitions</label>
-        <button class="act" id="tweak-restore" style="display:${(S.meta.hiddenCount || 0) > 0 ? 'block' : 'none'};margin-top:8px">Restore ${S.meta.hiddenCount || 0} removed item${(S.meta.hiddenCount || 0) === 1 ? '' : 's'}</button>
+        <label class="chk"><input type="checkbox" id="chk-cross" ${st.cross ? 'checked' : ''}> Liens entre notes</label>
+        <label class="chk"><input type="checkbox" id="chk-trans" ${st.transOn ? 'checked' : ''}> Transitions de disposition</label>
+        <button class="act" id="tweak-restore" style="display:${(S.meta.hiddenCount || 0) > 0 ? 'block' : 'none'};margin-top:8px">Restaurer ${S.meta.hiddenCount || 0} élément${(S.meta.hiddenCount || 0) === 1 ? '' : 's'} retiré${(S.meta.hiddenCount || 0) === 1 ? '' : 's'}</button>
       </div></div>
       <div class="p-actions" data-sec="actions">
-        <button class="act" id="btn-expand">Expand all</button>
-        <button class="act" id="btn-collapse">Collapse all</button>
-        <button class="act" id="btn-rescan">Rescan</button>
-        <button class="act" id="btn-reset">Reset view</button>
+        <button class="act" id="btn-expand">Tout déplier</button>
+        <button class="act" id="btn-collapse">Tout replier</button>
+        <button class="act" id="btn-rescan">Réanalyser</button>
+        <button class="act" id="btn-reset">Réinitialiser la vue</button>
         <button class="act" id="btn-theme"></button>
-        <button class="act" id="btn-bake" style="border-color:var(--accent);color:var(--accent)">Bake settings</button>
+        <button class="act" id="btn-bake" style="border-color:var(--accent);color:var(--accent)">Figer les réglages</button>
       </div>`;
 
     wireSeg('seg-layout', v => setLayout(v));
@@ -1443,7 +1445,7 @@ window.BrainCore = (function () {
       const b = document.getElementById('clr-body');
       const show = b.style.display === 'none';
       b.style.display = show ? 'block' : 'none';
-      e.target.textContent = show ? 'hide' : 'show';
+      e.target.textContent = show ? 'masquer' : 'voir';
       if (show) buildColorPanel();
     };
 
@@ -1451,7 +1453,7 @@ window.BrainCore = (function () {
       const b = document.getElementById('tweak-body');
       const show = b.style.display === 'none';
       b.style.display = show ? 'block' : 'none';
-      e.target.textContent = show ? 'hide' : 'show';
+      e.target.textContent = show ? 'masquer' : 'voir';
     };
     document.querySelectorAll('#tweak-body input[type=range]').forEach(inp => {
       inp.oninput = () => {
@@ -1493,11 +1495,11 @@ window.BrainCore = (function () {
       try {
         const r = await fetch('/api/bake', { method: 'POST', body: json });
         const d = await r.json();
-        toast(d.ok ? 'Baked → ' + d.path.split(/[\\/]/).slice(-2).join('/') + ' (also on clipboard)' : 'Bake failed: ' + (d.error || ''));
-      } catch { toast('Copied to clipboard (server save failed)'); }
+        toast(d.ok ? 'Réglages figés → ' + d.path.split(/[\\/]/).slice(-2).join('/') + ' (aussi dans le presse-papiers)' : 'Échec : ' + (d.error || ''));
+      } catch { toast('Copié dans le presse-papiers (échec de l’enregistrement sur le serveur)'); }
     };
     async function refreshData(msg) {
-      splash(true, msg || 'Rescanning the workspace');
+      splash(true, msg || 'Nouvelle analyse du workspace');
       try {
         await fetch('/api/rescan', { method: 'POST' });
         const r = await fetch('/api/graph');
@@ -1511,17 +1513,17 @@ window.BrainCore = (function () {
         if (btn) {
           const n2 = S.meta.hiddenCount || 0;
           btn.style.display = n2 > 0 ? 'block' : 'none';
-          btn.textContent = `Restore ${n2} removed item${n2 === 1 ? '' : 's'}`;
+          btn.textContent = `Restaurer ${n2} élément${n2 === 1 ? '' : 's'} retiré${n2 === 1 ? '' : 's'}`;
         }
-        toast('Rescanned: ' + data.meta.totalFiles.toLocaleString() + ' files in ' + data.meta.scanMs + 'ms');
-      } catch (e) { toast('Rescan failed'); }
+        toast('Analyse terminée : ' + data.meta.totalFiles.toLocaleString() + ' fichiers en ' + data.meta.scanMs + ' ms');
+      } catch (e) { toast('Échec de l’analyse'); }
       splash(false);
     }
     S.refreshData = refreshData;
     document.getElementById('btn-rescan').onclick = () => refreshData();
     document.getElementById('tweak-restore').onclick = async () => {
       await fetch('/api/tweak', { method: 'POST', body: JSON.stringify({ action: 'unhide-all' }) });
-      refreshData('Restoring removed items');
+      refreshData('Restauration des éléments retirés');
     };
     themeButtonLabel();
 
@@ -1542,7 +1544,7 @@ window.BrainCore = (function () {
             <span class="dot" style="background:${x.layer === 'S' ? S.layerColor.S : (S.deptColor[x.dept] || '#8fa3ad')}"></span>
             <span class="r-name">${x.name}${x.type === 'dir' ? '/' : ''}</span>
             <span class="r-path">${x.path}</span>
-          </div>`).join('') || '<div class="res-none">No hits</div>';
+          </div>`).join('') || '<div class="res-none">Aucun résultat</div>';
         results.querySelectorAll('.res').forEach(el => el.onclick = () => {
           results.style.display = 'none'; input.value = '';
           jumpTo(el.dataset.path);
@@ -1558,7 +1560,7 @@ window.BrainCore = (function () {
   function updateStatsHUD() {
     const el = document.getElementById('brain-stats');
     if (!el || !S.meta.totalFiles) return;
-    el.innerHTML = `${S.meta.totalFiles.toLocaleString()} files · ${S.meta.mdLinks.toLocaleString()} links · scanned in ${(S.meta.scanMs / 1000).toFixed(1)}s · <b>${S.visible.filter(n => !n._hidden).length.toLocaleString()}</b> on canvas`;
+    el.innerHTML = `${S.meta.totalFiles.toLocaleString()} fichiers · ${S.meta.mdLinks.toLocaleString()} liens · analysé en ${(S.meta.scanMs / 1000).toFixed(1)} s · <b>${S.visible.filter(n => !n._hidden).length.toLocaleString()}</b> affichés`;
   }
 
   function rebuildLegend() {
@@ -1576,16 +1578,16 @@ window.BrainCore = (function () {
     }).join('');
     const h = S.remote;
     el.innerHTML = `
-      <div class="lg-sub">Layers <span class="lg-hint">· click to filter</span></div>${layerRows}
-      <div class="lg-sub">Departments</div>${deptRows}
-      ${(S.agentNodes && S.agentNodes.length) ? `<div class="lg-sub">Agents <span class="lg-hint">· click to toggle · dot to spotlight</span></div>` +
+      <div class="lg-sub">Couches <span class="lg-hint">· clique pour filtrer</span></div>${layerRows}
+      <div class="lg-sub">Domaines</div>${deptRows}
+      ${(S.agentNodes && S.agentNodes.length) ? `<div class="lg-sub">Agents <span class="lg-hint">· clique pour masquer · point pour isoler</span></div>` +
       S.agentNodes.map(a => {
         const c = colorOf(a);
-        const sub = a.reach ? a.reachTotal.toLocaleString() + ' files' : ((a.links || []).length + ' grants');
+        const sub = a.reach ? a.reachTotal.toLocaleString() + ' fichiers' : ((a.links || []).length + ' accès');
         return `<div class="lg-row ${st.agents[a.id] === false ? 'off' : ''}" data-agent="${a.id}">
           <span class="dot" data-spot="${a.id}" style="background:${c};border-radius:50%"></span><span>${a.label}</span><span class="lg-n">${sub}</span></div>`;
       }).join('') +
-      (h && !h._hidden ? `<div class="lg-hint" style="margin-top:4px">Remote agent: ${h.secretsExcluded} secrets locked out</div>` : '') : ''}`;
+      (h && !h._hidden ? `<div class="lg-hint" style="margin-top:4px">Agent distant : ${h.secretsExcluded} secrets exclus</div>` : '') : ''}`;
     el.querySelectorAll('[data-dept]').forEach(r => r.onclick = () => {
       const k = r.dataset.dept; st.depts[k] = st.depts[k] === false; persistSt(); rebuildLegend();
     });
@@ -1654,13 +1656,13 @@ window.BrainCore = (function () {
     const rows = [];
     for (const d of S.departments) rows.push(['dept', d.key, d.label, S.deptColor[d.key]]);
     for (const l of S.layers) if (l.key !== 'M') rows.push(['layer', l.key, l.label, S.layerColor[l.key]]);
-    rows.push(['remote', '', 'Remote agent', S.remoteColor]);
-    rows.push(['accRemote', '', 'Access: remote agent only', ACC.remote]);
-    rows.push(['accLocal', '', 'Access: this computer only', ACC.local]);
-    rows.push(['accBoth', '', 'Access: both', ACC.both]);
-    rows.push(['accent', '', 'Accent / highlight', S.accent]);
-    rows.push(['bg', '', 'Background', S.colorOverrides.bg || S.skin.themes[S.theme].canvasBg]);
-    rows.push(['ink', '', 'Links / guide ink', S.colorOverrides.ink || '#' + (S.theme === 'dark' ? 'aaaaaa' : '333333')]);
+    rows.push(['remote', '', 'Agent distant', S.remoteColor]);
+    rows.push(['accRemote', '', 'Accès : agent distant seul', ACC.remote]);
+    rows.push(['accLocal', '', 'Accès : cet ordinateur seul', ACC.local]);
+    rows.push(['accBoth', '', 'Accès : les deux', ACC.both]);
+    rows.push(['accent', '', 'Accent / surbrillance', S.accent]);
+    rows.push(['bg', '', 'Fond', S.colorOverrides.bg || S.skin.themes[S.theme].canvasBg]);
+    rows.push(['ink', '', 'Encre des liens et guides', S.colorOverrides.ink || '#' + (S.theme === 'dark' ? 'aaaaaa' : '333333')]);
     return rows;
   }
 
@@ -1669,7 +1671,7 @@ window.BrainCore = (function () {
     if (!body) return;
     body.innerHTML = colorSlots().map(([g, k, label, val]) => `
       <div class="clr"><span>${label}</span><input type="color" data-g="${g}" data-k="${k}" value="${F.norm(val || '#888888')}"></div>`).join('')
-      + '<button class="act" id="clr-reset" style="width:100%;margin-top:8px">Reset colours</button>';
+      + '<button class="act" id="clr-reset" style="width:100%;margin-top:8px">Réinitialiser les couleurs</button>';
     body.querySelectorAll('input[type=color]').forEach(inp => {
       inp.oninput = () => {
         const g = inp.dataset.g, k = inp.dataset.k, v = inp.value;
@@ -1687,7 +1689,7 @@ window.BrainCore = (function () {
       applyColors();
       rebuildLegend();
       buildColorPanel();
-      toast('Colours reset to the house palette');
+      toast('Couleurs remises à la palette d’origine');
     };
   }
   function toggleTheme() {
@@ -1697,7 +1699,7 @@ window.BrainCore = (function () {
   }
   function themeButtonLabel() {
     const b = document.getElementById('btn-theme');
-    if (b) b.textContent = S.theme === 'dark' ? 'Light mode' : 'Dark mode';
+    if (b) b.textContent = S.theme === 'dark' ? 'Mode clair' : 'Mode sombre';
   }
 
   function persistSt() {
@@ -1749,10 +1751,10 @@ window.BrainCore = (function () {
     if (opts.labelsOut) {
       // headers sit on top of their rings, just outside the band edge
       label(Math.max(R.skills + 14, R.mem - 58), 'SKILLS', S.layerColor.S, 't_sk');
-      label(R.memEnd + 10, 'MEMORY', S.layerColor.M || '#8fa3ad', 't_mem');
+      label(R.memEnd + 10, 'MÉMOIRE', S.layerColor.M || '#8fa3ad', 't_mem');
     } else {
       label(R.skills, 'SKILLS', S.layerColor.S, 't_sk');
-      label((R.mem + R.memEnd) / 2 - 18, 'MEMORY', S.layerColor.M || '#8fa3ad', 't_mem');
+      label((R.mem + R.memEnd) / 2 - 18, 'MÉMOIRE', S.layerColor.M || '#8fa3ad', 't_mem');
     }
     label(R.rout, 'ROUTINES', S.layerColor.R, 't_rout');
     label(R.apps, 'APPLICATIONS', S.layerColor.A, 't_app');

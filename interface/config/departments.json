@@ -14,28 +14,28 @@
       "label": "Applications",
       "color": "#3f8fd4",
       "shape": "hex",
-      "blurb": "MCP servers, CLIs and APIs your agent can reach"
+      "blurb": "Serveurs MCP, CLI et API que ton agent peut joindre"
     },
     {
       "key": "R",
       "label": "Routines",
       "color": "#d99a1f",
       "shape": "ringdot",
-      "blurb": "Scheduled automations that run without being asked"
+      "blurb": "Automatisations planifiées, qui tournent sans qu’on les demande"
     },
     {
       "key": "M",
-      "label": "Memory",
+      "label": "Mémoire",
       "color": "#9a66e0",
       "shape": "chip",
-      "blurb": "Every file of context, clustered by department"
+      "blurb": "Chaque fichier de contexte, regroupé par domaine"
     },
     {
       "key": "S",
       "label": "Skills",
       "color": "#ff6b1a",
       "shape": "diamond",
-      "blurb": "Capabilities your agent can run on demand"
+      "blurb": "Ce que ton agent peut lancer à la demande"
     }
   ],
   "projectPrefixes": {},

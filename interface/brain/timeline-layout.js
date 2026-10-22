@@ -4,18 +4,18 @@
   // days are equal width, months are separate blocks, and crowded days stack upward
   // inside their own day column instead of pushing later days to the right.
   const DAY=864e5,TZ=Intl.DateTimeFormat().resolvedOptions().timeZone||'UTC',MONTHS=3;
-  const names={A:'Applications',R:'Routines',G:'AGENTS md',M:'Memory',S:'Skills'};
+  const names={A:'Applications',R:'Routines',G:'AGENTS md',M:'Mémoire',S:'Skills'};
   const dayFmt=new Intl.DateTimeFormat('en-CA',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit'});
   const timeFmt=new Intl.DateTimeFormat('en-CA',{timeZone:TZ,hour:'2-digit',minute:'2-digit',hourCycle:'h23'});
   const dayKey=t=>dayFmt.format(t),keyOf=d=>d.toISOString().slice(0,10);
   const dayFraction=t=>{const [h,m]=timeFmt.format(t).split(':').map(Number);return(h*60+m)/1440};
-  const nice=t=>new Date(t).toLocaleString('en-AU',{timeZone:TZ,day:'numeric',month:'short',hour:'numeric',minute:'2-digit'});
+  const nice=t=>new Date(t).toLocaleString('fr-FR',{timeZone:TZ,day:'numeric',month:'short',hour:'numeric',minute:'2-digit'});
 
   function build({S,shown,layer,top}) {
     const visible=S.visible.filter(n=>shown(n)&&n.type!=='hub'),router=visible.find(n=>n.type==='router');
     const anchor=Math.max(...visible.filter(n=>n.mtime>0).map(n=>n.mtime)),[ay,am]=dayKey(anchor).split('-').map(Number);
     // Calendar window: the anchor's month and the two before it, in local days.
-    const months=[];for(let i=MONTHS-1;i>=0;i--){const d=new Date(Date.UTC(ay,am-1-i,1)),days=new Date(Date.UTC(d.getUTCFullYear(),d.getUTCMonth()+1,0)).getUTCDate();months.push({year:d.getUTCFullYear(),month:d.getUTCMonth(),days,label:d.toLocaleDateString('en-AU',{month:'long',timeZone:'UTC'}),short:d.toLocaleDateString('en-AU',{month:'short',timeZone:'UTC'}).toUpperCase()})}
+    const months=[];for(let i=MONTHS-1;i>=0;i--){const d=new Date(Date.UTC(ay,am-1-i,1)),days=new Date(Date.UTC(d.getUTCFullYear(),d.getUTCMonth()+1,0)).getUTCDate();months.push({year:d.getUTCFullYear(),month:d.getUTCMonth(),days,label:d.toLocaleDateString('fr-FR',{month:'long',timeZone:'UTC'}),short:d.toLocaleDateString('fr-FR',{month:'short',timeZone:'UTC'}).toUpperCase()})}
     const totalDays=months.reduce((n,m)=>n+m.days,0),firstKey=keyOf(new Date(Date.UTC(months[0].year,months[0].month,1)));
     // Horizontal geometry: label column, Older block, then equal-width days in month blocks.
     const left=28,labelW=118,olderX=left+labelW,olderW=Math.max(120,Math.min(200,S.W*.125)),gapOlder=22,monthGap=12,right=S.W-28;
@@ -99,19 +99,19 @@
     ctx.font='600 9px Outfit';ctx.textAlign='center';for(const s of layout.stacks){ctx.fillStyle=s.lane==='A'?S.layerColor.A:S.layerColor.R;ctx.fillText(String(s.count),sx(s.x),sy(s.y))}
     // AGENTS md stamp beside the marker
     const g=layout.lanes.find(l=>l.key==='G'),gy=sy((g.top+g.bottom)/2);
-    if(layout.router){const a=layout.aliases.find(a=>a.mtime===layout.router.mtime)||{};const label=(layout.router.file||'').replace('.md',' md')+' edited '+nice(layout.router.mtime);ctx.font='500 10.5px Outfit';ctx.textAlign='left';ctx.fillStyle='#d9d4c8';const rx=a.x!=null?sx(a.x):null;if(rx!=null)ctx.fillText(label,rx+10,gy+4)}
+    if(layout.router){const a=layout.aliases.find(a=>a.mtime===layout.router.mtime)||{};const label=(layout.router.file||'').replace('.md',' md')+' modifié le '+nice(layout.router.mtime);ctx.font='500 10.5px Outfit';ctx.textAlign='left';ctx.fillStyle='#d9d4c8';const rx=a.x!=null?sx(a.x):null;if(rx!=null)ctx.fillText(label,rx+10,gy+4)}
     // header band
     ctx.fillStyle='#000';ctx.fillRect(0,0,S.W,h1+2);
     const clampLabel=(x0,x1,w)=>Math.max(x0+4,Math.min((x0+x1)/2-w/2,x1-w-4));
     ctx.font='600 11px Outfit';ctx.letterSpacing='2.4px';ctx.textAlign='left';
     for(const m of layout.months){const x0=sx(m.x),x1=sx(m.x1);if(x1<0||x0>S.W)continue;const t=m.label.toUpperCase()+'  '+m.year,w=ctx.measureText(t).width;ctx.fillStyle='#ece9e1';ctx.fillText(t,clampLabel(Math.max(x0,b.olderX-4),x1,w),h0+12)}
-    {const x0=sx(b.olderX),x1=sx(b.olderX+b.olderW),t='OLDER',w=ctx.measureText(t).width;if(x1>0)ctx.fillStyle='#8d8b84',ctx.fillText(t,clampLabel(x0,x1,w),h0+12)}
+    {const x0=sx(b.olderX),x1=sx(b.olderX+b.olderW),t='PLUS ANCIEN',w=ctx.measureText(t).width;if(x1>0)ctx.fillStyle='#8d8b84',ctx.fillText(t,clampLabel(x0,x1,w),h0+12)}
     ctx.letterSpacing='0px';
     // day numbers under each month
     const dw=layout.dayW*scale,step=dw>=13?1:dw>=7?2:dw>=3.5?5:10;ctx.font='500 '+Math.max(8,Math.min(11,dw*.68))+'px Outfit';ctx.textAlign='center';
     for(const d of layout.days){const x=sx(d.x+layout.dayW/2);if(x<0||x>S.W)continue;const isToday=d.key===layout.todayKey,future=layout.todayKey&&d.key>layout.todayKey;if(!isToday&&(d.day-1)%step&&d.day!==1)continue;ctx.fillStyle=isToday?'#ff8a3d':future?'#4a4945':d.dow===0||d.dow===6?'#7b7a74':'#b9b6ad';ctx.fillText(String(d.day),x,h0+30)}
     if(layout.todayX){const x=sx(layout.todayX);ctx.fillStyle='#ff6b1a';ctx.beginPath();ctx.arc(x,h1+1,2.5,0,Math.PI*2);ctx.fill()}
-    {const x0=sx(b.olderX),x1=sx(b.olderX+b.olderW);ctx.fillStyle='#6f6d67';ctx.font='400 9.5px Outfit';if(x1>0)ctx.fillText('incl. undated',(x0+x1)/2,h0+30)}
+    {const x0=sx(b.olderX),x1=sx(b.olderX+b.olderW);ctx.fillStyle='#6f6d67';ctx.font='400 9.5px Outfit';if(x1>0)ctx.fillText('y compris sans date',(x0+x1)/2,h0+30)}
     ctx.strokeStyle='#ffffff1f';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(0,h1+.5);ctx.lineTo(S.W,h1+.5);ctx.stroke();
     // sticky lane names on the left
     const colW=b.olderX-6;if(pan.x<0||scale>1){ctx.fillStyle='#000';ctx.fillRect(0,h1+1,colW,S.H-h1)}

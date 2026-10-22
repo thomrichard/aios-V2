@@ -19,7 +19,7 @@
   // ---------- file count in the placeholder ----------
   let total = 0;
   // A plain comma format: toLocaleString's first call spent ~15 ms of the first load setting up number formats.
-  const setCount = n => { if (!(n > 0)) return; total = n; input.placeholder = `Search ${String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ',')} files… ( / )`; };
+  const setCount = n => { if (!(n > 0)) return; total = n; input.placeholder = `Rechercher parmi ${String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, '\u202f')} fichiers… ( / )`; };
   async function loadCount() {
     if (live) { try { const r = await fetch('/local/meta', {cache: 'no-store'}); if (r.ok) { setCount((await r.json()).totalFiles); return; } } catch {} }
     const tick = () => { const n = core()?.S?.meta?.totalFiles; if (n) setCount(n); else setTimeout(tick, 1500); };
@@ -62,7 +62,7 @@
     list = list.map((x, i) => ({x, i, on: onMap(x)})).sort((a, b) => (b.on - a.on) || a.i - b.i).map(e => ({...e.x, onMap: e.on}));
     rows = list.slice(0, 14); at = rows.length ? 0 : -1;
     box.innerHTML = rows.map((x, i) => `<div class="res${i === at ? ' on' : ''}" role="option" data-i="${i}" title="${esc(x.path)}"><span class="dot" style="background:${colourOf(x)}"></span><span class="r-name">${esc(x.name)}${x.type === 'dir' ? '/' : ''}</span><span class="r-path">${esc(x.path)}</span></div>`).join('')
-      || `<div class="res-none">No files match "${esc(q)}"</div>`;
+      || `<div class="res-none">Aucun fichier ne correspond à « ${esc(q)} »</div>`;
     box.hidden = false;
     box.querySelectorAll('.res').forEach(el => el.onpointerdown = e => { e.preventDefault(); pick(rows[+el.dataset.i]); });
   }
@@ -71,7 +71,7 @@
     clearTimeout(timer);
     const q = input.value.trim();
     if (!q) { ctrl?.abort(); close(); return; }
-    timer = setTimeout(() => search(q).then(list => { if (input.value.trim() === q) paint(list, q); }).catch(e => { if (e.name !== 'AbortError') { box.innerHTML = '<div class="res-none">Search is not answering yet. Is the OS running (node server.js)?</div>'; box.hidden = false; } }), 120);
+    timer = setTimeout(() => search(q).then(list => { if (input.value.trim() === q) paint(list, q); }).catch(e => { if (e.name !== 'AbortError') { box.innerHTML = '<div class="res-none">La recherche ne répond pas encore. L’OS tourne-t-il (node server.js) ?</div>'; box.hidden = false; } }), 120);
   });
   input.addEventListener('keydown', e => {
     if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { if (!rows.length) return; e.preventDefault(); at = (at + (e.key === 'ArrowDown' ? 1 : -1) + rows.length) % rows.length; box.querySelectorAll('.res').forEach((el, i) => el.classList.toggle('on', i === at)); box.querySelector('.res.on')?.scrollIntoView({block: 'nearest'}); }
@@ -95,31 +95,31 @@
     if (C) { try { await C.jumpTo(path); const sel = C.S.sel; found = !!sel && (sel.id === path || sel.path === path || String(sel.id).endsWith(path)); } catch {} }
     if (found) { close(); input.value = ''; input.blur(); return; }
     // not on the map: offer the file itself
-    box.innerHTML = `<div class="res-note">${esc(x.name)} isn't on the map yet.<br><span class="r-path">${esc(path)}</span></div><div class="res-actions"><button data-act="open">Open on device</button><button data-act="copy">Copy path</button></div>`;
+    box.innerHTML = `<div class="res-note">${esc(x.name)} n’est pas encore sur la carte.<br><span class="r-path">${esc(path)}</span></div><div class="res-actions"><button data-act="open">Ouvrir sur l’appareil</button><button data-act="copy">Copier le chemin</button></div>`;
     box.hidden = false;
     const root = (() => { try { return brain.contentWindow.QUIET_SNAPSHOT?.root || ''; } catch { return ''; } })();
     const abs = /^([A-Za-z]:)?[\\/]/.test(path) || !root ? path : root.replace(/\/+$/, '') + '/' + path;
-    box.querySelector('[data-act="open"]').onpointerdown = async e => { e.preventDefault(); if (!live) { notice('Opening files works when the OS runs (node server.js).'); return; } try { const r = await fetch('/api/open', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({path: abs})}); notice(r.ok ? 'Opened ' + x.name : 'Could not open it'); } catch { notice('Could not open it'); } };
-    box.querySelector('[data-act="copy"]').onpointerdown = e => { e.preventDefault(); navigator.clipboard?.writeText(abs).then(() => notice('Copied ' + abs), () => notice(abs)); };
+    box.querySelector('[data-act="open"]').onpointerdown = async e => { e.preventDefault(); if (!live) { notice('Ouvrir un fichier marche quand l’OS tourne (node server.js).'); return; } try { const r = await fetch('/api/open', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({path: abs})}); notice(r.ok ? 'Ouvert : ' + x.name : 'Impossible de l’ouvrir'); } catch { notice('Impossible de l’ouvrir'); } };
+    box.querySelector('[data-act="copy"]').onpointerdown = e => { e.preventDefault(); navigator.clipboard?.writeText(abs).then(() => notice('Copié : ' + abs), () => notice(abs)); };
   }
 
   // ---------- refresh ----------
   let busy = false;
   refreshBtn.onclick = async () => {
     if (busy) return;
-    if (!live) { notice('Refresh works when the OS runs (node server.js). This file copy uses saved data.'); return; }
-    busy = true; refreshBtn.classList.remove('ok', 'fail'); refreshBtn.classList.add('busy'); refreshBtn.title = 'Refreshing… (about 20 seconds)';
-    notice('Refreshing routines, skills, applications and usage…');
+    if (!live) { notice('L’actualisation marche quand l’OS tourne (node server.js). Cette copie utilise les données enregistrées.'); return; }
+    busy = true; refreshBtn.classList.remove('ok', 'fail'); refreshBtn.classList.add('busy'); refreshBtn.title = 'Actualisation… (environ 20 secondes)';
+    notice('Actualisation des routines, skills, applications et usage…');
     let result = null;
     try { const r = await fetch('/local/refresh', {method: 'POST'}); result = await r.json(); } catch (e) { result = {ok: false, error: e.message}; }
     refreshBtn.classList.remove('busy');
     if (!result?.ok) {
-      busy = false; refreshBtn.classList.add('fail'); refreshBtn.title = 'Refresh failed. Click to try again.';
-      const bad = result?.steps?.find(s => !s.ok); notice('Refresh failed' + (bad ? ' at ' + bad.step : '') + '. The old data is still showing.'); return;
+      busy = false; refreshBtn.classList.add('fail'); refreshBtn.title = 'Échec de l’actualisation. Clique pour réessayer.';
+      const bad = result?.steps?.find(s => !s.ok); notice('Échec de l’actualisation' + (bad ? ' à l’étape ' + bad.step : '') + '. Les anciennes données restent affichées.'); return;
     }
     reloadFrames();
-    busy = false; refreshBtn.classList.add('ok'); refreshBtn.title = 'Refreshed ' + new Date(result.at).toLocaleTimeString() + '. Click to refresh again.';
-    notice('Data refreshed in ' + Math.round(result.ms / 1000) + ' s.');
+    busy = false; refreshBtn.classList.add('ok'); refreshBtn.title = 'Actualisé à ' + new Date(result.at).toLocaleTimeString('fr-FR') + '. Clique pour actualiser à nouveau.';
+    notice('Données actualisées en ' + Math.round(result.ms / 1000) + ' s.');
     total = 0; loadCount(); setTimeout(() => refreshBtn.classList.remove('ok'), 4000);
   };
   // Reload both frames in place; once the brain is back, put it on the same view, layout and state.
