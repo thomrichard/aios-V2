@@ -100,6 +100,35 @@ def livrables():
     return sorted(trouves, reverse=True)
 
 
+def skills():
+    """Chaque skill : son nom, la première phrase de sa description, son fichier."""
+    trouvees = []
+    depart = os.path.join(RACINE, "skills")
+    if not os.path.isdir(depart):
+        return trouvees
+    for nom in sorted(os.listdir(depart)):
+        fichier = os.path.join(depart, nom, "SKILL.md")
+        if os.path.exists(fichier):
+            e = lire_entete(fichier)
+            description = e.get("description", "")
+            premiere = description.split(". ")[0].rstrip(".") + "." if description else ""
+            trouvees.append((e.get("name", nom), premiere, f"{nom}/SKILL.md"))
+    return trouvees
+
+
+def index_skills():
+    lignes = ["# skills · index", "", AVERTISSEMENT, "",
+              "Chaque skill vit dans `skills/<nom>/SKILL.md` : le dossier porte son nom.", ""]
+    liste = skills()
+    if not liste:
+        lignes.append("Aucune skill pour l'instant.")
+    else:
+        lignes += ["| Skill | Ce qu'elle fait | Fichier |", "|---|---|---|"]
+        for nom, description, fichier in liste:
+            lignes.append(f"| {cellule(nom)} | {cellule(description)} | [{fichier}]({fichier}) |")
+    return "\n".join(lignes) + "\n"
+
+
 def page_outbox():
     points_dir = os.path.join(RACINE, "outbox", "points")
     points = sorted((p for p in os.listdir(points_dir) if p.endswith(".md")), reverse=True) \
@@ -113,6 +142,10 @@ def page_outbox():
                       f'<td><a href="../{html.escape(chemin)}">{html.escape(chemin)}</a></td>'
                       f'<td>{html.escape(e.get("statut", ""))}</td></tr>')
     corps = "\n".join(lignes) or '<tr><td colspan="4">Rien pour l\'instant.</td></tr>'
+    corps_skills = "\n".join(
+        f'<tr><td>{html.escape(nom)}</td><td>{html.escape(description)}</td>'
+        f'<td><a href="../skills/{html.escape(fichier)}">skills/{html.escape(fichier)}</a></td></tr>'
+        for nom, description, fichier in skills()) or '<tr><td colspan="3">Aucune skill.</td></tr>'
     return f"""<!doctype html>
 <html lang="fr">
 <head>
@@ -122,7 +155,7 @@ def page_outbox():
 <!-- Généré par systeme/scripts/index.py : ne pas modifier à la main. -->
 <style>
 body {{ font-family: system-ui, sans-serif; margin: 24px; color: #1e1e1e; background: #fafafa; }}
-h1 {{ font-size: 22px; }}
+h1 {{ font-size: 22px; }} h2 {{ font-size: 17px; margin-top: 28px; }}
 input {{ width: 100%; max-width: 480px; padding: 8px; font-size: 15px; margin-bottom: 16px; }}
 table {{ border-collapse: collapse; width: 100%; background: #fff; }}
 td, th {{ border-bottom: 1px solid #e5e5e5; padding: 8px; text-align: left; font-size: 14px; }}
@@ -141,10 +174,17 @@ td, th {{ border-bottom: 1px solid #e5e5e5; padding: 8px; text-align: left; font
 {corps}
 </tbody>
 </table>
+<h2>Skills</h2>
+<table>
+<thead><tr><th>Skill</th><th>Ce qu'elle fait</th><th>Fichier</th></tr></thead>
+<tbody id="skills">
+{corps_skills}
+</tbody>
+</table>
 <script>
 document.getElementById('q').addEventListener('input', function () {{
   var t = this.value.toLowerCase();
-  document.querySelectorAll('#lignes tr').forEach(function (r) {{
+  document.querySelectorAll('#lignes tr, #skills tr').forEach(function (r) {{
     r.style.display = r.textContent.toLowerCase().indexOf(t) === -1 ? 'none' : '';
   }});
 }});
@@ -158,6 +198,8 @@ def cibles():
     """Chaque fichier généré et son contenu attendu."""
     for dossier in tous_les_dossiers():
         yield os.path.join(dossier, "_index.md"), index_dossier(dossier)
+    if os.path.isdir(os.path.join(RACINE, "skills")):
+        yield os.path.join(RACINE, "skills", "_index.md"), index_skills()
     if os.path.isdir(os.path.join(RACINE, "outbox")):
         yield os.path.join(RACINE, "outbox", "index.html"), page_outbox()
 

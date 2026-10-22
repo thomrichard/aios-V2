@@ -13,6 +13,7 @@ Planificateur : à choisir (serveur avec cron, Hermes, GitHub Actions).
 | Audit | `audit` | le 1er du mois, 1 h | passive | à fixer | à construire |
 
 Les routines passives tournent à 1 h, pour que le point du jour de 2 h reprenne leurs résultats.
+Une routine de capture (la veille) dépose ce qu'elle trouve dans `inbox/`, avec `source:` dans l'en-tête ; le rangement de 2 h le classe ou l'archive, et le point du jour ne garde que ce qui compte.
 Au-delà de son plafond, une routine est allégée.
 
 ## Exemple de ligne cron

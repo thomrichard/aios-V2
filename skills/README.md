@@ -8,3 +8,5 @@ Chaque skill a son dossier : `skills/<nom>/`
 
 Trois types : base de données (exemples, avec 2 jokers sur 10), livrable (HTML d'abord, puis export), déclenchée hors chat (lancée par `systeme/scripts/lancer.py`).
 Le modèle d'une skill n'est pas ici : il est dans `systeme/modeles.md`.
+
+Pour retrouver une skill par son nom : `skills/_index.md`, généré par `systeme/scripts/index.py`, ou la section Skills de `outbox/index.html`, avec sa recherche.

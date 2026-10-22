@@ -20,7 +20,7 @@ Filtre : chaque proposition doit rapprocher d'une de ces cibles. Sinon, dis-le e
 
 ## Les deux portes
 
-- `inbox/` : ce que Thomas dépose. Tu n'y écris jamais ; tu la vides en rangeant.
+- `inbox/` : ce qui entre. Ce que Thomas dépose, et ce que les routines de capture (veille) rapportent de l'extérieur, avec `source:` dans l'en-tête. Tu n'y déposes jamais tes propres productions ; tu la vides en rangeant.
 - `outbox/` : ce qui sort. Le point du jour dans `outbox/points/AAAA-MM-JJ.md`, la page `outbox/index.html` (générée).
 - Chaque nuit à 2 h, la skill `rangement` vide l'inbox, range l'outbox et écrit le point du jour.
 
@@ -46,6 +46,7 @@ Aucun pour l'instant. Format : `- [<slug>](projets/<slug>.md) · <domaine> · <p
 | Pour… | Lis |
 |---|---|
 | Un domaine | son routeur dans `routers/` |
+| Une skill, par son nom | `skills/_index.md` (généré) |
 | Un inventaire ou un statut | l'`_index.md` du dossier |
 | Une image ou un média | l'`_images.md` du dossier |
 | Les objectifs du trimestre | `domaines/operations/okr.md` |

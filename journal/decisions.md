@@ -27,3 +27,8 @@ Ajout seul. Pour chaque décision : la date, la décision, pourquoi.
 - **Un ordre de recherche** : la carte, puis le routeur ou l'index, puis une recherche texte.
 - **Le `CLAUDE.md` global de la machine reste vide.**
 - **Une skill `installation`** pose des questions imposées qui remplissent `AGENTS.md` ; la doctrine dit qui met à jour chaque section, et quand.
+
+## 2026-10-22 · L'inbox accepte les captures de l'extérieur
+
+- **L'IA peut déposer dans `inbox/` ce qu'elle capte de l'extérieur** (veille, e-mails), avec `source:` dans l'en-tête, jamais ses propres productions. Pourquoi : une veille rapporte des choses qui entrent ; le rangement de 2 h les classe comme le reste.
+- **Les fiches d'entretien restent dans `journal/entretiens/`.** Pourquoi : un entretien peut durer plusieurs jours, et le rangement de 2 h le déplacerait en pleine session.
