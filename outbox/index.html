@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Outbox</title>
+<!-- Généré par systeme/scripts/index.py : ne pas modifier à la main. -->
+<style>
+body { font-family: system-ui, sans-serif; margin: 24px; color: #1e1e1e; background: #fafafa; }
+h1 { font-size: 22px; }
+input { width: 100%; max-width: 480px; padding: 8px; font-size: 15px; margin-bottom: 16px; }
+table { border-collapse: collapse; width: 100%; background: #fff; }
+td, th { border-bottom: 1px solid #e5e5e5; padding: 8px; text-align: left; font-size: 14px; }
+@media (prefers-color-scheme: dark) {
+  body { color: #eee; background: #161616; } table { background: #1f1f1f; } td, th { border-color: #333; }
+  a { color: #8ab4ff; }
+}
+</style>
+</head>
+<body>
+<h1>Outbox</h1>
+<input id="q" placeholder="Rechercher (sans IA)" autofocus>
+<table>
+<thead><tr><th>Date</th><th>Quoi</th><th>Fichier</th><th>Statut</th></tr></thead>
+<tbody id="lignes">
+<tr><td colspan="4">Rien pour l'instant.</td></tr>
+</tbody>
+</table>
+<script>
+document.getElementById('q').addEventListener('input', function () {
+  var t = this.value.toLowerCase();
+  document.querySelectorAll('#lignes tr').forEach(function (r) {
+    r.style.display = r.textContent.toLowerCase().indexOf(t) === -1 ? 'none' : '';
+  });
+});
+</script>
+</body>
+</html>

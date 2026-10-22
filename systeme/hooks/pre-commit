@@ -1,0 +1,3 @@
+#!/bin/sh
+# Bloque le commit si le workspace a une erreur (source unique, liens, index d'images, mémoire).
+python3 systeme/scripts/verifier.py || { echo "Commit bloqué : corrige les erreurs ci-dessus."; exit 1; }
