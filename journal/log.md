@@ -1,9 +1,4 @@
 # Journal
 
 Ajout seul. Format : `- AAAA-MM-JJ · <action> | <sujet>`
-
-- 2026-10-22 · création | squelette d'AIOS v2
-- 2026-10-22 · ajout | objectifs, règles de travail et skill installation
-- 2026-10-22 · ajout | skill grill-me, appelée par installation
-- 2026-10-22 · reprise | grill-me de Thomas, adaptée à AIOS v2
-- 2026-10-22 · ajout | captures de veille dans l'inbox, index des skills par nom
+- 2026-10-22 · création | socle neutre d'AIOS v2

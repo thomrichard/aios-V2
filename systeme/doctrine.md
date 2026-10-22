@@ -26,6 +26,7 @@
 | Une connaissance durable | `savoir/concepts/` ou `savoir/sources/` |
 | Un média généré, un composant d'interface | `bibliotheques/medias/`, `bibliotheques/composants/` |
 | Une capture de l'extérieur (veille, e-mail) | `inbox/`, avec `source:` dans l'en-tête ; le rangement de 2 h la classe |
+| Un profil d'installation | `inbox/`, puis `archives/inbox/` une fois installé |
 | Un entretien (`grill-me`) | `journal/entretiens/AAAA-MM-JJ-<sujet>.md` |
 | Un élément de l'inbox déjà traité | `archives/inbox/AAAA-MM/` |
 | Un point du jour coché ou vieux de plus de 7 jours | `archives/outbox/` |
@@ -46,7 +47,7 @@ Statuts communs : `idee`, `en-cours`, `a-valider`, `publie`, `clos`. Un domaine 
 
 | Section | Qui la remplit | Quand elle change |
 |---|---|---|
-| Qui (nom de l'agent, rôle, ton, qui est l'utilisateur) | la skill `installation` | seulement à la demande de l'utilisateur |
+| Qui (nom de l'agent, rôle, ton, qui est l'utilisateur) | la skill `installation`, depuis le profil ou l'entretien | seulement à la demande de l'utilisateur |
 | Objectifs (les cibles de l'année) | la skill `installation` | à chaque revue trimestrielle : l'agent vérifie que les cibles sont toujours vraies face aux OKR, et propose la mise à jour |
 | Carte des domaines, projets actifs | la skill `installation`, puis l'agent | dans le même tour qu'un nouveau domaine, un nouveau projet ou un fichier déplacé |
 | Règles, comment tu travailles | l'agent, après accord | quand une règle manque ou qu'une correction revient ; une ligne, au bon endroit, et le pourquoi dans `journal/decisions.md` |

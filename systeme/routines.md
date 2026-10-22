@@ -8,8 +8,7 @@ Planificateur : à choisir (serveur avec cron, Hermes, GitHub Actions).
 | Routine | Skill | Quand | Type | Plafond par semaine | État |
 |---|---|---|---|---|---|
 | Rangement de nuit | `rangement` | chaque nuit, 2 h | active : le point du jour | à fixer | à construire |
-| Veille | `veille` | lundi, 1 h | passive | à fixer | à construire |
-| Stats YouTube | `stats-youtube` | lundi, 1 h | passive | à fixer | à construire |
+| Veille (exemple) | `veille` | lundi, 1 h | passive | à fixer | à construire |
 | Audit | `audit` | le 1er du mois, 1 h | passive | à fixer | à construire |
 
 Les routines passives tournent à 1 h, pour que le point du jour de 2 h reprenne leurs résultats.

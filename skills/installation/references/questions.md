@@ -1,6 +1,10 @@
 # Les questions imposées de l'installation
 
-Pose-les une à la fois, dans cet ordre. Chaque réponse s'écrit tout de suite là où elle fait foi.
+Pose-les une à la fois, dans cet ordre, avec `grill-me`.
+
+Deux façons de s'en servir :
+- **Avant l'installation** (par exemple pour préparer un atelier) : les réponses remplissent le gabarit `profil.md`, qu'on dépose ensuite dans `inbox/`.
+- **Pendant l'installation** : seulement les questions restées sans réponse, et chaque réponse s'écrit là où elle fait foi.
 
 | # | Bloc | Question | Où l'écrire |
 |---|---|---|---|
@@ -15,5 +19,5 @@ Pose-les une à la fois, dans cet ordre. Chaque réponse s'écrit tout de suite 
 | 9 | Projets | As-tu des projets en cours, avec une fin ? Pour chacun : le domaine et la prochaine étape. | `projets/<slug>.md` et les projets actifs de `AGENTS.md` |
 | 10 | Outils | Quel agent lance tes routines : Claude Code, Codex ou Gemini CLI ? | `.env`, ligne `AGENT` |
 | 11 | Outils | Quels outils utilises-tu chaque semaine (messagerie, agenda, vidéo, communauté…) ? | `systeme/connexions.md`, à brancher plus tard |
-| 12 | Routines | Où tournera le rangement de nuit (serveur, ordinateur toujours allumé, Hermes), et à quelle heure ? | `systeme/routines.md` |
+| 12 | Routines | Où tournera le rangement de nuit (serveur, ordinateur toujours allumé, Hermes), à quelle heure, et quelles autres routines veux-tu ? | `systeme/routines.md` |
 | 13 | Mémoire | Que doit-il toujours savoir sur toi, ou ne jamais faire ? | `memory/`, souvenirs `user_` et `feedback_`, et leur ligne dans `memory/MEMORY.md` |

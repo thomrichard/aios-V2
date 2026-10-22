@@ -35,7 +35,7 @@ La synthèse se réécrit aux jalons seulement : fin de branche (avec le statut 
 2. Relis la fiche : contradictions et trous se réconcilient avec l'utilisateur.
 3. Réécris la synthèse finale.
 4. Propose les deux sorties :
-   - le livrable propre (plan, spec, décision), rangé selon `systeme/doctrine.md` ; avec une liste imposée, chaque réponse écrite là où elle fait foi (colonne « Où l'écrire »). La fiche brute reste dans `journal/entretiens/` ;
+   - le livrable propre (plan, spec, décision), rangé selon `systeme/doctrine.md` ; avec la liste de l'installation, le gabarit `skills/installation/references/profil.md` rempli : c'est le profil qu'on dépose dans `inbox/`. La fiche brute reste dans `journal/entretiens/` ;
    - les flags ouverts, transformés en actions concrètes vers leur owner ; ceux qui attendent l'utilisateur remontent dans le point du jour.
 5. Ajoute une ligne à `journal/log.md` : `- AAAA-MM-JJ · entretien | <sujet>`.
 
@@ -45,4 +45,4 @@ La synthèse se réécrit aux jalons seulement : fin de branche (avec le statut 
 
 ## Journal des changements
 - 2026-10-22 · création · entretien une question à la fois
-- 2026-10-22 · reprise de la grill-me de Thomas, adaptée à AIOS v2 (chemins, socle neutre, liste imposée) · sa version est plus complète
+- 2026-10-22 · reprise de la grill-me de Thomas Richard, adaptée à AIOS v2 (chemins, socle neutre, liste imposée) · sa version est plus complète

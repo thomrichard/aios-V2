@@ -18,7 +18,13 @@ Le reste est rangé pour l'IA. Tu n'as jamais besoin de l'ouvrir.
 4. La mémoire vit dans `memory/`, une ligne par souvenir dans `memory/MEMORY.md`.
 5. Les skills existent une seule fois, dans `skills/` ; `.claude/skills` et `.agents/skills` sont des liens.
 
-## Installation (à donner à ton agent)
+## Le parcours
+
+1. **Préparer son profil.** Avec la skill `grill-me` et la liste `skills/installation/references/questions.md`, on répond aux questions imposées. On obtient un profil, sur le gabarit `skills/installation/references/profil.md`. C'est l'étape à faire avant un atelier ; sans dépôt sous la main, on peut donner ces trois fichiers à n'importe quel Claude.
+2. **Créer son dépôt à partir du socle.** Sur GitHub, « Use this template », ou un clone.
+3. **Installer.** On dépose son profil dans `inbox/` et on dit à son agent « installe l'AIOS ». L'installation reprend le profil, ne pose que les questions restantes, et range chaque réponse à sa place.
+
+## L'installation, pas à pas (à donner à ton agent)
 
 1. Clone le dépôt et ouvre-le dans ton agent.
 2. Vérifie les liens vers `skills/`. S'ils manquent :
@@ -26,7 +32,7 @@ Le reste est rangé pour l'IA. Tu n'as jamais besoin de l'ouvrir.
    - Windows (jonction, sans droits admin) : `mklink /J .claude\skills skills` puis `mklink /J .agents\skills skills`
 3. Copie `.env.example` en `.env` et choisis ton agent : `AGENT=claude`, `codex` ou `gemini`.
 4. Active le contrôle avant chaque commit : `git config core.hooksPath systeme/hooks`
-5. Lance la skill `installation` (« installe l'AIOS »). Elle pose les questions imposées (`skills/installation/references/questions.md`), remplit `AGENTS.md` (identité, objectifs, domaines), crée les routeurs et vérifie le workspace.
+5. Dépose ton profil dans `inbox/` si tu en as un, puis lance la skill `installation` (« installe l'AIOS »). Sans profil, elle pose toutes les questions.
 6. Laisse vide le `CLAUDE.md` global de ta machine : tout vit dans le workspace.
 7. Branche le planificateur sur `systeme/scripts/lancer.py` (voir `systeme/routines.md`).
 
