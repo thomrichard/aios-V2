@@ -11,4 +11,9 @@ Chaque source reste dans le domaine qui la produit ; ce tableau n'en donne que l
 
 | Source | Domaine | Détail dans | Montant du mois |
 |---|---|---|---|
-| À définir (skill `installation`) | | | |
+| Revenus YouTube (publicité) | contenu | `domaines/contenu/` | environ 200 $ |
+| Sponsoring | contenu | `domaines/contenu/` | À définir |
+| Affiliation | contenu | `domaines/contenu/` | À définir |
+| Abonnements Club SMART | communaute | `domaines/communaute/` | À définir |
+| Accompagnements individuels et de groupe | consulting | `domaines/consulting/` | À définir |
+| Produits | produits | `domaines/produits/` | À définir |
