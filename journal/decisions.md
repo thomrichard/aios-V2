@@ -16,3 +16,14 @@ Ajout seul. Pour chaque décision : la date, la décision, pourquoi.
 - **Connexions dans l'ordre** : outil officiel, CLI, API, MCP.
 - **Six domaines** : contenu, communaute, consulting, produits, operations, perso. Chaque revenu reste dans le domaine qui le produit ; la vue d'ensemble est dans `domaines/operations/revenus.md`.
 - **On part de zéro**, et le socle reste neutre pour devenir le kit du Club SMART. Pourquoi : un seul système, d'abord éprouvé par Thomas, puis partagé.
+
+## 2026-10-22 · AGENTS.md et l'installation
+
+- **L'agent s'appelle R4.**
+- **Une section Objectifs** : les trois cibles de l'année font foi dans `AGENTS.md`, avec un filtre (chaque proposition doit en rapprocher). Le détail du trimestre est dans `domaines/operations/okr.md`. Pourquoi : l'agent conseille en connaissant la finalité (Jay, CLAUDE.md, leçon C2).
+- **Des règles de validation** : demander avant de supprimer, toucher un système externe, installer ou dépenser ; vérifier avant de dire « c'est fait » ; prévenir avant un gros travail.
+- **Les quatre principes de Karpathy** : réfléchir avant d'agir, faire au plus simple, ne toucher que ce qui est demandé, viser un critère de réussite.
+- **L'auto-amélioration** : l'agent propose d'ajouter une règle quand elle manque, et n'écrit qu'après accord.
+- **Un ordre de recherche** : la carte, puis le routeur ou l'index, puis une recherche texte.
+- **Le `CLAUDE.md` global de la machine reste vide.**
+- **Une skill `installation`** pose des questions imposées qui remplissent `AGENTS.md` ; la doctrine dit qui met à jour chaque section, et quand.

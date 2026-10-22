@@ -26,8 +26,8 @@ Le reste est rangé pour l'IA. Tu n'as jamais besoin de l'ouvrir.
    - Windows (jonction, sans droits admin) : `mklink /J .claude\skills skills` puis `mklink /J .agents\skills skills`
 3. Copie `.env.example` en `.env` et choisis ton agent : `AGENT=claude`, `codex` ou `gemini`.
 4. Active le contrôle avant chaque commit : `git config core.hooksPath systeme/hooks`
-5. Remplis la section « Qui » et la carte des domaines de `AGENTS.md`, puis un routeur par domaine dans `routers/` (gabarit : `systeme/gabarits/routeur.md`).
-6. Lance `python3 systeme/scripts/index.py`, puis `python3 systeme/scripts/verifier.py`.
+5. Lance la skill `installation` (« installe l'AIOS »). Elle pose les questions imposées (`skills/installation/references/questions.md`), remplit `AGENTS.md` (identité, objectifs, domaines), crée les routeurs et vérifie le workspace.
+6. Laisse vide le `CLAUDE.md` global de ta machine : tout vit dans le workspace.
 7. Branche le planificateur sur `systeme/scripts/lancer.py` (voir `systeme/routines.md`).
 
 ## Les scripts

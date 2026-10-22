@@ -40,6 +40,20 @@ Statuts communs : `idee`, `en-cours`, `a-valider`, `publie`, `clos`. Un domaine 
 - Daté : `AAAA-MM-JJ-<slug>.md`. Durable : `<slug>.md`.
 - Pas de dossier fourre-tout (`notes/`, `misc/`, `tmp/`). Un nouveau dossier se justifie par deux « oui » sur trois : concept nouveau, usage répété le mois suivant, place pour une future skill.
 
+## Mettre à jour AGENTS.md
+
+| Section | Qui la remplit | Quand elle change |
+|---|---|---|
+| Qui (nom de l'agent, rôle, ton, qui est l'utilisateur) | la skill `installation` | seulement à la demande de l'utilisateur |
+| Objectifs (les cibles de l'année) | la skill `installation` | à chaque revue trimestrielle : l'agent vérifie que les cibles sont toujours vraies face aux OKR, et propose la mise à jour |
+| Carte des domaines, projets actifs | la skill `installation`, puis l'agent | dans le même tour qu'un nouveau domaine, un nouveau projet ou un fichier déplacé |
+| Règles, comment tu travailles | l'agent, après accord | quand une règle manque ou qu'une correction revient ; une ligne, au bon endroit, et le pourquoi dans `journal/decisions.md` |
+
+- Les cibles de l'année font foi dans `AGENTS.md` ; les OKR du trimestre dans `domaines/operations/okr.md`. On ne recopie pas l'un dans l'autre.
+- Jamais de réécriture complète sans demande.
+- Au-delà de 150 lignes, le détail part dans un routeur ou dans `systeme/`.
+- Le `CLAUDE.md` global de la machine reste vide : tout vit dans le workspace, donc tout reste portable.
+
 ## Plafonds
 
 | Fichier | Plafond |
