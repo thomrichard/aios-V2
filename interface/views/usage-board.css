@@ -1,0 +1,74 @@
+/* Skills and Applications tabs (usage-board.js), plus the /agenticos hex backdrop for every tab here. */
+#hex-bg{position:fixed;inset:0;z-index:0;pointer-events:none}
+#app{z-index:1}
+body,#stage{background:transparent}
+html{background:#000}
+
+body[data-view=skills] #metrics,body[data-view=skills] #controls,body[data-view=skills] #routine-list,body[data-view=skills] #stage,body[data-view=skills] #unplaced,body[data-view=skills] .zoom,
+body[data-view=apps] #metrics,body[data-view=apps] #controls,body[data-view=apps] #routine-list,body[data-view=apps] #stage,body[data-view=apps] #unplaced,body[data-view=apps] .zoom{display:none!important}
+#usage-board{display:none}
+body[data-view=skills] #usage-board,body[data-view=apps] #usage-board{display:flex;flex-direction:column;flex:1;min-height:0}
+
+.ub-top{display:flex;align-items:center;gap:12px;height:48px;min-height:48px;flex-wrap:nowrap}
+.ub-top .seg button{white-space:nowrap}
+.ub-sum{flex:1;min-width:0;text-align:center;color:#8f8c84;font-size:11px;letter-spacing:.4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ub-sum b{color:#a9a69d;font-weight:500;letter-spacing:1.6px;margin-right:6px}
+.ub-hot{color:#ff8b49;font-weight:600}
+.ub-when{margin-left:10px;color:#5f5d57}
+.ub-body{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(300px,1fr);gap:22px;border-top:1px solid #ffffff14;padding-top:14px}
+.ub-field{position:relative;min-height:0;min-width:0}
+#ub-svg{display:block;width:100%;height:100%}
+.ub-node{cursor:pointer;outline:none;transition:opacity .15s}
+.ub-field.has-hot .ub-node:not(.hot){opacity:.32}
+.ub-node.hot .ub-shape,.ub-node.sel .ub-shape{stroke:#fff;stroke-width:2}
+.ub-node:focus-visible .ub-shape{stroke:#fff;stroke-width:2.5}
+.ub-label{fill:#fff7ef;font-weight:600;pointer-events:none;paint-order:stroke;stroke:#0008;stroke-width:3px;transition:filter .2s}
+.ub-sub{fill:#ffffffb8;font-weight:400;pointer-events:none;paint-order:stroke;stroke:#0008;stroke-width:3px}
+.ub-none{fill:#77746c;font-size:13px}
+/* Skills and Applications: thin rings (16 Oct). Hover fills the shape in, a selected one turns cream; quiet labels, no halo */
+.ub-field[data-view] .ub-shape{transition:fill-opacity .2s,stroke-width .2s,stroke-opacity .2s}
+.ub-field[data-view] .ub-node.hot .ub-shape{stroke-opacity:1;stroke-width:2;fill-opacity:.28}
+.ub-field[data-view=skills] .ub-node.hot .ub-shape{stroke:#ff6b1a}
+.ub-field[data-view=apps] .ub-node.hot .ub-shape{stroke:#3f8fd4}
+.ub-field[data-view] .ub-node.sel .ub-shape,.ub-field[data-view] .ub-node:focus-visible .ub-shape{stroke:#e8e2d2;stroke-opacity:1;stroke-width:2;fill-opacity:.28}
+.ub-field[data-view] .ub-label{fill:#e8e2d2;font-weight:500;letter-spacing:-.01em;stroke:none}
+.ub-field[data-view] .ub-sub{fill:#8d8775;stroke:none}
+
+.ub-list{min-height:0;overflow-y:auto;padding-right:4px;scrollbar-width:thin;scrollbar-color:#2c2c2a transparent}
+.ub-rows{list-style:none;margin:0;padding:0}
+.ub-row{display:grid;grid-template-columns:24px minmax(0,1fr) auto;grid-template-rows:auto 3px auto;column-gap:8px;row-gap:3px;align-items:center;padding:7px 8px;border-radius:6px;cursor:pointer;outline:none}
+.ub-row:hover,.ub-row.hot,.ub-row:focus-visible{background:#151513}
+.ub-row.sel{background:#1c1b18;box-shadow:inset 2px 0 0 #ff8b49}
+body[data-view=apps] .ub-row.sel{box-shadow:inset 2px 0 0 #58abf5}
+.ub-row.idle{opacity:.55}
+.ub-rank{grid-row:1 / 4;color:#5c5a54;font-size:11px;text-align:right}
+.ub-name{color:#ece8de;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:filter .2s}
+.ub-val{color:#d6d2c7;font-size:12px;white-space:nowrap;text-align:right}
+.ub-bar{grid-column:2 / 4;height:3px;background:#1f1e1b;border-radius:2px;overflow:hidden}
+.ub-bar i{display:block;height:100%;border-radius:2px;opacity:.85}
+.ub-meta{grid-column:2 / 4;color:#77746c;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+.ub-card{margin:0 0 12px;padding:12px 14px;border:1px solid #2f2e2a;border-radius:9px;background:#0d0d0c}
+.ub-card-h{display:flex;align-items:center;gap:8px}
+.ub-card-h .ub-name{font-size:16px;font-weight:600}
+.ub-tag{font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:#8f8c84;border:1px solid #2f2e2a;border-radius:4px;padding:2px 6px;white-space:nowrap}
+.ub-x{margin-left:auto;height:24px;min-height:24px;padding:0 8px;background:transparent;border-color:transparent;color:#8f8c84}
+.ub-desc{margin:8px 0 6px;color:#a7a399;font-size:12px;line-height:1.45}
+.ub-card table{width:100%;border-collapse:collapse;margin-top:6px;font-size:12px}
+.ub-card th{color:#6f6d66;font-weight:400;text-align:right;padding:3px 0}
+.ub-card td{color:#d6d2c7;text-align:right;padding:3px 0;border-top:1px solid #1d1c1a}
+.ub-card td:first-child,.ub-card th:first-child{text-align:left;color:#8f8c84}
+.ub-foot{margin:8px 0 0;color:#77746c;font-size:11px}
+.ub-unused{margin:14px 8px 0;color:#8f8c84;font-size:12px}
+.ub-unused summary{cursor:pointer;letter-spacing:.3px}
+.ub-unused p{margin:8px 0 0;line-height:1.9}
+.ub-unused .ub-name{display:inline-block;font-size:11px;color:#a7a399;margin-right:8px}
+.ub-method{margin:16px 8px 6px;color:#5f5d57;font-size:11px;line-height:1.5}
+.ub-empty{margin:60px auto;color:#8f8c84}
+
+/* Routines tab: measured figures in full colour, the rest quieter */
+.cal-est{color:#77746c;font-weight:400;margin-left:4px}
+.routine-cost.is-est{opacity:.62}
+
+
+@media(max-width:1100px){.ub-top{flex-wrap:wrap;height:auto;padding:8px 0;gap:8px}.ub-sum{order:5;flex-basis:100%;text-align:left}.ub-body{grid-template-columns:1fr;grid-template-rows:minmax(260px,1fr) minmax(200px,.8fr)}}

@@ -1,0 +1,1 @@
+window.BRAIN_MAP_LAYOUTS={};

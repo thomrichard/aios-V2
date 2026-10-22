@@ -3,3 +3,16 @@
 __pycache__/
 *.pyc
 .obsidian/workspace*.json
+
+# interface : ce que le kit écrit en marchant, et ses clés
+interface/data/*.json
+interface/data/*.jsonl
+interface/os-runs/
+interface/artifacts/_trash/
+interface/snapshots/calendar.json
+interface/snapshots/stats.json
+interface/snapshots/usage-log.jsonl
+interface/.google-creds.json
+interface/.google-calendar-token.json
+interface/node_modules/
+interface/package-lock.json

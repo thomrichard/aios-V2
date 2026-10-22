@@ -1,0 +1,27 @@
+{
+  "port": 50000,
+  "brainPort": 50201,
+  "artifactsDir": "artifacts",
+  "allowNullOrigin": false,
+  "models": ["HAIKU", "SONNET", "OPUS", "FABLE"],
+  "modelColors": ["#2aa88a", "#3f8fd4", "#9a66e0", "#ff6b1a"],
+  "efforts": ["LOW", "MEDIUM", "HIGH", "XHIGH", "MAX"],
+  "skills": [],
+  "runner": {
+    "command": "",
+    "cwd": "",
+    "modelValues": [],
+    "effortValues": []
+  },
+  "microApps": [],
+  "clocks": [
+    { "label": "USA PT", "tz": "America/Los_Angeles" },
+    { "label": "USA ET", "tz": "America/New_York" },
+    { "label": "LONDON", "tz": "Europe/London" }
+  ],
+  "readers": { "claudeCode": "auto" },
+  "email": { "enabled": false, "command": "gws" },
+  "partnerHints": "sponsor|collab|partner|brand|affiliate|deal|invoice|pitch|opportunit",
+  "leadHints": "join|member|sign\\s?up|subscri|pricing|enroll|course|coaching|access|billing|refund",
+  "personalFrom": "@(gmail|googlemail|yahoo|outlook|hotmail|icloud|proton)\\."
+}

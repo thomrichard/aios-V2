@@ -1,0 +1,8 @@
+{
+  "title": "Sample: skill run report",
+  "icon": "bolt",
+  "kind": "run",
+  "created": "2026-01-01T00:00:01.000Z",
+  "note": "the shape every headless deck run leaves on the ring",
+  "svg": "<path d=\"M26 8L14 27h8l-2 13 12-19h-8l2-13z\"/>"
+}

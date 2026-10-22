@@ -1,0 +1,1 @@
+window.COPY_DATA={"departments":[],"calendar":{"timezone":"UTC","weekStart":"2026-10-19","routines":[],"occurrences":[],"meta":{"builtAt":"2026-10-21T04:31:25.205Z","found":false,"note":"Fire times for this week, Monday to Sunday, in UTC. A fire is a start time, not a duration. Paused and on-demand routines are listed but not placed."}},"routines":[]};

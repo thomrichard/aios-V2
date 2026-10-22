@@ -1,0 +1,2 @@
+/* The homepage orb's coloured centre: your departments and layers, written by refresh/brain.mjs. */
+window.HOME_ORB_MINI={"U":7.5,"depts":[["work","#e040fb",120],["content","#2196f3",120],["personal","#fdd835",120],["operations","#00bcd4",120]],"S":["#f2efe8",8],"R":["#d99a1f",6],"A":["#3f8fd4",6]};

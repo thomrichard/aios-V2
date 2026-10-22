@@ -1,0 +1,28 @@
+{
+  "_note": "Branché sur l'AIOS : root vaut « .. », le dossier qui contient interface/. Le kit ne se cartographie jamais lui-même.",
+  "root": "..",
+  "routerDoc": "AGENTS.md",
+  "instructionDocs": [
+    "AGENTS.md",
+    "CLAUDE.md"
+  ],
+  "skillDirs": [
+    "skills"
+  ],
+  "memoryDir": "memory",
+  "memoryIndex": "MEMORY.md",
+  "projectsDir": "projets",
+  "sharedPrefixes": [],
+  "visibleRoots": [
+    "inbox",
+    "outbox",
+    "domaines",
+    "projets",
+    "processus",
+    "skills",
+    "memory",
+    "journal"
+  ],
+  "routing": {},
+  "maxFiles": 500000
+}
