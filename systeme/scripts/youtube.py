@@ -371,17 +371,23 @@ def fiches(dossier, dossier_transcriptions, maj, essai):
     jours = analytics(jeton, aujourd_hui - datetime.timedelta(days=10), aujourd_hui, dimensions="day", metrics="views")
     dernier_jour = max((datetime.date.fromisoformat(l["day"]) for l in jours), default=aujourd_hui - datetime.timedelta(days=3))
 
-    # Noms des fiches : celles qui existent déjà gardent le leur.
-    existantes = {}
+    # Noms des fiches : celles qui existent déjà gardent le leur, et leur date de naissance (cree).
+    # Le dossier n'est pas réservé aux vidéos : seule une fiche de type video compte.
+    existantes, nees = {}, {}
     if os.path.isdir(dossier):
         for nom in os.listdir(dossier):
             if nom.endswith(".md") and not nom.startswith("_"):
-                m = re.search(r"watch\?v=([A-Za-z0-9_-]{11})", open(os.path.join(dossier, nom), encoding="utf-8").read())
-                if m:
+                texte = open(os.path.join(dossier, nom), encoding="utf-8").read()
+                m = re.search(r"watch\?v=([A-Za-z0-9_-]{11})", texte)
+                if m and re.search(r"^type: video$", texte, re.M):
                     existantes[m.group(1)] = nom
+                    c = re.search(r"^cree: (\d{4}-\d{2}-\d{2})$", texte, re.M)
+                    if c:
+                        nees[m.group(1)] = c.group(1)
     noms = {}
     for v in videos:
-        nom = existantes.get(v["id"]) or f"{v['snippet']['publishedAt'][:10]}-{slug(v['snippet']['title'])}.md"
+        sortie = v["snippet"]["publishedAt"]
+        nom = existantes.get(v["id"]) or f"{slug(v['snippet']['title'])}-{sortie[2:4]}-{sortie[5:7]}.md"
         noms[v["id"]] = nom if nom not in noms.values() else nom[:-3] + f"-{v['id'].lower()}.md"
 
     # Les lignes présentes dans au moins trois descriptions sont des blocs répétés, pas un résumé.
@@ -416,7 +422,7 @@ def fiches(dossier, dossier_transcriptions, maj, essai):
         liees = [noms[c] for c in cibles if c in noms] + [noms[s] for s in citee_par.get(vid, []) if s in noms]
 
         l = ["---", "type: video", f"resume: {resume(description, sn['title'], communes)}", "statut: publie", f"domaine: {domaine}",
-             f"cree: {publiee}", f"maj: {aujourd_hui}", f"liens: [{', '.join(dict.fromkeys(liees))}]", "---", f"# {sn['title']}", "",
+             f"cree: {nees.get(vid, publiee)}", f"maj: {aujourd_hui}", f"liens: [{', '.join(dict.fromkeys(liees))}]", "---", f"# {sn['title']}", "",
              f"- Vidéo : https://www.youtube.com/watch?v={vid}", f"- Miniature : {miniature}",
              f"- Publiée le : {publiee}", f"- Durée : {duree(secondes(v['contentDetails']['duration']))}"]
         if playlists.get(vid):
@@ -490,7 +496,7 @@ def main():
     sous.add_parser("connecter").add_argument("--client", required=True, help="client_secret.json d'un client OAuth « bureau »")
     sous.add_parser("tester")
     f = sous.add_parser("fiches")
-    f.add_argument("--dossier", default="domaines/contenu/videos", help="dossier des fiches, depuis la racine")
+    f.add_argument("--dossier", default="domaines/contenu", help="dossier des fiches, depuis la racine")
     f.add_argument("--transcriptions", help="dossier où garder les sous-titres téléchargés")
     f.add_argument("--maj", action="store_true", help="réécrit aussi les fiches existantes")
     f.add_argument("--essai", action="store_true", help="affiche la première fiche sans rien écrire")

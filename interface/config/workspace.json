@@ -23,11 +23,9 @@
     "memory",
     "journal",
     "domaines/communaute",
-    "domaines/communaute/lecons",
-    "domaines/communaute/lecons/economiser-tes-tokens",
+    "domaines/communaute/economiser-tes-tokens",
     "domaines/consulting",
     "domaines/contenu",
-    "domaines/contenu/videos",
     "domaines/operations",
     "domaines/perso",
     "domaines/produits"

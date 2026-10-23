@@ -10,7 +10,7 @@ Le Club SMART et la communauté Skool, y compris les abonnements.
 
 ## Fichiers clés
 - `domaines/communaute/revenus-club-smart.md` : revenus du Club mois par mois, refaits depuis les factures Skool (ne pas l'éditer à la main)
-- `domaines/communaute/lecons/economiser-tes-tokens/` : module « Économiser tes tokens », 22 leçons (image PNG, source Excalidraw, texte dans `economiser-tes-tokens.md`), à valider
+- `domaines/communaute/economiser-tes-tokens/` : module « Économiser tes tokens », 22 leçons (image PNG, source Excalidraw, texte dans `economiser-tes-tokens.md`), à valider
 
 ## Skills
 - `skool-ops` : lire et écrire dans Skool (membres, payants, stats, classrooms, leçons, posts, messages) et écrire un post dans la voix de Thomas (`skills/skool-ops/references/voix.md`, `types-de-posts.md`)

@@ -145,15 +145,21 @@ def chemins():
 
 
 def slug_de(nom):
-    """Le slug d'un nom de fichier ou de dossier : sans extension ni date en tête, minuscules, sans accents, tirets."""
+    """Le slug d'un nom de fichier ou de dossier : sans extension ni date en tête (l'ancien nommage), minuscules,
+    sans accents, tirets."""
     base = re.sub(r"^\d{4}-\d{2}-\d{2}-", "", re.sub(r"\.md$", "", nom))
     base = unicodedata.normalize("NFKD", base).encode("ascii", "ignore").decode()
     return re.sub(r"[^a-z0-9]+", "-", base.lower()).strip("-")
 
 
 def chemin_attendu(modele, e, slug):
-    """Le chemin d'un fichier d'après le modèle de son type et son en-tête ; None s'il manque une valeur."""
-    for cle, valeur in (("<domaine>", e.get("domaine", "")), ("<date>", e.get("cree", "")), ("<slug>", slug)):
+    """Le chemin d'un fichier d'après le modèle de son type et son en-tête ; None s'il manque une valeur.
+    `<date>` : l'année et le mois de `cree` (AA-MM). Un slug qui finit déjà par cette date la perd, pour ne pas la doubler."""
+    cree = e.get("cree", "")
+    date = cree[2:7] if re.fullmatch(r"\d{4}-\d{2}-\d{2}", cree) else ""
+    if "<date>" in modele and date and slug.endswith("-" + date):
+        slug = slug[:-len(date) - 1]
+    for cle, valeur in (("<domaine>", e.get("domaine", "")), ("<date>", date), ("<slug>", slug)):
         if cle in modele:
             if not valeur:
                 return None

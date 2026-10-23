@@ -15,7 +15,7 @@ Skool n'a pas d'API publique. La CLI et les scripts parlent à Skool avec le coo
    - attends le oui de Thomas ;
    - un premier essai sur un contenu inconnu passe d'abord en `--dry-run` ;
    - après l'envoi, donne l'URL Skool pour qu'il vérifie à l'œil.
-5. Une leçon du workspace (`domaines/communaute/lecons/<slug>/`) : convertis le Markdown en ProseMirror avec `md_to_prosemirror.py`, puis écris l'id et l'URL Skool dans son en-tête (`liens`).
+5. Une leçon du workspace (`domaines/communaute/<slug>/`, type `support`) : convertis le Markdown en ProseMirror avec `md_to_prosemirror.py`, puis écris l'id et l'URL Skool dans son en-tête (`liens`).
 6. Un post :
    - lis `references/voix.md`, puis le type qui correspond dans `references/types-de-posts.md` ;
    - propose deux versions vraiment différentes ; Thomas choisit ;
