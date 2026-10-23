@@ -14,3 +14,6 @@ Ajout seul. Format : `- AAAA-MM-JJ · <action> | <sujet>`
 - 2026-10-23 · routine revenus-skool | registre refait, dernier mois complet : 468,00 $ HT (septembre 2026)
 - 2026-10-23 · routine jeton-skool | jeton vérifié, session : 312 j
 - 2026-10-23 · ajout | toolkit Skool dans `~/Dev/skool-toolkit` (dépôt privé), routines Jeton Skool et Revenus Skool, registre `domaines/communaute/revenus-club-smart.md`, référence `skool-ops/references/relances.md`, rubrique « Routines » du rangement ; ancienne veille des départs retirée
+- 2026-10-23 · skool | création classroom « Agentic AI » (brouillon, vide) https://www.skool.com/club-smart/classroom/17480787
+- 2026-10-23 · skool | dossier « Économiser tes tokens » et 22 leçons avec schéma, dans la classroom « Agentic AI » (brouillon) https://www.skool.com/club-smart/classroom/17480787
+- 2026-10-23 · skool | couverture de la classroom « Agentic AI » https://www.skool.com/club-smart/classroom/17480787

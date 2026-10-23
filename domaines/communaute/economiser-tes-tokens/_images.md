@@ -5,7 +5,7 @@ Une ligne par image. Cet index fait foi pour les images du dossier : écris la l
 | Fichier | Ce qu'elle montre | Origine | Sert à |
 |---|---|---|---|
 | `01-pourquoi-chaque-message-coute-plus-cher.png` | Leçon 1, Pourquoi chaque message coûte plus cher ? : visuel, trois étapes, phrase à retenir | Généré par Claude le 2026-10-23, source `01-pourquoi-chaque-message-coute-plus-cher.excalidraw` | Image de la leçon 1 dans Skool |
-| `02-le-context-rot.png` | Leçon 2, Pourquoi Claude oublie dans les longues discussions ? : visuel, trois étapes, phrase à retenir | Généré par Claude le 2026-10-23, source `02-le-context-rot.excalidraw` | Image de la leçon 2 dans Skool |
+| `02-le-context-rot.png` | Leçon 2, Pourquoi Claude oublie quand la discussion dure ? : visuel, trois étapes, phrase à retenir | Généré par Claude le 2026-10-23, source `02-le-context-rot.excalidraw` | Image de la leçon 2 dans Skool |
 | `03-le-cache-de-prompt.png` | Leçon 3, C'est quoi, le cache ? : visuel, trois étapes, phrase à retenir | Généré par Claude le 2026-10-23, source `03-le-cache-de-prompt.excalidraw` | Image de la leçon 3 dans Skool |
 | `04-compacter-avec-une-intention.png` | Leçon 4, Compacter, oui. Mais avec une intention. : visuel, trois étapes, phrase à retenir | Généré par Claude le 2026-10-23, source `04-compacter-avec-une-intention.excalidraw` | Image de la leçon 4 dans Skool |
 | `05-garder-le-cache-chaud.png` | Leçon 5, Garder le cache chaud : utile ou pas ? : visuel, trois étapes, phrase à retenir | Généré par Claude le 2026-10-23, source `05-garder-le-cache-chaud.excalidraw` | Image de la leçon 5 dans Skool |

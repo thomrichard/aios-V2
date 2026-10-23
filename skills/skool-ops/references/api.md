@@ -5,6 +5,7 @@
 - Group ID : `bd1bdc9579a64181bbfe8bd266124c04`
 - Slug : `club-smart`
 - Classroom Boîte à outils : slug `ecf9b15e`, id interne `7360488dae72491a8ed48d9849138469`
+- Classroom Agentic AI : slug `17480787`, id interne `649f7b14bedb4a3b9f61200bf0784f04`
 - URL d'une leçon : `https://www.skool.com/club-smart/classroom/<slug de la classroom>?md=<id de la leçon>`
 
 Libellés du fil. Un post sans libellé est refusé (HTTP 422).
@@ -65,6 +66,10 @@ Dans `~/Dev/skool-toolkit/scripts/` (dépôt privé `thomrichard/skool-toolkit`)
 | Passer une leçon en brouillon, ou la republier | `PUT /courses/{id}/state?state=draft` (ou `published`), corps vide |
 | Déplacer une leçon dans sa classroom | `POST /courses/{id}/update-parent?parent=<nouveau parent>`, corps vide |
 | Marquer une leçon faite | `POST /courses/{id}/mark-done`, corps vide |
+| Créer une classroom | `POST /courses` avec `group_id`, `unit_type=course`, `state=1` (brouillon ; `2` = publiée), puis `PUT /courses/{id}` avec le titre |
+| Déposer une image | `python3 skool_images.py <image>` : `POST /files`, envoi des octets sur `write_url`, puis `GET /files?ids=<id>` |
+| Couverture d'une classroom | `python3 skool_images.py <image> --couverture <classroom_id>` (`PUT /courses/{id}` avec `cover_image` et `cover_image_file`) ; format 1460 x 752 |
+| Envoyer un module du workspace | `python3 skool_pousser_module.py <dossier> --classroom <id> --titre "<titre du dossier>"` ; `--a-blanc` contrôle sans envoyer, `--essai` n'envoie que la première leçon |
 | Publier un post | `skool-pp-cli posts create`, ou `POST /posts?follow=true` (corps ci-dessous) |
 | Modifier un post | `python3 skool_edit_post.py <post_id> --title "..." --content "..."` |
 | Épingler un post sur une leçon | `python3 skool_pin_post.py <post_id> <lesson_id>` ; `--unpin` pour l'enlever |
@@ -80,6 +85,8 @@ Corps d'un post :
 ```
 
 `video_links` prend une URL YouTube ; `video_ids` sert aux vidéos téléversées sur Skool.
+
+Image dans une leçon : un bloc du texte, `{"type": "image", "attrs": {"alt", "fileID", "originalSrc": <read_url>, "src": <image_md_url>, "title"}}`. En premier bloc, c'est elle qu'on voit en ouvrant la leçon. `skool_images.bloc_image()` l'écrit.
 
 Conversion du texte : `md_to_prosemirror.py` (Markdown vers Skool) et `prosemirror_to_md.py` (Skool vers Markdown).
 

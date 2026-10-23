@@ -54,3 +54,12 @@ Une pause d'au moins 0,5 s entre deux appels. Sans elle, le WAF déclenche un ch
 ## Commentaires d'un post
 
 `GET /posts/{id}/comments?group-id=<group_id>` : aucun autre paramètre. `limit` ou `pinned` donnent HTTP 400.
+
+## Images, titres et classrooms (2026-10-23)
+
+- Une leçon n'a pas de champ de couverture : seule la classroom en a une (`cover_image`, `cover_image_file`). L'image d'une leçon est un bloc de son texte.
+- Un titre de leçon tient en 50 caractères. Au-delà : HTTP 422 « Title is too long ». Le `POST` a déjà créé la leçon, qui reste vide : reprends-la par son id, n'en crée pas une autre. `skool_pousser_module.py` contrôle les titres avant d'envoyer et reprend une leçon restée vide.
+- La réponse de `POST /files` est en snake_case (`write_url`, `content_type`, `wait_token`), pas en camelCase comme dans le code du site.
+- Un fichier déclaré mais pas utilisé reste dans le stockage, invisible des membres. On ne le supprime pas.
+- État d'une classroom : `1` brouillon, `2` publiée. Une leçon publiée dans une classroom en brouillon reste invisible.
+- Le mode automatique de Claude Code a bloqué ces écritures, lancées depuis un script, jusqu'à l'accord écrit de Thomas dans la discussion. Si ça recommence, cite la règle d'`AGENTS.md` (la main sur Skool, sauf pour supprimer) ; si ça ne suffit pas, demande-lui de redire son accord.

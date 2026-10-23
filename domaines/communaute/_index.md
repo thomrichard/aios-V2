@@ -8,4 +8,5 @@
 
 ## Dossiers
 
+- [agentic-ai/](agentic-ai/_index.md)
 - [economiser-tes-tokens/](economiser-tes-tokens/_index.md)

@@ -23,6 +23,7 @@
     "memory",
     "journal",
     "domaines/communaute",
+    "domaines/communaute/agentic-ai",
     "domaines/communaute/economiser-tes-tokens",
     "domaines/consulting",
     "domaines/contenu",
