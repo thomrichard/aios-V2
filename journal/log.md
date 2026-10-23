@@ -10,3 +10,7 @@ Ajout seul. Format : `- AAAA-MM-JJ · <action> | <sujet>`
 - 2026-10-23 · ajout | projets actifs d'AGENTS.md générés depuis projets/ ; colonne Fin des types
 - 2026-10-23 · ajout | skills classer, fiche et rangement ; ranger.py et colonne Chemin ; questions en attente dans outbox/questions.md ; dossier des fichiers lourds
 - 2026-10-23 · ajout | connexion Skool (skool-pp-cli) ; skill skool-ops reprise de ~/IA-OS, avec les références voix et types de posts tirées des 79 posts du fil
+- 2026-10-23 · routine jeton-skool | jeton vérifié, session : 312 j
+- 2026-10-23 · routine revenus-skool | registre refait, dernier mois complet : 468,00 $ HT (septembre 2026)
+- 2026-10-23 · routine jeton-skool | jeton vérifié, session : 312 j
+- 2026-10-23 · ajout | toolkit Skool dans `~/Dev/skool-toolkit` (dépôt privé), routines Jeton Skool et Revenus Skool, registre `domaines/communaute/revenus-club-smart.md`, référence `skool-ops/references/relances.md`, rubrique « Routines » du rangement ; ancienne veille des départs retirée

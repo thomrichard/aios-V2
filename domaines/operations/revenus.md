@@ -4,7 +4,7 @@ resume: Vue d'ensemble des revenus, une ligne par source
 statut: en-cours
 domaine: operations
 cree: 2026-10-22
-maj: 2026-10-22
+maj: 2026-10-23
 ---
 # Revenus
 
@@ -15,6 +15,6 @@ Chaque source reste dans le domaine qui la produit ; ce tableau n'en donne que l
 | Revenus YouTube (publicité) | contenu | `domaines/contenu/` | environ 200 $ |
 | Sponsoring | contenu | `domaines/contenu/` | À définir |
 | Affiliation | contenu | `domaines/contenu/` | À définir |
-| Abonnements Club SMART | communaute | `domaines/communaute/` | À définir |
+| Abonnements Club SMART | communaute | `domaines/communaute/revenus-club-smart.md` | 468,00 $ HT (septembre 2026) |
 | Accompagnements individuels et de groupe | consulting | `domaines/consulting/` | À définir |
 | Produits | produits | `domaines/produits/` | À définir |

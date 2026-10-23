@@ -13,10 +13,13 @@ Planificateur : à choisir (serveur avec cron, launchd sur Mac, Hermes, GitHub A
 | Stats YouTube | `stats-youtube` | — | lundi, 1 h | `0 1 * * 1` | passive : signale une vidéo qui décroche ou surperforme | à fixer | à construire |
 | Fiches YouTube | — | `python3 systeme/scripts/youtube.py fiches --maj && python3 systeme/scripts/index.py` | dimanche et jeudi, 1 h | `0 1 * * 0,4` | directe, passive : met à jour les fiches de `domaines/contenu/videos/` | sans IA | en place |
 | Audit | `audit` | — | le 1er du mois, 1 h | `0 1 1 * *` | passive | à fixer | à construire |
+| Jeton Skool | — | `bash ~/Dev/skool-toolkit/routines/skool.sh jeton` | chaque jour, 8 h 37 | `37 8 * * *` | directe, passive : renouvelle le jeton WAF de Skool s'il a expiré, prévient à J-7 de la fin de session | sans IA | en place |
+| Revenus Skool | — | `bash ~/Dev/skool-toolkit/routines/skool.sh revenus` | le 2 du mois, 1 h | `0 1 2 * *` | directe, passive : refait `domaines/communaute/revenus-club-smart.md` et la ligne Club SMART de `domaines/operations/revenus.md` | sans IA | en place |
 
 État : `à construire`, `en place` ou `à la demande`. La colonne Cron sert au planificateur et à l'interface (`interface/snapshots/routines.json`, générée).
 
-Les routines passives tournent à 1 h, pour que le point du jour de 2 h reprenne leurs résultats.
+Les routines passives tournent à 1 h, pour que le point du jour de 2 h reprenne leurs résultats. Exception : Jeton Skool, à 8 h 37 comme avant la migration ; le point du jour du lendemain la reprend.
+Une routine directe peut laisser une ligne dans `journal/log.md` : `- AAAA-MM-JJ · routine <routine> | <résumé>`. Le point du jour la reprend.
 Une routine de capture (la veille) dépose ce qu'elle trouve dans `inbox/`, avec `source:` dans l'en-tête ; le rangement de 2 h le classe ou l'archive, et le point du jour ne garde que ce qui compte.
 Au-delà de son plafond, une routine est allégée.
 

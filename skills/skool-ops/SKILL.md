@@ -29,7 +29,7 @@ Skool n'a pas d'API publique. La CLI et les scripts parlent à Skool avec le coo
 - N'ouvre jamais `~/.config/skool-pp-cli/config.toml` pour le lire ou l'afficher : il contient le cookie.
 - L'API rend les montants en cents : convertis en dollars avant tout calcul.
 - Un post n'invente ni témoignage, ni chiffre, ni résultat de membre. Ce qui manque s'écrit « à vérifier ».
-- Les scripts encore branchés sur l'ancien Vault ne se lancent pas tels quels (liste dans `references/api.md`).
+- Les fiches de relance et `state/` portent les e-mails des membres : ils restent dans le toolkit, jamais dans le V2 ni dans Git.
 
 ## Références
 - `references/api.md` : identifiants du Club SMART, libellés du fil, commandes, opérations d'écriture, scripts
@@ -37,8 +37,10 @@ Skool n'a pas d'API publique. La CLI et les scripts parlent à Skool avec le coo
 - `references/payants.md` : compter les abonnés et les payants
 - `references/voix.md` : comment Thomas écrit sur Skool
 - `references/types-de-posts.md` : ses types de posts, avec de vrais exemples et ce qui fait réagir
-- Toolkit (scripts et docs) : `~/IA-OS/Dev/skool-toolkit/`
+- `references/relances.md` : les textes et les règles des relances de départ
+- Toolkit (CLI, scripts, routines, docs) : `~/Dev/skool-toolkit/`, dépôt privé `thomrichard/skool-toolkit`
 - Retours en attente : `feedback.md`
 
 ## Journal des changements
 - 2026-10-23 · reprise depuis `~/IA-OS`, adaptée au V2 ; la voix Skool devient une référence tirée des 79 posts de Thomas ; skool-engage n'est pas reprise · un seul point d'entrée pour Skool
+- 2026-10-23 · toolkit déplacé dans `~/Dev/skool-toolkit` (dépôt privé), scripts rebranchés hors de l'ancien Vault, routines « Jeton Skool » et « Revenus Skool » · plus rien ne dépend de `~/IA-OS`

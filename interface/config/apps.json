@@ -129,7 +129,7 @@
       "kind": "cli",
       "access": "local",
       "status": "live",
-      "desc": "Club SMART : membres, classrooms, leçons et posts. CLI maison, connectée par le cookie de session ; le jeton WAF (24 h) est renouvelé chaque matin à 8 h 37 par la veille des départs (`~/IA-OS`)",
+      "desc": "Club SMART : membres, classrooms, leçons et posts. CLI maison (code et scripts : `~/Dev/skool-toolkit`, dépôt privé), connectée par le cookie de session ; le jeton WAF (quelques jours) est renouvelé chaque matin à 8 h 37 par la routine Jeton Skool",
       "command": "skool-pp-cli"
     }
   ]

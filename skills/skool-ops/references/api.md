@@ -39,7 +39,7 @@ skool-pp-cli which <besoin>                      # trouver la commande qui fait 
 
 ## Lecture avec les scripts
 
-Dans `~/IA-OS/Dev/skool-toolkit/scripts/`, avec `python3` (3.11, qui a `tomllib` et `certifi`).
+Dans `~/Dev/skool-toolkit/scripts/` (dépôt privé `thomrichard/skool-toolkit`), avec `python3` (3.11, qui a `tomllib` et `certifi`).
 
 | Besoin | Commande |
 |---|---|
@@ -52,6 +52,8 @@ Dans `~/IA-OS/Dev/skool-toolkit/scripts/`, avec `python3` (3.11, qui a `tomllib`
 | Chercher une leçon par son titre | `python3 skool_pin_post.py --search "Make"` |
 | Départs : qui contacter, et avant quand | `python3 skool_churn_radar.py --jours 14` |
 | Historique des messages avec un membre | `python3 skool_send_dm.py <user_id> --history` |
+| Revenus du Club, mois par mois | `python3 skool_revenus.py --stdout` (sans écrire) ; `--mois AAAA-MM` pour le détail d'un mois |
+| Jours restants avant la fin de la session Skool | `python3 skool_session.py` |
 
 ## Écriture : toujours après le oui de Thomas
 
@@ -93,14 +95,18 @@ Conversion du texte : `md_to_prosemirror.py` (Markdown vers Skool) et `prosemirr
    ```
 4. Après le oui : publie, puis épingle le post sur la leçon cible.
 
-## Scripts encore branchés sur l'ancien Vault
+## Les scripts qui écrivent
 
-Ils lisent ou écrivent dans `~/IA-OS` (`0 - Inbox/`, `2 - Contenu/Club Smart/`…). Ne les lance pas tels quels depuis le V2 ; il faut d'abord les rebrancher :
+| Script | Écrit | Quand |
+|---|---|---|
+| `skool_revenus.py` | `domaines/communaute/revenus-club-smart.md` et la ligne Club SMART de `domaines/operations/revenus.md` | le 2 du mois, routine « Revenus Skool » |
+| `skool_churn_daily.py` | un brouillon par départ dans `~/Dev/skool-toolkit/relances/departs/`, poussé dans Gmail | à la main ; arrêté depuis le 2026-10-23, en attendant l'écran des abonnés |
+| `skool_renouvellement_daily.py` | un brouillon par échéance dans `~/Dev/skool-toolkit/relances/echeances/` | à la main |
 
-`skool_revenus.py`, `skool_churn_daily.py`, `skool_renouvellement_daily.py`, `skool_fetch_lesson_content.py`, `skool_vault_sync.py`, `skool_regen_index.py`, `gmail_relance.py`, `gmail_auth.py`. `skool_churn_radar.py` contient aussi des chemins de l'ancien Vault : vérifie ce qu'il écrit avant de lui donner autre chose qu'une lecture.
+Les fiches de relance et l'état « déjà contacté » (`state/`) portent les e-mails des membres : ils restent dans le toolkit, hors de Git et hors du V2. Textes des relances : `relances.md`.
 
-`skool_churn_daily.py` tourne chaque matin à 8 h 37 (launchd `com.thomrichard.skool-churn-daily`) et renouvelle le jeton WAF au passage.
+Les trois scripts de synchro avec l'ancien Vault sont dans `~/Dev/skool-toolkit/archives/` : ne les lance pas.
 
 ## Documentation complète
 
-`~/IA-OS/Dev/skool-toolkit/docs/` : `API-REFERENCE.md`, `ARCHITECTURE.md`, `WORKFLOWS.md`, `AUTOMATION-MAKE-N8N.md`.
+`~/Dev/skool-toolkit/docs/` : `API-REFERENCE.md`, `ARCHITECTURE.md`, `WORKFLOWS.md`, `AUTOMATION-MAKE-N8N.md`.

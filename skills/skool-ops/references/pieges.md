@@ -39,9 +39,9 @@ Le fil, la liste des membres, le calendrier et le classement n'ont pas d'équiva
 ## La connexion (2026-08-19)
 
 - **Le cookie de session** (`auth_token`) dure environ un an.
-- **Le jeton WAF** dure environ 24 h. `refresh_waf.mjs` le renouvelle : un Chrome piloté par Playwright, avec un profil persistant, charge la page du groupe et réécrit `config.toml`. Il met à jour le cookie et l'en-tête `x-aws-waf-token`, qui doivent rester identiques. Sans argument, il ne fait rien si le jeton est encore valide ; `--force` le renouvelle quand même.
-- **Chaque matin à 8 h 37**, la veille des départs (`skool_churn_daily.py`, launchd) appelle ce script avant de travailler.
-- **Pour le lancer à la main** : `cd ~/IA-OS/Dev/skool-toolkit && node scripts/refresh_waf.mjs`.
+- **Le jeton WAF** dure quelques jours (en octobre 2026 : renouvelé le 12, le 17 et le 23). `refresh_waf.mjs` le renouvelle : un Chrome piloté par Playwright, avec un profil persistant, charge la page du groupe et réécrit `config.toml`. Il met à jour le cookie et l'en-tête `x-aws-waf-token`, qui doivent rester identiques. Sans argument, il ne fait rien si le jeton est encore valide ; `--force` le renouvelle quand même. Code de sortie : 0 jeton bon, 1 session à refaire, 2 Skool injoignable.
+- **Chaque matin à 8 h 37**, la routine « Jeton Skool » (`systeme/routines.md`) appelle ce script, puis `skool_session.py`, qui prévient à J-7 de la fin de la session.
+- **Pour le lancer à la main** : `cd ~/Dev/skool-toolkit && node scripts/refresh_waf.mjs`.
 - **Si le script échoue après la récolte** (HTTP 401), c'est la session qui a expiré, pas le jeton. Lance `node scripts/refresh_waf.mjs --login` : une fenêtre s'ouvre, Thomas se connecte, puis la ferme. Ça arrive quelques fois par an.
 - **Le profil Chrome** vit dans `~/.config/skool-pp-cli/chrome-profile`.
 
