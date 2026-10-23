@@ -24,7 +24,7 @@ Obligatoire pour : `tous`, `tous sauf <types>`, une liste de types, ou `aucun`.
 | type | Ce qu'est l'objet | type | tous |
 | resume | L'objet en une ligne, reprise dans l'index | texte | tous |
 | statut | Où il en est dans sa vie | statut | tous |
-| domaine | Le domaine où il vit ; sous `domaines/`, le même que son dossier | domaine | tous sauf concept, source, profil |
+| domaine | Le domaine où il vit ; sous `domaines/`, le même que son dossier | domaine | tous sauf concept, source, profil, cloture |
 | projet | Le ou les projets qu'il sert | projet | aucun |
 | cree | Sa date de naissance | date | tous |
 | maj | Sa dernière retouche | date | tous |
@@ -53,6 +53,7 @@ Un fichier `a-valider`, ou de type `livrable`, s'affiche dans `outbox/index.html
 | concept | Une connaissance durable | en-cours, clos | clos | `savoir/<slug>.md` |
 | source | Une source à lire ou lue : un article, un PDF, une vidéo | a-lire, lue | lue | `savoir/<slug>.md` |
 | entretien | La fiche d'un entretien `grill-me` | en-cours, clos | clos | `journal/entretiens/<slug>-<date>.md` |
+| cloture | Le bilan d'une session longue, écrit par la skill `close` | — | — | `journal/clotures/<slug>-<date>.md` |
 | profil | Le profil d'installation, déposé dans `inbox/` | — | — | — |
 
 ## Ce workspace

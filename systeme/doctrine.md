@@ -37,6 +37,7 @@ La place exacte d'un fichier se déduit de son en-tête : colonne « Chemin » d
 | Une question du rangement qui attend ta réponse | `outbox/questions.md` ; l'élément attend dans l'inbox |
 | Un profil d'installation | `inbox/`, puis `archives/inbox/` une fois installé |
 | Un entretien (`grill-me`) | `journal/entretiens/<sujet>-AA-MM.md` |
+| Le bilan d'une session longue (`close`) | `journal/clotures/<sujet>-AA-MM.md` |
 | Le code d'un tiers (l'interface de Jay) | `interface/`, avec sa licence ; il garde ses propres règles (pas d'en-tête, pas d'`_index.md`) |
 | Un élément de l'inbox déjà traité | `archives/inbox/AAAA-MM/` |
 | Un point du jour coché ou vieux de plus de 7 jours | `archives/outbox/` |
