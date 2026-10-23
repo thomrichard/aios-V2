@@ -3,6 +3,7 @@ type: video
 resume: Marre de collectionner les vues sans voir d'impact sur ton chiffre d'affaires ? Dans cette vidéo, je te dévoile le framework exact pour transformer ton…
 statut: publie
 domaine: contenu
+cree: 2026-01-19
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md]
 ---

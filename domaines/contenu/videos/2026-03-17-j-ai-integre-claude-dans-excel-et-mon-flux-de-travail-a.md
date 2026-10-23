@@ -3,6 +3,7 @@ type: video
 resume: Claude dans Excel, c'est un game-changer pour tous ceux qui manipulent des données au quotidien.
 statut: publie
 domaine: contenu
+cree: 2026-03-17
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md]
 ---

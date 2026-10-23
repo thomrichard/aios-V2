@@ -3,6 +3,7 @@ type: video
 resume: Le prompt parfait, c'est fini. Je te montre ce qui le remplace : cinq minutes de voix, et un site entier construit à partir de ça.
 statut: publie
 domaine: contenu
+cree: 2026-08-11
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-06-07-3-minutes-pour-comprendre-les-3-leviers-pour-de-meilleurs.md, 2026-07-18-l-aios-c-est-quoi-explication-en-3-minutes.md, 2026-08-25-j-ai-passe-les-cours-gratuits-de-claude-ce-qu-il-faut-savoir.md, 2026-09-15-7-techniques-de-prompting-pour-des-reponses-plus-precises.md]
 ---

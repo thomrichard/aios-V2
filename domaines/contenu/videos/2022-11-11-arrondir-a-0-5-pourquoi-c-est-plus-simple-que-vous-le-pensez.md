@@ -3,6 +3,7 @@ type: video
 resume: Vous souhaitez arrondir un chiffre à 0,5 ou à un entier? Vous avez surement remarqué que les tableurs ne proposent pas cette formule, que ce soit, excel,…
 statut: publie
 domaine: contenu
+cree: 2022-11-11
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md]
 ---

@@ -3,6 +3,7 @@ type: video
 resume: Dans cette vidéo, je te montre pas à pas comment j'utilise Make pour migrer des données présentes dans Airtable vers une base de données Xano.
 statut: publie
 domaine: contenu
+cree: 2024-05-03
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md]
 ---

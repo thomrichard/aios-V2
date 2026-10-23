@@ -2,34 +2,34 @@
   "_note": "Généré par systeme/scripts/index.py depuis les domaines de systeme/metadonnees.md et l'en-tête des projets et des process : ne pas modifier à la main.",
   "departments": [
     {
-      "key": "contenu",
-      "label": "Contenu",
+      "key": "operations",
+      "label": "Operations",
       "color": "#00bcd4",
-      "icon": "pen"
+      "icon": "coin"
     },
     {
-      "key": "communaute",
-      "label": "Communaute",
+      "key": "contenu",
+      "label": "Contenu",
       "color": "#e040fb",
       "icon": "people"
     },
     {
-      "key": "consulting",
-      "label": "Consulting",
+      "key": "communaute",
+      "label": "Communaute",
       "color": "#fdd835",
       "icon": "build"
     },
     {
-      "key": "produits",
-      "label": "Produits",
+      "key": "consulting",
+      "label": "Consulting",
       "color": "#43a047",
       "icon": "data"
     },
     {
-      "key": "operations",
-      "label": "Operations",
+      "key": "produits",
+      "label": "Produits",
       "color": "#f44336",
-      "icon": "coin"
+      "icon": "pulse"
     },
     {
       "key": "perso",
@@ -71,6 +71,14 @@
   "projectPrefixes": {},
   "pathRules": [
     {
+      "prefix": "domaines/operations/",
+      "dept": "operations"
+    },
+    {
+      "prefix": "routers/operations.md",
+      "dept": "operations"
+    },
+    {
       "prefix": "domaines/contenu/",
       "dept": "contenu"
     },
@@ -101,14 +109,6 @@
     {
       "prefix": "routers/produits.md",
       "dept": "produits"
-    },
-    {
-      "prefix": "domaines/operations/",
-      "dept": "operations"
-    },
-    {
-      "prefix": "routers/operations.md",
-      "dept": "operations"
     },
     {
       "prefix": "domaines/perso/",

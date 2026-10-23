@@ -3,6 +3,7 @@ type: video
 resume: Tu cherches à vendre tes images générées par intelligence artificielle sur des plateformes de Print on Demand? le process est parfois long... Alors dje te…
 statut: publie
 domaine: contenu
+cree: 2024-03-13
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md]
 ---

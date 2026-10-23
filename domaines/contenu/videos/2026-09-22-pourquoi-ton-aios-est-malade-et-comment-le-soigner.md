@@ -3,6 +3,7 @@ type: video
 resume: Ton AIOS oublie, se contredit ou travaille mal ? Voici comment identifier ce qui coince et le soigner sans tout reconstruire.
 statut: publie
 domaine: contenu
+cree: 2026-09-22
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-07-18-l-aios-c-est-quoi-explication-en-3-minutes.md, 2026-04-05-3minutes-pour-comprendre-les-claude-skills.md]
 ---

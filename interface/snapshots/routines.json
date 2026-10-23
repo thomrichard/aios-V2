@@ -13,7 +13,7 @@
       "name": "Rangement de nuit",
       "source": "planificateur",
       "desc": "chaque nuit, 2 h · skill rangement · active : le point du jour",
-      "status": "paused",
+      "status": "active",
       "cron": "0 2 * * *"
     },
     {

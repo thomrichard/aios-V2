@@ -6,7 +6,7 @@ SM4RT dans sa version publiée (le socle mis à disposition), puis les produits 
 - Inventaire : `domaines/produits/_index.md`
 
 ## Fichiers clés
-- `domaines/produits/2026-10-22-remontee-socle/` : passation et patch pour le socle en ligne (routines directes, fiches YouTube, graphe à jour)
+- `archives/domaines/produits/2026-10-22-remontee-socle/` : passation et patch pour le socle en ligne (routines directes, fiches YouTube, graphe à jour), archivés : déjà dans le socle
 
 ## Skills
 

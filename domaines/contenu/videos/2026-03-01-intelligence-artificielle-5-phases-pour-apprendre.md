@@ -3,6 +3,7 @@ type: video
 resume: Dans cette vidéo, je te partage les 5 phases pour passer de zéro à vraiment productif avec l'IA — en environ 3 mois, sans background technique.
 statut: publie
 domaine: contenu
+cree: 2026-03-01
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md, 2026-06-07-3-minutes-pour-comprendre-les-3-leviers-pour-de-meilleurs.md]
 ---

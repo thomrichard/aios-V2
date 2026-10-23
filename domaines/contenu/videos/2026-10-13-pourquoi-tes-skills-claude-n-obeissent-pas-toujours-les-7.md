@@ -3,6 +3,7 @@ type: video
 resume: Ta skill Claude saute une étape, ignore une consigne ou ne se lance même pas ? Les modèles ont changé, tes skills, non. Anthropic l'écrit dans son guide :…
 statut: publie
 domaine: contenu
+cree: 2026-10-13
 maj: 2026-10-22
 liens: []
 ---

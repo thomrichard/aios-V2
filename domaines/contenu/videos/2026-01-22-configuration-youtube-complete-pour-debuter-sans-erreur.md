@@ -3,6 +3,7 @@ type: video
 resume: Tu veux lancer ta chaîne YouTube mais tu ne sais pas comment bien la configurer?
 statut: publie
 domaine: contenu
+cree: 2026-01-22
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md, 2026-01-27-comment-creer-une-banniere-qui-convertit-tes-visiteurs-en.md]
 ---

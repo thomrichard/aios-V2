@@ -3,6 +3,7 @@ type: video
 resume: Dans cette vidéo, je te montre comment transformer automatiquement des citations en posts adaptés pour chacun de tes réseaux sociaux — LinkedIn, Instagram,…
 statut: publie
 domaine: contenu
+cree: 2026-02-17
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md, 2026-02-07-le-systeme-youtube-ia-qui-cree-du-contenu-a-la-chaine.md]
 ---

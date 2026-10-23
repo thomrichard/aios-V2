@@ -3,6 +3,7 @@ type: video
 resume: Depuis le 2 août, tout ce que Claude écrit porte une marque invisible. J'ai lu la loi que tout le monde commente sans l'ouvrir.
 statut: publie
 domaine: contenu
+cree: 2026-09-03
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-08-25-j-ai-passe-les-cours-gratuits-de-claude-ce-qu-il-faut-savoir.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md]
 ---

@@ -3,6 +3,7 @@ type: video
 resume: Un agent IA, ce n'est PAS une automatisation. Et confondre les deux peut te coûter cher.
 statut: publie
 domaine: contenu
+cree: 2026-06-11
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md, 2026-06-07-3-minutes-pour-comprendre-les-3-leviers-pour-de-meilleurs.md, 2026-07-18-l-aios-c-est-quoi-explication-en-3-minutes.md]
 ---

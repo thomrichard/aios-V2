@@ -3,6 +3,7 @@ type: video
 resume: Bienvenue sur Prompt insight, une aventure créative où nous explorons les mystères de l'intelligence artificielle pour créer des images étonnantes! Dans…
 statut: publie
 domaine: contenu
+cree: 2024-02-14
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md]
 ---

@@ -3,6 +3,7 @@ type: video
 resume: J'ai débloqué la monétisation YouTube en 6 mois : les 4 000 heures de visionnage franchies. Voici comment, chiffres réels à l'appui.
 statut: publie
 domaine: contenu
+cree: 2026-07-28
 maj: 2026-10-22
 liens: [2026-01-06-youtube-skool-ia-mon-modele-pour-gagner-ma-liberte.md, 2026-01-13-des-vues-aux-revenus-3-systemes-pour-monetiser-correctement.md]
 ---

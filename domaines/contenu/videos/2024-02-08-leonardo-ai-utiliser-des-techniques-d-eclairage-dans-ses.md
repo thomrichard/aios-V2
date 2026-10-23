@@ -3,6 +3,7 @@ type: video
 resume: Découvrez l'alliance parfaite entre l'expertise traditionnelle de l'éclairage en photographie et cinéma et les possibilités révolutionnaires de…
 statut: publie
 domaine: contenu
+cree: 2024-02-08
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md]
 ---

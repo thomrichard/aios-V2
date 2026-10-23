@@ -3,6 +3,7 @@ type: video
 resume: Ta bannière YouTube est ton meilleur outil de conversion. Elle doit répondre à 3 questions : Qui es-tu ? Qu'est-ce qu'on trouve sur ta chaîne ? Pourquoi…
 statut: publie
 domaine: contenu
+cree: 2026-01-27
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md, 2026-01-22-configuration-youtube-complete-pour-debuter-sans-erreur.md]
 ---

@@ -3,6 +3,7 @@ type: video
 resume: Découvrez comment éditer en pdf vos factures, devis et tout autre document comprenant un tableau avec un nombre de lignes changeant.
 statut: publie
 domaine: contenu
+cree: 2022-10-14
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md, 2022-05-06-creer-un-pdf-en-1-clic-depuis-airtable.md]
 ---

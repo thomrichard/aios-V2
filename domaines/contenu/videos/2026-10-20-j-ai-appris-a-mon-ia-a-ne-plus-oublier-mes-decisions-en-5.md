@@ -3,6 +3,7 @@ type: video
 resume: on IA te repropose une option que tu avais déjà écartée ? Elle ne connaît pas tes décisions. Pour qu'elle t'aide vraiment, elle doit savoir faire trois…
 statut: publie
 domaine: contenu
+cree: 2026-10-20
 maj: 2026-10-22
 liens: []
 ---

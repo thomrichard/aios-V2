@@ -3,6 +3,7 @@ type: video
 resume: Make a changé ses règles de facturation, mais ce qu’ils présentent comme un “nouveau pricing” cache en réalité une fonctionnalité mal expliquée.
 statut: publie
 domaine: contenu
+cree: 2025-09-01
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md]
 ---

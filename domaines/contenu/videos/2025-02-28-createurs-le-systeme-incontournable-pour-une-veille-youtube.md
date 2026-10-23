@@ -3,6 +3,7 @@ type: video
 resume: Découvrez comment optimiser votre veille sur YouTube avec un système automatisé révolutionnaire ! Dans cette vidéo, nous vous présentons une solution…
 statut: publie
 domaine: contenu
+cree: 2025-02-28
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md]
 ---

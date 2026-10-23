@@ -30,8 +30,7 @@
     "domaines/contenu/videos",
     "domaines/operations",
     "domaines/perso",
-    "domaines/produits",
-    "domaines/produits/2026-10-22-remontee-socle"
+    "domaines/produits"
   ],
   "routing": {},
   "maxFiles": 500000

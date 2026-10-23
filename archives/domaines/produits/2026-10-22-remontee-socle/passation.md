@@ -1,10 +1,11 @@
 ---
 type: livrable
 resume: Passation pour le socle en ligne : routines directes, fiches YouTube et graphe toujours à jour, avec un patch prêt à appliquer
-statut: a-valider
+statut: clos
 domaine: produits
 projet: socle-aios-membres
-maj: 2026-10-22
+cree: 2026-10-23
+maj: 2026-10-23
 liens: [changements.patch]
 ---
 # Remontée au socle : routines directes, fiches YouTube, graphe à jour

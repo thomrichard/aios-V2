@@ -8,7 +8,7 @@ Planificateur : à choisir (serveur avec cron, launchd sur Mac, Hermes, GitHub A
 
 | Routine | Skill | Commande | Quand | Cron | Type | Plafond par semaine | État |
 |---|---|---|---|---|---|---|---|
-| Rangement de nuit | `rangement` | — | chaque nuit, 2 h | `0 2 * * *` | active : le point du jour | à fixer | à construire |
+| Rangement de nuit | `rangement` | — | chaque nuit, 2 h | `0 2 * * *` | active : le point du jour | à fixer | en place |
 | Veille | `veille` | — | lundi, 1 h | `0 1 * * 1` | passive : dépose ses captures dans `inbox/` | à fixer | à construire |
 | Stats YouTube | `stats-youtube` | — | lundi, 1 h | `0 1 * * 1` | passive : signale une vidéo qui décroche ou surperforme | à fixer | à construire |
 | Fiches YouTube | — | `python3 systeme/scripts/youtube.py fiches --maj && python3 systeme/scripts/index.py` | dimanche et jeudi, 1 h | `0 1 * * 0,4` | directe, passive : met à jour les fiches de `domaines/contenu/videos/` | sans IA | en place |

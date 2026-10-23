@@ -3,6 +3,7 @@ type: video
 resume: Donne moi 3 minutes, et je t'explique ce qu'est le MCP, à quoi ca sert, et comment l'installer sur Claude
 statut: publie
 domaine: contenu
+cree: 2026-04-01
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md]
 ---

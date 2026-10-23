@@ -3,6 +3,7 @@ type: video
 resume: La valeur perçue est la clé. Voici l'équation d'Alex Hormozi pour augmenter vos prix sans changer votre produit
 statut: publie
 domaine: contenu
+cree: 2026-01-30
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md]
 ---

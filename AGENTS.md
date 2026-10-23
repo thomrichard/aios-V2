@@ -36,11 +36,11 @@ Filtre : chaque proposition doit rapprocher d'une de ces cibles. Sinon, dis-le e
 
 | Domaine | Ce qu'il couvre | Routeur |
 |---|---|---|
+| operations | Pilotage (OKR, revue hebdo, revenus), admin et finances, et l'AIOS comme outil de travail (connecteurs, routines, skills) | `routers/operations.md` |
 | contenu | La chaîne YouTube, la newsletter, les réseaux sociaux et les idées de vidéos. Aussi ce que l'audience rapporte : revenus YouTube, sponsoring, affiliation, avec la grille tarifaire et le kit média. | `routers/contenu.md` |
 | communaute | Le Club SMART et la communauté Skool, y compris les abonnements. | `routers/communaute.md` |
 | consulting | Les accompagnements individuels et de groupe, avec la transcription de chaque séance, les rapports et les supports. | `routers/consulting.md` |
 | produits | SM4RT dans sa version publiée (le socle mis à disposition), puis les produits suivants. | `routers/produits.md` |
-| operations | Pilotage (OKR, revue hebdo, revenus), admin et finances, et l'AIOS comme outil de travail (connecteurs, routines, skills) | `routers/operations.md` |
 | perso | Ce qui ne relève pas du travail : santé, famille, finances personnelles et papiers perso. Les finances pro restent dans operations. | `routers/perso.md` |
 
 <!-- Fin de la carte -->
@@ -51,7 +51,8 @@ Les domaines se règlent dans `systeme/metadonnees.md`, jamais ici : `systeme/sc
 
 <!-- Début des projets actifs : générés par systeme/scripts/index.py depuis l'en-tête des fichiers de projets/. -->
 
-Aucun pour l'instant.
+- [socle-aios-membres](projets/socle-aios-membres.md) · produits · À définir
+- [video-brevo](projets/video-brevo.md) · contenu · À définir
 
 <!-- Fin des projets actifs -->
 

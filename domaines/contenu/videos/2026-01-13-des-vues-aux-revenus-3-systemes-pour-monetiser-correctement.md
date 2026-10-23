@@ -3,6 +3,7 @@ type: video
 resume: Dans cette vidéo, j'étudie trois modèles pour gagner de l'argent sur YouTube en 2026, allant de la rémunération classique des vues à la construction d'un…
 statut: publie
 domaine: contenu
+cree: 2026-01-13
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md, 2026-07-28-monetisation-youtube-comment-debloquer-les-4-000-heures-de.md]
 ---

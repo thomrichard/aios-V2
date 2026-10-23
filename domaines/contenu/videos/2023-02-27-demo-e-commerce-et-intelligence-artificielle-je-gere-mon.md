@@ -3,6 +3,7 @@ type: video
 resume: Certains utilisent l’intelligence artificielle pour écrire leurs posts sur les réseaux sociaux.
 statut: publie
 domaine: contenu
+cree: 2023-02-27
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md]
 ---

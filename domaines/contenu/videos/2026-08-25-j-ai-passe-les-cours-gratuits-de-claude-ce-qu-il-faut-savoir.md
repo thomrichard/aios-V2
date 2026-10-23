@@ -3,6 +3,7 @@ type: video
 resume: J'ai suivi les cours gratuits officiels de Claude pendant une vingtaine d'heures. Voici lesquels valent ton temps, et lesquels tu peux sauter.
 statut: publie
 domaine: contenu
+cree: 2026-08-25
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md, 2026-08-11-tu-n-as-plus-besoin-de-prompter-voici-la-methode-qui.md, 2026-07-18-l-aios-c-est-quoi-explication-en-3-minutes.md, 2026-09-03-watermark-claude-ce-que-ca-change-vraiment-pour-toi.md]
 ---

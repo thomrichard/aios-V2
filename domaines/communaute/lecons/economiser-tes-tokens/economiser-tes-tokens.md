@@ -3,6 +3,7 @@ type: support
 resume: Module de 22 leçons pour le Club SMART, économiser ses tokens avec Claude, d'après la vidéo ARMS de Jay E
 statut: a-valider
 domaine: communaute
+cree: 2026-10-23
 maj: 2026-10-23
 liens: [https://www.youtube.com/watch?v=s_1GPN-NXA0]
 ---

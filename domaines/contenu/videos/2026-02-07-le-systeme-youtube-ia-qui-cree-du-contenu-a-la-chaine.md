@@ -3,6 +3,7 @@ type: video
 resume: On construit le système Youtube + Skool + IA qui t'amènerea à la liberté financière
 statut: publie
 domaine: contenu
+cree: 2026-02-07
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md, 2026-01-15-tutoriel-notebook-lm-en-francais-decouvre-le-meilleur-outil.md, 2026-02-17-airtable-make-claude-le-workflow-secret-des-createurs.md]
 ---

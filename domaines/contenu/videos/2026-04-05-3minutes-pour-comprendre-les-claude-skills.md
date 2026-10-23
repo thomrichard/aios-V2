@@ -3,6 +3,7 @@ type: video
 resume: Dans cette vidéo, je t'explique rapidement ce qu'apportent les Skills par rapport à un prompt classique. je te montre comment l'intelligence artificielle,…
 statut: publie
 domaine: contenu
+cree: 2026-04-05
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md, 2026-04-14-3-minutes-pour-comprendre-creer-un-skill-claude.md, 2026-04-27-3-minutes-pour-comprendre-les-projets-dans-claude-ai.md, 2026-09-22-pourquoi-ton-aios-est-malade-et-comment-le-soigner.md]
 ---

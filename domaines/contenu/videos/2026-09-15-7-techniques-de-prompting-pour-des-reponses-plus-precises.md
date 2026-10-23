@@ -3,6 +3,7 @@ type: video
 resume: Obtiens des réponses plus précises avec l’IA : je te montre 7 techniques de prompting et quand utiliser chacune.
 statut: publie
 domaine: contenu
+cree: 2026-09-15
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-08-11-tu-n-as-plus-besoin-de-prompter-voici-la-methode-qui.md, 2026-07-18-l-aios-c-est-quoi-explication-en-3-minutes.md]
 ---

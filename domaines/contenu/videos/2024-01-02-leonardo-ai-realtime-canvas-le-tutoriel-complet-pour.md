@@ -3,6 +3,7 @@ type: video
 resume: Leonardo AI vous propose une nouvelle fonctionnalité : dessiner pour donner des instructions à la génération d'image par intelligence artificielle.
 statut: publie
 domaine: contenu
+cree: 2024-01-02
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md]
 ---

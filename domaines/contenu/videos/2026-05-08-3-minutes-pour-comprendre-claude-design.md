@@ -3,6 +3,7 @@ type: video
 resume: 3 minutes pour comprendre Claude Design — l'outil qui transforme Claude en équipe design complète, alignée avec ta marque, sans jamais redonner ta charte.
 statut: publie
 domaine: contenu
+cree: 2026-05-08
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md, 2026-10-06-l-app-claude-a-change-10-nouveautes-a-connaitre.md]
 ---

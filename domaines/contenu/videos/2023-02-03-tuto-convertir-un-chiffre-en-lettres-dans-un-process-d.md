@@ -3,6 +3,7 @@ type: video
 resume: Dans cette vidéo, je vous montre comment transformer un nombre écrit en chiffres en un nombre écrit en lettres. Lorsqu'on édite une facture par exemple, il…
 statut: publie
 domaine: contenu
+cree: 2023-02-03
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md]
 ---

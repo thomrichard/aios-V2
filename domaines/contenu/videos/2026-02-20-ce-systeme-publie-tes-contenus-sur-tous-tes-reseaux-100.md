@@ -3,6 +3,7 @@ type: video
 resume: Tu veux rester à jour sur l'IA sans te noyer dans la tech ? Bienvenue.
 statut: publie
 domaine: contenu
+cree: 2026-02-20
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md]
 ---

@@ -3,6 +3,7 @@ type: video
 resume: L'app Claude a changé presque en silence. J'ai testé ses 10 nouveautés sur mon vrai travail : elle crée maintenant des présentations, des documents et des…
 statut: publie
 domaine: contenu
+cree: 2026-10-06
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md, 2026-05-08-3-minutes-pour-comprendre-claude-design.md, 2026-07-18-l-aios-c-est-quoi-explication-en-3-minutes.md]
 ---

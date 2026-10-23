@@ -3,6 +3,7 @@ type: video
 resume: ChatGPT, Claude et Gemini ne sont que des applications. L'AIOS, c'est le système en dessous — et en 3 minutes tu vas comprendre ce qu'il change.
 statut: publie
 domaine: contenu
+cree: 2026-07-18
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md, 2026-06-11-3-minutes-pour-comprendre-les-agents-ia.md, 2026-06-07-3-minutes-pour-comprendre-les-3-leviers-pour-de-meilleurs.md, 2026-08-11-tu-n-as-plus-besoin-de-prompter-voici-la-methode-qui.md, 2026-08-25-j-ai-passe-les-cours-gratuits-de-claude-ce-qu-il-faut-savoir.md, 2026-09-15-7-techniques-de-prompting-pour-des-reponses-plus-precises.md, 2026-09-22-pourquoi-ton-aios-est-malade-et-comment-le-soigner.md, 2026-10-06-l-app-claude-a-change-10-nouveautes-a-connaitre.md]
 ---

@@ -3,6 +3,7 @@ type: video
 resume: Mon objectif pour 2026 : devenir YouTubeur à mi-temps et construire un revenu indépendant sans quitter mon CDI.
 statut: publie
 domaine: contenu
+cree: 2026-01-06
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md, 2026-07-28-monetisation-youtube-comment-debloquer-les-4-000-heures-de.md]
 ---

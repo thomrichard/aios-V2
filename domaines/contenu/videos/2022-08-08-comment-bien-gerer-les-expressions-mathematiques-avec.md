@@ -3,6 +3,7 @@ type: video
 resume: Nativement, Bubble ne gère pas la priorité des multiplications et des divisions sur les additions et soustractions. Il enchaine le calcul en prenant signe…
 statut: publie
 domaine: contenu
+cree: 2022-08-08
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md]
 ---

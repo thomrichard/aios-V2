@@ -3,6 +3,7 @@ type: video
 resume: Je vous propose un cas fictif, mais proche de l'un de mes clients, dans lequel une agence immobilière souhaite pré-remplir un rapport de gestion locative…
 statut: publie
 domaine: contenu
+cree: 2022-04-29
 maj: 2026-10-22
 liens: [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios.md, 2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a.md, 2022-05-13-j-automatise-l-envoi-d-emails-directement-depuis-airtable.md]
 ---
