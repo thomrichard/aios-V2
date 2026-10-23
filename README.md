@@ -71,6 +71,7 @@ Le reste (skills deck, agenda, e-mails, stats) se branche avec les guides de `in
 | `systeme/scripts/ranger.py <fichier>` | Range un fichier à la place que lui donne son en-tête (colonne « Chemin » de `systeme/metadonnees.md`) ; envoie vidéos et sons dans le dossier des fichiers lourds |
 | `systeme/scripts/lancer.py <skill>` | Lance une skill sans discussion, avec l'agent de `.env` et le modèle de `systeme/modeles.md` |
 | `systeme/scripts/liens.sh` | Crée `.claude/skills` et `.agents/skills` |
+| `systeme/scripts/kit.py` | Lit un compte Kit (newsletter) par l'API v4, en lecture seule : `tester`, `point` (abonnés, croissance, derniers envois), `lire <chemin>` ; clé `KIT_API_KEY` dans `.env` |
 | `systeme/scripts/interface.py installer` | Garde l'interface allumée en permanence (macOS, Linux) ; `etat`, `retirer` |
 
 Les scripts n'utilisent que Python 3, sans dépendance.
