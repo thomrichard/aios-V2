@@ -375,9 +375,11 @@ def apps_interface():
         genre = genres.get(r.get("Méthode", "").strip("`").lower(), "app")
         app = {"id": "app:" + re.sub(r"[^a-z0-9]+", "-", outil.lower()).strip("-"), "label": outil, "kind": genre,
                "access": "local", "status": "live", "desc": r.get("Pourquoi", "")}
-        commande = r.get("Commande", "").strip("`")
-        if commande and commande not in ("—", "-"):
-            app["mcp" if genre == "mcp" else "command"] = commande
+        # Plusieurs noms séparés par des virgules : un même service branché deux fois (MCP local et connecteur du compte)
+        noms = [n.strip().strip("`") for n in r.get("Commande", "").split(",")]
+        noms = [n for n in noms if n and n not in ("—", "-")]
+        if noms:
+            app["mcp" if genre == "mcp" else "command"] = noms if genre == "mcp" and len(noms) > 1 else noms[0]
         apps.append(app)
     contenu = {"_note": "Généré par systeme/scripts/index.py depuis systeme/connexions.md : ne pas modifier à la main.",
                "apps": apps}
