@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Génère les _index.md depuis les en-têtes des fichiers, la page outbox/index.html (sorties, process, skills),
-et les réglages de l'interface (départements, routines, applications) depuis AGENTS.md,
-systeme/routines.md et systeme/connexions.md.
+la carte des domaines et les projets actifs d'AGENTS.md, et les réglages de l'interface (départements, routines,
+applications) depuis systeme/metadonnees.md, systeme/routines.md et systeme/connexions.md.
 
 Usage : python3 systeme/scripts/index.py [--check]
   --check : n'écrit rien, liste les index qui ne sont plus à jour (code 1 s'il y en a).
@@ -11,11 +11,20 @@ import json
 import os
 import re
 import sys
+import unicodedata
 
 RACINE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DOSSIERS = ["projets", "processus", "domaines", "savoir", "bibliotheques"]
 IGNORES = {"_index.md", "_images.md"}
 AVERTISSEMENT = "<!-- Généré par systeme/scripts/index.py : ne pas modifier à la main. -->"
+DEBUT_CARTE = ("<!-- Début de la carte : générée par systeme/scripts/index.py depuis systeme/metadonnees.md. "
+               "Change les domaines là-bas. -->")
+FIN_CARTE = "<!-- Fin de la carte -->"
+DEBUT_PROJETS = ("<!-- Début des projets actifs : générés par systeme/scripts/index.py depuis l'en-tête "
+                 "des fichiers de projets/. -->")
+FIN_PROJETS = "<!-- Fin des projets actifs -->"
+META = os.path.join(RACINE, "systeme", "metadonnees.md")
+LOURDS = (".mp4", ".mov", ".m4v", ".mkv", ".avi", ".webm", ".mp3", ".wav", ".m4a", ".aac", ".flac", ".ogg", ".opus")
 COULEURS = ["#00bcd4", "#e040fb", "#fdd835", "#43a047", "#f44336", "#ec407a", "#26a69a", "#8d6e63"]
 ICONES = ["pen", "people", "build", "data", "pulse", "book", "visual", "clock", "api"]
 COUCHES = [
@@ -80,6 +89,116 @@ def tableau(chemin, premiere_colonne):
     return rangs
 
 
+def tableaux(chemin, premiere_colonne):
+    """Tous les tableaux Markdown dont la première colonne porte ce titre, mis bout à bout : une liste de dicts."""
+    try:
+        with open(chemin, encoding="utf-8") as f:
+            lignes = f.read().splitlines()
+    except (OSError, UnicodeDecodeError):
+        return []
+    entetes, rangs = None, []
+    for ligne in lignes:
+        if not ligne.startswith("|"):
+            entetes = None
+            continue
+        cases = [c.strip() for c in ligne.strip().strip("|").split("|")]
+        if entetes is None:
+            entetes = cases if cases[0] == premiere_colonne else []
+        elif entetes and not set(cases[0]) <= set("-: "):
+            rangs.append(dict(zip(entetes, cases)))
+    return rangs
+
+
+def mots(texte):
+    """« `a`, `b` » → ["a", "b"] ; « — » → []."""
+    return [m.strip().strip("`") for m in texte.split(",") if m.strip().strip("`") not in ("", "—", "-")]
+
+
+def domaines():
+    """Les domaines réglés dans systeme/metadonnees.md, ceux du socle puis ceux du workspace : (nom, ce qu'il couvre)."""
+    trouves = {}
+    for r in tableaux(META, "Domaine"):
+        nom = r.get("Domaine", "").strip("`")
+        if nom and nom not in trouves:
+            trouves[nom] = r.get("Ce qu'il couvre", "")
+    return list(trouves.items())
+
+
+def types_regles():
+    """Les types réglés dans systeme/metadonnees.md : {type: (statuts dans l'ordre, statuts de fin)}."""
+    trouves = {}
+    for r in tableaux(META, "Type"):
+        nom = r.get("Type", "").strip("`")
+        if nom and nom not in trouves:
+            trouves[nom] = (mots(r.get("Statuts", "")), mots(r.get("Fin", "")))
+    return trouves
+
+
+def chemins():
+    """Le chemin réglé de chaque type dans systeme/metadonnees.md : {type: modèle}, sans les types « — »."""
+    trouves = {}
+    for r in tableaux(META, "Type"):
+        nom, modele = r.get("Type", "").strip("`"), r.get("Chemin", "").strip("`")
+        if nom and nom not in trouves and modele not in ("", "—", "-"):
+            trouves[nom] = modele
+    return trouves
+
+
+def slug_de(nom):
+    """Le slug d'un nom de fichier ou de dossier : sans extension ni date en tête, minuscules, sans accents, tirets."""
+    base = re.sub(r"^\d{4}-\d{2}-\d{2}-", "", re.sub(r"\.md$", "", nom))
+    base = unicodedata.normalize("NFKD", base).encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9]+", "-", base.lower()).strip("-")
+
+
+def chemin_attendu(modele, e, slug):
+    """Le chemin d'un fichier d'après le modèle de son type et son en-tête ; None s'il manque une valeur."""
+    for cle, valeur in (("<domaine>", e.get("domaine", "")), ("<date>", e.get("cree", "")), ("<slug>", slug)):
+        if cle in modele:
+            if not valeur:
+                return None
+            modele = modele.replace(cle, valeur)
+    return None if re.search(r"<[^>]+>", modele) else modele
+
+
+def remplacer_bloc(texte, debut, fin, lignes):
+    """Le texte, avec ce qui est entre les balises debut et fin remplacé par ces lignes ; inchangé s'il en manque une."""
+    i, j = texte.find(debut), texte.find(fin)
+    if i < 0 or j < i:
+        return texte
+    return texte[:i] + "\n".join([debut, ""] + lignes) + "\n\n" + texte[j:]
+
+
+def projets_actifs():
+    """Une ligne par projet vivant (statut hors « Fin ») : lien, domaine, statut s'il n'est pas celui de départ,
+    prochaine étape."""
+    statuts, fin = types_regles().get("projet", ([], []))
+    depart = os.path.join(RACINE, "projets")
+    lignes = []
+    for nom in sorted(os.listdir(depart)) if os.path.isdir(depart) else []:
+        if not nom.endswith(".md") or nom in IGNORES:
+            continue
+        e = lire_entete(os.path.join(depart, nom))
+        if e.get("statut") in fin:
+            continue
+        infos = [e.get("domaine", "")]
+        if statuts and e.get("statut") != statuts[0]:
+            infos.append(e.get("statut", "") or "sans statut")
+        infos.append(e.get("prochaine_etape", ""))
+        lignes.append(f"- [{nom[:-3]}](projets/{nom}) · " + " · ".join(i for i in infos if i))
+    return lignes or ["Aucun pour l'instant."]
+
+
+def agents():
+    """AGENTS.md, avec la carte des domaines et les projets actifs régénérés entre leurs balises."""
+    with open(os.path.join(RACINE, "AGENTS.md"), encoding="utf-8") as f:
+        texte = f.read()
+    carte = ["| Domaine | Ce qu'il couvre | Routeur |", "|---|---|---|"]
+    carte += [f"| {nom} | {cellule(couvre)} | `routers/{nom}.md` |" for nom, couvre in domaines()]
+    texte = remplacer_bloc(texte, DEBUT_CARTE, FIN_CARTE, carte)
+    return remplacer_bloc(texte, DEBUT_PROJETS, FIN_PROJETS, projets_actifs())
+
+
 def etapes(chemin):
     """Le tableau des étapes d'un process : (étape, skills, ce qu'on décide, qui décide) par ligne."""
     trouvees = []
@@ -142,7 +261,8 @@ def index_dossier(dossier):
     elif relatif == "projets":
         lignes += ["| Projet | Domaine | Statut | Échéance | Prochaine étape |", "|---|---|---|---|---|"]
         projets = [(f, lire_entete(os.path.join(dossier, f))) for f in fichiers]
-        projets.sort(key=lambda p: (p[1].get("statut") == "clos", p[0]))
+        fin = types_regles().get("projet", ([], []))[1]
+        projets.sort(key=lambda p: (p[1].get("statut") in fin, p[0]))
         for nom, e in projets:
             lignes.append(f"| [{nom[:-3]}]({nom}) | {cellule(e.get('domaine'))} | {cellule(e.get('statut'))} "
                           f"| {cellule(e.get('echeance'))} | {cellule(e.get('prochaine_etape'))} |")
@@ -320,8 +440,8 @@ document.getElementById('q').addEventListener('input', function () {{
 
 
 def departements_interface():
-    """config/departments.json de l'interface : un département par domaine de la carte d'AGENTS.md."""
-    noms = [r["Domaine"].strip("`") for r in tableau(os.path.join(RACINE, "AGENTS.md"), "Domaine") if r.get("Domaine")]
+    """config/departments.json de l'interface : un département par domaine de systeme/metadonnees.md."""
+    noms = [nom for nom, _ in domaines()]
     departements, regles = [], []
     for i, nom in enumerate(noms):
         icone = "coin" if nom == "operations" else ICONES[i % len(ICONES)]
@@ -335,7 +455,7 @@ def departements_interface():
                 if domaine in noms:
                     regles.append({"prefix": f"{dossier}/{f}", "dept": domaine})
     contenu = {
-        "_note": "Généré par systeme/scripts/index.py depuis la carte des domaines d'AGENTS.md et l'en-tête "
+        "_note": "Généré par systeme/scripts/index.py depuis les domaines de systeme/metadonnees.md et l'en-tête "
                  "des projets et des process : ne pas modifier à la main.",
         "departments": departements, "layers": COUCHES, "projectPrefixes": {}, "pathRules": regles,
         "memoryKeywords": [], "default": "operations" if "operations" in noms or not noms else noms[0],
@@ -409,6 +529,8 @@ def cibles():
         yield os.path.join(RACINE, "skills", "_index.md"), index_skills()
     if os.path.isdir(os.path.join(RACINE, "outbox")):
         yield os.path.join(RACINE, "outbox", "index.html"), page_outbox()
+    if os.path.exists(os.path.join(RACINE, "AGENTS.md")):
+        yield os.path.join(RACINE, "AGENTS.md"), agents()
     if os.path.isdir(os.path.join(RACINE, "interface", "config")):
         yield os.path.join(RACINE, "interface", "config", "departments.json"), departements_interface()
         yield os.path.join(RACINE, "interface", "snapshots", "routines.json"), routines_interface()

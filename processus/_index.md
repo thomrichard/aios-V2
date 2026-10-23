@@ -5,4 +5,4 @@
 | Process | Domaine | Skills | Déclencheur | Statut |
 |---|---|---|---|---|
 | [installation](installation.md) | operations | grill-me, installation | à la demande, une fois après le clonage | actif |
-| [rangement](rangement.md) | operations | rangement | routine, chaque nuit à 2 h | a-construire |
+| [rangement](rangement.md) | operations | rangement, fiche, classer | routine, chaque nuit à 2 h ; ou à la demande | actif |

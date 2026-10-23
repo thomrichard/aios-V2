@@ -1,6 +1,7 @@
 ---
 type: profil
 resume: Profil pour installer l'AIOS
+cree: AAAA-MM-JJ
 maj: AAAA-MM-JJ
 ---
 # Profil de <prénom nom>
@@ -30,8 +31,8 @@ Rempli avec `grill-me` et la liste `skills/installation/references/questions.md`
 
 ### Q7 · Mes domaines d'activité
 
-| Domaine | Ce qu'il couvre |
-|---|---|
+| Domaine | Ce qu'il couvre | Ce que j'y produis |
+|---|---|---|
 
 ### Q8 · Mes revenus
 
@@ -58,6 +59,10 @@ Rempli avec `grill-me` et la liste `skills/installation/references/questions.md`
 ## Mémoire
 
 ### Q13 · Ce qu'il doit toujours savoir sur moi, ou ne jamais faire
+
+## Fichiers lourds
+
+### Q14 · Le dossier de mes vidéos et de mes sons, hors du dépôt
 
 ## En plus (facultatif) · Décisions déjà prises
 

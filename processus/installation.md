@@ -4,6 +4,7 @@ resume: Installer et personnaliser l'AIOS à partir d'un profil
 domaine: operations
 declencheur: à la demande, une fois après le clonage
 statut: actif
+cree: 2026-10-22
 maj: 2026-10-22
 ---
 # Installation

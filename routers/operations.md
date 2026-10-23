@@ -11,9 +11,12 @@ Pilotage (OKR, revue hebdo, revenus), admin et finances, et l'AIOS comme outil d
 ## Fichiers clés
 
 ## Skills
+- `classer` : donner ses métadonnées à un élément, qui se range tout seul (`systeme/scripts/ranger.py`)
+- `fiche` : écrire une fiche à partir d'un texte brut, d'un lien ou d'un fichier sans en-tête
+- `rangement` : la routine de nuit (inbox, outbox, point du jour)
 
 ## Process
 - Installation : `processus/installation.md` · à la demande, après le clonage
-- Rangement de nuit : `processus/rangement.md` · chaque nuit à 2 h · à construire
+- Rangement de nuit : `processus/rangement.md` · chaque nuit à 2 h, ou à la demande
 
 ## Projets actifs

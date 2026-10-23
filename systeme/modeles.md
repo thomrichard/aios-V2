@@ -10,6 +10,8 @@ Une skill absente de ce tableau prend le niveau `moyen`.
 | Skill | Niveau | Effort |
 |---|---|---|
 | rangement | moyen | moyen |
+| classer | moyen | moyen |
+| fiche | moyen | moyen |
 | note | petit | bas |
 | calibrate | moyen | moyen |
 | audit | grand | haut |
