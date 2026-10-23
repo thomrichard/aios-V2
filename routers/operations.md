@@ -23,6 +23,7 @@ Pilotage (OKR, revue hebdo, revenus), admin et finances, et l'AIOS comme outil d
 - `search-connectors` : chercher comment brancher une application, dans l'ordre de `systeme/connexions.md`
 - `burst` : N variantes d'un livrable, pour choisir la plus proche de la cible
 - `humanizer` : retirer d'un texte les tics d'écriture qui sentent l'IA
+- `surprise-me` : pour une création visuelle trop banale, une autre direction, trois techniques avancées, et une boucle capture, critique, amélioration
 
 ## Process
 - Installation : `processus/installation.md` · à la demande, après le clonage
