@@ -135,7 +135,7 @@ La vraie routine de nuit a tourné sur un faux AIOS : deux domaines, six éléme
 
 ### 1. Préparer son profil, avec grill-me
 
-Avant un atelier, chacun prépare son profil. La skill `grill-me` pose une liste de quatorze questions imposées, une à la fois, avec à chaque fois une réponse proposée à confirmer ou corriger. Les blocs : identité (le nom et le rôle de ton agent, qui tu es, comment il doit te parler), objectifs (tes trois cibles de l'année, tes objectifs du trimestre), domaines et revenus, projets en cours, outils, routines, mémoire, fichiers lourds.
+Avant un atelier, chacun prépare son profil. La skill `grill-me` pose une liste de quatorze questions imposées, une à la fois, avec à chaque fois une réponse proposée à confirmer ou corriger. Les blocs : identité (le nom et le rôle de ton agent, qui tu es, comment il doit te parler : tu ou vous, le tutoiement par défaut), objectifs (tes trois cibles de l'année, tes objectifs du trimestre), domaines et revenus, projets en cours, outils, routines, mémoire, fichiers lourds.
 
 Chaque réponse est notée au fur et à mesure dans une fiche. Une question sans réponse s'écrit « À définir » : elle reviendra plus tard dans le point du jour. À la fin, on obtient un profil rempli. Sans dépôt sous la main, on peut donner les trois fichiers de `skills/installation/references/` à n'importe quel Claude.
 
