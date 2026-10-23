@@ -87,3 +87,9 @@ Les choix qui ont façonné le socle, et leur pourquoi. Une entrée par décisio
 - **Décision.** Un PDF, un lien ou une vidéo a une fiche à son nom qui le résume et lui sert d'index ; le fichier vit à côté d'elle. Une image a sa ligne dans le `_images.md` de son dossier.
 - **Pourquoi.** L'agent trouve tout par les en-têtes et les index : un fichier sans en-tête lui serait invisible.
 - **Écarté.** Laisser ces fichiers sans description.
+
+## 2026-10-23 · Pas de dossier par type, et le titre d'abord
+
+- **Décision.** Le type d'un fichier est dans son en-tête, jamais dans un dossier : seul le domaine reste un dossier, plus le dossier d'un objet de plusieurs fichiers. Un fichier daté s'appelle `<titre>-AA-MM.md` : le titre, puis l'année et le mois de `cree`. Le point du jour garde le nom de son jour. Précise « Ce qui bouge est un champ ; ce qui ne bouge pas peut être un dossier » : le type ne bouge pas, mais il n'est pas un dossier.
+- **Pourquoi.** On classe par les métadonnées : un dossier par type répète l'en-tête, et l'agent trouve tout par les en-têtes et les index. Le domaine reste un dossier, parce qu'il ne bouge presque jamais et que les routeurs, les index et l'interface s'appuient dessus. Un nom commence par ce qu'on cherche.
+- **Écarté.** Des dossiers par type (`videos/`, `livrables/`, `comptes-rendus/`) ; tout à plat, sans dossier de domaine ; la date complète en tête du nom (`AAAA-MM-JJ-<titre>.md`).

@@ -35,11 +35,11 @@ Les domaines de ton activité, les sortes de fichiers que tu produis et leurs é
 
 Chaque fichier texte commence par un petit en-tête : ce qu'il est (son **type**), la partie de ton activité où il vit (son **domaine**), où il en est (son **statut**), un résumé d'une ligne, sa date de naissance. Avec ces informations, sa place est connue d'avance.
 
-*Exemple : un compte rendu de réunion du domaine « clients », daté du 23 octobre, va toujours dans `domaines/clients/comptes-rendus/2026-10-23-<nom>.md`. Personne n'a à choisir le dossier : il découle de l'en-tête.*
+*Exemple : un compte rendu de réunion du domaine « clients », daté du 23 octobre, va toujours dans `domaines/clients/<nom>-26-10.md`. Personne n'a à choisir sa place : elle découle de l'en-tête.*
 
 ### 4. Ce qui bouge est une information, pas un dossier
 
-Le statut d'un fichier change au fil de sa vie. Il est écrit dans l'en-tête, jamais dans le nom d'un dossier. Un fichier garde donc sa place toute sa vie.
+Le statut d'un fichier change au fil de sa vie. Il est écrit dans l'en-tête, jamais dans le nom d'un dossier. Un fichier garde donc sa place toute sa vie. Le type non plus n'est pas un dossier : il est dans l'en-tête. Seul le domaine est un dossier.
 
 *Exemple : une vidéo passe de `sujet` à `en-cours`, puis à `a-valider`, puis à `publie`. On change un mot dans son en-tête ; le fichier ne bouge pas, et aucun lien vers lui ne casse.*
 
