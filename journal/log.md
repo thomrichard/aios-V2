@@ -8,3 +8,4 @@ Ajout seul. Format : `- AAAA-MM-JJ · <action> | <sujet>`
 - 2026-10-23 · ajout | projets actifs d'AGENTS.md générés depuis projets/ ; colonne Fin des types
 - 2026-10-23 · ajout | skills classer, fiche et rangement ; ranger.py et colonne Chemin ; questions en attente dans outbox/questions.md ; dossier des fichiers lourds
 - 2026-10-23 · ajout | skills note et calibrate (calibrate reprise de Jay E | RoboNuggets, licence MIT)
+- 2026-10-23 · ajout | skills align et devil (d'après Jay E | RoboNuggets) ; grill-me renvoie vers elles pour le court
