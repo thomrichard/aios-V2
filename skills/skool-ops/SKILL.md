@@ -43,3 +43,4 @@ Skool n'a pas d'API publique. La CLI et les scripts parlent à Skool avec le coo
 - 2026-10-23 · reprise depuis `~/IA-OS`, adaptée au V2 ; la voix Skool devient une référence tirée des 79 posts de Thomas ; skool-engage n'est pas reprise · un seul point d'entrée pour Skool
 - 2026-10-23 · toolkit déplacé dans `~/Dev/skool-toolkit` (dépôt privé), scripts rebranchés hors de l'ancien Vault, routines « Jeton Skool » et « Revenus Skool » · plus rien ne dépend de `~/IA-OS`
 - 2026-10-23 · Thomas donne la main sur Skool, sauf pour supprimer ; ajout de la création de classroom, du dépôt d'images, de la couverture et de l'envoi d'un module (`skool_images.py`, `skool_pousser_module.py`), limite des titres à 50 caractères · un module du workspace part sur Skool en une commande, schémas compris
+- 2026-10-23 · ajout de `skool_tirer_classrooms.py` : les 16 classrooms (122 leçons) récupérées dans `domaines/communaute/` · le contenu de Skool est lisible dans le workspace

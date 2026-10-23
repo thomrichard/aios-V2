@@ -69,6 +69,7 @@ Dans `~/Dev/skool-toolkit/scripts/` (dépôt privé `thomrichard/skool-toolkit`)
 | Créer une classroom | `POST /courses` avec `group_id`, `unit_type=course`, `state=1` (brouillon ; `2` = publiée), puis `PUT /courses/{id}` avec le titre |
 | Déposer une image | `python3 skool_images.py <image>` : `POST /files`, envoi des octets sur `write_url`, puis `GET /files?ids=<id>` |
 | Couverture d'une classroom | `python3 skool_images.py <image> --couverture <classroom_id>` (`PUT /courses/{id}` avec `cover_image` et `cover_image_file`) ; format 1460 x 752 |
+| Récupérer les classrooms dans le workspace (lecture seule) | `python3 skool_tirer_classrooms.py --sortie ~/AIOS_V2/domaines/communaute --sauf 649f7b14bedb4a3b9f61200bf0784f04` ; une classroom déjà présente n'est pas réécrite, sauf avec `--remplacer`. Agentic AI est exclue : sa source, c'est le workspace |
 | Envoyer un module du workspace | `python3 skool_pousser_module.py <dossier> --classroom <id> --titre "<titre du dossier>"` ; `--a-blanc` contrôle sans envoyer, `--essai` n'envoie que la première leçon |
 | Publier un post | `skool-pp-cli posts create`, ou `POST /posts?follow=true` (corps ci-dessous) |
 | Modifier un post | `python3 skool_edit_post.py <post_id> --title "..." --content "..."` |

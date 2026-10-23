@@ -23,3 +23,4 @@ Ajout seul. Format : `- AAAA-MM-JJ · <action> | <sujet>`
 - 2026-10-23 · réglage | tutoiement par défaut (AGENTS.md, section Qui) ; l'installation demande tu ou vous
 - 2026-10-23 · ajout | skills search-connectors, reprendre, burst et humanizer (d'après Jay E | RoboNuggets)
 - 2026-10-23 · ajout | skill surprise-me (d'après Jay E | RoboNuggets)
+- 2026-10-23 · skool | récupération des 16 classrooms (122 leçons) dans domaines/communaute/, lecture seule
