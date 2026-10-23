@@ -30,7 +30,7 @@ Le reste est rangé pour l'IA. Tu n'as jamais besoin de l'ouvrir.
 `interface/` contient SM4RT, l'interface tirée de l'Agentic OS v2 de Jay E | RoboNuggets (licence MIT), déjà branchée sur le workspace : page d'accueil, second cerveau en 3D, vues Routines, Skills et Applications. Il faut Node.js 18 ou plus.
 
 1. `node interface/refresh/run.mjs` construit la carte du workspace.
-2. `node interface/server.js` lance l'interface ; ouvre `http://localhost:50000`.
+2. `python3 systeme/scripts/interface.py installer` la garde allumée en permanence : elle démarre avec ta session et redémarre seule. Ouvre `http://localhost:50000`. Pour la lancer une seule fois : `node interface/server.js`.
 
 Le reste (skills deck, agenda, e-mails, stats) se branche avec les guides de `interface/`. Nos changements au kit sont dans `interface/MODIFS.md`.
 
@@ -68,6 +68,7 @@ Le reste (skills deck, agenda, e-mails, stats) se branche avec les guides de `in
 | `systeme/scripts/verifier.py` | Contrôle la source unique, les liens vers `skills/`, les index d'images, la mémoire et les plafonds de taille |
 | `systeme/scripts/lancer.py <skill>` | Lance une skill sans discussion, avec l'agent de `.env` et le modèle de `systeme/modeles.md` |
 | `systeme/scripts/liens.sh` | Crée `.claude/skills` et `.agents/skills` |
+| `systeme/scripts/interface.py installer` | Garde l'interface allumée en permanence (macOS, Linux) ; `etat`, `retirer` |
 
 Les scripts n'utilisent que Python 3, sans dépendance.
 
