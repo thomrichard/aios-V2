@@ -1,6 +1,6 @@
 # Connexions
 
-Pour brancher un outil, cherche dans cet ordre et garde le plus léger qui marche :
+Pour brancher un outil, cherche dans cet ordre et garde le plus léger qui marche (la skill `search-connectors` fait cette recherche) :
 
 1. L'outil officiel de l'éditeur.
 2. Une CLI de la communauté : réponse courte, peu de tokens, et elle marche avec tous les agents.

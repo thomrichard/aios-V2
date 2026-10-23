@@ -33,7 +33,7 @@ Relis toute la session et trie en quatre, puis montre l'inventaire en 5 à 8 lig
 - Lance `python3 systeme/scripts/index.py`, puis `python3 systeme/scripts/verifier.py`, jusqu'à « Tout est en ordre ».
 
 ## 5. Le récap
-En 5 à 10 lignes : **Fait** · **Écrit où** (les chemins) · **En attente** · **Point de reprise** (la phrase exacte pour reprendre chaque sujet ouvert). Si l'utilisateur t'a corrigé pendant la session, propose `calibrate`.
+En 5 à 10 lignes : **Fait** · **Écrit où** (les chemins) · **En attente** · **Point de reprise** (la phrase exacte pour reprendre chaque sujet ouvert, que `reprendre` relira). Si l'utilisateur t'a corrigé pendant la session, propose `calibrate`.
 
 Session longue (plusieurs chantiers, ou de la matière qu'on voudra relire) : écris aussi le bilan dans `journal/clotures/<sujet>-AA-MM.md` (type `cloture`) : périmètre, réalisé, décisions, propositions non engagées, limites.
 

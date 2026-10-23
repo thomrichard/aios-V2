@@ -132,7 +132,7 @@ Avant de dire « c'est fait », vérifie : relance le test ou relis le fichier. 
 
 ## Connexions
 
-Dans l'ordre : l'outil officiel, une CLI de la communauté, l'API, puis un MCP de la communauté. Inscris chaque connexion dans `systeme/connexions.md` après une vraie lecture. Les clés vivent dans `.env` : ne les lis pas, ne les demande jamais dans le chat.
+Dans l'ordre : l'outil officiel, une CLI de la communauté, l'API, puis un MCP de la communauté (pour chercher : skill `search-connectors`). Inscris chaque connexion dans `systeme/connexions.md` après une vraie lecture. Les clés vivent dans `.env` : ne les lis pas, ne les demande jamais dans le chat.
 
 ## En compactant une discussion
 
