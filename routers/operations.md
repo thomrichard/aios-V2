@@ -19,6 +19,10 @@ Pilotage (OKR, revue hebdo, revenus), admin et finances, et l'AIOS comme outil d
 - `align` : quelques questions à choix avant une tâche floue (`grill-me` pour explorer et décider)
 - `devil` : des objections sérieuses sur un choix, avant de s'engager
 - `close` : clôturer une session sans rien perdre (inventaire, tout écrit à sa place, sujets ouverts en tâches, récap)
+- `reprendre` : se remettre à niveau sur un projet ou un sujet déjà commencé (l'autre moitié de `close`)
+- `search-connectors` : chercher comment brancher une application, dans l'ordre de `systeme/connexions.md`
+- `burst` : N variantes d'un livrable, pour choisir la plus proche de la cible
+- `humanizer` : retirer d'un texte les tics d'écriture qui sentent l'IA
 
 ## Process
 - Installation : `processus/installation.md` · à la demande, après le clonage
