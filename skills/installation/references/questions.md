@@ -18,7 +18,7 @@ Pour la Q7, explique d'abord les mots domaine, type et statut, puis propose des 
 | 6 | Objectifs | Quels sont tes objectifs et résultats clés du trimestre ? | `domaines/operations/okr.md` |
 | 7 | Domaines | Quels sont tes grands domaines d'activité (entre trois et sept), que couvre chacun, et qu'y produis-tu ? | `systeme/metadonnees.md`, section « Ce workspace » (les domaines et leurs types) ; un routeur par domaine dans `routers/` |
 | 8 | Domaines | D'où viennent tes revenus, et quel domaine produit chacun ? | `domaines/operations/revenus.md` |
-| 9 | Projets | As-tu des projets en cours, avec une fin ? Pour chacun : le domaine et la prochaine étape. | `projets/<slug>.md` et les projets actifs de `AGENTS.md` |
+| 9 | Projets | As-tu des projets en cours, avec une fin ? Pour chacun : le domaine et la prochaine étape. | `projets/<slug>.md` (les projets actifs d'`AGENTS.md` suivent) |
 | 10 | Outils | Quel agent lance tes routines : Claude Code, Codex ou Gemini CLI ? | `.env`, ligne `AGENT` |
 | 11 | Outils | Quels outils utilises-tu chaque semaine (messagerie, agenda, vidéo, communauté…) ? | `systeme/connexions.md`, à brancher plus tard |
 | 12 | Routines | Où tournera le rangement de nuit (serveur, ordinateur toujours allumé, Hermes), à quelle heure, et quelles autres routines veux-tu ? | `systeme/routines.md` |

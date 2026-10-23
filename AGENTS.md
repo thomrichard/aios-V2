@@ -41,7 +41,13 @@ Les domaines se règlent dans `systeme/metadonnees.md`, jamais ici : `systeme/sc
 
 ## Projets actifs
 
-Aucun pour l'instant. Format : `- [<slug>](projets/<slug>.md) · <domaine> · <prochaine étape>`
+<!-- Début des projets actifs : générés par systeme/scripts/index.py depuis l'en-tête des fichiers de projets/. -->
+
+Aucun pour l'instant.
+
+<!-- Fin des projets actifs -->
+
+Un projet vit dans `projets/<slug>.md` (gabarit : `systeme/gabarits/projet.md`) ; il apparaît ici tant que son statut n'est pas un statut de fin. On ne l'écrit jamais ici.
 
 ## Où chercher
 
@@ -80,7 +86,7 @@ Avant de dire « c'est fait », vérifie : relance le test ou relis le fichier. 
 4. Chaque fichier texte a un en-tête (gabarit : `systeme/gabarits/fiche.md`). Ses champs, son type et son statut sont pris dans `systeme/metadonnees.md` : lis-le avant d'écrire un en-tête.
 5. Chaque dossier qui contient des images a son `_images.md` : une ligne par image (fichier, ce qu'elle montre, origine, usage). Écris la ligne dès que l'image arrive.
 6. Les `_index.md` sont générés par `systeme/scripts/index.py`. Ne les écris jamais à la main ; relance le script après avoir écrit un fichier.
-7. Quand un fichier bouge ou qu'un projet démarre, mets à jour le routeur concerné, et la liste des projets actifs ci-dessus, dans le même tour.
+7. Quand un fichier bouge ou qu'un projet démarre, mets à jour le routeur concerné dans le même tour. La carte et les projets actifs ci-dessus suivent avec `systeme/scripts/index.py`.
 8. Nommage : minuscules, tirets, sans espaces ni accents. Daté : `AAAA-MM-JJ-<slug>.md`. Durable : `<slug>.md`. Un objet qui a plusieurs fichiers a son dossier.
 9. Ne supprime rien : déplace dans `archives/`.
 10. Pas de vidéo ni de son dans le dépôt : l'index pointe vers les fichiers lourds.

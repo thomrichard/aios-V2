@@ -25,16 +25,16 @@ Explique chaque mot en une phrase, avec un exemple :
 
 ## Types à proposer
 
-| Type | Ce que c'est | Statuts |
-|---|---|---|
-| video | Une vidéo, du sujet à la mise en ligne | sujet, en-cours, a-valider, publie |
-| post | Un post sur un réseau social | sujet, en-cours, a-valider, publie |
-| newsletter | Une édition de la newsletter | sujet, en-cours, a-valider, publie |
-| proposition | Une proposition commerciale | en-cours, envoyee, signee, refusee |
-| produit | Une offre en vente | en-preparation, en-vente, retire |
-| support | Un support de formation ou d'atelier | en-cours, a-valider, publie |
-| evenement | Un atelier, un live, une rencontre | prevu, passe |
-| annonce | Un message à la communauté | sujet, en-cours, publie |
-| note | Une note perso qui dure | en-cours, clos |
+| Type | Ce que c'est | Statuts | Fin |
+|---|---|---|---|
+| video | Une vidéo, du sujet à la mise en ligne | sujet, en-cours, a-valider, publie | publie |
+| post | Un post sur un réseau social | sujet, en-cours, a-valider, publie | publie |
+| newsletter | Une édition de la newsletter | sujet, en-cours, a-valider, publie | publie |
+| proposition | Une proposition commerciale | en-cours, envoyee, signee, refusee | signee, refusee |
+| produit | Une offre en vente | en-preparation, en-vente, retire | retire |
+| support | Un support de formation ou d'atelier | en-cours, a-valider, publie | publie |
+| evenement | Un atelier, un live, une rencontre | prevu, passe | passe |
+| annonce | Un message à la communauté | sujet, en-cours, publie | publie |
+| note | Une note perso qui dure | en-cours, clos | clos |
 
 Un contenu commence à `sujet` : ce qu'on compte faire, pas encore commencé. Garde cette règle en ajoutant un type : un mot est soit un type, soit un statut, jamais les deux.

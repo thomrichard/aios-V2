@@ -36,22 +36,22 @@ Obligatoire pour : `tous`, `tous sauf <types>`, une liste de types, ou `aucun`.
 
 ## Types
 
-Les statuts se lisent dans l'ordre de leur vie. Un type sans statut (« — ») n'a pas de champ `statut`.
-Un mot est soit un type, soit un statut, jamais les deux.
+Les statuts se lisent dans l'ordre de leur vie : le premier est celui de départ. « Fin » : ceux qui la terminent ; dans un autre statut, l'objet est vivant (un projet vivant s'affiche dans les projets actifs d'`AGENTS.md`).
+Un type sans statut (« — ») n'a pas de champ `statut`. Un mot est soit un type, soit un statut, jamais les deux.
 Un fichier `a-valider`, ou de type `livrable`, s'affiche dans `outbox/index.html`.
 
-| Type | Ce que c'est | Statuts |
-|---|---|---|
-| projet | Un chantier avec une fin : son pilotage (échéance, prochaine étape, tâches) | actif, bloque, clos, abandonne |
-| processus | Une suite de skills qui revient | a-construire, actif, clos |
-| okr | Les objectifs et résultats clés du trimestre | en-cours, clos |
-| tableau | Une vue d'ensemble tenue à jour, comme les revenus | en-cours, clos |
-| livrable | Ce qu'on remet à quelqu'un, texte ou visuel | en-cours, a-valider, clos |
-| compte-rendu | Ce qui s'est dit et décidé dans une réunion | en-cours, a-valider, clos |
-| concept | Une connaissance durable, dans `savoir/concepts/` | en-cours, clos |
-| source | Une source à lire ou lue, dans `savoir/sources/` | a-lire, lue |
-| entretien | La fiche d'un entretien `grill-me`, dans `journal/entretiens/` | en-cours, clos |
-| profil | Le profil d'installation, dans `inbox/` | — |
+| Type | Ce que c'est | Statuts | Fin |
+|---|---|---|---|
+| projet | Un chantier avec une fin : son pilotage (échéance, prochaine étape, tâches) | actif, bloque, clos, abandonne | clos, abandonne |
+| processus | Une suite de skills qui revient | a-construire, actif, clos | clos |
+| okr | Les objectifs et résultats clés du trimestre | en-cours, clos | clos |
+| tableau | Une vue d'ensemble tenue à jour, comme les revenus | en-cours, clos | clos |
+| livrable | Ce qu'on remet à quelqu'un, texte ou visuel | en-cours, a-valider, clos | clos |
+| compte-rendu | Ce qui s'est dit et décidé dans une réunion | en-cours, a-valider, clos | clos |
+| concept | Une connaissance durable, dans `savoir/concepts/` | en-cours, clos | clos |
+| source | Une source à lire ou lue, dans `savoir/sources/` | a-lire, lue | lue |
+| entretien | La fiche d'un entretien `grill-me`, dans `journal/entretiens/` | en-cours, clos | clos |
+| profil | Le profil d'installation, dans `inbox/` | — | — |
 
 ## Ce workspace
 
@@ -60,8 +60,8 @@ Tes domaines, tes types et tes champs à toi. La skill `installation` les écrit
 | Domaine | Ce qu'il couvre |
 |---|---|
 
-| Type | Ce que c'est | Statuts |
-|---|---|---|
+| Type | Ce que c'est | Statuts | Fin |
+|---|---|---|---|
 
 | Champ | Ce qu'il dit | Format | Obligatoire pour |
 |---|---|---|---|

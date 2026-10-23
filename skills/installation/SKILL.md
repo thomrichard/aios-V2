@@ -23,7 +23,7 @@ description: Installe et personnalise l'AIOS. Reprend le profil déposé dans in
 
 ## Après les réponses
 1. Pour chaque domaine : sa ligne et ses types (avec leurs statuts) dans la section « Ce workspace » de `systeme/metadonnees.md`, un routeur (gabarit `systeme/gabarits/routeur.md`) et un dossier `domaines/<domaine>/`. N'écris pas la carte d'`AGENTS.md` : `index.py` la recopie. Le domaine `operations` existe déjà.
-2. Un fichier par projet en cours (gabarit `systeme/gabarits/projet.md`), et sa ligne dans les projets actifs de `AGENTS.md`.
+2. Un fichier par projet en cours (gabarit `systeme/gabarits/projet.md`) ; `index.py` l'ajoute aux projets actifs d'`AGENTS.md`.
 3. Le profil part dans `archives/inbox/AAAA-MM/`.
 4. Lance `systeme/scripts/index.py`, puis `systeme/scripts/verifier.py`, jusqu'à « Tout est en ordre ».
 5. Active le contrôle avant chaque commit : `git config core.hooksPath systeme/hooks`.
@@ -36,7 +36,7 @@ description: Installe et personnalise l'AIOS. Reprend le profil déposé dans in
 - Si une section est déjà remplie, montre-la et demande s'il faut la garder.
 - Une réponse « je ne sais pas » s'écrit « À définir » ; elle reviendra dans le point du jour.
 - Ne demande jamais une clé d'API dans le chat : indique de la coller dans `.env`.
-- N'écris rien de personnel hors de `AGENTS.md` (Qui, Objectifs, projets actifs), `memory/`, `routers/`, `projets/`, `domaines/`, `journal/` et la section « Ce workspace » de `systeme/metadonnees.md`.
+- N'écris rien de personnel hors de `AGENTS.md` (Qui, Objectifs), `memory/`, `routers/`, `projets/`, `domaines/`, `journal/` et la section « Ce workspace » de `systeme/metadonnees.md`.
 - Ne branche aucun outil et ne crée aucune routine pendant l'installation : note-les seulement.
 
 ## Journal des changements

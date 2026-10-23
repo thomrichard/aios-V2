@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Génère les _index.md depuis les en-têtes des fichiers, la page outbox/index.html (sorties, process, skills),
-la carte des domaines d'AGENTS.md, et les réglages de l'interface (départements, routines, applications)
-depuis systeme/metadonnees.md, systeme/routines.md et systeme/connexions.md.
+la carte des domaines et les projets actifs d'AGENTS.md, et les réglages de l'interface (départements, routines,
+applications) depuis systeme/metadonnees.md, systeme/routines.md et systeme/connexions.md.
 
 Usage : python3 systeme/scripts/index.py [--check]
   --check : n'écrit rien, liste les index qui ne sont plus à jour (code 1 s'il y en a).
@@ -19,6 +19,10 @@ AVERTISSEMENT = "<!-- Généré par systeme/scripts/index.py : ne pas modifier �
 DEBUT_CARTE = ("<!-- Début de la carte : générée par systeme/scripts/index.py depuis systeme/metadonnees.md. "
                "Change les domaines là-bas. -->")
 FIN_CARTE = "<!-- Fin de la carte -->"
+DEBUT_PROJETS = ("<!-- Début des projets actifs : générés par systeme/scripts/index.py depuis l'en-tête "
+                 "des fichiers de projets/. -->")
+FIN_PROJETS = "<!-- Fin des projets actifs -->"
+META = os.path.join(RACINE, "systeme", "metadonnees.md")
 COULEURS = ["#00bcd4", "#e040fb", "#fdd835", "#43a047", "#f44336", "#ec407a", "#26a69a", "#8d6e63"]
 ICONES = ["pen", "people", "build", "data", "pulse", "book", "visual", "clock", "api"]
 COUCHES = [
@@ -103,26 +107,67 @@ def tableaux(chemin, premiere_colonne):
     return rangs
 
 
+def mots(texte):
+    """« `a`, `b` » → ["a", "b"] ; « — » → []."""
+    return [m.strip().strip("`") for m in texte.split(",") if m.strip().strip("`") not in ("", "—", "-")]
+
+
 def domaines():
     """Les domaines réglés dans systeme/metadonnees.md, ceux du socle puis ceux du workspace : (nom, ce qu'il couvre)."""
     trouves = {}
-    for r in tableaux(os.path.join(RACINE, "systeme", "metadonnees.md"), "Domaine"):
+    for r in tableaux(META, "Domaine"):
         nom = r.get("Domaine", "").strip("`")
         if nom and nom not in trouves:
             trouves[nom] = r.get("Ce qu'il couvre", "")
     return list(trouves.items())
 
 
-def carte_agents():
-    """AGENTS.md, avec la carte des domaines régénérée entre ses deux balises ; None si les balises manquent."""
+def types_regles():
+    """Les types réglés dans systeme/metadonnees.md : {type: (statuts dans l'ordre, statuts de fin)}."""
+    trouves = {}
+    for r in tableaux(META, "Type"):
+        nom = r.get("Type", "").strip("`")
+        if nom and nom not in trouves:
+            trouves[nom] = (mots(r.get("Statuts", "")), mots(r.get("Fin", "")))
+    return trouves
+
+
+def remplacer_bloc(texte, debut, fin, lignes):
+    """Le texte, avec ce qui est entre les balises debut et fin remplacé par ces lignes ; inchangé s'il en manque une."""
+    i, j = texte.find(debut), texte.find(fin)
+    if i < 0 or j < i:
+        return texte
+    return texte[:i] + "\n".join([debut, ""] + lignes) + "\n\n" + texte[j:]
+
+
+def projets_actifs():
+    """Une ligne par projet vivant (statut hors « Fin ») : lien, domaine, statut s'il n'est pas celui de départ,
+    prochaine étape."""
+    statuts, fin = types_regles().get("projet", ([], []))
+    depart = os.path.join(RACINE, "projets")
+    lignes = []
+    for nom in sorted(os.listdir(depart)) if os.path.isdir(depart) else []:
+        if not nom.endswith(".md") or nom in IGNORES:
+            continue
+        e = lire_entete(os.path.join(depart, nom))
+        if e.get("statut") in fin:
+            continue
+        infos = [e.get("domaine", "")]
+        if statuts and e.get("statut") != statuts[0]:
+            infos.append(e.get("statut", "") or "sans statut")
+        infos.append(e.get("prochaine_etape", ""))
+        lignes.append(f"- [{nom[:-3]}](projets/{nom}) · " + " · ".join(i for i in infos if i))
+    return lignes or ["Aucun pour l'instant."]
+
+
+def agents():
+    """AGENTS.md, avec la carte des domaines et les projets actifs régénérés entre leurs balises."""
     with open(os.path.join(RACINE, "AGENTS.md"), encoding="utf-8") as f:
         texte = f.read()
-    debut, fin = texte.find(DEBUT_CARTE), texte.find(FIN_CARTE)
-    if debut < 0 or fin < debut:
-        return None
-    lignes = [DEBUT_CARTE, "", "| Domaine | Ce qu'il couvre | Routeur |", "|---|---|---|"]
-    lignes += [f"| {nom} | {cellule(couvre)} | `routers/{nom}.md` |" for nom, couvre in domaines()]
-    return texte[:debut] + "\n".join(lignes) + "\n\n" + texte[fin:]
+    carte = ["| Domaine | Ce qu'il couvre | Routeur |", "|---|---|---|"]
+    carte += [f"| {nom} | {cellule(couvre)} | `routers/{nom}.md` |" for nom, couvre in domaines()]
+    texte = remplacer_bloc(texte, DEBUT_CARTE, FIN_CARTE, carte)
+    return remplacer_bloc(texte, DEBUT_PROJETS, FIN_PROJETS, projets_actifs())
 
 
 def etapes(chemin):
@@ -187,7 +232,8 @@ def index_dossier(dossier):
     elif relatif == "projets":
         lignes += ["| Projet | Domaine | Statut | Échéance | Prochaine étape |", "|---|---|---|---|---|"]
         projets = [(f, lire_entete(os.path.join(dossier, f))) for f in fichiers]
-        projets.sort(key=lambda p: (p[1].get("statut") == "clos", p[0]))
+        fin = types_regles().get("projet", ([], []))[1]
+        projets.sort(key=lambda p: (p[1].get("statut") in fin, p[0]))
         for nom, e in projets:
             lignes.append(f"| [{nom[:-3]}]({nom}) | {cellule(e.get('domaine'))} | {cellule(e.get('statut'))} "
                           f"| {cellule(e.get('echeance'))} | {cellule(e.get('prochaine_etape'))} |")
@@ -454,9 +500,8 @@ def cibles():
         yield os.path.join(RACINE, "skills", "_index.md"), index_skills()
     if os.path.isdir(os.path.join(RACINE, "outbox")):
         yield os.path.join(RACINE, "outbox", "index.html"), page_outbox()
-    carte = carte_agents() if os.path.exists(os.path.join(RACINE, "AGENTS.md")) else None
-    if carte is not None:
-        yield os.path.join(RACINE, "AGENTS.md"), carte
+    if os.path.exists(os.path.join(RACINE, "AGENTS.md")):
+        yield os.path.join(RACINE, "AGENTS.md"), agents()
     if os.path.isdir(os.path.join(RACINE, "interface", "config")):
         yield os.path.join(RACINE, "interface", "config", "departments.json"), departements_interface()
         yield os.path.join(RACINE, "interface", "snapshots", "routines.json"), routines_interface()

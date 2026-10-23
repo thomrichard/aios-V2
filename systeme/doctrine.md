@@ -4,11 +4,11 @@
 
 | Objet | Fait foi | Index |
 |---|---|---|
-| Règles, projets actifs | `AGENTS.md` | — |
+| Règles | `AGENTS.md` | — |
 | Domaines, champs d'un en-tête, types et statuts | `systeme/metadonnees.md` | la carte d'`AGENTS.md` (générée) |
 | Fichier texte | son en-tête | `_index.md` du dossier (généré) |
 | Image | sa ligne dans `_images.md` du dossier | — |
-| Projet | `projets/<slug>.md` | `projets/_index.md` (généré) |
+| Projet | `projets/<slug>.md` | `projets/_index.md`, et les projets actifs d'`AGENTS.md` (générés) |
 | Souvenir | `memory/<type>_<sujet>.md` | `memory/MEMORY.md` |
 | Skill | `skills/<nom>/SKILL.md` | `skills/_index.md` (généré), et le routeur du domaine qui l'utilise |
 | Process | le tableau des étapes de `processus/<slug>.md` | `processus/_index.md` (généré), et le routeur du domaine qui le porte |
@@ -54,7 +54,7 @@ Le socle fournit une base qui marche sans rien changer. Les domaines et les type
 | Qui (nom de l'agent, rôle, ton, qui est l'utilisateur) | la skill `installation`, depuis le profil ou l'entretien | seulement à la demande de l'utilisateur |
 | Objectifs (les cibles de l'année) | la skill `installation` | à chaque revue trimestrielle : l'agent vérifie que les cibles sont toujours vraies face aux OKR, et propose la mise à jour |
 | Carte des domaines | `systeme/scripts/index.py`, depuis `systeme/metadonnees.md` | à chaque lancement du script ; on ne l'écrit jamais à la main |
-| Projets actifs | la skill `installation`, puis l'agent | dans le même tour qu'un nouveau projet ou un fichier déplacé |
+| Projets actifs | `systeme/scripts/index.py`, depuis l'en-tête des fichiers de `projets/` | à chaque lancement du script ; on ne l'écrit jamais à la main |
 | Règles, comment tu travailles | l'agent, après accord | quand une règle manque ou qu'une correction revient ; une ligne, au bon endroit, et le pourquoi dans `journal/decisions.md` |
 
 - Les cibles de l'année font foi dans `AGENTS.md` ; les OKR du trimestre dans `domaines/operations/okr.md`. On ne recopie pas l'un dans l'autre.

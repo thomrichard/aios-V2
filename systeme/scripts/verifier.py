@@ -10,8 +10,8 @@ import re
 import subprocess
 import sys
 
-from index import (DEBUT_CARTE, DOSSIERS, FIN_CARTE, IGNORES, domaines, les_processus, lire_entete,
-                   skills_utilisees, tableaux)
+from index import (DEBUT_CARTE, DEBUT_PROJETS, DOSSIERS, FIN_CARTE, FIN_PROJETS, IGNORES, domaines,
+                   les_processus, lire_entete, mots, skills_utilisees, tableaux, types_regles)
 
 RACINE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 IMAGES = (".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg")
@@ -107,11 +107,6 @@ def controler_processus():
             avertissements.append(f"{routeur} ne cite pas {rel}")
 
 
-def mots(texte):
-    """« `a`, `b` » → ["a", "b"] ; « — » → []."""
-    return [m.strip().strip("`") for m in texte.split(",") if m.strip().strip("`") not in ("", "—", "-")]
-
-
 def obligatoire(regle, type_):
     """« tous », « tous sauf a, b », « a, b » ou « aucun » : le champ est-il obligatoire pour ce type ?"""
     regle = regle.strip()
@@ -124,7 +119,7 @@ def obligatoire(regle, type_):
 
 def controler_domaines():
     """Chaque domaine réglé dans systeme/metadonnees.md a son routeur, chaque routeur a son domaine,
-    et AGENTS.md garde les balises de sa carte générée."""
+    et AGENTS.md garde les balises de ses blocs générés (carte des domaines, projets actifs)."""
     noms = [nom for nom, _ in domaines()]
     for nom in noms:
         if not os.path.exists(chemin("routers", f"{nom}.md")):
@@ -136,8 +131,10 @@ def controler_domaines():
                 avertissements.append(f"routers/{fichier} : domaine absent de systeme/metadonnees.md")
     if os.path.exists(chemin("AGENTS.md")):
         texte = "\n".join(lignes_de("AGENTS.md"))
-        if DEBUT_CARTE not in texte or FIN_CARTE not in texte:
-            avertissements.append("AGENTS.md a perdu les balises de la carte des domaines : elle n'est plus générée")
+        for bloc, debut, fin in (("la carte des domaines", DEBUT_CARTE, FIN_CARTE),
+                                 ("les projets actifs", DEBUT_PROJETS, FIN_PROJETS)):
+            if debut not in texte or fin not in texte:
+                avertissements.append(f"AGENTS.md a perdu les balises de {bloc} : ce bloc n'est plus généré")
 
 
 def controler_entetes():
@@ -147,10 +144,15 @@ def controler_entetes():
         avertissements.append(f"{rel_meta} manque : les en-têtes ne sont pas contrôlés")
         return
     champs = {r["Champ"].strip("`"): r for r in tableaux(chemin(rel_meta), "Champ") if r.get("Champ")}
-    types = {r["Type"].strip("`"): mots(r.get("Statuts", "")) for r in tableaux(chemin(rel_meta), "Type") if r.get("Type")}
+    reglages = types_regles()
+    types = {nom: statuts for nom, (statuts, _) in reglages.items()}
     connus = {nom for nom, _ in domaines()}
     for doublon in sorted(set(types) & {s for statuts in types.values() for s in statuts}):
         avertissements.append(f"{rel_meta} : « {doublon} » est à la fois un type et un statut")
+    for nom, (statuts, fin) in reglages.items():
+        for s in fin:
+            if s not in statuts:
+                avertissements.append(f"{rel_meta} : le type {nom} finit par « {s} », absent de ses statuts")
 
     for base in DOSSIERS:
         for dossier, sous, fichiers in os.walk(chemin(base)):
