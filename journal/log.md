@@ -17,3 +17,9 @@ Ajout seul. Format : `- AAAA-MM-JJ · <action> | <sujet>`
 - 2026-10-23 · skool | création classroom « Agentic AI » (brouillon, vide) https://www.skool.com/club-smart/classroom/17480787
 - 2026-10-23 · skool | dossier « Économiser tes tokens » et 22 leçons avec schéma, dans la classroom « Agentic AI » (brouillon) https://www.skool.com/club-smart/classroom/17480787
 - 2026-10-23 · skool | couverture de la classroom « Agentic AI » https://www.skool.com/club-smart/classroom/17480787
+- 2026-10-23 · ajout | skills note et calibrate (calibrate reprise de Jay E | RoboNuggets, licence MIT)
+- 2026-10-23 · ajout | skills align et devil (d'après Jay E | RoboNuggets) ; grill-me renvoie vers elles pour le court
+- 2026-10-23 · ajout | skill close (reprise de la close de Thomas, adaptée à AIOS v2) ; type cloture et journal/clotures/
+- 2026-10-23 · réglage | tutoiement par défaut (AGENTS.md, section Qui) ; l'installation demande tu ou vous
+- 2026-10-23 · ajout | skills search-connectors, reprendre, burst et humanizer (d'après Jay E | RoboNuggets)
+- 2026-10-23 · ajout | skill surprise-me (d'après Jay E | RoboNuggets)
