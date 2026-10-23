@@ -8,6 +8,7 @@
 // Writes data/arms-usage.js (for the pages) and data/arms-usage.json.
 // Run: node refresh/usage.mjs
 import fs from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
 import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
@@ -46,18 +47,34 @@ const rowFor = (name, kind, desc) => {
   return skillRows.get(name);
 };
 for (const s of skillList) rowFor(s.name, s.kind, s.desc);
+// AIOS: the skills of your agent's own folder (~/.claude/skills, account skills included) show too, used or not (see MODIFS.md)
+const describe = f => { try { const m = /^description:\s*(.+)$/m.exec(fs.readFileSync(f, 'utf8')); return m ? m[1].replace(/^["'>|]\s*|["']$/g, '').trim() : ''; } catch { return ''; } };
+const globalSkills = (dir, depth) => {
+  let list; try { list = fs.readdirSync(dir, { withFileTypes: true }); } catch { return; }
+  for (const e of list) {
+    const full = path.join(dir, e.name);
+    if (!e.isDirectory() && !e.isSymbolicLink()) continue;
+    if (fs.existsSync(path.join(full, 'SKILL.md'))) { if (!skillByNorm.has(norm(e.name))) rowFor(e.name, 'skill', describe(path.join(full, 'SKILL.md'))); }
+    else if (depth < 3) globalSkills(full, depth + 1);
+  }
+};
+if (readerOn('claudeCode')) globalSkills(path.join(os.homedir(), '.claude', 'skills'), 0);
 const addRun = (row, t, tok, cost, sub) => {
   row.runs30++; row.tok30 += tok || 0; row.cost30 += cost || 0; row.subagents30 += sub || 0;
   if (inWin(t, SHORT)) { row.runs7++; row.tok7 += tok || 0; row.cost7 += cost || 0; }
   if (t > row.last) row.last = t;
 };
 let skillsMeasured = false;
+const BUILTIN = new Set(['addDir', 'agents', 'clear', 'compact', 'config', 'context', 'cost', 'doctor', 'effort', 'exit', 'export', 'fast', 'help', 'hooks', 'init', 'login', 'logout', 'mcp', 'memory', 'model', 'permissions', 'resume', 'review', 'status', 'usage'].map(norm));
+const loaded = new Set(sessions ? sessions.skillRuns.filter(r => !r.cmd).map(r => norm(r.name)) : []);
 if (sessions) {
   skillsMeasured = true;
   for (const r of sessions.skillRuns) {
-    const name = skillByNorm.get(norm(r.name));
-    if (!name) continue;                       // a built-in command, or a skill outside your skill folders
-    if (r.cmd && skillList.find(s => s.name === name && s.kind === 'skill')) continue;   // a typed skill also logs its load line
+    let name = skillByNorm.get(norm(r.name));
+    // AIOS: a skill outside your skill folders (Claude account, ~/.claude/skills, plugins) counts too;
+    // only Claude Code's built-in commands are left out (see MODIFS.md)
+    if (!name) { if (r.cmd && BUILTIN.has(norm(r.name))) continue; name = String(r.name).replace(/^\/+/, ''); }
+    if (r.cmd && (skillList.find(s => s.name === name && s.kind === 'skill') || loaded.has(norm(name)))) continue;   // a typed skill also logs its load line
     addRun(rowFor(name), r.t, r.tok, r.cost, r.sub);
   }
 }
@@ -90,7 +107,8 @@ const bump = (row, days) => { for (const [d, n] of Object.entries(days)) row.day
 if (sessions) {
   appsMeasured = true;
   for (const [k, days] of Object.entries(sessions.toolDays)) {
-    if (k.startsWith('m:')) { const server = k.slice(2); for (const row of appRows) { const m = row.match; if ((m.mcp && norm(m.mcp) === norm(server)) || (!m.mcp && norm(row.id.replace(/^app:/, '')) === norm(server))) bump(row, days); } }
+    // AIOS: "mcp" may list several server names, for one service plugged in twice (see MODIFS.md)
+    if (k.startsWith('m:')) { const server = k.slice(2); for (const row of appRows) { const m = row.match; if ((m.mcp && [].concat(m.mcp).some(x => norm(x) === norm(server))) || (!m.mcp && norm(row.id.replace(/^app:/, '')) === norm(server))) bump(row, days); } }
     if (k.startsWith('w:')) { const word = k.slice(2); for (const row of appRows) if (row.match.command && String(row.match.command).toLowerCase() === word) bump(row, days); }
   }
 }
