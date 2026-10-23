@@ -11,6 +11,7 @@ import json
 import os
 import re
 import sys
+import unicodedata
 
 RACINE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DOSSIERS = ["projets", "processus", "domaines", "savoir", "bibliotheques"]
@@ -23,6 +24,7 @@ DEBUT_PROJETS = ("<!-- Début des projets actifs : générés par systeme/script
                  "des fichiers de projets/. -->")
 FIN_PROJETS = "<!-- Fin des projets actifs -->"
 META = os.path.join(RACINE, "systeme", "metadonnees.md")
+LOURDS = (".mp4", ".mov", ".m4v", ".mkv", ".avi", ".webm", ".mp3", ".wav", ".m4a", ".aac", ".flac", ".ogg", ".opus")
 COULEURS = ["#00bcd4", "#e040fb", "#fdd835", "#43a047", "#f44336", "#ec407a", "#26a69a", "#8d6e63"]
 ICONES = ["pen", "people", "build", "data", "pulse", "book", "visual", "clock", "api"]
 COUCHES = [
@@ -130,6 +132,33 @@ def types_regles():
         if nom and nom not in trouves:
             trouves[nom] = (mots(r.get("Statuts", "")), mots(r.get("Fin", "")))
     return trouves
+
+
+def chemins():
+    """Le chemin réglé de chaque type dans systeme/metadonnees.md : {type: modèle}, sans les types « — »."""
+    trouves = {}
+    for r in tableaux(META, "Type"):
+        nom, modele = r.get("Type", "").strip("`"), r.get("Chemin", "").strip("`")
+        if nom and nom not in trouves and modele not in ("", "—", "-"):
+            trouves[nom] = modele
+    return trouves
+
+
+def slug_de(nom):
+    """Le slug d'un nom de fichier ou de dossier : sans extension ni date en tête, minuscules, sans accents, tirets."""
+    base = re.sub(r"^\d{4}-\d{2}-\d{2}-", "", re.sub(r"\.md$", "", nom))
+    base = unicodedata.normalize("NFKD", base).encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9]+", "-", base.lower()).strip("-")
+
+
+def chemin_attendu(modele, e, slug):
+    """Le chemin d'un fichier d'après le modèle de son type et son en-tête ; None s'il manque une valeur."""
+    for cle, valeur in (("<domaine>", e.get("domaine", "")), ("<date>", e.get("cree", "")), ("<slug>", slug)):
+        if cle in modele:
+            if not valeur:
+                return None
+            modele = modele.replace(cle, valeur)
+    return None if re.search(r"<[^>]+>", modele) else modele
 
 
 def remplacer_bloc(texte, debut, fin, lignes):

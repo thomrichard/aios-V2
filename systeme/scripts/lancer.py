@@ -30,6 +30,15 @@ def lire_env():
     return valeurs
 
 
+def dossier_lourds():
+    """Le dossier des fichiers lourds (FICHIERS_LOURDS dans .env), en chemin absolu ; None s'il n'est pas réglé."""
+    dossier = lire_env().get("FICHIERS_LOURDS", "")
+    if not dossier:
+        return None
+    dossier = os.path.expanduser(dossier)
+    return dossier if os.path.isabs(dossier) else os.path.join(RACINE, dossier)
+
+
 def routine_directe(nom):
     """La commande d'une routine directe de systeme/routines.md, ou None."""
     from index import tableau

@@ -19,6 +19,8 @@
 
 ## Où va quoi
 
+La place exacte d'un fichier se déduit de son en-tête : colonne « Chemin » de son type dans `systeme/metadonnees.md`. La skill `classer` choisit l'en-tête, `systeme/scripts/ranger.py` range le fichier, et `verifier.py` signale un fichier qui n'est pas à sa place.
+
 | Ce que c'est | Où ça va |
 |---|---|
 | Un objet d'un domaine | `domaines/<domaine>/` ; un dossier à lui s'il a plusieurs fichiers |
@@ -29,6 +31,10 @@
 | Une connaissance durable | `savoir/concepts/` ou `savoir/sources/` |
 | Un média généré, un composant d'interface | `bibliotheques/medias/`, `bibliotheques/composants/` |
 | Une capture de l'extérieur (veille, e-mail) | `inbox/`, avec `source:` dans l'en-tête ; le rangement de 2 h la classe |
+| Un PDF, un lien, un fichier qui ne peut pas porter d'en-tête | une fiche à son nom (skill `fiche`), qui le résume et lui sert d'index ; le fichier va à côté d'elle |
+| Une vidéo, un son | le dossier des fichiers lourds (`FICHIERS_LOURDS` dans `.env`, un dossier Google Drive synchronisé par exemple), hors du dépôt ; sa fiche reste dans le workspace, champ `fichier` |
+| Une image | le dossier qui s'en sert, avec sa ligne dans `_images.md` |
+| Une question du rangement qui attend ta réponse | `outbox/questions.md` ; l'élément attend dans l'inbox |
 | Un profil d'installation | `inbox/`, puis `archives/inbox/` une fois installé |
 | Un entretien (`grill-me`) | `journal/entretiens/AAAA-MM-JJ-<sujet>.md` |
 | Le code d'un tiers (l'interface de Jay) | `interface/`, avec sa licence ; il garde ses propres règles (pas d'en-tête, pas d'`_index.md`) |

@@ -16,3 +16,18 @@ interface/.google-creds.json
 interface/.google-calendar-token.json
 interface/node_modules/
 interface/package-lock.json
+
+# vidéos et sons : jamais dans le dépôt, ils vont dans le dossier des fichiers lourds (FICHIERS_LOURDS dans .env)
+*.[mM][pP]4
+*.[mM][oO][vV]
+*.[mM]4[vV]
+*.[mM][kK][vV]
+*.[aA][vV][iI]
+*.[wW][eE][bB][mM]
+*.[mM][pP]3
+*.[wW][aA][vV]
+*.[mM]4[aA]
+*.[aA][aA][cC]
+*.[fF][lL][aA][cC]
+*.[oO][gG][gG]
+*.[oO][pP][uU][sS]

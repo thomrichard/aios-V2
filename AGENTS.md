@@ -24,8 +24,9 @@ Filtre : chaque proposition doit rapprocher d'une de ces cibles. Sinon, dis-le e
 ## Les deux portes
 
 - `inbox/` : ce qui entre. Ce que l'utilisateur dépose, et ce que les routines de capture (veille) rapportent de l'extérieur, avec `source:` dans l'en-tête. Tu n'y déposes jamais tes propres productions ; tu la vides en rangeant.
-- `outbox/` : ce qui sort. Le point du jour dans `outbox/points/AAAA-MM-JJ.md`, la page `outbox/index.html` (générée).
-- Chaque nuit à 2 h, la skill `rangement` vide l'inbox, range l'outbox et écrit le point du jour.
+- `outbox/` : ce qui sort. Le point du jour dans `outbox/points/AAAA-MM-JJ.md`, les questions en attente dans `outbox/questions.md`, la page `outbox/index.html` (générée). Rien d'autre n'y vit : un livrable reste dans son domaine.
+- Chaque nuit à 2 h, la skill `rangement` vide l'inbox (avec `fiche` et `classer`), range l'outbox et écrit le point du jour. Ce qui demande une réponse attend dans `outbox/questions.md`.
+- En début de session, si `outbox/questions.md` contient des questions, dis combien en une ligne et propose d'y répondre.
 
 ## Carte des domaines
 
@@ -81,7 +82,7 @@ Avant de dire « c'est fait », vérifie : relance le test ou relis le fichier. 
 ## Règles
 
 1. Deux sauts au plus : ce fichier, puis un routeur ou un index, puis le fichier.
-2. Un objet, un fichier, un endroit. Tout est rangé par domaine, livrables compris. On lie, on ne copie jamais.
+2. Un objet, un fichier, un endroit. Tout est rangé par domaine, livrables compris. On lie, on ne copie jamais. La place d'un fichier se déduit de son en-tête : pour ranger, skill `classer`.
 3. Le statut est un champ de l'en-tête, pas un dossier. Un objet garde son chemin toute sa vie.
 4. Chaque fichier texte a un en-tête (gabarit : `systeme/gabarits/fiche.md`). Ses champs, son type et son statut sont pris dans `systeme/metadonnees.md` : lis-le avant d'écrire un en-tête.
 5. Chaque dossier qui contient des images a son `_images.md` : une ligne par image (fichier, ce qu'elle montre, origine, usage). Écris la ligne dès que l'image arrive.
@@ -89,7 +90,7 @@ Avant de dire « c'est fait », vérifie : relance le test ou relis le fichier. 
 7. Quand un fichier bouge ou qu'un projet démarre, mets à jour le routeur concerné dans le même tour. La carte et les projets actifs ci-dessus suivent avec `systeme/scripts/index.py`.
 8. Nommage : minuscules, tirets, sans espaces ni accents. Daté : `AAAA-MM-JJ-<slug>.md`. Durable : `<slug>.md`. Un objet qui a plusieurs fichiers a son dossier.
 9. Ne supprime rien : déplace dans `archives/`.
-10. Pas de vidéo ni de son dans le dépôt : l'index pointe vers les fichiers lourds.
+10. Pas de vidéo ni de son dans le dépôt : ils vont dans le dossier des fichiers lourds (`FICHIERS_LOURDS` dans `.env`), et leur fiche garde leur chemin (champ `fichier`).
 11. Les skills système, `systeme/scripts/`, `systeme/doctrine.md` et la base de `systeme/metadonnees.md` restent neutres, sans rien de personnel : ils forment le socle du kit.
 
 ## S'améliorer
