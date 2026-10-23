@@ -347,9 +347,11 @@ def routines_interface():
     """snapshots/routines.json de l'interface, depuis le tableau de systeme/routines.md."""
     routines = []
     for r in tableau(os.path.join(RACINE, "systeme", "routines.md"), "Routine"):
-        skill, etat = r.get("Skill", "").strip("`"), r.get("État", "").lower()
+        skill, etat = r.get("Skill", "").strip("`").strip("—-"), r.get("État", "").lower()
+        directe = r.get("Commande", "").strip("`").strip("—-")
         routine = {"id": skill or r["Routine"].lower().replace(" ", "-"), "name": r["Routine"], "source": "planificateur",
-                   "desc": " · ".join(x for x in (r.get("Quand", ""), f"skill {skill}" if skill else "", r.get("Type", "")) if x),
+                   "desc": " · ".join(x for x in (r.get("Quand", ""), f"skill {skill}" if skill else "",
+                                                  "sans IA" if directe else "", r.get("Type", "")) if x),
                    "status": "active" if etat.startswith("en place") else "ondemand" if "demande" in etat else "paused"}
         cron = r.get("Cron", "").strip("`")
         if cron and cron not in ("—", "-"):
@@ -382,6 +384,21 @@ def apps_interface():
     return json.dumps(contenu, indent=2, ensure_ascii=False) + "\n"
 
 
+def espace_interface():
+    """config/workspace.json de l'interface : chaque dossier de domaines/ s'affiche ouvert sur la carte, sans clic."""
+    chemin = os.path.join(RACINE, "interface", "config", "workspace.json")
+    with open(chemin, encoding="utf-8") as f:
+        contenu = json.load(f)
+    visibles = [d for d in contenu.get("visibleRoots", []) if not d.startswith("domaines/")]
+    depart = os.path.join(RACINE, "domaines")
+    for dossier, sous, _ in os.walk(depart):
+        sous[:] = sorted(s for s in sous if not s.startswith("."))
+        if dossier != depart:
+            visibles.append(os.path.relpath(dossier, RACINE).replace(os.sep, "/"))
+    contenu["visibleRoots"] = visibles
+    return json.dumps(contenu, indent=2, ensure_ascii=False) + "\n"
+
+
 def cibles():
     """Chaque fichier généré et son contenu attendu."""
     for dossier in tous_les_dossiers():
@@ -393,6 +410,8 @@ def cibles():
     if os.path.isdir(os.path.join(RACINE, "interface", "config")):
         yield os.path.join(RACINE, "interface", "config", "departments.json"), departements_interface()
         yield os.path.join(RACINE, "interface", "snapshots", "routines.json"), routines_interface()
+        if os.path.exists(os.path.join(RACINE, "interface", "config", "workspace.json")):
+            yield os.path.join(RACINE, "interface", "config", "workspace.json"), espace_interface()
         yield os.path.join(RACINE, "interface", "config", "apps.json"), apps_interface()
 
 

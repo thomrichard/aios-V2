@@ -114,7 +114,8 @@ Avant de dire « c'est fait », vérifie : relance le test ou relis le fichier. 
 
 ## Routines
 
-- Une routine = un prompt qui appelle une skill, lancé par `systeme/scripts/lancer.py` depuis un planificateur neutre (cron, Hermes).
+- Une routine = un prompt qui appelle une skill, lancé par `systeme/scripts/lancer.py` depuis un planificateur neutre (cron, launchd, Hermes).
+- Une routine directe lance une commande, sans IA : à préférer quand il n'y a rien à juger.
 - Liste, horaires, type (active ou passive) et plafond de coût : `systeme/routines.md`.
 
 ## Connexions

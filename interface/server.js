@@ -491,6 +491,11 @@ function refreshBrain() {
   })().finally(() => setTimeout(() => { refreshing = null; }, 0));
   return refreshing;
 }
+/* AIOS : opening the Second Brain rebuilds its map when it is older than 30 s, so it always shows the workspace as it is now */
+async function freshBrain() {
+  let built = 0; try { built = Date.parse(JSON.parse(fs.readFileSync(path.join(DATA, 'brain-meta.json'), 'utf8')).builtAt) || 0; } catch (_) { }
+  if (Date.now() - built > 30000) await refreshBrain();
+}
 /* the first start after you set your workspace (or change its config) builds the map by itself */
 function needsFirstRefresh() {
   const root = workspaceRoot(); if (!root) return false;
@@ -631,6 +636,7 @@ const server = http.createServer(async (req, res) => {
       const f = rel && !rel.startsWith('_trash') ? inside(ARTIFACTS, rel) : null;
       return f ? serveFile(req, res, f) : sendJson(res, { error: 'introuvable' }, 404);
     }
+    if (p2 === '/brain/snapshot.js') await freshBrain();
     const f = publicFile(p2);
     if (f) return serveFile(req, res, f);
     sendJson(res, { error: 'introuvable' }, 404);

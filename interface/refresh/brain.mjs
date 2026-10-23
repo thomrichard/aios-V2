@@ -100,8 +100,15 @@ graph.meta.visibleNodes = graph.nodes.length; graph.meta.skills = skillNodes.len
 graph.meta.applications = graph.nodes.filter(n => n.type === 'app').length; graph.meta.refreshedAt = new Date().toISOString();
 
 // 7. folder contents, loaded only when a folder is opened or searched
+// AIOS: every level, so a folder inside an opened folder opens too (see MODIFS.md)
 const expansions = {};
-for (const n of graph.nodes) if (n.type === 'dir') { const kids = scan.expandDir(r.model, cfg, n.id); if (kids) expansions[n.id] = kids; }
+const toOpen = graph.nodes.filter(n => n.type === 'dir').map(n => n.id);
+while (toOpen.length) {
+  const id = toOpen.shift();
+  if (expansions[id]) continue;
+  const kids = scan.expandDir(r.model, cfg, id);
+  if (kids) { expansions[id] = kids; for (const k of kids) if (k.type === 'dir') toOpen.push(k.id); }
+}
 
 // 8. bodies for the offline copy (opened as a file): your instruction files only
 const bodies = {};

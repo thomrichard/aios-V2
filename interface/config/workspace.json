@@ -21,7 +21,8 @@
     "processus",
     "skills",
     "memory",
-    "journal"
+    "journal",
+    "domaines/operations"
   ],
   "routing": {},
   "maxFiles": 500000
