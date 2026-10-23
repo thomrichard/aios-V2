@@ -416,7 +416,7 @@ def fiches(dossier, dossier_transcriptions, maj, essai):
         liees = [noms[c] for c in cibles if c in noms] + [noms[s] for s in citee_par.get(vid, []) if s in noms]
 
         l = ["---", "type: video", f"resume: {resume(description, sn['title'], communes)}", "statut: publie", f"domaine: {domaine}",
-             f"maj: {aujourd_hui}", f"liens: [{', '.join(dict.fromkeys(liees))}]", "---", f"# {sn['title']}", "",
+             f"cree: {publiee}", f"maj: {aujourd_hui}", f"liens: [{', '.join(dict.fromkeys(liees))}]", "---", f"# {sn['title']}", "",
              f"- Vidéo : https://www.youtube.com/watch?v={vid}", f"- Miniature : {miniature}",
              f"- Publiée le : {publiee}", f"- Durée : {duree(secondes(v['contentDetails']['duration']))}"]
         if playlists.get(vid):
