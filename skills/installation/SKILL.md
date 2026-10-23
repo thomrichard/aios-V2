@@ -27,6 +27,7 @@ description: Installe et personnalise l'AIOS. Reprend le profil déposé dans in
 3. Le profil part dans `archives/inbox/AAAA-MM/`.
 4. Lance `systeme/scripts/index.py`, puis `systeme/scripts/verifier.py`, jusqu'à « Tout est en ordre ».
 5. Active le contrôle avant chaque commit : `git config core.hooksPath systeme/hooks`.
+   Si l'utilisateur a donné un dossier pour ses vidéos et ses sons (Q14), ajoute `FICHIERS_LOURDS=<chemin>` à la fin de `.env`, sans lire le fichier : `verifier.py` contrôle que le dossier existe et que l'IA peut y écrire.
 6. Rappelle de laisser vide le `CLAUDE.md` global de la machine.
 7. L'interface : si `node --version` donne 18 ou plus, lance `node interface/refresh/run.mjs`, puis propose `python3 systeme/scripts/interface.py installer` pour la garder allumée ; sinon, dis comment installer Node.
 8. Termine par un résumé : ce qui est rempli, ce qui reste « À définir ».
@@ -47,3 +48,4 @@ description: Installe et personnalise l'AIOS. Reprend le profil déposé dans in
 - 2026-10-22 · étape interface · le kit de Jay est dans le socle, branché sur le workspace
 - 2026-10-23 · domaines et types proposés depuis un catalogue, écrits dans `systeme/metadonnees.md` · tout est paramétrable, sans partir de zéro
 - 2026-10-23 · la carte d'`AGENTS.md` n'est plus écrite à la main · un domaine se règle à un seul endroit, et tous les agents suivent
+- 2026-10-23 · Q14, le dossier des fichiers lourds · vidéos et sons hors du dépôt, rangés par `ranger.py`

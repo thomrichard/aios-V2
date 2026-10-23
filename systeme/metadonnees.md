@@ -30,6 +30,7 @@ Obligatoire pour : `tous`, `tous sauf <types>`, une liste de types, ou `aucun`.
 | maj | Sa dernière retouche | date | tous |
 | liens | Les fichiers liés | liste | aucun |
 | source | D'où vient une capture (veille, e-mail, lien) | texte | aucun |
+| fichier | La vidéo ou le son que la fiche décrit, dans le dossier des fichiers lourds (écrit par `ranger.py`) | liste | aucun |
 | echeance | La date de fin visée | date | aucun |
 | prochaine_etape | Ce qui fait avancer, ou ce qui débloque | texte | projet |
 | declencheur | Ce qui lance le process | texte | processus |
@@ -38,20 +39,21 @@ Obligatoire pour : `tous`, `tous sauf <types>`, une liste de types, ou `aucun`.
 
 Les statuts se lisent dans l'ordre de leur vie : le premier est celui de départ. « Fin » : ceux qui la terminent ; dans un autre statut, l'objet est vivant (un projet vivant s'affiche dans les projets actifs d'`AGENTS.md`).
 Un type sans statut (« — ») n'a pas de champ `statut`. Un mot est soit un type, soit un statut, jamais les deux.
+« Chemin » : où vit un fichier de ce type. `<domaine>` et `<date>` (son champ `cree`) viennent de l'en-tête, `<slug>` de son nom. Un objet de plusieurs fichiers devient un dossier du même nom (`<slug>/<slug>.md`). `systeme/scripts/ranger.py` range un fichier à ce chemin ; « — » : il ne se range pas tout seul.
 Un fichier `a-valider`, ou de type `livrable`, s'affiche dans `outbox/index.html`.
 
-| Type | Ce que c'est | Statuts | Fin |
-|---|---|---|---|
-| projet | Un chantier avec une fin : son pilotage (échéance, prochaine étape, tâches) | actif, bloque, clos, abandonne | clos, abandonne |
-| processus | Une suite de skills qui revient | a-construire, actif, clos | clos |
-| okr | Les objectifs et résultats clés du trimestre | en-cours, clos | clos |
-| tableau | Une vue d'ensemble tenue à jour, comme les revenus | en-cours, clos | clos |
-| livrable | Ce qu'on remet à quelqu'un, texte ou visuel | en-cours, a-valider, clos | clos |
-| compte-rendu | Ce qui s'est dit et décidé dans une réunion | en-cours, a-valider, clos | clos |
-| concept | Une connaissance durable, dans `savoir/concepts/` | en-cours, clos | clos |
-| source | Une source à lire ou lue, dans `savoir/sources/` | a-lire, lue | lue |
-| entretien | La fiche d'un entretien `grill-me`, dans `journal/entretiens/` | en-cours, clos | clos |
-| profil | Le profil d'installation, dans `inbox/` | — | — |
+| Type | Ce que c'est | Statuts | Fin | Chemin |
+|---|---|---|---|---|
+| projet | Un chantier avec une fin : son pilotage (échéance, prochaine étape, tâches) | actif, bloque, clos, abandonne | clos, abandonne | `projets/<slug>.md` |
+| processus | Une suite de skills qui revient | a-construire, actif, clos | clos | `processus/<slug>.md` |
+| okr | Les objectifs et résultats clés du trimestre | en-cours, clos | clos | `domaines/<domaine>/<slug>.md` |
+| tableau | Une vue d'ensemble tenue à jour, comme les revenus | en-cours, clos | clos | `domaines/<domaine>/<slug>.md` |
+| livrable | Ce qu'on remet à quelqu'un, texte ou visuel | en-cours, a-valider, clos | clos | `domaines/<domaine>/livrables/<slug>.md` |
+| compte-rendu | Ce qui s'est dit et décidé dans une réunion | en-cours, a-valider, clos | clos | `domaines/<domaine>/comptes-rendus/<date>-<slug>.md` |
+| concept | Une connaissance durable | en-cours, clos | clos | `savoir/concepts/<slug>.md` |
+| source | Une source à lire ou lue : un article, un PDF, une vidéo | a-lire, lue | lue | `savoir/sources/<slug>.md` |
+| entretien | La fiche d'un entretien `grill-me` | en-cours, clos | clos | `journal/entretiens/<date>-<slug>.md` |
+| profil | Le profil d'installation, déposé dans `inbox/` | — | — | — |
 
 ## Ce workspace
 
@@ -60,8 +62,8 @@ Tes domaines, tes types et tes champs à toi. La skill `installation` les écrit
 | Domaine | Ce qu'il couvre |
 |---|---|
 
-| Type | Ce que c'est | Statuts | Fin |
-|---|---|---|---|
+| Type | Ce que c'est | Statuts | Fin | Chemin |
+|---|---|---|---|---|
 
 | Champ | Ce qu'il dit | Format | Obligatoire pour |
 |---|---|---|---|

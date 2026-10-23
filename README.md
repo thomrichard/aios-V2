@@ -20,8 +20,8 @@ L'agent fait tout : il récupère le socle, dépose ton profil dans `inbox/` et 
 
 ## Ce que tu touches
 
-- `inbox/` : tu y déposes tout (fichiers, liens, notes, dictées). Elle est vidée chaque nuit à 2 h.
-- `outbox/` : tu y lis le point du jour (`outbox/points/`) et la page `outbox/index.html`, qui montre tout ce qui est sorti, tes process et tes skills.
+- `inbox/` : tu y déposes tout (fichiers, liens, notes, dictées). Elle est vidée chaque nuit à 2 h : chaque élément reçoit ses métadonnées et se range tout seul.
+- `outbox/` : tu y lis le point du jour (`outbox/points/`), les questions qui attendent ta réponse (`outbox/questions.md`) et la page `outbox/index.html`, qui montre tout ce qui est sorti, tes process et tes skills.
 
 Le reste est rangé pour l'IA. Tu n'as jamais besoin de l'ouvrir.
 
@@ -54,7 +54,7 @@ Le reste (skills deck, agenda, e-mails, stats) se branche avec les guides de `in
 2. Vérifie les liens vers `skills/`. S'ils manquent :
    - Mac / Linux : `sh systeme/scripts/liens.sh`
    - Windows (jonction, sans droits admin) : `mklink /J .claude\skills skills` puis `mklink /J .agents\skills skills`
-3. Copie `.env.example` en `.env` et choisis ton agent : `AGENT=claude`, `codex` ou `gemini`.
+3. Copie `.env.example` en `.env` et choisis ton agent : `AGENT=claude`, `codex` ou `gemini`. Si tu gardes des vidéos ou des sons, règle `FICHIERS_LOURDS` sur un dossier hors du dépôt (un dossier Google Drive synchronisé, par exemple).
 4. Active le contrôle avant chaque commit : `git config core.hooksPath systeme/hooks`
 5. Dépose ton profil dans `inbox/` si tu en as un, puis lance la skill `installation` (« installe l'AIOS »). Sans profil, elle pose toutes les questions.
 6. Laisse vide le `CLAUDE.md` global de ta machine : tout vit dans le workspace.
@@ -66,6 +66,7 @@ Le reste (skills deck, agenda, e-mails, stats) se branche avec les guides de `in
 |---|---|
 | `systeme/scripts/index.py` | Génère les `_index.md` depuis les en-têtes, `outbox/index.html`, et dans `AGENTS.md` la carte des domaines (depuis `systeme/metadonnees.md`) et les projets actifs (depuis `projets/`) |
 | `systeme/scripts/verifier.py` | Contrôle la source unique, les liens vers `skills/`, les index d'images, la mémoire, les en-têtes (d'après `systeme/metadonnees.md`) et les plafonds de taille |
+| `systeme/scripts/ranger.py <fichier>` | Range un fichier à la place que lui donne son en-tête (colonne « Chemin » de `systeme/metadonnees.md`) ; envoie vidéos et sons dans le dossier des fichiers lourds |
 | `systeme/scripts/lancer.py <skill>` | Lance une skill sans discussion, avec l'agent de `.env` et le modèle de `systeme/modeles.md` |
 | `systeme/scripts/liens.sh` | Crée `.claude/skills` et `.agents/skills` |
 | `systeme/scripts/interface.py installer` | Garde l'interface allumée en permanence (macOS, Linux) ; `etat`, `retirer` |

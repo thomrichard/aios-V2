@@ -60,6 +60,10 @@ Rempli avec `grill-me` et la liste `skills/installation/references/questions.md`
 
 ### Q13 · Ce qu'il doit toujours savoir sur moi, ou ne jamais faire
 
+## Fichiers lourds
+
+### Q14 · Le dossier de mes vidéos et de mes sons, hors du dépôt
+
 ## En plus (facultatif) · Décisions déjà prises
 
 Une ligne par décision, avec son pourquoi. Elles iront dans `journal/decisions.md`.
