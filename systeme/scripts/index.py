@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Génère les _index.md depuis les en-têtes des fichiers, la page outbox/index.html (sorties, process, skills),
-et les réglages de l'interface (départements et routines) depuis AGENTS.md et systeme/routines.md.
+et les réglages de l'interface (départements, routines, applications) depuis AGENTS.md,
+systeme/routines.md et systeme/connexions.md.
 
 Usage : python3 systeme/scripts/index.py [--check]
   --check : n'écrit rien, liste les index qui ne sont plus à jour (code 1 s'il y en a).
@@ -363,6 +364,28 @@ def routines_interface():
     return json.dumps(contenu, indent=2, ensure_ascii=False) + "\n"
 
 
+def apps_interface():
+    """config/apps.json de l'interface, depuis le tableau de systeme/connexions.md."""
+    genres = {"cli": "cli", "api": "api", "mcp": "mcp"}
+    apps = []
+    for r in tableau(os.path.join(RACINE, "systeme", "connexions.md"), "Outil"):
+        outil = r.get("Outil", "").strip("`")
+        if not outil:
+            continue
+        genre = genres.get(r.get("Méthode", "").strip("`").lower(), "app")
+        app = {"id": "app:" + re.sub(r"[^a-z0-9]+", "-", outil.lower()).strip("-"), "label": outil, "kind": genre,
+               "access": "local", "status": "live", "desc": r.get("Pourquoi", "")}
+        # Plusieurs noms séparés par des virgules : un même service branché deux fois (MCP local et connecteur du compte)
+        noms = [n.strip().strip("`") for n in r.get("Commande", "").split(",")]
+        noms = [n for n in noms if n and n not in ("—", "-")]
+        if noms:
+            app["mcp" if genre == "mcp" else "command"] = noms if genre == "mcp" and len(noms) > 1 else noms[0]
+        apps.append(app)
+    contenu = {"_note": "Généré par systeme/scripts/index.py depuis systeme/connexions.md : ne pas modifier à la main.",
+               "apps": apps}
+    return json.dumps(contenu, indent=2, ensure_ascii=False) + "\n"
+
+
 def espace_interface():
     """config/workspace.json de l'interface : chaque dossier de domaines/ s'affiche ouvert sur la carte, sans clic."""
     chemin = os.path.join(RACINE, "interface", "config", "workspace.json")
@@ -391,6 +414,7 @@ def cibles():
         yield os.path.join(RACINE, "interface", "snapshots", "routines.json"), routines_interface()
         if os.path.exists(os.path.join(RACINE, "interface", "config", "workspace.json")):
             yield os.path.join(RACINE, "interface", "config", "workspace.json"), espace_interface()
+        yield os.path.join(RACINE, "interface", "config", "apps.json"), apps_interface()
 
 
 def main():
