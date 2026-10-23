@@ -160,15 +160,36 @@ L'agent récupère le socle, dépose le profil dans l'inbox et lance l'installat
 
 Le socle marche déjà sans rien régler : il fournit le domaine `operations` (pilotage, admin, l'AIOS lui-même) et des types de base (projet, livrable, compte rendu, concept, source…). Le catalogue ajoute ce qui te ressemble. Chacun repart avec son AIOS.
 
-## Avant d'agir : grill-me, align, devil
+## Une journée de travail avec l'agent
 
-Trois skills servent à bien démarrer. Chacune a son usage, et une seule.
+Quelques skills courtes suivent le fil d'une journée. Aucune n'est obligatoire : chacune se lance quand elle sert, par son nom (« reprendre », « align »…).
 
-| Skill | Quand | Comment | Combien de temps | Trace écrite |
-|---|---|---|---|---|
-| `grill-me` | explorer une idée, décider, préparer un gros projet | une question à la fois, avec une réponse proposée | 15 à 45 minutes | oui, une fiche d'entretien |
-| `align` | juste avant une tâche floue ou coûteuse | quelques questions à choix, toutes d'un coup | 30 secondes | non |
-| `devil` | avant de s'engager sur un choix ou un livrable | des objections sérieuses, puis un verdict | quelques minutes | non |
+```mermaid
+flowchart LR
+    R[reprendre<br/>où on en était] --> A[align<br/>viser juste]
+    A --> B[burst<br/>plusieurs versions]
+    B --> D[devil<br/>les objections]
+    D --> H[humanizer<br/>la voix de l'auteur]
+    H --> C[close<br/>rien ne se perd]
+    C --> K[calibrate<br/>l'agent apprend]
+    C -. "le point de reprise" .-> R
+```
+
+| Skill | Quand | Ce qu'elle fait | Trace écrite |
+|---|---|---|---|
+| `reprendre` | en ouvrant une session sur un sujet déjà commencé | redonne le point : où on en est, décidé, ouvert, prochaine action | non, elle lit |
+| `align` | juste avant une tâche floue ou coûteuse | quelques questions à choix, toutes d'un coup | non |
+| `burst` | quand on veut choisir plutôt que corriger | plusieurs variantes vraiment différentes d'un livrable | la version retenue |
+| `devil` | avant de s'engager sur un choix ou un livrable | des objections sérieuses, puis un verdict | non |
+| `humanizer` | avant de publier un texte écrit avec l'IA | retire les tics d'écriture « IA », garde la voix de l'auteur | le texte, si tu le demandes |
+| `close` | en fin de session | range tout ce qui compte, écrit le point de reprise | oui |
+| `calibrate` | en fin de session, après des corrections | propose de faire apprendre l'agent | oui, après ton choix |
+
+### reprendre : se remettre à niveau en une minute
+
+Une nouvelle session ne sait rien de la veille. Tu dis « reprends le site web ». L'agent cherche le sujet (les projets actifs, le routeur du domaine, le journal, les bilans de clôture), lit l'essentiel, puis te donne le point en quelques lignes : où on en est, ce qui est décidé (et ce qu'on a écarté), ce qui reste ouvert, et une seule prochaine action. Il n'écrit rien : il lit.
+
+C'est l'autre moitié de `close` : `close` écrit le point de reprise, `reprendre` le relit. Le fichier du projet (`projets/<slug>.md`) sert de dossier partagé entre les sessions, même lancées en parallèle.
 
 ### align : viser juste du premier coup
 
@@ -178,13 +199,70 @@ Un brief flou fait tâtonner l'agent. Avec `align`, il pose d'abord quelques que
 
 S'il faut plus de cinq questions, ou s'il s'agit de décider plutôt que d'exécuter, `align` renvoie à `grill-me`.
 
+### burst : choisir plutôt que corriger
+
+Corriger une seule version, c'est lent. Avec `burst`, l'agent produit d'un coup plusieurs variantes complètes (trois par défaut, cinq au plus), chacune sur un axe annoncé : l'angle, le ton, la structure, la longueur, le style. Tu choisis : « B », « A avec la fin de C », ou « burst sur B » pour varier encore à partir d'elle. Pas de quasi-doublons : deux variantes trop proches, et l'une est remplacée. Un visuel ou une page s'affiche côte à côte, dans une seule page.
+
 ### devil : l'avocat du diable
 
 Un modèle a tendance à dire oui. `devil` cherche sérieusement ce qui cloche : trois objections par défaut, de la plus grave à la moins grave. Chacune dit ce qui la fonde et ce qui la lèverait. L'agent vérifie dans le workspace au lieu de supposer, puis donne son verdict : on y va, on y va après avoir levé telle objection, ou on revoit le choix. S'il y a moins d'objections sérieuses que demandé, il le dit au lieu d'en inventer.
 
 *Exemple, un essai réel : brancher un MCP communautaire pour Airtable, tenu par un seul mainteneur. `devil` a donné trois objections fondées sur `systeme/connexions.md` (l'ordre de préférence des connexions) et sur la règle des clés, puis un verdict.*
 
-`align` et `devil` sont réécrites d'après ce que Jay E | RoboNuggets montre de ses skills en vidéo : ses fichiers ne sont pas publics.
+### humanizer : que le texte sonne comme son auteur
+
+Un texte écrit avec l'IA garde des tics qui le rendent plat : la triade « simple, rapide et efficace », le « ce n'est pas X, c'est Y », la question rhétorique en accroche, les mots gonflés. `humanizer` les repère, à l'aide d'une liste d'une quarantaine de motifs en français (`skills/humanizer/references/motifs.md`), et réécrit le texte : même sens, mêmes faits, à peu près la même longueur. Ta charte d'écriture, si elle est dans ta mémoire, passe avant tout. Il a quatre modes selon le support : script (lu à voix haute), newsletter, post, page. « humanizer liste » nomme seulement les tics, sans toucher au texte.
+
+Le but n'est pas de tromper un détecteur : c'est que le texte sonne comme toi, et qu'il dise les choses plus clairement. Il n'invente ni fait ni anecdote pour « faire humain ».
+
+### Et grill-me ?
+
+`align` ne double pas `grill-me`. Chacune a son usage :
+
+| Skill | Pour | Comment | Combien de temps | Trace écrite |
+|---|---|---|---|---|
+| `grill-me` | explorer une idée, décider, préparer un gros projet | une question à la fois, avec une réponse proposée | 15 à 45 minutes | oui, une fiche d'entretien |
+| `align` | viser juste avant d'exécuter | quelques questions à choix, toutes d'un coup | 30 secondes | non |
+| `devil` | contredire avant de s'engager | des objections sérieuses, puis un verdict | quelques minutes | non |
+
+`reprendre`, `align`, `burst`, `devil` et `humanizer` sont réécrites d'après ce que Jay E | RoboNuggets montre de ses skills en vidéo : ses fichiers ne sont pas publics. `reprendre` s'appelle `onboard` chez lui.
+
+## La fin de session : close, puis calibrate
+
+Une discussion avec l'agent finit toujours par disparaître. On perd rarement la décision ; on perd le chemin : les options écartées, et pourquoi. `close` règle ça : après elle, le chat peut disparaître sans rien perdre. Tu dis « close », ou « on ferme ».
+
+Elle travaille en cinq temps :
+
+1. **L'inventaire.** L'agent relit la session et trie en quatre : les décisions (avec leur pourquoi), les livrables, ce qui n'existe que dans le chat (un texte proposé, une analyse), les sujets ouverts. Il te montre cet inventaire avant d'écrire quoi que ce soit.
+2. **Chaque chose à sa place.** Une décision va dans `journal/decisions.md`, avec ce qu'on a écarté. Ce qui n'existe que dans le chat devient une fiche, rangée par `classer` ; dans le doute, une ligne dans `inbox/capture.md`. Un projet touché est mis à jour. Une préférence durable devient un souvenir. Chaque chantier laisse sa ligne dans `journal/log.md`.
+3. **Chaque sujet ouvert devient une tâche à reprendre** : dans son projet, dans un nouveau projet qu'il propose, ou en ligne de capture que le rangement de nuit rangera.
+4. **Rien ne traîne.** Un livrable promis mais jamais écrit est écrit. Un programme lancé est arrêté ou signalé. Des changements non enregistrés dans Git sont signalés, avec un commit proposé ; jamais d'envoi en ligne sans ton accord. Puis l'agent lance le vérificateur.
+5. **Le récap**, en quelques lignes : ce qui est fait, où c'est écrit, ce qui attend, et la phrase exacte pour reprendre chaque sujet. C'est ce point de reprise que `reprendre` relira à la session suivante. Si tu l'as corrigé pendant la session, il propose `calibrate`.
+
+Une session longue laisse aussi un bilan dans `journal/clotures/<sujet>-AA-MM.md` : le périmètre, ce qui est fait, les décisions, les propositions non engagées, les limites.
+
+Les deux skills se partagent le travail : `close` garde le **contenu** de la session ; `calibrate` (plus bas) fait **apprendre l'agent** (ses règles, ses skills). `close` ne touche jamais aux règles ni aux skills.
+
+*Un essai réel, en deux temps : une session de travail sur un projet de site web, puis « close ». Le choix d'Astro a été noté, avec son pourquoi et les options écartées. Le projet a été mis à jour, et la liste des projets actifs d'`AGENTS.md` a suivi. L'accroche rédigée dans le chat a été gardée. La préférence « phrases courtes » est devenue un souvenir. Un commit a été proposé, pas fait. Le récap a donné une phrase de reprise par sujet.*
+
+`close` est reprise de la skill close de Thomas (classroom « Faire vivre ton AIOS »), adaptée à AIOS v2.
+
+## Comment l'AIOS s'améliore
+
+Le but : une correction donnée une fois ne revient pas. L'agent s'ajuste à toi, session après session. Trois outils s'en chargent, et rien ne change sans ton accord.
+
+- **« Retiens ».** Une préférence ou un fait qui doit durer devient un souvenir dans `memory/`, avec sa ligne dans `memory/MEMORY.md`. *Exemple : « retiens que je tutoie mes clients ».*
+- **`note` : mettre un retour de côté.** Tu remarques qu'une skill pourrait mieux faire, mais tu es en plein travail. Tu dis « note pour classer : … ». L'agent écrit une ligne dans `skills/classer/feedback.md`, puis reprend là où vous en étiez. Il ne touche pas à la skill. Plus tard, à froid, tu dis « applique les retours de classer » : il propose les changements, tu choisis, il les applique. Chaque retour traité est coché, jamais effacé.
+- **`calibrate` : le point de fin de session.** L'agent relit la discussion. Il cherche tes corrections (« non, pas ça »), tes préférences, les étapes oubliées, ce qui est revenu plusieurs fois. Il reprend aussi les retours mis de côté avec `note`. Puis il propose au plus sept changements numérotés, chacun avec son pourquoi : une skill, une ligne d'`AGENTS.md`, un souvenir, un réglage. Tu choisis (« 1 et 3 », « tout sauf 2 »), il applique et vérifie. Pour une session courte, « calibre léger » ne propose que trois changements, les corrections répétées.
+
+*Exemple : pendant le rangement, tu corriges deux fois la même chose. En fin de session, `calibrate` te propose d'ajouter la règle à la skill `classer`. Tu dis oui, et la correction ne reviendra plus.*
+
+Deux limites :
+
+- `calibrate` ne tourne jamais dans une routine : il faut que tu sois là pour choisir.
+- Dans un AIOS installé, l'agent ne modifie pas une skill du socle, pour que les mises à jour du socle restent possibles. Le retour reste dans son `feedback.md`, marqué « pour le socle », et un souvenir donne l'effet tout de suite.
+
+`calibrate` est reprise de la skill de Jay E | RoboNuggets (licence MIT), traduite et adaptée à l'AIOS. `note` a été construite pour aller avec. Un essai réel a marché avec le petit modèle : « Note pour classer : … », puis « Applique les retours de classer ».
 
 ## Ce qui tourne tout seul
 
@@ -236,42 +314,13 @@ flowchart LR
 
 Le vérificateur (`verifier.py`) est le garde-fou : il signale un en-tête qui ne suit pas les réglages, un fichier qui n'est pas à sa place, un domaine sans routeur, une carte modifiée à la main. Ce sont des alertes : elles ne bloquent rien.
 
-## La fin de session : close, puis calibrate
+### Brancher un outil : search-connectors
 
-Une discussion avec l'agent finit toujours par disparaître. On perd rarement la décision ; on perd le chemin : les options écartées, et pourquoi. `close` règle ça : après elle, le chat peut disparaître sans rien perdre. Tu dis « close », ou « on ferme ».
+Pour brancher une application (Notion, un agenda, une messagerie…), tu dis « comment brancher Notion ». L'agent part du besoin (lire ou écrire quoi, et à quelle fréquence) et de ce qui est déjà branché. Il cherche ensuite dans l'ordre de `systeme/connexions.md` : l'outil officiel de l'éditeur, une CLI de la communauté, l'API, puis un MCP de la communauté. Il compare les options dans un tableau (ce qu'elles couvrent, leur entretien, leurs risques) et recommande la plus légère qui fait le travail. Il n'installe rien sans ton oui ; les clés vont dans `.env`, jamais dans le chat. Puis il teste par une vraie lecture et inscrit la connexion dans `systeme/connexions.md`.
 
-Elle travaille en cinq temps :
+*Exemple, un essai réel : pour Notion, l'agent a vu que le connecteur claude.ai était déjà branché, trouvé le MCP officiel de Notion, classé cinq options, puis attendu le oui.*
 
-1. **L'inventaire.** L'agent relit la session et trie en quatre : les décisions (avec leur pourquoi), les livrables, ce qui n'existe que dans le chat (un texte proposé, une analyse), les sujets ouverts. Il te montre cet inventaire avant d'écrire quoi que ce soit.
-2. **Chaque chose à sa place.** Une décision va dans `journal/decisions.md`, avec ce qu'on a écarté. Ce qui n'existe que dans le chat devient une fiche, rangée par `classer` ; dans le doute, une ligne dans `inbox/capture.md`. Un projet touché est mis à jour. Une préférence durable devient un souvenir. Chaque chantier laisse sa ligne dans `journal/log.md`.
-3. **Chaque sujet ouvert devient une tâche à reprendre** : dans son projet, dans un nouveau projet qu'il propose, ou en ligne de capture que le rangement de nuit rangera.
-4. **Rien ne traîne.** Un livrable promis mais jamais écrit est écrit. Un programme lancé est arrêté ou signalé. Des changements non enregistrés dans Git sont signalés, avec un commit proposé ; jamais d'envoi en ligne sans ton accord. Puis l'agent lance le vérificateur.
-5. **Le récap**, en quelques lignes : ce qui est fait, où c'est écrit, ce qui attend, et la phrase exacte pour reprendre chaque sujet. Si tu l'as corrigé pendant la session, il propose `calibrate`.
-
-Une session longue laisse aussi un bilan dans `journal/clotures/<sujet>-AA-MM.md` : le périmètre, ce qui est fait, les décisions, les propositions non engagées, les limites.
-
-Les deux skills se partagent le travail : `close` garde le **contenu** de la session ; `calibrate` (plus bas) fait **apprendre l'agent** (ses règles, ses skills). `close` ne touche jamais aux règles ni aux skills.
-
-*Un essai réel, en deux temps : une session de travail sur un projet de site web, puis « close ». Le choix d'Astro a été noté, avec son pourquoi et les options écartées. Le projet a été mis à jour, et la liste des projets actifs d'`AGENTS.md` a suivi. L'accroche rédigée dans le chat a été gardée. La préférence « phrases courtes » est devenue un souvenir. Un commit a été proposé, pas fait. Le récap a donné une phrase de reprise par sujet.*
-
-`close` est reprise de la skill close de Thomas (classroom « Faire vivre ton AIOS »), adaptée à AIOS v2.
-
-## Comment l'AIOS s'améliore
-
-Le but : une correction donnée une fois ne revient pas. L'agent s'ajuste à toi, session après session. Trois outils s'en chargent, et rien ne change sans ton accord.
-
-- **« Retiens ».** Une préférence ou un fait qui doit durer devient un souvenir dans `memory/`, avec sa ligne dans `memory/MEMORY.md`. *Exemple : « retiens que je tutoie mes clients ».*
-- **`note` : mettre un retour de côté.** Tu remarques qu'une skill pourrait mieux faire, mais tu es en plein travail. Tu dis « note pour classer : … ». L'agent écrit une ligne dans `skills/classer/feedback.md`, puis reprend là où vous en étiez. Il ne touche pas à la skill. Plus tard, à froid, tu dis « applique les retours de classer » : il propose les changements, tu choisis, il les applique. Chaque retour traité est coché, jamais effacé.
-- **`calibrate` : le point de fin de session.** L'agent relit la discussion. Il cherche tes corrections (« non, pas ça »), tes préférences, les étapes oubliées, ce qui est revenu plusieurs fois. Il reprend aussi les retours mis de côté avec `note`. Puis il propose au plus sept changements numérotés, chacun avec son pourquoi : une skill, une ligne d'`AGENTS.md`, un souvenir, un réglage. Tu choisis (« 1 et 3 », « tout sauf 2 »), il applique et vérifie. Pour une session courte, « calibre léger » ne propose que trois changements, les corrections répétées.
-
-*Exemple : pendant le rangement, tu corriges deux fois la même chose. En fin de session, `calibrate` te propose d'ajouter la règle à la skill `classer`. Tu dis oui, et la correction ne reviendra plus.*
-
-Deux limites :
-
-- `calibrate` ne tourne jamais dans une routine : il faut que tu sois là pour choisir.
-- Dans un AIOS installé, l'agent ne modifie pas une skill du socle, pour que les mises à jour du socle restent possibles. Le retour reste dans son `feedback.md`, marqué « pour le socle », et un souvenir donne l'effet tout de suite.
-
-`calibrate` est reprise de la skill de Jay E | RoboNuggets (licence MIT), traduite et adaptée à l'AIOS. `note` a été construite pour aller avec. Un essai réel a marché avec le petit modèle : « Note pour classer : … », puis « Applique les retours de classer ».
+`search-connectors` est réécrite d'après ce que Jay E | RoboNuggets montre de la sienne : son fichier n'est pas public.
 
 ## Un exemple de sur mesure : les idées « un jour, peut-être »
 
