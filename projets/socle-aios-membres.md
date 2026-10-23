@@ -13,3 +13,4 @@ maj: 2026-10-22
 - [ ] Définir la prochaine étape et l'échéance
 
 ## Fichiers
+- [Remontée au socle : routines directes, fiches YouTube, graphe à jour](../domaines/produits/2026-10-22-remontee-socle/passation.md) · à valider

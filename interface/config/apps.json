@@ -1,5 +1,28 @@
 {
-  "_note": "Seulement de vraies connexions : serveurs MCP, outils en ligne de commande qui parlent à un service, API avec des clés enregistrées. Les environnements locaux (node, python, ffmpeg) n’ont rien à faire ici. Facultatif pour chaque app : mcp (le nom du serveur tel que ton agent le note), command (le mot de la CLI, pour compter l’usage), path (un tracé de logo en 24x24) ou svg (un dessin au trait en 48x48). BRAIN.md, étape 3.",
+  "_note": "Seulement de vraies connexions : serveurs MCP, outils en ligne de commande qui parlent à un service, API avec des clés enregistrées. Les environnements locaux (node, python, ffmpeg) n’ont rien à faire ici. Facultatif pour chaque app : mcp (le nom du serveur tel que ton agent le note, ou une liste de noms quand le même service est branché deux fois), command (le mot de la CLI, pour compter l’usage), path (un tracé de logo en 24x24) ou svg (un dessin au trait en 48x48). BRAIN.md, étape 3.",
   "_example": { "id": "app:github", "label": "GitHub CLI", "kind": "cli", "command": "gh", "access": "local", "status": "live", "desc": "dépôts, pull requests, tickets" },
-  "apps": []
+  "apps": [
+    { "id": "app:vidiq", "label": "vidIQ", "kind": "mcp", "mcp": ["vidiq", "102e3d80-56f1-4fc2-9c0f-5bd03edaf6f4"], "access": "local", "status": "live", "desc": "recherche YouTube, stats de chaîne, titres et miniatures" },
+    { "id": "app:gws-cli", "label": "Google Workspace CLI", "kind": "cli", "command": "gws", "access": "local", "status": "live", "desc": "Gmail, Agenda, Drive en ligne de commande" },
+    { "id": "app:gmail-connector", "label": "Gmail", "kind": "mcp", "mcp": "332ce25a-1938-49e6-b6e1-27a367640409", "access": "local", "status": "live", "desc": "lire, trier et préparer des e-mails" },
+    { "id": "app:gcal", "label": "Google Agenda", "kind": "mcp", "mcp": "0168199f-d285-4b9b-8c92-6a93fb5ca090", "access": "local", "status": "live", "desc": "événements et disponibilités" },
+    { "id": "app:gdrive", "label": "Google Drive", "kind": "mcp", "mcp": "e0b911f2-25ad-40f5-8338-65388b05b66c", "access": "local", "status": "live", "desc": "fichiers du Drive" },
+    { "id": "app:wisprflow", "label": "Wispr Flow", "kind": "mcp", "mcp": ["wisprflow", "af934a57-1574-4e32-a045-6bf30d43e1b8"], "access": "local", "status": "live", "desc": "réunions et notes dictées" },
+    { "id": "app:kit", "label": "Kit", "kind": "mcp", "mcp": ["kit", "bccff635-409f-45e8-80f3-4a9e219fe70a"], "access": "local", "status": "live", "desc": "newsletter : abonnés, séquences, envois" },
+    { "id": "app:apify", "label": "Apify", "kind": "mcp", "mcp": "apify", "access": "local", "status": "live", "desc": "extraction de données sur le web" },
+    { "id": "app:shortio", "label": "Short.io", "kind": "mcp", "mcp": "shortio", "access": "local", "status": "live", "desc": "liens courts" },
+    { "id": "app:opusclip", "label": "OpusClip", "kind": "mcp", "mcp": "795efe4a-bf2c-4ca8-978d-f788eb5759b3", "access": "local", "status": "live", "desc": "clips courts tirés des vidéos" },
+    { "id": "app:excalidraw", "label": "Excalidraw", "kind": "mcp", "mcp": "excalidraw", "access": "local", "status": "live", "desc": "schémas" },
+    { "id": "app:claude-docs", "label": "Claude Docs", "kind": "mcp", "mcp": "1a59c906-04da-521d-bda7-7f71b9f9e01c", "access": "local", "status": "live", "desc": "documents partagés sur claude.ai" },
+    { "id": "app:gh", "label": "GitHub CLI", "kind": "cli", "command": "gh", "access": "local", "status": "live", "desc": "dépôts, pull requests, tickets" },
+    { "id": "app:yt-dlp", "label": "yt-dlp", "kind": "cli", "command": "yt-dlp", "access": "local", "status": "live", "desc": "sous-titres des vidéos YouTube" },
+    { "id": "app:vercel", "label": "Vercel", "kind": "mcp", "mcp": "1eae7c81-0e82-454c-ab75-11403ec336f7", "command": "vercel", "access": "local", "status": "live", "desc": "déploiements" },
+    { "id": "app:otter", "label": "Otter.ai", "kind": "mcp", "mcp": "eebdc91b-740d-4499-8fb3-7b06e3c67944", "access": "local", "status": "live", "desc": "transcriptions de réunions" },
+    { "id": "app:supabase", "label": "Supabase", "kind": "mcp", "mcp": ["supabase", "supabase-dev", "connaissance", "7b649f09-ac8b-42be-995d-f3c4ab091fb7"], "access": "local", "status": "live", "desc": "bases de données, dont connaissance" },
+    { "id": "app:notebooklm", "label": "NotebookLM", "kind": "mcp", "mcp": "notebooklm", "access": "local", "status": "live", "desc": "carnets de recherche Google" },
+    { "id": "app:notion", "label": "Notion", "kind": "mcp", "mcp": "caa56da2-473c-457c-b19d-2eb3900e7842", "access": "local", "status": "live", "desc": "pages et bases Notion" },
+    { "id": "app:slack", "label": "Slack", "kind": "mcp", "mcp": "086131c4-062f-445a-812f-4a6303d72d5f", "access": "local", "status": "live", "desc": "messages Slack" },
+    { "id": "app:miro", "label": "Miro", "kind": "mcp", "mcp": "0585f118-b448-44c0-9e32-4650323a9d7d", "access": "local", "status": "live", "desc": "tableaux Miro" },
+    { "id": "app:gamma", "label": "Gamma", "kind": "mcp", "mcp": "b1d7b025-3644-4244-9b81-dc30ef9bd39e", "access": "local", "status": "live", "desc": "présentations" }
+  ]
 }

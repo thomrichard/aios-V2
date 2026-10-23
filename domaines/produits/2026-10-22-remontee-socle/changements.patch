@@ -1,0 +1,768 @@
+diff --git a/AGENTS.md b/AGENTS.md
+index add4cf3..36d5270 100644
+--- a/AGENTS.md
++++ b/AGENTS.md
+@@ -114,7 +114,8 @@ Avant de dire « c'est fait », vérifie : relance le test ou relis le fichier.
+ 
+ ## Routines
+ 
+-- Une routine = un prompt qui appelle une skill, lancé par `systeme/scripts/lancer.py` depuis un planificateur neutre (cron, Hermes).
++- Une routine = un prompt qui appelle une skill, lancé par `systeme/scripts/lancer.py` depuis un planificateur neutre (cron, launchd, Hermes).
++- Une routine directe lance une commande, sans IA : à préférer quand il n'y a rien à juger.
+ - Liste, horaires, type (active ou passive) et plafond de coût : `systeme/routines.md`.
+ 
+ ## Connexions
+diff --git a/interface/MODIFS.md b/interface/MODIFS.md
+index c62400c..64fc9ac 100644
+--- a/interface/MODIFS.md
++++ b/interface/MODIFS.md
+@@ -8,5 +8,9 @@ SM4RT est tiré de l'Agentic OS v2 de Jay E | RoboNuggets (licence MIT : sa lign
+ 4. Tout est en français : l'écran, les messages du serveur, les pages d'exemple et les guides. Les valeurs lues par le code (statuts, clés, modèles, efforts) restent en anglais. Dates en `fr-FR` et heures sur 24 h, là où c'est seulement de l'affichage.
+ 5. La marque devient SM4RT : textes, titres, bannière (`assets/banner.png`), logo (`assets/sm4rt-hex.svg`), et noms internes (`SM4RT_TOKEN`, en-tête `x-sm4rt-token`, clés du navigateur `sm4rt-os…`, classes `b-sm4rt` et `hud-sm4rt`, groupe d'usage `sm4rt`).
+ 6. La tuile Recos et les mentions de Recos et Carousels (deux autres applis de RoboNuggets) sont retirées. « Appliquer tous les commentaires » marche toujours pour toute page de relecture locale.
++7. `server.js` : ouvrir le second cerveau reconstruit sa carte si elle a plus de 30 secondes (`freshBrain`). Sans ça, la carte reste figée jusqu'au clic sur l'icône d'actualisation, et ne montre pas ce que l'agent ou une routine vient d'écrire.
++8. `refresh/brain.mjs` : le contenu des dossiers est préparé à tous les niveaux, plus seulement au premier. Sans ça, un dossier rangé dans un dossier replié (comme `domaines/contenu/videos`) s'ouvre vide et ses fichiers échappent à la recherche.
++9. `copy.js` : entrer dans le second cerveau depuis la page d'accueil le recharge si ses données ont plus d'une minute. Sans ça, la page d'accueil, qui reste ouverte, garde le graphe du moment où on l'a ouverte.
++10. `config/workspace.json` : `systeme/scripts/index.py` ajoute à `visibleRoots` chaque dossier de `domaines/`, à tous les niveaux. Ce qui est rangé dans un domaine s'affiche sur la carte sans clic.
+ 
+ Pour reprendre une nouvelle version du kit : remplacer le dossier, puis refaire ces changements.
+diff --git a/interface/config/workspace.json b/interface/config/workspace.json
+index 57616ea..f13d320 100644
+--- a/interface/config/workspace.json
++++ b/interface/config/workspace.json
+@@ -21,7 +21,8 @@
+     "processus",
+     "skills",
+     "memory",
+-    "journal"
++    "journal",
++    "domaines/operations"
+   ],
+   "routing": {},
+   "maxFiles": 500000
+diff --git a/interface/copy.js b/interface/copy.js
+index 326a586..b6eb38a 100644
+--- a/interface/copy.js
++++ b/interface/copy.js
+@@ -33,11 +33,13 @@ function draw(p){progress=clamp(p);const graph=graphViews.includes(view),z=zoomS
+ // not on the live board's fixed 2.5 s timer, so an early orb click rarely waits. A click before then still works:
+ // the puzzle orb covers the real load.
+ function loadFrame(f){if(!f.getAttribute('src'))f.src=f.dataset.src}
++// AIOS: the homepage stays open for days, so entering the brain reloads it when its data is over a minute old (see MODIFS.md)
++let brainAt=0;
+ addEventListener('message',e=>{if(e.source===os.contentWindow&&e.data?.type==='os-copy-ready'){const prime=()=>loadFrame(brain);window.requestIdleCallback?requestIdleCallback(prime,{timeout:1500}):setTimeout(prime,600)}});
+ // While the brain is still loading, the homepage's own C3 puzzle orb keeps solving faster ("thinking").
+ const thinking=v=>post(os,{type:'os-copy-thinking',value:v});
+-function go(target){window.__ambient?.poke();if(target===1&&!ready){loadFrame(brain);pending=true;thinking(true);return}if(opening)return;if(pending)thinking(false);pending=false;ViewTransitions.cancel();queuedView=null;if(target===1){applyView('orbs',false);brain.style.display='block';brain.style.opacity='0';views.style.display='none';brainSend({action:'active',value:true})}else if(!graphViews.includes(view)){applyView('orbs',false);brain.style.opacity='1';brainSend({action:'transition',progress:1,style:'unfold',source})}startZoom(target);opening=true;const id=++animation,start=performance.now(),from=progress,duration=matchMedia('(prefers-reduced-motion:reduce)').matches?0:(zoomStyle?1100:950)*Math.abs(target-from);post(os,{type:'os-copy-pause',value:false});function tick(now){if(id!==animation)return;const t=duration?clamp((now-start)/duration):1;draw(from+(target-from)*ease(t));if(t<1)requestAnimationFrame(tick);else{opening=false;draw(target);if(target===1)post(os,{type:'os-copy-pause',value:true})}}requestAnimationFrame(tick)}
+-addEventListener('message',e=>{const m=e.data||{};if(e.source===os.contentWindow){if(m.type==='os-copy-ready')osReady=true;if(m.type==='os-copy-prime')loadFrame(brain);if(m.type==='os-copy-enter'){source=m.source||source;go(1)}if(m.type==='os-copy-back')go(0);if(m.type==='os-copy-preview-action')announce('Ouvert comme fichier : les actions marchent quand l’OS tourne (node server.js).')}if(e.source===brain.contentWindow){if(m.type==='brain-copy-ready'){ready=true;brainSend({action:'chrome',height:Math.max(64,$('controls').getBoundingClientRect().bottom+12)});settings();draw(progress);setTimeout(()=>loadFrame(views),400);if(pending){pending=false;thinking(false);go(1)}}if(m.type==='sm4rt-os:back'||m.type==='brain-copy-back')go(0)}if(e.source===views.contentWindow){if(m.type==='views-copy-ready'){viewsReady=true;if(!graphViews.includes(view))viewsSend({action:'view',view})}if(m.type==='views-copy-back')go(0)}});
++function go(target){window.__ambient?.poke();if(target===1&&ready&&!opening&&progress===0&&Date.now()-brainAt>60000){ready=false;brain.contentWindow.location.reload()}if(target===1&&!ready){loadFrame(brain);pending=true;thinking(true);return}if(opening)return;if(pending)thinking(false);pending=false;ViewTransitions.cancel();queuedView=null;if(target===1){applyView('orbs',false);brain.style.display='block';brain.style.opacity='0';views.style.display='none';brainSend({action:'active',value:true})}else if(!graphViews.includes(view)){applyView('orbs',false);brain.style.opacity='1';brainSend({action:'transition',progress:1,style:'unfold',source})}startZoom(target);opening=true;const id=++animation,start=performance.now(),from=progress,duration=matchMedia('(prefers-reduced-motion:reduce)').matches?0:(zoomStyle?1100:950)*Math.abs(target-from);post(os,{type:'os-copy-pause',value:false});function tick(now){if(id!==animation)return;const t=duration?clamp((now-start)/duration):1;draw(from+(target-from)*ease(t));if(t<1)requestAnimationFrame(tick);else{opening=false;draw(target);if(target===1)post(os,{type:'os-copy-pause',value:true})}}requestAnimationFrame(tick)}
++addEventListener('message',e=>{const m=e.data||{};if(e.source===os.contentWindow){if(m.type==='os-copy-ready')osReady=true;if(m.type==='os-copy-prime')loadFrame(brain);if(m.type==='os-copy-enter'){source=m.source||source;go(1)}if(m.type==='os-copy-back')go(0);if(m.type==='os-copy-preview-action')announce('Ouvert comme fichier : les actions marchent quand l’OS tourne (node server.js).')}if(e.source===brain.contentWindow){if(m.type==='brain-copy-ready'){ready=true;brainAt=Date.now();brainSend({action:'chrome',height:Math.max(64,$('controls').getBoundingClientRect().bottom+12)});settings();draw(progress);setTimeout(()=>loadFrame(views),400);if(pending){pending=false;thinking(false);go(1)}}if(m.type==='sm4rt-os:back'||m.type==='brain-copy-back')go(0)}if(e.source===views.contentWindow){if(m.type==='views-copy-ready'){viewsReady=true;if(!graphViews.includes(view))viewsSend({action:'view',view})}if(m.type==='views-copy-back')go(0)}});
+ $('back').onclick=()=>go(0);$('motion-speed').oninput=e=>brainSend({action:'motionSpeed',value:+e.target.value});document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>setView(b.dataset.view));document.querySelectorAll('[data-layout]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-layout]').forEach(e=>e.setAttribute('aria-pressed',e===b));brainSend({action:'layout',layout:b.dataset.layout});viewTitle();settings()});$('motion').onclick=()=>{motion=!motion;$('motion').setAttribute('aria-pressed',motion);brainSend({action:'setting',key:'motion',value:motion})};$('menu-button').onclick=()=>{const open=$('menu').hidden;$('menu').hidden=!open;$('menu-button').setAttribute('aria-expanded',open)};document.querySelectorAll('[data-setting]').forEach(e=>e.onchange=()=>{if(e.dataset.setting==='links'&&!e.disabled)linksByView[view==='orbs'?'orbs':'map']=e.checked;settings()});document.querySelectorAll('[data-layer]').forEach(e=>e.onchange=()=>settings());document.querySelectorAll('[data-zoom]').forEach(b=>b.onclick=()=>{const m={action:'zoom',direction:Number(b.dataset.zoom)};graphViews.includes(view)?brainSend(m):viewsSend(m)});$('reset-copy').onclick=()=>{post(os,{type:'os-copy-reset'});motion=true;linksByView.orbs=false;linksByView.map=true;$('motion').setAttribute('aria-pressed',true);document.querySelectorAll('[data-setting],[data-layer]').forEach(e=>e.checked=true);$('menu').hidden=true;$('menu-button').setAttribute('aria-expanded',false);settings();applyView('orbs',false);go(0)};
+ addEventListener('pointerdown',e=>{if(!e.target.closest('.drop')){$('menu').hidden=true;$('menu-button').setAttribute('aria-expanded',false)}});addEventListener('keydown',e=>{if(e.key==='Escape'){if(pending){pending=false;thinking(false);return}if(!$('menu').hidden){$('menu').hidden=true;$('menu-button').setAttribute('aria-expanded',false)}else if(progress>0)go(0)}});
+ 
+diff --git a/interface/refresh/brain.mjs b/interface/refresh/brain.mjs
+index 3ed4730..5ec9c59 100644
+--- a/interface/refresh/brain.mjs
++++ b/interface/refresh/brain.mjs
+@@ -100,8 +100,15 @@ graph.meta.visibleNodes = graph.nodes.length; graph.meta.skills = skillNodes.len
+ graph.meta.applications = graph.nodes.filter(n => n.type === 'app').length; graph.meta.refreshedAt = new Date().toISOString();
+ 
+ // 7. folder contents, loaded only when a folder is opened or searched
++// AIOS: every level, so a folder inside an opened folder opens too (see MODIFS.md)
+ const expansions = {};
+-for (const n of graph.nodes) if (n.type === 'dir') { const kids = scan.expandDir(r.model, cfg, n.id); if (kids) expansions[n.id] = kids; }
++const toOpen = graph.nodes.filter(n => n.type === 'dir').map(n => n.id);
++while (toOpen.length) {
++  const id = toOpen.shift();
++  if (expansions[id]) continue;
++  const kids = scan.expandDir(r.model, cfg, id);
++  if (kids) { expansions[id] = kids; for (const k of kids) if (k.type === 'dir') toOpen.push(k.id); }
++}
+ 
+ // 8. bodies for the offline copy (opened as a file): your instruction files only
+ const bodies = {};
+diff --git a/interface/server.js b/interface/server.js
+index 57469ae..22d58c5 100644
+--- a/interface/server.js
++++ b/interface/server.js
+@@ -491,6 +491,11 @@ function refreshBrain() {
+   })().finally(() => setTimeout(() => { refreshing = null; }, 0));
+   return refreshing;
+ }
++/* AIOS : opening the Second Brain rebuilds its map when it is older than 30 s, so it always shows the workspace as it is now */
++async function freshBrain() {
++  let built = 0; try { built = Date.parse(JSON.parse(fs.readFileSync(path.join(DATA, 'brain-meta.json'), 'utf8')).builtAt) || 0; } catch (_) { }
++  if (Date.now() - built > 30000) await refreshBrain();
++}
+ /* the first start after you set your workspace (or change its config) builds the map by itself */
+ function needsFirstRefresh() {
+   const root = workspaceRoot(); if (!root) return false;
+@@ -631,6 +636,7 @@ const server = http.createServer(async (req, res) => {
+       const f = rel && !rel.startsWith('_trash') ? inside(ARTIFACTS, rel) : null;
+       return f ? serveFile(req, res, f) : sendJson(res, { error: 'introuvable' }, 404);
+     }
++    if (p2 === '/brain/snapshot.js') await freshBrain();
+     const f = publicFile(p2);
+     if (f) return serveFile(req, res, f);
+     sendJson(res, { error: 'introuvable' }, 404);
+diff --git a/interface/snapshots/routines.json b/interface/snapshots/routines.json
+index 197f3a7..f7ca6db 100644
+--- a/interface/snapshots/routines.json
++++ b/interface/snapshots/routines.json
+@@ -24,6 +24,14 @@
+       "status": "paused",
+       "cron": "0 1 * * 1"
+     },
++    {
++      "id": "fiches-youtube",
++      "name": "Fiches YouTube",
++      "source": "planificateur",
++      "desc": "dimanche et jeudi, 1 h · sans IA · exemple · directe, passive : met à jour les fiches de `domaines/contenu/videos/`",
++      "status": "paused",
++      "cron": "0 1 * * 0,4"
++    },
+     {
+       "id": "audit",
+       "name": "Audit",
+diff --git a/systeme/routines.md b/systeme/routines.md
+index 992e064..8952f35 100644
+--- a/systeme/routines.md
++++ b/systeme/routines.md
+@@ -1,15 +1,17 @@
+ # Routines
+ 
+ Une routine = un prompt qui appelle une skill, lancé par `systeme/scripts/lancer.py <skill>` depuis un planificateur neutre.
++Une routine directe lance sa commande sans IA : `systeme/scripts/lancer.py <routine>` (son nom en minuscules, avec des tirets) exécute la colonne Commande. À préférer quand il n'y a rien à juger.
+ Une routine active te remet quelque chose à lire ; une routine passive ne remonte dans le point du jour que ce qui mérite ton attention.
+ 
+-Planificateur : à choisir (serveur avec cron, Hermes, GitHub Actions).
++Planificateur : à choisir (serveur avec cron, launchd sur Mac, Hermes, GitHub Actions). Sur Mac, une routine en place a son fichier `~/Library/LaunchAgents/com.sm4rt.<routine>.plist`.
+ 
+-| Routine | Skill | Quand | Cron | Type | Plafond par semaine | État |
+-|---|---|---|---|---|---|---|
+-| Rangement de nuit | `rangement` | chaque nuit, 2 h | `0 2 * * *` | active : le point du jour | à fixer | à construire |
+-| Veille (exemple) | `veille` | lundi, 1 h | `0 1 * * 1` | passive | à fixer | à construire |
+-| Audit | `audit` | le 1er du mois, 1 h | `0 1 1 * *` | passive | à fixer | à construire |
++| Routine | Skill | Commande | Quand | Cron | Type | Plafond par semaine | État |
++|---|---|---|---|---|---|---|---|
++| Rangement de nuit | `rangement` | — | chaque nuit, 2 h | `0 2 * * *` | active : le point du jour | à fixer | à construire |
++| Veille (exemple) | `veille` | — | lundi, 1 h | `0 1 * * 1` | passive | à fixer | à construire |
++| Fiches YouTube | — | `python3 systeme/scripts/youtube.py fiches --maj && python3 systeme/scripts/index.py` | dimanche et jeudi, 1 h | `0 1 * * 0,4` | exemple · directe, passive : met à jour les fiches de `domaines/contenu/videos/` | sans IA | à construire |
++| Audit | `audit` | — | le 1er du mois, 1 h | `0 1 1 * *` | passive | à fixer | à construire |
+ 
+ État : `à construire`, `en place` ou `à la demande`. La colonne Cron sert au planificateur et à l'interface (`interface/snapshots/routines.json`, générée).
+ 
+@@ -21,4 +23,5 @@ Au-delà de son plafond, une routine est allégée.
+ 
+ ```
+ 0 2 * * * cd /chemin/vers/aios-v2 && python3 systeme/scripts/lancer.py rangement
++0 1 * * 0,4 cd /chemin/vers/aios-v2 && python3 systeme/scripts/lancer.py fiches-youtube
+ ```
+diff --git a/systeme/scripts/index.py b/systeme/scripts/index.py
+index d5a20f8..f8bf1e2 100755
+--- a/systeme/scripts/index.py
++++ b/systeme/scripts/index.py
+@@ -347,9 +347,11 @@ def routines_interface():
+     """snapshots/routines.json de l'interface, depuis le tableau de systeme/routines.md."""
+     routines = []
+     for r in tableau(os.path.join(RACINE, "systeme", "routines.md"), "Routine"):
+-        skill, etat = r.get("Skill", "").strip("`"), r.get("État", "").lower()
++        skill, etat = r.get("Skill", "").strip("`").strip("—-"), r.get("État", "").lower()
++        directe = r.get("Commande", "").strip("`").strip("—-")
+         routine = {"id": skill or r["Routine"].lower().replace(" ", "-"), "name": r["Routine"], "source": "planificateur",
+-                   "desc": " · ".join(x for x in (r.get("Quand", ""), f"skill {skill}" if skill else "", r.get("Type", "")) if x),
++                   "desc": " · ".join(x for x in (r.get("Quand", ""), f"skill {skill}" if skill else "",
++                                                  "sans IA" if directe else "", r.get("Type", "")) if x),
+                    "status": "active" if etat.startswith("en place") else "ondemand" if "demande" in etat else "paused"}
+         cron = r.get("Cron", "").strip("`")
+         if cron and cron not in ("—", "-"):
+@@ -382,6 +384,21 @@ def apps_interface():
+     return json.dumps(contenu, indent=2, ensure_ascii=False) + "\n"
+ 
+ 
++def espace_interface():
++    """config/workspace.json de l'interface : chaque dossier de domaines/ s'affiche ouvert sur la carte, sans clic."""
++    chemin = os.path.join(RACINE, "interface", "config", "workspace.json")
++    with open(chemin, encoding="utf-8") as f:
++        contenu = json.load(f)
++    visibles = [d for d in contenu.get("visibleRoots", []) if not d.startswith("domaines/")]
++    depart = os.path.join(RACINE, "domaines")
++    for dossier, sous, _ in os.walk(depart):
++        sous[:] = sorted(s for s in sous if not s.startswith("."))
++        if dossier != depart:
++            visibles.append(os.path.relpath(dossier, RACINE).replace(os.sep, "/"))
++    contenu["visibleRoots"] = visibles
++    return json.dumps(contenu, indent=2, ensure_ascii=False) + "\n"
++
++
+ def cibles():
+     """Chaque fichier généré et son contenu attendu."""
+     for dossier in tous_les_dossiers():
+@@ -393,6 +410,8 @@ def cibles():
+     if os.path.isdir(os.path.join(RACINE, "interface", "config")):
+         yield os.path.join(RACINE, "interface", "config", "departments.json"), departements_interface()
+         yield os.path.join(RACINE, "interface", "snapshots", "routines.json"), routines_interface()
++        if os.path.exists(os.path.join(RACINE, "interface", "config", "workspace.json")):
++            yield os.path.join(RACINE, "interface", "config", "workspace.json"), espace_interface()
+         yield os.path.join(RACINE, "interface", "config", "apps.json"), apps_interface()
+ 
+ 
+diff --git a/systeme/scripts/lancer.py b/systeme/scripts/lancer.py
+index 42a3e31..590f2cd 100755
+--- a/systeme/scripts/lancer.py
++++ b/systeme/scripts/lancer.py
+@@ -1,7 +1,9 @@
+ #!/usr/bin/env python3
+ """Lance une skill sans discussion, avec l'agent choisi dans .env et le modèle de systeme/modeles.md.
++Lance aussi une routine directe de systeme/routines.md : sa commande, sans IA.
+ 
+-Usage : python3 systeme/scripts/lancer.py <skill> [--modele NOM] [--agent claude|codex|gemini] [--essai]
++Usage : python3 systeme/scripts/lancer.py <skill ou routine> [--modele NOM] [--agent claude|codex|gemini] [--essai]
++  <routine> : son nom en minuscules, avec des tirets (« Fiches YouTube » → fiches-youtube).
+   --essai : affiche la commande sans la lancer.
+ """
+ import argparse
+@@ -28,6 +30,16 @@ def lire_env():
+     return valeurs
+ 
+ 
++def routine_directe(nom):
++    """La commande d'une routine directe de systeme/routines.md, ou None."""
++    from index import tableau
++    for r in tableau(os.path.join(RACINE, "systeme", "routines.md"), "Routine"):
++        commande = r.get("Commande", "").strip("`")
++        if commande not in ("", "—", "-") and r["Routine"].lower().replace(" ", "-") == nom:
++            return commande
++    return None
++
++
+ def tableaux_modeles():
+     """Lit systeme/modeles.md : niveau de chaque skill, modèle de chaque niveau par agent."""
+     with open(os.path.join(RACINE, "systeme", "modeles.md"), encoding="utf-8") as f:
+@@ -55,6 +67,13 @@ def main():
+     p.add_argument("--essai", action="store_true")
+     a = p.parse_args()
+ 
++    directe = routine_directe(a.skill)
++    if directe:
++        if a.essai:
++            print(directe)
++            return 0
++        return subprocess.run(directe, shell=True, cwd=RACINE).returncode
++
+     if not re.fullmatch(r"[a-z0-9-]+", a.skill) or not os.path.exists(os.path.join(RACINE, "skills", a.skill, "SKILL.md")):
+         print(f"Skill introuvable : skills/{a.skill}/SKILL.md")
+         return 1
+diff --git a/systeme/scripts/youtube.py b/systeme/scripts/youtube.py
+new file mode 100644
+index 0000000..8220ac6
+--- /dev/null
++++ b/systeme/scripts/youtube.py
+@@ -0,0 +1,507 @@
++#!/usr/bin/env python3
++"""Lit une chaîne YouTube par les API officielles (Data v3 et Analytics v2), en lecture seule.
++
++Usage : python3 systeme/scripts/youtube.py connecter --client <client_secret.json>
++          une fois : ouvre Google dans le navigateur ; connecte-toi avec le compte qui possède la chaîne.
++          Le client OAuth (type « bureau ») et le jeton vont dans .env, sans jamais s'afficher.
++        python3 systeme/scripts/youtube.py tester
++          lit la chaîne et vérifie chaque accès (Data, Analytics, revenus).
++        python3 systeme/scripts/youtube.py fiches [--dossier D] [--transcriptions T] [--maj] [--essai]
++          une fiche par vidéo longue publique : infos, stats (7 et 30 premiers jours, total), liens entre
++          vidéos, description, transcription par chapitre. Les transcriptions viennent de yt-dlp, gardées
++          dans T (par défaut un dossier temporaire). Sans --maj, une fiche existante n'est pas réécrite.
++          Avec --maj, elle garde sa transcription et sa section « ## Notes » écrite à la main.
++"""
++import argparse
++import base64
++import datetime
++import hashlib
++import http.server
++import json
++import os
++import re
++import secrets
++import shutil
++import ssl
++import subprocess
++import sys
++import tempfile
++import unicodedata
++import urllib.error
++import urllib.parse
++import urllib.request
++import webbrowser
++
++RACINE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
++ENV = os.path.join(RACINE, ".env")
++AUTORISATIONS = [
++    "https://www.googleapis.com/auth/youtube.readonly",
++    "https://www.googleapis.com/auth/yt-analytics.readonly",
++    "https://www.googleapis.com/auth/yt-analytics-monetary.readonly",
++]
++CERTIFICATS = "/etc/ssl/cert.pem"
++CONTEXTE = ssl.create_default_context(cafile=CERTIFICATS if os.path.exists(CERTIFICATS) else None)
++DATA = "https://www.googleapis.com/youtube/v3/"
++ANALYTICS = "https://youtubeanalytics.googleapis.com/v2/reports?ids=channel==MINE"
++MESURES = ["views", "engagedViews", "estimatedMinutesWatched", "subscribersGained", "estimatedRevenue"]
++LIEN_VIDEO = re.compile(r"(?:youtu\.be/|youtube\.com/(?:watch\?v=|shorts/|live/|embed/))([A-Za-z0-9_-]{11})")
++LIEN = re.compile(r"https?://[^\s)>\]]+")
++CHAPITRE = re.compile(r"^\s*\(?((?:\d{1,2}:)?\d{1,2}:\d{2})\)?\s*[-–—:·|]?\s*(.+?)\s*$")
++SANS_SOUS_TITRES = "Pas de sous-titres sur YouTube"
++
++
++def lire_env():
++    valeurs = {}
++    if os.path.exists(ENV):
++        with open(ENV, encoding="utf-8") as f:
++            for ligne in f:
++                ligne = ligne.strip()
++                if ligne and not ligne.startswith("#") and "=" in ligne:
++                    cle, valeur = ligne.split("=", 1)
++                    valeurs[cle.strip()] = valeur.strip().strip("\"'")
++    return valeurs
++
++
++def ecrire_env(nouvelles):
++    """Met à jour ou ajoute des clés dans .env, sans toucher aux autres lignes."""
++    lignes = open(ENV, encoding="utf-8").read().splitlines() if os.path.exists(ENV) else []
++    restantes = dict(nouvelles)
++    for i, ligne in enumerate(lignes):
++        cle = ligne.split("=", 1)[0].strip()
++        if cle in restantes and not ligne.lstrip().startswith("#"):
++            lignes[i] = f"{cle}={restantes.pop(cle)}"
++    lignes += [f"{cle}={valeur}" for cle, valeur in restantes.items()]
++    with open(ENV, "w", encoding="utf-8") as f:
++        f.write("\n".join(lignes) + "\n")
++
++
++def appel(url, donnees=None, jeton=None):
++    """GET (ou POST si données) ; renvoie le JSON, ou {"_erreur": code, "_message": texte}."""
++    corps = urllib.parse.urlencode(donnees).encode() if donnees else None
++    requete = urllib.request.Request(url, data=corps)
++    if jeton:
++        requete.add_header("Authorization", "Bearer " + jeton)
++    try:
++        with urllib.request.urlopen(requete, timeout=60, context=CONTEXTE) as r:
++            return json.load(r)
++    except urllib.error.HTTPError as e:
++        try:
++            erreur = json.load(e)
++        except ValueError:
++            return {"_erreur": e.code, "_message": e.reason}
++        detail = erreur.get("error")
++        message = detail.get("message") if isinstance(detail, dict) else f"{detail} {erreur.get('error_description', '')}"
++        return {"_erreur": e.code, "_message": message.strip()}
++
++
++def jeton_acces():
++    env = lire_env()
++    manquantes = [c for c in ("YOUTUBE_CLIENT_ID", "YOUTUBE_CLIENT_SECRET", "YOUTUBE_REFRESH_TOKEN") if not env.get(c)]
++    if manquantes:
++        sys.exit(f"Il manque {', '.join(manquantes)} dans .env : lance d'abord « youtube.py connecter ».")
++    reponse = appel("https://oauth2.googleapis.com/token", {
++        "client_id": env["YOUTUBE_CLIENT_ID"], "client_secret": env["YOUTUBE_CLIENT_SECRET"],
++        "refresh_token": env["YOUTUBE_REFRESH_TOKEN"], "grant_type": "refresh_token"})
++    if "access_token" not in reponse:
++        sys.exit(f"Jeton refusé ({reponse.get('_message')}) : relance « youtube.py connecter ».")
++    return reponse["access_token"]
++
++
++def connecter(chemin_client):
++    with open(os.path.expanduser(chemin_client), encoding="utf-8") as f:
++        client = json.load(f)
++    if "installed" not in client:
++        sys.exit("Ce client OAuth n'est pas de type « bureau » (installed) : crée-en un dans Google Cloud.")
++    client_id, client_secret = client["installed"]["client_id"], client["installed"]["client_secret"]
++
++    verificateur = secrets.token_urlsafe(64)
++    defi = base64.urlsafe_b64encode(hashlib.sha256(verificateur.encode()).digest()).rstrip(b"=").decode()
++    etat = secrets.token_urlsafe(16)
++    recu = {}
++
++    class Retour(http.server.BaseHTTPRequestHandler):
++        def do_GET(self):
++            recu.update(urllib.parse.parse_qs(urllib.parse.urlparse(self.path).query))
++            self.send_response(200)
++            self.send_header("Content-Type", "text/html; charset=utf-8")
++            self.end_headers()
++            self.wfile.write("<p>C'est bon, tu peux fermer cet onglet.</p>".encode())
++
++        def log_message(self, *args):
++            pass
++
++    serveur = http.server.HTTPServer(("127.0.0.1", 0), Retour)
++    redirection = f"http://127.0.0.1:{serveur.server_port}"
++    url = "https://accounts.google.com/o/oauth2/v2/auth?" + urllib.parse.urlencode({
++        "client_id": client_id, "redirect_uri": redirection, "response_type": "code",
++        "scope": " ".join(AUTORISATIONS), "access_type": "offline", "prompt": "select_account consent",
++        "code_challenge": defi, "code_challenge_method": "S256", "state": etat})
++    print("Connecte-toi avec le compte qui possède la chaîne. Si le navigateur ne s'ouvre pas, ouvre ce lien :")
++    print(url, flush=True)
++    webbrowser.open(url)
++    serveur.timeout = 600
++    serveur.handle_request()
++    serveur.server_close()
++
++    if recu.get("state", [""])[0] != etat or "code" not in recu:
++        sys.exit(f"Autorisation non reçue : {recu.get('error', ['délai dépassé'])[0]}")
++    reponse = appel("https://oauth2.googleapis.com/token", {
++        "client_id": client_id, "client_secret": client_secret, "code": recu["code"][0],
++        "code_verifier": verificateur, "redirect_uri": redirection, "grant_type": "authorization_code"})
++    if "refresh_token" not in reponse:
++        sys.exit(f"Pas de jeton durable reçu : {reponse.get('_message', 'réponse inattendue')}")
++    ecrire_env({"YOUTUBE_CLIENT_ID": client_id, "YOUTUBE_CLIENT_SECRET": client_secret,
++                "YOUTUBE_REFRESH_TOKEN": reponse["refresh_token"]})
++    print("Jeton enregistré dans .env.")
++    tester()
++
++
++def tester():
++    jeton = jeton_acces()
++    chaine = appel("https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&mine=true", jeton=jeton)
++    if not chaine.get("items"):
++        sys.exit(f"Data API v3 : {chaine.get('_message', 'aucune chaîne sur ce compte')}")
++    c = chaine["items"][0]
++    print(f"Data API v3 : OK · {c['snippet']['title']} ({c['id']}) · "
++          f"{c['statistics'].get('subscriberCount')} abonnés · {c['statistics'].get('videoCount')} vidéos")
++    base = ("https://youtubeanalytics.googleapis.com/v2/reports?ids=channel==MINE&startDate=2005-01-01"
++            f"&endDate={datetime.date.today()}")
++    for nom, mesures in [("Analytics v2", "views,engagedViews,subscribersGained"), ("Revenus", "estimatedRevenue")]:
++        r = appel(base + "&metrics=" + mesures, jeton=jeton)
++        print(f"{nom} : " + (f"OK · {mesures} = {r['rows'][0]}" if r.get("rows") else r.get("_message", "aucune donnée")))
++
++
++def data(jeton, ressource, **parametres):
++    """Toutes les pages d'une liste de l'API Data v3."""
++    elements, page = [], None
++    while True:
++        if page:
++            parametres["pageToken"] = page
++        r = appel(DATA + ressource + "?" + urllib.parse.urlencode(parametres), jeton=jeton)
++        if "_erreur" in r:
++            sys.exit(f"Data API v3 ({ressource}) : {r['_message']}")
++        elements += r.get("items", [])
++        page = r.get("nextPageToken")
++        if not page:
++            return elements
++
++
++def analytics(jeton, debut, fin, **parametres):
++    """Les lignes d'un rapport Analytics v2, chacune en dict."""
++    url = f"{ANALYTICS}&startDate={debut}&endDate={fin}&" + urllib.parse.urlencode(parametres)
++    r = appel(url, jeton=jeton)
++    if "_erreur" in r:
++        sys.exit(f"Analytics v2 : {r['_message']}")
++    noms = [h["name"] for h in r.get("columnHeaders", [])]
++    return [dict(zip(noms, ligne)) for ligne in r.get("rows") or []]
++
++
++def secondes(iso):
++    """Durée ISO 8601 (PT1H2M3S) en secondes."""
++    m = re.fullmatch(r"P(?:(\d+)D)?T?(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?", iso or "")
++    j, h, mi, s = (int(x or 0) for x in m.groups()) if m else (0, 0, 0, 0)
++    return ((j * 24 + h) * 60 + mi) * 60 + s
++
++
++def duree(s):
++    s = int(round(s or 0))
++    h, m, s = s // 3600, s % 3600 // 60, s % 60
++    return (f"{h} h " if h else "") + (f"{m} min " if h or m else "") + f"{s} s"
++
++
++def nombre(n, decimales=0):
++    texte = f"{n:,.{decimales}f}".replace(",", " ").replace(".", ",")
++    return texte
++
++
++def slug(texte, longueur=60):
++    texte = unicodedata.normalize("NFKD", texte.replace("’", "'")).encode("ascii", "ignore").decode().lower()
++    texte = re.sub(r"[^a-z0-9]+", "-", texte).strip("-")
++    if len(texte) > longueur:
++        texte = texte[:longueur].rsplit("-", 1)[0]
++    return texte or "video"
++
++
++def sans_symboles(texte):
++    """Garde lettres, chiffres, ponctuation et espaces : retire emoji et pictogrammes."""
++    garde = "".join(c for c in texte if unicodedata.category(c)[0] in "LNPZ" or c in "'’%€$+")
++    return re.sub(r"\s+", " ", garde).strip()
++
++
++def resume(description, titre, communes=()):
++    """La première vraie phrase de la description : ni lien, ni titre de rubrique, ni bloc répété d'une vidéo à l'autre."""
++    for ligne in description.splitlines():
++        ligne = sans_symboles(ligne)
++        lettres = [c for c in ligne if c.isalpha()]
++        majuscules = sum(c.isupper() for c in lettres) / max(len(lettres), 1)
++        if (len(lettres) >= 20 and ligne not in communes and not LIEN.search(ligne)
++                and not ligne.endswith(":") and majuscules < 0.5):
++            break
++    else:
++        ligne = titre
++    ligne = ligne.replace(" #", " ")
++    return ligne if len(ligne) <= 160 else ligne[:157].rsplit(" ", 1)[0] + "…"
++
++
++def chapitres(description):
++    """Les chapitres de la description [(secondes, titre)], si elle en a au moins trois dont un à 0:00."""
++    trouves = []
++    for ligne in description.splitlines():
++        m = CHAPITRE.match(ligne)
++        if m:
++            parties = [int(p) for p in m.group(1).split(":")]
++            debut = sum(p * 60 ** i for i, p in enumerate(reversed(parties)))
++            trouves.append((debut, sans_symboles(m.group(2))))
++    if len(trouves) >= 3 and trouves[0][0] == 0:
++        return trouves
++    return []
++
++
++def transcription(video_id, langue, dossier):
++    """Les répliques [(secondes, texte)] des sous-titres YouTube (automatiques d'origine d'abord)."""
++    candidats = [f"{video_id}.{langue}-orig.json3", f"{video_id}.{langue}.json3"]
++    if not any(os.path.exists(os.path.join(dossier, c)) for c in candidats) and shutil.which("yt-dlp"):
++        subprocess.run(["yt-dlp", "--skip-download", "--write-auto-subs", "--write-subs", "--sub-langs",
++                        f"{langue}-orig,{langue}", "--sub-format", "json3", "-o", os.path.join(dossier, "%(id)s.%(ext)s"),
++                        "--", video_id], capture_output=True, timeout=300)
++    for candidat in candidats:
++        chemin = os.path.join(dossier, candidat)
++        if os.path.exists(chemin):
++            with open(chemin, encoding="utf-8") as f:
++                evenements = json.load(f).get("events", [])
++            repliques = []
++            for e in evenements:
++                texte = "".join(s.get("utf8", "") for s in e.get("segs", []))
++                texte = re.sub(r"\[[^\]]*\]", " ", texte)
++                texte = re.sub(r"\s+", " ", texte).strip()
++                if texte:
++                    repliques.append((e.get("tStartMs", 0) / 1000, texte))
++            return repliques
++    return []
++
++
++def paragraphes(repliques, pas=60):
++    """Regroupe les répliques en paragraphes d'environ une minute."""
++    blocs, courant, debut = [], [], None
++    for t, texte in repliques:
++        if debut is None:
++            debut = t
++        courant.append(texte)
++        if t - debut >= pas and texte.endswith((".", "?", "!")):
++            blocs.append(" ".join(courant))
++            courant, debut = [], None
++    if courant:
++        blocs.append(" ".join(courant))
++    return blocs
++
++
++def sections(chemin):
++    """Les sections « ## Titre » d'une fiche existante : {titre: lignes}, sans les blancs autour."""
++    if not os.path.exists(chemin):
++        return {}
++    trouvees, titre, dans_code = {}, None, False
++    with open(chemin, encoding="utf-8") as f:
++        for ligne in f.read().splitlines():
++            if ligne.startswith("```"):
++                dans_code = not dans_code
++            if ligne.startswith("## ") and not dans_code:
++                titre = ligne[3:].strip()
++                trouvees[titre] = []
++            elif titre:
++                trouvees[titre].append(ligne)
++    for lignes in trouvees.values():
++        while lignes and not lignes[0].strip():
++            lignes.pop(0)
++        while lignes and not lignes[-1].strip():
++            lignes.pop()
++    return trouvees
++
++
++def horodatage(s):
++    s = int(s)
++    return f"{s // 3600}:{s % 3600 // 60:02d}:{s % 60:02d}" if s >= 3600 else f"{s // 60}:{s % 60:02d}"
++
++
++def stats_periode(jeton, video_id, debut, jours, dernier_jour):
++    """Somme des mesures sur les `jours` premiers jours, ou None si la période n'est pas encore close."""
++    fin = debut + datetime.timedelta(days=jours - 1)
++    if fin > dernier_jour:
++        return None
++    lignes = analytics(jeton, debut, fin, dimensions="day", filters=f"video=={video_id}", metrics=",".join(MESURES))
++    return {m: sum(l[m] for l in lignes) for m in MESURES}
++
++
++def cellules_stats(s):
++    if s is None:
++        return ["en cours"] * 5
++    return [nombre(s["views"]), nombre(s["engagedViews"]), nombre(s["estimatedMinutesWatched"] / 60, 1),
++            nombre(s["subscribersGained"]), nombre(s["estimatedRevenue"], 2) + " $"]
++
++
++def fiches(dossier, dossier_transcriptions, maj, essai):
++    jeton = jeton_acces()
++    aujourd_hui = datetime.date.today()
++    parties = dossier.strip("/").split("/")
++    domaine = parties[1] if len(parties) > 1 and parties[0] == "domaines" else "contenu"
++    dossier = os.path.join(RACINE, dossier)
++    dossier_transcriptions = dossier_transcriptions or tempfile.mkdtemp(prefix="youtube-")
++    os.makedirs(dossier_transcriptions, exist_ok=True)
++
++    # Les vidéos longues publiques de la chaîne.
++    chaine = data(jeton, "channels", part="contentDetails", mine="true")[0]
++    envois = chaine["contentDetails"]["relatedPlaylists"]["uploads"]
++    ids = [i["contentDetails"]["videoId"] for i in data(jeton, "playlistItems", part="contentDetails", playlistId=envois, maxResults=50)]
++    videos = []
++    for i in range(0, len(ids), 50):
++        videos += data(jeton, "videos", part="snippet,contentDetails,status", id=",".join(ids[i:i + 50]), maxResults=50)
++    shorts = {l["video"] for l in analytics(jeton, "2005-01-01", aujourd_hui, dimensions="video",
++                                             filters="creatorContentType==shorts", metrics="views", sort="-views", maxResults=200)}
++    videos = [v for v in videos if v["status"]["privacyStatus"] == "public" and v["id"] not in shorts
++              and secondes(v["contentDetails"]["duration"]) > 60]
++    videos.sort(key=lambda v: v["snippet"]["publishedAt"])
++
++    # Playlists, stats totales, dernier jour disponible dans Analytics.
++    playlists = {}
++    for p in data(jeton, "playlists", part="snippet,status", mine="true", maxResults=50):
++        for item in data(jeton, "playlistItems", part="contentDetails", playlistId=p["id"], maxResults=50):
++            playlists.setdefault(item["contentDetails"]["videoId"], []).append(p)
++    totaux = {l["video"]: l for l in analytics(
++        jeton, "2005-01-01", aujourd_hui, dimensions="video", sort="-views", maxResults=200,
++        metrics=",".join(MESURES + ["averageViewDuration", "averageViewPercentage", "likes", "comments"]))}
++    jours = analytics(jeton, aujourd_hui - datetime.timedelta(days=10), aujourd_hui, dimensions="day", metrics="views")
++    dernier_jour = max((datetime.date.fromisoformat(l["day"]) for l in jours), default=aujourd_hui - datetime.timedelta(days=3))
++
++    # Noms des fiches : celles qui existent déjà gardent le leur.
++    existantes = {}
++    if os.path.isdir(dossier):
++        for nom in os.listdir(dossier):
++            if nom.endswith(".md") and not nom.startswith("_"):
++                m = re.search(r"watch\?v=([A-Za-z0-9_-]{11})", open(os.path.join(dossier, nom), encoding="utf-8").read())
++                if m:
++                    existantes[m.group(1)] = nom
++    noms = {}
++    for v in videos:
++        nom = existantes.get(v["id"]) or f"{v['snippet']['publishedAt'][:10]}-{slug(v['snippet']['title'])}.md"
++        noms[v["id"]] = nom if nom not in noms.values() else nom[:-3] + f"-{v['id'].lower()}.md"
++
++    # Les lignes présentes dans au moins trois descriptions sont des blocs répétés, pas un résumé.
++    compte = {}
++    for v in videos:
++        for ligne in {sans_symboles(x) for x in v["snippet"].get("description", "").splitlines()}:
++            compte[ligne] = compte.get(ligne, 0) + 1
++    communes = {ligne for ligne, n in compte.items() if n >= 3}
++
++    # Liens entre vidéos, dans les deux sens.
++    cite = {v["id"]: list(dict.fromkeys(LIEN_VIDEO.findall(v["snippet"].get("description", "")))) for v in videos}
++    citee_par = {}
++    for source, cibles in cite.items():
++        for cible in cibles:
++            if cible != source:
++                citee_par.setdefault(cible, []).append(source)
++
++    ecrites = sautees = 0
++    for v in videos:
++        vid, sn = v["id"], v["snippet"]
++        chemin = os.path.join(dossier, noms[vid])
++        if os.path.exists(chemin) and not maj:
++            sautees += 1
++            continue
++        description = sn.get("description", "")
++        publiee = datetime.date.fromisoformat(sn["publishedAt"][:10])
++        langue = (sn.get("defaultAudioLanguage") or sn.get("defaultLanguage") or "en").split("-")[0]
++        miniatures = sn.get("thumbnails", {})
++        miniature = next((miniatures[k]["url"] for k in ("maxres", "standard", "high", "medium", "default") if k in miniatures), "")
++        total = totaux.get(vid)
++        cibles = [c for c in cite[vid] if c != vid]
++        liees = [noms[c] for c in cibles if c in noms] + [noms[s] for s in citee_par.get(vid, []) if s in noms]
++
++        l = ["---", "type: video", f"resume: {resume(description, sn['title'], communes)}", "statut: publie", f"domaine: {domaine}",
++             f"maj: {aujourd_hui}", f"liens: [{', '.join(dict.fromkeys(liees))}]", "---", f"# {sn['title']}", "",
++             f"- Vidéo : https://www.youtube.com/watch?v={vid}", f"- Miniature : {miniature}",
++             f"- Publiée le : {publiee}", f"- Durée : {duree(secondes(v['contentDetails']['duration']))}"]
++        if playlists.get(vid):
++            l.append("- Playlists : " + ", ".join(
++                p["snippet"]["title"] + ("" if p["status"]["privacyStatus"] == "public" else " (non publique)") for p in playlists[vid]))
++        if sn.get("tags"):
++            l.append("- Tags : " + ", ".join(sn["tags"]))
++
++        anciennes = sections(chemin)
++        if anciennes.get("Notes"):
++            l += ["", "## Notes", "", *anciennes["Notes"]]
++
++        l += ["", "## Stats", "", f"YouTube Analytics, données jusqu'au {dernier_jour}. Revenus estimés en dollars US. "
++              "Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, "
++              "regarder les vues engagées.", "",
++              "| | 7 premiers jours | 30 premiers jours | Depuis la sortie |", "|---|---|---|---|"]
++        j7 = stats_periode(jeton, vid, publiee, 7, dernier_jour)
++        j30 = stats_periode(jeton, vid, publiee, 30, dernier_jour)
++        colonnes = zip(cellules_stats(j7), cellules_stats(j30), cellules_stats(total) if total else ["à vérifier"] * 5)
++        for libelle, (a, b, c) in zip(["Vues", "Vues engagées", "Heures regardées", "Abonnés gagnés", "Revenus estimés"], colonnes):
++            l.append(f"| {libelle} | {a} | {b} | {c} |")
++        if total:
++            l.append(f"| Durée moyenne regardée | | | {duree(total['averageViewDuration'])} "
++                     f"({nombre(total['averageViewPercentage'], 1)} %) |")
++            l.append(f"| J'aime · commentaires | | | {nombre(total['likes'])} · {nombre(total['comments'])} |")
++
++        l += ["", "## Liens", ""]
++        for c in cibles:
++            l.append(f"- Cite : [{noms[c][:-3]}]({noms[c]})" if c in noms else f"- Cite : https://www.youtube.com/watch?v={c} (short ou vidéo non publique)")
++        for s in citee_par.get(vid, []):
++            if s in noms:
++                l.append(f"- Citée par : [{noms[s][:-3]}]({noms[s]})")
++        autres = [u.rstrip(".,;") for u in LIEN.findall(description) if not LIEN_VIDEO.search(u)]
++        for u in dict.fromkeys(autres):
++            l.append(f"- Description : {u}")
++        if l[-1] == "":
++            l.append("Aucun lien.")
++
++        l += ["", "## Description", "", "```text", description.strip(), "```", "", "## Transcription", ""]
++        # Une transcription déjà écrite est gardée : seules les nouvelles vidéos passent par yt-dlp.
++        deja = anciennes.get("Transcription", [])
++        if deja and not deja[0].startswith(SANS_SOUS_TITRES):
++            l += deja
++        elif not (repliques := transcription(vid, langue, dossier_transcriptions)):
++            l.append(SANS_SOUS_TITRES + " pour cette vidéo.")
++        else:
++            l += ["Sous-titres automatiques de YouTube, non corrigés.", ""]
++            decoupe = chapitres(description) or [(0, "")]
++            for i, (debut, titre) in enumerate(decoupe):
++                fin = decoupe[i + 1][0] if i + 1 < len(decoupe) else float("inf")
++                morceau = [r for r in repliques if debut <= r[0] < fin]
++                if titre:
++                    l += [f"### {horodatage(debut)} · {titre}", ""]
++                for p in paragraphes(morceau):
++                    l += [p, ""]
++        texte = "\n".join(l).rstrip() + "\n"
++        if essai:
++            print(f"--- {noms[vid]}\n{texte}")
++            return
++        os.makedirs(dossier, exist_ok=True)
++        with open(chemin, "w", encoding="utf-8") as f:
++            f.write(texte)
++        ecrites += 1
++        print(f"{noms[vid]}", flush=True)
++    print(f"{ecrites} fiches écrites, {sautees} déjà là, sur {len(videos)} vidéos longues publiques.")
++
++
++def main():
++    parseur = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
++    sous = parseur.add_subparsers(dest="commande", required=True)
++    sous.add_parser("connecter").add_argument("--client", required=True, help="client_secret.json d'un client OAuth « bureau »")
++    sous.add_parser("tester")
++    f = sous.add_parser("fiches")
++    f.add_argument("--dossier", default="domaines/contenu/videos", help="dossier des fiches, depuis la racine")
++    f.add_argument("--transcriptions", help="dossier où garder les sous-titres téléchargés")
++    f.add_argument("--maj", action="store_true", help="réécrit aussi les fiches existantes")
++    f.add_argument("--essai", action="store_true", help="affiche la première fiche sans rien écrire")
++    args = parseur.parse_args()
++    if args.commande == "connecter":
++        connecter(args.client)
++    elif args.commande == "tester":
++        tester()
++    else:
++        fiches(args.dossier, args.transcriptions, args.maj, args.essai)
++
++
++if __name__ == "__main__":
++    main()

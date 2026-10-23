@@ -11,3 +11,5 @@ Chaque connexion est testée par une vraie lecture avant d'être inscrite ici. L
 
 | Outil | Méthode | Pourquoi | Agents | Testé le |
 |---|---|---|---|---|
+| YouTube (Data v3, Analytics v2) | API officielle, OAuth en lecture seule avec le compte qui possède la chaîne, par `systeme/scripts/youtube.py` | Fiches vidéos, stats, revenus | Tous (script) | 2026-10-22 |
+| yt-dlp | CLI de la communauté | Sous-titres automatiques des vidéos | Tous (script) | 2026-10-22 |

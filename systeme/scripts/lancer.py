@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Lance une skill sans discussion, avec l'agent choisi dans .env et le modèle de systeme/modeles.md.
+Lance aussi une routine directe de systeme/routines.md : sa commande, sans IA.
 
-Usage : python3 systeme/scripts/lancer.py <skill> [--modele NOM] [--agent claude|codex|gemini] [--essai]
+Usage : python3 systeme/scripts/lancer.py <skill ou routine> [--modele NOM] [--agent claude|codex|gemini] [--essai]
+  <routine> : son nom en minuscules, avec des tirets (« Fiches YouTube » → fiches-youtube).
   --essai : affiche la commande sans la lancer.
 """
 import argparse
@@ -26,6 +28,16 @@ def lire_env():
                     cle, valeur = ligne.split("=", 1)
                     valeurs[cle.strip()] = valeur.strip().strip("\"'")
     return valeurs
+
+
+def routine_directe(nom):
+    """La commande d'une routine directe de systeme/routines.md, ou None."""
+    from index import tableau
+    for r in tableau(os.path.join(RACINE, "systeme", "routines.md"), "Routine"):
+        commande = r.get("Commande", "").strip("`")
+        if commande not in ("", "—", "-") and r["Routine"].lower().replace(" ", "-") == nom:
+            return commande
+    return None
 
 
 def tableaux_modeles():
@@ -54,6 +66,13 @@ def main():
     p.add_argument("--agent")
     p.add_argument("--essai", action="store_true")
     a = p.parse_args()
+
+    directe = routine_directe(a.skill)
+    if directe:
+        if a.essai:
+            print(directe)
+            return 0
+        return subprocess.run(directe, shell=True, cwd=RACINE).returncode
 
     if not re.fullmatch(r"[a-z0-9-]+", a.skill) or not os.path.exists(os.path.join(RACINE, "skills", a.skill, "SKILL.md")):
         print(f"Skill introuvable : skills/{a.skill}/SKILL.md")

@@ -21,7 +21,15 @@
     "processus",
     "skills",
     "memory",
-    "journal"
+    "journal",
+    "domaines/communaute",
+    "domaines/consulting",
+    "domaines/contenu",
+    "domaines/contenu/videos",
+    "domaines/operations",
+    "domaines/perso",
+    "domaines/produits",
+    "domaines/produits/2026-10-22-remontee-socle"
   ],
   "routing": {},
   "maxFiles": 500000
