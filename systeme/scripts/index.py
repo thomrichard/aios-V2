@@ -18,10 +18,10 @@ AVERTISSEMENT = "<!-- Généré par systeme/scripts/index.py : ne pas modifier �
 COULEURS = ["#00bcd4", "#e040fb", "#fdd835", "#43a047", "#f44336", "#ec407a", "#26a69a", "#8d6e63"]
 ICONES = ["pen", "people", "build", "data", "pulse", "book", "visual", "clock", "api"]
 COUCHES = [
-    {"key": "A", "label": "Applications", "color": "#3f8fd4", "shape": "hex", "blurb": "MCP servers, CLIs and APIs your agent can reach"},
-    {"key": "R", "label": "Routines", "color": "#d99a1f", "shape": "ringdot", "blurb": "Scheduled automations that run without being asked"},
-    {"key": "M", "label": "Memory", "color": "#9a66e0", "shape": "chip", "blurb": "Every file of context, clustered by department"},
-    {"key": "S", "label": "Skills", "color": "#ff6b1a", "shape": "diamond", "blurb": "Capabilities your agent can run on demand"},
+    {"key": "A", "label": "Applications", "color": "#3f8fd4", "shape": "hex", "blurb": "Serveurs MCP, CLI et API que ton agent peut joindre"},
+    {"key": "R", "label": "Routines", "color": "#d99a1f", "shape": "ringdot", "blurb": "Automatisations planifiées, qui tournent sans qu’on les demande"},
+    {"key": "M", "label": "Mémoire", "color": "#9a66e0", "shape": "chip", "blurb": "Chaque fichier de contexte, regroupé par domaine"},
+    {"key": "S", "label": "Skills", "color": "#ff6b1a", "shape": "diamond", "blurb": "Ce que ton agent peut lancer à la demande"},
 ]
 
 

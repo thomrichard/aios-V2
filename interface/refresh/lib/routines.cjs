@@ -10,6 +10,8 @@ const path = require('path');
 const KIT = path.resolve(__dirname, '..', '..');
 const ROUTINES_FILE = path.join(KIT, 'snapshots', 'routines.json');
 const DAY_NAMES = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+// display only: DAY_NAMES above stays the parsing key
+const DAY_LABELS = ['lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim'];
 const MAX_PER_DAY = 288; // one fire every 5 minutes is the most a routine shows per day
 
 const slug = s => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60) || 'routine';
@@ -62,7 +64,7 @@ function normalize(r, i, sourceLabels, fileTime) {
   const out = {
     id: 'rt:' + slug(r.id || (source + '-' + name)), name, source, sourceLabel: sourceLabels[source] || source.toUpperCase(),
     desc: clean(r.desc || r.description || '', 300), cron: null, days: null, times: [], dom: null,
-    status: 'active', path: r.path || null, sourceAsOf: fileTime, origin: 'routines file',
+    status: 'active', path: r.path || null, sourceAsOf: fileTime, origin: 'fichier des routines',
   };
   if (v1) {
     const t = toMinutes(r.t); if (t !== null) out.times = [t];
@@ -81,7 +83,7 @@ function normalize(r, i, sourceLabels, fileTime) {
     else if (!out.cron && !out.times.length) out.status = 'ondemand';
   }
   if (!out.cron && !out.times.length && out.status === 'active') out.status = 'ondemand';
-  out.scheduleText = out.cron ? 'cron ' + out.cron : out.times.length ? (out.dom ? 'day ' + out.dom + ' of the month' : out.days ? out.days.map(d => DAY_NAMES[d]).join(', ') : 'daily') + ' at ' + out.times.map(hhmm).join(', ') : 'On demand';
+  out.scheduleText = out.cron ? 'cron ' + out.cron : out.times.length ? (out.dom ? 'le ' + out.dom + (out.dom === 1 ? 'er' : '') + ' du mois' : out.days ? out.days.map(d => DAY_LABELS[d]).join(', ') : 'tous les jours') + ' à ' + out.times.map(hhmm).join(', ') : 'À la demande';
   return out;
 }
 function readRoutinesFile(file = ROUTINES_FILE) {
@@ -178,7 +180,7 @@ function calendarData(all, usageRoutines = {}) {
   occurrences.sort((a, b) => a.day - b.day || a.startMinutes - b.startMinutes);
   return {
     departments: [],
-    calendar: { timezone: all.timezone, weekStart: wk.weekStart, routines, occurrences, meta: { builtAt: new Date().toISOString(), found: all.found, note: 'Fire times for this week, Monday to Sunday, in ' + all.timezone + '. A fire is a start time, not a duration. Paused and on-demand routines are listed but not placed.' } },
+    calendar: { timezone: all.timezone, weekStart: wk.weekStart, routines, occurrences, meta: { builtAt: new Date().toISOString(), found: all.found, note: 'Heures de lancement de la semaine, du lundi au dimanche, fuseau ' + all.timezone + '. Un lancement est une heure de départ, pas une durée. Les routines en pause et à la demande sont listées, mais pas placées.' } },
     routines,
   };
 }
@@ -191,7 +193,7 @@ function todayRows(all) {
     if (!times.length) continue;
     if (times.length > 6) {
       const next = times.find(m => m >= wk.nowMinutes) ?? times[times.length - 1];
-      rows.push({ t: hhmm(next), d: 'daily', src: r.source, n: r.name + ' (' + times.length + ' runs today)', desc: r.desc });
+      rows.push({ t: hhmm(next), d: 'daily', src: r.source, n: r.name + ' (' + times.length + ' exécutions aujourd’hui)', desc: r.desc });
     } else for (const m of times) rows.push({ t: hhmm(m), d: 'daily', src: r.source, n: r.name, desc: r.desc });
   }
   rows.sort((a, b) => a.t.localeCompare(b.t));

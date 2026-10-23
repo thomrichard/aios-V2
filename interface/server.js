@@ -1,5 +1,5 @@
 /* ============================================================================
-   RUBRIC Agentic OS v2 - the local server
+   SM4RT Agentic OS v2 - the local server
    One command starts everything:  node server.js
    It serves the homepage and the Second Brain, gives every widget its data, and starts the
    Second Brain engine (engine/server.js) beside it. Zero dependencies: node only.
@@ -30,18 +30,18 @@ const net = require('net');
 const { execFile, spawn } = require('child_process');
 
 const [major] = process.versions.node.split('.').map(Number);
-if (major < 18) { console.error('\n  RUBRIC Agentic OS needs Node.js 18 or newer. You are running ' + process.version + '\n'); process.exit(1); }
+if (major < 18) { console.error('\n  SM4RT Agentic OS a besoin de Node.js 18 ou plus récent. Tu as la version ' + process.version + '\n'); process.exit(1); }
 
 const KIT = __dirname;
 let CFG = {};
 try { CFG = JSON.parse(fs.readFileSync(path.join(KIT, 'os-config.json'), 'utf8')); }
-catch (e) { console.error('os-config.json is missing or not valid JSON - using defaults (' + e.message + ')'); }
+catch (e) { console.error('os-config.json manque ou n’est pas un JSON valide : réglages par défaut utilisés (' + e.message + ')'); }
 const PORT = Number(process.env.PORT) || Number(CFG.port) || 50000;
 const BRAIN_PORT = Number(CFG.brainPort) || 50201;
 const ARTIFACTS = path.resolve(KIT, CFG.artifactsDir || 'artifacts');
 const SNAP = path.join(KIT, 'snapshots'), DATA = path.join(KIT, 'data'), RUNDIR = path.join(KIT, 'os-runs');
 for (const d of [ARTIFACTS, SNAP, DATA, RUNDIR]) fs.mkdirSync(d, { recursive: true });
-const TOKEN = String(process.env.RUBRIC_TOKEN || '').trim();
+const TOKEN = String(process.env.SM4RT_TOKEN || '').trim();
 const BODY_MAX = 1024 * 1024;
 
 const routinesLib = require('./refresh/lib/routines.cjs');
@@ -65,8 +65,8 @@ function originOk(req) {
   if (o === 'null') return allowNull;
   return LOCAL_ORIGIN.test(String(o));
 }
-/* Only /api/apply-comments and /api/run-status answer other local ports (RUBRIC Recos, RUBRIC
-   Carousels and other review pages), and only by echoing a local Origin back. No other route
+/* Only /api/apply-comments and /api/run-status answer other local ports (review pages
+   on this computer), and only by echoing a local Origin back. No other route
    and no other origin ever gets a CORS header. */
 function localCors(req) {
   const o = req.headers.origin;
@@ -76,13 +76,13 @@ function localCors(req) {
 function readBody(req) {
   return new Promise((resolve, reject) => {
     let size = 0; const chunks = [];
-    req.on('data', c => { size += c.length; if (size > BODY_MAX) { reject(Object.assign(new Error('Request body is over 1 MB'), { status: 413 })); req.destroy(); } else chunks.push(c); });
+    req.on('data', c => { size += c.length; if (size > BODY_MAX) { reject(Object.assign(new Error('La requête dépasse 1 Mo'), { status: 413 })); req.destroy(); } else chunks.push(c); });
     req.on('end', () => resolve(Buffer.concat(chunks).toString('utf8')));
     req.on('error', reject);
   });
 }
 const isJson = req => /^application\/json\b/i.test(String(req.headers['content-type'] || ''));
-const tokenOk = req => !TOKEN || req.headers['x-rubric-token'] === TOKEN;
+const tokenOk = req => !TOKEN || req.headers['x-sm4rt-token'] === TOKEN;
 function sendJson(res, obj, code = 200, extra = {}) {
   res.writeHead(code, { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff', ...extra });
   res.end(JSON.stringify(obj));
@@ -101,15 +101,15 @@ let engine = null, engineRestarts = 0, stopping = false;
 const portOpen = port => new Promise(ok => { const s = net.connect({ port, host: '127.0.0.1' }); s.setTimeout(700); s.on('connect', () => { s.destroy(); ok(true); }); s.on('error', () => ok(false)); s.on('timeout', () => { s.destroy(); ok(false); }); });
 async function startEngine() {
   if (stopping) return;
-  if (await portOpen(BRAIN_PORT)) { console.log('  Second Brain engine already running on ' + BRAIN_PORT); return; }
+  if (await portOpen(BRAIN_PORT)) { console.log('  Le moteur du second cerveau tourne déjà sur le port ' + BRAIN_PORT); return; }
   engine = spawn(process.execPath, [path.join(KIT, 'engine', 'server.js')], { env: { ...process.env, PORT: String(BRAIN_PORT) }, stdio: ['ignore', 'pipe', 'pipe'], windowsHide: true });
-  const say = d => String(d).split(/\r?\n/).filter(Boolean).forEach(l => console.log('  [brain] ' + l));
+  const say = d => String(d).split(/\r?\n/).filter(Boolean).forEach(l => console.log('  [cerveau] ' + l));
   engine.stdout.on('data', say); engine.stderr.on('data', say);
   engine.on('exit', code => {
     engine = null;
     if (stopping || code === 2) return;
     if (++engineRestarts <= 5) setTimeout(startEngine, 2000 * engineRestarts);
-    else console.log('  [brain] stopped 5 times - search and the file viewer are off until you restart the OS');
+    else console.log('  [cerveau] arrêté 5 fois : la recherche et la visionneuse de fichiers sont coupées jusqu’au redémarrage de l’OS');
   });
 }
 function stopAll() { stopping = true; if (engine) { try { engine.kill(); } catch (_) { } } }
@@ -144,13 +144,13 @@ async function getCalendar() {
     const snap = JSON.parse(fs.readFileSync(snapFile, 'utf8'));
     const cutoff = Date.now() - 60 * 60 * 1000;
     snap.events = (snap.events || []).filter(ev => new Date(ev.start).getTime() > cutoff);
-    return { ...snap, source: (snap.source || 'calendar') + ' (snapshot)', note };
+    return { ...snap, source: (snap.source || 'agenda') + ' (copie)', note };
   };
-  if (!fs.existsSync(path.join(KIT, '.google-creds.json'))) return fromSnapshot('Google sign-in not set up (OAUTH.md)');
+  if (!fs.existsSync(path.join(KIT, '.google-creds.json'))) return fromSnapshot('Connexion Google pas encore réglée (OAUTH.md)');
   try {
     const out = await run('node', [CAL_TOOL, 'next']);
     const payload = JSON.parse(out.slice(out.indexOf('{')));
-    if (!payload.events) throw new Error('no events from google-calendar.js');
+    if (!payload.events) throw new Error('aucun événement renvoyé par google-calendar.js');
     fs.writeFileSync(snapFile, JSON.stringify(payload, null, 2));
     return payload;
   } catch (e) { return fromSnapshot(String(e.message).slice(0, 200)); }
@@ -163,7 +163,7 @@ const EMAIL = CFG.email || {};
 const PARTNER_HINTS = new RegExp(CFG.partnerHints || 'sponsor|collab|partner|brand|affiliate|deal|invoice|pitch|opportunit', 'i');
 const LEAD_HINTS = new RegExp(CFG.leadHints || 'join|member|sign\\s?up|subscri|pricing|enroll|course|coaching|access|billing|refund', 'i');
 const PERSONAL_FROM = new RegExp(CFG.personalFrom || '@(gmail|googlemail|yahoo|outlook|hotmail|icloud|proton)\\.', 'i');
-const jsonFrom = out => { const i = out.indexOf('{'); if (i < 0) throw new Error('no JSON from the email command'); return JSON.parse(out.slice(i)); };
+const jsonFrom = out => { const i = out.indexOf('{'); if (i < 0) throw new Error('pas de JSON renvoyé par la commande e-mail'); return JSON.parse(out.slice(i)); };
 async function getEmail() {
   if (!EMAIL.enabled) return { needsSetup: true };
   const cli = /^[A-Za-z0-9._-]+$/.test(EMAIL.command || 'gws') ? (EMAIL.command || 'gws') : 'gws';
@@ -174,7 +174,7 @@ async function getEmail() {
     try {
       const m = jsonFrom(await run(cli, ['gmail', 'users', 'messages', 'get', '--params', `"{\\"userId\\":\\"me\\",\\"id\\":\\"${id}\\",\\"format\\":\\"metadata\\"}"`], 25000));
       const h = {}; (m.payload?.headers || []).forEach(x => h[x.name.toLowerCase()] = x.value);
-      const subject = h.subject || '(no subject)', rawFrom = h.from || '';
+      const subject = h.subject || '(sans objet)', rawFrom = h.from || '';
       const kind = PARTNER_HINTS.test(subject) ? 'partnerships' : LEAD_HINTS.test(subject) ? 'leads' : PERSONAL_FROM.test(rawFrom) ? 'personal' : 'other';
       rows.push({ id, subject, from: rawFrom.replace(/<.*/, '').replace(/"/g, '').trim(), unread: (m.labelIds || []).includes('UNREAD'), kind, ts: +(m.internalDate || 0), snippet: (m.snippet || '').slice(0, 90) });
     } catch (_) { }
@@ -194,7 +194,7 @@ function getStats() {
     if (d.cap !== undefined) d.cap = esc(d.cap).replace(/&lt;br\s*\/?&gt;/gi, '<br>');
     if (d.link && !/^https?:\/\//i.test(d.link)) delete d.link;
     return d;
-  } catch (e) { return { error: 'stats.json: ' + String(e.message) }; }
+  } catch (e) { return { error: 'stats.json : ' + String(e.message) }; }
 }
 
 /* ---------------------------- ROUTINES (ROUTINES.md) ---------------------------- */
@@ -292,9 +292,9 @@ const argMode = tpl => /\{prompt\}|\{skill\}/.test(tpl);
 const ARG_SAFE = /^[A-Za-z0-9 _.\/\\:,()-]{1,600}$/;
 function runnerProblem(kind) {
   const tpl = String((CFG.runner || {}).command || '').trim();
-  if (!tpl) return 'No runner set up yet. Put your agent\'s headless command in os-config.json "runner.command" (WIRING.md).';
-  if (KIT.includes('"')) return 'The OS folder path contains a quote mark. Move the folder to a path without quotes.';
-  if (kind === 'apply' && /\{skill\}/.test(tpl) && !/\{prompt\}/.test(tpl)) return 'Apply all comments needs a runner that reads the prompt on standard input or takes {prompt} (WIRING.md).';
+  if (!tpl) return 'Pas encore de lanceur. Mets la commande qui lance ton agent en autonomie dans os-config.json, champ "runner.command" (WIRING.md).';
+  if (KIT.includes('"')) return 'Le chemin du dossier de l’OS contient un guillemet. Déplace le dossier vers un chemin sans guillemets.';
+  if (kind === 'apply' && /\{skill\}/.test(tpl) && !/\{prompt\}/.test(tpl)) return '« Apply all comments » a besoin d’un lanceur qui lit le prompt sur l’entrée standard ou qui prend {prompt} (WIRING.md).';
   return null;
 }
 function startJob({ id, model, effort, prompt, quiet, skillId }) {
@@ -307,7 +307,7 @@ function startJob({ id, model, effort, prompt, quiet, skillId }) {
     const line = quiet ? 'Read the file ' + promptFile + ' and do exactly what it says.' : prompt;
     if (!ARG_SAFE.test(line) || (skillId && !okId(skillId))) {
       const job = { jobId, id, model, effort, logFile, status: 'failed', quiet: !!quiet, started: Date.now(), ended: Date.now(), code: -1, report: null, result: '' };
-      fs.writeFileSync(logFile, 'The prompt has characters that cannot go on a command line. Use a standard-input runner template (WIRING.md).\n');
+      fs.writeFileSync(logFile, 'Le prompt contient des caractères qui ne passent pas en ligne de commande. Utilise un modèle de lanceur qui lit l’entrée standard (WIRING.md).\n');
       JOBS.set(jobId, job); return job;
     }
     cmd = cmd.split('{prompt}').join(line).split('{skill}').join(skillId || '');
@@ -317,20 +317,20 @@ function startJob({ id, model, effort, prompt, quiet, skillId }) {
   log.write('$ ' + cmd + '\n\n');
   let child;
   try { child = spawn(cmd, { cwd: fs.existsSync(cwd) ? cwd : KIT, shell: true, windowsHide: true }); }
-  catch (e) { log.end('SPAWN ERROR: ' + e.message + '\n'); child = null; }
+  catch (e) { log.end('ERREUR DE LANCEMENT : ' + e.message + '\n'); child = null; }
   const job = { jobId, id, model, effort, logFile, status: 'running', quiet: !!quiet, started: Date.now(), ended: null, code: null, report: null, result: '' };
   JOBS.set(jobId, job);
   if (!child) { job.status = 'failed'; job.ended = Date.now(); job.code = -1; return job; }
   child.stdout.on('data', d => { if (job.result.length < 300000) job.result += d; log.write(d); });
   child.stderr.pipe(log, { end: false });
-  child.on('error', err => { log.end('\nSPAWN ERROR: ' + err.message + '\n'); job.status = 'failed'; job.ended = Date.now(); job.code = -1; });
+  child.on('error', err => { log.end('\nERREUR DE LANCEMENT : ' + err.message + '\n'); job.status = 'failed'; job.ended = Date.now(); job.code = -1; });
   child.on('close', code => {
     log.end();
     job.status = code === 0 ? 'done' : 'failed'; job.ended = Date.now(); job.code = code; job.result = job.result.trim();
     const seconds = Math.round((job.ended - job.started) / 1000);
     if (quiet) return;            /* the page that asked shows the result itself: no ball */
     try { const report = writeRunReport(job, seconds); job.report = report.file; recordRun(id, { model, effort, seconds, exit: code, report: report.file }); }
-    catch (e) { console.error('run report failed:', e.message); }
+    catch (e) { console.error('échec du rapport d’exécution :', e.message); }
   });
   return job;
 }
@@ -367,10 +367,10 @@ function mdToHtml(src) {
 }
 function writeRunReport(job, seconds) {
   const now = new Date(), stamp = now.toISOString().slice(0, 16).replace(/[-:T]/g, '').replace(/(\d{8})(\d{4})/, '$1-$2');
-  const slug = `${job.id}-${stamp}`, ok = job.status === 'done', when = now.toLocaleString('en-AU', { dateStyle: 'medium', timeStyle: 'short' });
-  const body = job.result ? mdToHtml(job.result) : '<pre class="code">' + (esc(logTail(job.logFile, 6000)) || '(no output captured)') + '</pre>';
+  const slug = `${job.id}-${stamp}`, ok = job.status === 'done', when = now.toLocaleString('fr-FR', { dateStyle: 'medium', timeStyle: 'short' });
+  const body = job.result ? mdToHtml(job.result) : '<pre class="code">' + (esc(logTail(job.logFile, 6000)) || '(aucune sortie captée)') + '</pre>';
   const html = `<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>/${esc(job.id)} run</title>
+<title>/${esc(job.id)} · exécution</title>
 <style>
   :root { --paper:#f2efe8; --ink:#1c1a16; --accent:#ff6b1a; --line:#d6d0c2; --mute:#8d8775; }
   * { box-sizing:border-box; } body { margin:0; background:var(--paper); color:var(--ink); font:400 15px/1.55 Outfit,system-ui,sans-serif; padding:56px 20px; }
@@ -387,23 +387,23 @@ function writeRunReport(job, seconds) {
   pre.code { background:#1c1a16; color:#e8e2d2; border-radius:8px; padding:18px 20px; font:400 12.5px/1.6 Consolas,monospace; overflow-x:auto; white-space:pre-wrap; }
   footer { margin-top:34px; font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--mute); }
 </style>
-<div class="wrap"><div class="rule"><div class="kick">RUBRIC Agentic OS · Headless skill run</div><h1>/<span>${esc(job.id)}</span></h1>
-<p class="lede">${ok ? 'What the run came back with:' : 'Run FAILED (exit ' + esc(String(job.code)) + '). Last output below.'}</p></div>
-<div class="meta"><div>Model<b>${esc(job.model || '-')}</b></div><div>Effort<b>${esc(job.effort || '-')}</b></div><div>Duration<b>${esc(String(seconds))}s</b></div><div>Exit<b>${esc(String(job.code))}</b></div><div>Finished<b>${esc(when)}</b></div></div>
+<div class="wrap"><div class="rule"><div class="kick">SM4RT Agentic OS · Exécution de skill en autonomie</div><h1>/<span>${esc(job.id)}</span></h1>
+<p class="lede">${ok ? 'Ce que l’exécution a rendu :' : 'Exécution en ÉCHEC (code ' + esc(String(job.code)) + '). Dernière sortie ci-dessous.'}</p></div>
+<div class="meta"><div>Modèle<b>${esc(job.model || '-')}</b></div><div>Effort<b>${esc(job.effort || '-')}</b></div><div>Durée<b>${esc(String(seconds))} s</b></div><div>Code de sortie<b>${esc(String(job.code))}</b></div><div>Terminée<b>${esc(when)}</b></div></div>
 <div class="result">${body}</div>
-<div style="margin-top:34px"><div class="kick" style="margin-bottom:8px">Full terminal output</div><pre class="code">${esc(logTail(job.logFile, 200000)) || '(empty log)'}</pre></div>
-<footer>Ran headlessly from the skills deck · full log: os-runs/${esc(path.basename(job.logFile))}</footer></div>`;
+<div style="margin-top:34px"><div class="kick" style="margin-bottom:8px">Sortie complète du terminal</div><pre class="code">${esc(logTail(job.logFile, 200000)) || '(journal vide)'}</pre></div>
+<footer>Lancée en autonomie depuis le deck de skills · journal complet : os-runs/${esc(path.basename(job.logFile))}</footer></div>`;
   fs.writeFileSync(path.join(ARTIFACTS, slug + '.html'), html);
   fs.writeFileSync(path.join(ARTIFACTS, slug + '.json'), JSON.stringify({
-    title: `/${job.id} · ${now.toLocaleString('en-AU', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })}`, icon: 'bolt', kind: 'run',
+    title: `/${job.id} · ${now.toLocaleString('fr-FR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })}`, icon: 'bolt', kind: 'run',
     svg: ok ? '<path d="M26 8L14 27h8l-2 13 12-19h-8l2-13z"/>' : '<circle cx="24" cy="24" r="15"/><path d="M18 18l12 12M30 18L18 30"/>',
-    created: now.toISOString(), note: `headless · ${job.model || '?'} · ${job.effort || '?'} · ${seconds}s · exit ${job.code}`
+    created: now.toISOString(), note: `en autonomie · ${job.model || '?'} · ${job.effort || '?'} · ${seconds} s · code ${job.code}`
   }, null, 2));
   return { file: slug + '.html', url: '/artifacts/' + slug + '.html' };
 }
 
 /* ---------------------------- APPLY ALL COMMENTS ----------------------------
-   A review page (RUBRIC Recos, RUBRIC Carousels, any page with the apply-comments button) sends
+   A review page (any page with the apply-comments button) sends
    its open comments, the file to edit and a model and effort. A quiet headless run edits the
    file; the page polls /api/run-status, shows the result and reloads itself. */
 function applyTarget(file, page) {
@@ -411,9 +411,9 @@ function applyTarget(file, page) {
   if (!f && /^file:\/\//i.test(String(page || ''))) { try { f = decodeURIComponent(new URL(page).pathname).replace(/^\/([A-Za-z]:)/, '$1'); } catch (_) { f = ''; } }
   if (!f) return null;                                   /* a page served by an app: the run finds its file */
   f = path.resolve(f);
-  let st; try { st = fs.statSync(f); } catch (_) { throw new Error('file not found: ' + f); }
-  if (!st.isFile()) throw new Error('not a file: ' + f);
-  if (scan.isSecret(f.replace(/\\/g, '/'))) throw new Error('that file looks like a secret, so it is not edited');
+  let st; try { st = fs.statSync(f); } catch (_) { throw new Error('fichier introuvable : ' + f); }
+  if (!st.isFile()) throw new Error('ce n’est pas un fichier : ' + f);
+  if (scan.isSecret(f.replace(/\\/g, '/'))) throw new Error('ce fichier ressemble à un secret : il n’est pas modifié');
   return f;
 }
 function applyPrompt({ page, file, notes, title, comments }) {
@@ -444,16 +444,16 @@ const EXEC_EXT = /\.(exe|bat|cmd|com|ps1|psm1|vbs|vbe|js|jse|wsf|wsh|msi|msp|scr
 function workspaceRoot() { try { return scan.resolveRoot(scan.workspaceConfig()); } catch (_) { return null; } }
 function openTarget(target) {
   let t = String(target || '').trim();
-  if (!t) throw new Error('no target');
+  if (!t) throw new Error('aucune cible');
   if (/^https?:\/\//i.test(t)) { new URL(t); return launch(t); }
   if (/^file:\/\//i.test(t)) t = decodeURIComponent(new URL(t).pathname).replace(/^\/([A-Za-z]:)/, '$1');
   const root = workspaceRoot();
   const abs = path.isAbsolute(t) ? path.resolve(t) : root ? path.resolve(root, t) : null;
-  if (!abs) throw new Error('not inside your workspace');
+  if (!abs) throw new Error('hors de ton workspace');
   const allowed = [root, KIT, ARTIFACTS].filter(Boolean).some(r => abs === r || abs.startsWith(r + path.sep));
-  if (!allowed) throw new Error('only files inside your workspace, this OS folder or the artifacts folder open from here');
-  if (!fs.existsSync(abs)) throw new Error('not found');
-  if (EXEC_EXT.test(abs)) throw new Error('program files do not open from the OS');
+  if (!allowed) throw new Error('seuls les fichiers de ton workspace, du dossier de l’OS ou du dossier des livrables s’ouvrent d’ici');
+  if (!fs.existsSync(abs)) throw new Error('introuvable');
+  if (EXEC_EXT.test(abs)) throw new Error('les programmes ne s’ouvrent pas depuis l’OS');
   return launch(abs);
 }
 function launch(t) {
@@ -517,12 +517,12 @@ function publicFile(p2) {
 }
 function serveFile(req, res, file, extraHead = {}) {
   fs.stat(file, (err, st) => {
-    if (err || !st.isFile()) { res.writeHead(404, { 'Content-Type': 'text/plain' }); return res.end('not found'); }
+    if (err || !st.isFile()) { res.writeHead(404, { 'Content-Type': 'text/plain' }); return res.end('introuvable'); }
     const type = MIME[path.extname(file).toLowerCase()] || 'application/octet-stream';
     const head = { 'Content-Type': /^text\/|json$|javascript$/.test(type) ? type + '; charset=utf-8' : type, 'Cache-Control': 'no-cache', 'X-Content-Type-Options': 'nosniff', ...extraHead };
     const inject = TOKEN && /\.html$/i.test(file) && /(^|[\\/])(index|os)\.html$/i.test(file);
     if (inject) {
-      const html = fs.readFileSync(file, 'utf8').replace('<head>', '<head><meta name="rubric-token" content="' + esc(TOKEN) + '">');
+      const html = fs.readFileSync(file, 'utf8').replace('<head>', '<head><meta name="sm4rt-token" content="' + esc(TOKEN) + '">');
       res.writeHead(200, { ...head, 'Cache-Control': 'no-store' }); return res.end(html);
     }
     const etag = `W/"${st.size.toString(36)}-${Math.floor(st.mtimeMs).toString(36)}"`;
@@ -541,22 +541,22 @@ const server = http.createServer(async (req, res) => {
   try {
     if (!LOCAL_HOST.test(String(req.headers.host || ''))) return sendJson(res, { error: 'local requests only' }, 403);
     if (req.method === 'OPTIONS') { res.writeHead(405); return res.end(); }   /* no preflight is ever granted */
-    if ((p2.startsWith('/api/') || p2.startsWith('/local/')) && !tokenOk(req)) return sendJson(res, { error: 'missing or wrong x-rubric-token' }, 401, p2 === '/api/apply-comments' || p2 === '/api/run-status' ? localCors(req) : {});
+    if ((p2.startsWith('/api/') || p2.startsWith('/local/')) && !tokenOk(req)) return sendJson(res, { error: 'missing or wrong x-sm4rt-token' }, 401, p2 === '/api/apply-comments' || p2 === '/api/run-status' ? localCors(req) : {});
     if (post && !originOk(req)) return sendJson(res, { error: 'only pages on this computer can do that' }, 403);
 
     /* ---- the Second Brain ---- */
     if (p2 === '/local/boot') return sendJson(res, await boot());
     if (p2 === '/local/search') {
       const r = await brainGet('/api/search?q=' + encodeURIComponent(String(u.searchParams.get('q') || '').slice(0, 200)));
-      return r ? sendJson(res, r) : sendJson(res, { error: 'The Second Brain engine is not answering yet.' }, 502);
+      return r ? sendJson(res, r) : sendJson(res, { error: 'Le moteur du second cerveau ne répond pas encore.' }, 502);
     }
     if (p2 === '/local/file') {
       const r = await brainGet('/api/file?path=' + encodeURIComponent(String(u.searchParams.get('path') || '').slice(0, 1000)));
-      return r ? sendJson(res, r) : sendJson(res, { error: 'The Second Brain engine is not answering yet.' }, 502);
+      return r ? sendJson(res, r) : sendJson(res, { error: 'Le moteur du second cerveau ne répond pas encore.' }, 502);
     }
     if (p2 === '/local/meta') {
       const m = await brainGet('/api/meta', 60000);
-      return m && m.totalFiles !== undefined ? sendJson(res, { totalFiles: m.totalFiles, totalDirs: m.totalDirs, scannedAt: m.scannedAt, workspaceSet: m.workspaceSet }) : sendJson(res, { error: 'No file count yet.' }, 502);
+      return m && m.totalFiles !== undefined ? sendJson(res, { totalFiles: m.totalFiles, totalDirs: m.totalDirs, scannedAt: m.scannedAt, workspaceSet: m.workspaceSet }) : sendJson(res, { error: 'Pas encore de nombre de fichiers.' }, 502);
     }
     if (p2 === '/local/refresh' && post) return sendJson(res, await refreshBrain());
     if (p2 === '/data/snapshot.js') return sendScript(res, 'window.COPY_DATA=' + JSON.stringify(routinesLib.calendarData(routineSources.allRoutines())) + ';');
@@ -569,7 +569,7 @@ const server = http.createServer(async (req, res) => {
     if (p2 === '/api/health') return sendJson(res, { ok: true, port: PORT, brainPort: BRAIN_PORT, engine: await portOpen(BRAIN_PORT), workspaceSet: !!workspaceRoot(), runner: runnerProblem() || 'ready', time: new Date().toISOString() });
     if (p2 === '/api/run-status') {
       const cors = localCors(req), job = JOBS.get(String(u.searchParams.get('job') || ''));
-      if (!job) return sendJson(res, { error: 'unknown job' }, 404, cors);
+      if (!job) return sendJson(res, { error: 'tâche inconnue' }, 404, cors);
       return sendJson(res, { status: job.status, code: job.code, report: job.report, result: job.quiet && job.result ? job.result.slice(-3000) : undefined,
         elapsed: Math.round(((job.ended || Date.now()) - job.started) / 1000), tail: logTail(job.logFile, 700).split('\n').slice(-6).join('\n') }, 200, cors);
     }
@@ -577,11 +577,11 @@ const server = http.createServer(async (req, res) => {
     /* ---- actions ---- */
     if (post && p2 === '/api/apply-comments') {
       const cors = localCors(req);
-      let q; try { q = JSON.parse(await readBody(req) || '{}'); } catch (e) { return sendJson(res, { error: e.status ? e.message : 'body is not JSON' }, e.status || 400, cors); }
+      let q; try { q = JSON.parse(await readBody(req) || '{}'); } catch (e) { return sendJson(res, { error: e.status ? e.message : 'le corps de la requête n’est pas du JSON' }, e.status || 400, cors); }
       const model = String(q.model || '').toLowerCase(), effort = String(q.effort || '').toLowerCase();
-      if (!MODEL_OK.has(model) || !EFFORT_OK.has(effort) || !dial('model', model) || !dial('effort', effort)) return sendJson(res, { error: 'unknown model or effort' }, 400, cors);
+      if (!MODEL_OK.has(model) || !EFFORT_OK.has(effort) || !dial('model', model) || !dial('effort', effort)) return sendJson(res, { error: 'modèle ou effort inconnu' }, 400, cors);
       const comments = String(q.comments || '').trim();
-      if (!comments) return sendJson(res, { error: 'no comments to apply' }, 400, cors);
+      if (!comments) return sendJson(res, { error: 'aucun commentaire à appliquer' }, 400, cors);
       const problem = runnerProblem('apply'); if (problem) return sendJson(res, { error: problem }, 400, cors);
       let file; try { file = applyTarget(q.file, q.page); } catch (e) { return sendJson(res, { error: e.message }, 400, cors); }
       const job = startJob({ id: 'apply-comments', model, effort, prompt: applyPrompt({ page: q.page, file, notes: q.notes, title: q.title, comments }), quiet: true });
@@ -591,8 +591,8 @@ const server = http.createServer(async (req, res) => {
     if (post && p2 === '/api/run') {
       const { id, model, effort } = JSON.parse(await readBody(req) || '{}');
       const skill = SKILLS.find(s => s.id === id);
-      if (!skill) return sendJson(res, { error: 'unknown skill' }, 400);
-      if (!MODEL_OK.has(String(model || '').toLowerCase()) || !EFFORT_OK.has(String(effort || '').toLowerCase()) || !dial('model', model) || !dial('effort', effort)) return sendJson(res, { error: 'unknown model or effort' }, 400);
+      if (!skill) return sendJson(res, { error: 'skill inconnue' }, 400);
+      if (!MODEL_OK.has(String(model || '').toLowerCase()) || !EFFORT_OK.has(String(effort || '').toLowerCase()) || !dial('model', model) || !dial('effort', effort)) return sendJson(res, { error: 'modèle ou effort inconnu' }, 400);
       const problem = runnerProblem(); if (problem) return sendJson(res, { error: problem }, 400);
       const prompt = typeof skill.prompt === 'string' && skill.prompt.trim() ? skill.prompt.trim() : '/' + skill.id;
       return sendJson(res, { job: startJob({ id: skill.id, model, effort, prompt, skillId: skill.id }).jobId });
@@ -604,7 +604,7 @@ const server = http.createServer(async (req, res) => {
     if (post && p2 === '/api/app-open') {
       const { id } = JSON.parse(await readBody(req) || '{}');
       const app = microApps.list().find(a => a.id === id);
-      if (!app) return sendJson(res, { error: 'unknown app' }, 400);
+      if (!app) return sendJson(res, { error: 'app inconnue' }, 400);
       const live = app.port ? await portOpen(app.port) : true;
       fs.appendFileSync(path.join(DATA, 'app-opens.jsonl'), JSON.stringify({ at: new Date().toISOString(), app: app.id, live }) + '\n');
       return sendJson(res, { url: live || !app.fallbackUrl ? app.url : app.fallbackUrl, live });
@@ -612,16 +612,16 @@ const server = http.createServer(async (req, res) => {
     if (post && p2 === '/api/artifact-remove') {
       const { file } = JSON.parse(await readBody(req) || '{}');
       const name = path.basename(String(file || ''));
-      if (!/^[^\\/]+\.(html?|json)$/i.test(name)) return sendJson(res, { error: 'bad file' }, 400);
+      if (!/^[^\\/]+\.(html?|json)$/i.test(name)) return sendJson(res, { error: 'fichier non valide' }, 400);
       const full = path.join(ARTIFACTS, name);
-      if (!fs.existsSync(full)) return sendJson(res, { error: 'not found' }, 404);
+      if (!fs.existsSync(full)) return sendJson(res, { error: 'introuvable' }, 404);
       const trash = path.join(ARTIFACTS, '_trash'); fs.mkdirSync(trash, { recursive: true });
       fs.renameSync(full, path.join(trash, name));
       const side = full.replace(/\.html?$/i, '.json');
       if (side !== full && fs.existsSync(side)) fs.renameSync(side, path.join(trash, path.basename(side)));
       return sendJson(res, { ok: true });
     }
-    if (post) return sendJson(res, { error: 'not found' }, 404);
+    if (post) return sendJson(res, { error: 'introuvable' }, 404);
 
     /* ---- pages ---- */
     if (p2 === '/' || p2 === '/index.html') return serveFile(req, res, path.join(KIT, 'index.html'));
@@ -629,25 +629,25 @@ const server = http.createServer(async (req, res) => {
     if (p2.startsWith('/artifacts/')) {
       let rel; try { rel = decodeURIComponent(p2.slice('/artifacts/'.length)); } catch (_) { rel = null; }
       const f = rel && !rel.startsWith('_trash') ? inside(ARTIFACTS, rel) : null;
-      return f ? serveFile(req, res, f) : sendJson(res, { error: 'not found' }, 404);
+      return f ? serveFile(req, res, f) : sendJson(res, { error: 'introuvable' }, 404);
     }
     const f = publicFile(p2);
     if (f) return serveFile(req, res, f);
-    sendJson(res, { error: 'not found' }, 404);
+    sendJson(res, { error: 'introuvable' }, 404);
   } catch (e) {
     if (!res.headersSent) sendJson(res, { error: String(e.message || e) }, e.status || 500);
   }
 });
 server.on('error', e => {
-  if (e.code === 'EADDRINUSE') { console.error('Port ' + PORT + ' is already in use (often RUBRIC Agentic OS v1): change "port" in os-config.json (for example to 50200), then start again.'); process.exit(1); }
+  if (e.code === 'EADDRINUSE') { console.error('Le port ' + PORT + ' est déjà pris (souvent par une autre copie de l’OS) : change "port" dans os-config.json (par exemple 50200), puis relance.'); process.exit(1); }
   throw e;
 });
 server.listen(PORT, '127.0.0.1', () => {
-  console.log(`RUBRIC Agentic OS v2  ->  http://localhost:${PORT}`);
-  console.log(`artifacts (the ring)  ->  ${ARTIFACTS}`);
-  if (!workspaceRoot()) console.log('  No workspace set yet. Put your workspace path in config/workspace.json ("root"), then press the refresh icon in the Second Brain.');
+  console.log(`SM4RT Agentic OS v2  ->  http://localhost:${PORT}`);
+  console.log(`livrables (l’anneau)  ->  ${ARTIFACTS}`);
+  if (!workspaceRoot()) console.log('  Aucun workspace défini. Mets son chemin dans config/workspace.json ("root"), puis clique sur l’icône actualiser du second cerveau.');
   startEngine();
-  if (needsFirstRefresh()) { console.log('  Building your Second Brain for the first time...'); refreshBrain().then(r => console.log('  Second Brain ' + (r.ok ? 'ready' : 'refresh failed at ' + (r.steps.find(s => !s.ok) || {}).step) + ' (' + Math.round(r.ms / 1000) + ' s)')); }
+  if (needsFirstRefresh()) { console.log('  Première construction de ton second cerveau…'); refreshBrain().then(r => console.log('  Second cerveau ' + (r.ok ? 'prêt' : 'échec de l’actualisation à l’étape ' + (r.steps.find(s => !s.ok) || {}).step) + ' (' + Math.round(r.ms / 1000) + ' s)')); }
   cached('cal', 120000, getCalendar);
   if (EMAIL.enabled) { cached('mail', 180000, getEmail); setInterval(() => cached('mail', 1, getEmail), 170000); }
   setInterval(() => cached('cal', 1, getCalendar), 110000);

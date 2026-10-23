@@ -28,7 +28,7 @@ description: Installe et personnalise l'AIOS. Reprend le profil déposé dans in
 4. Lance `systeme/scripts/index.py`, puis `systeme/scripts/verifier.py`, jusqu'à « Tout est en ordre ».
 5. Active le contrôle avant chaque commit : `git config core.hooksPath systeme/hooks`.
 6. Rappelle de laisser vide le `CLAUDE.md` global de la machine.
-7. L'interface : si `node --version` donne 18 ou plus, lance `node interface/refresh/run.mjs` et indique `node interface/server.js` ; sinon, dis comment installer Node.
+7. L'interface : si `node --version` donne 18 ou plus, lance `node interface/refresh/run.mjs`, puis propose `python3 systeme/scripts/interface.py installer` pour la garder allumée ; sinon, dis comment installer Node.
 8. Termine par un résumé : ce qui est rempli, ce qui reste « À définir ».
 
 ## Garde-fous

@@ -1,35 +1,35 @@
-# RING.md - make every build land on the ring
+# RING.md - faire atterrir chaque création sur l'anneau
 
-The ring around the orb is the OS's memory of your work: every HTML page in the `artifacts/` folder becomes a ball you can reopen, search (`/`) and browse. The habit that makes it work: your agent registers everything it builds, by itself.
+L'anneau autour de l'orbe est la mémoire de ton travail dans l'OS : chaque page HTML du dossier `artifacts/` devient une boule que tu peux rouvrir, rechercher (`/`) et parcourir. L'habitude qui fait marcher tout ça : ton agent inscrit lui-même tout ce qu'il construit.
 
-## The snippet (add it to your agent's instructions file)
+## L'extrait (ajoute-le au fichier d'instructions de ton agent)
 
-Add this to the file your agent reads at the start of every session, with the one path changed:
+Ajoute ceci au fichier que ton agent lit au début de chaque session, en changeant juste le chemin :
 
 ```
-### Put finished HTML on my OS ring
-Every time you finish an HTML page for me (report, dashboard, one-pager, tool):
-1. Copy the file to <path-to-your-os>/artifacts/<short-slug>.html
-2. Write <short-slug>.json next to it:
-   { "title": "Short Human Title", "icon": "doc", "kind": "report",
-     "created": "<ISO timestamp>", "note": "one line on what it is",
+### Mettre le HTML fini sur l'anneau de mon OS
+Chaque fois que tu termines une page HTML pour moi (rapport, tableau de bord, page de synthèse, outil) :
+1. Copie le fichier dans <chemin-de-ton-os>/artifacts/<slug-court>.html
+2. Écris <slug-court>.json à côté :
+   { "title": "Titre court et lisible", "icon": "doc", "kind": "report",
+     "created": "<horodatage ISO>", "note": "une ligne sur ce que c'est",
      "svg": "<circle cx='24' cy='24' r='14'/>" }
-3. The svg is 1 to 4 plain shapes (path, circle, rect, line, polyline, polygon, ellipse)
-   on a 48x48 grid, with no fill or stroke attributes, and it should show THAT page
-   so I can find it at a glance.
-4. Tell me: "added to the OS ring as <title>".
-Icon fallback categories: dash, deck, report, mail, video, chart, visual, bolt, doc.
+3. Le svg compte 1 à 4 formes simples (path, circle, rect, line, polyline, polygon, ellipse)
+   sur une grille de 48x48, sans attribut fill ni stroke, et il doit représenter CETTE page
+   pour que je la retrouve d'un coup d'œil.
+4. Dis-moi : « ajouté à l'anneau de l'OS sous le nom <titre> ».
+Catégories d'icônes de secours : dash, deck, report, mail, video, chart, visual, bolt, doc.
 ```
 
-During install, your agent can add this for you. Say yes when it offers.
+Pendant l'installation, ton agent peut l'ajouter pour toi. Dis oui quand il te le propose.
 
 ## Notes
 
-- The ring reads the folder live. A new file is a new ball on the next pull (within 2 minutes), no restart.
-- **Right-click any ball** for OPEN (new tab) or REMOVE. Remove can be undone: the page and its sidecar move to `artifacts/_trash`. Drag them back out to restore the ball.
-- The circle shows only as many balls as fit. Older ones hide by themselves; press `/` and matching hidden balls come up on an inner ring while you search.
-- Every ball carries a grey 30-day arc that empties as it ages, and a day tag (none on the day it was made). The newest sits beside the orange index ball; hover the orange ball to see every name.
-- The folder is `"artifactsDir"` in `os-config.json`. Point it anywhere (an absolute path works) to make the ring watch an existing folder.
-- Skills deck runs register their own report balls.
-- A sidecar's `svg` only keeps plain shapes with plain geometry. Anything else (scripts, links, styles) drops the glyph, and the ball falls back to its category icon.
-- Three sample balls ship with the kit. Delete their files in `artifacts/` any time.
+- L'anneau lit le dossier en direct. Un nouveau fichier devient une nouvelle boule à la récupération suivante (en moins de 2 minutes), sans redémarrage.
+- **Fais un clic droit sur n'importe quelle boule** pour OUVRIR (dans un nouvel onglet) ou RETIRER. Le retrait se rattrape : la page et son fichier compagnon vont dans `artifacts/_trash`. Ressors-les de ce dossier pour restaurer la boule.
+- Le cercle n'affiche que le nombre de boules qui y tiennent. Les plus anciennes se cachent d'elles-mêmes ; appuie sur `/`, et les boules cachées qui correspondent apparaissent sur un anneau intérieur pendant ta recherche.
+- Chaque boule porte un arc gris de 30 jours qui se vide avec le temps, et une étiquette de jour (aucune le jour de sa création). La plus récente se trouve à côté de la boule orange d'index ; survole la boule orange pour voir tous les noms.
+- Le dossier est `"artifactsDir"` dans `os-config.json`. Fais-le pointer où tu veux (un chemin absolu marche) pour que l'anneau surveille un dossier existant.
+- Les exécutions du deck de skills inscrivent elles-mêmes leurs boules de rapport.
+- Le `svg` d'un fichier compagnon ne garde que des formes simples, à la géométrie simple. Tout le reste (scripts, liens, styles) fait tomber le glyphe, et la boule reprend l'icône de sa catégorie.
+- Trois boules d'exemple sont livrées avec le kit. Supprime leurs fichiers dans `artifacts/` quand tu veux.

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob: file:; connect-src 'self'; script-src 'self' 'unsafe-inline' file:; style-src 'self' 'unsafe-inline' file:; font-src 'self' data: file:; frame-src 'none'; form-action 'none'; object-src 'none'">
 <script src="assets/token.js"></script>
@@ -11,7 +11,7 @@
 #orbLine{position:fixed;left:0;top:0;z-index:30;width:30px;height:14px;cursor:grab;touch-action:none}#orbLine::before{content:'';position:absolute;left:5px;right:5px;top:6px;height:2px;border-radius:2px;background:rgba(232,226,210,.34);transition:background .2s,box-shadow .2s}#orbLine:hover::before,#orbLine.on::before{background:#ff6b1a;box-shadow:0 0 8px rgba(255,107,26,.6)}#orbLine.on{cursor:grabbing}#labLayerTags{position:fixed;inset:0;pointer-events:none;z-index:22;display:none;opacity:0}</style>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RUBRIC Agentic OS</title>
+<title>SM4RT Agentic OS</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='none' stroke='%23ff6b1a' stroke-width='4' stroke-linejoin='round'%3E%3Cpath d='M24 6l18 10v16L24 42 6 32V16Z'/%3E%3C/svg%3E">
 
 
@@ -633,7 +633,7 @@
 <!-- bottom-left edit toolbar removed -->
 
 <div id="tip"><div class="t1"></div><div class="t2"></div></div>
-<div id="searchBar"><input id="searchIn" placeholder="Search artifacts" spellcheck="false">
+<div id="searchBar"><input id="searchIn" placeholder="Rechercher des livrables" spellcheck="false">
   <span id="searchN"></span></div>
 
 <div id="overlay"><div id="popup">
@@ -641,58 +641,58 @@
   <p id="pb"></p>
   <div class="file" id="pf"></div>
   <div class="actions">
-    <button class="go" id="popen">OPEN FILE →</button>
-    <button class="warn" id="premove">REMOVE BALL</button>
-    <button class="cl" id="pc">CLOSE</button>
+    <button class="go" id="popen">OUVRIR LE FICHIER →</button>
+    <button class="warn" id="premove">RETIRER</button>
+    <button class="cl" id="pc">FERMER</button>
   </div>
 </div></div>
 
 <div id="adj">
-  <div class="ahead"><span class="t"><b id="adjName">/skill</b> · MODEL × EFFORT</span>
+  <div class="ahead"><span class="t"><b id="adjName">/skill</b> · MODÈLE × EFFORT</span>
     <button class="x">✕</button></div>
   <div id="mx"></div>
 </div>
 
 <div id="addpop">
   <div class="pop">
-    <div class="pk">ADD A SKILL</div>
-    <p>Paste this prompt into your agent - it interviews you, adds the card, and verifies the widget still renders clean.</p>
-    <textarea id="addPrompt">You are adding a new skill card to my OS Skills Deck.
+    <div class="pk">AJOUTER UNE SKILL</div>
+    <p>Colle ce prompt dans ton agent : il te pose ses questions, ajoute la carte et vérifie que le widget s’affiche toujours bien.</p>
+    <textarea id="addPrompt">Tu ajoutes une nouvelle carte de skill au deck de skills de mon OS.
 
-Files: os-config.json (the skills list) and os.html (the icons), both in my OS folder.
+Fichiers : os-config.json (la liste des skills) et os.html (les icônes), tous les deux dans le dossier de mon OS.
 
-1. Ask me first, in one batch: the skill name (it shows as /name), what it does in one line, and its default model + effort picked from the dial labels in os-config.json.
-2. Add it to the "skills" array in os-config.json (id, icon key, model index, effort index). If no existing pixel icon fits, draw a new 10x10 grid in ICONS in os.html - outline style, one color key 'k'.
-3. Touch nothing else. Verify: open the OS, zero console errors, the new card renders, its adjuster opens and works.</textarea>
+1. Demande-moi d’abord, en une seule fois : le nom de la skill (elle s’affiche en /nom), ce qu’elle fait en une ligne, et son modèle + effort par défaut, choisis parmi les libellés des réglages dans os-config.json.
+2. Ajoute-la au tableau "skills" d’os-config.json (id, clé d’icône, index du modèle, index de l’effort). Si aucune icône pixel existante ne convient, dessine une nouvelle grille 10x10 dans ICONS d’os.html : style contour, une seule clé de couleur 'k'.
+3. Ne touche à rien d’autre. Vérifie : ouvre l’OS, zéro erreur dans la console, la nouvelle carte s’affiche, son réglage s’ouvre et marche.</textarea>
     <div class="row2">
-      <button class="copyp">COPY PROMPT</button>
-      <button class="closep">CLOSE</button>
+      <button class="copyp">COPIER LE PROMPT</button>
+      <button class="closep">FERMER</button>
     </div>
   </div>
 </div>
 
 <div id="appop"><div class="pop">
-  <div class="pk">MICRO APPS · ADD</div>
-  <h2>Copy this prompt to your agent</h2>
-  <p>Paste it into your agent with the app's name, one-line description, and URL filled in - it adds the card.</p>
+  <div class="pk">MICRO-APPS · AJOUTER</div>
+  <h2>Copie ce prompt pour ton agent</h2>
+  <p>Colle-le dans ton agent avec le nom de l’app, sa description en une ligne et son URL : il ajoute la carte.</p>
   <textarea id="appPrompt" readonly></textarea>
   <div class="actions">
-    <button class="go" id="appCopy">COPY PROMPT</button>
-    <button class="cl" id="appClose">CLOSE</button>
+    <button class="go" id="appCopy">COPIER LE PROMPT</button>
+    <button class="cl" id="appClose">FERMER</button>
   </div>
 </div></div>
 
 <div id="osTweak" class="hide">
-  <div class="th"><b>OS TWEAK</b><span id="twCount" style="font-size:9px;color:#8d8775"></span>
+  <div class="th"><b>RÉGLAGES OS</b><span id="twCount" style="font-size:9px;color:#8d8775"></span>
     <button class="x" id="twHide">✕</button></div>
   <div class="tbody" id="twBody"></div>
-  <div id="twHelp">REMOVE: hover any element, <b>[</b> narrows / <b>]</b> widens the pick, click deletes.
-    Esc exits, Ctrl+Z undoes.</div>
+  <div id="twHelp">RETIRER : survole un élément, <b>[</b> resserre / <b>]</b> élargit la sélection, un clic le supprime.
+    Échap pour sortir, Ctrl+Z pour annuler.</div>
   <div class="foot">
-    <button id="twRemove" class="ghost">REMOVE</button>
-    <button id="twUndo" class="ghost">UNDO</button>
-    <button id="twCopy">COPY</button>
-    <button id="twReset" class="ghost">RESET</button>
+    <button id="twRemove" class="ghost">RETIRER</button>
+    <button id="twUndo" class="ghost">ANNULER</button>
+    <button id="twCopy">COPIER</button>
+    <button id="twReset" class="ghost">RÉINITIALISER</button>
   </div>
 </div>
 <div id="twPick"></div>
@@ -705,19 +705,19 @@ Files: os-config.json (the skills list) and os.html (the icons), both in my OS f
   <p id="tourB"></p>
   <div class="tfoot">
     <span id="tourN"></span>
-    <button id="tourBack">BACK</button>
-    <button id="tourNext">NEXT</button>
+    <button id="tourBack">RETOUR</button>
+    <button id="tourNext">SUIVANT</button>
   </div>
 </div>
 <div id="portal"></div>
 <canvas id="sgFx"></canvas><div id="sgFlash"></div>
-<div id="portalTxt">OPENING SECOND BRAIN</div>
-<div id="brainWrap"><iframe id="brainFrame" title="Second Brain"></iframe></div>
+<div id="portalTxt">OUVERTURE DU SECOND CERVEAU</div>
+<div id="brainWrap"><iframe id="brainFrame" title="Second cerveau"></iframe></div>
 <div id="brainLoad"><canvas id="brainOrb" width="64" height="64"></canvas>
-  <div class="lab">OPENING SECOND BRAIN</div></div>
-<button id="brainBack">← BACK TO THE OS</button>
-<div id="orbHint">CLICK TO OPEN SECOND BRAIN</div>
-<button id="tweakFab" title="Open tweak panel">◐</button>
+  <div class="lab">OUVERTURE DU SECOND CERVEAU</div></div>
+<button id="brainBack">← RETOUR À L’OS</button>
+<div id="orbHint">CLIQUE POUR OUVRIR LE SECOND CERVEAU</div>
+<button id="tweakFab" title="Ouvrir le panneau de réglages">◐</button>
 
 <!-- routines come from /api/routines; the old direct include only worked over file:// -->
 <script src="assets/thinking-orbs.js"></script>
@@ -751,8 +751,8 @@ let CELL = W / COLS;
 let ROWS = Math.max(6, Math.floor(H / CELL + .001));
 let SCALE = CELL / 60;         /* keeps orb/ring/ball sizing identical to the 16-col era */
 const px = c => c * CELL, py = r => r * CELL;
-/* hex-fade backdrop - lifted verbatim from the Rubric Flows tab
-   (dashboard/rubric/flows/index.html): 20px hexes, brightness fading with
+/* hex-fade backdrop - lifted verbatim from the Flows tab
+   (dashboard/flows/index.html): 20px hexes, brightness fading with
    distance from centre, white strokes on the same black. */
 function drawHex() {
   const cv = document.getElementById('hexCv'), ctx = cv.getContext('2d');
@@ -824,18 +824,20 @@ const DEFLAY = {
   orb: { c:16, r:10.5, s:1.7, z:2.6 },   /* viewport-centered on 16:9 */
   contentMode: 'scale',
   removed: [
-    { id:'w-wheel', name:'ACTION WHEEL', c:20, r:2, cs:4, rs:4 }
+    { id:'w-wheel', name:'ROUE D’ACTIONS', c:20, r:2, cs:4, rs:4 }
   ],
   widgets: [
-    { id:'w-title', name:'TITLE', kind:'title', c:12, r:0, cs:8, rs:2 },
-    { id:'w-apps', name:'MICRO APPS',     c:0,  r:0,  cs:8, rs:6 },
-    { id:'w-cal',  name:'CALENDAR',       c:0,  r:6,  cs:8, rs:6 },
+    { id:'w-title', name:'TITRE', kind:'title', c:12, r:0, cs:8, rs:2 },
+    { id:'w-apps', name:'MICRO-APPS',     c:0,  r:0,  cs:8, rs:6 },
+    { id:'w-cal',  name:'AGENDA',         c:0,  r:6,  cs:8, rs:6 },
     { id:'w-yt',   name:'STATS',          c:0,  r:12, cs:8, rs:6 },
-    { id:'w-mail', name:'EMAIL',          c:24, r:0,  cs:8, rs:6 },
+    { id:'w-mail', name:'E-MAILS',        c:24, r:0,  cs:8, rs:6 },
     { id:'w-rt',   name:'ROUTINES',       c:24, r:6,  cs:8, rs:4 },
     { id:'w-sk',   name:'SKILLS',         c:24, r:10, cs:8, rs:6 }
   ]
 };
+/* header names are read from DEFLAY by id, so a layout saved before a relabel still shows the new names */
+const wName = w => ([...DEFLAY.widgets, ...DEFLAY.removed].find(d => d.id === w.id) || w).name;
 const LAYKEY = 'os-dash-v7-baked';
 let LAY = JSON.parse(copyStorage.getItem(LAYKEY) || 'null') || JSON.parse(JSON.stringify(DEFLAY));
 /* one-time migration: layouts saved on the 16-col grid double into 32-col units */
@@ -896,12 +898,12 @@ function resolve(movedId) {
 
 /* ================= widget content (modes A scale / B reflow) ================= */
 const CONTENT = {
-  'w-apps': { hero:['3','connected'], rows:[['Email','1m ago',1],['Calendar','5m ago',0],['Files','1h ago',0]]},
-  'w-rt': { hero:['07:00','morning digest next'], rows:[['07:00 morning digest','NEXT',1],['21:00 daily log','-',0]]},
-  'w-mem': { hero:['0','files indexed'], rows:[['your notes land here','-',0]]},
-  'w-sk': { hero:['0','runs'], rows:[['your skills land here','-',0]]},
-  'w-sp1': { hero:['+','spare'], rows:[['custom widget lands here','later',0]] },
-  'w-sp2': { hero:['+','spare'], rows:[['custom widget lands here','later',0]] }
+  'w-apps': { hero:['3','connectées'], rows:[['E-mail','il y a 1 min',1],['Agenda','il y a 5 min',0],['Fichiers','il y a 1 h',0]]},
+  'w-rt': { hero:['07:00','prochaine : résumé du matin'], rows:[['07:00 résumé du matin','PROCHAINE',1],['21:00 journal du jour','-',0]]},
+  'w-mem': { hero:['0','fichiers indexés'], rows:[['tes notes arrivent ici','-',0]]},
+  'w-sk': { hero:['0','exécutions'], rows:[['tes skills arrivent ici','-',0]]},
+  'w-sp1': { hero:['+','libre'], rows:[['ton widget arrive ici','plus tard',0]] },
+  'w-sp2': { hero:['+','libre'], rows:[['ton widget arrive ici','plus tard',0]] }
 };
 function bodyHTML(w) {
   const c = CONTENT[w.id]; if (!c) return '';
@@ -937,53 +939,53 @@ const pixCanvas = ic => `<canvas class="pix" data-ic="${ic}" width="30" height="
 const APPBODIES = {
   'w-apps': `
     <div style="display:flex; justify-content:flex-end; margin-top:2px; flex:0 0 auto">
-      <button class="hbtn" id="addApp">+ ADD APP</button>
+      <button class="hbtn" id="addApp">+ AJOUTER UNE APP</button>
     </div>
     <div class="approws" id="appRows" style="margin-top:4px"></div>`,
   'w-mail': `
     <div class="caprow" style="margin-top:4px">
       <span class="bignum">-</span>
-      <span class="cap">EMAILS<br>PAST 24H</span>
+      <span class="cap">E-MAILS<br>SUR 24 H</span>
     </div>
-    <div class="lbl">FLAGGED · NEEDS YOU</div>
+    <div class="lbl">SIGNALÉS · À TRAITER</div>
     <div>
-      <div class="row2 mailrow" style="display:none"><svg class="mailic" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 8l9 7 9-7"/></svg><b></b><span class="age"></span><span class="act">OPEN →</span></div>
-      <div class="row2 mailrow" style="display:none"><svg class="mailic" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 8l9 7 9-7"/></svg><b></b><span class="age"></span><span class="act">OPEN →</span></div>
-      <div class="row2 mailrow" style="display:none"><svg class="mailic" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 8l9 7 9-7"/></svg><b></b><span class="age"></span><span class="act">OPEN →</span></div>
+      <div class="row2 mailrow" style="display:none"><svg class="mailic" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 8l9 7 9-7"/></svg><b></b><span class="age"></span><span class="act">OUVRIR →</span></div>
+      <div class="row2 mailrow" style="display:none"><svg class="mailic" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 8l9 7 9-7"/></svg><b></b><span class="age"></span><span class="act">OUVRIR →</span></div>
+      <div class="row2 mailrow" style="display:none"><svg class="mailic" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 8l9 7 9-7"/></svg><b></b><span class="age"></span><span class="act">OUVRIR →</span></div>
     </div>
-    <div class="nwire" id="mailNW">Not wired yet - your agent connects your inbox. Guide: WIRING.md</div>
-    <div id="mixWrap" style="display:none"><div class="lbl">TODAY'S MIX</div>
+    <div class="nwire" id="mailNW">Pas encore branché : ton agent connecte ta boîte mail. Guide : WIRING.md</div>
+    <div id="mixWrap" style="display:none"><div class="lbl">RÉPARTITION DU JOUR</div>
     <div id="mixbar"></div><div id="mixlbl"></div></div>
-    <div class="foot2"><i></i>NOT CONNECTED</div>`,
+    <div class="foot2"><i></i>NON CONNECTÉ</div>`,
   'w-cal': `
     <div class="clockrow" style="margin-top:6px">
       <canvas id="analog" width="132" height="132" style="width:66px;height:66px"></canvas>
       <div>
         <div class="caldate" id="calDate">--</div>
         <div class="bigclock" id="clkHome">00:00:00</div>
-        <div class="cap" id="homeTz" style="margin-top:3px; letter-spacing:2.5px">LOCAL TIME</div>
+        <div class="cap" id="homeTz" style="margin-top:3px; letter-spacing:2.5px">HEURE LOCALE</div>
       </div>
     </div>
     <div class="tzrow">
       <span class="tz"><span id="tzl0">USA PT</span> <i class="dn" id="dn0"></i><b id="clk0">--:--</b></span>
       <span class="tz"><span id="tzl1">USA ET</span> <i class="dn" id="dn1"></i><b id="clk1">--:--</b></span>
-      <span class="tz"><span id="tzl2">LONDON</span> <i class="dn" id="dn2"></i><b id="clk2">--:--</b></span>
+      <span class="tz"><span id="tzl2">LONDRES</span> <i class="dn" id="dn2"></i><b id="clk2">--:--</b></span>
     </div>
     <div class="wkgrid" id="wkGrid"></div>
-    <div class="lbl">WHAT'S NEXT</div>
-    <div id="calRows"><div class="row2"><b style="color:var(--muted); font-weight:400">loading...</b></div></div>`,
+    <div class="lbl">À VENIR</div>
+    <div id="calRows"><div class="row2"><b style="color:var(--muted); font-weight:400">chargement…</b></div></div>`,
   'w-yt': `
     <div class="caprow" style="margin-top:10px">
       <span class="bignum" id="ytSubs">-</span>
-      <span class="cap" id="ytSubsCap">YOUR NUMBER<br>connect a feed</span>
+      <span class="cap" id="ytSubsCap">TON CHIFFRE<br>branche un flux</span>
     </div>
-    <div class="nwire">Not wired yet - your agent can feed ANY stat here (subs, revenue, clients, workouts). Guide: WIRING.md</div>
+    <div class="nwire">Pas encore branché : ton agent peut afficher ici N’IMPORTE QUELLE stat (abonnés, revenus, clients, séances). Guide : WIRING.md</div>
     <div class="lbl"><span id="ytPub"></span></div>
     <div id="ytgrid"></div>`
 };
-const APPTICKS = { 'w-apps':'', 'w-mail':'', 'w-cal':'today', 'w-yt':'' };
+const APPTICKS = { 'w-apps':'', 'w-mail':'', 'w-cal':'aujourd’hui', 'w-yt':'' };
 /* header-right buttons for app widgets - same ghost styling as + ADD APP */
-const APPHBTN = { 'w-cal': `<button class="hbtn" id="openGcal" style="margin-left:8px">OPEN CAL</button>` };
+const APPHBTN = { 'w-cal': `<button class="hbtn" id="openGcal" style="margin-left:8px">OUVRIR</button>` };
 
 /* ================= widgets DOM ================= */
 const els = {};
@@ -996,19 +998,19 @@ function buildWidgets() {
     el.id = w.id;
     if (w.kind === 'title') {
       el.innerHTML = `<div class="wh tb" style="display:block">
-        <h1><svg class="hexlogo" viewBox="0 0 48 48" fill="none" stroke="#ff6b1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l18 10v16L24 42 6 32V16Z"/><path d="M24 6v16l18 10" opacity="0.5"/><path d="M24 22L6 32" opacity="0.5"/></svg>RUBRIC <span>Agentic OS</span></h1>
+        <h1><svg class="hexlogo" viewBox="0 0 48 48" fill="none" stroke="#ff6b1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l18 10v16L24 42 6 32V16Z"/><path d="M24 6v16l18 10" opacity="0.5"/><path d="M24 22L6 32" opacity="0.5"/></svg>SM4RT <span>Agentic OS</span></h1>
         <div class="tbar">
-          <button id="editBtn" title="Edit layout"><svg viewBox="0 0 24 24"><path d="M17 3l4 4L8 20l-5 1 1-5Z"/></svg></button>
-          <button id="searchBtn" title="Search artifacts (/)"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 L21 21"/></svg></button>
-          <button id="libBtn" title="Widget library"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="12" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="13" width="7" height="8" rx="1.5"/><rect x="3" y="18" width="8" height="3" rx="1.5"/></svg></button>
-          <button id="infoBtn" title="What is all this?"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.5h.01"/></svg></button>
+          <button id="editBtn" title="Modifier la disposition"><svg viewBox="0 0 24 24"><path d="M17 3l4 4L8 20l-5 1 1-5Z"/></svg></button>
+          <button id="searchBtn" title="Rechercher des livrables (/)"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 L21 21"/></svg></button>
+          <button id="libBtn" title="Bibliothèque de widgets"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="12" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="13" width="7" height="8" rx="1.5"/><rect x="3" y="18" width="8" height="3" rx="1.5"/></svg></button>
+          <button id="infoBtn" title="À quoi sert tout ça ?"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.5h.01"/></svg></button>
         </div>
         </div><div class="rs"></div>`;
     } else if (w.id === 'w-sk') {
       el.innerHTML = `<div class="wh"><span class="g">⠿</span>
         <canvas class="hic" data-h="w-sk" width="24" height="24" style="width:24px;height:24px"></canvas>
-        <span>SKILLS DECK</span><span class="tick">tap ▶ to run</span>
-        <button class="addskill">+ ADD SKILL</button></div>
+        <span>SKILLS</span><span class="tick">▶ pour lancer</span>
+        <button class="addskill">+ AJOUTER UNE SKILL</button></div>
         <div class="wb live"><div id="deckScroll"><div id="deck"></div><div id="deckArch"></div></div></div>
         <button class="wx">×</button><div class="rs"></div>`;
     } else if (w.id === 'w-rt') {
@@ -1017,7 +1019,7 @@ function buildWidgets() {
         <span>ROUTINES</span><span class="tick" id="btick"></span></div>
         <div class="wb live" style="display:flex; flex-direction:column">
           <div class="board">
-            <div class="bhead"><span>TIME</span><span>ROUTINE</span><span>STATUS</span></div>
+            <div class="bhead"><span>HEURE</span><span>ROUTINE</span><span>STATUT</span></div>
             <div class="brows" id="rows"></div>
           </div>
           <div class="wfoot"><span id="srcline" style="display:flex; gap:12px"></span><span id="genline"></span></div>
@@ -1025,21 +1027,21 @@ function buildWidgets() {
         <button class="wx">×</button><div class="rs"></div>`;
     } else if (w.id === 'w-wheel') {
       el.innerHTML = `<div class="wh"><span class="g">⠿</span>
-        <span>ACTION WHEEL</span><span class="tick">hold to open</span></div>
+        <span>ROUE D’ACTIONS</span><span class="tick">maintiens pour ouvrir</span></div>
         <div class="wb live" style="display:flex; flex-direction:column">
           <div id="wheelWrap"><canvas id="wheelCv"></canvas>
-            <div id="wheelHint">CLICK + HOLD</div></div>
+            <div id="wheelHint">CLIQUE + MAINTIENS</div></div>
         </div>
         <button class="wx">×</button><div class="rs"></div>`;
     } else if (APPBODIES[w.id]) {
       el.innerHTML = `<div class="wh"><span class="g">⠿</span>
         <canvas class="hic" data-h="${w.id}" width="24" height="24" style="width:24px;height:24px"></canvas>
-        <span>${w.name}</span><span class="tick">${APPTICKS[w.id] || ''}</span>${APPHBTN[w.id] || ''}</div>
+        <span>${wName(w)}</span><span class="tick">${APPTICKS[w.id] || ''}</span>${APPHBTN[w.id] || ''}</div>
         <div class="wb live" style="display:flex; flex-direction:column">${APPBODIES[w.id]}</div>
         <button class="wx">×</button><div class="rs"></div>`;
     } else {
       el.innerHTML = `<div class="wh"><span class="g">⠿</span>
-        <span>${w.name}</span><span class="tick">awaiting widget</span></div>
+        <span>${wName(w)}</span><span class="tick">widget à venir</span></div>
         <div class="wb">${bodyHTML(w)}</div>
         <button class="wx">×</button><div class="rs"></div>`;
     }
@@ -1259,10 +1261,10 @@ const bpt = a => [orbCX() + Math.cos(a)*RINGpx(), orbCY() + Math.sin(a)*RINGpx()
 const GLYPH = [
   ['INBOX','<rect x="9" y="12" width="30" height="24" rx="3"/><path d="M9 15 L24 27 L39 15"/>','inbox-brief.html','/inbox'],
   ['ROUTINE','<circle cx="24" cy="24" r="15"/><path d="M24 14 L24 24 L32 30"/>','morning-digest.html','routine · 07:00'],
-  ['SKILL','<path d="M27 6 L14 28 L23 28 L20 42 L34 20 L25 20 Z"/>','skill-output.html','skill run'],
-  ['DOC','<rect x="13" y="8" width="22" height="32" rx="3"/><path d="M18 18h12M18 25h12M18 32h7"/>','research-brief.html','/os output'],
-  ['RUN','<circle cx="24" cy="24" r="16"/><path d="M20 17 L31 24 L20 31 Z"/>','weekly-review.html','routine · weekly'],
-  ['MAIL','<rect x="9" y="12" width="30" height="24" rx="3"/><path d="M9 15 L24 27 L39 15"/>','inbox-summary.html','/inbox']
+  ['SKILL','<path d="M27 6 L14 28 L23 28 L20 42 L34 20 L25 20 Z"/>','skill-output.html','exécution de skill'],
+  ['DOC','<rect x="13" y="8" width="22" height="32" rx="3"/><path d="M18 18h12M18 25h12M18 32h7"/>','research-brief.html','sortie /os'],
+  ['EXÉCUTION','<circle cx="24" cy="24" r="16"/><path d="M20 17 L31 24 L20 31 Z"/>','weekly-review.html','routine · hebdo'],
+  ['E-MAIL','<rect x="9" y="12" width="30" height="24" rx="3"/><path d="M9 15 L24 27 L39 15"/>','inbox-summary.html','/inbox']
 ];
 function ballSize() {
   return BALLbase();   /* fixed size - the ring caps COUNT instead */
@@ -1321,7 +1323,7 @@ function applySearch() {
     b.w = 0;
   });
   document.getElementById('searchN').textContent =
-    q ? (hits === 1 ? '1 MATCH · ENTER OPENS' : hits + ' MATCHES') : '';
+    q ? (hits === 1 ? '1 RÉSULTAT · ENTRÉE OUVRE' : hits + ' RÉSULTATS') : '';
   return { hits, only };
 }
 function openSearch() {
@@ -1379,7 +1381,7 @@ const escH = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'
 /* A hairline under the ring's orange info ball: drag it to move the whole orb and artifact ring. */
 (function orbLine() {
   const h = document.createElement('div');
-  h.id = 'orbLine'; h.title = 'Drag to move the orb and its ring';
+  h.id = 'orbLine'; h.title = 'Glisse pour déplacer l’orbe et son anneau';
   document.body.appendChild(h);
   let drag = null;
   const place = () => {
@@ -1411,20 +1413,20 @@ const escH = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'
 /* Seven cards that point at the board's controls and say what they do.
    Targets resolve at show-time so widget rebuilds can't strand the tour. */
 const TOUR_STEPS = [
-  { el: () => document.getElementById('editBtn'), t: 'Edit the board',
-    b: 'Click the <b>pencil</b> to unlock the board. <b>Drag</b> a widget to move it. <b>Pull its corner</b> to change its size. While you edit, a small button shows at the bottom right - it opens <b>sliders</b> for colors and sizes. Click the pencil again to <b>lock</b> the board.' },
-  { el: () => document.getElementById('searchBtn'), t: 'Search',
-    b: 'Click the <b>magnifier</b>, or press <b>/</b> anywhere. Type a word you remember. The matching balls <b>light up</b> on the ring. If only one ball matches, press <b>Enter</b> to open it.' },
-  { el: () => document.getElementById('libBtn'), t: 'Widget library',
-    b: 'This opens the <b>widget library</b>. It shows every widget this board can have. You can also <b>create your own widget</b>: click <b>ADD YOUR OWN WIDGET</b> at the top of the library and copy the starter prompt.' },
-  { el: () => (balls[0] && balls[0].el), t: 'Artifacts inbox',
-    b: 'Every <b>ball</b> is one thing built for you - a page, a report, a deck. <b>Hover</b> a ball to see its name. <b>Click</b> it to open it. New work lands here on its own.' },
-  { el: () => document.getElementById('w-apps'), t: 'Micro Apps',
-    b: 'Your local apps, one click away. <b>RUBRIC Recos</b> opens if it runs on this computer, or its page if not. <b>Add more</b> gives your agent a ready prompt to add your own.' },
-  { el: () => document.getElementById('orbBox'), orb: true, t: 'Second Brain',
-    b: 'Click the <b>centre of the orb</b> to zoom into your <b>Second Brain</b>: your whole workspace as one map, plus your <b>routines</b>, <b>skills</b> and <b>applications</b>. Press <b>/</b> inside to search every file, and <b>Back</b> to come home.' },
-  { el: () => document.getElementById('w-sk'), t: 'Wire it up',
-    b: 'Cards here run your agent by itself - results land on the ring as <b>reports</b>. Every part has a guide: <b>README.md</b> maps them all (BRAIN, ROUTINES, USAGE, WIRING, OAUTH, RING, REDESIGN). Hand a guide to your agent and that part <b>lights up</b>.' }
+  { el: () => document.getElementById('editBtn'), t: 'Modifier le tableau',
+    b: 'Clique sur le <b>crayon</b> pour déverrouiller le tableau. <b>Glisse</b> un widget pour le déplacer. <b>Tire son coin</b> pour changer sa taille. En mode édition, un petit bouton apparaît en bas à droite : il ouvre des <b>curseurs</b> pour les couleurs et les tailles. Clique encore sur le crayon pour <b>verrouiller</b> le tableau.' },
+  { el: () => document.getElementById('searchBtn'), t: 'Rechercher',
+    b: 'Clique sur la <b>loupe</b>, ou appuie sur <b>/</b> n’importe où. Tape un mot dont tu te souviens. Les boules qui correspondent <b>s’allument</b> sur l’anneau. Si une seule boule correspond, appuie sur <b>Entrée</b> pour l’ouvrir.' },
+  { el: () => document.getElementById('libBtn'), t: 'Bibliothèque de widgets',
+    b: 'Ce bouton ouvre la <b>bibliothèque de widgets</b>. Elle montre tous les widgets que ce tableau peut avoir. Tu peux aussi <b>créer ton propre widget</b> : clique sur <b>AJOUTE TON WIDGET</b> en haut de la bibliothèque et copie le prompt de départ.' },
+  { el: () => (balls[0] && balls[0].el), t: 'Boîte des livrables',
+    b: 'Chaque <b>boule</b> est une chose faite pour toi : une page, un rapport, un deck. <b>Survole</b> une boule pour voir son nom. <b>Clique</b> dessus pour l’ouvrir. Les nouveaux livrables arrivent ici tout seuls.' },
+  { el: () => document.getElementById('w-apps'), t: 'Micro-apps',
+    b: 'Tes apps locales, à un clic : chacune s’ouvre si elle tourne sur cet ordinateur, sinon c’est sa page qui s’ouvre. <b>Ajouter</b> donne à ton agent un prompt prêt à l’emploi pour ajouter les tiennes.' },
+  { el: () => document.getElementById('orbBox'), orb: true, t: 'Second cerveau',
+    b: 'Clique sur le <b>centre de l’orbe</b> pour zoomer dans ton <b>second cerveau</b> : tout ton workspace sur une seule carte, plus tes <b>routines</b>, tes <b>skills</b> et tes <b>applications</b>. À l’intérieur, appuie sur <b>/</b> pour chercher n’importe quel fichier, et sur <b>Retour</b> pour revenir.' },
+  { el: () => document.getElementById('w-sk'), t: 'Tout brancher',
+    b: 'Ces cartes lancent ton agent tout seul : les résultats arrivent sur l’anneau sous forme de <b>rapports</b>. Chaque partie a son guide : <b>README.md</b> les liste tous (BRAIN, ROUTINES, USAGE, WIRING, OAUTH, RING, REDESIGN). Donne un guide à ton agent et cette partie <b>s’allume</b>.' }
 ];
 (function wireTour() {
   const card = document.getElementById('tourCard');
@@ -1456,7 +1458,7 @@ const TOUR_STEPS = [
     tT.textContent = s.t; tB.innerHTML = s.b;   /* steps carry <b> highlights */
     tN.textContent = (i + 1) + ' / ' + TOUR_STEPS.length;
     document.getElementById('tourBack').style.visibility = i ? 'visible' : 'hidden';
-    document.getElementById('tourNext').textContent = i === TOUR_STEPS.length - 1 ? 'DONE' : 'NEXT';
+    document.getElementById('tourNext').textContent = i === TOUR_STEPS.length - 1 ? 'TERMINÉ' : 'SUIVANT';
     card.classList.add('show');
     const cw = card.offsetWidth, ch = card.offsetHeight;
     const x = Math.min(Math.max(12, r.left + r.width / 2 - cw / 2), innerWidth - cw - 12);
@@ -1479,14 +1481,12 @@ const TOUR_STEPS = [
   addEventListener('keydown', e => { if (e.key === 'Escape' && step >= 0) stop(); });
 })();
 
-/* created stamp as the board shows it: Aug5 - 10:24pm */
+/* created stamp as the board shows it: 5 août - 22:24 */
 function fmtCreated(iso) {
   const d = new Date(iso);
   if (isNaN(d)) return '';
-  let h = d.getHours() % 12 || 12;
-  const ap = d.getHours() >= 12 ? 'pm' : 'am';
-  return d.toLocaleString('en-AU', { month: 'short' }) + d.getDate()
-       + ' - ' + h + ':' + String(d.getMinutes()).padStart(2, '0') + ap;
+  return d.getDate() + ' ' + d.toLocaleString('fr-FR', { month: 'short' })
+       + ' - ' + String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0');
 }
 /* ball drag + click + hover tip */
 /* ---- ball context menu: right-click -> OPEN (new tab) / REMOVE (to _trash) ---- */
@@ -1500,8 +1500,8 @@ function fmtCreated(iso) {
     font: "500 12px 'Outfit',sans-serif", letterSpacing: '1px'
   });
   m.innerHTML =
-    '<div class="bm" data-act="open">OPEN</div>' +
-    '<div class="bm" data-act="remove">REMOVE</div>';
+    '<div class="bm" data-act="open">OUVRIR</div>' +
+    '<div class="bm" data-act="remove">RETIRER</div>';
   const st = document.createElement('style');
   st.textContent = `#ballMenu .bm { padding:7px 12px; border-radius:5px; color:var(--cream); }
     #ballMenu .bm:hover { background:rgba(255,107,26,.15); color:var(--accent); }
@@ -1536,8 +1536,8 @@ function fmtCreated(iso) {
         b.el.remove();
         balls.splice(balls.indexOf(b), 1);
         assignSlots(); wakeRing();
-        toast('removed "' + b.artifact.title + '" (kept in artifacts/_trash)');
-      } else toast('remove failed: ' + (res.error || 'server unreachable'));
+        toast('« ' + b.artifact.title + ' » retiré (gardé dans artifacts/_trash)');
+      } else toast('échec du retrait : ' + (res.error || 'serveur injoignable'));
     }
   });
 })();
@@ -1586,7 +1586,7 @@ document.addEventListener('pointermove', e => {
     } else {
       const [name,, file, src] = GLYPH[b.glyph];
       const age = Math.max(1, Math.round((Date.now()-b.born)/60000));
-      t1 = name; t2 = src + ' · ' + age + 'm ago · click for file';
+      t1 = name; t2 = src + ' · il y a ' + age + ' min · clique pour le fichier';
     }
     tip.querySelector('.t1').textContent = t1;
     tip.querySelector('.t2').textContent = t2;
@@ -1608,20 +1608,22 @@ function openPopup(b) {
   popupBall = b;
   if (b.artifact) {
     const a = b.artifact;
-    document.getElementById('ppk').textContent = a.kind.toUpperCase() + ' · ' +
-      new Date(a.modified).toLocaleDateString('en-AU', { day:'numeric', month:'short' }).toUpperCase();
+    /* display-only labels for the sidecar kinds; the raw kind stays as data */
+    const KIND_FR = { run:'exécution', report:'rapport', guide:'guide', artifact:'livrable' };
+    document.getElementById('ppk').textContent = (KIND_FR[a.kind] || a.kind).toUpperCase() + ' · ' +
+      new Date(a.modified).toLocaleDateString('fr-FR', { day:'numeric', month:'short' }).toUpperCase();
     document.getElementById('pt').textContent = a.title;
     document.getElementById('pb').textContent = a.note
-      ? a.note + ' - open it here, or find the file in the artifacts folder.'
-      : 'Built for you and parked on the ring. Open it here, or find the file in the artifacts folder.';
+      ? a.note + ' : ouvre-le ici, ou retrouve le fichier dans le dossier artifacts.'
+      : 'Fait pour toi et posé sur l’anneau. Ouvre-le ici, ou retrouve le fichier dans le dossier artifacts.';
     document.getElementById('pf').textContent = 'artifacts/' + a.file;
     document.getElementById('overlay').classList.add('show');
     return;
   }
   const [name,, file, src] = GLYPH[b.glyph];
-  document.getElementById('ppk').textContent = name + ' · ON THE RING';
-  document.getElementById('pt').textContent = name.toLowerCase() + ' deliverable';
-  document.getElementById('pb').textContent = 'Spawned by ' + src + '. The summary lives here - the full HTML output opens on your device.';
+  document.getElementById('ppk').textContent = name + ' · SUR L’ANNEAU';
+  document.getElementById('pt').textContent = 'Livrable ' + name.toLowerCase();
+  document.getElementById('pb').textContent = 'Créé par ' + src + '. Le résumé est ici ; la sortie HTML complète s’ouvre sur ton appareil.';
   document.getElementById('pf').textContent = 'artifacts/' + file;
   overlay.classList.add('show');
 }
@@ -1942,7 +1944,7 @@ function playSkill(card, btn) {
     if (ok) bar.classList.add('ok');
     tm.textContent = (ok ? '✓ ' : '✗ ') + fmt(secs);
     pullArtifacts()
-      .then(() => toast('/' + id + (ok ? ' finished - report on the ring' : ' FAILED - log on the ring')))
+      .then(() => toast('/' + id + (ok ? ' terminée : rapport sur l’anneau' : ' ÉCHEC : journal sur l’anneau')))
       .catch(() => {});
     setTimeout(() => { bar.remove(); card.classList.remove('busy'); btn.classList.remove('running'); }, 2500);
   };
@@ -1953,7 +1955,7 @@ function playSkill(card, btn) {
     body: JSON.stringify({ id, model: MODELS[cfg.model], effort: EFFORTS[cfg.effort] }) })
     .then(r => r.json())
     .then(({ job, error }) => {
-      if (!job) { toast(error || 'run failed to start'); return stop(false, 0); }
+      if (!job) { toast(error || 'l’exécution n’a pas démarré'); return stop(false, 0); }
       const iv = setInterval(() => {
         const el = (Date.now() - t0) / 1000;
         fill.style.width = Math.min(94, 100 * (1 - Math.exp(-el / 240))) + '%';
@@ -1970,7 +1972,7 @@ function playSkill(card, btn) {
           .catch(() => {});     /* transient poll miss - keep waiting */
       }, 3000);
     })
-    .catch(() => { toast('server unreachable'); stop(false, 0); });
+    .catch(() => { toast('serveur injoignable'); stop(false, 0); });
 }
 function renderDeck() {
   const deck = document.getElementById('deck'); if (!deck) return;
@@ -1978,7 +1980,7 @@ function renderDeck() {
   deck.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
   deck.innerHTML = '';
   if (!SKILLS.length) {
-    deck.innerHTML = '<div class="nwire" style="grid-column:1/-1; padding:8px 2px">No skills wired yet - hit + ADD SKILL, or ask your agent to recommend and wire your first ones (see README).</div>';
+    deck.innerHTML = '<div class="nwire" style="grid-column:1/-1; padding:8px 2px">Aucune skill branchée pour l’instant : clique sur + AJOUTER UNE SKILL, ou demande à ton agent de te conseiller et de brancher tes premières skills (voir README).</div>';
     return;
   }
   const archived = new Set(SKST.archived || []);
@@ -1994,14 +1996,14 @@ function renderDeck() {
          <span class="cfg">${cfgText(s.id)}</span>`;
     d.innerHTML = h === 1
       ? `<canvas data-ic="${s.icon}"></canvas><div class="mid">${inner}</div>
-         <div class="btns"><button class="abtn play" title="run">▶</button>
-         <button class="abtn gear" title="model and effort">⚙</button>
-         <button class="abtn arch" title="archive this skill (restore it from ARCHIVED below)"><svg viewBox="0 0 10 10"><path d="M1 1.5h8v2H1zM2 3.5v5h6v-5M4 5.5h2" fill="none" stroke="currentColor" stroke-width="1.1"/></svg></button></div>
+         <div class="btns"><button class="abtn play" title="lancer">▶</button>
+         <button class="abtn gear" title="modèle et effort">⚙</button>
+         <button class="abtn arch" title="archiver cette skill (la restaurer depuis ARCHIVÉES en bas)"><svg viewBox="0 0 10 10"><path d="M1 1.5h8v2H1zM2 3.5v5h6v-5M4 5.5h2" fill="none" stroke="currentColor" stroke-width="1.1"/></svg></button></div>
          <div class="dkresize"></div>`
       : `<canvas data-ic="${s.icon}"></canvas>${inner}
-         <div class="btns"><button class="abtn play" title="run">▶</button>
-         <button class="abtn gear" title="model and effort">⚙</button>
-         <button class="abtn arch" title="archive this skill (restore it from ARCHIVED below)"><svg viewBox="0 0 10 10"><path d="M1 1.5h8v2H1zM2 3.5v5h6v-5M4 5.5h2" fill="none" stroke="currentColor" stroke-width="1.1"/></svg></button></div>
+         <div class="btns"><button class="abtn play" title="lancer">▶</button>
+         <button class="abtn gear" title="modèle et effort">⚙</button>
+         <button class="abtn arch" title="archiver cette skill (la restaurer depuis ARCHIVÉES en bas)"><svg viewBox="0 0 10 10"><path d="M1 1.5h8v2H1zM2 3.5v5h6v-5M4 5.5h2" fill="none" stroke="currentColor" stroke-width="1.1"/></svg></button></div>
          <div class="dkresize"></div>`;
     d.querySelector('.play').onclick = e => { e.stopPropagation(); playSkill(d, e.currentTarget); };
     d.querySelector('.gear').onclick = e => { e.stopPropagation(); openAdj(s.id, e.currentTarget); };
@@ -2031,14 +2033,14 @@ function archiveSkill(id, on) {
   const set = new Set(SKST.archived || []);
   if (on) set.add(id); else set.delete(id);
   SKST.archived = [...set]; saveSkills(); renderDeck();
-  if (typeof toast === 'function') toast(on ? '/' + id + ' archived - restore it from ARCHIVED at the bottom of the deck' : '/' + id + ' is back on the deck');
+  if (typeof toast === 'function') toast(on ? '/' + id + ' archivée : restaure-la depuis ARCHIVÉES en bas du deck' : '/' + id + ' est de retour dans le deck');
 }
 function renderArchived() {
   const box = document.getElementById('deckArch'); if (!box) return;
   const list = (SKST.archived || []).filter(id => SKILLS.find(s => s.id === id));
   if (!list.length) { box.innerHTML = ''; return; }
-  box.innerHTML = `<div class="ah">ARCHIVED (${list.length}) ${SKST.showArch ? '▴' : '▾'}</div>` +
-    (SKST.showArch ? `<div class="chips">${list.map(id => `<button class="chip" data-id="${escH(id)}" title="restore to the deck">↺ <span class="sl">/</span>${escH(id)}</button>`).join('')}</div>` : '');
+  box.innerHTML = `<div class="ah">ARCHIVÉES (${list.length}) ${SKST.showArch ? '▴' : '▾'}</div>` +
+    (SKST.showArch ? `<div class="chips">${list.map(id => `<button class="chip" data-id="${escH(id)}" title="remettre dans le deck">↺ <span class="sl">/</span>${escH(id)}</button>`).join('')}</div>` : '');
   box.querySelector('.ah').onclick = () => { SKST.showArch = !SKST.showArch; saveSkills(); renderArchived(); };
   box.querySelectorAll('.chip').forEach(c => c.onclick = () => archiveSkill(c.dataset.id, false));
 }
@@ -2146,8 +2148,8 @@ addpop.querySelector('.closep').onclick = () => { addpop.style.display = 'none';
 addpop.addEventListener('pointerdown', e => { if (e.target === addpop) addpop.style.display = 'none'; });
 addpop.querySelector('.copyp').onclick = e => {
   navigator.clipboard.writeText(document.getElementById('addPrompt').value);
-  e.target.textContent = 'COPIED ✓';
-  setTimeout(() => e.target.textContent = 'COPY PROMPT', 1200);
+  e.target.textContent = 'COPIÉ ✓';
+  setTimeout(() => e.target.textContent = 'COPIER LE PROMPT', 1200);
 };
 
 /* ================================================================
@@ -2202,7 +2204,7 @@ function todayList(now) {
     .sort((a, b) => a.at - b.at);
 }
 function fmtCd(ms) {
-  if (ms <= 0) return 'NOW';
+  if (ms <= 0) return 'MAINTENANT';
   const s = Math.floor(ms/1000), h = Math.floor(s/3600), m = Math.floor((s%3600)/60);
   return h > 0 ? `T-${h}H ${String(m).padStart(2,'0')}M` : `T-${m}:${String(s%60).padStart(2,'0')}`;
 }
@@ -2214,7 +2216,7 @@ function renderBoard(force) {
   if (!list.length) {
     if (rowsEl.dataset.h !== 'empty') {
       rowsEl.dataset.h = 'empty';
-      rowsEl.innerHTML = '<div class="nwire" style="padding:12px 4px">No routines wired - your agent schedules these and writes the feed. Guide: ROUTINES.md</div>';
+      rowsEl.innerHTML = '<div class="nwire" style="padding:12px 4px">Aucune routine branchée : ton agent les planifie et écrit le flux. Guide : ROUTINES.md</div>';
     }
     document.getElementById('btick').textContent = '';
     document.getElementById('srcline').textContent = '';
@@ -2228,11 +2230,11 @@ function renderBoard(force) {
   const html = list.map(r => {
     const isNext = next && r === next;
     const key = r.n + r.t;
-    const stTxt = r.at <= now ? 'FIRED' : isNext ? 'NEXT' : 'QUEUED';
+    const stTxt = r.at <= now ? 'LANCÉE' : isNext ? 'PROCHAINE' : 'EN ATTENTE';
     const changed = lastKeys[key] !== undefined && lastKeys[key] !== (r.at <= now ? 'f' : isNext ? 'n' : 'q');
     lastKeys[key] = r.at <= now ? 'f' : isNext ? 'n' : 'q';
     return `<div class="brow ${r.at <= now ? 'done' : ''} ${isNext ? 'next' : ''} ${changed ? 'ticked' : ''}"
-      data-rtip="${escH(r.n)} · fired by ${escH((SRC_LABEL[r.src] || r.src).toUpperCase())}${r.est ? ' · time estimated' : ''}"
+      data-rtip="${escH(r.n)} · lancée par ${escH((SRC_LABEL[r.src] || r.src).toUpperCase())}${r.est ? ' · heure estimée' : ''}"
       data-rtip2="${escH(r.desc || '')}">
       <span class="flap">${escH(r.t)}</span><span class="nm">${escH(r.n)}</span>
       <span class="srcwrap"><canvas class="srcic ${SRC_ICON[r.src]?.agent ? 'agent' : ''}" data-src="${escH(r.src)}" data-px="1.25"></canvas>
@@ -2250,7 +2252,7 @@ function renderBoard(force) {
     if (nextEl) rowsEl.scrollTop = Math.max(0, nextEl.offsetTop - rowsEl.clientHeight / 2 + nextEl.offsetHeight / 2);
   }
   else if (force) paintAllIcons(rowsEl);       /* canvases still need a repaint on resize */
-  document.getElementById('btick').textContent = `${fired}/${list.length} fired today`;
+  document.getElementById('btick').textContent = `${fired}/${list.length} lancées aujourd’hui`;
   const cts = RDATA.counts || {};
   const srcEl = document.getElementById('srcline');
   srcEl.innerHTML = SOURCES.map(s =>
@@ -2258,8 +2260,8 @@ function renderBoard(force) {
      ${escH((SRC_LABEL[s] || s).toUpperCase())} ${escH(cts[s] ?? '?')}</span>`).join('');
   paintAllIcons(srcEl);
   document.getElementById('genline').textContent = RDATA.generated
-    ? 'DATA ' + new Date(RDATA.generated).toLocaleString('en-AU', { day:'numeric', month:'short', hour:'2-digit', minute:'2-digit' }).toUpperCase()
-    : 'NO ROUTINES YET - SEE ROUTINES.md';
+    ? 'DONNÉES ' + new Date(RDATA.generated).toLocaleString('fr-FR', { day:'numeric', month:'short', hour:'2-digit', minute:'2-digit' }).toUpperCase()
+    : 'PAS ENCORE DE ROUTINE : VOIR ROUTINES.md';
 }
 window.renderBoard = renderBoard;
 window.mountRoutines = () => renderBoard(true);
@@ -2287,15 +2289,15 @@ document.addEventListener('visibilitychange', () => { if (!document.hidden) rend
    LIVE WIDGETS 3-6 · MICRO APPS / EMAIL / CALENDAR / YOUTUBE STUDIO
    (ported from 01-applications/apps-canvas.html)
    ================================================================ */
-const ADD_APP_PROMPT = `Add one of my local apps to the MICRO APPS widget on my Agentic OS homepage.
+const ADD_APP_PROMPT = `Ajoute une de mes apps locales au widget MICRO-APPS de la page d’accueil de mon Agentic OS.
 
-File: os-config.json in my OS folder. Add an entry to the "microApps" list:
-{ "id": "<short-id>", "name": "<App name>", "desc": "<one short line>", "url": "<http://localhost:PORT/ or https://...>", "icon": "gen" }
+Fichier : os-config.json dans le dossier de mon OS. Ajoute une entrée à la liste "microApps" :
+{ "id": "<id-court>", "name": "<Nom de l’app>", "desc": "<une ligne courte>", "url": "<http://localhost:PORT/ ou https://...>", "icon": "gen" }
 
-- id: lowercase letters, numbers and hyphens.
-- fallbackUrl (optional): where the tile goes when the app is not running.
-- icon: gen, tele, brain, exca, recos or plus (or draw a new 10x10 sprite in ICS in os.html).
-Then restart the OS (node server.js) and check the tile opens the app. Touch nothing else.`;
+- id : lettres minuscules, chiffres et tirets.
+- fallbackUrl (facultatif) : où va la tuile quand l’app ne tourne pas.
+- icon : gen, tele, brain, exca, recos ou plus (ou dessine un nouveau sprite 10x10 dans ICS d’os.html).
+Ensuite, redémarre l’OS (node server.js) et vérifie que la tuile ouvre l’app. Ne touche à rien d’autre.`;
 
 /* sprite grids carry empty rows, so drawing them at 0,0 makes the glyph sit high
    and every header title starts at a different optical spot. Centre the INK. */
@@ -2359,13 +2361,13 @@ function drawAnalog(d) {
   hand(ss * Math.PI/30, R*.82, 1.6, THEME.accent);
   g2.fillStyle = THEME.accent; g2.beginPath(); g2.arc(cx, cy, 3.6, 0, 7); g2.fill();
 }
-const tzFmt = tz => new Intl.DateTimeFormat('en-GB', { timeZone: tz, hour:'2-digit', minute:'2-digit', hourCycle:'h12' });
-const tzDay = tz => new Intl.DateTimeFormat('en-US', { timeZone: tz, weekday:'short' });
+const tzFmt = tz => new Intl.DateTimeFormat('fr-FR', { timeZone: tz, hour:'2-digit', minute:'2-digit' });
+const tzDay = tz => new Intl.DateTimeFormat('fr-FR', { timeZone: tz, weekday:'short' });
 function setTzClock(id, tz, d) {
   const el = document.getElementById(id); if (!el) return;
-  el.innerHTML = tzFmt(tz).format(d) + ' <span class="wd">(' + tzDay(tz).format(d).toUpperCase() + ')</span>';
+  el.innerHTML = tzFmt(tz).format(d) + ' <span class="wd">(' + tzDay(tz).format(d).toUpperCase().replace('.', '') + ')</span>';
 }
-const fmtSyd = new Intl.DateTimeFormat('en-GB', { hour:'2-digit', minute:'2-digit', second:'2-digit', hourCycle:'h12' });
+const fmtSyd = new Intl.DateTimeFormat('fr-FR', { hour:'2-digit', minute:'2-digit', second:'2-digit' });
 /* sun when 8am-5pm local, moon otherwise */
 const DN_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="#ff6b1a" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="4.6" fill="#ff6b1a" stroke="none"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5 5l1.9 1.9M17.1 17.1L19 19M19 5l-1.9 1.9M6.9 17.1L5 19"/></svg>';
 const DN_MOON = '<svg viewBox="0 0 24 24"><path fill="#8d8775" d="M20.4 14.2A8.6 8.6 0 0 1 9.8 3.6a8.6 8.6 0 1 0 10.6 10.6z"/></svg>';
@@ -2380,30 +2382,30 @@ function isoWeek(d) {
 function renderCalDate(d) {
   const el = document.getElementById('calDate'); if (!el) return;
   const wk = isoWeek(d);
-  const ds = d.toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' }).replace(',', '')
-           + ' (' + d.toLocaleDateString('en-US', { weekday:'short' }) + ')';
+  const ds = d.toLocaleDateString('fr-FR', { day:'numeric', month:'short', year:'numeric' }).replace(',', '')
+           + ' (' + d.toLocaleDateString('fr-FR', { weekday:'short' }).replace('.', '') + ')';
   const key = wk + '|' + ds;
   if (el.dataset.k === key) return;            /* redraw only when the day flips */
   el.dataset.k = key;
-  el.innerHTML = '<b>Wk' + wk + '</b> | ' + ds;
+  el.innerHTML = '<b>S' + wk + '</b> | ' + ds;
   const g = document.getElementById('wkGrid');
   if (g) {
-    /* hover shows the week's date span, e.g. "Wk33 Aug 10-16" */
+    /* hover shows the week's date span, e.g. "S33 10-16 août" */
     const isoYear = (() => { const t = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
       t.setUTCDate(t.getUTCDate() - ((t.getUTCDay() + 6) % 7) + 3); return t.getUTCFullYear(); })();
     const jan4 = new Date(Date.UTC(isoYear, 0, 4));
     const mon1 = new Date(jan4); mon1.setUTCDate(jan4.getUTCDate() - ((jan4.getUTCDay() + 6) % 7));
-    const M = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const M = ['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
     const wkRange = w => {
       const a = new Date(mon1); a.setUTCDate(mon1.getUTCDate() + (w - 1) * 7);
       const b = new Date(a); b.setUTCDate(a.getUTCDate() + 6);
-      return M[a.getUTCMonth()] + ' ' + a.getUTCDate() + '-' +
-        (a.getUTCMonth() === b.getUTCMonth() ? '' : M[b.getUTCMonth()] + ' ') + b.getUTCDate();
+      return a.getUTCDate() + (a.getUTCMonth() === b.getUTCMonth() ? '' : ' ' + M[a.getUTCMonth()]) + '-' +
+        b.getUTCDate() + ' ' + M[b.getUTCMonth()];
     };
     g.innerHTML = [0, 1, 2, 3].map(q =>
-      `<span class="qlab">Q${q + 1}</span>` + Array.from({ length: 13 }, (_, i) => {
+      `<span class="qlab">T${q + 1}</span>` + Array.from({ length: 13 }, (_, i) => {
         const w = q * 13 + i + 1;
-        return `<i class="${w < wk ? 'done' : w === wk ? 'now' : ''}" title="Wk${w} ${wkRange(w)}"></i>`;
+        return `<i class="${w < wk ? 'done' : w === wk ? 'now' : ''}" title="S${w} ${wkRange(w)}"></i>`;
       }).join('')).join('');
   }
 }
@@ -2422,7 +2424,7 @@ function tickCal() {
   drawAnalog(d);
   el.textContent = fmtSyd.format(d);
   /* the three world clocks: os-config.json "clocks" (label + IANA time zone), sent with /api/skills */
-  const CL = window.OS_CLOCKS || [{ label:'USA PT', tz:'America/Los_Angeles' }, { label:'USA ET', tz:'America/New_York' }, { label:'LONDON', tz:'Europe/London' }];
+  const CL = window.OS_CLOCKS || [{ label:'USA PT', tz:'America/Los_Angeles' }, { label:'USA ET', tz:'America/New_York' }, { label:'LONDRES', tz:'Europe/London' }];
   for (let i = 0; i < 3; i++) {
     const c = CL[i], sp = document.getElementById('tzl' + i);
     if (sp && sp.parentElement) sp.parentElement.style.display = c ? '' : 'none';
@@ -2432,7 +2434,7 @@ function tickCal() {
   }
   renderCalDate(d);
   const _cu = document.getElementById('calUpd'); if (_cu) _cu.textContent =
-    'UPDATED ' + Math.floor((Date.now()-loadT)/60000) + 'M AGO';
+    'MAJ IL Y A ' + Math.floor((Date.now()-loadT)/60000) + ' MIN';
 }
 /* youtube month grid */
 function buildYtGrid() {
@@ -2489,8 +2491,8 @@ document.getElementById('appClose').onclick = () => appop.classList.remove('show
 appop.addEventListener('pointerdown', e => { if (e.target === appop) appop.classList.remove('show'); });
 document.getElementById('appCopy').onclick = e => {
   navigator.clipboard.writeText(ADD_APP_PROMPT);
-  e.target.textContent = 'COPIED ✓';
-  setTimeout(() => e.target.textContent = 'COPY PROMPT', 1200);
+  e.target.textContent = 'COPIÉ ✓';
+  setTimeout(() => e.target.textContent = 'COPIER LE PROMPT', 1200);
 };
 setInterval(tickCal, 1000);
 
@@ -2502,18 +2504,18 @@ setInterval(tickCal, 1000);
    ================================================================ */
 const WHEEL = { open:0, mx:.5, my:.5, quad:-1, held:false, t:0 };
 const WQUAD = [
-  { lab:'SCAN',    ic:'<circle cx="0" cy="0" r="5"/><path d="M4 4 L9 9"/>',
-    go:() => { pullAll(); toast('rescanning every source'); } },
-  { lab:'RUN',     ic:'<circle cx="0" cy="0" r="7"/><path d="M-3 -4 L5 0 L-3 4 Z"/>',
+  { lab:'SCANNER', ic:'<circle cx="0" cy="0" r="5"/><path d="M4 4 L9 9"/>',
+    go:() => { pullAll(); toast('nouveau scan de toutes les sources'); } },
+  { lab:'LANCER',  ic:'<circle cx="0" cy="0" r="7"/><path d="M-3 -4 L5 0 L-3 4 Z"/>',
     go:() => {
       const b = document.querySelector('#deck .dk .play');
-      if (b) { b.click(); toast('running ' + document.querySelector('#deck .dk .nm').textContent.trim()); }
-      else toast('no skill deck on the board');
+      if (b) { b.click(); toast('lancement de ' + document.querySelector('#deck .dk .nm').textContent.trim()); }
+      else toast('pas de deck de skills sur le tableau');
     } },
-  { lab:'STORE',   ic:'<path d="M-6 3 L0 8 L6 3"/><path d="M0 -7 L0 7"/>',
-    go:() => { toast('opening second brain'); openSecondBrain(); } },
-  { lab:'INSPECT', ic:'<path d="M-8 0 Q0 -6 8 0 Q0 6 -8 0Z"/><circle cx="0" cy="0" r="2.2"/>',
-    go:() => { document.getElementById('osTweak').classList.remove('hide'); toast('tweak panel open'); } }
+  { lab:'RANGER',  ic:'<path d="M-6 3 L0 8 L6 3"/><path d="M0 -7 L0 7"/>',
+    go:() => { toast('ouverture du second cerveau'); openSecondBrain(); } },
+  { lab:'INSPECTER', ic:'<path d="M-8 0 Q0 -6 8 0 Q0 6 -8 0Z"/><circle cx="0" cy="0" r="2.2"/>',
+    go:() => { document.getElementById('osTweak').classList.remove('hide'); toast('panneau de réglages ouvert'); } }
 ];
 /* small transient message so an action always confirms itself on screen */
 function toast(msg) {
@@ -2626,7 +2628,7 @@ function drawWheel(dt) {
     g2.fillStyle = rg; g2.beginPath(); g2.arc(c, c, R*.6, 0, 7); g2.fill();
   }
   const hint = document.getElementById('wheelHint');
-  if (hint) hint.textContent = WHEEL.quad >= 0 ? WQUAD[WHEEL.quad].lab + ' · RELEASE TO RUN' : 'CLICK + HOLD';
+  if (hint) hint.textContent = WHEEL.quad >= 0 ? WQUAD[WHEEL.quad].lab + ' · RELÂCHE POUR LANCER' : 'CLIQUE + MAINTIENS';
 }
 
 /* ================================================================
@@ -2634,29 +2636,29 @@ function drawWheel(dt) {
    ================================================================ */
 /* TW settings hoisted to the top of the script - see the OS TWEAK block */
 const TWSECTIONS = [
-  ['TITLE + HEADERS', [
-    ['titleSize','Title size',.5,2.4,.02], ['titleTrack','Title track',-3,6,.1],
-    ['headerSize','Header size',.6,2.2,.02], ['headerTrack','Header track',0,9,.1],
-    ['tickSize','Tick size',.5,2,.02]]],
-  ['CANVAS', [
-    ['bgDark','Background',0,40,1], ['hexStrength','Hex mesh',0,4,.05],
-    ['gridStrength','Grid lines',0,3,.05]]],
-  ['THE ORB', [
-    ['orbSize','Module size',.5,1.8,.02], ['orbZoom','Orb zoom',.6,2.6,.02],
-    ['orbGlow','Ember glow',0,3.5,.05], ['hueBase','Colour base',0,360,1],
-    ['hueSpread','Colour variety',0,1,.02],
-    ['meshOpacity','Inner mesh',0,1,.02], ['cageOpacity','Hex cage',0,1,.02]]],
-  ['THE RING', [
-    ['ringRadius','Ring radius',.5,1.6,.01], ['ringThick','Ring thickness',.2,3,.05],
-    ['ringShade','Ring darkness',0,40,1], ['ringLip','Ring edges',0,2,.05],
-    ['ballSize','Ball size',.5,2,.02], ['ballCount','Ball count',1,14,1]]],
+  ['TITRE + EN-TÊTES', [
+    ['titleSize','Taille du titre',.5,2.4,.02], ['titleTrack','Espacement titre',-3,6,.1],
+    ['headerSize','Taille en-têtes',.6,2.2,.02], ['headerTrack','Espac. en-têtes',0,9,.1],
+    ['tickSize','Taille indicateur',.5,2,.02]]],
+  ['FOND', [
+    ['bgDark','Fond',0,40,1], ['hexStrength','Maillage hexa',0,4,.05],
+    ['gridStrength','Lignes de grille',0,3,.05]]],
+  ['L’ORBE', [
+    ['orbSize','Taille du module',.5,1.8,.02], ['orbZoom','Zoom de l’orbe',.6,2.6,.02],
+    ['orbGlow','Halo des braises',0,3.5,.05], ['hueBase','Teinte de base',0,360,1],
+    ['hueSpread','Variété de teintes',0,1,.02],
+    ['meshOpacity','Maillage interne',0,1,.02], ['cageOpacity','Cage hexa',0,1,.02]]],
+  ['L’ANNEAU', [
+    ['ringRadius','Rayon de l’anneau',.5,1.6,.01], ['ringThick','Épaisseur anneau',.2,3,.05],
+    ['ringShade','Ombre de l’anneau',0,40,1], ['ringLip','Bords de l’anneau',0,2,.05],
+    ['ballSize','Taille des boules',.5,2,.02], ['ballCount','Nombre de boules',1,14,1]]],
   ['WIDGETS', [
-    ['ruleOpacity','Rule opacity',0,1,.02], ['ruleWidth','Rule weight',0,6,.5],
-    ['hoverBar','Hover bar',0,100,1], ['hoverSpeed','Hover speed',.05,2,.05],
-    ['widgetInset','Inset',0,40,1]]],
-  ['ACTION WHEEL', [
-    ['wheelSpeed','Open speed',2,20,.5], ['wheelGlow','Glow',0,3,.05],
-    ['wheelDots','Dot spacing',5,26,1]]]
+    ['ruleOpacity','Opacité du filet',0,1,.02], ['ruleWidth','Épaisseur du filet',0,6,.5],
+    ['hoverBar','Barre de survol',0,100,1], ['hoverSpeed','Vitesse de survol',.05,2,.05],
+    ['widgetInset','Retrait',0,40,1]]],
+  ['ROUE D’ACTIONS', [
+    ['wheelSpeed','Vitesse ouverture',2,20,.5], ['wheelGlow','Halo',0,3,.05],
+    ['wheelDots','Écart des points',5,26,1]]]
 ];
 (function buildTweak() {
   const body = document.getElementById('twBody');
@@ -2671,7 +2673,7 @@ const TWSECTIONS = [
     }).join('');
     body.appendChild(d);
   });
-  document.getElementById('twCount').textContent = n + ' DIALS';
+  document.getElementById('twCount').textContent = n + ' RÉGLAGES';
   body.querySelectorAll('input').forEach(inp => {
     inp.addEventListener('input', () => {
       const k = inp.dataset.k;
@@ -2744,8 +2746,8 @@ document.getElementById('tweakFab').onclick = () => document.getElementById('osT
 document.getElementById('twCopy').onclick = e => {
   navigator.clipboard.writeText(JSON.stringify({ tweak:TW, layout:LAY,
     removedElements: REMOVED.map(r => ({ selector:r.sel, was:r.label })) }, null, 2));
-  e.target.textContent = 'COPIED ✓';
-  setTimeout(() => e.target.textContent = 'COPY', 1200);
+  e.target.textContent = 'COPIÉ ✓';
+  setTimeout(() => e.target.textContent = 'COPIER', 1200);
 };
 document.getElementById('twReset').onclick = () => {
   REMOVED.forEach(r => r.el.style.display = r.prev || '');
@@ -2805,7 +2807,7 @@ document.getElementById('twRemove').onclick = e => {
   removeMode = !removeMode;
   e.target.classList.toggle('on', removeMode);
   document.body.classList.toggle('removemode', removeMode);
-  e.target.textContent = removeMode ? 'PICKING…' : 'REMOVE';
+  e.target.textContent = removeMode ? 'SÉLECTION…' : 'RETIRER';
   if (!removeMode) setPick(null);
   syncRemovedCount();
 };
@@ -2827,7 +2829,7 @@ document.addEventListener('click', e => {
 }, true);
 function syncRemovedCount() {
   const b = document.getElementById('twUndo');
-  b.textContent = REMOVED.length ? `UNDO (${REMOVED.length})` : 'UNDO';
+  b.textContent = REMOVED.length ? `ANNULER (${REMOVED.length})` : 'ANNULER';
   b.disabled = !REMOVED.length;
   b.style.opacity = REMOVED.length ? 1 : .45;
 }
@@ -2872,13 +2874,13 @@ function liveBadge(on) {
   document.querySelectorAll('.livedot').forEach(d => d.classList.toggle('on', on));
 }
 
-/* ---- CALENDAR: today's events (up to 3), start time in 10:30am format ---- */
+/* ---- CALENDAR: today's events (up to 3), start time in 24 h format (10:30) ---- */
 async function pullCalendar() {
   const d = await api('/api/calendar');
   LIVE_STATE.calendar = d;
   const box = document.getElementById('calRows');
   if (box && d.needsSetup) {
-    box.innerHTML = '<div class="row2"><b style="color:var(--muted); font-weight:400">Nothing wired yet - your agent connects this (OAUTH.md)</b></div>';
+    box.innerHTML = '<div class="row2"><b style="color:var(--muted); font-weight:400">Rien de branché pour l’instant : ton agent s’en charge (OAUTH.md)</b></div>';
     return;
   }
   if (box && d.events) {
@@ -2888,13 +2890,12 @@ async function pullCalendar() {
       return t.getFullYear() === now.getFullYear() && t.getMonth() === now.getMonth()
           && t.getDate() === now.getDate();
     });                       /* every event today - the list scrolls */
-    const fmt = t => { let h = t.getHours(); const ap = h >= 12 ? 'pm' : 'am'; h = h % 12 || 12;
-      return h + ':' + String(t.getMinutes()).padStart(2, '0') + ap; };
+    const fmt = t => String(t.getHours()).padStart(2, '0') + ':' + String(t.getMinutes()).padStart(2, '0');
     const escT = s => s.replace(/[<>&]/g, c => ({ '<':'&lt;', '>':'&gt;', '&':'&amp;' }[c]));
     box.innerHTML = today.length
       ? today.map(ev => `<div class="row2" data-url="${escH(/^https?:\/\//i.test(ev.meet || ev.link || '') ? (ev.meet || ev.link) : '')}">
-          <b>${escT(ev.title)}</b><span class="age">${ev.allDay ? 'all day' : fmt(new Date(ev.start))}</span></div>`).join('')
-      : '<div class="row2"><b style="color:var(--muted); font-weight:400">No more events today</b></div>';
+          <b>${escT(ev.title)}</b><span class="age">${ev.allDay ? 'toute la journée' : fmt(new Date(ev.start))}</span></div>`).join('')
+      : '<div class="row2"><b style="color:var(--muted); font-weight:400">Plus d’événement aujourd’hui</b></div>';
     box.querySelectorAll('.row2[data-url]').forEach(r => {
       if (!r.dataset.url) return;
       r.style.cursor = 'pointer';
@@ -2919,7 +2920,7 @@ async function pullEmail() {
     r.style.display = 'flex';
     r.querySelector('b').textContent = m.subject.length > 42 ? m.subject.slice(0, 40) + '…' : m.subject;
     const age = Math.max(1, Math.round((Date.now() - m.ts) / 3600000));
-    r.querySelector('.age').textContent = age > 23 ? Math.round(age/24) + 'd' : age + 'h';
+    r.querySelector('.age').textContent = age > 23 ? Math.round(age/24) + ' j' : age + ' h';
     r.dataset.msg = m.id;
     r.onclick = m.id ? () => window.open('https://mail.google.com/mail/u/0/#inbox/' + m.id, '_blank') : null;
     r.style.cursor = m.id ? '' : 'default';
@@ -2928,8 +2929,8 @@ async function pullEmail() {
   const mix = d.mix || {};
   const bar = document.getElementById('mixbar'), lb = document.getElementById('mixlbl');
   if (bar && mix.leads !== undefined) {
-    const M = [['PARTNERSHIPS', mix.partnerships || 0, THEME.accent, 1], ['LEADS', mix.leads || 0, THEME.cream, 1],
-               ['PERSONAL', mix.personal || 0, THEME.warm, 1], ['OTHER', mix.other || 0, 'rgba(232,226,210,.35)', 1]];
+    const M = [['PARTENARIATS', mix.partnerships || 0, THEME.accent, 1], ['PROSPECTS', mix.leads || 0, THEME.cream, 1],
+               ['PERSO', mix.personal || 0, THEME.warm, 1], ['AUTRE', mix.other || 0, 'rgba(232,226,210,.35)', 1]];
     const tot = Math.max(1, M.reduce((s2, m) => s2 + m[1], 0));
     bar.innerHTML = ''; lb.innerHTML = '';
     M.forEach(([n2, v, c, f]) => {
@@ -2939,7 +2940,7 @@ async function pullEmail() {
     });
   }
   const foot = w.querySelector('.foot2');
-  if (foot) foot.innerHTML = '<i></i>SYNCED ' + new Date(d.fetched).toLocaleTimeString('en-AU',
+  if (foot) foot.innerHTML = '<i></i>SYNCHRO ' + new Date(d.fetched).toLocaleTimeString('fr-FR',
     { hour:'2-digit', minute:'2-digit' }).toUpperCase();
 }
 
@@ -3042,7 +3043,7 @@ function syncArtifactBalls(list) {
        new Date(cr.getFullYear(), cr.getMonth(), cr.getDate())) / 864e5));
     b.ageFrac = Math.max(.04, 1 - days / 30);
     const tag = b.el.querySelector('.agetag');
-    if (tag) { tag.textContent = days >= 1 ? (days > 30 ? '30D+' : days + 'D') : ''; tag.style.display = days >= 1 ? 'block' : 'none'; }
+    if (tag) { tag.textContent = days >= 1 ? (days > 30 ? '30J+' : days + 'J') : ''; tag.style.display = days >= 1 ? 'block' : 'none'; }
     return b;
   });
   /* only what is gone leaves: artifacts whose file was removed, and the start-up placeholders */
@@ -3173,15 +3174,15 @@ document.addEventListener('pointermove', e => {
   }
 });
 
-/* ---- MICRO APPS: RUBRIC Recos plus your own apps (os-config.json "microApps") ---- */
+/* ---- MICRO APPS: your own apps (os-config.json "microApps") ---- */
 async function pullApps() {
   const box = document.getElementById('appRows'); if (!box) return;
   let d = null; try { d = await api('/api/apps'); } catch (_) { }
-  const apps = (d && d.apps) || [{ id:'recos', name:'RUBRIC Recos', desc:'Ways to improve your setup', icon:'recos', live:false, builtIn:true }];
-  const sub = a => a.live ? a.desc : a.builtIn ? 'Not running here yet - opens its page' : (a.desc || 'Not running right now');
+  const apps = (d && d.apps) || [];
+  const sub = a => a.live ? a.desc : a.builtIn ? 'Ne tourne pas ici : ouvre sa page' : (a.desc || 'Ne tourne pas en ce moment');
   const html = apps.map(a => `<div class="row2" data-app="${escH(a.id)}">${pixCanvas(ICS[a.icon] ? a.icon : 'gen')}
       <span><b>${escH(a.name)}</b><small>${escH(sub(a))}</small></span><span class="age">→</span></div>`).join('')
-    + `<div class="row2" data-addmore="1">${pixCanvas('plus')}<span><b>Add more</b><small>Your agent adds your own apps here</small></span><span class="age">+</span></div>`;
+    + `<div class="row2" data-addmore="1">${pixCanvas('plus')}<span><b>Ajouter</b><small>Ton agent ajoute tes apps ici</small></span><span class="age">+</span></div>`;
   if (box.dataset.h === html) return;
   box.dataset.h = html; box.innerHTML = html; paintPix(box);
   box.querySelectorAll('[data-app]').forEach(r => r.onclick = () => openApp(r.dataset.app));
@@ -3190,12 +3191,12 @@ async function pullApps() {
 /* a tile click logs the open (that is how the Applications tab counts local app use) and opens the app,
    or its page when the app is not running on this computer */
 function openApp(id) {
-  if (location.protocol !== 'http:') { toast('apps open when the OS runs (node server.js)'); return; }
+  if (location.protocol !== 'http:') { toast('les apps s’ouvrent quand l’OS tourne (node server.js)'); return; }
   const w = window.open('about:blank', '_blank');
   fetch(API + '/api/app-open', { method:'POST', headers:{ 'Content-Type':'application/json' }, body: JSON.stringify({ id }) })
     .then(r => r.json())
-    .then(d => { if (d.url && w) { w.opener = null; w.location.href = d.url; } else { if (w) w.close(); toast(d.error || 'could not open the app'); } })
-    .catch(() => { if (w) w.close(); toast('server unreachable'); });
+    .then(d => { if (d.url && w) { w.opener = null; w.location.href = d.url; } else { if (w) w.close(); toast(d.error || 'impossible d’ouvrir l’app'); } })
+    .catch(() => { if (w) w.close(); toast('serveur injoignable'); });
 }
 /* ---- pull everything, then keep it fresh ---- */
 async function pullAll(first) {
@@ -3424,12 +3425,12 @@ try {
   }, i => .8+1.15*sr(i+13),
      i => {
        /* outer shell: mostly warm white, but roughly one dot in five burns
-          proper orange so the shell still reads RUBRIC */
+          proper orange so the shell still reads SM4RT */
        if (sr(i+404) > .80) return [1, .48, .14];
        const k = .78 + sr(i+808) * .22;
        return [1 * k, .93 * k, .84 * k];
      }));
-  /* RUBRIC mark at the core: a small orange-outlined 3D cube, parented to the
+  /* SM4RT mark at the core: a small orange-outlined 3D cube, parented to the
      group so every drag/fling/drift of the orb turns it too */
   /* 90% smaller than the first cut, and drawn as thin BOXES per edge instead
      of GL lines - linewidth on LineBasicMaterial is capped at 1px on Windows,
@@ -3513,7 +3514,7 @@ try {
   const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
   const city = (tz.split('/').pop() || 'LOCAL').replace(/_/g, ' ').toUpperCase();
   const cap = document.getElementById('homeTz');
-  if (cap) cap.textContent = 'LOCAL · ' + city;
+  if (cap) cap.textContent = 'HEURE LOCALE · ' + city;
   /* the spotlight tour runs once on a fresh install; the info icon replays it */
   if (!copyStorage.getItem('os-tour-seen')) {
     copyStorage.setItem('os-tour-seen', '1');
@@ -3521,6 +3522,6 @@ try {
   }
 })();
 </script>
-<span id="copyBadge"></span><script>document.getElementById('copyBadge').textContent=location.protocol==='http:'?'':'OFFLINE COPY'</script>
+<span id="copyBadge"></span><script>document.getElementById('copyBadge').textContent=location.protocol==='http:'?'':'COPIE HORS LIGNE'</script>
 </body>
 </html>

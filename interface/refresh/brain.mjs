@@ -47,11 +47,11 @@ if (root) for (const dir of cfg.skillDirs) {
       if (!skillFile) continue;
       const w = latestEdit(full), name = e.name, prior = skills.get(name);
       const rel = dir + '/' + name;
-      skills.set(name, { name, id: rel, path: rel + '/' + path.basename(skillFile), kind: 'skill', mtime: Math.max(w.mtime, prior?.mtime || 0), size: w.size, files: w.files, desc: describe(skillFile) || prior?.desc || '', basis: 'Latest edit inside the skill folder', alias: prior?.id });
+      skills.set(name, { name, id: rel, path: rel + '/' + path.basename(skillFile), kind: 'skill', mtime: Math.max(w.mtime, prior?.mtime || 0), size: w.size, files: w.files, desc: describe(skillFile) || prior?.desc || '', basis: 'Dernière modification dans le dossier de la skill', alias: prior?.id });
     } else if (e.name.toLowerCase().endsWith('.md') && !/^(_|readme\.md$)/i.test(e.name)) {
       const name = e.name.slice(0, -3), rel = dir + '/' + e.name, st = fs.statSync(full), prior = skills.get(name);
-      if (prior) { prior.alias = rel; if (st.mtimeMs > prior.mtime) { prior.mtime = st.mtimeMs; prior.basis = 'Latest edit to the skill or its command file'; } continue; }
-      skills.set(name, { name, id: rel, path: rel, kind: 'command', mtime: st.mtimeMs, size: st.size, files: 1, desc: describe(full), basis: 'Command file last edited' });
+      if (prior) { prior.alias = rel; if (st.mtimeMs > prior.mtime) { prior.mtime = st.mtimeMs; prior.basis = 'Dernière modification de la skill ou de son fichier de commande'; } continue; }
+      skills.set(name, { name, id: rel, path: rel, kind: 'command', mtime: st.mtimeMs, size: st.size, files: 1, desc: describe(full), basis: 'Dernière modification du fichier de commande' });
     }
   }
 }
@@ -70,13 +70,13 @@ graph.nodes = graph.nodes.filter(n => n.type !== 'routine');
 const routineNodes = all.routines.map(x => {
   const own = x.path && mtimeOf(x.path);
   return { id: x.id, type: 'routine', layer: 'R', label: x.name, dept: null, access: 'local', schedule: x.scheduleText, runner: x.sourceLabel, desc: x.desc,
-    paused: x.status === 'paused', mtime: own || routinesFileTime || 0, dateBasis: own ? 'Task file last edited' : routinesFileTime ? 'Routines file last edited' : 'No edit date recorded' };
+    paused: x.status === 'paused', mtime: own || routinesFileTime || 0, dateBasis: own ? 'Dernière modification du fichier de la tâche' : routinesFileTime ? 'Dernière modification du fichier des routines' : 'Aucune date de modification connue' };
 });
 graph.nodes.push(...routineNodes);
 
 // 4. applications: dated by the app list's own edit time
 const appsTime = mtimeOf(path.join(KIT, 'config', 'apps.json'));
-for (const n of graph.nodes) if (n.type === 'app') { n.mtime = appsTime; n.dateBasis = 'App list last edited'; }
+for (const n of graph.nodes) if (n.type === 'app') { n.mtime = appsTime; n.dateBasis = 'Dernière modification de la liste des apps'; }
 
 // 5. the router (AGENTS md): your instruction files and their latest edit
 const docs = [...new Set([cfg.routerDoc, ...(cfg.ws.instructionDocs || [])].map(d => String(d).replace(/\\/g, '/')).filter(Boolean))];
@@ -147,4 +147,4 @@ write('assets/home-orb-mini.js', '/* The homepage orb\'s coloured centre: your d
 write('data/snapshot.js', 'window.COPY_DATA=' + JSON.stringify(routinesLib.calendarData(all)) + ';');
 write('data/skills.json', JSON.stringify([...skills.values()].map(s => ({ name: s.name, kind: s.kind, desc: s.desc, path: s.path, mtime: s.mtime })), null, 1));
 write('data/brain-meta.json', JSON.stringify({ builtAt: new Date().toISOString(), workspaceSet: !!root, totalFiles: r.meta.totalFiles, nodes: graph.nodes.length, skills: skillNodes.length, routines: routineNodes.length, applications: graph.meta.applications, truncated: r.meta.truncated }, null, 1));
-console.log(JSON.stringify({ workspace: root ? 'set' : 'not set', files: r.meta.totalFiles, nodes: graph.nodes.length, skills: skillNodes.length, routines: routineNodes.length, applications: graph.meta.applications, folders: Object.keys(expansions).length, ms: Date.now() - t0 }));
+console.log(JSON.stringify({ workspace: root ? 'défini' : 'non défini', files: r.meta.totalFiles, nodes: graph.nodes.length, skills: skillNodes.length, routines: routineNodes.length, applications: graph.meta.applications, folders: Object.keys(expansions).length, ms: Date.now() - t0 }));

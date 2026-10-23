@@ -1,84 +1,83 @@
-# WIRING.md - the skills deck, Apply all comments, email, stats and Micro Apps
+# WIRING.md - le deck de skills, « Appliquer tous les commentaires », les e-mails, les stats et les micro-apps
 
-Most widgets read small files in `snapshots/` that your agent writes. If a file is missing, the widget shows a quiet "not wired yet" note and nothing breaks.
+La plupart des widgets lisent de petits fichiers dans `snapshots/` que ton agent écrit. Si un fichier manque, le widget affiche une petite note discrète « pas encore branché », et rien ne casse.
 
-## The runner: skills deck cards and Apply all comments
+## Le lanceur : les cartes du deck de skills et « Appliquer tous les commentaires »
 
-Both run your agent headlessly through one command template in `os-config.json`:
+Les deux lancent ton agent sans interface, via un seul gabarit de commande dans `os-config.json` :
 
 ```json
 "runner": { "command": "", "cwd": "", "modelValues": [], "effortValues": [] }
 ```
 
-- `command` is blank when shipped, so nothing runs until you set it. It takes one of three shapes:
-  1. **Prompt on standard input (recommended).** The template is just your agent's headless command; the OS feeds it the prompt. Works for deck cards and Apply all comments.
-  2. **`{prompt}` on the command line.** For an agent that only takes the prompt as an argument: `my-agent run "{prompt}"`. A deck card puts its prompt there (`/weekly-review`); Apply all comments puts one short line there that points at its prompt file.
-  3. **`{skill}` (deck cards only, the v1 shape).** For an agent with no model or effort flags at all: `my-agent "/{skill}"`. `{skill}` is the card's id. Apply all comments cannot use this shape.
-- If your agent is Claude Code, the template is:
+- `command` est vide à la livraison : rien ne s'exécute tant que tu ne l'as pas rempli. Il prend une de ces trois formes :
+  1. **Le prompt sur l'entrée standard (recommandé).** Le gabarit est simplement la commande sans interface de ton agent ; l'OS lui fournit le prompt. Marche pour les cartes du deck et pour « Appliquer tous les commentaires ».
+  2. **`{prompt}` sur la ligne de commande.** Pour un agent qui ne prend le prompt qu'en argument : `my-agent run "{prompt}"`. Une carte du deck y met son prompt (`/weekly-review`) ; « Appliquer tous les commentaires » y met une courte ligne qui pointe vers son fichier de prompt.
+  3. **`{skill}` (cartes du deck seulement, la forme de la v1).** Pour un agent qui n'a aucune option de modèle ni d'effort : `my-agent "/{skill}"`. `{skill}` est l'id de la carte. « Appliquer tous les commentaires » ne peut pas utiliser cette forme.
+- Si ton agent est Claude Code, le gabarit est :
   `claude -p --model {model} --effort {effort}`
-  Add `--permission-mode bypassPermissions` only if you want runs to finish without stopping for permission prompts. That is a real trade-off: the run can then do anything your agent can do.
-- `cwd`: the folder the run starts in, usually your main workspace (where your agent finds your skills).
-- The model and effort dials are only labels. They reach your agent only if the template has `{model}` and `{effort}` in it: `{model}` gets the card's model name in lower case (`haiku`, `sonnet`, `opus`, `fable`), and `{effort}` the effort name (`low` to `max`). Rename the labels in `"models"` and `"efforts"` as you like. If your command wants different words, list them in `modelValues` / `effortValues` in the same order. If your agent has no such flags, leave both out of the template.
+  Ajoute `--permission-mode bypassPermissions` seulement si tu veux que les exécutions aillent au bout sans s'arrêter sur les demandes de permission. C'est un vrai compromis : l'exécution peut alors faire tout ce que ton agent sait faire.
+- `cwd` : le dossier où démarre l'exécution, en général ton workspace principal (là où ton agent trouve tes skills).
+- Les sélecteurs de modèle et d'effort ne sont que des étiquettes. Ils n'arrivent à ton agent que si le gabarit contient `{model}` et `{effort}` : `{model}` reçoit le nom du modèle de la carte en minuscules (`haiku`, `sonnet`, `opus`, `fable`), et `{effort}` le nom de l'effort (de `low` à `max`). Renomme les étiquettes dans `"models"` et `"efforts"` comme tu veux. Si ta commande attend d'autres mots, liste-les dans `modelValues` / `effortValues`, dans le même ordre. Si ton agent n'a pas ces options, retire les deux du gabarit.
 
-### Skills deck cards
+### Les cartes du deck de skills
 
-Cards live in `os-config.json` under `"skills"`:
+Les cartes se trouvent dans `os-config.json`, sous `"skills"` :
 
 ```json
 "skills": [ { "id": "weekly-review", "icon": "pen", "model": 1, "effort": 1, "prompt": "/weekly-review" } ]
 ```
 
-- `id`: lowercase letters, numbers and dashes. It shows as `/id`.
-- `icon`: one of `bolt`, `trophy`, `broom`, `doc`, `gem`, `pen`, `send`, `eye`, `star`, `mail`, `cal`, `chart`.
-- `model` / `effort`: positions in the dial lists (0 is the first).
-- `prompt` (optional): what the run is told. Default: `/id`. A prompt must start with the skill's command, or the run may open the wrong skill.
-- Restart the OS after editing. Press ▶ on a card: your agent runs, and the result lands on the ring as a formatted report.
-- Good cards are skills that finish cleanly without asking you anything mid-run. Ask your agent to recommend 2 to 4. The + ADD SKILL button gives it a ready prompt.
-- Each run uses your agent plan at the model the card is set to.
+- `id` : lettres minuscules, chiffres et tirets. Il s'affiche sous la forme `/id`.
+- `icon` : une parmi `bolt`, `trophy`, `broom`, `doc`, `gem`, `pen`, `send`, `eye`, `star`, `mail`, `cal`, `chart`.
+- `model` / `effort` : des positions dans les listes des sélecteurs (0 est la première).
+- `prompt` (en option) : ce qu'on dit à l'exécution. Par défaut : `/id`. Un prompt doit commencer par la commande de la skill, sinon l'exécution risque d'ouvrir la mauvaise skill.
+- Redémarre l'OS après une modification. Appuie sur ▶ sur une carte : ton agent s'exécute, et le résultat arrive sur l'anneau sous forme de rapport mis en forme.
+- Les bonnes cartes sont des skills qui vont au bout sans rien te demander en cours de route. Demande à ton agent de t'en recommander 2 à 4. Le bouton + AJOUTER UNE SKILL lui donne un prompt prêt à l'emploi.
+- Chaque exécution consomme ton forfait d'agent, avec le modèle réglé sur la carte.
 
-### Apply all comments
+### « Appliquer tous les commentaires »
 
-Review pages (RUBRIC Recos, RUBRIC Carousels, or any page with the Apply all comments button) send their open comments to `POST /api/apply-comments` and poll `/api/run-status`. A quiet run edits the file, and the page shows the result and reloads. Those pages look for the OS on port 50000, the default. If v2 runs on another port (beside v1), their button cannot reach it until v2 takes over 50000 (README, Upgrading from v1). Only pages on this computer can start it (the Security model in the README has the details).
+Les pages de relecture (toute page qui a le bouton « Appliquer tous les commentaires ») envoient leurs commentaires ouverts à `POST /api/apply-comments` et interrogent `/api/run-status` à intervalles réguliers. Une exécution sans accroc modifie le fichier, puis la page affiche le résultat et se recharge. Ces pages cherchent l'OS sur le port 50000, celui par défaut. Si la v2 tourne sur un autre port (à côté de la v1), leur bouton ne peut pas la joindre tant que la v2 n'a pas repris le 50000 (README, « Passer de la v1 à la v2 »). Seules les pages de cet ordinateur peuvent la lancer (le modèle de sécurité du README donne les détails).
 
-## Email
+## E-mails
 
-The email widget sums up the last 24 hours of your inbox: a count, flagged rows that need you, and a mix bar (partnerships, leads, personal, other).
+Le widget e-mails résume les dernières 24 heures de ta boîte : un total, les lignes signalées qui ont besoin de toi, et une barre de répartition (partenariats, prospects, perso, autre).
 
-1. It calls a Gmail-capable command-line tool named in `"email"."command"`, using `gmail users messages list` and `get` with JSON params. If you use the Google Workspace CLI (`gws`), keep the shipped `"command": "gws"`; ask your agent to install it and sign in, with the Gmail API turned on in a Google Cloud project. If you use another Gmail CLI that takes the same commands, put its name there instead.
-2. Set `"enabled": true` and restart the OS. The widget lights up on its next pull, and the TODAY'S MIX bar appears with your real counts (it stays hidden until then).
-3. Tune the four buckets (partnerships, leads, personal, other) in `os-config.json`: `partnerHints` and `leadHints` are word lists matched against subjects, `personalFrom` matches the sender's domain. Flagged rows are partnerships and leads.
+1. Il appelle un outil en ligne de commande capable de lire Gmail, nommé dans `"email"."command"`, avec `gmail users messages list` et `get` et des paramètres JSON. Si tu utilises la CLI Google Workspace (`gws`), garde le `"command": "gws"` livré ; demande à ton agent de l'installer et de s'y connecter, avec l'API Gmail activée dans un projet Google Cloud. Si tu utilises une autre CLI Gmail qui prend les mêmes commandes, mets son nom à la place.
+2. Mets `"enabled": true` et redémarre l'OS. Le widget s'allume à sa prochaine récupération, et la barre RÉPARTITION DU JOUR apparaît avec tes vrais chiffres (elle reste cachée jusque-là).
+3. Règle les quatre catégories (partenariats, prospects, perso, autre) dans `os-config.json` : `partnerHints` et `leadHints` sont des listes de mots cherchés dans les objets des e-mails, `personalFrom` correspond au domaine de l'expéditeur. Les lignes signalées sont les partenariats et les prospects.
 
-No Gmail CLI? Ask your agent to adapt `getEmail()` in `server.js` to the email access it has (it just returns rows), or remove the widget in edit mode.
+Pas de CLI Gmail ? Demande à ton agent d'adapter `getEmail()` dans `server.js` à l'accès e-mail dont il dispose (la fonction renvoie juste des lignes), ou retire le widget en mode édition.
 
 ## Stats
 
-The stats widget shows any numbers you care about: subscribers, revenue, clients, workouts. Your agent writes `snapshots/stats.json`:
+Le widget stats affiche les chiffres qui comptent pour toi : abonnés, revenus, clients, séances de sport. Ton agent écrit `snapshots/stats.json` :
 
 ```json
-{ "title": "YOUTUBE", "big": 12345, "cap": "SUBSCRIBERS<br>1.2M lifetime views", "gridLabel": "3 UPLOADS THIS MONTH", "publishDays": [2, 9, 16], "link": "https://studio.youtube.com" }
+{ "title": "YOUTUBE", "big": 12345, "cap": "ABONNÉS<br>1,2 M de vues au total", "gridLabel": "3 VIDÉOS CE MOIS-CI", "publishDays": [2, 9, 16], "link": "https://studio.youtube.com" }
 ```
 
-- `title` renames the widget. `big` is the headline number. `cap` is the two-line label under it (`<br>` is the only HTML allowed).
-- `publishDays` lights those days of the month in the dots grid; `gridLabel` is its caption. The grid stays hidden until `stats.json` exists, so an unwired widget shows no made-up dots.
-- `link` (optional, http or https) makes the grid clickable.
+- `title` renomme le widget. `big` est le chiffre principal. `cap` est l'étiquette sur deux lignes en dessous (`<br>` est le seul HTML autorisé).
+- `publishDays` allume ces jours du mois dans la grille de points ; `gridLabel` en est la légende. La grille reste cachée tant que `stats.json` n'existe pas : un widget pas encore branché n'affiche pas de points inventés.
+- `link` (en option, http ou https) rend la grille cliquable.
 
-**Recipe: YouTube.** Tell your agent: "Get my channel's subscriber count and this month's upload days from the YouTube Data API (a free key from the Google Cloud console, YouTube Data API v3). Write them to <path-to-your-os>/snapshots/stats.json in the WIRING.md format, and refresh it daily."
+**Recette : YouTube.** Dis à ton agent : « Récupère le nombre d'abonnés de ma chaîne et les jours de mise en ligne de ce mois-ci depuis l'API YouTube Data (une clé gratuite depuis la console Google Cloud, YouTube Data API v3). Écris-les dans <chemin-de-ton-os>/snapshots/stats.json au format de WIRING.md, et actualise-le chaque jour. »
 
-## Micro Apps
+## Micro-apps
 
-The tiles: RUBRIC Recos first, then your own apps, then Add more.
+Les tuiles : tes propres apps, puis « Ajouter ».
 
-- **RUBRIC Recos** opens `http://localhost:50013` when it runs on this computer, or its page when it does not. The page address is one named constant, `RECOS_CLASSROOM_URL`, at the top of `refresh/lib/apps.cjs`.
-- **Your own apps** go in `os-config.json` under `"microApps"`:
+- **Tes propres apps** vont dans `os-config.json`, sous `"microApps"` :
 
 ```json
-"microApps": [ { "id": "notes-app", "name": "My notes app", "desc": "One short line", "url": "http://localhost:3000/", "fallbackUrl": "", "icon": "gen" } ]
+"microApps": [ { "id": "notes-app", "name": "Mon app de notes", "desc": "Une ligne courte", "url": "http://localhost:3000/", "fallbackUrl": "", "icon": "gen" } ]
 ```
 
-- `icon`: `gen`, `tele`, `brain`, `exca`, `recos` or `plus` (or draw a new 10x10 sprite in `ICS` in `os.html`).
-- Restart the OS after editing. Each tile click is logged to `data/app-opens.jsonl`, which the Applications tab counts.
-- The Add more tile gives your agent this same prompt, ready to copy.
+- `icon` : `gen`, `tele`, `brain`, `exca`, `recos` ou `plus` (ou dessine un nouveau sprite de 10x10 dans `ICS`, dans `os.html`).
+- Redémarre l'OS après une modification. Chaque clic sur une tuile est inscrit dans `data/app-opens.jsonl`, que l'onglet Applications compte.
+- La tuile « Ajouter » donne à ton agent ce même prompt, prêt à copier.
 
-## Keeping feeds fresh
+## Garder les flux à jour
 
-Add one standing line to your instructions, with the absolute path of the OS folder in the slot: "After any task that changes my numbers or schedule, update the matching file in <path-to-your-os>/snapshots/ (stats.json, routines.json)." That one habit keeps the whole board honest.
+Ajoute une ligne permanente à tes instructions, avec le chemin absolu du dossier de l'OS dans l'emplacement prévu : « Après toute tâche qui change mes chiffres ou mon planning, mets à jour le fichier correspondant dans <chemin-de-ton-os>/snapshots/ (stats.json, routines.json). » Cette seule habitude garde tout le tableau de bord honnête.

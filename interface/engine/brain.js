@@ -16,7 +16,7 @@ const path = require('path');
 const { performance } = require('perf_hooks');
 
 const WS = (() => { try { return JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'config', 'workspace.json'), 'utf8')); } catch { return {}; } })();
-if (!String(WS.root || '').trim()) { console.error('Set "root" in config/workspace.json first (BRAIN.md).'); process.exit(1); }
+if (!String(WS.root || '').trim()) { console.error('Règle d’abord "root" dans config/workspace.json (BRAIN.md).'); process.exit(1); }
 const ROOT = path.resolve(__dirname, '..', WS.root);
 const MEM = path.join(ROOT, ...(WS.memoryDir || 'memory').split('/'));
 const MEM_INDEX = WS.memoryIndex || 'MEMORY.md';
@@ -182,8 +182,8 @@ metadata:
 ---
 
 ${fact}
-${opts.why ? `\n**Why:** ${opts.why}\n` : ''}
-*Saved ${today} via brain store.*
+${opts.why ? `\n**Pourquoi :** ${opts.why}\n` : ''}
+*Enregistré le ${today} par brain store.*
 `;
   fs.writeFileSync(file, body);
   const title = name.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
@@ -225,7 +225,7 @@ ${opts.why ? `\n**Why:** ${opts.why}\n` : ''}
 function buildAsk(question, k, recallQuery) {
   const r = recall(recallQuery || question, { k: k || 1 });
   const evidence = r.hits.map(h => `=== ${h.file}\n${h.slice}`).join('\n\n').slice(0, 9000);
-  const prompt = `${question}\n\nEvidence pulled by the workspace brain (brain.js recall):\n${evidence}\n\nAnswer from this evidence only: quote the key line, name the source file. One short answer, no preamble.`;
+  const prompt = `${question}\n\nÉléments trouvés par le cerveau du workspace (brain.js recall) :\n${evidence}\n\nRéponds à partir de ces éléments seulement : cite la ligne clé, nomme le fichier source. Une réponse courte, sans préambule.`;
   return { prompt, recallBytes: r.bytes, recallMs: r.ms, hits: r.hits.map(h => h.file) };
 }
 
@@ -258,12 +258,12 @@ if (require.main === module) {
       console.log(`\n=== ${h.file}  (score ${h.score})`);
       console.log(h.slice);
     }
-    console.log(`\n[brain] ${r.hits.length} hits · ${r.bytes.toLocaleString()} bytes read · ${r.ms}ms`);
+    console.log(`\n[brain] ${r.hits.length} résultats · ${r.bytes.toLocaleString()} octets lus · ${r.ms} ms`);
   } else if (cmd === 'store') {
     const r = store(args.join(' '), flags);
-    console.log(`[brain] stored -> ${r.file}`);
+    console.log(`[brain] enregistré -> ${r.file}`);
     console.log(`[brain] index += ${r.indexLine}`);
-    console.log(`[brain] ${r.bytes.toLocaleString()} bytes written · ${r.ms}ms · zero exploration reads`);
+    console.log(`[brain] ${r.bytes.toLocaleString()} octets écrits · ${r.ms} ms · aucune lecture d’exploration`);
   } else if (cmd === 'ask') {
     // ZERO-LLM by design: builds the one-turn prompt and copies it to the
     // clipboard - paste it into your own agent session. brain.js never calls
@@ -271,9 +271,9 @@ if (require.main === module) {
     const { prompt, recallBytes, recallMs, hits } = buildAsk(args.join(' '), Number(flags.k) || 1);
     const cp = copyToClipboard(prompt);
     console.log(prompt);
-    console.log(`\n[brain] one-turn prompt built from ${hits.join(', ') || 'no hits'} · ${recallBytes.toLocaleString()} bytes read in ${recallMs}ms · 0 tokens${cp.status === 0 ? ' · COPIED TO CLIPBOARD' : ''}`);
-    console.log('[brain] paste it into your agent session for the one-turn answer.');
+    console.log(`\n[brain] prompt en un tour construit à partir de ${hits.join(', ') || 'aucun résultat'} · ${recallBytes.toLocaleString()} octets lus en ${recallMs} ms · 0 token${cp.status === 0 ? ' · COPIÉ DANS LE PRESSE-PAPIERS' : ''}`);
+    console.log('[brain] colle-le dans la session de ton agent pour avoir la réponse en un tour.');
   } else {
-    console.log('usage: node brain.js recall "question" [--k 3] | node brain.js store "fact" [--type feedback|project|user|reference] [--name slug] [--why "..."] [--sandbox] | node brain.js ask "question" (builds + copies the one-turn prompt, no LLM)');
+    console.log('utilisation : node brain.js recall "question" [--k 3] | node brain.js store "fait" [--type feedback|project|user|reference] [--name slug] [--why "..."] [--sandbox] | node brain.js ask "question" (construit et copie le prompt en un tour, sans LLM)');
   }
 }

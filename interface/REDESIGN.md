@@ -1,37 +1,37 @@
-# REDESIGN.md - make it look like yours
+# REDESIGN.md - lui donner ton style
 
-This OS has been reskinned end to end more than once without touching a single feature. Same bones, very different skin. Here is how.
+Cet OS a déjà été relooké de bout en bout plus d'une fois, sans toucher à une seule fonction. Même ossature, peau très différente. Voici comment.
 
-## Where the look lives
+## Où vit l'apparence
 
-1. **The homepage tokens:** the `:root` block at the top of `os.html`'s `<style>`:
+1. **Les tokens de la page d'accueil :** le bloc `:root` en haut de la balise `<style>` de `os.html` :
    ```css
    :root { --accent:#ff6b1a; --cream:#e8e2d2; --mute:#8d8775; --warm:#b9b19c; --bg:#050504; --panel:#0d0c09; }
    ```
-   Accent, text, muted text, background, panel. Change these six and most of the homepage follows.
-2. **The homepage's JS THEME block,** just above `const ICS` in `os.html`. Canvas drawings (clock hands, pixel sprites, the ring) cannot read CSS variables, so they take their colours here:
+   Accent, texte, texte atténué, fond, panneau. Change ces six-là, et l'essentiel de la page d'accueil suit.
+2. **Le bloc THEME en JS de la page d'accueil,** juste au-dessus de `const ICS` dans `os.html`. Les dessins sur canvas (aiguilles de l'horloge, sprites en pixels, l'anneau) ne peuvent pas lire les variables CSS : ils prennent leurs couleurs ici :
    ```js
    const THEME = { accent:'#ff6b1a', cream:'#e8e2d2', mute:'#8d8775', warm:'#b9b19c' };
    ```
-   Keep it in step with the CSS tokens.
-3. **The Second Brain's skin:** the `skin` object in `brain/index.html`. `layerColors` and `deptColors` override the colours in `config/departments.json`; `themes.dark.css` holds the panel colours; the shell around it is `copy.css`; the three tabs are `views/views.css` and `views/usage-board.css`. After changing department or layer colours, press the refresh icon so the homepage orb's centre matches.
-4. **Stragglers:** a few inline SVG strings keep fixed colours (the hex logo, the sun and moon icons, some fades). Search the files for `#ff6b1a` after a reskin.
-5. **Fonts:** Outfit and Doto ship as local files in `assets/` (`@font-face` at the top of `os.html` and `copy.css`). Swap the files and the names to change the personality faster than any colour.
+   Garde-le en phase avec les tokens CSS.
+3. **Le skin du second cerveau :** l'objet `skin` dans `brain/index.html`. `layerColors` et `deptColors` remplacent les couleurs de `config/departments.json` ; `themes.dark.css` contient les couleurs des panneaux ; la coque autour, c'est `copy.css` ; les trois onglets, ce sont `views/views.css` et `views/usage-board.css`. Après avoir changé les couleurs des domaines ou des couches, appuie sur l'icône d'actualisation pour que le centre de l'orbe de la page d'accueil corresponde.
+4. **Les retardataires :** quelques chaînes SVG intégrées gardent des couleurs fixes (le logo hexagonal, les icônes soleil et lune, quelques fondus). Cherche `#ff6b1a` dans les fichiers après un relooking.
+5. **Polices :** Outfit et Doto sont livrées en fichiers locaux dans `assets/` (`@font-face` en haut de `os.html` et de `copy.css`). Change les fichiers et les noms pour changer la personnalité plus vite qu'avec n'importe quelle couleur.
 
-## The redesign prompt (paste to your agent)
+## Le prompt de refonte (à coller à ton agent)
 
-> Redesign my Agentic OS into a completely new visual direction while changing ZERO functionality. The homepage is os.html; the Second Brain's look is the skin in brain/index.html, copy.css and the views/ CSS files.
+> Refais le design de mon Agentic OS dans une direction visuelle complètement nouvelle, sans changer AUCUNE fonctionnalité. La page d'accueil, c'est os.html ; l'apparence du second cerveau, c'est le skin dans brain/index.html, copy.css et les fichiers CSS de views/.
 >
-> First, quietly consider three candidate directions that have nothing in common with the current look or with each other: different palette temperature, different type personality, different texture (flat, glass, paper, terminal). Pick the strongest, then commit fully.
+> D'abord, envisage en silence trois directions candidates qui n'ont rien en commun avec l'apparence actuelle, ni entre elles : une autre température de palette, une autre personnalité typographique, une autre texture (plate, verre, papier, terminal). Choisis la plus forte, puis engage-toi à fond.
 >
-> Rules: work through the :root tokens and the THEME block first, then the Second Brain's skin, then the fonts, then any stragglers. Do not touch layout logic, APIs, widget behaviour or ids. Every widget must stay readable at its current size; check the contrast of muted text especially. When done, open the OS headless, check the console for errors, screenshot the homepage and every Second Brain tab, and look at the screenshots before you say it is done. Then tell me the direction you chose in one line.
+> Règles : travaille d'abord sur les tokens de :root et le bloc THEME, puis sur le skin du second cerveau, puis sur les polices, puis sur les retardataires. Ne touche pas à la logique de mise en page, aux API, au comportement des widgets ni aux id. Chaque widget doit rester lisible à sa taille actuelle ; vérifie surtout le contraste du texte atténué. À la fin, ouvre l'OS dans un navigateur sans interface, regarde la console pour repérer les erreurs, fais une capture d'écran de la page d'accueil et de chaque onglet du second cerveau, et regarde les captures avant de dire que c'est fini. Puis dis-moi en une ligne la direction que tu as choisie.
 
-Ask for "three options as screenshots first" if you want to pick the direction yourself.
+Demande « trois options en captures d'écran d'abord » si tu veux choisir la direction toi-même.
 
-## Principles that survived our reskins
+## Les principes qui ont survécu à nos relookings
 
-- **Direction beats decoration.** One committed direction (terminal, editorial, botanical, brutalist) reads at once; a palette swap alone reads as the same OS in a different shirt.
-- **The accent is a budget.** One accent colour, spent on the few things that matter (the next routine, the running skill, the selected thing). Spend it everywhere and the board gets noisy.
-- **Muted text carries the design.** Most of the OS is labels. If `--mute` fails contrast on `--bg`, everything feels broken however pretty the accent is.
-- **Type first, then colour.** The display font sets the personality; colours season it.
-- **Keep the bones.** The layout grid, widget chrome, ring and brain took many rounds to feel right. Reskin, do not re-architect, and you keep getting upstream improvements.
+- **La direction compte plus que la décoration.** Une direction assumée (terminal, éditorial, botanique, brutaliste) se lit tout de suite ; un simple changement de palette se lit comme le même OS avec une autre chemise.
+- **L'accent est un budget.** Une seule couleur d'accent, dépensée sur les quelques éléments qui comptent (la prochaine routine, la skill en cours, l'élément sélectionné). Mets-la partout, et le tableau de bord devient bruyant.
+- **Le texte atténué porte le design.** L'OS, ce sont surtout des étiquettes. Si `--mute` manque de contraste sur `--bg`, tout a l'air cassé, aussi joli que soit l'accent.
+- **La typo d'abord, la couleur ensuite.** La police d'affichage donne la personnalité ; les couleurs l'assaisonnent.
+- **Garde l'ossature.** La grille de mise en page, l'habillage des widgets, l'anneau et le cerveau ont demandé de nombreux essais avant de sonner juste. Change le style, ne refais pas l'architecture, et tu continues de profiter des améliorations de la version d'origine.

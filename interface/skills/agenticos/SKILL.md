@@ -1,75 +1,75 @@
 ---
 name: agenticos
-description: Change, refresh, check and fix the user's RUBRIC Agentic OS v2 (the local homepage plus Second Brain started with node server.js). Use when the user says /agenticos, "the OS", "my homepage", "the Second Brain", names a widget (Micro Apps, Calendar, Stats, Email, Routines, Skills deck, the ring, the orb), asks to add an app, a skill card, a routine or a department, wants the map refreshed, or reports something on the OS looks wrong.
+description: Modifier, actualiser, vérifier et réparer le SM4RT Agentic OS v2 de l'utilisateur (la page d'accueil locale et son second cerveau, lancés avec node server.js). À utiliser quand l'utilisateur dit /agenticos, « l'OS », « ma page d'accueil », « le second cerveau », nomme un widget (micro-apps, agenda, stats, e-mails, routines, deck de skills, l'anneau, l'orbe), demande d'ajouter une app, une carte de skill, une routine ou un domaine, veut actualiser la carte, ou signale que quelque chose cloche sur l'OS.
 ---
 
-# /agenticos - look after the user's Agentic OS
+# /agenticos - prendre soin de l'Agentic OS de l'utilisateur
 
-The OS lives in one folder (the user's `rubric-agentic-os-v2`). Find it first: ask the user if you do not know where they put it. Its README, BRAIN, ROUTINES, USAGE, WIRING, OAUTH, RING and REDESIGN guides sit at the top of that folder; read the one that owns the part you are changing.
+L'OS vit dans le dossier `interface/` du workspace. Ses guides README, BRAIN, ROUTINES, USAGE, WIRING, OAUTH, RING et REDESIGN sont à la racine de ce dossier ; lis celui qui couvre la partie que tu modifies.
 
-## The moving parts
+## Les pièces mobiles
 
-| Part | Where it lives | After a change |
+| Partie | Où elle se trouve | Après un changement |
 |---|---|---|
-| Server (homepage, feeds, actions) | `server.js` + `os-config.json` (port, deck, runner, Micro Apps, email) | restart `node server.js` |
-| Second Brain engine (search, file viewer) | `engine/server.js` + `engine/scan.js`, started by `server.js` on `brainPort` | restart the OS |
-| Where the workspace is | `config/workspace.json` | refresh (or restart: the OS rebuilds when this changes) |
-| Departments, apps, remote agents | `config/departments.json`, `config/apps.json`, `config/agents.json` | refresh |
-| Routines | `snapshots/routines.json` plus the agent-scheduler readers in `refresh/sources/` | homepage within a minute; tabs and map on refresh |
-| Usage | `snapshots/usage-log.jsonl`, `data/app-opens.jsonl`, readers in `refresh/sources/` | refresh |
-| Stats, calendar feeds | `snapshots/stats.json`, `snapshots/calendar.json`, `tools/google-calendar.js` | next pull (2 minutes) |
-| The ring | `artifacts/` (an `.html` plus a `.json` sidecar per ball) | next pull |
-| The homepage | `os.html`: one editable file | reload the page |
-| The Second Brain's look | the `skin` in `brain/index.html`, `copy.css`, `views/*.css` | reload |
+| Serveur (page d'accueil, flux, actions) | `server.js` + `os-config.json` (port, deck, lanceur, micro-apps, e-mails) | relance `node server.js` |
+| Moteur du second cerveau (recherche, visionneuse de fichiers) | `engine/server.js` + `engine/scan.js`, lancés par `server.js` sur `brainPort` | redémarre l'OS |
+| Où est le workspace | `config/workspace.json` | actualise (ou redémarre : l'OS reconstruit quand ce fichier change) |
+| Domaines, apps, agents distants | `config/departments.json`, `config/apps.json`, `config/agents.json` | actualise |
+| Routines | `snapshots/routines.json` plus les lecteurs de planificateurs d'agent dans `refresh/sources/` | page d'accueil en moins d'une minute ; onglets et carte à l'actualisation |
+| Usage | `snapshots/usage-log.jsonl`, `data/app-opens.jsonl`, les lecteurs dans `refresh/sources/` | actualise |
+| Flux des stats et de l'agenda | `snapshots/stats.json`, `snapshots/calendar.json`, `tools/google-calendar.js` | récupération suivante (2 minutes) |
+| L'anneau | `artifacts/` (un `.html` plus un fichier compagnon `.json` par boule) | récupération suivante |
+| La page d'accueil | `os.html` : un seul fichier modifiable | recharge la page |
+| L'apparence du second cerveau | le `skin` dans `brain/index.html`, `copy.css`, `views/*.css` | recharge |
 
-Generated files: never edit them by hand, because the next refresh overwrites them. They are `brain/snapshot.js`, `brain/snapshot-expansions.js`, `brain/_icons.js`, `brain/map-layouts.js`, `assets/home-orb-mini.js`, `data/snapshot.js`, `data/arms-usage.js` and everything else in `data/`.
+Fichiers générés : ne les modifie jamais à la main, car la prochaine actualisation les écrase. Ce sont `brain/snapshot.js`, `brain/snapshot-expansions.js`, `brain/_icons.js`, `brain/map-layouts.js`, `assets/home-orb-mini.js`, `data/snapshot.js`, `data/arms-usage.js` et tout le reste de `data/`.
 
-## Refresh order
+## Ordre d'actualisation
 
-`node refresh/run.mjs` runs, in order:
+`node refresh/run.mjs` lance, dans l'ordre :
 
-1. `refresh/brain.mjs`: scan the workspace, one `/name` node per skill, routines, apps, honest edit dates, icons, the homepage orb's colours.
-2. `refresh/usage.mjs`: runs, tokens and calls from the usage log, local app opens and any agent log reader.
+1. `refresh/brain.mjs` : scanne le workspace, un nœud `/nom` par skill, les routines, les apps, des dates de modification fidèles, les icônes, les couleurs de l'orbe de la page d'accueil.
+2. `refresh/usage.mjs` : exécutions, tokens et appels, depuis le journal d'usage, les ouvertures d'apps locales et tout lecteur de journaux d'agent.
 
-The refresh icon (top right in the Second Brain) runs the same two steps and then rescans the engine. No model calls either way.
+L'icône d'actualisation (en haut à droite dans le second cerveau) lance les deux mêmes étapes, puis relance le scan du moteur. Aucun appel au modèle, dans les deux cas.
 
-## Common jobs
+## Tâches courantes
 
-- **Add a Micro Apps tile:** add `{ id, name, desc, url, fallbackUrl, icon }` to `"microApps"` in `os-config.json`, restart. (WIRING.md, Micro Apps.)
-- **Add a skills deck card:** add `{ id, icon, model, effort, prompt }` to `"skills"`, restart. The runner must be set (`"runner.command"`, prompt on standard input). Prefer skills that finish without asking questions.
-- **Add or change a routine:** edit `snapshots/routines.json` (cron, or days plus times). ROUTINES.md has the shape.
-- **Change departments:** edit `config/departments.json` (3 to 6, every file lands in one), then refresh. Use what you know about the user; ask 2 or 3 questions only if unsure.
-- **Show more or fewer folders on the map:** edit `visibleRoots` in `config/workspace.json`, then refresh.
-- **Start measuring:** add the usage-log line from USAGE.md to your instructions, or write a reader for your agent's logs in `refresh/sources/`.
-- **Move ports:** `"port"` / `"brainPort"` in `os-config.json`, restart. Port 50000 is where RUBRIC Recos and RUBRIC Carousels look for Apply all comments.
-- **Reskin:** follow REDESIGN.md.
+- **Ajouter une tuile aux micro-apps :** ajoute `{ id, name, desc, url, fallbackUrl, icon }` à `"microApps"` dans `os-config.json`, redémarre. (WIRING.md, Micro-apps.)
+- **Ajouter une carte au deck de skills :** ajoute `{ id, icon, model, effort, prompt }` à `"skills"`, redémarre. Le lanceur doit être réglé (`"runner.command"`, prompt sur l'entrée standard). Préfère les skills qui vont au bout sans poser de questions.
+- **Ajouter ou modifier une routine :** modifie `snapshots/routines.json` (cron, ou days plus times). ROUTINES.md donne la forme.
+- **Changer les domaines :** modifie `config/departments.json` (3 à 6, chaque fichier atterrit dans un domaine), puis actualise. Sers-toi de ce que tu sais de l'utilisateur ; ne pose 2 ou 3 questions que si tu as un doute.
+- **Afficher plus ou moins de dossiers sur la carte :** modifie `visibleRoots` dans `config/workspace.json`, puis actualise.
+- **Commencer à mesurer :** ajoute à tes instructions la ligne du journal d'usage de USAGE.md, ou écris un lecteur pour les journaux de ton agent dans `refresh/sources/`.
+- **Changer de ports :** `"port"` / `"brainPort"` dans `os-config.json`, redémarre. Le port 50000 est celui où les pages de relecture cherchent « Appliquer tous les commentaires ».
+- **Changer le style :** suis REDESIGN.md.
 
-## The check loop (every time, before you say done)
+## La boucle de vérification (à chaque fois, avant de dire que c'est fini)
 
-1. Restart the OS if you changed `os-config.json`, `server.js` or anything in `engine/`. Watch the terminal: it says when the Second Brain is ready.
-2. Open the page headless if you can (any headless browser). Collect console errors, and check there are none.
-3. Check the exact thing you changed in the page itself: the tile is there, the card renders, the routine shows on the Routines tab, the department colour is on the globe.
-4. Take a screenshot of that part and look at it. Widgets clip silently, so a fit check matters.
-5. `GET /api/health` should show `engine: true`, `workspaceSet: true` and the runner status.
+1. Redémarre l'OS si tu as modifié `os-config.json`, `server.js` ou quoi que ce soit dans `engine/`. Surveille le terminal : il dit quand le second cerveau est prêt.
+2. Ouvre la page sans interface si tu peux (avec n'importe quel navigateur headless). Récupère les erreurs de la console, et vérifie qu'il n'y en a aucune.
+3. Vérifie dans la page elle-même la chose précise que tu as changée : la tuile est là, la carte s'affiche, la routine apparaît dans l'onglet Routines, la couleur du domaine est sur le globe.
+4. Fais une capture d'écran de cette partie et regarde-la. Les widgets coupent leur contenu sans prévenir : vérifier que tout tient, ça compte.
+5. `GET /api/health` doit montrer `engine: true`, `workspaceSet: true` et l'état du lanceur.
 
-## Fixing things
+## Réparer
 
-| Symptom | Likely cause | Fix |
+| Symptôme | Cause probable | Correction |
 |---|---|---|
-| The Second Brain is empty | `root` blank or wrong in `config/workspace.json` | set it, refresh |
-| Files land in the wrong department | a rule in `config/departments.json` has the wrong shape or an unknown key | read the `Warning:` lines the scan prints, fix the rule (BRAIN.md step 2), refresh |
-| Search "is not answering" | engine still scanning a big workspace, or `brainPort` taken | wait, or change `brainPort` and restart |
-| A file will not open in the viewer | binary, over 500 KB, outside the workspace, or a secret-looking name | expected |
-| A deck card or Apply all comments says no runner | `"runner.command"` blank, or still uses `{skill}` | set the v2 template (WIRING.md) |
-| A run fails | the command is not on PATH, or the agent needs a sign-in | read the log in `os-runs/`, run the command by hand once |
-| Skills or routines say "not measured" | no usage log and no log reader | USAGE.md |
-| A widget says "not wired yet" | its feed file or setting is missing | its guide (WIRING.md, OAUTH.md) |
-| The homepage layout is odd after an update | the browser kept an old layout | Menu > Reset the layout in the Second Brain, or clear this site's storage |
-| Port in use on start | another program, or v1 on 50000 | change `"port"`, or stop the other program |
+| Le second cerveau est vide | `root` vide ou faux dans `config/workspace.json` | remplis-le, actualise |
+| Des fichiers atterrissent dans le mauvais domaine | une règle de `config/departments.json` est mal formée ou a une clé inconnue | lis les lignes `Attention :` que le scan affiche, corrige la règle (BRAIN.md, étape 2), actualise |
+| La recherche « ne répond pas » | le moteur scanne encore un gros workspace, ou `brainPort` est pris | attends, ou change `brainPort` et redémarre |
+| Un fichier ne s'ouvre pas dans la visionneuse | binaire, plus de 500 Ko, hors du workspace, ou nom qui ressemble à un secret | c'est normal |
+| Une carte du deck ou « Appliquer tous les commentaires » dit qu'il n'y a pas de lanceur | `"runner.command"` vide, ou utilise encore `{skill}` | mets le gabarit de la v2 (WIRING.md) |
+| Une exécution échoue | la commande n'est pas dans le PATH, ou l'agent a besoin d'une connexion | lis le journal dans `os-runs/`, lance la commande une fois à la main |
+| Les skills ou les routines affichent « non mesuré » | pas de journal d'usage ni de lecteur de journaux | USAGE.md |
+| Un widget affiche « pas encore branché » | son fichier de flux ou son réglage manque | son guide (WIRING.md, OAUTH.md) |
+| La disposition de la page d'accueil est bizarre après une mise à jour | le navigateur a gardé une ancienne disposition | Menu > Réinitialiser la disposition dans le second cerveau, ou efface le stockage de ce site |
+| Port déjà utilisé au démarrage | un autre programme, ou la v1 sur 50000 | change `"port"`, ou arrête l'autre programme |
 
-## Rules
+## Règles
 
-- Change only what the user asked for. Keep every feature, id and storage key working.
-- Never paste secrets into any OS file. Keys live where the user's tools keep them.
-- Never point the runner at a command that skips permission prompts unless the user chose that.
-- The OS has no outside calls of its own; keep it that way unless the user asks.
+- Ne change que ce que l'utilisateur a demandé. Garde chaque fonction, chaque id et chaque clé de stockage en état de marche.
+- Ne colle jamais de secrets dans un fichier de l'OS. Les clés restent là où les outils de l'utilisateur les rangent.
+- Ne fais jamais pointer le lanceur vers une commande qui saute les demandes de permission, sauf si l'utilisateur l'a choisi.
+- L'OS ne fait aucun appel extérieur de lui-même ; garde-le comme ça, sauf si l'utilisateur le demande.

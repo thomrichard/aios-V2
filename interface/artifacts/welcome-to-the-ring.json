@@ -1,8 +1,8 @@
 {
-  "title": "Welcome to the ring",
+  "title": "Bienvenue dans l’anneau",
   "icon": "doc",
   "kind": "guide",
   "created": "2026-01-01T00:00:00.000Z",
-  "note": "what the artifact ring is and the habit that fills it",
+  "note": "ce qu’est l’anneau des livrables, et l’habitude qui le remplit",
   "svg": "<circle cx=\"24\" cy=\"24\" r=\"15\"/><circle cx=\"24\" cy=\"24\" r=\"5\"/><path d=\"M24 4v5M24 39v5\"/>"
 }

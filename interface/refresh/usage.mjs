@@ -32,11 +32,11 @@ const log = readLines(path.join(KIT, 'snapshots', 'usage-log.jsonl')).map(e => (
 const opens = readLines(path.join(KIT, 'data', 'app-opens.jsonl')).map(e => ({ ...e, t: Date.parse(e.at) })).filter(e => e.t >= cutoff);
 let sessions = null;
 // os-config.json "readers": { "claudeCode": false } turns this reader off (no folder of that agent is read)
-if (readerOn('claudeCode')) { try { sessions = claudeCode.sessionUsage(LONG); } catch (e) { console.error('session logs:', e.message); } }
+if (readerOn('claudeCode')) { try { sessions = claudeCode.sessionUsage(LONG); } catch (e) { console.error('journaux de session :', e.message); } }
 const sources = [];
-if (log.length) sources.push('usage log (' + log.length + ' entries)');
-if (sessions) sources.push('agent session logs (' + sessions.files + ' files)');
-sources.push('OS launcher opens (' + opens.length + ')');
+if (log.length) sources.push('journal d’usage (' + log.length + ' entrées)');
+if (sessions) sources.push('journaux de session de l’agent (' + sessions.files + ' fichiers)');
+sources.push('ouvertures depuis les tuiles de l’OS (' + opens.length + ')');
 
 // ---------- skills ----------
 const skillList = readJSON(path.join(KIT, 'data', 'skills.json'), []);
@@ -100,7 +100,7 @@ const local = apps.list().map(a => {
   const days = {}, agentDays = {};
   for (const o of opens) if (o.app === a.id) { const d = dayOf(o.t); days[d] = (days[d] || 0) + 1; }
   if (sessions && a.port) { const dd = sessions.toolDays['p:' + a.port] || {}; for (const [d, n] of Object.entries(dd)) agentDays[d] = (agentDays[d] || 0) + n; }
-  return { id: 'local:' + a.id, label: a.name, kind: 'local', group: 'rubric', desc: a.desc || '', port: a.port || null, status: '', visits7: sumDays(days, SHORT), visits30: sumDays(days, LONG), agentCalls30: sessions ? sumDays(agentDays, LONG) : null, last: lastDay(days) };
+  return { id: 'local:' + a.id, label: a.name, kind: 'local', group: 'sm4rt', desc: a.desc || '', port: a.port || null, status: '', visits7: sumDays(days, SHORT), visits30: sumDays(days, LONG), agentCalls30: sessions ? sumDays(agentDays, LONG) : null, last: lastDay(days) };
 });
 
 // ---------- totals ----------
@@ -115,14 +115,14 @@ const out = {
   generatedAt: new Date().toISOString(), windows: { short: SHORT, long: LONG }, sources,
   measured: { skills: skillsMeasured, routines: routinesMeasured, apps: appsMeasured, localApps: true, tokens: !!sessions || log.some(e => e.tokens) },
   scan: { sessionFiles: sessions ? sessions.files : 0, logEntries: log.length, opens: opens.length, ms: Date.now() - t0 },
-  rates: { note: 'API $ is what the measured tokens would cost at standard API rates, not your subscription bill.' },
+  rates: { note: '$ API : ce que coûteraient les tokens mesurés au tarif standard de l’API. Ce n’est pas ta facture d’abonnement.' },
   method: {
-    skill: 'Skill runs come from your usage log and, when your agent keeps session logs this OS can read, from those logs. Anything not measured says so.',
-    routine: 'A routine run comes from the same sources. Routines with no measured runs show "not measured".',
-    tokens: 'Tokens are counted as your agent logged them. Each model call counts once.',
-    apps: 'Your connections: calls in your usage log or session logs. Local apps: opens through the OS launcher tiles.',
+    skill: 'Les exécutions de skills viennent de ton journal d’usage et, si ton agent garde des journaux de session que l’OS sait lire, de ces journaux. Tout ce qui n’est pas mesuré est signalé.',
+    routine: 'Une exécution de routine vient des mêmes sources. Une routine sans exécution mesurée affiche « non mesuré ».',
+    tokens: 'Les tokens sont comptés tels que ton agent les a notés. Chaque appel au modèle compte une fois.',
+    apps: 'Tes connexions : les appels notés dans ton journal d’usage ou tes journaux de session. Apps locales : les ouvertures depuis les tuiles de l’OS.',
   },
-  totals, skills, routines, apps: appsOut, rubric: local,
+  totals, skills, routines, apps: appsOut, sm4rt: local,
 };
 fs.writeFileSync(path.join(KIT, 'data', 'arms-usage.json'), JSON.stringify(out, null, 1));
 fs.writeFileSync(path.join(KIT, 'data', 'arms-usage.js'), 'window.ARMS_USAGE=' + JSON.stringify(out) + ';\n');

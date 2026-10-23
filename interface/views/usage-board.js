@@ -13,11 +13,11 @@
   const money = n => { n = n || 0; return n >= 1000 ? '$' + Math.round(n).toLocaleString('en-US') : n >= 10 ? '$' + n.toFixed(0) : n >= 0.995 ? '$' + n.toFixed(2) : n > 0 ? '$' + n.toFixed(n < 0.01 ? 3 : 2) : '$0'; };
   const DAY = 864e5;
   const plural = (n, word) => (n || 0) + ' ' + word + (n === 1 ? '' : 's');
-  const ago = iso => { if (!iso) return 'not in 30 days'; const d = Math.floor((Date.now() - Date.parse(iso.length === 10 ? iso + 'T12:00:00' : iso)) / DAY); return d <= 0 ? 'today' : d === 1 ? 'yesterday' : d + ' days ago'; };
+  const ago = iso => { if (!iso) return 'jamais en 30 jours'; const d = Math.floor((Date.now() - Date.parse(iso.length === 10 ? iso + 'T12:00:00' : iso)) / DAY); return d <= 0 ? 'aujourd’hui' : d === 1 ? 'hier' : 'il y a ' + d + ' jours'; };
   const ORANGE = '#ff6b1a', BLUE = '#3f8fd4';
   const M = (U && U.measured) || {};
-  const NM = 'not measured';
-  const store = {get(k, d) { try { const v = JSON.parse(localStorage.getItem('rubric-os-v2-usage-' + k)); return v ?? d; } catch { return d; } }, set(k, v) { try { localStorage.setItem('rubric-os-v2-usage-' + k, JSON.stringify(v)); } catch {} }};
+  const NM = 'non mesuré';
+  const store = {get(k, d) { try { const v = JSON.parse(localStorage.getItem('sm4rt-os-v2-usage-' + k)); return v ?? d; } catch { return d; } }, set(k, v) { try { localStorage.setItem('sm4rt-os-v2-usage-' + k, JSON.stringify(v)); } catch {} }};
   const st = {
     skills: Object.assign({measure: 'runs', win: 7, show: 'used'}, store.get('skills', {})),
     apps: Object.assign({measure: 'uses', win: 30, group: 'all'}, store.get('apps', {}))
@@ -28,20 +28,20 @@
   // ---------- measures ----------
   const weeks = win => win === 7 ? 1 : 30 / 7;
   const SKILL_MEASURES = [
-    {key: 'runs', label: 'Most used', value: (s, w) => s['runs' + w], fmt: n => n + (n === 1 ? ' run' : ' runs')},
-    {key: 'tokWeek', label: 'Tokens / week', value: (s, w) => s['tok' + w] / weeks(w), fmt: n => big(n) + ' tok/wk'},
-    {key: 'tokRun', label: 'Tokens / run', value: (s, w) => s['runs' + w] ? s['tok' + w] / s['runs' + w] : 0, fmt: n => big(n) + ' tok/run'},
-    {key: 'costWeek', label: 'API $ / week', value: (s, w) => s['cost' + w] / weeks(w), fmt: n => money(n) + '/wk'},
-    {key: 'costRun', label: 'API $ / run', value: (s, w) => s['runs' + w] ? s['cost' + w] / s['runs' + w] : 0, fmt: n => money(n) + '/run'}
+    {key: 'runs', label: 'Plus utilisées', value: (s, w) => s['runs' + w], fmt: n => n + ' exéc.'},
+    {key: 'tokWeek', label: 'Tokens / sem.', value: (s, w) => s['tok' + w] / weeks(w), fmt: n => big(n) + ' tok/sem'},
+    {key: 'tokRun', label: 'Tokens / exéc.', value: (s, w) => s['runs' + w] ? s['tok' + w] / s['runs' + w] : 0, fmt: n => big(n) + ' tok/exéc.'},
+    {key: 'costWeek', label: '$ API / sem.', value: (s, w) => s['cost' + w] / weeks(w), fmt: n => money(n) + '/sem'},
+    {key: 'costRun', label: '$ API / exéc.', value: (s, w) => s['runs' + w] ? s['cost' + w] / s['runs' + w] : 0, fmt: n => money(n) + '/exéc.'}
   ];
-  const APP_GROUPS = [{key: 'all', label: 'All'}, {key: 'connector', label: 'Connectors'}, {key: 'tool', label: 'Command line'}, {key: 'rubric', label: 'Local apps'}];
-  const local = a => a.group === 'rubric';
+  const APP_GROUPS = [{key: 'all', label: 'Toutes'}, {key: 'connector', label: 'Connecteurs'}, {key: 'tool', label: 'Ligne de commande'}, {key: 'sm4rt', label: 'Apps locales'}];
+  const local = a => a.group === 'sm4rt';
   const appMeasured = a => local(a) ? true : !!M.apps;
   const appUses = (a, w) => local(a) ? a['visits' + w] : a['calls' + w];
-  const appUnit = (a, n) => local(a) ? (n === 1 ? ' open' : ' opens') : a.group === 'tool' ? (n === 1 ? ' command' : ' commands') : (n === 1 ? ' call' : ' calls');
+  const appUnit = (a, n) => local(a) ? (n === 1 ? ' ouverture' : ' ouvertures') : a.group === 'tool' ? (n === 1 ? ' commande' : ' commandes') : (n === 1 ? ' appel' : ' appels');
   const APP_MEASURES = [
-    {key: 'uses', label: 'Most used', value: (a, w) => appUses(a, w), fmt: (n, a) => appMeasured(a) ? n + appUnit(a, n) : NM},
-    {key: 'stale', label: 'Least used', value: (a, w) => appUses(a, w), fmt: (n, a) => appMeasured(a) ? n + appUnit(a, n) : NM}
+    {key: 'uses', label: 'Plus utilisées', value: (a, w) => appUses(a, w), fmt: (n, a) => appMeasured(a) ? n + appUnit(a, n) : NM},
+    {key: 'stale', label: 'Moins utilisées', value: (a, w) => appUses(a, w), fmt: (n, a) => appMeasured(a) ? n + appUnit(a, n) : NM}
   ];
 
   // ---------- data for one tab ----------
@@ -53,7 +53,7 @@
         .filter(x => s.show === 'all' || x.used);
     }
     const s = st.apps, m = APP_MEASURES.find(x => x.key === s.measure) || APP_MEASURES[0];
-    const all = [...U.apps, ...U.rubric].filter(a => s.group === 'all' || a.group === s.group);
+    const all = [...U.apps, ...U.sm4rt].filter(a => s.group === 'all' || a.group === s.group);
     return all.map(a => ({id: a.id, name: a.label, raw: a, v: m.value(a, s.win) || 0, used: (m.value(a, s.win) || 0) > 0, label: m.fmt(m.value(a, s.win) || 0, a)}));
   }
 
@@ -62,30 +62,30 @@
     current = view;
     let root = $('usage-board');
     if (!root) { root = document.createElement('section'); root.id = 'usage-board'; app.appendChild(root); }
-    if (!U) { root.innerHTML = '<p class="ub-empty">No usage data yet. Press the refresh icon at the top right.</p>'; return; }
+    if (!U) { root.innerHTML = '<p class="ub-empty">Pas encore de données d’usage. Clique sur l’icône Actualiser en haut à droite.</p>'; return; }
     const isSkills = view === 'skills', s = st[view], measures = isSkills ? SKILL_MEASURES : APP_MEASURES;
     const list = items(view), sorted = [...list].sort((a, b) => (isSkills || s.measure === 'uses') ? b.v - a.v || a.name.localeCompare(b.name) : a.v - b.v || String(a.raw.last || '').localeCompare(String(b.raw.last || '')));
     const tot = U.totals[s.win] || {tok: 0, cost: 0};
     const runs = isSkills ? U.skills.reduce((n, x) => n + x['runs' + s.win], 0) : 0;
-    const updated = new Date(U.generatedAt).toLocaleString(undefined, {weekday: 'short', hour: 'numeric', minute: '2-digit'});
+    const updated = new Date(U.generatedAt).toLocaleString('fr-FR', {weekday: 'short', hour: 'numeric', minute: '2-digit'});
     const summary = isSkills
-      ? (M.skills ? `<b>LAST ${s.win} DAYS</b> ${M.tokens ? `<span class="ub-hot">${big(tot.tok)}</span> tokens <span class="ub-hot">${money(tot.cost)}</span> API · ` : ''}skills ran ${runs.toLocaleString('en-US')} times` : `<b>SKILL RUNS</b> not measured yet · ${U.skills.length} skills found`)
-      : `<b>LAST ${s.win} DAYS</b> ${list.filter(x => x.used).length} of ${list.length} used${M.apps ? '' : ' · connection calls not measured'}`;
+      ? (M.skills ? `<b>${s.win} DERNIERS JOURS</b> ${M.tokens ? `<span class="ub-hot">${big(tot.tok)}</span> tokens <span class="ub-hot">${money(tot.cost)}</span> API · ` : ''}skills lancées ${runs.toLocaleString('fr-FR')} fois` : `<b>EXÉCUTIONS</b> non mesurées pour l’instant · ${U.skills.length} skills trouvées`)
+      : `<b>${s.win} DERNIERS JOURS</b> ${list.filter(x => x.used).length} sur ${list.length} utilisées${M.apps ? '' : ' · appels des connexions non mesurés'}`;
     const unused = isSkills && M.skills ? U.skills.filter(x => !x.runs30) : [];
     root.innerHTML = `
       <div class="ub-top">
-        <div class="seg" role="group" aria-label="Measure">${measures.map(m => `<button data-measure="${m.key}" aria-pressed="${s.measure === m.key}">${m.label}</button>`).join('')}</div>
-        <div class="ub-sum">${summary}<span class="ub-when" title="${esc((U.sources || []).join(', '))}">from ${esc((U.sources || []).length ? 'your logs' : 'nothing yet')} · ${esc(updated)}</span></div>
-        ${isSkills ? '' : `<div class="seg" role="group" aria-label="Kind">${APP_GROUPS.map(g => `<button data-group="${g.key}" aria-pressed="${s.group === g.key}">${g.label}</button>`).join('')}</div>`}
-        <div class="seg" role="group" aria-label="Window"><button data-win="7" aria-pressed="${s.win === 7}">7 days</button><button data-win="30" aria-pressed="${s.win === 30}">30 days</button></div>
-        ${isSkills ? `<div class="seg" role="group" aria-label="Show"><button data-show="used" aria-pressed="${s.show === 'used'}">Used</button><button data-show="all" aria-pressed="${s.show === 'all'}">All ${U.skills.length}</button></div>` : ''}
+        <div class="seg" role="group" aria-label="Mesure">${measures.map(m => `<button data-measure="${m.key}" aria-pressed="${s.measure === m.key}">${m.label}</button>`).join('')}</div>
+        <div class="ub-sum">${summary}<span class="ub-when" title="${esc((U.sources || []).join(', '))}">${esc((U.sources || []).length ? 'd’après tes journaux' : 'aucune source pour l’instant')} · ${esc(updated)}</span></div>
+        ${isSkills ? '' : `<div class="seg" role="group" aria-label="Type">${APP_GROUPS.map(g => `<button data-group="${g.key}" aria-pressed="${s.group === g.key}">${g.label}</button>`).join('')}</div>`}
+        <div class="seg" role="group" aria-label="Période"><button data-win="7" aria-pressed="${s.win === 7}">7 jours</button><button data-win="30" aria-pressed="${s.win === 30}">30 jours</button></div>
+        ${isSkills ? `<div class="seg" role="group" aria-label="Afficher"><button data-show="used" aria-pressed="${s.show === 'used'}">Utilisées</button><button data-show="all" aria-pressed="${s.show === 'all'}">Toutes ${U.skills.length}</button></div>` : ''}
       </div>
       <div class="ub-body">
-        <div class="ub-field" id="ub-field"><svg id="ub-svg" role="img" aria-label="${isSkills ? 'Skills sized by ' + measures.find(m => m.key === s.measure)?.label : 'Applications sized by use'}"></svg></div>
+        <div class="ub-field" id="ub-field"><svg id="ub-svg" role="img" aria-label="${isSkills ? 'Skills, taille selon : ' + measures.find(m => m.key === s.measure)?.label : 'Applications, taille selon l’usage'}"></svg></div>
         <aside class="ub-list" id="ub-list">
           <div id="ub-detail"></div>
           <ol class="ub-rows">${sorted.map((x, i) => row(view, x, i, sorted[0]?.v || 1)).join('')}</ol>
-          ${unused.length ? `<details class="ub-unused"><summary>Not used in 30 days · ${unused.length}</summary><p>${unused.map(x => `<span class="ub-name" data-id="skill:${esc(x.id)}">${esc(x.name)}</span>`).join(' ')}</p></details>` : ''}
+          ${unused.length ? `<details class="ub-unused"><summary>Inutilisées depuis 30 jours · ${unused.length}</summary><p>${unused.map(x => `<span class="ub-name" data-id="skill:${esc(x.id)}">${esc(x.name)}</span>`).join(' ')}</p></details>` : ''}
           <p class="ub-method">${esc(isSkills ? U.method?.skill : U.method?.apps)} ${esc(U.rates?.note || '')}</p>
         </aside>
       </div>`;
@@ -100,11 +100,11 @@
   const save = view => store.set(view, st[view]);
   function row(view, x, i, max) {
     const a = x.raw, isSkills = view === 'skills', pct = Math.max(2, Math.round(100 * (x.v / (max || 1))));
-    const meta = isSkills ? (M.skills ? `${plural(a['runs' + st.skills.win], 'run')} · ${big(a['tok' + st.skills.win])} tok · ${money(a['cost' + st.skills.win])}` : (a.kind === 'command' ? 'command' : 'skill') + ' · runs ' + NM)
-      : `${kindLabel(a)} · ${appMeasured(a) ? (local(a) ? 'last opened ' : 'last used ') + ago(a.last) : NM}`;
+    const meta = isSkills ? (M.skills ? `${plural(a['runs' + st.skills.win], 'exécution')} · ${big(a['tok' + st.skills.win])} tok · ${money(a['cost' + st.skills.win])}` : (a.kind === 'command' ? 'commande' : 'skill') + ' · exécutions : ' + NM)
+      : `${kindLabel(a)} · ${appMeasured(a) ? (local(a) ? 'dernière ouverture : ' : 'dernier usage : ') + ago(a.last) : NM}`;
     return `<li class="ub-row${x.used ? '' : ' idle'}" data-id="${esc(x.id)}" tabindex="0"><span class="ub-rank">${i + 1}</span><span class="ub-name" data-id="${esc(x.id)}">${esc(x.name)}</span><span class="ub-val">${esc(x.label)}</span><span class="ub-bar"><i style="width:${x.used ? pct : 0}%;background:${isSkills ? ORANGE : BLUE}"></i></span><span class="ub-meta">${esc(meta)}</span></li>`;
   }
-  const kindLabel = a => local(a) ? 'Local app' + (a.port ? ' :' + a.port : '') : a.group === 'tool' ? (a.kind === 'api' ? 'API' : a.kind === 'app' ? 'Background app' : 'Command line') : a.kind === 'cli+mcp' ? 'Command line + MCP' : 'Connector';
+  const kindLabel = a => local(a) ? 'App locale' + (a.port ? ' :' + a.port : '') : a.group === 'tool' ? (a.kind === 'api' ? 'API' : a.kind === 'app' ? 'App en arrière-plan' : 'Ligne de commande') : a.kind === 'cli+mcp' ? 'Ligne de commande + MCP' : 'Connecteur';
 
   // ---------- the node field ----------
   function field(view, list) {
@@ -115,7 +115,7 @@
     const max = Math.max(1e-9, ...list.map(x => x.v));
     const data = list.map(x => ({...x, w: x.used ? Math.max(x.v, max * 0.0025) : max * 0.0012}));
     const svg = d3.select(svgEl).attr('viewBox', `0 0 ${W} ${H}`); svg.selectAll('*').remove();
-    if (!data.length) { svg.append('text').attr('x', W / 2).attr('y', H / 2).attr('text-anchor', 'middle').attr('class', 'ub-none').text(isSkills ? 'No skills found yet. BRAIN.md shows how to point the OS at your skills.' : 'No applications listed yet. BRAIN.md shows how to list them.'); return; }
+    if (!data.length) { svg.append('text').attr('x', W / 2).attr('y', H / 2).attr('text-anchor', 'middle').attr('class', 'ub-none').text(isSkills ? 'Aucune skill trouvée pour l’instant. BRAIN.md explique comment montrer tes skills à l’OS.' : 'Aucune application listée pour l’instant. BRAIN.md explique comment les lister.'); return; }
     const root = d3.pack().size([W - 8, H - 8]).padding(7)(d3.hierarchy({children: data}).sum(d => d.w).sort((a, b) => b.value - a.value));
     const g = svg.append('g').attr('transform', 'translate(4,4)');
     const node = g.selectAll('g.ub-node').data(root.leaves()).join('g').attr('class', d => 'ub-node' + (d.data.used ? '' : ' idle')).attr('data-id', d => d.data.id).attr('transform', d => `translate(${d.x},${d.y})`).attr('tabindex', 0);
@@ -164,34 +164,34 @@
   }
   function detail(view, id) {
     const box = $('ub-detail'); if (!box) return;
-    const x = view === 'skills' ? U.skills.find(s => 'skill:' + s.id === id) : [...U.apps, ...U.rubric].find(a => a.id === id);
+    const x = view === 'skills' ? U.skills.find(s => 'skill:' + s.id === id) : [...U.apps, ...U.sm4rt].find(a => a.id === id);
     if (!x) { box.innerHTML = ''; return; }
     const name = `<span class="ub-name">${esc(view === 'skills' ? x.name : x.label)}</span>`;
     if (view === 'skills') {
       const per = (t, r) => r ? big(t / r) : '-';
-      const body = M.skills ? `<table><tr><th></th><th>7 days</th><th>30 days</th></tr>
-        <tr><td>Runs</td><td>${x.runs7}</td><td>${x.runs30}</td></tr>
+      const body = M.skills ? `<table><tr><th></th><th>7 jours</th><th>30 jours</th></tr>
+        <tr><td>Exécutions</td><td>${x.runs7}</td><td>${x.runs30}</td></tr>
         <tr><td>Tokens</td><td>${big(x.tok7)}</td><td>${big(x.tok30)}</td></tr>
-        <tr><td>Tokens / run</td><td>${per(x.tok7, x.runs7)}</td><td>${per(x.tok30, x.runs30)}</td></tr>
-        <tr><td>API $</td><td>${money(x.cost7)}</td><td>${money(x.cost30)}</td></tr>
-        <tr><td>API $ / run</td><td>${x.runs7 ? money(x.cost7 / x.runs7) : '-'}</td><td>${x.runs30 ? money(x.cost30 / x.runs30) : '-'}</td></tr></table>
-        <p class="ub-foot">Last run ${ago(x.last)}${x.subagents30 ? ` · ${x.subagents30} subagents in 30 days` : ''}</p>` : `<p class="ub-foot">Runs, tokens and API $: not measured. USAGE.md shows how your agent can log them.</p>`;
-      box.innerHTML = `<div class="ub-card"><div class="ub-card-h">${name}<span class="ub-tag">${esc(x.kind)}</span><button class="ub-x" aria-label="Close">×</button></div>
+        <tr><td>Tokens / exéc.</td><td>${per(x.tok7, x.runs7)}</td><td>${per(x.tok30, x.runs30)}</td></tr>
+        <tr><td>$ API</td><td>${money(x.cost7)}</td><td>${money(x.cost30)}</td></tr>
+        <tr><td>$ API / exéc.</td><td>${x.runs7 ? money(x.cost7 / x.runs7) : '-'}</td><td>${x.runs30 ? money(x.cost30 / x.runs30) : '-'}</td></tr></table>
+        <p class="ub-foot">Dernière exécution : ${ago(x.last)}${x.subagents30 ? ` · ${x.subagents30} sous-agents en 30 jours` : ''}</p>` : `<p class="ub-foot">Exécutions, tokens et $ API : non mesurés. USAGE.md explique comment ton agent peut les noter.</p>`;
+      box.innerHTML = `<div class="ub-card"><div class="ub-card-h">${name}<span class="ub-tag">${esc(x.kind === 'command' ? 'commande' : x.kind)}</span><button class="ub-x" aria-label="Fermer">×</button></div>
         ${x.desc ? `<p class="ub-desc">${esc(x.desc)}</p>` : ''}${body}</div>`;
     } else {
       const isLocal = local(x), measuredHere = appMeasured(x);
-      box.innerHTML = `<div class="ub-card"><div class="ub-card-h">${name}<span class="ub-tag">${esc(kindLabel(x))}</span><button class="ub-x" aria-label="Close">×</button></div>
+      box.innerHTML = `<div class="ub-card"><div class="ub-card-h">${name}<span class="ub-tag">${esc(kindLabel(x))}</span><button class="ub-x" aria-label="Fermer">×</button></div>
         ${x.desc ? `<p class="ub-desc">${esc(x.desc)}</p>` : ''}
-        ${measuredHere ? `<table><tr><th></th><th>7 days</th><th>30 days</th></tr>
-        ${isLocal ? `<tr><td>Opens from the OS</td><td>${x.visits7}</td><td>${x.visits30}</td></tr>${x.agentCalls30 != null ? `<tr><td>Agent calls</td><td></td><td>${x.agentCalls30}</td></tr>` : ''}` : `<tr><td>${x.group === 'tool' ? 'Commands' : 'Tool calls'}</td><td>${x.calls7}</td><td>${x.calls30}</td></tr>`}</table>` : ''}
-        <p class="ub-foot">${measuredHere ? (isLocal ? 'Last opened ' : 'Last used ') + ago(x.last) : 'Calls: not measured. USAGE.md shows how your agent can log them.'}${measuredHere && !isLocal && !x.calls30 ? ' · nothing in 30 days, so it is safe to disconnect if you no longer need it' : ''}</p></div>`;
+        ${measuredHere ? `<table><tr><th></th><th>7 jours</th><th>30 jours</th></tr>
+        ${isLocal ? `<tr><td>Ouvertures depuis l’OS</td><td>${x.visits7}</td><td>${x.visits30}</td></tr>${x.agentCalls30 != null ? `<tr><td>Appels de l’agent</td><td></td><td>${x.agentCalls30}</td></tr>` : ''}` : `<tr><td>${x.group === 'tool' ? 'Commandes' : 'Appels d’outils'}</td><td>${x.calls7}</td><td>${x.calls30}</td></tr>`}</table>` : ''}
+        <p class="ub-foot">${measuredHere ? (isLocal ? 'Dernière ouverture : ' : 'Dernier usage : ') + ago(x.last) : 'Appels : non mesurés. USAGE.md explique comment ton agent peut les noter.'}${measuredHere && !isLocal && !x.calls30 ? ' · rien en 30 jours : tu peux la déconnecter sans risque si tu n’en as plus besoin' : ''}</p></div>`;
     }
     box.querySelector('.ub-x').onclick = () => { selected[view] = null; box.innerHTML = ''; document.querySelectorAll('.sel').forEach(el => el.classList.remove('sel')); };
   }
   function tip(e, x, view) {
     const h = $('hover'); if (!h) return;
     const a = x.raw;
-    h.innerHTML = `<strong>${esc(x.name)}</strong><br>${esc(x.label)}${view === 'skills' ? (M.skills ? `<br><span class="muted">${plural(a['runs' + st.skills.win], 'run')} · ${big(a['tok' + st.skills.win])} tokens · ${money(a['cost' + st.skills.win])}</span>` : '') : `<br><span class="muted">${esc(kindLabel(a))}${appMeasured(a) ? ' · ' + (local(a) ? 'last opened ' : 'last used ') + ago(a.last) : ''}</span>`}`;
+    h.innerHTML = `<strong>${esc(x.name)}</strong><br>${esc(x.label)}${view === 'skills' ? (M.skills ? `<br><span class="muted">${plural(a['runs' + st.skills.win], 'exécution')} · ${big(a['tok' + st.skills.win])} tokens · ${money(a['cost' + st.skills.win])}</span>` : '') : `<br><span class="muted">${esc(kindLabel(a))}${appMeasured(a) ? ' · ' + (local(a) ? 'dernière ouverture : ' : 'dernier usage : ') + ago(a.last) : ''}</span>`}`;
     h.hidden = false; moveTip(e);
   }
   function moveTip(e) { const h = $('hover'); if (!h || h.hidden) return; const r = h.getBoundingClientRect(); h.style.left = Math.min(innerWidth - r.width - 8, e.clientX + 14) + 'px'; h.style.top = Math.min(innerHeight - r.height - 8, e.clientY + 14) + 'px'; }

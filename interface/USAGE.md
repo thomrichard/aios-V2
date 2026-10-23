@@ -1,20 +1,20 @@
-# USAGE.md - measure what you use
+# USAGE.md - mesurer ce que tu utilises
 
-The Skills, Applications and Routines tabs size things by real use: skill runs, tokens and API $, routine runs, app calls and local app opens, over the last 7 and 30 days. The rule is simple: what is measured shows its number, and what is not shows "not measured". Nothing is estimated or made up.
+Les onglets Skills, Applications et Routines dimensionnent chaque élément selon l'usage réel : exécutions de skills, tokens et $ API, exécutions de routines, appels d'apps et ouvertures d'apps locales, sur les 7 et les 30 derniers jours. La règle est simple : ce qui est mesuré affiche son chiffre, ce qui ne l'est pas affiche « non mesuré ». Rien n'est estimé ni inventé.
 
-`node refresh/usage.mjs` builds the figures (the refresh icon runs it too). It reads files on this computer only and calls no model. Three sources, all optional:
+`node refresh/usage.mjs` calcule les chiffres (l'icône d'actualisation le lance aussi). Il ne lit que des fichiers de cet ordinateur et n'appelle aucun modèle. Trois sources, toutes en option :
 
-## 1. Your agent's session logs (read for you when a reader exists)
+## 1. Les journaux de session de ton agent (lus pour toi quand un lecteur existe)
 
-- **If your agent is Claude Code:** its session logs in `~/.claude/projects/` are read for you, including subagents. A skill run starts where the log shows the skill loading and lasts until the next skill or your next prompt. A routine run is a session started by a scheduled task. Each model call counts once, even when a resumed session copies it. Tool calls to MCP servers and the command names your agent ran count toward your apps. Only command names and local port numbers are kept from commands, never the full command or any message text. A first read of a large log folder can take a minute; later reads use a cache in `data/usage-cache.json`. The same reader also reads the scheduled tasks (`~/.claude/scheduled-tasks/` and the desktop app's `scheduled-tasks.json` files under `%APPDATA%\Claude\claude-code-sessions` on Windows, `~/Library/Application Support/Claude/claude-code-sessions` on macOS, `~/.config/Claude/claude-code-sessions` on Linux; see ROUTINES.md).
-- **To turn that reader off** (you are not on Claude Code, or you do not want its tasks and session logs read): set `"readers": { "claudeCode": false }` in `os-config.json`. The default, `"auto"`, reads those folders only when they exist.
-- **Any other agent:** use the usage log below. To teach the OS to read another agent's logs, add a reader in `refresh/sources/` the same way.
+- **Si ton agent est Claude Code :** ses journaux de session dans `~/.claude/projects/` sont lus pour toi, sous-agents compris. Une exécution de skill commence là où le journal montre le chargement de la skill, et dure jusqu'à la skill suivante ou jusqu'à ton prompt suivant. Une exécution de routine est une session lancée par une tâche planifiée. Chaque appel au modèle compte une seule fois, même quand une session reprise le recopie. Les appels d'outils aux serveurs MCP et les noms des commandes lancées par ton agent comptent pour tes apps. Des commandes, seuls les noms et les numéros de ports locaux sont gardés, jamais la commande complète ni le texte d'un message. La première lecture d'un gros dossier de journaux peut prendre une minute ; les suivantes utilisent un cache dans `data/usage-cache.json`. Le même lecteur lit aussi les tâches planifiées (`~/.claude/scheduled-tasks/` et les fichiers `scheduled-tasks.json` de l'app de bureau sous `%APPDATA%\Claude\claude-code-sessions` sous Windows, `~/Library/Application Support/Claude/claude-code-sessions` sous macOS, `~/.config/Claude/claude-code-sessions` sous Linux ; voir ROUTINES.md).
+- **Pour couper ce lecteur** (tu n'es pas sur Claude Code, ou tu ne veux pas que ses tâches et ses journaux de session soient lus) : mets `"readers": { "claudeCode": false }` dans `os-config.json`. La valeur par défaut, `"auto"`, ne lit ces dossiers que s'ils existent.
+- **Tout autre agent :** utilise le journal d'usage ci-dessous. Pour apprendre à l'OS à lire les journaux d'un autre agent, ajoute un lecteur dans `refresh/sources/` de la même façon.
 
-## 2. The usage log: `snapshots/usage-log.jsonl`
+## 2. Le journal d'usage : `snapshots/usage-log.jsonl`
 
-One line of JSON per event, appended by any agent or script. Add this to your instructions so it becomes a habit, with the absolute path of the OS folder in the slot:
+Une ligne de JSON par événement, ajoutée par n'importe quel agent ou script. Ajoute ceci à tes instructions pour en faire une habitude, avec le chemin absolu du dossier de l'OS dans l'emplacement prévu :
 
-> After you finish a skill, a scheduled routine, or a call to one of my connected apps, append one line to <path-to-your-os>/snapshots/usage-log.jsonl: {"at": "<ISO time>", "kind": "skill" | "routine" | "app", "name": "<skill name, routine id or app id>", "tokens": <if known>, "cost": <USD, if known>}.
+> Quand tu termines une skill, une routine planifiée ou un appel à une de mes apps connectées, ajoute une ligne à <chemin-de-ton-os>/snapshots/usage-log.jsonl : {"at": "<heure ISO>", "kind": "skill" | "routine" | "app", "name": "<nom de la skill, id de la routine ou id de l'app>", "tokens": <si connu>, "cost": <en USD, si connu>}.
 
 ```
 {"at":"2026-01-05T07:00:12Z","kind":"routine","name":"morning-digest","tokens":18400,"cost":0.05}
@@ -22,21 +22,21 @@ One line of JSON per event, appended by any agent or script. Add this to your in
 {"at":"2026-01-05T10:24:03Z","kind":"app","name":"app:github","calls":3}
 ```
 
-- `name` for a skill is its name without the slash. For a routine, its `id` or its `name` from ROUTINES.md. For an app, its `id` or `label` from `config/apps.json`.
-- `tokens` and `cost` are optional. Leave them out if your agent cannot see them; runs still count.
-- `calls` (apps) defaults to 1.
-- A sample ships as `snapshots/usage-log.example.jsonl`.
+- `name`, pour une skill, est son nom sans la barre oblique. Pour une routine, son `id` ou son `name` de ROUTINES.md. Pour une app, son `id` ou son `label` de `config/apps.json`.
+- `tokens` et `cost` sont en option. Laisse-les de côté si ton agent ne peut pas les voir ; les exécutions comptent quand même.
+- `calls` (apps) vaut 1 par défaut.
+- Un exemple est livré : `snapshots/usage-log.example.jsonl`.
 
-## 3. Local app opens (always on)
+## 3. Les ouvertures d'apps locales (toujours actif)
 
-Every click on a Micro Apps tile goes through the OS, which writes one line to `data/app-opens.jsonl`. That is how the Applications tab counts your local apps (RUBRIC Recos and any you add), without reading your browser.
+Chaque clic sur une tuile des micro-apps passe par l'OS, qui écrit une ligne dans `data/app-opens.jsonl`. C'est comme ça que l'onglet Applications compte tes apps locales (celles que tu ajoutes), sans lire ton navigateur.
 
-## What each tab shows
+## Ce que montre chaque onglet
 
-| Tab | Measured | Not measured |
+| Onglet | Mesuré | Non mesuré |
 |---|---|---|
-| Skills | runs, tokens, API $ per skill, 7 and 30 days | every skill found, labelled "not measured" |
-| Applications | calls per connection, opens per local app | connections labelled "not measured" |
-| Routines | runs, tokens, API $ per routine for the last 7 days | "not measured" in the row and the details |
+| Skills | exécutions, tokens, $ API par skill, sur 7 et 30 jours | chaque skill trouvée, avec l'étiquette « non mesuré » |
+| Applications | appels par connexion, ouvertures par app locale | connexions avec l'étiquette « non mesuré » |
+| Routines | exécutions, tokens, $ API par routine, sur les 7 derniers jours | « non mesuré » dans la ligne et dans le détail |
 
-API $ is what the measured tokens would cost at standard API rates (`refresh/sources/claude-code.cjs` holds the rates for that reader). It is not your subscription bill.
+Les $ API, c'est ce que coûteraient les tokens mesurés au tarif standard de l'API (`refresh/sources/claude-code.cjs` contient les tarifs pour ce lecteur). Ce n'est pas ta facture d'abonnement.

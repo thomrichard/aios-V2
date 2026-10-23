@@ -44,7 +44,7 @@ function loadConfig() {
   const dep = loadJSON(path.join(CONFIG_DIR, 'departments.json'), { departments: [], layers: [], projectPrefixes: {}, pathRules: [], memoryKeywords: [], default: 'general' });
   dep.departments = dep.departments || [];
   dep.layers = dep.layers || [];
-  if (!dep.departments.length) dep.departments = [{ key: 'general', label: 'General', color: '#9a66e0', icon: 'data' }];
+  if (!dep.departments.length) dep.departments = [{ key: 'general', label: 'Général', color: '#9a66e0', icon: 'data' }];
   const badDefault = dep.default && !dep.departments.some(d => d.key === dep.default) ? dep.default : null;
   if (!dep.default || badDefault) dep.default = dep.departments[0].key;
   const apps = loadJSON(path.join(CONFIG_DIR, 'apps.json'), { apps: [] }).apps || [];
@@ -54,20 +54,20 @@ function loadConfig() {
   const warnings = [], keys = new Set(dep.departments.map(d => d.key)), F = 'config/departments.json';
   const okDept = k => typeof k === 'string' && keys.has(k);
   const pp = dep.projectPrefixes && typeof dep.projectPrefixes === 'object' && !Array.isArray(dep.projectPrefixes) ? dep.projectPrefixes : {};
-  if (dep.projectPrefixes !== undefined && pp !== dep.projectPrefixes) warnings.push(F + ': projectPrefixes must be an object like { "client-": "clients" } - skipped');
-  dep._prefixes = Object.entries(pp).filter(([pre, d]) => { const ok = pre && okDept(d); if (!ok) warnings.push(F + ': projectPrefixes "' + pre + '" points at "' + d + '", which is not a department key - skipped'); return ok; }).sort((a, b) => b[0].length - a[0].length);
+  if (dep.projectPrefixes !== undefined && pp !== dep.projectPrefixes) warnings.push(F + ' : projectPrefixes doit être un objet comme { "client-": "clients" } (ignoré)');
+  dep._prefixes = Object.entries(pp).filter(([pre, d]) => { const ok = pre && okDept(d); if (!ok) warnings.push(F + ' : projectPrefixes "' + pre + '" pointe vers "' + d + '", qui n’est pas une clé de domaine (ignoré)'); return ok; }).sort((a, b) => b[0].length - a[0].length);
   dep.memoryKeywords = (Array.isArray(dep.memoryKeywords) ? dep.memoryKeywords : []).filter((r, i) => {
     const ok = r && Array.isArray(r.match) && r.match.every(w => typeof w === 'string') && okDept(r.dept);
-    if (!ok) warnings.push(F + ': memoryKeywords[' + i + '] needs { "match": ["word"], "dept": "<department key>" } - skipped');
+    if (!ok) warnings.push(F + ' : memoryKeywords[' + i + '] doit suivre { "match": ["mot"], "dept": "<clé du domaine>" } (ignoré)');
     else r.match = r.match.map(w => w.toLowerCase());
     return ok;
   });
   dep.pathRules = (Array.isArray(dep.pathRules) ? dep.pathRules : []).filter((r, i) => {
     const ok = r && typeof r.prefix === 'string' && r.prefix && okDept(r.dept);
-    if (!ok) warnings.push(F + ': pathRules[' + i + '] needs { "prefix": "folder/", "dept": "<department key>" } - skipped');
+    if (!ok) warnings.push(F + ' : pathRules[' + i + '] doit suivre { "prefix": "dossier/", "dept": "<clé du domaine>" } (ignoré)');
     return ok;
   });
-  if (badDefault) warnings.push(F + ': default "' + badDefault + '" is not a department key - using "' + dep.default + '"');
+  if (badDefault) warnings.push(F + ' : default "' + badDefault + '" n’est pas une clé de domaine, on prend "' + dep.default + '"');
   overrides.sort((a, b) => (b.prefix || '').length - (a.prefix || '').length);
   const skillDirs = (ws.skillDirs || []).map(d => String(d).replace(/\\/g, '/').replace(/^\/+|\/+$/g, '')).filter(Boolean);
   const routerDoc = String(ws.routerDoc || 'AGENTS.md').replace(/\\/g, '/');
@@ -252,7 +252,7 @@ function emptyModel() { return { files: [], dirs: new Map([['', { rel: '', name:
 function runScan() {
   const t0 = Date.now();
   const cfg = loadConfig();
-  for (const w of cfg.warnings) console.warn('Warning: ' + w);
+  for (const w of cfg.warnings) console.warn('Attention : ' + w);
   const root = resolveRoot(cfg.ws);
   const model = root ? walk(root, Number(cfg.ws.maxFiles) || 500000) : emptyModel();
   const cache = loadJSON(CACHE_FILE, {});

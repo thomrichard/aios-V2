@@ -1,123 +1,123 @@
-![RUBRIC Agentic OS v2](assets/banner.png)
+![SM4RT Agentic OS v2](assets/banner.png)
 
-# RUBRIC Agentic OS v2
+# SM4RT Agentic OS v2
 
-Your homepage and your Second Brain in one local page: live widgets, a ring of everything your agent has built, and a 3D map of your whole workspace with its routines, skills and apps. Your agent sets it up and keeps it fresh.
+Ta page d'accueil et ton second cerveau dans une seule page locale : des widgets en direct, un anneau de tout ce que ton agent a construit, et une carte 3D de tout ton workspace, avec ses routines, ses skills et ses apps. Ton agent l'installe et le tient à jour.
 
-Built by Jay E at RoboNuggets. License: MIT (see LICENSE).
+Créé par Jay E chez RoboNuggets. Licence : MIT (voir LICENSE).
 
-## Quick start
+## Démarrage rapide
 
-1. Install [Node.js](https://nodejs.org) 18 or newer. Nothing else is needed: the OS has zero dependencies.
-2. Unzip this folder anywhere you like.
-3. Hand this README to your agent and let it do the setup below. It points the OS at your workspace and builds your Second Brain.
-4. Start it with `node server.js` inside the folder. That one command starts everything, the Second Brain engine included.
-5. Open `http://localhost:50000` (the port is `"port"` in `os-config.json`; 50200 if you run v1 beside it). A short tour (7 steps) runs on your first visit, and the info icon replays it.
+1. Installe [Node.js](https://nodejs.org) 18 ou plus récent. Rien d'autre n'est nécessaire : l'OS n'a aucune dépendance.
+2. Décompresse ce dossier où tu veux.
+3. Donne ce README à ton agent et laisse-le faire l'installation ci-dessous. Il fait pointer l'OS vers ton workspace et construit ton second cerveau.
+4. Lance-le avec `node server.js` dans le dossier. Cette seule commande démarre tout, moteur du second cerveau compris.
+5. Ouvre `http://localhost:50000` (le port est `"port"` dans `os-config.json` ; 50200 si tu fais tourner la v1 à côté). Une courte visite guidée (7 étapes) se lance à ta première visite, et l'icône info la rejoue.
 
-Widgets you have not connected yet show a quiet "not wired yet" note. That is by design: nothing is broken.
+Les widgets que tu n'as pas encore connectés affichent une petite note discrète « pas encore branché ». C'est voulu : rien n'est cassé.
 
-## Let your agent set it up (recommended)
+## Laisse ton agent l'installer (recommandé)
 
-This kit is built to be installed by your agent, whatever agent you use. Tell it:
+Ce kit est fait pour être installé par ton agent, quel qu'il soit. Dis-lui :
 
-> Read the README of this kit. Use what you already know about me and my workspace, then ask me only what you still need: which agent and schedulers I use, and which email, calendar and numbers I care about. Recommend which parts to wire first, then set it up step by step using the guides.
+> Lis le README de ce kit. Sers-toi de ce que tu sais déjà de moi et de mon workspace, puis demande-moi seulement ce qui te manque : quel agent et quels planificateurs j'utilise, et quels e-mails, quel agenda et quels chiffres comptent pour moi. Recommande les parties à brancher en premier, puis installe tout étape par étape en suivant les guides.
 
-### For the agent: the install steps
+### Pour l'agent : les étapes d'installation
 
-You are setting this up for your user, inside their workspace. Respect what you find: map it, never reorganise it. Do these in order.
+Tu installes ce kit pour ton utilisateur, dans son workspace. Respecte ce que tu trouves : cartographie-le, ne le réorganise jamais. Suis ces étapes dans l'ordre.
 
-1. **Check Node.** `node --version` must be 18 or newer. If not, tell your user how to install it and stop.
-2. **Check the ports before the first start.** v2 uses port 50000 by default, because RUBRIC Recos and RUBRIC Carousels look for the Apply all comments runner there. (Those two are separate free RUBRIC downloads in the RoboNuggets classroom; their Apply all comments button calls this OS. Until Recos is installed, the RUBRIC Recos tile in Micro Apps links to its classroom page.) Check whether something already answers on `http://localhost:50000`. If it does (usually RUBRIC Agentic OS v1), leave it alone: set `"port": 50200` in `os-config.json` so v2 runs beside it and nothing of theirs moves. Then ask your user one question: should v2 take over port 50000 and copy their settings, ring balls and skill cards across? If yes, follow "Upgrading from v1" below. If nothing answers on 50000, keep the default. Check that `"brainPort"` (default 50201, the Second Brain engine) is free too, and pick another free port if not.
-3. **Point the OS at the workspace.** Fill `config/workspace.json`: `root` (the absolute path of your user's main agent workspace), `routerDoc` (the instruction file you read first, for example `AGENTS.md`), `instructionDocs` (every always-loaded instruction file at the root), `skillDirs`, `memoryDir`, `projectsDir`, `visibleRoots` and `sharedPrefixes`. [BRAIN.md](BRAIN.md) step 1 explains each field.
-4. **Write the departments.** These are the coloured slices of the 3D globe. Use what you already know about your user and their workspace to write 3 to 6 departments in `config/departments.json`. Ask 2 or 3 quick questions only if you do not know. [BRAIN.md](BRAIN.md) step 2.
-5. **List the applications.** Real connections only (MCP servers, command-line tools that talk to a service, APIs with stored keys) in `config/apps.json`. [BRAIN.md](BRAIN.md) step 3.
-6. **Agent readers.** `"readers": { "claudeCode": "auto" }` in `os-config.json` means: if Claude Code's folders are found on this computer, its scheduled tasks and session logs are read (ROUTINES.md and USAGE.md list the exact folders). If your user isn't on Claude Code, or doesn't want its tasks and session logs read, set it to `false`.
-7. **Routines.** If your agent is Claude Code (and the reader is on), its scheduled tasks are read for you. Anything else on a schedule (cron, Task Scheduler, launchd, another agent's scheduler, a server) goes in `snapshots/routines.json`. Use what you know about your user's schedulers to fill it. [ROUTINES.md](ROUTINES.md).
-8. **Usage.** If your agent is Claude Code (and the reader is on), its session logs are read for skill runs, routine runs and tool calls. Otherwise, add the one-line usage log habit from [USAGE.md](USAGE.md) to your instructions. The instruction snippets in ROUTINES.md, USAGE.md, WIRING.md and RING.md have a `<path-to-your-os>` slot: put the absolute path of this folder there. Anything nothing measures shows "not measured".
-9. **Build the Second Brain, then start.** Run `node refresh/run.mjs` so the first open already shows your user's own workspace. Then `node server.js`, open the page, and check it headless if you can: zero console errors, the orb opens the Second Brain, and the six tabs show their files.
-10. **Offer the rest, one at a time:** the skills deck runner ([WIRING.md](WIRING.md)), the calendar and its world clocks ([OAUTH.md](OAUTH.md)), email and stats ([WIRING.md](WIRING.md)), the artifact ring habit ([RING.md](RING.md)), and an autostart that fits their machine (Task Scheduler, launchd, systemd, or pm2 if they already use it; none is required).
-11. **Offer the `/agenticos` skill.** Ask your user first. If they say yes, copy `skills/agenticos/` into your skills folder. It teaches you how to change, refresh, check and fix this OS later. `SKILL.md` is the shared skills format many agents read; if your agent has no skills folder, keep the file anywhere and point your instructions file at it as a reference.
+1. **Vérifie Node.** `node --version` doit donner 18 ou plus. Sinon, explique à ton utilisateur comment l'installer et arrête-toi.
+2. **Vérifie les ports avant le premier démarrage.** La v2 utilise le port 50000 par défaut : c'est là que les pages de relecture cherchent le lanceur d'« Appliquer tous les commentaires ». Regarde si quelque chose répond déjà sur `http://localhost:50000`. Si oui (en général une autre copie de l'OS), n'y touche pas : mets `"port": 50200` dans `os-config.json` pour que la v2 tourne à côté et que rien de ce qui existe ne bouge. Puis pose une seule question à ton utilisateur : la v2 doit-elle reprendre le port 50000 et recopier ses réglages, ses boules de l'anneau et ses cartes de skills ? Si oui, suis « Passer de la v1 à la v2 » plus bas. Si rien ne répond sur 50000, garde la valeur par défaut. Vérifie aussi que `"brainPort"` (50201 par défaut, le moteur du second cerveau) est libre, et choisis un autre port libre sinon.
+3. **Fais pointer l'OS vers le workspace.** Remplis `config/workspace.json` : `root` (le chemin absolu du workspace principal de ton utilisateur), `routerDoc` (le fichier d'instructions que tu lis en premier, par exemple `AGENTS.md`), `instructionDocs` (tous les fichiers d'instructions toujours chargés, à la racine), `skillDirs`, `memoryDir`, `projectsDir`, `visibleRoots` et `sharedPrefixes`. L'étape 1 de [BRAIN.md](BRAIN.md) explique chaque champ.
+4. **Écris les domaines.** Ce sont les tranches colorées du globe 3D. Sers-toi de ce que tu sais déjà de ton utilisateur et de son workspace pour écrire 3 à 6 domaines dans `config/departments.json`. Pose 2 ou 3 questions rapides seulement si tu ne sais pas. [BRAIN.md](BRAIN.md), étape 2.
+5. **Liste les applications.** Seulement de vraies connexions (serveurs MCP, outils en ligne de commande qui parlent à un service, API avec des clés enregistrées), dans `config/apps.json`. [BRAIN.md](BRAIN.md), étape 3.
+6. **Lecteurs d'agent.** `"readers": { "claudeCode": "auto" }` dans `os-config.json` veut dire : si les dossiers de Claude Code sont présents sur cet ordinateur, ses tâches planifiées et ses journaux de session sont lus (ROUTINES.md et USAGE.md donnent les dossiers exacts). Si ton utilisateur n'est pas sur Claude Code, ou ne veut pas que ses tâches et ses journaux de session soient lus, mets `false`.
+7. **Routines.** Si ton agent est Claude Code (et que le lecteur est actif), ses tâches planifiées sont lues pour toi. Tout le reste qui tourne à heure fixe (cron, Planificateur de tâches, launchd, le planificateur d'un autre agent, un serveur) va dans `snapshots/routines.json`. Sers-toi de ce que tu sais des planificateurs de ton utilisateur pour le remplir. [ROUTINES.md](ROUTINES.md).
+8. **Usage.** Si ton agent est Claude Code (et que le lecteur est actif), ses journaux de session sont lus pour compter les exécutions de skills, les exécutions de routines et les appels d'outils. Sinon, ajoute à tes instructions l'habitude du journal d'usage en une ligne, décrite dans [USAGE.md](USAGE.md). Les extraits d'instructions de ROUTINES.md, USAGE.md, WIRING.md et RING.md ont un emplacement `<chemin-de-ton-os>` : mets-y le chemin absolu de ce dossier. Tout ce que rien ne mesure affiche « non mesuré ».
+9. **Construis le second cerveau, puis démarre.** Lance `node refresh/run.mjs` pour que la première ouverture montre déjà le workspace de ton utilisateur. Puis `node server.js`, ouvre la page, et vérifie-la avec un navigateur sans interface si tu peux : zéro erreur dans la console, l'orbe ouvre le second cerveau, et les six onglets affichent leurs fichiers.
+10. **Propose le reste, une chose à la fois :** le lanceur du deck de skills ([WIRING.md](WIRING.md)), l'agenda et ses horloges mondiales ([OAUTH.md](OAUTH.md)), les e-mails et les stats ([WIRING.md](WIRING.md)), l'habitude de l'anneau des livrables ([RING.md](RING.md)), et un démarrage automatique adapté à sa machine (Planificateur de tâches, launchd, systemd, ou pm2 s'il l'utilise déjà ; aucun n'est obligatoire).
+11. **Propose la skill `/agenticos`.** Demande d'abord à ton utilisateur. S'il dit oui, copie `skills/agenticos/` dans ton dossier de skills. Elle t'apprend à modifier, actualiser, vérifier et réparer cet OS plus tard. `SKILL.md` est le format de skills partagé que beaucoup d'agents lisent ; si ton agent n'a pas de dossier de skills, garde le fichier où tu veux et fais-y référence depuis ton fichier d'instructions.
 
-## The guides
+## Les guides
 
-| Part | Guide | What your agent does |
+| Partie | Guide | Ce que fait ton agent |
 |---|---|---|
-| Second Brain | [BRAIN.md](BRAIN.md) | Points the map at your workspace: departments, apps, skills, search, the file viewer |
-| Routines | [ROUTINES.md](ROUTINES.md) | Lists everything on a schedule, for the homepage widget and the Routines tab |
-| Usage | [USAGE.md](USAGE.md) | Measures skill runs, routine runs and app use (or says "not measured") |
-| Skills deck, Email, Stats, Micro Apps | [WIRING.md](WIRING.md) | Wires the runner, your inbox, any numbers, your own local apps |
-| Calendar | [OAUTH.md](OAUTH.md) | One-time Google sign-in, then live events |
-| Artifact ring | [RING.md](RING.md) | Teaches your agent to put every build on the ring |
-| Look and feel | [REDESIGN.md](REDESIGN.md) | Reskins the whole OS from one token block |
+| Second cerveau | [BRAIN.md](BRAIN.md) | Fait pointer la carte vers ton workspace : domaines, apps, skills, recherche, la visionneuse de fichiers |
+| Routines | [ROUTINES.md](ROUTINES.md) | Liste tout ce qui tourne à heure fixe, pour le widget de la page d'accueil et l'onglet Routines |
+| Usage | [USAGE.md](USAGE.md) | Mesure les exécutions de skills, les exécutions de routines et l'usage des apps (ou affiche « non mesuré ») |
+| Deck de skills, e-mails, stats, micro-apps | [WIRING.md](WIRING.md) | Branche le lanceur, ta boîte mail, tous tes chiffres, tes propres apps locales |
+| Agenda | [OAUTH.md](OAUTH.md) | Une connexion Google, une seule fois, puis les événements en direct |
+| Anneau des livrables | [RING.md](RING.md) | Apprend à ton agent à mettre chacune de ses créations sur l'anneau |
+| Apparence | [REDESIGN.md](REDESIGN.md) | Change le style de tout l'OS depuis un seul bloc de tokens |
 
-## Everyday use
+## Au quotidien
 
-- **Start:** `node server.js`. It starts the Second Brain engine beside it. Stop both with Ctrl+C.
-- **The orb:** click its centre to zoom into your Second Brain. Press `/` there to search every file by name, and Back (or Escape) to come home.
-- **The six tabs:** 3D orbs, 2D map, Timeline, Routines, Skills and Applications.
-- **The refresh icon** (top right in the Second Brain) rebuilds the map, skills, routines, apps and usage. No model calls. `node refresh/run.mjs` does the same from a terminal.
-- **The ring:** every HTML page in `artifacts/` is a ball. Hover the orange ball to see every name, press `/` to search, right-click a ball for OPEN or REMOVE (removed balls move to `artifacts/_trash`).
-- **Micro Apps:** RUBRIC Recos opens if it runs on this computer, or its page if it does not. Add more gives your agent a ready prompt to add your own apps.
-- **Ports:** `"port"` and `"brainPort"` in `os-config.json` (defaults 50000 and 50201). If the port is taken, the server stops with a one-line message instead of moving: change `"port"` and start again.
+- **Démarrer :** `node server.js`. Il lance le moteur du second cerveau à côté. Arrête les deux avec Ctrl+C.
+- **L'orbe :** clique en son centre pour zoomer dans ton second cerveau. Là, appuie sur `/` pour rechercher n'importe quel fichier par son nom, et sur Retour (ou Échap) pour revenir à l'accueil.
+- **Les six onglets :** Orbes 3D, Carte 2D, Frise, Routines, Skills et Applications.
+- **L'icône d'actualisation** (en haut à droite dans le second cerveau) reconstruit la carte, les skills, les routines, les apps et l'usage. Aucun appel au modèle. `node refresh/run.mjs` fait la même chose depuis un terminal.
+- **L'anneau :** chaque page HTML de `artifacts/` est une boule. Survole la boule orange pour voir tous les noms, appuie sur `/` pour rechercher, fais un clic droit sur une boule pour OUVRIR ou RETIRER (les boules retirées vont dans `artifacts/_trash`).
+- **Micro-apps :** chaque tuile ouvre son app si elle tourne sur cet ordinateur, sinon sa page. « Ajouter » donne à ton agent un prompt prêt à l'emploi pour ajouter tes propres apps.
+- **Ports :** `"port"` et `"brainPort"` dans `os-config.json` (50000 et 50201 par défaut). Si le port est pris, le serveur s'arrête avec un message d'une ligne au lieu de changer de port : modifie `"port"` et relance.
 
-## Upgrading from v1
+## Passer de la v1 à la v2
 
-v2 is a separate folder. Your v1 folder keeps working on port 50000 until you say otherwise.
+La v2 est un dossier à part. Ton dossier v1 continue de marcher sur le port 50000 tant que tu n'en décides pas autrement.
 
-- **Run both:** set `"port": 50200` in v2's `os-config.json` (the install steps do this when something answers on 50000).
-- **Let v2 take over port 50000:** stop v1, set `"port": 50000` in v2's `os-config.json`, then copy across what you want to keep:
-  - your skill cards, models, efforts and email hints from v1's `os-config.json`;
-  - your ring: the files in v1's `artifacts/` folder (or point `"artifactsDir"` at the old folder);
-  - your feeds: `snapshots/stats.json` and `snapshots/calendar.json`, plus `.google-creds.json` and `.google-calendar-token.json` if you set up the calendar;
-  - your routines: v1's `snapshots/routines.json` works as is (both row shapes are read).
-- **The runner.** Your v1 `runner.command` (with `"/{skill}"`) still works for deck cards. Apply all comments needs a template that reads the prompt on standard input or takes `{prompt}` (WIRING.md shows all three shapes).
-- **Email is off by default in v2.** Set `"email": { "enabled": true }` if you had it wired.
-- Your browser keeps v1's layout under the old address. v2 starts with its own layout, so drag widgets back where you like them.
+- **Faire tourner les deux :** mets `"port": 50200` dans le `os-config.json` de la v2 (les étapes d'installation le font quand quelque chose répond sur 50000).
+- **Laisser la v2 reprendre le port 50000 :** arrête la v1, mets `"port": 50000` dans le `os-config.json` de la v2, puis recopie ce que tu veux garder :
+  - tes cartes de skills, tes modèles, tes efforts et tes indices de tri des e-mails, depuis le `os-config.json` de la v1 ;
+  - ton anneau : les fichiers du dossier `artifacts/` de la v1 (ou fais pointer `"artifactsDir"` vers l'ancien dossier) ;
+  - tes flux : `snapshots/stats.json` et `snapshots/calendar.json`, plus `.google-creds.json` et `.google-calendar-token.json` si tu as installé l'agenda ;
+  - tes routines : le `snapshots/routines.json` de la v1 marche tel quel (les deux formes de lignes sont lues).
+- **Le lanceur.** Ton `runner.command` de la v1 (avec `"/{skill}"`) marche toujours pour les cartes du deck. « Appliquer tous les commentaires » a besoin d'un gabarit qui lit le prompt sur l'entrée standard ou qui prend `{prompt}` (WIRING.md montre les trois formes).
+- **Les e-mails sont coupés par défaut dans la v2.** Mets `"email": { "enabled": true }` si tu les avais branchés.
+- Ton navigateur garde la disposition de la v1 sous l'ancienne adresse. La v2 démarre avec sa propre disposition : remets les widgets où tu veux en les faisant glisser.
 
-## Folder map
+## Plan des dossiers
 
 ```
-rubric-agentic-os-v2/
-  server.js            the OS server (node, zero dependencies); starts the engine too
-  os-config.json       ports, skills deck, runner, Micro Apps, email
-  index.html           the shell: homepage + Second Brain
-  os.html              the homepage (one editable file)
-  copy.js, copy.css, shell-extras.js, view-transitions.js   the shell's code
-  widgets.html         the widget library (/widgets)
-  assets/              fonts, the orb, shared scripts
-  brain/               the Second Brain's 3D orbs, 2D map and Timeline (+ their data, built by refresh)
-  views/               the Routines, Skills and Applications tabs
-  engine/              the Second Brain engine: scan.js (the map), server.js (search, file viewer), brain.js (recall and store)
-  refresh/             builds the Second Brain's data; sources/ holds per-agent readers
-  config/              workspace.json, departments.json, apps.json, agents.json (yours to edit)
-  snapshots/           feeds your agent writes: routines.json, usage-log.jsonl, stats.json, calendar.json
-  data/                what the OS writes: page data, app opens, run list, caches
-  artifacts/           every HTML here is a ball on the ring
-  os-runs/             logs of headless runs (made on the first run)
+interface/
+  server.js            le serveur de l'OS (node, zéro dépendance) ; lance aussi le moteur
+  os-config.json       ports, deck de skills, lanceur, micro-apps, e-mails
+  index.html           la coque : page d'accueil + second cerveau
+  os.html              la page d'accueil (un seul fichier modifiable)
+  copy.js, copy.css, shell-extras.js, view-transitions.js   le code de la coque
+  widgets.html         la bibliothèque de widgets (/widgets)
+  assets/              polices, l'orbe, scripts partagés
+  brain/               les orbes 3D, la carte 2D et la frise du second cerveau (+ leurs données, construites par refresh)
+  views/               les onglets Routines, Skills et Applications
+  engine/              le moteur du second cerveau : scan.js (la carte), server.js (recherche, visionneuse de fichiers), brain.js (rappel et classement)
+  refresh/             construit les données du second cerveau ; sources/ contient les lecteurs par agent
+  config/              workspace.json, departments.json, apps.json, agents.json (à toi de les modifier)
+  snapshots/           les flux que ton agent écrit : routines.json, usage-log.jsonl, stats.json, calendar.json
+  data/                ce que l'OS écrit : données des pages, ouvertures d'apps, liste des exécutions, caches
+  artifacts/           chaque HTML ici est une boule de l'anneau
+  os-runs/             journaux des exécutions sans interface (créé à la première exécution)
   tools/               google-calendar.js (OAUTH.md)
-  skills/agenticos/    the /agenticos skill for your agent
+  skills/agenticos/    la skill /agenticos pour ton agent
 ```
 
-## Security model
+## Modèle de sécurité
 
-Every sentence here is true of the shipped code.
+Chaque phrase ici est vraie pour le code livré.
 
-- Both servers (the OS and the Second Brain engine) listen on 127.0.0.1 only, so nothing on your network can reach them.
-- Both refuse any request whose Host header is not `localhost` or `127.0.0.1`, which stops DNS-rebinding pages.
-- No CORS headers, with one narrow exception. `/api/apply-comments` and `/api/run-status` echo the request's Origin back only when it is `http(s)://localhost` or `http(s)://127.0.0.1` on any port (or `null`, if you turned on `"allowNullOrigin"`), so review pages on your other local apps can read the answer. No other route and no other origin ever gets a CORS header, and no preflight is ever granted.
-- Every action (POST) must come from a page on this computer: Origin `localhost` or `127.0.0.1` on any port, or no Origin at all (a non-browser tool). Anything else gets 403, including the Origin `null`, because a page opened as a file sends it and so does a sandboxed frame on any website. Only if you need Apply all comments from pages opened as files, set `"allowNullOrigin": true` in `os-config.json`; RUBRIC Recos and RUBRIC Carousels run on localhost and do not need it.
-- JSON actions (`/api/run`, `/api/open`, `/api/app-open`, `/api/artifact-remove`) also need `Content-Type: application/json`, which another website cannot send without a preflight.
-- Request bodies over 1 MB are refused. There are no WebSockets.
-- Optional shared secret: start the OS with the environment variable `RUBRIC_TOKEN` set, and every `/api/*` and `/local/*` request then needs a matching `x-rubric-token` header. The OS's own pages get it from a meta tag. Pages on your other local apps do not send it, so Apply all comments from them stops working while the token is on.
-- Only the page files are served: `index.html`, `os.html`, the shell scripts, `assets/`, `brain/`, `views/`, `widgets.html` and two page data files. `config/`, `snapshots/`, `engine/`, `refresh/`, `os-runs/`, `os-config.json` and the rest of `data/` are never served. Every file path is resolved and must sit inside its folder.
-- The file viewer reads text files inside your workspace root only, under 500 KB, and never a file whose name looks like a secret (`.env`, keys, tokens, credentials).
-- Names, titles, notes and descriptions from your feeds are escaped before they reach the page. A ball's glyph from its sidecar is filtered to plain shapes.
-- Runs: the skills deck and Apply all comments run the command template you put in `"runner.command"`. It is blank when shipped, so nothing runs until you set it. The prompt goes to the command on standard input from a file in `os-runs/`, or, if your template uses `{prompt}` or `{skill}`, as a short line on the command line that may contain only letters, numbers, spaces and `_ . / \ : , ( ) -` (Apply all comments then passes only a pointer to its prompt file). Model and effort must be on the allowed list and contain only letters, numbers, dots, dashes and colons. If your template skips your agent's permission prompts, runs happen without prompts: that is your choice.
-- `/api/open` opens web links, or files inside your workspace, this OS folder or the artifacts folder. It never opens program files and uses no shell.
-- The pages load nothing from the internet. The OS itself makes no outside calls. The calendar tool calls Google only after you set it up, the email command runs only after you turn it on, and the agent your runner starts does what that agent does.
-- What it reads: your workspace (names, sizes, dates, and markdown files for their links), `config/`, `snapshots/`. If your agent is Claude Code and `"readers.claudeCode"` is not `false`, also its scheduled tasks and its session logs (to count runs, tokens and tool calls; only command names and local port numbers are kept, never full commands or message text).
-- What it writes: `data/` (page data, app opens, the run list, caches), `os-runs/` (run logs and prompt files), `artifacts/` (run reports, and `_trash` when you remove a ball), `snapshots/calendar.json` (the calendar cache). It stores no credentials of its own; the calendar's sign-in token is written by `tools/google-calendar.js` only when you run it.
+- Les deux serveurs (l'OS et le moteur du second cerveau) n'écoutent que sur 127.0.0.1 : rien sur ton réseau ne peut les joindre.
+- Les deux refusent toute requête dont l'en-tête Host n'est pas `localhost` ou `127.0.0.1`, ce qui bloque les pages de DNS rebinding.
+- Pas d'en-têtes CORS, avec une seule exception, très limitée. `/api/apply-comments` et `/api/run-status` renvoient l'Origin de la requête seulement quand c'est `http(s)://localhost` ou `http(s)://127.0.0.1` sur n'importe quel port (ou `null`, si tu as activé `"allowNullOrigin"`), pour que les pages de relecture de tes autres apps locales puissent lire la réponse. Aucune autre route et aucune autre origine ne reçoit jamais d'en-tête CORS, et aucun preflight n'est jamais accordé.
+- Toute action (POST) doit venir d'une page de cet ordinateur : Origin `localhost` ou `127.0.0.1` sur n'importe quel port, ou pas d'Origin du tout (un outil hors navigateur). Tout le reste reçoit une erreur 403, y compris l'Origin `null`, car une page ouverte comme fichier l'envoie, tout comme un cadre isolé (sandbox) sur n'importe quel site. Seulement si tu as besoin d'« Appliquer tous les commentaires » depuis des pages ouvertes comme fichiers, mets `"allowNullOrigin": true` dans `os-config.json` ; les pages servies sur localhost n'en ont pas besoin.
+- Les actions JSON (`/api/run`, `/api/open`, `/api/app-open`, `/api/artifact-remove`) exigent aussi `Content-Type: application/json`, qu'un autre site ne peut pas envoyer sans preflight.
+- Les corps de requête de plus de 1 Mo sont refusés. Il n'y a pas de WebSockets.
+- Secret partagé, en option : lance l'OS avec la variable d'environnement `SM4RT_TOKEN` définie, et chaque requête `/api/*` et `/local/*` exige alors un en-tête `x-sm4rt-token` qui correspond. Les pages de l'OS le reçoivent par une balise meta. Les pages de tes autres apps locales ne l'envoient pas : « Appliquer tous les commentaires » ne marche donc plus depuis elles tant que le token est actif.
+- Seuls les fichiers des pages sont servis : `index.html`, `os.html`, les scripts de la coque, `assets/`, `brain/`, `views/`, `widgets.html` et deux fichiers de données des pages. `config/`, `snapshots/`, `engine/`, `refresh/`, `os-runs/`, `os-config.json` et le reste de `data/` ne sont jamais servis. Chaque chemin de fichier est résolu et doit rester dans son dossier.
+- La visionneuse de fichiers ne lit que des fichiers texte situés dans la racine de ton workspace, de moins de 500 Ko, et jamais un fichier dont le nom ressemble à un secret (`.env`, clés, tokens, identifiants).
+- Les noms, titres, notes et descriptions de tes flux sont échappés avant d'arriver sur la page. Le glyphe d'une boule, tiré de son fichier compagnon, est filtré pour ne garder que des formes simples.
+- Exécutions : le deck de skills et « Appliquer tous les commentaires » lancent le gabarit de commande que tu mets dans `"runner.command"`. Il est vide à la livraison : rien ne s'exécute tant que tu ne l'as pas rempli. Le prompt est passé à la commande sur l'entrée standard, depuis un fichier de `os-runs/`, ou, si ton gabarit utilise `{prompt}` ou `{skill}`, sous forme d'une courte ligne sur la ligne de commande, qui ne peut contenir que des lettres, des chiffres, des espaces et `_ . / \ : , ( ) -` (« Appliquer tous les commentaires » ne passe alors qu'un pointeur vers son fichier de prompt). Le modèle et l'effort doivent figurer dans la liste autorisée et ne contenir que des lettres, des chiffres, des points, des tirets et des deux-points. Si ton gabarit saute les demandes de permission de ton agent, les exécutions se font sans demande : c'est ton choix.
+- `/api/open` ouvre des liens web, ou des fichiers situés dans ton workspace, dans ce dossier de l'OS ou dans le dossier des livrables. Il n'ouvre jamais de fichiers de programme et n'utilise aucun shell.
+- Les pages ne chargent rien depuis Internet. L'OS lui-même ne fait aucun appel extérieur. L'outil d'agenda n'appelle Google qu'une fois que tu l'as installé, la commande d'e-mails ne s'exécute qu'une fois que tu l'as activée, et l'agent que ton lanceur démarre fait ce que fait cet agent.
+- Ce qu'il lit : ton workspace (noms, tailles, dates, et les fichiers markdown pour leurs liens), `config/`, `snapshots/`. Si ton agent est Claude Code et que `"readers.claudeCode"` n'est pas `false`, il lit aussi ses tâches planifiées et ses journaux de session (pour compter les exécutions, les tokens et les appels d'outils ; seuls les noms de commandes et les numéros de ports locaux sont gardés, jamais les commandes complètes ni le texte des messages).
+- Ce qu'il écrit : `data/` (données des pages, ouvertures d'apps, liste des exécutions, caches), `os-runs/` (journaux d'exécution et fichiers de prompt), `artifacts/` (rapports d'exécution, et `_trash` quand tu retires une boule), `snapshots/calendar.json` (le cache de l'agenda). Il ne stocke aucun identifiant à lui ; le token de connexion de l'agenda n'est écrit par `tools/google-calendar.js` que quand tu le lances.
 
-## Credit
+## Crédits
 
-Made by Jay E | RoboNuggets, the community where this OS was built live. MIT license: use it, change it, ship your own version, and keep the copyright line.
+Fait par Jay E | RoboNuggets, la communauté où cet OS a été construit en direct. Licence MIT : utilise-le, modifie-le, publie ta propre version, et garde la ligne de copyright.

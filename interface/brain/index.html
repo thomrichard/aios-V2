@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <script src="../assets/token.js"></script><script src="../assets/ambient.js"></script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>RUBRIC Second Brain</title>
+<title>SM4RT Second cerveau</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2305060d'/%3E%3Ccircle cx='16' cy='16' r='4.2' fill='%23ff6b1a'/%3E%3Ccircle cx='7' cy='9' r='1.9' fill='%232196f3'/%3E%3Ccircle cx='25' cy='11' r='1.9' fill='%23b47aff'/%3E%3Ccircle cx='23' cy='24' r='1.9' fill='%2356d97a'/%3E%3Ccircle cx='9' cy='24' r='1.9' fill='%23e040fb'/%3E%3C/svg%3E">
 
 
@@ -95,14 +95,14 @@ body.lg-open #brain-legend{display:block!important}
       fileLabels: true,
     },
     variantSeg: {
-      key: 'shapes', label: 'Node shapes',
-      options: [{ v: 'celestial', label: 'Celestial' }, { v: 'crystal', label: 'Crystal' }, { v: 'biolume', label: 'Biolume' }],
+      key: 'shapes', label: 'Formes des nœuds',
+      options: [{ v: 'celestial', label: 'Céleste' }, { v: 'crystal', label: 'Cristal' }, { v: 'biolume', label: 'Biolume' }],
     },
     sliders: [
-      { k: 'fog', label: 'Nebula fog' },
-      { k: 'flow', label: 'Comet flow' },
-      { k: 'glow', label: 'Node glow' },
-      { k: 'twinkle', label: 'Star twinkle' },
+      { k: 'fog', label: 'Brume de nébuleuse' },
+      { k: 'flow', label: 'Flux de comètes' },
+      { k: 'glow', label: 'Halo des nœuds' },
+      { k: 'twinkle', label: 'Scintillement' },
     ],
     themes: {
       dark: {
@@ -131,7 +131,7 @@ body.lg-open #brain-legend{display:block!important}
 
     // ---------- backdrop: seeded starfield / daylight observatory ----------
     drawBackdrop(g, W, H, S) {
-      // option 1's hexFade backdrop VERBATIM (Rubric Flows): distance fade +
+      // option 1's hexFade backdrop VERBATIM (Flows): distance fade +
       // radial vignette - hexes glow near centre, melt away at the edges
       g.fillStyle = '#0a0a0a'; g.fillRect(0, 0, W, H);
       const hexSize = 20, hS = hexSize * Math.sqrt(3), vS = hexSize * 1.5, cx0 = W / 2, cy0 = H / 2;
@@ -537,18 +537,18 @@ body.lg-open #brain-legend{display:block!important}
 // ring spin (drives the rings)
 addEventListener('DOMContentLoaded', () => {
   const fabM = document.createElement('button'); fabM.id = 'fab-menu'; fabM.className = 'fab'; fabM.textContent = '\u2630 MENU';
-  const fabL = document.createElement('button'); fabL.id = 'fab-legend'; fabL.className = 'fab'; fabL.textContent = '\u25C6 LEGEND';
+  const fabL = document.createElement('button'); fabL.id = 'fab-legend'; fabL.className = 'fab'; fabL.textContent = '\u25C6 LÉGENDE';
   document.body.append(fabM, fabL);
   fabM.onclick = () => document.body.classList.toggle('menu-open');
   fabL.onclick = () => document.body.classList.toggle('lg-open');
   /* a way back to the OS beside MENU (off: the shell has its own Back button) */
   if (false) {
     const fabB = document.createElement('button');
-    fabB.id = 'fab-back'; fabB.className = 'fab'; fabB.textContent = '← BACK TO THE OS';
+    fabB.id = 'fab-back'; fabB.className = 'fab'; fabB.textContent = '← RETOUR À L’OS';
     document.body.append(fabB);
-    fabB.onclick = () => parent.postMessage({ type: 'rubric-os:back' }, '*');
+    fabB.onclick = () => parent.postMessage({ type: 'sm4rt-os:back' }, '*');
     addEventListener('keydown', e => {
-      if (e.key === 'Escape') parent.postMessage({ type: 'rubric-os:back' }, '*');
+      if (e.key === 'Escape') parent.postMessage({ type: 'sm4rt-os:back' }, '*');
     });
   }
   const iv = setInterval(() => {
@@ -556,14 +556,14 @@ addEventListener('DOMContentLoaded', () => {
     const anchor = document.querySelector('#brain-panel [data-sec="view"]');
     if (!S3 || !anchor || document.getElementById('spin3')) return;
     const w = document.createElement('div');
-    w.innerHTML = '<div class="p-sub">Ring spin</div><div class="sl"><input type="range" min="0" max="100" id="spin3"></div>';
+    w.innerHTML = '<div class="p-sub">Rotation des anneaux</div><div class="sl"><input type="range" min="0" max="100" id="spin3"></div>';
     anchor.after(w);
     const sl = w.querySelector('#spin3');
     sl.value = Math.round((S3.st.spin ?? 0.22) * 100);
     sl.oninput = () => { S3.st.spin = sl.value / 100; save3(); };
     const fl = document.createElement('label');
     fl.className = 'chk';
-    fl.innerHTML = '<input type="checkbox" id="chk-filelabels"' + (S3.st.fileLabels === false ? '' : ' checked') + '> File names';
+    fl.innerHTML = '<input type="checkbox" id="chk-filelabels"' + (S3.st.fileLabels === false ? '' : ' checked') + '> Noms des fichiers';
     w.appendChild(fl);
     fl.querySelector('input').onchange = e => { S3.st.fileLabels = e.target.checked; save3(); };
     // ---- GRAVITY mixing desk (circle + hex) ----
@@ -579,8 +579,8 @@ addEventListener('DOMContentLoaded', () => {
     }
     if (S3.st.layout === 'deck') { const b0 = document.querySelectorAll('#seg-layout button')[3]; if (b0) b0.click(); } // Deck retired
     const GRAV = [
-      ['g_link', 'Link springs'],
-      ['boundSize', 'Circle / Hex size'],
+      ['g_link', 'Ressorts des liens'],
+      ['boundSize', 'Taille cercle / hexa'],
     ];
     const gw = document.createElement('div');
     let gh = '';

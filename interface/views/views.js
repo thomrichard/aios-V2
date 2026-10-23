@@ -3,10 +3,10 @@
   // The Second Brain's Routines, Skills and Applications tabs. Routines is an SVG week board
   // (calendar-board.js); Skills and Applications are HTML boards of their own (usage-board.js).
   const D = window.COPY_DATA;
-  if (!D) { document.getElementById('app').innerHTML = '<p id="missing">No routine data yet. Press the refresh icon at the top right.</p>'; return; }
+  if (!D) { document.getElementById('app').innerHTML = '<p id="missing">Pas encore de données de routines. Clique sur l’icône Actualiser en haut à droite.</p>'; return; }
   const $ = id => document.getElementById(id), svg = d3.select('#view'), world = d3.select('#world');
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const weekdays = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+  const weekdays = ['Lun','Mar','Mer','Jeu','Ven','Sam','Dim'];
   const VIEWS = ['calendar','skills','apps'];
   let view = VIEWS.includes(location.hash.slice(1)) ? location.hash.slice(1) : 'calendar';
   let W = 1300, H = 700, layoutWidth = W, layoutHeight = H, zoomTransform = d3.zoomIdentity, initialTransform = d3.zoomIdentity;
@@ -23,7 +23,7 @@
   function tip(e,html){$('hover').innerHTML=html;$('hover').hidden=false;moveOverlay($('hover'),e);}
   function moveOverlay(el,e){const x=e.clientX??innerWidth/2,y=e.clientY??innerHeight/2;el.style.left=Math.max(8,Math.min(x+15,innerWidth-el.offsetWidth-12))+'px';el.style.top=Math.max(8,Math.min(y+14,innerHeight-el.offsetHeight-12))+'px';}
   function hideHover(){$('hover').hidden=true;}
-  function pop(e,title,body){hideHover();$('popover').innerHTML=`<header><h3>${esc(title)}</h3><button aria-label="Close details">×</button></header>${body}`;$('popover').hidden=false;moveOverlay($('popover'),e);$('popover').querySelector('header button').onclick=()=>{$('popover').hidden=true;};}
+  function pop(e,title,body){hideHover();$('popover').innerHTML=`<header><h3>${esc(title)}</h3><button aria-label="Fermer les détails">×</button></header>${body}`;$('popover').hidden=false;moveOverlay($('popover'),e);$('popover').querySelector('header button').onclick=()=>{$('popover').hidden=true;};}
   function hidePop(){$('popover').hidden=true;}
   document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(!$('popover').hidden){hidePop();hideHover();}else parent.postMessage({type:'views-copy-back'},'*');}});
   document.addEventListener('pointerdown',e=>{if(!e.target.closest('#popover,.clickable,#unplaced'))hidePop();});
@@ -49,7 +49,7 @@
     const rect=$('stage').getBoundingClientRect();W=Math.max(1180,rect.width);H=Math.max(530,rect.height);svg.attr('viewBox',`0 0 ${rect.width} ${rect.height}`);
     const layout=calendarLayout();layoutWidth=layout.width;layoutHeight=layout.height;
     const size=$('stage').getBoundingClientRect(),scale=size.width/layoutWidth;svg.attr('viewBox',`0 0 ${size.width} ${size.height}`);initialTransform=d3.zoomIdentity.translate((size.width-layoutWidth*scale)/2,CAL_HEADER).scale(scale);resetZoom();
-    $('view').setAttribute('aria-label','Weekly routine calendar');
+    $('view').setAttribute('aria-label','Calendrier de la semaine des routines');
     parent.postMessage({type:'views-copy-state',view},'*');
   }
   function capturePoints(){

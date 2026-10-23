@@ -6,7 +6,7 @@
    - While the Second Brain covers the page, every animation frame waits in a queue. */
 (() => {
   const live = location.protocol === 'http:';
-  const prefix = 'rubric-os-v2:';
+  const prefix = 'sm4rt-os-v2:';
   const safe = fn => { try { return fn(); } catch (_) { return null; } };
   window.copyStorage = {
     getItem: k => safe(() => localStorage.getItem(prefix + k)),
@@ -40,7 +40,7 @@
     }
     if (!live && method !== 'GET' && method !== 'HEAD') {
       parent.postMessage({ type: 'os-copy-preview-action' }, '*');
-      return new Response(JSON.stringify({ ok: false, error: 'Actions work when the OS runs (node server.js).' }), { status: 403, headers: { 'Content-Type': 'application/json' } });
+      return new Response(JSON.stringify({ ok: false, error: 'Les actions marchent quand l’OS tourne (node server.js).' }), { status: 403, headers: { 'Content-Type': 'application/json' } });
     }
     if (live) return realFetch(input, options);
     const data = window.OS_COPY_SNAPSHOT && window.OS_COPY_SNAPSHOT[path];
