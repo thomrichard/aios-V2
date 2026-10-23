@@ -117,3 +117,27 @@ Les choix qui ont façonné le socle, et leur pourquoi. Une entrée par décisio
 - **Décision.** Le socle tutoie l'utilisateur par défaut (`AGENTS.md`, section Qui), et la question 4 de l'installation propose de choisir « tu ou vous ».
 - **Pourquoi.** Dans l'essai réel de `close`, l'agent vouvoyait Thomas, parce que le socle ne disait rien : le ton changeait d'une session à l'autre. Thomas préfère le tutoiement, qui est aussi la norme dans tout le Club SMART, le public principal du kit.
 - **Écarté.** Laisser la question ouverte : l'agent choisit au hasard, et ça varie. Vouvoyer par défaut : en décalage avec le Club. Le choix reste possible à l'installation.
+
+## 2026-10-23 · search-connectors : brancher un outil par la voie la plus légère
+
+- **Décision.** Une skill `search-connectors`, réécrite d'après Jay E | RoboNuggets (son fichier n'est pas public). Pour brancher une application, l'agent part du besoin et de ce qui est déjà branché, cherche dans l'ordre de `systeme/connexions.md` (outil officiel, CLI, API, MCP de la communauté), compare dans un tableau (couverture, entretien, risques) et recommande la voie la plus légère. Il n'installe qu'avec un oui, les clés dans `.env`, puis il teste par une vraie lecture et inscrit la connexion.
+- **Pourquoi.** Une connexion se choisit sur des sources lues, pas de mémoire, et se tient à un seul endroit. Brancher, c'est toucher un système externe : il faut l'accord.
+- **Écarté.** Brancher le premier MCP trouvé ; installer sans accord ; demander une clé dans le chat.
+
+## 2026-10-23 · reprendre, l'autre moitié de close
+
+- **Décision.** Une skill `reprendre`, réécrite d'après la skill `onboard` de Jay E | RoboNuggets, renommée par Thomas. Elle remet une session à niveau sur un projet ou un sujet : où on en est, ce qui est décidé, ce qui reste ouvert, la prochaine action. Elle n'écrit rien. `close` écrit le point de reprise ; `reprendre` le relit.
+- **Pourquoi.** Une nouvelle session, ou une session lancée en parallèle, se met à niveau sans tout réexpliquer. Le projet (`projets/<slug>.md`) sert de dossier partagé entre les sessions.
+- **Écarté.** Reprendre `coordinate` et `onboard` de Jay : `close` et `reprendre` les remplacent, puisque le fichier du projet fait déjà le lien entre les sessions.
+
+## 2026-10-23 · burst : plusieurs variantes pour choisir
+
+- **Décision.** Une skill `burst`, réécrite d'après Jay E | RoboNuggets : N variantes vraiment différentes d'un livrable (3 par défaut, 5 au plus), chacune sur un axe annoncé, pour choisir et repartir de la plus proche.
+- **Pourquoi.** On arrive plus vite à la cible en choisissant parmi plusieurs options qu'en corrigeant une seule version.
+- **Écarté.** Des quasi-doublons ; corriger une seule version de proche en proche.
+
+## 2026-10-23 · humanizer : que le texte sonne comme son auteur
+
+- **Décision.** Une skill `humanizer`, réécrite d'après Jay E | RoboNuggets, pour le français : elle retire les tics d'écriture « IA » (`references/motifs.md`, une quarantaine de motifs) en gardant la voix de l'auteur, avec des modes script, newsletter, post et page.
+- **Pourquoi.** Le but n'est pas de tromper un détecteur : c'est que le texte sonne comme son auteur, et qu'il dise les choses plus clairement.
+- **Écarté.** Viser un détecteur d'IA ; inventer des faits ou des anecdotes pour « faire humain ».
