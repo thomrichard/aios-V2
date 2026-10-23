@@ -24,3 +24,9 @@ Ajout seul. Format : `- AAAA-MM-JJ · <action> | <sujet>`
 - 2026-10-23 · ajout | skills search-connectors, reprendre, burst et humanizer (d'après Jay E | RoboNuggets)
 - 2026-10-23 · ajout | skill surprise-me (d'après Jay E | RoboNuggets)
 - 2026-10-23 · skool | récupération des 16 classrooms (122 leçons) dans domaines/communaute/, lecture seule
+- 2026-10-23 · module | « Économiser tes tokens » : 22 leçons avec schémas Excalidraw, tirées de la vidéo ARMS de Jay E, pour la classroom Agentic AI
+- 2026-10-23 · fiche | idée de vidéo « Optimiser ses tokens » dans domaines/contenu/
+- 2026-10-23 · close | session vidéo de Jay → module Agentic AI et classrooms Skool dans l'AIOS
+- 2026-10-23 · ajout | dépôt privé thomrichard/aios-thomas : main y est poussé, le socle public reste la source des mises à jour
+- 2026-10-23 · socle | récupère la PR n° 5 (youtube.py écrit cree)
+- 2026-10-23 · close | session Skool : connexion, skool-ops avec la voix et les types de posts, dépôt privé aios-thomas

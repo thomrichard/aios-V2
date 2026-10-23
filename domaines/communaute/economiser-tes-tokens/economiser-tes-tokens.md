@@ -12,7 +12,7 @@ liens: []
 
 Un module de 22 leçons pour le Club SMART, en 7 chapitres. Destination : la classroom « Agentic AI », en premier module. Envoyé sur Skool le 2026-10-23 : classroom https://www.skool.com/club-smart/classroom/17480787 (en brouillon, sans couverture), dossier « Économiser tes tokens », 22 leçons avec leur schéma en premier bloc. L'adresse de chaque leçon est dans l'en-tête de sa fiche.
 
-Chaque leçon a sa fiche : un schéma (le PNG), une explication, trois étapes à mettre en place, une phrase à retenir. Le corps de la fiche est le texte de la leçon Skool. Le fichier `.excalidraw` du même nom est la source modifiable du schéma (excalidraw.com, menu Ouvrir). Les schémas sont en charte vert pin, rôle éditorial.
+Chaque leçon a sa fiche : un schéma (le PNG), une explication, trois étapes à mettre en place, une phrase à retenir. Le corps de la fiche est le texte de la leçon Skool. Le fichier `.excalidraw` du même nom est la source modifiable du schéma (excalidraw.com, menu Ouvrir). Les schémas sont en charte vert pin, rôle éditorial. Ils sortent du générateur `generateur/` : `lecons.py` (le contenu de chaque schéma) et `moteur.py` écrivent les `.excalidraw`, puis `exporter.py` fait les PNG avec le canevas Excalidraw local allumé (`.claude/launch.json`, entrée `excalidraw-canvas`). `couverture.py` fait la couverture de la classroom Agentic AI.
 
 
 ## Comprendre

@@ -4,6 +4,7 @@
 
 | Fichier | Résumé | Statut | Projet | Maj |
 |---|---|---|---|---|
+| [optimiser-ses-tokens-26-10.md](optimiser-ses-tokens-26-10.md) | Idée de vidéo sur l'optimisation des tokens et les mods de Claude Code, tirée de la vidéo ARMS de Jay E | sujet |  | 2026-10-23 |
 | [youtube-skool-ia-mon-modele-pour-gagner-ma-liberte-26-01.md](youtube-skool-ia-mon-modele-pour-gagner-ma-liberte-26-01.md) | Mon objectif pour 2026 : devenir YouTubeur à mi-temps et construire un revenu indépendant sans quitter mon CDI. | publie |  | 2026-10-22 |
 | [watermark-claude-ce-que-ca-change-vraiment-pour-toi-26-09.md](watermark-claude-ce-que-ca-change-vraiment-pour-toi-26-09.md) | Depuis le 2 août, tout ce que Claude écrit porte une marque invisible. J'ai lu la loi que tout le monde commente sans l'ouvrir. | publie |  | 2026-10-22 |
 | [vendre-plus-cher-sans-changer-de-produit-la-methode-26-01.md](vendre-plus-cher-sans-changer-de-produit-la-methode-26-01.md) | La valeur perçue est la clé. Voici l'équation d'Alex Hormozi pour augmenter vos prix sans changer votre produit | publie |  | 2026-10-22 |

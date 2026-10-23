@@ -28,4 +28,8 @@
 | [02-le-context-rot.md](02-le-context-rot.md) | Leçon 2 du module Économiser tes tokens, Pourquoi Claude oublie quand la discussion dure ? | a-valider |  | 2026-10-23 |
 | [01-pourquoi-chaque-message-coute-plus-cher.md](01-pourquoi-chaque-message-coute-plus-cher.md) | Leçon 1 du module Économiser tes tokens, Pourquoi chaque message coûte plus cher ? | a-valider |  | 2026-10-23 |
 
+## Dossiers
+
+- [generateur/](generateur/_index.md)
+
 Images : [_images.md](_images.md)
