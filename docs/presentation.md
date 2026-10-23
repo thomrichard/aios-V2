@@ -160,6 +160,32 @@ L'agent récupère le socle, dépose le profil dans l'inbox et lance l'installat
 
 Le socle marche déjà sans rien régler : il fournit le domaine `operations` (pilotage, admin, l'AIOS lui-même) et des types de base (projet, livrable, compte rendu, concept, source…). Le catalogue ajoute ce qui te ressemble. Chacun repart avec son AIOS.
 
+## Avant d'agir : grill-me, align, devil
+
+Trois skills servent à bien démarrer. Chacune a son usage, et une seule.
+
+| Skill | Quand | Comment | Combien de temps | Trace écrite |
+|---|---|---|---|---|
+| `grill-me` | explorer une idée, décider, préparer un gros projet | une question à la fois, avec une réponse proposée | 15 à 45 minutes | oui, une fiche d'entretien |
+| `align` | juste avant une tâche floue ou coûteuse | quelques questions à choix, toutes d'un coup | 30 secondes | non |
+| `devil` | avant de s'engager sur un choix ou un livrable | des objections sérieuses, puis un verdict | quelques minutes | non |
+
+### align : viser juste du premier coup
+
+Un brief flou fait tâtonner l'agent. Avec `align`, il pose d'abord quelques questions numérotées, chacune avec deux à quatre réponses (a, b, c), sa recommandation en premier. Trois questions par défaut, le nombre demandé sinon, cinq au plus. Il ne demande jamais ce qu'il peut lire dans le workspace.
+
+*Exemple : « écris un post LinkedIn sur l'atelier ». L'agent demande : 1. Pour qui ? 2. Quel but ? 3. Quelle longueur ? Tu réponds en une ligne, « 1a, 2c, 3b », il redit la cible en une phrase, puis il écrit.*
+
+S'il faut plus de cinq questions, ou s'il s'agit de décider plutôt que d'exécuter, `align` renvoie à `grill-me`.
+
+### devil : l'avocat du diable
+
+Un modèle a tendance à dire oui. `devil` cherche sérieusement ce qui cloche : trois objections par défaut, de la plus grave à la moins grave. Chacune dit ce qui la fonde et ce qui la lèverait. L'agent vérifie dans le workspace au lieu de supposer, puis donne son verdict : on y va, on y va après avoir levé telle objection, ou on revoit le choix. S'il y a moins d'objections sérieuses que demandé, il le dit au lieu d'en inventer.
+
+*Exemple, un essai réel : brancher un MCP communautaire pour Airtable, tenu par un seul mainteneur. `devil` a donné trois objections fondées sur `systeme/connexions.md` (l'ordre de préférence des connexions) et sur la règle des clés, puis un verdict.*
+
+`align` et `devil` sont réécrites d'après ce que Jay E | RoboNuggets montre de ses skills en vidéo : ses fichiers ne sont pas publics.
+
 ## Ce qui tourne tout seul
 
 ### Les routines
