@@ -180,6 +180,7 @@ flowchart LR
 | `reprendre` | en ouvrant une session sur un sujet déjà commencé | redonne le point : où on en est, décidé, ouvert, prochaine action | non, elle lit |
 | `align` | juste avant une tâche floue ou coûteuse | quelques questions à choix, toutes d'un coup | non |
 | `burst` | quand on veut choisir plutôt que corriger | plusieurs variantes vraiment différentes d'un livrable | la version retenue |
+| `surprise-me` | quand une création visuelle sort « propre mais banale » | une autre direction, poussée loin, relue sur capture avant d'être montrée | la version retenue |
 | `devil` | avant de s'engager sur un choix ou un livrable | des objections sérieuses, puis un verdict | non |
 | `humanizer` | avant de publier un texte écrit avec l'IA | retire les tics d'écriture « IA », garde la voix de l'auteur | le texte, si tu le demandes |
 | `close` | en fin de session | range tout ce qui compte, écrit le point de reprise | oui |
@@ -203,6 +204,14 @@ S'il faut plus de cinq questions, ou s'il s'agit de décider plutôt que d'exéc
 
 Corriger une seule version, c'est lent. Avec `burst`, l'agent produit d'un coup plusieurs variantes complètes (trois par défaut, cinq au plus), chacune sur un axe annoncé : l'angle, le ton, la structure, la longueur, le style. Tu choisis : « B », « A avec la fin de C », ou « burst sur B » pour varier encore à partir d'elle. Pas de quasi-doublons : deux variantes trop proches, et l'une est remplacée. Un visuel ou une page s'affiche côte à côte, dans une seule page.
 
+### surprise-me : sortir du « propre mais banal »
+
+Le premier jet d'un modèle est le plus probable : propre, et déjà vu partout. Pour une création visuelle (une page, une slide, un visuel), `surprise-me` en sort. L'agent écrit en une ligne ce qu'il aurait fait par défaut, puis annonce une tout autre direction. Il impose au moins trois techniques avancées (une animation au défilement, une typographie très contrastée, une mise en page asymétrique…). Puis il se relit : il capture le rendu sur ordinateur et sur mobile, le critique, le corrige, et recommence, deux à quatre fois, avant de te montrer quoi que ce soit. Ta charte reste : tes couleurs et tes polices ne bougent pas, c'est la forme qui ose. Sans moyen de capture, il critique à partir du code, et il dit clairement qu'il n'a pas vu le rendu.
+
+*Un essai réel : une page d'annonce pour l'atelier « Construis ton AIOS ». Sans autorisation de capture, l'agent l'a dit franchement plutôt que de faire semblant. Avec l'autorisation, la boucle a trouvé un défaut grave, invisible à la lecture du code : tout le bas de la page restait masqué. Elle l'a réparé, puis elle a corrigé la taille du titre et la mise en page sur mobile. Montrer seulement ce qu'on a vu change le résultat.*
+
+`burst` et `surprise-me` se complètent : `burst` donne plusieurs directions à comparer ; `surprise-me` pousse une seule direction beaucoup plus loin, en se relisant.
+
 ### devil : l'avocat du diable
 
 Un modèle a tendance à dire oui. `devil` cherche sérieusement ce qui cloche : trois objections par défaut, de la plus grave à la moins grave. Chacune dit ce qui la fonde et ce qui la lèverait. L'agent vérifie dans le workspace au lieu de supposer, puis donne son verdict : on y va, on y va après avoir levé telle objection, ou on revoit le choix. S'il y a moins d'objections sérieuses que demandé, il le dit au lieu d'en inventer.
@@ -225,7 +234,7 @@ Le but n'est pas de tromper un détecteur : c'est que le texte sonne comme toi, 
 | `align` | viser juste avant d'exécuter | quelques questions à choix, toutes d'un coup | 30 secondes | non |
 | `devil` | contredire avant de s'engager | des objections sérieuses, puis un verdict | quelques minutes | non |
 
-`reprendre`, `align`, `burst`, `devil` et `humanizer` sont réécrites d'après ce que Jay E | RoboNuggets montre de ses skills en vidéo : ses fichiers ne sont pas publics. `reprendre` s'appelle `onboard` chez lui.
+`reprendre`, `align`, `burst`, `surprise-me`, `devil` et `humanizer` sont réécrites d'après ce que Jay E | RoboNuggets montre de ses skills en vidéo : ses fichiers ne sont pas publics. `reprendre` s'appelle `onboard` chez lui.
 
 ## La fin de session : close, puis calibrate
 
