@@ -9,5 +9,7 @@ Pour brancher un outil, cherche dans cet ordre et garde le plus léger qui march
 
 Chaque connexion est testée par une vraie lecture avant d'être inscrite ici. Les clés vont dans `.env`, jamais dans Git ni dans le chat. Un connecteur qui ne sert pas chaque semaine est retiré.
 
-| Outil | Méthode | Pourquoi | Agents | Testé le |
-|---|---|---|---|---|
+Méthode : `outil officiel`, `CLI`, `API` ou `MCP`. Commande : le mot tapé pour une CLI (`yt-dlp`), le nom du serveur pour un MCP ; l'interface s'en sert pour compter les appels. Ce tableau est recopié dans l'interface (`interface/config/apps.json`) par `systeme/scripts/index.py` : on ne l'écrit qu'ici.
+
+| Outil | Méthode | Pourquoi | Agents | Testé le | Commande |
+|---|---|---|---|---|---|
