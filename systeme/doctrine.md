@@ -6,6 +6,7 @@
 |---|---|---|
 | Règles, carte des domaines, projets actifs | `AGENTS.md` | — |
 | Fichier texte | son en-tête | `_index.md` du dossier (généré) |
+| Champs, types et statuts d'un en-tête | `systeme/metadonnees.md` | — |
 | Image | sa ligne dans `_images.md` du dossier | — |
 | Projet | `projets/<slug>.md` | `projets/_index.md` (généré) |
 | Souvenir | `memory/<type>_<sujet>.md` | `memory/MEMORY.md` |
@@ -36,9 +37,9 @@
 
 ## En-tête
 
-Gabarit : `systeme/gabarits/fiche.md`. Champs : `type`, `resume` (une ligne, reprise dans l'index), `statut`, `domaine`, `projet` (facultatif), `maj`, `liens`.
+Gabarit : `systeme/gabarits/fiche.md`. Les champs, les types et leurs statuts ne s'écrivent que dans `systeme/metadonnees.md` ; les domaines, que dans la carte d'`AGENTS.md`. `systeme/scripts/verifier.py` signale un en-tête qui s'en écarte.
 
-Statuts communs : `idee`, `en-cours`, `a-valider`, `publie`, `clos`. Un domaine peut préciser les siens dans son routeur.
+Le socle fournit une base qui marche sans rien changer. Les types d'un workspace (vidéo, proposition…) vont dans la section « Ce workspace » de `systeme/metadonnees.md` : la skill `installation` les propose depuis son catalogue.
 
 ## Nommage
 

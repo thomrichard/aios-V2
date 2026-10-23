@@ -3,6 +3,7 @@ type: okr
 resume: Objectifs et résultats clés du trimestre
 statut: en-cours
 domaine: operations
+cree: 2026-10-22
 maj: 2026-10-22
 ---
 # OKR du trimestre

@@ -3,6 +3,7 @@ type: tableau
 resume: Vue d'ensemble des revenus, une ligne par source
 statut: en-cours
 domaine: operations
+cree: 2026-10-22
 maj: 2026-10-22
 ---
 # Revenus

@@ -4,6 +4,7 @@ resume: Vider l'inbox, ranger l'outbox et écrire le point du jour
 domaine: operations
 declencheur: routine, chaque nuit à 2 h
 statut: a-construire
+cree: 2026-10-22
 maj: 2026-10-22
 ---
 # Rangement de nuit

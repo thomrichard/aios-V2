@@ -1,6 +1,7 @@
 ---
 type: profil
 resume: Profil pour installer l'AIOS
+cree: AAAA-MM-JJ
 maj: AAAA-MM-JJ
 ---
 # Profil de <prénom nom>
@@ -30,8 +31,8 @@ Rempli avec `grill-me` et la liste `skills/installation/references/questions.md`
 
 ### Q7 · Mes domaines d'activité
 
-| Domaine | Ce qu'il couvre |
-|---|---|
+| Domaine | Ce qu'il couvre | Ce que j'y produis |
+|---|---|---|
 
 ### Q8 · Mes revenus
 

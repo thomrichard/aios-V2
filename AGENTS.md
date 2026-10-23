@@ -33,7 +33,7 @@ Filtre : chaque proposition doit rapprocher d'une de ces cibles. Sinon, dis-le e
 |---|---|---|
 | operations | Pilotage (OKR, revue hebdo, revenus), admin et finances, et l'AIOS comme outil de travail (connecteurs, routines, skills) | `routers/operations.md` |
 
-Les autres domaines sont ajoutés par la skill `installation`. Chaque source de revenu reste dans le domaine qui la produit. La vue d'ensemble tient dans un seul tableau : `domaines/operations/revenus.md`.
+Les autres domaines sont ajoutés par la skill `installation`. Ce tableau est la seule liste des domaines. Chaque source de revenu reste dans le domaine qui la produit. La vue d'ensemble tient dans un seul tableau : `domaines/operations/revenus.md`.
 
 ## Projets actifs
 
@@ -52,6 +52,7 @@ Aucun pour l'instant. Format : `- [<slug>](projets/<slug>.md) · <domaine> · <p
 | Une préférence, une correction déjà donnée | `memory/MEMORY.md` |
 | Un concept, une source | `savoir/_index.md` |
 | Qui fait foi, où va quoi | `systeme/doctrine.md` |
+| Les champs d'un en-tête, les types et leurs statuts | `systeme/metadonnees.md` |
 | Une décision passée | `journal/decisions.md` |
 
 Ordre de recherche : d'abord la carte (ce fichier), puis le routeur ou l'index. Si ça ne suffit pas, une recherche texte dans le dossier le plus proche, puis dans tout le workspace. Si tu as dû chercher partout, propose d'ajouter la route qui manquait.
@@ -72,14 +73,14 @@ Avant de dire « c'est fait », vérifie : relance le test ou relis le fichier. 
 1. Deux sauts au plus : ce fichier, puis un routeur ou un index, puis le fichier.
 2. Un objet, un fichier, un endroit. Tout est rangé par domaine, livrables compris. On lie, on ne copie jamais.
 3. Le statut est un champ de l'en-tête, pas un dossier. Un objet garde son chemin toute sa vie.
-4. Chaque fichier texte a un en-tête (gabarit : `systeme/gabarits/fiche.md`).
+4. Chaque fichier texte a un en-tête (gabarit : `systeme/gabarits/fiche.md`). Ses champs, son type et son statut sont pris dans `systeme/metadonnees.md` : lis-le avant d'écrire un en-tête.
 5. Chaque dossier qui contient des images a son `_images.md` : une ligne par image (fichier, ce qu'elle montre, origine, usage). Écris la ligne dès que l'image arrive.
 6. Les `_index.md` sont générés par `systeme/scripts/index.py`. Ne les écris jamais à la main ; relance le script après avoir écrit un fichier.
 7. Quand un fichier bouge ou qu'un projet démarre, mets à jour le routeur concerné, et la liste des projets actifs ci-dessus, dans le même tour.
 8. Nommage : minuscules, tirets, sans espaces ni accents. Daté : `AAAA-MM-JJ-<slug>.md`. Durable : `<slug>.md`. Un objet qui a plusieurs fichiers a son dossier.
 9. Ne supprime rien : déplace dans `archives/`.
 10. Pas de vidéo ni de son dans le dépôt : l'index pointe vers les fichiers lourds.
-11. Les skills système, `systeme/scripts/` et `systeme/doctrine.md` restent neutres, sans rien de personnel : ils forment le socle du kit.
+11. Les skills système, `systeme/scripts/`, `systeme/doctrine.md` et la base de `systeme/metadonnees.md` restent neutres, sans rien de personnel : ils forment le socle du kit.
 
 ## S'améliorer
 

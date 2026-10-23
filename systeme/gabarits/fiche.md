@@ -1,9 +1,10 @@
 ---
-type: <video | post | newsletter | compte-rendu | rapport | support | concept | source | livrable>
+type: <un type de systeme/metadonnees.md>
 resume: <une ligne, reprise dans l'index>
-statut: <idee | en-cours | a-valider | publie | clos>
-domaine: <contenu | communaute | consulting | produits | operations | perso>
+statut: <un statut de ce type, dans systeme/metadonnees.md>
+domaine: <un domaine de la carte d'AGENTS.md>
 projet: <slug du projet, facultatif ; plusieurs : [a, b]>
+cree: AAAA-MM-JJ
 maj: AAAA-MM-JJ
 liens: []
 ---

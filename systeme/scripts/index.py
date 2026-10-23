@@ -80,6 +80,26 @@ def tableau(chemin, premiere_colonne):
     return rangs
 
 
+def tableaux(chemin, premiere_colonne):
+    """Tous les tableaux Markdown dont la première colonne porte ce titre, mis bout à bout : une liste de dicts."""
+    try:
+        with open(chemin, encoding="utf-8") as f:
+            lignes = f.read().splitlines()
+    except (OSError, UnicodeDecodeError):
+        return []
+    entetes, rangs = None, []
+    for ligne in lignes:
+        if not ligne.startswith("|"):
+            entetes = None
+            continue
+        cases = [c.strip() for c in ligne.strip().strip("|").split("|")]
+        if entetes is None:
+            entetes = cases if cases[0] == premiere_colonne else []
+        elif entetes and not set(cases[0]) <= set("-: "):
+            rangs.append(dict(zip(entetes, cases)))
+    return rangs
+
+
 def etapes(chemin):
     """Le tableau des étapes d'un process : (étape, skills, ce qu'on décide, qui décide) par ligne."""
     trouvees = []

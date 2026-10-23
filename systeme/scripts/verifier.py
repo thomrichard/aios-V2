@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Contrôle le workspace : source unique, liens vers skills/, index d'images, mémoire, process, plafonds, index à jour.
+"""Contrôle le workspace : source unique, liens vers skills/, index d'images, mémoire, process, en-têtes, plafonds,
+index à jour.
 
 Usage : python3 systeme/scripts/verifier.py
 Code de sortie 1 s'il y a une erreur ; les avertissements ne bloquent pas.
@@ -9,7 +10,7 @@ import re
 import subprocess
 import sys
 
-from index import les_processus, skills_utilisees
+from index import DOSSIERS, IGNORES, les_processus, lire_entete, skills_utilisees, tableau, tableaux
 
 RACINE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 IMAGES = (".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg")
@@ -105,6 +106,77 @@ def controler_processus():
             avertissements.append(f"{routeur} ne cite pas {rel}")
 
 
+def mots(texte):
+    """« `a`, `b` » → ["a", "b"] ; « — » → []."""
+    return [m.strip().strip("`") for m in texte.split(",") if m.strip().strip("`") not in ("", "—", "-")]
+
+
+def obligatoire(regle, type_):
+    """« tous », « tous sauf a, b », « a, b » ou « aucun » : le champ est-il obligatoire pour ce type ?"""
+    regle = regle.strip()
+    if regle == "tous":
+        return True
+    if regle.startswith("tous sauf"):
+        return type_ not in mots(regle[len("tous sauf"):])
+    return type_ in mots(regle)
+
+
+def controler_entetes():
+    """Chaque en-tête suit systeme/metadonnees.md (champs, types, statuts) et la carte des domaines d'AGENTS.md."""
+    rel_meta = "systeme/metadonnees.md"
+    if not os.path.exists(chemin(rel_meta)):
+        avertissements.append(f"{rel_meta} manque : les en-têtes ne sont pas contrôlés")
+        return
+    champs = {r["Champ"].strip("`"): r for r in tableaux(chemin(rel_meta), "Champ") if r.get("Champ")}
+    types = {r["Type"].strip("`"): mots(r.get("Statuts", "")) for r in tableaux(chemin(rel_meta), "Type") if r.get("Type")}
+    domaines = {r["Domaine"].strip("`") for r in tableau(chemin("AGENTS.md"), "Domaine") if r.get("Domaine")}
+    for doublon in sorted(set(types) & {s for statuts in types.values() for s in statuts}):
+        avertissements.append(f"{rel_meta} : « {doublon} » est à la fois un type et un statut")
+
+    for base in DOSSIERS:
+        for dossier, sous, fichiers in os.walk(chemin(base)):
+            sous[:] = sorted(s for s in sous if not s.startswith("."))
+            for nom in sorted(fichiers):
+                if not nom.endswith(".md") or nom in IGNORES:
+                    continue
+                rel = os.path.relpath(os.path.join(dossier, nom), RACINE).replace(os.sep, "/")
+                e = lire_entete(os.path.join(dossier, nom))
+                if not e:
+                    avertissements.append(f"{rel} n'a pas d'en-tête (gabarit : systeme/gabarits/fiche.md)")
+                    continue
+                type_ = e.get("type", "")
+                statuts = types.get(type_)
+                if type_ and statuts is None:
+                    avertissements.append(f"{rel} : type « {type_} » absent de {rel_meta}")
+                for champ in e:
+                    if champ not in champs:
+                        avertissements.append(f"{rel} : champ « {champ} » absent de {rel_meta}")
+                for champ, regle in champs.items():
+                    valeur = e.get(champ, "")
+                    if champ == "statut" and statuts == []:
+                        continue
+                    if not valeur:
+                        if obligatoire(regle.get("Obligatoire pour", ""), type_):
+                            avertissements.append(f"{rel} : champ « {champ} » vide ou manquant")
+                        continue
+                    format_ = regle.get("Format", "").strip("`")
+                    if format_ == "date" and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", valeur):
+                        avertissements.append(f"{rel} : « {champ} » n'est pas une date AAAA-MM-JJ")
+                    elif format_ == "statut" and statuts and valeur not in statuts:
+                        avertissements.append(f"{rel} : statut « {valeur} » non prévu pour le type {type_} "
+                                              f"({', '.join(statuts)})")
+                    elif format_ == "domaine" and valeur not in domaines:
+                        avertissements.append(f"{rel} : domaine « {valeur} » absent de la carte d'AGENTS.md")
+                    elif format_ == "projet":
+                        for slug in mots(valeur):
+                            if not os.path.exists(chemin("projets", f"{slug}.md")):
+                                avertissements.append(f"{rel} : projet « {slug} » introuvable dans projets/")
+                parties = rel.split("/")
+                if parties[0] == "domaines" and len(parties) > 2 and e.get("domaine") and e["domaine"] != parties[1]:
+                    avertissements.append(f"{rel} : rangé dans domaines/{parties[1]}/ "
+                                          f"mais son domaine est « {e['domaine']} »")
+
+
 def controler_plafonds():
     plafonds = list(PLAFONDS)
     if os.path.isdir(chemin("routers")):
@@ -134,6 +206,7 @@ def main():
     controler_images()
     controler_memoire()
     controler_processus()
+    controler_entetes()
     controler_plafonds()
     controler_index()
     for e in erreurs:
