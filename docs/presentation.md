@@ -236,6 +236,26 @@ flowchart LR
 
 Le vérificateur (`verifier.py`) est le garde-fou : il signale un en-tête qui ne suit pas les réglages, un fichier qui n'est pas à sa place, un domaine sans routeur, une carte modifiée à la main. Ce sont des alertes : elles ne bloquent rien.
 
+## La fin de session : close, puis calibrate
+
+Une discussion avec l'agent finit toujours par disparaître. On perd rarement la décision ; on perd le chemin : les options écartées, et pourquoi. `close` règle ça : après elle, le chat peut disparaître sans rien perdre. Tu dis « close », ou « on ferme ».
+
+Elle travaille en cinq temps :
+
+1. **L'inventaire.** L'agent relit la session et trie en quatre : les décisions (avec leur pourquoi), les livrables, ce qui n'existe que dans le chat (un texte proposé, une analyse), les sujets ouverts. Il te montre cet inventaire avant d'écrire quoi que ce soit.
+2. **Chaque chose à sa place.** Une décision va dans `journal/decisions.md`, avec ce qu'on a écarté. Ce qui n'existe que dans le chat devient une fiche, rangée par `classer` ; dans le doute, une ligne dans `inbox/capture.md`. Un projet touché est mis à jour. Une préférence durable devient un souvenir. Chaque chantier laisse sa ligne dans `journal/log.md`.
+3. **Chaque sujet ouvert devient une tâche à reprendre** : dans son projet, dans un nouveau projet qu'il propose, ou en ligne de capture que le rangement de nuit rangera.
+4. **Rien ne traîne.** Un livrable promis mais jamais écrit est écrit. Un programme lancé est arrêté ou signalé. Des changements non enregistrés dans Git sont signalés, avec un commit proposé ; jamais d'envoi en ligne sans ton accord. Puis l'agent lance le vérificateur.
+5. **Le récap**, en quelques lignes : ce qui est fait, où c'est écrit, ce qui attend, et la phrase exacte pour reprendre chaque sujet. Si tu l'as corrigé pendant la session, il propose `calibrate`.
+
+Une session longue laisse aussi un bilan dans `journal/clotures/<sujet>-AA-MM.md` : le périmètre, ce qui est fait, les décisions, les propositions non engagées, les limites.
+
+Les deux skills se partagent le travail : `close` garde le **contenu** de la session ; `calibrate` (plus bas) fait **apprendre l'agent** (ses règles, ses skills). `close` ne touche jamais aux règles ni aux skills.
+
+*Un essai réel, en deux temps : une session de travail sur un projet de site web, puis « close ». Le choix d'Astro a été noté, avec son pourquoi et les options écartées. Le projet a été mis à jour, et la liste des projets actifs d'`AGENTS.md` a suivi. L'accroche rédigée dans le chat a été gardée. La préférence « phrases courtes » est devenue un souvenir. Un commit a été proposé, pas fait. Le récap a donné une phrase de reprise par sujet.*
+
+`close` est reprise de la skill close de Thomas (classroom « Faire vivre ton AIOS »), adaptée à AIOS v2.
+
 ## Comment l'AIOS s'améliore
 
 Le but : une correction donnée une fois ne revient pas. L'agent s'ajuste à toi, session après session. Trois outils s'en chargent, et rien ne change sans ton accord.
@@ -248,7 +268,7 @@ Le but : une correction donnée une fois ne revient pas. L'agent s'ajuste à toi
 
 Deux limites :
 
-- `calibrate` ne tourne jamais dans une routine : il faut toi pour choisir.
+- `calibrate` ne tourne jamais dans une routine : il faut que tu sois là pour choisir.
 - Dans un AIOS installé, l'agent ne modifie pas une skill du socle, pour que les mises à jour du socle restent possibles. Le retour reste dans son `feedback.md`, marqué « pour le socle », et un souvenir donne l'effet tout de suite.
 
 `calibrate` est reprise de la skill de Jay E | RoboNuggets (licence MIT), traduite et adaptée à l'AIOS. `note` a été construite pour aller avec. Un essai réel a marché avec le petit modèle : « Note pour classer : … », puis « Applique les retours de classer ».
