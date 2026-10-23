@@ -26,3 +26,4 @@ Méthode : `outil officiel`, `CLI`, `API` ou `MCP`. Commande : le mot tapé pour
 | GitHub CLI | outil officiel | Dépôts, pull requests, tickets | Tous | 2026-10-23 | `gh` |
 | OpusClip | MCP | Clips courts tirés des vidéos | Claude (compte) | 2026-10-23 | `795efe4a-bf2c-4ca8-978d-f788eb5759b3` |
 | Google Agenda | MCP | Événements et disponibilités | Claude (compte) | 2026-10-23 | `0168199f-d285-4b9b-8c92-6a93fb5ca090` |
+| Skool | CLI | Club SMART : membres, classrooms, leçons et posts. CLI maison, connectée par le cookie de session ; le jeton WAF (24 h) est renouvelé chaque matin à 8 h 37 par la veille des départs (`~/IA-OS`) | Tous | 2026-10-23 | `skool-pp-cli` |

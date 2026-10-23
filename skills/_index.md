@@ -11,3 +11,4 @@ Chaque skill vit dans `skills/<nom>/SKILL.md` : le dossier porte son nom.
 | grill-me | Interviewe l'utilisateur en profondeur sur un plan, un design ou une idée, ou lui pose une liste de questions imposées (installation), en enregistrant chaque réponse dans une fiche de capture. | [grill-me/SKILL.md](grill-me/SKILL.md) |
 | installation | Installe et personnalise l'AIOS. | [installation/SKILL.md](installation/SKILL.md) |
 | rangement | Le rangement de nuit (2 h du matin) : archive les vieux points du jour, vide l'inbox avec fiche et classer, met de côté ce qui demande une réponse dans outbox/questions.md, puis écrit le point du jour. | [rangement/SKILL.md](rangement/SKILL.md) |
+| skool-ops | Lit et écrit dans Skool (Club SMART) avec la CLI `skool-pp-cli` et les scripts du toolkit : membres, payants, stats, classrooms, leçons, posts, messages privés. | [skool-ops/SKILL.md](skool-ops/SKILL.md) |

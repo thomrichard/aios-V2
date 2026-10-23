@@ -122,6 +122,15 @@
       "status": "live",
       "desc": "Événements et disponibilités",
       "mcp": "0168199f-d285-4b9b-8c92-6a93fb5ca090"
+    },
+    {
+      "id": "app:skool",
+      "label": "Skool",
+      "kind": "cli",
+      "access": "local",
+      "status": "live",
+      "desc": "Club SMART : membres, classrooms, leçons et posts. CLI maison, connectée par le cookie de session ; le jeton WAF (24 h) est renouvelé chaque matin à 8 h 37 par la veille des départs (`~/IA-OS`)",
+      "command": "skool-pp-cli"
     }
   ]
 }

@@ -9,3 +9,4 @@ Ajout seul. Format : `- AAAA-MM-JJ · <action> | <sujet>`
 - 2026-10-23 · ajout | les domaines se règlent dans systeme/metadonnees.md ; index.py recopie la carte d'AGENTS.md
 - 2026-10-23 · ajout | projets actifs d'AGENTS.md générés depuis projets/ ; colonne Fin des types
 - 2026-10-23 · ajout | skills classer, fiche et rangement ; ranger.py et colonne Chemin ; questions en attente dans outbox/questions.md ; dossier des fichiers lourds
+- 2026-10-23 · ajout | connexion Skool (skool-pp-cli) ; skill skool-ops reprise de ~/IA-OS, avec les références voix et types de posts tirées des 79 posts du fil
