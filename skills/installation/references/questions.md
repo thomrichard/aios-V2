@@ -13,7 +13,7 @@ Pour la Q7, explique d'abord les mots domaine, type et statut, puis propose des 
 | 1 | Identité | Comment s'appelle ton agent ? | `AGENTS.md`, section Qui |
 | 2 | Identité | Quel rôle lui donnes-tu (par exemple « chef de cabinet », « bras droit ») ? | `AGENTS.md`, section Qui |
 | 3 | Identité | Qui es-tu, en une phrase : ton métier et tes activités ? | `AGENTS.md`, section Qui |
-| 4 | Identité | Comment veux-tu qu'il te parle : langue, ton, longueur, et ce qu'il ne doit jamais écrire ? | `AGENTS.md`, section Qui ; les interdits en souvenirs `feedback_` dans `memory/` |
+| 4 | Identité | Comment veux-tu qu'il te parle : langue, tutoiement ou vouvoiement (tutoiement par défaut), ton, longueur, et ce qu'il ne doit jamais écrire ? | `AGENTS.md`, section Qui ; les interdits en souvenirs `feedback_` dans `memory/` |
 | 5 | Objectifs | Quelles sont tes trois cibles pour l'année, mesurables si possible ? | `AGENTS.md`, section Objectifs |
 | 6 | Objectifs | Quels sont tes objectifs et résultats clés du trimestre ? | `domaines/operations/okr.md` |
 | 7 | Domaines | Quels sont tes grands domaines d'activité (entre trois et sept), que couvre chacun, et qu'y produis-tu ? | `systeme/metadonnees.md`, section « Ce workspace » (les domaines et leurs types) ; un routeur par domaine dans `routers/` |
