@@ -81,11 +81,10 @@
     {
       "id": "app:kit",
       "label": "Kit",
-      "kind": "mcp",
+      "kind": "api",
       "access": "local",
       "status": "live",
-      "desc": "Newsletter : abonnés, séquences, envois",
-      "mcp": "kit"
+      "desc": "Newsletter : abonnés, croissance, envois et leurs stats, par `systeme/scripts/kit.py` (lecture seule, clé API v4). Le MCP officiel de Kit demande un plan payant."
     },
     {
       "id": "app:google-drive",
@@ -131,6 +130,24 @@
       "status": "live",
       "desc": "Club SMART : membres, classrooms, leçons et posts. CLI maison (code et scripts : `~/Dev/skool-toolkit`, dépôt privé), connectée par le cookie de session ; le jeton WAF (quelques jours) est renouvelé chaque matin à 8 h 37 par la routine Jeton Skool",
       "command": "skool-pp-cli"
+    },
+    {
+      "id": "app:vercel",
+      "label": "Vercel",
+      "kind": "app",
+      "access": "local",
+      "status": "live",
+      "desc": "Le site web et les autres projets en ligne : déploiements, journaux, domaines. La CLI `vercel` (connectée) et le connecteur Vercel du compte.",
+      "command": "vercel"
+    },
+    {
+      "id": "app:excalidraw",
+      "label": "Excalidraw",
+      "kind": "mcp",
+      "access": "local",
+      "status": "live",
+      "desc": "Diagrammes éditables en direct (skill `excalidraw-diagram`). Serveur de la communauté (`~/Dev/mcp_excalidraw`) ; son canevas doit tourner : `PORT=3737 npm run canvas` dans ce dossier.",
+      "mcp": "excalidraw"
     }
   ]
 }

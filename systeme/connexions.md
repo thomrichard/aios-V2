@@ -21,9 +21,11 @@ Méthode : `outil officiel`, `CLI`, `API` ou `MCP`. Commande : le mot tapé pour
 | Wispr Flow | MCP | Réunions et notes dictées | Claude Code, Claude (compte) | 2026-10-23 | `wisprflow`, `af934a57-1574-4e32-a045-6bf30d43e1b8` |
 | Claude Docs | MCP | Documents partagés sur claude.ai | Claude (compte) | 2026-10-23 | `1a59c906-04da-521d-bda7-7f71b9f9e01c` |
 | Apify | MCP | Extraction de données sur le web | Claude Code | 2026-10-23 | `apify` |
-| Kit | MCP | Newsletter : abonnés, séquences, envois | Claude Code | 2026-10-23 | `kit` |
+| Kit | API | Newsletter : abonnés, croissance, envois et leurs stats, par `systeme/scripts/kit.py` (lecture seule, clé API v4). Le MCP officiel de Kit demande un plan payant. | Tous (script) | 2026-10-23 | — |
 | Google Drive | MCP | Fichiers du Drive | Claude (compte) | 2026-10-23 | `e0b911f2-25ad-40f5-8338-65388b05b66c` |
 | GitHub CLI | outil officiel | Dépôts, pull requests, tickets | Tous | 2026-10-23 | `gh` |
 | OpusClip | MCP | Clips courts tirés des vidéos | Claude (compte) | 2026-10-23 | `795efe4a-bf2c-4ca8-978d-f788eb5759b3` |
 | Google Agenda | MCP | Événements et disponibilités | Claude (compte) | 2026-10-23 | `0168199f-d285-4b9b-8c92-6a93fb5ca090` |
 | Skool | CLI | Club SMART : membres, classrooms, leçons et posts. CLI maison (code et scripts : `~/Dev/skool-toolkit`, dépôt privé), connectée par le cookie de session ; le jeton WAF (quelques jours) est renouvelé chaque matin à 8 h 37 par la routine Jeton Skool | Tous | 2026-10-23 | `skool-pp-cli` |
+| Vercel | outil officiel | Le site web et les autres projets en ligne : déploiements, journaux, domaines. La CLI `vercel` (connectée) et le connecteur Vercel du compte. | Tous (CLI), Claude (compte) | 2026-10-23 | `vercel`, `1eae7c81-0e82-454c-ab75-11403ec336f7` |
+| Excalidraw | MCP | Diagrammes éditables en direct (skill `excalidraw-diagram`). Serveur de la communauté (`~/Dev/mcp_excalidraw`) ; son canevas doit tourner : `PORT=3737 npm run canvas` dans ce dossier. | Claude Code | 2026-10-23 | `excalidraw` |
