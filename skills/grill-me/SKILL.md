@@ -1,6 +1,6 @@
 ---
 name: grill-me
-description: Interviewe l'utilisateur en profondeur sur un plan, un design ou une idée, ou lui pose une liste de questions imposées (installation), en enregistrant chaque réponse dans une fiche de capture. Déclencheurs : « grill me », « grille-moi », « cuisine-moi », « challenge mon plan », « stress-teste cette idée », « brainstorm », « session de discovery », « vider ma tête sur [sujet] ».
+description: Interviewe l'utilisateur en profondeur sur un plan, un design ou une idée, ou lui pose une liste de questions imposées (installation), en enregistrant chaque réponse dans une fiche de capture. Plus court : align (quelques questions avant une tâche), devil (des objections sur un choix). Déclencheurs : « grill me », « grille-moi », « cuisine-moi », « challenge mon plan », « stress-teste cette idée », « brainstorm », « session de discovery », « vider ma tête sur [sujet] ».
 ---
 # grill-me
 
@@ -46,3 +46,4 @@ La synthèse se réécrit aux jalons seulement : fin de branche (avec le statut 
 ## Journal des changements
 - 2026-10-22 · création · entretien une question à la fois
 - 2026-10-22 · reprise de la grill-me de Thomas Richard, adaptée à AIOS v2 (chemins, socle neutre, liste imposée) · sa version est plus complète
+- 2026-10-23 · renvoie vers align et devil pour le court · une skill par usage : explorer, viser juste, contredire

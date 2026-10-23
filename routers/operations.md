@@ -16,6 +16,8 @@ Pilotage (OKR, revue hebdo, revenus), admin et finances, et l'AIOS comme outil d
 - `rangement` : la routine de nuit (inbox, outbox, point du jour)
 - `note` : mettre de côté un retour sur une skill, dans son `feedback.md`
 - `calibrate` : en fin de session, proposer les corrections à garder (skills, règles, mémoire, réglages)
+- `align` : quelques questions à choix avant une tâche floue (`grill-me` pour explorer et décider)
+- `devil` : des objections sérieuses sur un choix, avant de s'engager
 
 ## Process
 - Installation : `processus/installation.md` · à la demande, après le clonage
