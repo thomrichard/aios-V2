@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Génère les _index.md depuis les en-têtes des fichiers, la page outbox/index.html (sorties, process, skills),
-et les réglages de l'interface (départements, routines, applications) depuis AGENTS.md,
-systeme/routines.md et systeme/connexions.md.
+la carte des domaines d'AGENTS.md, et les réglages de l'interface (départements, routines, applications)
+depuis systeme/metadonnees.md, systeme/routines.md et systeme/connexions.md.
 
 Usage : python3 systeme/scripts/index.py [--check]
   --check : n'écrit rien, liste les index qui ne sont plus à jour (code 1 s'il y en a).
@@ -16,6 +16,9 @@ RACINE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file_
 DOSSIERS = ["projets", "processus", "domaines", "savoir", "bibliotheques"]
 IGNORES = {"_index.md", "_images.md"}
 AVERTISSEMENT = "<!-- Généré par systeme/scripts/index.py : ne pas modifier à la main. -->"
+DEBUT_CARTE = ("<!-- Début de la carte : générée par systeme/scripts/index.py depuis systeme/metadonnees.md. "
+               "Change les domaines là-bas. -->")
+FIN_CARTE = "<!-- Fin de la carte -->"
 COULEURS = ["#00bcd4", "#e040fb", "#fdd835", "#43a047", "#f44336", "#ec407a", "#26a69a", "#8d6e63"]
 ICONES = ["pen", "people", "build", "data", "pulse", "book", "visual", "clock", "api"]
 COUCHES = [
@@ -98,6 +101,28 @@ def tableaux(chemin, premiere_colonne):
         elif entetes and not set(cases[0]) <= set("-: "):
             rangs.append(dict(zip(entetes, cases)))
     return rangs
+
+
+def domaines():
+    """Les domaines réglés dans systeme/metadonnees.md, ceux du socle puis ceux du workspace : (nom, ce qu'il couvre)."""
+    trouves = {}
+    for r in tableaux(os.path.join(RACINE, "systeme", "metadonnees.md"), "Domaine"):
+        nom = r.get("Domaine", "").strip("`")
+        if nom and nom not in trouves:
+            trouves[nom] = r.get("Ce qu'il couvre", "")
+    return list(trouves.items())
+
+
+def carte_agents():
+    """AGENTS.md, avec la carte des domaines régénérée entre ses deux balises ; None si les balises manquent."""
+    with open(os.path.join(RACINE, "AGENTS.md"), encoding="utf-8") as f:
+        texte = f.read()
+    debut, fin = texte.find(DEBUT_CARTE), texte.find(FIN_CARTE)
+    if debut < 0 or fin < debut:
+        return None
+    lignes = [DEBUT_CARTE, "", "| Domaine | Ce qu'il couvre | Routeur |", "|---|---|---|"]
+    lignes += [f"| {nom} | {cellule(couvre)} | `routers/{nom}.md` |" for nom, couvre in domaines()]
+    return texte[:debut] + "\n".join(lignes) + "\n\n" + texte[fin:]
 
 
 def etapes(chemin):
@@ -340,8 +365,8 @@ document.getElementById('q').addEventListener('input', function () {{
 
 
 def departements_interface():
-    """config/departments.json de l'interface : un département par domaine de la carte d'AGENTS.md."""
-    noms = [r["Domaine"].strip("`") for r in tableau(os.path.join(RACINE, "AGENTS.md"), "Domaine") if r.get("Domaine")]
+    """config/departments.json de l'interface : un département par domaine de systeme/metadonnees.md."""
+    noms = [nom for nom, _ in domaines()]
     departements, regles = [], []
     for i, nom in enumerate(noms):
         icone = "coin" if nom == "operations" else ICONES[i % len(ICONES)]
@@ -355,7 +380,7 @@ def departements_interface():
                 if domaine in noms:
                     regles.append({"prefix": f"{dossier}/{f}", "dept": domaine})
     contenu = {
-        "_note": "Généré par systeme/scripts/index.py depuis la carte des domaines d'AGENTS.md et l'en-tête "
+        "_note": "Généré par systeme/scripts/index.py depuis les domaines de systeme/metadonnees.md et l'en-tête "
                  "des projets et des process : ne pas modifier à la main.",
         "departments": departements, "layers": COUCHES, "projectPrefixes": {}, "pathRules": regles,
         "memoryKeywords": [], "default": "operations" if "operations" in noms or not noms else noms[0],
@@ -429,6 +454,9 @@ def cibles():
         yield os.path.join(RACINE, "skills", "_index.md"), index_skills()
     if os.path.isdir(os.path.join(RACINE, "outbox")):
         yield os.path.join(RACINE, "outbox", "index.html"), page_outbox()
+    carte = carte_agents() if os.path.exists(os.path.join(RACINE, "AGENTS.md")) else None
+    if carte is not None:
+        yield os.path.join(RACINE, "AGENTS.md"), carte
     if os.path.isdir(os.path.join(RACINE, "interface", "config")):
         yield os.path.join(RACINE, "interface", "config", "departments.json"), departements_interface()
         yield os.path.join(RACINE, "interface", "snapshots", "routines.json"), routines_interface()

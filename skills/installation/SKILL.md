@@ -22,7 +22,7 @@ description: Installe et personnalise l'AIOS. Reprend le profil déposé dans in
 - En fin de session, `grill-me` remplit aussi le gabarit du profil, gardé dans `journal/entretiens/` : il permet de réinstaller.
 
 ## Après les réponses
-1. Pour chaque domaine : un routeur (gabarit `systeme/gabarits/routeur.md`), un dossier `domaines/<domaine>/`, sa ligne dans la carte de `AGENTS.md`, et ses types avec leurs statuts dans la section « Ce workspace » de `systeme/metadonnees.md`. Le domaine `operations` existe déjà.
+1. Pour chaque domaine : sa ligne et ses types (avec leurs statuts) dans la section « Ce workspace » de `systeme/metadonnees.md`, un routeur (gabarit `systeme/gabarits/routeur.md`) et un dossier `domaines/<domaine>/`. N'écris pas la carte d'`AGENTS.md` : `index.py` la recopie. Le domaine `operations` existe déjà.
 2. Un fichier par projet en cours (gabarit `systeme/gabarits/projet.md`), et sa ligne dans les projets actifs de `AGENTS.md`.
 3. Le profil part dans `archives/inbox/AAAA-MM/`.
 4. Lance `systeme/scripts/index.py`, puis `systeme/scripts/verifier.py`, jusqu'à « Tout est en ordre ».
@@ -36,7 +36,7 @@ description: Installe et personnalise l'AIOS. Reprend le profil déposé dans in
 - Si une section est déjà remplie, montre-la et demande s'il faut la garder.
 - Une réponse « je ne sais pas » s'écrit « À définir » ; elle reviendra dans le point du jour.
 - Ne demande jamais une clé d'API dans le chat : indique de la coller dans `.env`.
-- N'écris rien de personnel hors de `AGENTS.md` (Qui, Objectifs, carte, projets actifs), `memory/`, `routers/`, `projets/`, `domaines/`, `journal/` et la section « Ce workspace » de `systeme/metadonnees.md`.
+- N'écris rien de personnel hors de `AGENTS.md` (Qui, Objectifs, projets actifs), `memory/`, `routers/`, `projets/`, `domaines/`, `journal/` et la section « Ce workspace » de `systeme/metadonnees.md`.
 - Ne branche aucun outil et ne crée aucune routine pendant l'installation : note-les seulement.
 
 ## Journal des changements
@@ -46,3 +46,4 @@ description: Installe et personnalise l'AIOS. Reprend le profil déposé dans in
 - 2026-10-22 · profil donné avec l'adresse du socle, distant renommé `socle` · installer en une phrase
 - 2026-10-22 · étape interface · le kit de Jay est dans le socle, branché sur le workspace
 - 2026-10-23 · domaines et types proposés depuis un catalogue, écrits dans `systeme/metadonnees.md` · tout est paramétrable, sans partir de zéro
+- 2026-10-23 · la carte d'`AGENTS.md` n'est plus écrite à la main · un domaine se règle à un seul endroit, et tous les agents suivent

@@ -1,14 +1,22 @@
 # Métadonnées
 
-Le seul endroit où se décident les en-têtes : les champs, les types et leurs statuts. Les domaines, eux, ne s'écrivent que dans la carte d'`AGENTS.md` ; ce fichier y renvoie.
+Le seul endroit où se règlent les domaines, les champs d'en-tête, les types et leurs statuts. On change une ligne ici, puis `systeme/scripts/index.py` répercute : la carte des domaines d'`AGENTS.md` (que lisent tous les agents), les départements de l'interface. On n'écrit jamais ces copies à la main.
 
-Avant d'écrire un en-tête, lis ce fichier. `systeme/scripts/verifier.py` signale ce qui s'en écarte : un champ inconnu ou manquant, un type ou un statut hors liste, un domaine hors carte, une date mal écrite.
+Avant d'écrire un en-tête, lis ce fichier. `systeme/scripts/verifier.py` signale ce qui s'en écarte : un champ inconnu ou manquant, un type ou un statut hors liste, un domaine inconnu ou sans routeur, une date mal écrite, une carte pas à jour.
 
-Pour changer une valeur, change sa ligne ici, puis demande à l'agent de mettre à jour les fichiers qui l'utilisent : le vérificateur montre ceux qui restent.
+Pour changer une valeur déjà utilisée, change sa ligne ici, puis demande à l'agent de mettre à jour les fichiers qui l'utilisent : le vérificateur montre ceux qui restent.
+
+## Domaines
+
+Une grande partie de l'activité, qui dure. Chacun a son routeur `routers/<domaine>.md` et son dossier `domaines/<domaine>/`.
+
+| Domaine | Ce qu'il couvre |
+|---|---|
+| operations | Pilotage (OKR, revue hebdo, revenus), admin et finances, et l'AIOS comme outil de travail (connecteurs, routines, skills) |
 
 ## Champs
 
-Format : `texte` ; `date` (AAAA-MM-JJ) ; `liste` (`[a, b]`) ; `type` (une ligne de « Types ») ; `statut` (un statut de son type) ; `domaine` (un domaine de la carte d'`AGENTS.md`) ; `projet` (le nom d'un fichier de `projets/`, sans `.md`).
+Format : `texte` ; `date` (AAAA-MM-JJ) ; `liste` (`[a, b]`) ; `type` (une ligne de « Types ») ; `statut` (un statut de son type) ; `domaine` (une ligne de « Domaines ») ; `projet` (le nom d'un fichier de `projets/`, sans `.md`).
 Obligatoire pour : `tous`, `tous sauf <types>`, une liste de types, ou `aucun`.
 
 | Champ | Ce qu'il dit | Format | Obligatoire pour |
@@ -47,7 +55,10 @@ Un fichier `a-valider`, ou de type `livrable`, s'affiche dans `outbox/index.html
 
 ## Ce workspace
 
-Tes types et tes champs à toi. La skill `installation` les écrit ici, en partant de `skills/installation/references/catalogue.md` ; ensuite, tu les changes ici. Le socle n'écrit jamais dans cette section.
+Tes domaines, tes types et tes champs à toi. La skill `installation` les écrit ici, en partant de `skills/installation/references/catalogue.md` ; ensuite, tu les changes ici. Le socle n'écrit jamais dans cette section.
+
+| Domaine | Ce qu'il couvre |
+|---|---|
 
 | Type | Ce que c'est | Statuts |
 |---|---|---|

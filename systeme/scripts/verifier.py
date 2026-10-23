@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Contrôle le workspace : source unique, liens vers skills/, index d'images, mémoire, process, en-têtes, plafonds,
-index à jour.
+"""Contrôle le workspace : source unique, liens vers skills/, index d'images, mémoire, process, domaines, en-têtes,
+plafonds, index et carte à jour.
 
 Usage : python3 systeme/scripts/verifier.py
 Code de sortie 1 s'il y a une erreur ; les avertissements ne bloquent pas.
@@ -10,7 +10,8 @@ import re
 import subprocess
 import sys
 
-from index import DOSSIERS, IGNORES, les_processus, lire_entete, skills_utilisees, tableau, tableaux
+from index import (DEBUT_CARTE, DOSSIERS, FIN_CARTE, IGNORES, domaines, les_processus, lire_entete,
+                   skills_utilisees, tableaux)
 
 RACINE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 IMAGES = (".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg")
@@ -121,15 +122,33 @@ def obligatoire(regle, type_):
     return type_ in mots(regle)
 
 
+def controler_domaines():
+    """Chaque domaine réglé dans systeme/metadonnees.md a son routeur, chaque routeur a son domaine,
+    et AGENTS.md garde les balises de sa carte générée."""
+    noms = [nom for nom, _ in domaines()]
+    for nom in noms:
+        if not os.path.exists(chemin("routers", f"{nom}.md")):
+            avertissements.append(f"le domaine « {nom} » n'a pas de routeur : crée routers/{nom}.md "
+                                  "(gabarit : systeme/gabarits/routeur.md)")
+    if os.path.isdir(chemin("routers")):
+        for fichier in sorted(os.listdir(chemin("routers"))):
+            if fichier.endswith(".md") and fichier[:-3] not in noms:
+                avertissements.append(f"routers/{fichier} : domaine absent de systeme/metadonnees.md")
+    if os.path.exists(chemin("AGENTS.md")):
+        texte = "\n".join(lignes_de("AGENTS.md"))
+        if DEBUT_CARTE not in texte or FIN_CARTE not in texte:
+            avertissements.append("AGENTS.md a perdu les balises de la carte des domaines : elle n'est plus générée")
+
+
 def controler_entetes():
-    """Chaque en-tête suit systeme/metadonnees.md (champs, types, statuts) et la carte des domaines d'AGENTS.md."""
+    """Chaque en-tête suit systeme/metadonnees.md : ses domaines, ses champs, ses types et leurs statuts."""
     rel_meta = "systeme/metadonnees.md"
     if not os.path.exists(chemin(rel_meta)):
         avertissements.append(f"{rel_meta} manque : les en-têtes ne sont pas contrôlés")
         return
     champs = {r["Champ"].strip("`"): r for r in tableaux(chemin(rel_meta), "Champ") if r.get("Champ")}
     types = {r["Type"].strip("`"): mots(r.get("Statuts", "")) for r in tableaux(chemin(rel_meta), "Type") if r.get("Type")}
-    domaines = {r["Domaine"].strip("`") for r in tableau(chemin("AGENTS.md"), "Domaine") if r.get("Domaine")}
+    connus = {nom for nom, _ in domaines()}
     for doublon in sorted(set(types) & {s for statuts in types.values() for s in statuts}):
         avertissements.append(f"{rel_meta} : « {doublon} » est à la fois un type et un statut")
 
@@ -165,8 +184,8 @@ def controler_entetes():
                     elif format_ == "statut" and statuts and valeur not in statuts:
                         avertissements.append(f"{rel} : statut « {valeur} » non prévu pour le type {type_} "
                                               f"({', '.join(statuts)})")
-                    elif format_ == "domaine" and valeur not in domaines:
-                        avertissements.append(f"{rel} : domaine « {valeur} » absent de la carte d'AGENTS.md")
+                    elif format_ == "domaine" and valeur not in connus:
+                        avertissements.append(f"{rel} : domaine « {valeur} » absent de {rel_meta}")
                     elif format_ == "projet":
                         for slug in mots(valeur):
                             if not os.path.exists(chemin("projets", f"{slug}.md")):
@@ -206,6 +225,7 @@ def main():
     controler_images()
     controler_memoire()
     controler_processus()
+    controler_domaines()
     controler_entetes()
     controler_plafonds()
     controler_index()

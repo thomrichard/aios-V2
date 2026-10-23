@@ -2,7 +2,7 @@
 
 Des suggestions, pas une liste imposée : on choisit plus facilement qu'on ne part de zéro. Propose ce qui colle à ce que l'utilisateur a dit de son métier (Q3), puis laisse-le garder, renommer, retirer ou ajouter.
 
-Ce qu'il retient s'écrit là où ça fait foi : les domaines dans la carte d'`AGENTS.md`, les types et leurs statuts dans la section « Ce workspace » de `systeme/metadonnees.md`. Les types de la base (projet, livrable, compte-rendu…) y sont déjà : ne les recopie pas.
+Ce qu'il retient s'écrit dans la section « Ce workspace » de `systeme/metadonnees.md` : les domaines, puis les types et leurs statuts. `index.py` recopie ensuite les domaines dans la carte d'`AGENTS.md`. Le domaine `operations` et les types de la base (projet, livrable, compte-rendu…) y sont déjà : ne les recopie pas.
 
 ## Les mots, avant la question
 

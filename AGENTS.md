@@ -29,11 +29,15 @@ Filtre : chaque proposition doit rapprocher d'une de ces cibles. Sinon, dis-le e
 
 ## Carte des domaines
 
+<!-- Début de la carte : générée par systeme/scripts/index.py depuis systeme/metadonnees.md. Change les domaines là-bas. -->
+
 | Domaine | Ce qu'il couvre | Routeur |
 |---|---|---|
 | operations | Pilotage (OKR, revue hebdo, revenus), admin et finances, et l'AIOS comme outil de travail (connecteurs, routines, skills) | `routers/operations.md` |
 
-Les autres domaines sont ajoutés par la skill `installation`. Ce tableau est la seule liste des domaines. Chaque source de revenu reste dans le domaine qui la produit. La vue d'ensemble tient dans un seul tableau : `domaines/operations/revenus.md`.
+<!-- Fin de la carte -->
+
+Les domaines se règlent dans `systeme/metadonnees.md`, jamais ici : `systeme/scripts/index.py` recopie cette carte. Chaque source de revenu reste dans le domaine qui la produit. La vue d'ensemble tient dans un seul tableau : `domaines/operations/revenus.md`.
 
 ## Projets actifs
 
@@ -52,7 +56,7 @@ Aucun pour l'instant. Format : `- [<slug>](projets/<slug>.md) · <domaine> · <p
 | Une préférence, une correction déjà donnée | `memory/MEMORY.md` |
 | Un concept, une source | `savoir/_index.md` |
 | Qui fait foi, où va quoi | `systeme/doctrine.md` |
-| Les champs d'un en-tête, les types et leurs statuts | `systeme/metadonnees.md` |
+| Les réglages : domaines, champs d'un en-tête, types et statuts | `systeme/metadonnees.md` |
 | Une décision passée | `journal/decisions.md` |
 
 Ordre de recherche : d'abord la carte (ce fichier), puis le routeur ou l'index. Si ça ne suffit pas, une recherche texte dans le dossier le plus proche, puis dans tout le workspace. Si tu as dû chercher partout, propose d'ajouter la route qui manquait.
@@ -110,7 +114,7 @@ Avant de dire « c'est fait », vérifie : relance le test ou relis le fichier. 
 ## Interface
 
 - `interface/` : SM4RT, l'interface tirée de l'Agentic OS v2 de Jay E | RoboNuggets (licence MIT), branchée sur ce workspace. Adresse : `http://localhost:50000`. Toujours allumée : `python3 systeme/scripts/interface.py installer` (une fois) ; `etat` pour vérifier, `retirer` pour l'arrêter.
-- Ses départements, ses routines et ses applications sont générés par `systeme/scripts/index.py` depuis la carte des domaines, `systeme/routines.md` et `systeme/connexions.md`. Nos changements au kit : `interface/MODIFS.md`.
+- Ses départements, ses routines et ses applications sont générés par `systeme/scripts/index.py` depuis les domaines de `systeme/metadonnees.md`, `systeme/routines.md` et `systeme/connexions.md`. Nos changements au kit : `interface/MODIFS.md`.
 - Pour la modifier ou la réparer : `interface/skills/agenticos/SKILL.md` et les guides de `interface/`.
 
 ## Routines

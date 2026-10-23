@@ -1,5 +1,5 @@
 {
-  "_note": "Généré par systeme/scripts/index.py depuis la carte des domaines d'AGENTS.md et l'en-tête des projets et des process : ne pas modifier à la main.",
+  "_note": "Généré par systeme/scripts/index.py depuis les domaines de systeme/metadonnees.md et l'en-tête des projets et des process : ne pas modifier à la main.",
   "departments": [
     {
       "key": "operations",

@@ -4,9 +4,9 @@
 
 | Objet | Fait foi | Index |
 |---|---|---|
-| Règles, carte des domaines, projets actifs | `AGENTS.md` | — |
+| Règles, projets actifs | `AGENTS.md` | — |
+| Domaines, champs d'un en-tête, types et statuts | `systeme/metadonnees.md` | la carte d'`AGENTS.md` (générée) |
 | Fichier texte | son en-tête | `_index.md` du dossier (généré) |
-| Champs, types et statuts d'un en-tête | `systeme/metadonnees.md` | — |
 | Image | sa ligne dans `_images.md` du dossier | — |
 | Projet | `projets/<slug>.md` | `projets/_index.md` (généré) |
 | Souvenir | `memory/<type>_<sujet>.md` | `memory/MEMORY.md` |
@@ -37,9 +37,9 @@
 
 ## En-tête
 
-Gabarit : `systeme/gabarits/fiche.md`. Les champs, les types et leurs statuts ne s'écrivent que dans `systeme/metadonnees.md` ; les domaines, que dans la carte d'`AGENTS.md`. `systeme/scripts/verifier.py` signale un en-tête qui s'en écarte.
+Gabarit : `systeme/gabarits/fiche.md`. Les domaines, les champs, les types et leurs statuts ne se règlent que dans `systeme/metadonnees.md`. `systeme/scripts/index.py` répercute les domaines dans la carte d'`AGENTS.md` et dans l'interface ; `systeme/scripts/verifier.py` signale un en-tête qui s'en écarte.
 
-Le socle fournit une base qui marche sans rien changer. Les types d'un workspace (vidéo, proposition…) vont dans la section « Ce workspace » de `systeme/metadonnees.md` : la skill `installation` les propose depuis son catalogue.
+Le socle fournit une base qui marche sans rien changer. Les domaines et les types d'un workspace (contenu, vidéo, proposition…) vont dans la section « Ce workspace » de `systeme/metadonnees.md` : la skill `installation` les propose depuis son catalogue.
 
 ## Nommage
 
@@ -53,7 +53,8 @@ Le socle fournit une base qui marche sans rien changer. Les types d'un workspace
 |---|---|---|
 | Qui (nom de l'agent, rôle, ton, qui est l'utilisateur) | la skill `installation`, depuis le profil ou l'entretien | seulement à la demande de l'utilisateur |
 | Objectifs (les cibles de l'année) | la skill `installation` | à chaque revue trimestrielle : l'agent vérifie que les cibles sont toujours vraies face aux OKR, et propose la mise à jour |
-| Carte des domaines, projets actifs | la skill `installation`, puis l'agent | dans le même tour qu'un nouveau domaine, un nouveau projet ou un fichier déplacé |
+| Carte des domaines | `systeme/scripts/index.py`, depuis `systeme/metadonnees.md` | à chaque lancement du script ; on ne l'écrit jamais à la main |
+| Projets actifs | la skill `installation`, puis l'agent | dans le même tour qu'un nouveau projet ou un fichier déplacé |
 | Règles, comment tu travailles | l'agent, après accord | quand une règle manque ou qu'une correction revient ; une ligne, au bon endroit, et le pourquoi dans `journal/decisions.md` |
 
 - Les cibles de l'année font foi dans `AGENTS.md` ; les OKR du trimestre dans `domaines/operations/okr.md`. On ne recopie pas l'un dans l'autre.
