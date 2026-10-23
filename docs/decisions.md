@@ -141,3 +141,9 @@ Les choix qui ont façonné le socle, et leur pourquoi. Une entrée par décisio
 - **Décision.** Une skill `humanizer`, réécrite d'après Jay E | RoboNuggets, pour le français : elle retire les tics d'écriture « IA » (`references/motifs.md`, une quarantaine de motifs) en gardant la voix de l'auteur, avec des modes script, newsletter, post et page.
 - **Pourquoi.** Le but n'est pas de tromper un détecteur : c'est que le texte sonne comme son auteur, et qu'il dise les choses plus clairement.
 - **Écarté.** Viser un détecteur d'IA ; inventer des faits ou des anecdotes pour « faire humain ».
+
+## 2026-10-23 · surprise-me : ne montrer que ce qu'on a vu
+
+- **Décision.** Une skill `surprise-me`, réécrite d'après Jay E | RoboNuggets (son fichier n'est pas public). Pour une création visuelle « propre mais banale », l'agent annonce une autre direction, impose au moins trois techniques avancées, et fait une boucle capture, critique, amélioration (2 à 4 tours, ordinateur et mobile) avant de montrer le résultat. La charte de l'utilisateur reste ; la forme ose. Sans moyen de capture, l'agent critique à partir du code et le dit. Sa place : `burst` donne plusieurs directions à comparer ; `surprise-me` pousse une direction beaucoup plus loin, en se relisant.
+- **Pourquoi.** Le premier jet d'un modèle est le plus probable, donc déjà vu. L'essai réel l'a montré : la boucle a trouvé un défaut grave, invisible à la lecture du code (tout le bas de la page restait masqué), et l'a réparé. Montrer seulement ce qu'on a vu change le résultat.
+- **Écarté.** Montrer un rendu jamais regardé ; faire semblant d'avoir vu le rendu sans capture ; sortir de la charte pour oser.
