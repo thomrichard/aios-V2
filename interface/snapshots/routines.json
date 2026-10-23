@@ -28,7 +28,7 @@
       "id": "fiches-youtube",
       "name": "Fiches YouTube",
       "source": "planificateur",
-      "desc": "dimanche et jeudi, 1 h · sans IA · exemple · directe, passive : met à jour les fiches de `domaines/contenu/videos/`",
+      "desc": "dimanche et jeudi, 1 h · sans IA · exemple · directe, passive : met à jour les fiches vidéo de `domaines/contenu/`",
       "status": "paused",
       "cron": "0 1 * * 0,4"
     },

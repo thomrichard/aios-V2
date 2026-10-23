@@ -9,7 +9,7 @@ Faire passer ce que l'utilisateur a en tête dans un fichier durable. La fiche, 
 ## Avant la première question
 1. Cherche une session à reprendre dans `journal/entretiens/` (par slug, puis recherche texte).
    - Trouvée : relis-la, résume en 3 à 5 lignes (décisions, flags ouverts, branches non couvertes), fais confirmer, reprends là. Pas de nouveau fichier.
-   - Rien : crée `journal/entretiens/AAAA-MM-JJ-<sujet>.md` (date : `date +%F`), structure dans `references/fiche.md`.
+   - Rien : crée `journal/entretiens/<sujet>-AA-MM.md` (date : `date +%y-%m`), structure dans `references/fiche.md`.
 2. Dresse la carte des branches, chacune avec un statut : ⬜ à faire, 🟡 partiel, ✅ couvert, 🅿️ parqué. Écris-la et montre-la avant Q1 : l'utilisateur peut réordonner, élaguer, ajouter.
    - Avec une liste imposée (ex. `skills/installation/references/questions.md`), chaque bloc est une branche et aucune ne se retire ; une question sans réponse est parquée « À définir ».
 3. Annonce l'emplacement de la fiche en une ligne, puis pose Q1.
