@@ -3,6 +3,8 @@
 Un workspace agentique portable : les mêmes fichiers servent Claude Code, Codex et Gemini CLI.
 Seule la commande qui lance l'agent change.
 
+Pour comprendre ce qu'est AIOS, comment il marche et pourquoi il est fait ainsi : [AIOS v2, expliqué](docs/presentation.md).
+
 ## Installer en une phrase
 
 Dans Claude Code (ou un autre agent qui a accès à tes fichiers), donne l'adresse du socle et ton profil :
