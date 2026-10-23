@@ -5,6 +5,7 @@ domaine: <domaine principal>
 statut: actif
 echeance: AAAA-MM-JJ
 prochaine_etape: <une phrase>
+cree: AAAA-MM-JJ
 maj: AAAA-MM-JJ
 ---
 # <Nom du projet>

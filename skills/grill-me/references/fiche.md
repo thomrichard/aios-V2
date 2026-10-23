@@ -6,6 +6,7 @@ type: entretien
 resume: <le sujet, en une ligne>
 statut: en-cours
 domaine: <domaine concerné>
+cree: AAAA-MM-JJ
 maj: AAAA-MM-JJ
 ---
 # <Sujet> : entretien

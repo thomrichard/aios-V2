@@ -22,20 +22,22 @@ description: Installe et personnalise l'AIOS. Reprend le profil déposé dans in
 - En fin de session, `grill-me` remplit aussi le gabarit du profil, gardé dans `journal/entretiens/` : il permet de réinstaller.
 
 ## Après les réponses
-1. Pour chaque domaine : un routeur (gabarit `systeme/gabarits/routeur.md`), un dossier `domaines/<domaine>/` et sa ligne dans la carte de `AGENTS.md`. Le domaine `operations` existe déjà.
-2. Un fichier par projet en cours (gabarit `systeme/gabarits/projet.md`), et sa ligne dans les projets actifs de `AGENTS.md`.
+1. Pour chaque domaine : sa ligne et ses types (avec leurs statuts) dans la section « Ce workspace » de `systeme/metadonnees.md`, un routeur (gabarit `systeme/gabarits/routeur.md`) et un dossier `domaines/<domaine>/`. N'écris pas la carte d'`AGENTS.md` : `index.py` la recopie. Le domaine `operations` existe déjà.
+2. Un fichier par projet en cours (gabarit `systeme/gabarits/projet.md`) ; `index.py` l'ajoute aux projets actifs d'`AGENTS.md`.
 3. Le profil part dans `archives/inbox/AAAA-MM/`.
 4. Lance `systeme/scripts/index.py`, puis `systeme/scripts/verifier.py`, jusqu'à « Tout est en ordre ».
 5. Active le contrôle avant chaque commit : `git config core.hooksPath systeme/hooks`.
+   Si l'utilisateur a donné un dossier pour ses vidéos et ses sons (Q14), ajoute `FICHIERS_LOURDS=<chemin>` à la fin de `.env`, sans lire le fichier : `verifier.py` contrôle que le dossier existe et que l'IA peut y écrire.
 6. Rappelle de laisser vide le `CLAUDE.md` global de la machine.
 7. L'interface : si `node --version` donne 18 ou plus, lance `node interface/refresh/run.mjs`, puis propose `python3 systeme/scripts/interface.py installer` pour la garder allumée ; sinon, dis comment installer Node.
 8. Termine par un résumé : ce qui est rempli, ce qui reste « À définir ».
 
 ## Garde-fous
+- Propose avant de demander : pour les domaines et les types, une suggestion de `references/catalogue.md`, expliquée en mots simples, à garder, renommer ou retirer.
 - Si une section est déjà remplie, montre-la et demande s'il faut la garder.
 - Une réponse « je ne sais pas » s'écrit « À définir » ; elle reviendra dans le point du jour.
 - Ne demande jamais une clé d'API dans le chat : indique de la coller dans `.env`.
-- N'écris rien de personnel hors de `AGENTS.md` (Qui, Objectifs, carte, projets actifs), `memory/`, `routers/`, `projets/`, `domaines/` et `journal/`.
+- N'écris rien de personnel hors de `AGENTS.md` (Qui, Objectifs), `memory/`, `routers/`, `projets/`, `domaines/`, `journal/` et la section « Ce workspace » de `systeme/metadonnees.md`.
 - Ne branche aucun outil et ne crée aucune routine pendant l'installation : note-les seulement.
 
 ## Journal des changements
@@ -44,3 +46,6 @@ description: Installe et personnalise l'AIOS. Reprend le profil déposé dans in
 - 2026-10-22 · reprise d'un profil déposé dans inbox/ · préparer avant un atelier, installer ensuite
 - 2026-10-22 · profil donné avec l'adresse du socle, distant renommé `socle` · installer en une phrase
 - 2026-10-22 · étape interface · le kit de Jay est dans le socle, branché sur le workspace
+- 2026-10-23 · domaines et types proposés depuis un catalogue, écrits dans `systeme/metadonnees.md` · tout est paramétrable, sans partir de zéro
+- 2026-10-23 · la carte d'`AGENTS.md` n'est plus écrite à la main · un domaine se règle à un seul endroit, et tous les agents suivent
+- 2026-10-23 · Q14, le dossier des fichiers lourds · vidéos et sons hors du dépôt, rangés par `ranger.py`
