@@ -27,14 +27,14 @@ Explique chaque mot en une phrase, avec un exemple :
 
 | Type | Ce que c'est | Statuts | Fin | Chemin |
 |---|---|---|---|---|
-| video | Une vidéo, du sujet à la mise en ligne | sujet, en-cours, a-valider, publie | publie | `domaines/<domaine>/videos/<slug>.md` |
-| post | Un post sur un réseau social | sujet, en-cours, a-valider, publie | publie | `domaines/<domaine>/posts/<date>-<slug>.md` |
-| newsletter | Une édition de la newsletter | sujet, en-cours, a-valider, publie | publie | `domaines/<domaine>/newsletters/<date>-<slug>.md` |
-| proposition | Une proposition commerciale | en-cours, envoyee, signee, refusee | signee, refusee | `domaines/<domaine>/propositions/<slug>.md` |
-| produit | Une offre en vente | en-preparation, en-vente, retire | retire | `domaines/<domaine>/produits/<slug>.md` |
-| support | Un support de formation ou d'atelier | en-cours, a-valider, publie | publie | `domaines/<domaine>/supports/<slug>.md` |
-| evenement | Un atelier, un live, une rencontre | prevu, passe | passe | `domaines/<domaine>/evenements/<date>-<slug>.md` |
-| annonce | Un message à la communauté | sujet, en-cours, publie | publie | `domaines/<domaine>/annonces/<date>-<slug>.md` |
+| video | Une vidéo, du sujet à la mise en ligne | sujet, en-cours, a-valider, publie | publie | `domaines/<domaine>/<slug>-<date>.md` |
+| post | Un post sur un réseau social | sujet, en-cours, a-valider, publie | publie | `domaines/<domaine>/<slug>-<date>.md` |
+| newsletter | Une édition de la newsletter | sujet, en-cours, a-valider, publie | publie | `domaines/<domaine>/<slug>-<date>.md` |
+| proposition | Une proposition commerciale | en-cours, envoyee, signee, refusee | signee, refusee | `domaines/<domaine>/<slug>.md` |
+| produit | Une offre en vente | en-preparation, en-vente, retire | retire | `domaines/<domaine>/<slug>.md` |
+| support | Un support de formation ou d'atelier | en-cours, a-valider, publie | publie | `domaines/<domaine>/<slug>.md` |
+| evenement | Un atelier, un live, une rencontre | prevu, passe | passe | `domaines/<domaine>/<slug>-<date>.md` |
+| annonce | Un message à la communauté | sujet, en-cours, publie | publie | `domaines/<domaine>/<slug>-<date>.md` |
 | note | Une note perso qui dure | en-cours, clos | clos | `domaines/<domaine>/<slug>.md` |
 
 Un contenu commence à `sujet` : ce qu'on compte faire, pas encore commencé. Garde cette règle en ajoutant un type : un mot est soit un type, soit un statut, jamais les deux.

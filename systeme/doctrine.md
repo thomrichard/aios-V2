@@ -24,11 +24,11 @@ La place exacte d'un fichier se déduit de son en-tête : colonne « Chemin » d
 | Ce que c'est | Où ça va |
 |---|---|
 | Un objet d'un domaine | `domaines/<domaine>/` ; un dossier à lui s'il a plusieurs fichiers |
-| Une production datée (post, newsletter) | `domaines/<domaine>/<type>/AAAA-MM-JJ-<slug>.md` |
+| Une production datée (post, newsletter) | `domaines/<domaine>/<slug>-AA-MM.md`, sans dossier par type |
 | Un livrable, texte ou visuel | dans son domaine, jamais dans `outbox/` |
 | Un projet | `projets/<slug>.md` ; ses fichiers restent dans leur domaine |
 | Un process (une suite de skills qui revient) | `processus/<slug>.md` ; ses skills restent dans `skills/` |
-| Une connaissance durable | `savoir/concepts/` ou `savoir/sources/` |
+| Une connaissance durable (concept, source) | `savoir/<slug>.md` |
 | Un média généré, un composant d'interface | `bibliotheques/medias/`, `bibliotheques/composants/` |
 | Une capture de l'extérieur (veille, e-mail) | `inbox/`, avec `source:` dans l'en-tête ; le rangement de 2 h la classe |
 | Un PDF, un lien, un fichier qui ne peut pas porter d'en-tête | une fiche à son nom (skill `fiche`), qui le résume et lui sert d'index ; le fichier va à côté d'elle |
@@ -36,7 +36,7 @@ La place exacte d'un fichier se déduit de son en-tête : colonne « Chemin » d
 | Une image | le dossier qui s'en sert, avec sa ligne dans `_images.md` |
 | Une question du rangement qui attend ta réponse | `outbox/questions.md` ; l'élément attend dans l'inbox |
 | Un profil d'installation | `inbox/`, puis `archives/inbox/` une fois installé |
-| Un entretien (`grill-me`) | `journal/entretiens/AAAA-MM-JJ-<sujet>.md` |
+| Un entretien (`grill-me`) | `journal/entretiens/<sujet>-AA-MM.md` |
 | Le code d'un tiers (l'interface de Jay) | `interface/`, avec sa licence ; il garde ses propres règles (pas d'en-tête, pas d'`_index.md`) |
 | Un élément de l'inbox déjà traité | `archives/inbox/AAAA-MM/` |
 | Un point du jour coché ou vieux de plus de 7 jours | `archives/outbox/` |
@@ -50,7 +50,8 @@ Le socle fournit une base qui marche sans rien changer. Les domaines et les type
 ## Nommage
 
 - Minuscules, tirets, sans espaces ni accents.
-- Daté : `AAAA-MM-JJ-<slug>.md`. Durable : `<slug>.md`.
+- Daté : `<slug>-AA-MM.md`, le titre d'abord, puis l'année et le mois de `cree`. Durable : `<slug>.md`. Le point du jour garde le nom de son jour (`outbox/points/AAAA-MM-JJ.md`).
+- Pas de dossier par type : le type est dans l'en-tête. Seul le domaine est un dossier ; un objet de plusieurs fichiers a le sien.
 - Pas de dossier fourre-tout (`notes/`, `misc/`, `tmp/`). Un nouveau dossier se justifie par deux « oui » sur trois : concept nouveau, usage répété le mois suivant, place pour une future skill.
 
 ## Mettre à jour AGENTS.md

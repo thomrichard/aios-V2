@@ -88,7 +88,7 @@ Avant de dire « c'est fait », vérifie : relance le test ou relis le fichier. 
 5. Chaque dossier qui contient des images a son `_images.md` : une ligne par image (fichier, ce qu'elle montre, origine, usage). Écris la ligne dès que l'image arrive.
 6. Les `_index.md` sont générés par `systeme/scripts/index.py`. Ne les écris jamais à la main ; relance le script après avoir écrit un fichier.
 7. Quand un fichier bouge ou qu'un projet démarre, mets à jour le routeur concerné dans le même tour. La carte et les projets actifs ci-dessus suivent avec `systeme/scripts/index.py`.
-8. Nommage : minuscules, tirets, sans espaces ni accents. Daté : `AAAA-MM-JJ-<slug>.md`. Durable : `<slug>.md`. Un objet qui a plusieurs fichiers a son dossier.
+8. Nommage : minuscules, tirets, sans espaces ni accents. Daté : `<slug>-AA-MM.md` (l'année et le mois de son champ `cree`). Durable : `<slug>.md`. Pas de dossier par type : le type est dans l'en-tête, seul le domaine est un dossier. Un objet qui a plusieurs fichiers a son dossier.
 9. Ne supprime rien : déplace dans `archives/`.
 10. Pas de vidéo ni de son dans le dépôt : ils vont dans le dossier des fichiers lourds (`FICHIERS_LOURDS` dans `.env`), et leur fiche garde leur chemin (champ `fichier`).
 11. Les skills système, `systeme/scripts/`, `systeme/doctrine.md` et la base de `systeme/metadonnees.md` restent neutres, sans rien de personnel : ils forment le socle du kit.

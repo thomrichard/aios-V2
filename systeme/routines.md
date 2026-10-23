@@ -10,7 +10,7 @@ Planificateur : à choisir (serveur avec cron, launchd sur Mac, Hermes, GitHub A
 |---|---|---|---|---|---|---|---|
 | Rangement de nuit | `rangement` | — | chaque nuit, 2 h | `0 2 * * *` | active : le point du jour | à fixer | à construire |
 | Veille (exemple) | `veille` | — | lundi, 1 h | `0 1 * * 1` | passive | à fixer | à construire |
-| Fiches YouTube | — | `python3 systeme/scripts/youtube.py fiches --maj && python3 systeme/scripts/index.py` | dimanche et jeudi, 1 h | `0 1 * * 0,4` | exemple · directe, passive : met à jour les fiches de `domaines/contenu/videos/` | sans IA | à construire |
+| Fiches YouTube | — | `python3 systeme/scripts/youtube.py fiches --maj && python3 systeme/scripts/index.py` | dimanche et jeudi, 1 h | `0 1 * * 0,4` | exemple · directe, passive : met à jour les fiches vidéo de `domaines/contenu/` | sans IA | à construire |
 | Audit | `audit` | — | le 1er du mois, 1 h | `0 1 1 * *` | passive | à fixer | à construire |
 
 État : `à construire`, `en place` ou `à la demande`. La colonne Cron sert au planificateur et à l'interface (`interface/snapshots/routines.json`, générée).
