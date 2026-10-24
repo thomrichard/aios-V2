@@ -171,3 +171,25 @@ Les choix qui ont façonné le socle, et leur pourquoi. Une entrée par décisio
 - **Décision.** Les idées passent du sur mesure de Thomas au socle. Une skill `idees` : noter sans question, après le test en trois questions (un sujet, un projet ou une idée) ; creuser (`grill-me` court, dans la fiche, statut `en-reflexion`) ; faire ressortir (`vues/idee.md`, colonne Ressortir, quand un sujet proche démarre) ; trier (les `notee` de plus de 3 mois, en un lot) ; lancer (statut `lancee`, projet créé, et `projet: <slug>` sur l'idée). L'installation ajoute le type `idee` et le champ `ressortir` dans « Ce workspace » pour tout le monde, sauf refus. `AGENTS.md` a une section « Idées » de deux lignes.
 - **Pourquoi.** Thomas juge que le système concerne tout le monde.
 - **Écarté.** Le garder comme sur mesure propre à l'AIOS de Thomas. Le mettre dans la base de `systeme/metadonnees.md` : il passe par « Ce workspace », pour qu'on puisse le refuser.
+
+## 2026-10-24 · L'onglet Fichiers : un éditeur dans l'interface
+
+- **Décision.** L'interface SM4RT a un septième onglet, « Fichiers » : la liste des fichiers du workspace (par dossier, les domaines d'abord), une recherche, quatre filtres sur l'en-tête (type, statut, domaine, projet), et le fichier en aperçu, en Markdown, ou les deux côte à côte. Quatre choix :
+  1. l'éditeur vit dans l'interface existante (un onglet du second cerveau), avec le même style ;
+  2. on édite le Markdown brut, à côté d'un aperçu mis en forme ;
+  3. l'enregistrement est explicite : il met `maj` à jour et relance `index.py` ; jamais d'écrasement silencieux d'une version modifiée par un agent ou une routine ;
+  4. pas de création, de renommage ni de suppression de fichier dans cette première version.
+- **Pourquoi.** Le Markdown reste la source : rien ne se perd (l'en-tête, les tableaux). L'enregistrement relance l'index, pour que les index et les vues suivent. Ranger reste le travail de `classer` et du rangement.
+- **Écarté.** Un outil à part ; un éditeur « tel écran tel résultat » ; l'enregistrement automatique ; créer, renommer ou supprimer depuis l'éditeur.
+
+## 2026-10-24 · L'Aperçu de l'onglet Fichiers devient modifiable
+
+- **Décision.** Dans l'onglet Fichiers, on écrit directement dans l'aperçu mis en forme, sur la page entière, à la demande de Thomas : une barre de mise en forme, et les habitudes du Markdown en tapant. L'en-tête reste une carte non modifiable dans l'aperçu. Garde-fou : chaque bloc garde son texte d'origine, et seuls les blocs touchés sont réécrits en Markdown, à la façon du workspace. Précise le choix 2 de l'entrée « L'onglet Fichiers » : le Markdown reste la source.
+- **Pourquoi.** Écrire sans connaître la syntaxe. Le garde-fou évite qu'un mot changé réécrive tout le fichier : Git ne voit que le passage.
+- **Écarté.** L'édition bloc par bloc, avec une barre qui apparaît sur chaque bloc : même résultat dans le fichier, moins naturel à l'usage. Une simple barre de boutons au-dessus du Markdown.
+
+## 2026-10-24 · L'interface garde le Mac éveillé la nuit
+
+- **Décision.** Sur Mac, `interface.py installer` lance l'interface sous `caffeinate -s` : tant qu'elle tourne, le Mac ne se met pas en veille s'il est sur secteur. `etat` dit si c'est en place.
+- **Pourquoi.** Un Mac en veille ne lance pas les routines de nuit : le rangement de 2 h est parti à 10 h 26, au réveil. L'interface est déjà toujours allumée et relancée par launchd : c'est le bon endroit, sans un service de plus. Thomas le faisait déjà avec l'ancien hub de son premier AIOS.
+- **Écarté.** `pmset repeat wake` (réveil programmé) : il demande le mot de passe administrateur et touche un réglage du système. Un service à part, rien que pour `caffeinate`. Garder le Mac éveillé sur batterie : ça viderait la batterie.

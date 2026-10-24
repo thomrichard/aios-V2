@@ -1264,6 +1264,8 @@ window.BrainCore = (function () {
     const body = drawer.querySelector('.v-body');
     body.innerHTML = '<div class="v-loading">Chargement…</div>';
     drawer.querySelector('.v-open').onclick = () => apiOpen(path);
+    // AIOS: inside the OS, "Modifier" opens the file in the Fichiers tab (the file editor)
+    const edit = drawer.querySelector('.v-edit'); edit.hidden = window === parent; edit.onclick = () => parent.postMessage({ type: 'brain-copy-edit', path }, '*');
     drawer.querySelector('.v-copy').onclick = () => { navigator.clipboard.writeText((window.QUIET_SNAPSHOT?.root ? QUIET_SNAPSHOT.root + '/' : '') + path); toast('Chemin copié'); };
     try {
       const r = await fetch('/api/file?path=' + encodeURIComponent(path));
@@ -1336,7 +1338,7 @@ window.BrainCore = (function () {
       <div id="brain-card" style="display:none"></div>
       <div id="brain-panel"></div>
       <div id="brain-legend"></div>
-      <div id="brain-viewer"><div class="v-head"><div class="v-meta"><div class="v-title"></div><div class="v-path"></div></div><div class="v-btns"><button class="v-open act">Ouvrir sur l’appareil</button><button class="v-copy act">Copier le chemin</button><button class="v-close act" onclick="this.closest('#brain-viewer').classList.remove('open')">×</button></div></div><div class="v-body"></div></div>
+      <div id="brain-viewer"><div class="v-head"><div class="v-meta"><div class="v-title"></div><div class="v-path"></div></div><div class="v-btns"><button class="v-edit act" hidden>Modifier</button><button class="v-open act">Ouvrir sur l’appareil</button><button class="v-copy act">Copier le chemin</button><button class="v-close act" onclick="this.closest('#brain-viewer').classList.remove('open')">×</button></div></div><div class="v-body"></div></div>
       <div id="brain-toast"></div>`);
   }
 

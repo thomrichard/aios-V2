@@ -20,6 +20,7 @@ L'OS vit dans le dossier `interface/` du workspace. Ses guides README, BRAIN, RO
 | Flux des stats et de l'agenda | `snapshots/stats.json`, `snapshots/calendar.json`, `tools/google-calendar.js` | récupération suivante (2 minutes) |
 | L'anneau | `artifacts/` (un `.html` plus un fichier compagnon `.json` par boule) | récupération suivante |
 | La page d'accueil | `os.html` : un seul fichier modifiable | recharge la page |
+| L'onglet Fichiers (l'éditeur) | `fichiers/` (page, `app.js`, `markdown.js`, `fichiers.css`) + la section « FILES » de `server.js` | recharge ; redémarre l'OS si `server.js` a changé |
 | L'apparence du second cerveau | le `skin` dans `brain/index.html`, `copy.css`, `views/*.css` | recharge |
 
 Fichiers générés : ne les modifie jamais à la main, car la prochaine actualisation les écrase. Ce sont `brain/snapshot.js`, `brain/snapshot-expansions.js`, `brain/_icons.js`, `brain/map-layouts.js`, `assets/home-orb-mini.js`, `data/snapshot.js`, `data/arms-usage.js` et tout le reste de `data/`.

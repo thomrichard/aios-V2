@@ -292,6 +292,8 @@ Deux limites :
 
 Une routine est une tâche lancée à heure fixe par un planificateur (cron sur un serveur, launchd sur Mac, Hermes…). Le script `systeme/scripts/lancer.py` lance la skill avec l'agent choisi dans `.env` et le modèle prévu pour elle.
 
+Sur Mac, une routine de nuit ne part que si le Mac est éveillé ; sinon, elle part au réveil. L'interface, toujours allumée, s'en charge : `interface.py installer` la lance sous `caffeinate -s`, qui garde le Mac éveillé tant qu'il est sur secteur. Sur batterie, il peut dormir.
+
 Il y en a deux sortes :
 
 - **avec IA** : un prompt qui appelle une skill, quand il y a quelque chose à juger. *Exemple : le rangement de nuit.*
@@ -310,6 +312,18 @@ La liste est dans `systeme/routines.md`. Aujourd'hui, la skill du rangement de n
 `interface/` contient SM4RT, une page locale tirée de l'Agentic OS v2 de Jay E | RoboNuggets (licence MIT), traduite en français et branchée sur le workspace. Elle s'ouvre à l'adresse `http://localhost:50000` et peut rester allumée en permanence.
 
 On y trouve une page d'accueil, un « second cerveau » qui montre tout le workspace en 3D, et des vues Routines, Skills et Applications. Rien ne s'y écrit à la main : ses domaines, ses routines et ses applications sont recopiés depuis les réglages du workspace. Les changements faits au kit d'origine sont listés dans `interface/MODIFS.md`.
+
+#### L'onglet Fichiers : lire et retoucher un fichier
+
+Le septième onglet, « Fichiers », est un éditeur des fichiers du workspace. On l'ouvre aussi seul, à l'adresse `http://localhost:50000/fichiers/`.
+
+- **À gauche**, tous les fichiers, rangés par dossier, les domaines d'abord. Une recherche cherche dans le nom, le titre et le résumé, puis dans le texte, sans tenir compte des accents. Quatre filtres lisent l'en-tête : type, statut, domaine, projet. *Exemple : le filtre statut sur `a-valider`.*
+- **À droite**, le fichier : en aperçu mis en forme (l'en-tête s'affiche comme une carte), en Markdown coloré, ou les deux côte à côte, qui défilent ensemble. On coche une tâche directement dans l'aperçu. Dans un fichier en lecture seule, un double clic place le curseur sur la bonne ligne du Markdown.
+- **On écrit directement dans l'aperçu**, sans connaître la syntaxe. Une barre en haut donne : Texte, T1, T2, T3, gras, italique, lien, liste, liste numérotée, tâche, citation, et « Markdown ↗ », qui montre le passage dans le texte brut. Les habitudes du Markdown marchent aussi en tapant : « # », « ## », « ### », « - », « 1. », « > » ou « [] », puis espace. Entrée sur une tâche en crée une nouvelle ; Tab décale une liste ; ⌘ K fait un lien ; un texte collé arrive sans mise en forme. Un clic sur un lien place le curseur ; ⌘ clic ou Ctrl clic l'ouvre. L'en-tête, lui, reste une carte : il se modifie dans le Markdown. *Seuls les passages touchés sont réécrits en Markdown ; le reste du fichier revient au caractère près. Un mot changé ne réécrit pas tout le fichier.*
+- **Enregistrer** (le bouton, ou ⌘ S, ou Ctrl S) met la date du jour dans le champ `maj` et relance `index.py` : les index et les vues suivent tout de suite.
+- **Les garde-fous.** L'éditeur n'ouvre rien hors du workspace, rien de caché, rien dans `interface/`, rien qui ressemble à un secret. Les fichiers générés (`_index.md`, `vues/`, `outbox/index.html`) et ceux qui ne sont pas en UTF-8 sont en lecture seule. Si un agent ou une routine change le fichier pendant que tu l'as ouvert, il se recharge seul quand tu n'as rien modifié ; sinon, l'enregistrement te demande quelle version garder.
+
+Dans le second cerveau, le bouton « Modifier » de la visionneuse ouvre le fichier dans cet onglet. L'éditeur ne crée, ne renomme et ne supprime aucun fichier : ranger reste le travail de `classer` et du rangement de nuit.
 
 ## Ce qui se règle, et où
 

@@ -7,6 +7,7 @@
 
    Pages
      /                       the homepage plus the Second Brain (index.html, os.html, brain/, views/)
+     /fichiers/              the file editor alone (also the Second Brain's Fichiers tab)
      /widgets                the widget library
      /artifacts/<file>       the ring's balls (the artifacts folder)
    Homepage feeds (GET)
@@ -14,6 +15,10 @@
      /local/boot             all five homepage feeds in one answer, from memory
    Second Brain (GET, read only, through the engine)
      /local/search /local/meta /local/file   and /data/snapshot.js (this week's routines)
+   File editor (the Fichiers tab, read here, no engine)
+     /local/files            every file of the workspace with its header (GET)
+     /local/files/read /local/files/raw /local/files/search   one file's text, an image, a search in the text (GET)
+     /local/files/save       saves one file, then runs systeme/scripts/index.py (POST, local pages only)
    Actions (POST, local pages only)
      /api/run                runs a skills deck card through your agent's command (os-config.json "runner")
      /api/apply-comments     the "Apply all comments" runner that review pages call
@@ -27,6 +32,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const net = require('net');
+const crypto = require('crypto');
 const { execFile, spawn } = require('child_process');
 
 const [major] = process.versions.node.split('.').map(Number);
@@ -467,6 +473,164 @@ async function appsWithStatus() {
   return Promise.all(microApps.list().map(async a => ({ id: a.id, name: a.name, desc: a.desc, icon: a.icon, builtIn: a.builtIn, live: a.port ? await portOpen(a.port) : true })));
 }
 
+/* ---------------------------- FILES: the editor (fichiers/) ----------------------------
+   AIOS: the Fichiers tab lists every file of the workspace with its header, opens one, searches the text
+   and saves an edit. It never touches a file outside the workspace, in a hidden folder, in this OS folder,
+   or that looks like a secret. A save refuses a file that index.py generates and a file that changed on disk
+   since it was opened, then runs systeme/scripts/index.py so the indexes and views follow. */
+const FILES_SKIP = new Set(['node_modules', '__pycache__', 'venv', 'os-runs']);
+const FILES_MAX = 20000, READ_MAX = 900 * 1024, RAW_MAX = 25 * 1024 * 1024;
+const TEXT_EXT = new Set(['.md', '.markdown', '.txt', '.json', '.jsonl', '.js', '.mjs', '.cjs', '.ts', '.html', '.htm', '.css', '.py', '.yaml', '.yml', '.toml', '.csv', '.tsv', '.xml',
+  '.sh', '.bat', '.ps1', '.log', '.vtt', '.srt', '.ini', '.cfg', '.sql', '']);
+const IMAGE_TYPES = { '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.gif': 'image/gif', '.webp': 'image/webp', '.svg': 'image/svg+xml', '.avif': 'image/avif', '.bmp': 'image/bmp', '.ico': 'image/x-icon' };
+const kindOf = rel => { const ext = path.extname(rel).toLowerCase(); return ext === '.md' || ext === '.markdown' ? 'md' : TEXT_EXT.has(ext) ? 'text' : IMAGE_TYPES[ext] ? 'image' : 'other'; };
+/* the files systeme/scripts/index.py writes: an edit there would be overwritten at its next run */
+const generatedFile = rel => /(^|\/)_index\.md$/.test(rel) || rel.startsWith('vues/') || rel === 'outbox/index.html';
+const sha1 = buf => crypto.createHash('sha1').update(buf).digest('hex');
+const httpError = (status, message) => Object.assign(new Error(message), { status });
+/* the same reading as lire_entete in index.py: the lines between two ---, "key: value", [a, b] lists */
+function readHeader(text) {
+  const lines = text.split(/\r?\n/), out = {};
+  if (!lines.length || lines[0].trim() !== '---') return out;
+  for (const line of lines.slice(1)) {
+    if (line.trim() === '---') break;
+    if (!line.includes(':') || /^[ \t-]/.test(line)) continue;
+    const i = line.indexOf(':');
+    let v = line.slice(i + 1).split(' #')[0].trim().replace(/^["']|["']$/g, '');
+    if (v.startsWith('[') && v.endsWith(']')) v = v.slice(1, -1).split(',').map(x => x.trim().replace(/^["']|["']$/g, '')).filter(Boolean).join(', ');
+    out[line.slice(0, i).trim()] = v;
+  }
+  return out;
+}
+function editorTarget(rel, mustExist = true) {
+  const root = workspaceRoot();
+  if (!root) throw httpError(400, 'Aucun workspace défini (config/workspace.json)');
+  const clean = String(rel || '').replace(/\\/g, '/').replace(/^\/+/, '');
+  const abs = inside(root, clean);
+  if (!abs || abs === root) throw httpError(404, 'Introuvable');
+  const r = path.relative(root, abs).split(path.sep).join('/');
+  if (abs === KIT || abs.startsWith(KIT + path.sep) || r.split('/').some(s => s.startsWith('.') || FILES_SKIP.has(s))) throw httpError(403, 'Ce fichier n’est pas dans ceux de l’éditeur');
+  if (scan.isSecret(r)) throw httpError(403, 'Ce fichier ressemble à un secret : l’éditeur ne l’ouvre pas');
+  if (!mustExist) return { abs, rel: r, root };
+  /* the same checks on the real path: a link, or other capitals on a Mac, never reach past them */
+  let real; try { real = fs.realpathSync.native(abs); } catch (_) { throw httpError(404, 'Introuvable'); }
+  const realRoot = fs.realpathSync.native(root), realKit = fs.realpathSync.native(KIT);
+  if (!real.startsWith(realRoot + path.sep)) throw httpError(403, 'Ce fichier mène hors du workspace');
+  const rr = path.relative(realRoot, real).split(path.sep).join('/');
+  if (real === realKit || real.startsWith(realKit + path.sep) || rr.split('/').some(s => s.startsWith('.') || FILES_SKIP.has(s))) throw httpError(403, 'Ce fichier n’est pas dans ceux de l’éditeur');
+  if (scan.isSecret(rr)) throw httpError(403, 'Ce fichier ressemble à un secret : l’éditeur ne l’ouvre pas');
+  const st = fs.statSync(real);
+  if (!st.isFile()) throw httpError(400, 'Ce n’est pas un fichier');
+  return { abs: real, rel: r, root, st };
+}
+/* headers are read again only when a file's date or size changes */
+const headerCache = new Map();
+function listFiles() {
+  const root = workspaceRoot();
+  if (!root) return { error: 'Aucun workspace défini (config/workspace.json)', files: [], dirs: [] };
+  const files = [], dirs = [], seen = new Set();
+  const walk = (dir, rel) => {
+    let entries; try { entries = fs.readdirSync(dir, { withFileTypes: true }); } catch (_) { return; }
+    for (const e of entries) {
+      if (files.length >= FILES_MAX) return;
+      if (e.name.startsWith('.') || FILES_SKIP.has(e.name) || e.isSymbolicLink()) continue;
+      const abs = path.join(dir, e.name), r = rel ? rel + '/' + e.name : e.name;
+      if (e.isDirectory()) { if (abs === KIT) continue; dirs.push(r); walk(abs, r); continue; }
+      if (!e.isFile() || scan.isSecret(r)) continue;
+      let st; try { st = fs.statSync(abs); } catch (_) { continue; }
+      const k = kindOf(r), f = { p: r, s: st.size, m: Math.round(st.mtimeMs), k };
+      if (generatedFile(r)) f.g = 1;
+      if (k === 'md' && st.size <= READ_MAX) {
+        let hit = headerCache.get(r);
+        if (!hit || hit.m !== f.m || hit.s !== f.s) {
+          let text = ''; try { text = fs.readFileSync(abs, 'utf8'); } catch (_) { }
+          const body = text.replace(/^---\r?\n[\s\S]*?\r?\n---[ \t]*(\r?\n|$)/, '');
+          hit = { m: f.m, s: f.s, h: readHeader(text), t: ((body.match(/^#\s+(.+)$/m) || [])[1] || '').trim().slice(0, 160) };
+          headerCache.set(r, hit);
+        }
+        if (Object.keys(hit.h).length) f.h = hit.h;
+        if (hit.t) f.t = hit.t;
+      }
+      seen.add(r); files.push(f);
+    }
+  };
+  walk(root, '');
+  for (const k of headerCache.keys()) if (!seen.has(k)) headerCache.delete(k);
+  return { root, files, dirs, truncated: files.length >= FILES_MAX };
+}
+function readForEditor(rel) {
+  const t = editorTarget(rel), kind = kindOf(t.rel);
+  const base = { path: t.rel, kind, size: t.st.size, mtime: Math.round(t.st.mtimeMs), generated: generatedFile(t.rel) };
+  if (kind !== 'md' && kind !== 'text') return base;
+  if (t.st.size > READ_MAX) return { ...base, tooBig: true };
+  const buf = fs.readFileSync(t.abs), content = buf.toString('utf8');
+  /* a file that is not UTF-8 would come back damaged: it opens read only */
+  const utf8 = Buffer.from(content, 'utf8').equals(buf);
+  return { ...base, content, hash: sha1(buf), editable: !base.generated && utf8, notUtf8: !utf8 || undefined };
+}
+/* a search in the text of every Markdown and text file: accents and case do not count */
+const fold = s => String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+function searchFiles(q) {
+  const needle = fold(String(q || '').trim()).slice(0, 200);
+  if (needle.length < 2) return { q, results: [] };
+  const { root, files } = listFiles(), results = [];
+  for (const f of files) {
+    if ((f.k !== 'md' && f.k !== 'text') || f.s > READ_MAX) continue;
+    let text; try { text = fs.readFileSync(path.join(root, f.p), 'utf8'); } catch (_) { continue; }
+    const folded = fold(text);
+    let at = folded.indexOf(needle);
+    if (at < 0) continue;
+    let n = 0; for (let i = at; i >= 0 && n < 99; i = folded.indexOf(needle, i + needle.length)) n++;
+    /* the line of the first hit; folding keeps one character per character for the letters used here */
+    const line = folded.slice(0, at).split('\n').length, raw = text.split(/\r?\n/)[line - 1] || '', col = fold(raw).indexOf(needle);
+    const from = Math.max(0, col - 50), snippet = (from ? '…' : '') + raw.slice(from, from + 150).trim() + (raw.length > from + 150 ? '…' : '');
+    results.push({ p: f.p, line, n, text: snippet });
+    if (results.length >= 80) break;
+  }
+  return { q, results };
+}
+/* index.py after each save of a Markdown file, one run at a time */
+let indexChain = Promise.resolve();
+function runIndex(root) {
+  const script = path.join(root, 'systeme', 'scripts', 'index.py');
+  if (!fs.existsSync(script)) return Promise.resolve({ ran: false });
+  const pythons = process.platform === 'win32' ? ['py', 'python'] : ['python3', 'python'];
+  const attempt = i => new Promise(ok => execFile(pythons[i], [script], { cwd: root, timeout: 30000, windowsHide: true }, (err, stdout, stderr) => {
+    if (err && err.code === 'ENOENT' && i + 1 < pythons.length) return ok(attempt(i + 1));
+    ok(err ? { ran: true, ok: false, message: String(err.code === 'ENOENT' ? 'Python introuvable' : (stderr || err.message)).trim().slice(0, 300) } : { ran: true, ok: true, message: String(stdout).trim().slice(0, 300) });
+  }));
+  const job = indexChain.then(() => attempt(0));
+  indexChain = job.catch(() => { });
+  return job;
+}
+async function saveFile({ path: rel, content, base, force }) {
+  if (typeof content !== 'string') throw httpError(400, 'Rien à enregistrer');
+  const t = editorTarget(rel), kind = kindOf(t.rel);
+  if (kind !== 'md' && kind !== 'text') throw httpError(400, 'Ce fichier ne se modifie pas dans l’éditeur');
+  if (generatedFile(t.rel)) throw httpError(403, 'Ce fichier est généré par systeme/scripts/index.py : modifie plutôt les fichiers dont il vient');
+  const current = fs.readFileSync(t.abs), currentHash = sha1(current);
+  if (!Buffer.from(current.toString('utf8'), 'utf8').equals(current)) throw httpError(400, 'Ce fichier n’est pas en UTF-8 : l’éditeur ne l’enregistre pas, pour ne pas l’abîmer');
+  if (!force && base !== currentHash) return { conflict: true, hash: currentHash, mtime: Math.round(t.st.mtimeMs) };
+  const buf = Buffer.from(content, 'utf8');
+  if (sha1(buf) !== currentHash) {
+    /* written beside it, then put in its place: a cut-off write never leaves half a file */
+    const tmp = path.join(path.dirname(t.abs), '.' + path.basename(t.abs) + '.' + process.pid + '.tmp');
+    fs.writeFileSync(tmp, buf, { mode: t.st.mode & 0o777 });
+    try { fs.renameSync(tmp, t.abs); } catch (e) { try { fs.unlinkSync(tmp); } catch (_) { } throw e; }
+  }
+  const index = kind === 'md' ? await runIndex(t.root) : { ran: false };
+  const after = fs.readFileSync(t.abs), st = fs.statSync(t.abs), hash = sha1(after);
+  /* index.py may rewrite this very file (the generated blocks of AGENTS.md): send the new text back */
+  return { ok: true, path: t.rel, hash, mtime: Math.round(st.mtimeMs), index, content: hash !== sha1(buf) ? after.toString('utf8') : undefined };
+}
+function serveRaw(req, res, rel) {
+  const t = editorTarget(rel), type = IMAGE_TYPES[path.extname(t.rel).toLowerCase()];
+  if (!type) throw httpError(400, 'Seules les images s’affichent ici');
+  if (t.st.size > RAW_MAX) throw httpError(413, 'Image trop lourde pour l’aperçu');
+  res.writeHead(200, { 'Content-Type': type, 'Content-Length': t.st.size, 'Cache-Control': 'no-cache', 'X-Content-Type-Options': 'nosniff', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'; sandbox" });
+  fs.createReadStream(t.abs).pipe(res);
+}
+
 /* ---------------------------- THE SECOND BRAIN'S DATA ---------------------------- */
 const FEEDS = { '/api/calendar': () => cached('cal', 120000, getCalendar), '/api/artifacts': async () => getArtifacts(), '/api/routines': () => cached('rt', 60000, getRoutines), '/api/stats': () => cached('stats', 60000, getStats), '/api/email': () => cached('mail', 180000, getEmail) };
 async function boot() {
@@ -506,12 +670,12 @@ function needsFirstRefresh() {
 }
 
 /* ---------------------------- static files ----------------------------
-   Only the page files are served: the shell, the homepage, assets/, brain/, views/ and the two
+   Only the page files are served: the shell, the homepage, assets/, brain/, views/, fichiers/ and the two
    page data files. Config, snapshots, logs, engine and refresh code are never served. */
 const MIME = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg',
   '.webp': 'image/webp', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.ico': 'image/x-icon', '.gif': 'image/gif', '.mp4': 'video/mp4', '.txt': 'text/plain' };
 const PUBLIC_FILES = new Set(['index.html', 'os.html', 'copy.css', 'copy.js', 'shell-extras.js', 'view-transitions.js', 'widgets.html']);
-const PUBLIC_DIRS = ['assets', 'brain', 'views'];
+const PUBLIC_DIRS = ['assets', 'brain', 'views', 'fichiers'];
 function publicFile(p2) {
   let rel; try { rel = decodeURIComponent(p2).replace(/^\/+/, ''); } catch (_) { return null; }
   if (!rel || rel.includes('\0') || rel.includes('\\')) return null;
@@ -564,6 +728,15 @@ const server = http.createServer(async (req, res) => {
       return m && m.totalFiles !== undefined ? sendJson(res, { totalFiles: m.totalFiles, totalDirs: m.totalDirs, scannedAt: m.scannedAt, workspaceSet: m.workspaceSet }) : sendJson(res, { error: 'Pas encore de nombre de fichiers.' }, 502);
     }
     if (p2 === '/local/refresh' && post) return sendJson(res, await refreshBrain());
+    /* ---- the file editor ---- */
+    if (p2.startsWith('/local/files') && !post) {
+      try {
+        if (p2 === '/local/files') return sendJson(res, listFiles());
+        if (p2 === '/local/files/read') { const r = readForEditor(u.searchParams.get('path')); if (u.searchParams.get('stat')) delete r.content; return sendJson(res, r); }
+        if (p2 === '/local/files/search') return sendJson(res, searchFiles(u.searchParams.get('q')));
+        if (p2 === '/local/files/raw') return serveRaw(req, res, u.searchParams.get('path'));
+      } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); }
+    }
     if (p2 === '/data/snapshot.js') return sendScript(res, 'window.COPY_DATA=' + JSON.stringify(routinesLib.calendarData(routineSources.allRoutines())) + ';');
     if (p2 === '/data/arms-usage.js') { const f = path.join(DATA, 'arms-usage.js'); return fs.existsSync(f) ? serveFile(req, res, f) : sendScript(res, 'window.ARMS_USAGE=null;'); }
 
@@ -593,6 +766,10 @@ const server = http.createServer(async (req, res) => {
       return sendJson(res, { job: job.jobId, file }, 200, cors);
     }
     if (post && !isJson(req)) return sendJson(res, { error: 'send JSON (Content-Type: application/json)' }, 415);
+    if (post && p2 === '/local/files/save') {
+      let q; try { q = JSON.parse(await readBody(req) || '{}'); } catch (e) { return sendJson(res, { error: e.status ? e.message : 'le corps de la requête n’est pas du JSON' }, e.status || 400); }
+      try { const r = await saveFile(q); return sendJson(res, r, r.conflict ? 409 : 200); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); }
+    }
     if (post && p2 === '/api/run') {
       const { id, model, effort } = JSON.parse(await readBody(req) || '{}');
       const skill = SKILLS.find(s => s.id === id);
@@ -631,6 +808,8 @@ const server = http.createServer(async (req, res) => {
     /* ---- pages ---- */
     if (p2 === '/' || p2 === '/index.html') return serveFile(req, res, path.join(KIT, 'index.html'));
     if (p2 === '/widgets' || p2 === '/widgets/') return serveFile(req, res, path.join(KIT, 'widgets.html'));
+    if (p2 === '/fichiers') { res.writeHead(302, { Location: '/fichiers/' }); return res.end(); }
+    if (p2 === '/fichiers/') return serveFile(req, res, path.join(KIT, 'fichiers', 'index.html'));
     if (p2.startsWith('/artifacts/')) {
       let rel; try { rel = decodeURIComponent(p2.slice('/artifacts/'.length)); } catch (_) { rel = null; }
       const f = rel && !rel.startsWith('_trash') ? inside(ARTIFACTS, rel) : null;

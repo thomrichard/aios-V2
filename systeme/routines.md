@@ -5,6 +5,7 @@ Une routine directe lance sa commande sans IA : `systeme/scripts/lancer.py <rout
 Une routine active te remet quelque chose à lire ; une routine passive ne remonte dans le point du jour que ce qui mérite ton attention.
 
 Planificateur : à choisir (serveur avec cron, launchd sur Mac, Hermes, GitHub Actions). Sur Mac, une routine en place a son fichier `~/Library/LaunchAgents/com.sm4rt.<routine>.plist`.
+Un Mac qui dort ne lance rien : la routine part au réveil. `systeme/scripts/interface.py installer` garde le Mac éveillé tant qu'il est sur secteur (`caffeinate -s`) ; sur batterie, il peut dormir.
 
 | Routine | Skill | Commande | Quand | Cron | Type | Plafond par semaine | État |
 |---|---|---|---|---|---|---|---|

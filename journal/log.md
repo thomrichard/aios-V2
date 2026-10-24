@@ -44,3 +44,6 @@ Ajout seul. Format : `- AAAA-MM-JJ · <action> | <sujet>`
 - 2026-10-24 · ajout | skill idees ; le type idee et le champ ressortir ajoutés à chaque installation
 - 2026-10-24 · socle | récupère les PR n° 26 et 27 (skill idees, documentation) ; la section « Idées » d'AGENTS.md prend celle du socle
 - 2026-10-24 · ménage | ancien log `~/IA-OS/.scripts/skool-churn-daily.log` vidé (cookie masqué) ; connexion de la CLI `claude` refaite, `loggedIn: true`
+- 2026-10-24 · ajout | l'onglet Fichiers de l'interface : voir, chercher, filtrer et modifier les fichiers du workspace
+- 2026-10-24 · ajout | l'Aperçu de l'onglet Fichiers devient modifiable (barre de mise en forme, raccourcis Markdown)
+- 2026-10-24 · socle | PR n° 32 : l'interface garde le Mac éveillé la nuit (caffeinate -s) ; récupère les PR n° 28 à 32
