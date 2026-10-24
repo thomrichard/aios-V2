@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Garde l'interface (interface/server.js) allumée en permanence : elle démarre avec ta session
-et redémarre seule si elle s'arrête.
+et redémarre seule si elle s'arrête. Sur macOS, elle garde aussi le Mac éveillé tant qu'il est sur secteur
+(caffeinate -s), pour que les routines de nuit partent à l'heure ; sur batterie, il peut dormir.
 
 Usage : python3 systeme/scripts/interface.py installer | retirer | etat [--essai]
   installer : démarrage automatique (macOS : launchd ; Linux : systemd --user)
@@ -25,6 +26,7 @@ JOURNAL = os.path.join(INTERFACE, "os-runs", "serveur.log")
 NOM = "com.sm4rt.interface"
 PLIST = os.path.expanduser(f"~/Library/LaunchAgents/{NOM}.plist")
 UNITE = os.path.expanduser("~/.config/systemd/user/sm4rt-interface.service")
+CAFE = "/usr/bin/caffeinate"
 
 
 def port():
@@ -53,7 +55,8 @@ def node():
 def installer_mac(essai):
     contenu = plistlib.dumps({
         "Label": NOM,
-        "ProgramArguments": [node(), SERVEUR],
+        # caffeinate -s garde le Mac éveillé sur secteur, sinon les routines de nuit partent au réveil.
+        "ProgramArguments": ([CAFE, "-s"] if os.path.exists(CAFE) else []) + [node(), SERVEUR],
         "WorkingDirectory": INTERFACE,
         "RunAtLoad": True,
         "KeepAlive": True,
@@ -116,6 +119,10 @@ def systeme():
 def etat():
     installe = os.path.exists(PLIST) or os.path.exists(UNITE)
     print(f"Démarrage automatique : {'en place' if installe else 'absent'}")
+    if os.path.exists(PLIST):
+        with open(PLIST, "rb") as f:
+            eveille = plistlib.load(f).get("ProgramArguments", [""])[0] == CAFE
+        print(f"Mac gardé éveillé sur secteur : {'oui' if eveille else 'non (relance installer)'}")
     if repond():
         print(f"L'interface répond : http://localhost:{port()}")
     else:
