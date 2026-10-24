@@ -6,9 +6,10 @@ Une vue par type et par projet, générée depuis les en-têtes : tous les fichi
 
 | Vue | Ce qu'elle montre | Fichiers |
 |---|---|---|
-| [cloture](cloture.md) | Le bilan d'une session longue, écrit par la skill `close` | 2 |
+| [cloture](cloture.md) | Le bilan d'une session longue, écrit par la skill `close` | 3 |
 | [concept](concept.md) | Une connaissance durable | 4 |
 | [entretien](entretien.md) | La fiche d'un entretien `grill-me` | 1 |
+| [idee](idee.md) | Un truc que j'aimerais peut-être creuser un jour, sans engagement | 2 |
 | [livrable](livrable.md) | Ce qu'on remet à quelqu'un, texte ou visuel | 2 |
 | [okr](okr.md) | Les objectifs et résultats clés du trimestre | 1 |
 | [processus](../processus/_index.md) | Une suite de skills qui revient | 2 |

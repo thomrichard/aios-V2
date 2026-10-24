@@ -38,3 +38,6 @@ Ajout seul. Format : `- AAAA-MM-JJ · <action> | <sujet>`
 - 2026-10-24 · routine jeton-skool | jeton vérifié, session : 312 j
 - 2026-10-24 · réglage | type newsletter (sujet, en-cours, a-valider, publie) ; perso couvre aussi la maison et les projets perso ; systeme/idees.md part dans archives/
 - 2026-10-24 · réglage | type atelier (a-preparer, en-vente, termine, annule), une fiche par édition, pour la relance des ateliers
+- 2026-10-24 · close | session vues, idées et sauvegarde de nuit : socle récupéré (PR #20 à #25), types idee, newsletter et atelier, sauvegarde vers prive en place
+- 2026-10-24 · processus rangement | 2 rangés, 8 questions
+- 2026-10-24 · skool | schéma de la leçon 2 « Pourquoi Claude oublie quand la discussion dure ? » remplacé, avec le titre court https://www.skool.com/club-smart/classroom/17480787?md=d86dccce69244ce9be771bd364ca5995
