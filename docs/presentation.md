@@ -315,7 +315,7 @@ On y trouve une page d'accueil, un « second cerveau » qui montre tout le works
 
 Le septième onglet, « Fichiers », est un éditeur des fichiers du workspace. On l'ouvre aussi seul, à l'adresse `http://localhost:50000/fichiers/`.
 
-- **À gauche**, tous les fichiers, rangés par dossier, les domaines d'abord. Une recherche cherche dans le nom, le titre et le résumé, puis dans le texte, sans tenir compte des accents. Quatre filtres lisent l'en-tête : type, statut, domaine, projet. *Exemple : tous les livrables `a-valider` du domaine `clients`.*
+- **À gauche**, tous les fichiers, rangés par dossier, les domaines d'abord. Une recherche cherche dans le nom, le titre et le résumé, puis dans le texte, sans tenir compte des accents. Quatre filtres lisent l'en-tête : type, statut, domaine, projet. *Exemple : le filtre statut sur `a-valider`.*
 - **À droite**, le fichier : en aperçu mis en forme (l'en-tête s'affiche comme une carte), en Markdown coloré, ou les deux côte à côte, qui défilent ensemble. On coche une tâche directement dans l'aperçu ; un double clic place le curseur sur la bonne ligne.
 - **Enregistrer** (le bouton, ou ⌘ S, ou Ctrl S) met la date du jour dans le champ `maj` et relance `index.py` : les index et les vues suivent tout de suite.
 - **Les garde-fous.** L'éditeur n'ouvre rien hors du workspace, rien de caché, rien dans `interface/`, rien qui ressemble à un secret. Les fichiers générés (`_index.md`, `vues/`, `outbox/index.html`) et ceux qui ne sont pas en UTF-8 sont en lecture seule. Si un agent ou une routine change le fichier pendant que tu l'as ouvert, il se recharge seul quand tu n'as rien modifié ; sinon, l'enregistrement te demande quelle version garder.
