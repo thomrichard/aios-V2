@@ -12,7 +12,7 @@ Planificateur : à choisir (serveur avec cron, launchd sur Mac, Hermes, GitHub A
 | Veille | `veille` | — | lundi, 1 h | `0 1 * * 1` | passive : dépose ses captures dans `inbox/` | à fixer | à construire |
 | Stats YouTube | `stats-youtube` | — | lundi, 1 h | `0 1 * * 1` | passive : signale une vidéo qui décroche ou surperforme | à fixer | à construire |
 | Fiches YouTube | — | `python3 systeme/scripts/youtube.py fiches --maj && python3 systeme/scripts/index.py` | dimanche et jeudi, 1 h | `0 1 * * 0,4` | directe, passive : met à jour les fiches vidéo de `domaines/contenu/` | sans IA | en place |
-| Sauvegarde de nuit | — | `git add -A; git commit -q -m "Sauvegarde de nuit"; git push -q prive main` | chaque nuit, 3 h | `0 3 * * *` | directe, passive : envoie le travail du jour vers prive | sans IA | à construire |
+| Sauvegarde de nuit | — | `git add -A; git commit -q -m "Sauvegarde de nuit"; git push -q prive main` | chaque nuit, 3 h | `0 3 * * *` | directe, passive : envoie le travail du jour vers prive | sans IA | en place |
 | Audit | `audit` | — | le 1er du mois, 1 h | `0 1 1 * *` | passive | à fixer | à construire |
 | Jeton Skool | — | `bash ~/Dev/skool-toolkit/routines/skool.sh jeton` | chaque jour, 8 h 37 | `37 8 * * *` | directe, passive : renouvelle le jeton WAF de Skool s'il a expiré, prévient à J-7 de la fin de session | sans IA | en place |
 | Revenus Skool | — | `bash ~/Dev/skool-toolkit/routines/skool.sh revenus` | le 2 du mois, 1 h | `0 1 2 * *` | directe, passive : refait `domaines/communaute/revenus-club-smart.md` et la ligne Club SMART de `domaines/operations/revenus.md` | sans IA | en place |

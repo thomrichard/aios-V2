@@ -45,7 +45,7 @@
       "name": "Sauvegarde de nuit",
       "source": "planificateur",
       "desc": "chaque nuit, 3 h · sans IA · directe, passive : envoie le travail du jour vers prive",
-      "status": "paused",
+      "status": "active",
       "cron": "0 3 * * *"
     },
     {
