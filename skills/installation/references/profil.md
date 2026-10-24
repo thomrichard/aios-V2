@@ -64,6 +64,10 @@ Rempli avec `grill-me` et la liste `skills/installation/references/questions.md`
 
 ### Q14 · Le dossier de mes vidéos et de mes sons, hors du dépôt
 
+## Sauvegarde
+
+### Q15 · L'adresse de mon dépôt privé, pour la sauvegarde de nuit
+
 ## En plus (facultatif) · Décisions déjà prises
 
 Une ligne par décision, avec son pourquoi. Elles iront dans `journal/decisions.md`.
