@@ -150,6 +150,21 @@ button.icon{width:34px;padding:0;display:grid;place-items:center}
 .img-view figcaption{margin-top:12px;font-size:11px;letter-spacing:.4px;color:#77746c}
 .other{text-align:center;color:#a9a69d}.other p{margin:0 0 16px;font-size:14px}
 
+/* writing in the styled view: the bar sticks to the top of the pane */
+#fmt{position:sticky;top:0;z-index:5;display:flex;align-items:center;flex-wrap:wrap;gap:6px;padding:8px 14px;background:rgba(0,0,0,.94);border-bottom:1px solid #ffffff12;backdrop-filter:blur(6px)}
+#fmt .seg button{min-width:30px;padding:0 9px;display:inline-grid;place-items:center}
+#fmt .seg button b,#fmt .seg button i{font-size:13px}
+#fmt button[aria-pressed=true]{background:#1d1c1a;color:var(--accent-ink)}
+.fmt-hint{font-size:10.5px;color:#5f5d57;margin-left:auto;white-space:nowrap}
+#fmt .fmt-src{height:28px;font-size:11.5px;padding:0 9px;color:#9c998f;background:#070707;border-color:var(--line)}
+#preview[contenteditable=true]{outline:none;caret-color:var(--accent-ink)}
+.md ::selection{background:rgba(255,107,26,.3)}
+#preview[contenteditable=true] a{cursor:text}
+#preview[contenteditable=true] .fm{cursor:default;user-select:none}
+#preview[contenteditable=true] .blk:empty{min-height:1em}
+@media(max-width:1100px){.fmt-hint{display:none}}
+#modal-input{width:100%;height:36px;margin:0 0 16px;padding:0 10px;border:1px solid #34332c;border-radius:7px;background:#0a0a0a;color:#ece8de;font:13px var(--mono);outline:none}#modal-input:focus{border-color:#6e3c22}
+
 /* ---------- messages ---------- */
 #toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,10px);max-width:min(560px,calc(100vw - 32px));padding:10px 14px;border:1px solid #34332c;background:#111;border-radius:6px;font-size:12px;opacity:0;pointer-events:none;transition:.2s;z-index:100}
 #toast.on{opacity:1;transform:translate(-50%,0)}#toast.ok{border-color:#2f5a35;color:#9fdaa8}#toast.bad{border-color:#6b2f28;color:#ff9a8d}#toast.warn{border-color:#5a4515;color:var(--gold)}
