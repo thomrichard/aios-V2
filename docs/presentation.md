@@ -120,6 +120,18 @@ Trois cas particuliers :
 - **Une image** n'a pas d'en-tête : elle a sa ligne dans le fichier `_images.md` de son dossier (ce qu'elle montre, d'où elle vient, à quoi elle sert).
 - **Les vidéos et les sons** sont trop lourds pour le dépôt. Ils vont dans un dossier à part, par exemple un dossier Google Drive synchronisé, réglé une fois dans `.env` (ligne `FICHIERS_LOURDS`). Leur fiche, elle, reste dans le workspace et garde leur chemin.
 
+### Retrouver un fichier : les index et les vues
+
+Un fichier est rangé dans son domaine, et son type n'est écrit que dans son en-tête : aucun dossier `videos/` ou `idees/`. Alors comment voir toutes tes idées, ou tout ce qui sert un projet ? Avec les **vues**. Le script `index.py` les génère depuis les en-têtes, dans le dossier `vues/` :
+
+- **une vue par type** (`vues/<type>.md`) : tous les fichiers de ce type, tous domaines confondus. Les vivants viennent d'abord, dans l'ordre de leurs statuts, puis ceux qui sont finis. Chaque ligne donne le domaine, le résumé, le statut, la date de la dernière retouche, et les champs propres au type qui sont remplis. *Exemple : `vues/idee.md` montre toutes tes idées, de `notee` à `abandonnee`, avec leur colonne « Ressortir ».*
+- **une vue par projet** (`vues/projet-<slug>.md`) : tous les fichiers qui portent ce projet dans leur en-tête, où qu'ils soient rangés. *Exemple : la vidéo et le tableau d'un même lancement, rangés dans deux domaines, apparaissent sur une seule page.*
+- **la liste des vues** (`vues/_index.md`).
+
+Une vue sans fichier disparaît, et le vérificateur signale une vue pas à jour. Chaque dossier garde aussi son `_index.md`, qui a désormais une colonne Type.
+
+L'agent les trouve sans skill de recherche : le nom d'une vue est celui du type, et une ligne d'`AGENTS.md` (« Où chercher ») y mène. Deux sauts suffisent : `AGENTS.md`, puis la vue.
+
 ### La preuve : une vraie nuit
 
 La vraie routine de nuit a tourné sur un faux AIOS : deux domaines, six éléments dans l'inbox. En une minute :
@@ -314,6 +326,7 @@ flowchart LR
     M["systeme/metadonnees.md<br/>(on change une ligne)"] --> S[[index.py]]
     S --> A["AGENTS.md<br/>carte des domaines, projets actifs"]
     S --> U["Interface SM4RT<br/>départements"]
+    S --> VU["vues/ et _index.md<br/>depuis les en-têtes"]
     A --> C[Claude Code]
     A --> O[Codex]
     A --> G[Gemini CLI]
@@ -346,5 +359,4 @@ Le socle ne fait pas tout. Chacun ajoute ce qui lui manque, dans sa section « C
 
 Ce qui suit n'est pas encore fait.
 
-- **Les vues.** Des index qui traversent les domaines, générés depuis les en-têtes et définis dans un tableau. *Par exemple : tout ce qui est `a-valider`, quel que soit le domaine.*
 - **Les routines encore à construire** : la veille, l'audit mensuel, les fiches YouTube, et le branchement du rangement de nuit sur un planificateur.
