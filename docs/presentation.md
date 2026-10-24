@@ -344,6 +344,8 @@ Pour brancher une application (Notion, un agenda, une messagerie…), tu dis « 
 
 `search-connectors` est réécrite d'après ce que Jay E | RoboNuggets montre de la sienne : son fichier n'est pas public.
 
+*Un exemple de connexion par l'API : `systeme/scripts/kit.py` lit un compte Kit (la newsletter) en lecture seule, avec la clé `KIT_API_KEY` dans `.env`. « kit.py point » donne les abonnés, leur croissance et les stats des derniers envois.*
+
 ## Un exemple de sur mesure : les idées « un jour, peut-être »
 
 Le socle ne fait pas tout. Chacun ajoute ce qui lui manque, dans sa section « Ce workspace ». Voici ce que Thomas a ajouté dans son propre AIOS (ce n'est pas dans le socle) :
