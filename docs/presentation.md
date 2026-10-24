@@ -292,6 +292,8 @@ Deux limites :
 
 Une routine est une tâche lancée à heure fixe par un planificateur (cron sur un serveur, launchd sur Mac, Hermes…). Le script `systeme/scripts/lancer.py` lance la skill avec l'agent choisi dans `.env` et le modèle prévu pour elle.
 
+Sur Mac, une routine de nuit ne part que si le Mac est éveillé ; sinon, elle part au réveil. L'interface, toujours allumée, s'en charge : `interface.py installer` la lance sous `caffeinate -s`, qui garde le Mac éveillé tant qu'il est sur secteur. Sur batterie, il peut dormir.
+
 Il y en a deux sortes :
 
 - **avec IA** : un prompt qui appelle une skill, quand il y a quelque chose à juger. *Exemple : le rangement de nuit.*
