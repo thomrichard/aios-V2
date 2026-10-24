@@ -29,7 +29,7 @@ Le reste est rangé pour l'IA. Tu n'as jamais besoin de l'ouvrir.
 
 ## L'interface
 
-`interface/` contient SM4RT, l'interface tirée de l'Agentic OS v2 de Jay E | RoboNuggets (licence MIT), déjà branchée sur le workspace : page d'accueil, second cerveau en 3D, vues Routines, Skills et Applications. Il faut Node.js 18 ou plus.
+`interface/` contient SM4RT, l'interface tirée de l'Agentic OS v2 de Jay E | RoboNuggets (licence MIT), déjà branchée sur le workspace : page d'accueil, second cerveau en 3D, vues Routines, Skills et Applications, et un éditeur de fichiers (onglet Fichiers, ou `http://localhost:50000/fichiers/`). Il faut Node.js 18 ou plus.
 
 1. `node interface/refresh/run.mjs` construit la carte du workspace.
 2. `python3 systeme/scripts/interface.py installer` la garde allumée en permanence : elle démarre avec ta session et redémarre seule. Ouvre `http://localhost:50000`. Pour la lancer une seule fois : `node interface/server.js`.

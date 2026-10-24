@@ -54,7 +54,8 @@ Tu installes ce kit pour ton utilisateur, dans son workspace. Respecte ce que tu
 
 - **Démarrer :** `node server.js`. Il lance le moteur du second cerveau à côté. Arrête les deux avec Ctrl+C.
 - **L'orbe :** clique en son centre pour zoomer dans ton second cerveau. Là, appuie sur `/` pour rechercher n'importe quel fichier par son nom, et sur Retour (ou Échap) pour revenir à l'accueil.
-- **Les six onglets :** Orbes 3D, Carte 2D, Frise, Routines, Skills et Applications.
+- **Les sept onglets :** Orbes 3D, Carte 2D, Frise, Routines, Skills, Applications et Fichiers.
+- **Fichiers :** tous les fichiers du workspace à gauche, rangés par dossier (les domaines d'abord), avec une recherche (nom, résumé, puis le texte) et des filtres sur l'en-tête (type, statut, domaine, projet). Un clic ouvre le fichier : Aperçu (mis en forme), Markdown (le texte brut) ou Les deux côte à côte. On modifie, puis on enregistre (⌘ S ou Ctrl S) : le champ `maj` prend la date du jour et `systeme/scripts/index.py` repasse. Un fichier changé ailleurs pendant qu'il est ouvert ne s'écrase jamais sans qu'on le demande ; un fichier généré s'ouvre en lecture seule. Aussi seul, à l'adresse `/fichiers/`.
 - **L'icône d'actualisation** (en haut à droite dans le second cerveau) reconstruit la carte, les skills, les routines, les apps et l'usage. Aucun appel au modèle. `node refresh/run.mjs` fait la même chose depuis un terminal.
 - **L'anneau :** chaque page HTML de `artifacts/` est une boule. Survole la boule orange pour voir tous les noms, appuie sur `/` pour rechercher, fais un clic droit sur une boule pour OUVRIR ou RETIRER (les boules retirées vont dans `artifacts/_trash`).
 - **Micro-apps :** chaque tuile ouvre son app si elle tourne sur cet ordinateur, sinon sa page. « Ajouter » donne à ton agent un prompt prêt à l'emploi pour ajouter tes propres apps.
@@ -87,6 +88,7 @@ interface/
   assets/              polices, l'orbe, scripts partagés
   brain/               les orbes 3D, la carte 2D et la frise du second cerveau (+ leurs données, construites par refresh)
   views/               les onglets Routines, Skills et Applications
+  fichiers/            l'onglet Fichiers : l'éditeur des fichiers du workspace (aussi seul sur /fichiers/)
   engine/              le moteur du second cerveau : scan.js (la carte), server.js (recherche, visionneuse de fichiers), brain.js (rappel et classement)
   refresh/             construit les données du second cerveau ; sources/ contient les lecteurs par agent
   config/              workspace.json, departments.json, apps.json, agents.json (à toi de les modifier)

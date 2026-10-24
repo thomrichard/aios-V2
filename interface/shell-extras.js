@@ -95,11 +95,13 @@
     if (C) { try { await C.jumpTo(path); const sel = C.S.sel; found = !!sel && (sel.id === path || sel.path === path || String(sel.id).endsWith(path)); } catch {} }
     if (found) { close(); input.value = ''; input.blur(); return; }
     // not on the map: offer the file itself
-    box.innerHTML = `<div class="res-note">${esc(x.name)} n’est pas encore sur la carte.<br><span class="r-path">${esc(path)}</span></div><div class="res-actions"><button data-act="open">Ouvrir sur l’appareil</button><button data-act="copy">Copier le chemin</button></div>`;
+    box.innerHTML = `<div class="res-note">${esc(x.name)} n’est pas encore sur la carte.<br><span class="r-path">${esc(path)}</span></div><div class="res-actions">${x.type === 'dir' ? '' : '<button data-act="edit">Modifier</button>'}<button data-act="open">Ouvrir sur l’appareil</button><button data-act="copy">Copier le chemin</button></div>`;
     box.hidden = false;
     const root = (() => { try { return brain.contentWindow.QUIET_SNAPSHOT?.root || ''; } catch { return ''; } })();
     const abs = /^([A-Za-z]:)?[\\/]/.test(path) || !root ? path : root.replace(/\/+$/, '') + '/' + path;
     box.querySelector('[data-act="open"]').onpointerdown = async e => { e.preventDefault(); if (!live) { notice('Ouvrir un fichier marche quand l’OS tourne (node server.js).'); return; } try { const r = await fetch('/api/open', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({path: abs})}); notice(r.ok ? 'Ouvert : ' + x.name : 'Impossible de l’ouvrir'); } catch { notice('Impossible de l’ouvrir'); } };
+    const edit = box.querySelector('[data-act="edit"]');
+    if (edit) edit.onpointerdown = e => { e.preventDefault(); close(); input.value = ''; input.blur(); window.UnifiedCopy?.edit(path); };
     box.querySelector('[data-act="copy"]').onpointerdown = e => { e.preventDefault(); navigator.clipboard?.writeText(abs).then(() => notice('Copié : ' + abs), () => notice(abs)); };
   }
 
