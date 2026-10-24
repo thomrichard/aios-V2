@@ -159,3 +159,9 @@ Les choix qui ont façonné le socle, et leur pourquoi. Une entrée par décisio
 - **Décision.** Le rangement de nuit a un plafond par défaut : 20 éléments par nuit ; au-delà, il range les plus anciens d'abord et laisse le reste à la nuit suivante. Une nouvelle routine directe, sans IA, « Sauvegarde de nuit », tourne à 3 h, après le rangement : elle committe le travail du jour et le pousse vers le distant `prive`, le dépôt privé de l'utilisateur, jamais vers `socle`. La mettre en place vaut accord pour ce push. L'installation a une 15e question : l'adresse du dépôt privé, ajoutée comme distant `prive`.
 - **Pourquoi.** Personne ne surveille la nuit : une veille qui dépose 300 fichiers, ou une boucle, ne doit pas tout consommer, et le quota de l'abonnement sert aussi le matin. La sauvegarde va vers `prive`, parce qu'on ne pousse jamais dans le socle.
 - **Écarté.** Un rangement sans plafond ; pousser vers `socle` ; demander l'accord à chaque push de nuit, alors que personne n'est là pour répondre.
+
+## 2026-10-24 · Le plafond d'AGENTS.md compte le texte écrit
+
+- **Décision.** `verifier.py` ne compte plus les blocs générés d'`AGENTS.md` (la carte des domaines et les projets actifs) dans son plafond de 150 lignes.
+- **Pourquoi.** Ces blocs grossissent seuls : un domaine ou un projet de plus, et l'alerte tombait sans qu'aucune règle ait été écrite. Le plafond sert à garder court ce qu'on écrit à la main.
+- **Écarté.** Relever le plafond : l'alerte serait revenue avec les projets. Raccourcir les sections de l'utilisateur pour faire de la place.
