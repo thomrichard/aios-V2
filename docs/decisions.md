@@ -153,3 +153,9 @@ Les choix qui ont façonné le socle, et leur pourquoi. Une entrée par décisio
 - **Décision.** `index.py` génère des vues depuis les en-têtes, dans `vues/` : `vues/<type>.md` (tous les fichiers d'un type, tous domaines confondus, les vivants d'abord dans l'ordre de leurs statuts, avec les champs réglés qu'ils remplissent, comme `ressortir` pour une idée) ; `vues/projet-<slug>.md` (tous les fichiers qui portent `projet: <slug>`, où qu'ils soient) ; `vues/_index.md`, la liste des vues (`projet` et `processus` renvoient à leur index). Une vue sans fichier disparaît, et `index.py --check` signale une vue périmée. Les `_index.md` des dossiers gagnent une colonne Type. `AGENTS.md` y mène par une ligne de « Où chercher ».
 - **Pourquoi.** Depuis la règle 8 (pas de dossier par type), aucun dossier ne dit plus le type d'un fichier. Pour voir toutes les idées, ou tous les fichiers d'un projet rangés dans plusieurs domaines, il fallait un `grep`.
 - **Écarté.** Une skill de recherche : le nom de la vue est celui du type, donc une route dans « Où chercher » suffit (deux sauts). Revenir aux dossiers par type. Des vues réglées dans un tableau (filtre, regroupement, colonnes) : rien ne les demande pour l'instant, et le cas `a-valider` est déjà dans `outbox/index.html`. On y reviendra si un besoin revient que les vues automatiques ne couvrent pas.
+
+## 2026-10-24 · Le plafond d'AGENTS.md compte le texte écrit
+
+- **Décision.** `verifier.py` ne compte plus les blocs générés d'`AGENTS.md` (la carte des domaines et les projets actifs) dans son plafond de 150 lignes.
+- **Pourquoi.** Ces blocs grossissent seuls : un domaine ou un projet de plus, et l'alerte tombait sans qu'aucune règle ait été écrite. Le plafond sert à garder court ce qu'on écrit à la main.
+- **Écarté.** Relever le plafond : l'alerte serait revenue avec les projets. Raccourcir les sections de l'utilisateur pour faire de la place.
