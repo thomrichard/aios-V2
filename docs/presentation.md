@@ -147,7 +147,7 @@ La vraie routine de nuit a tourné sur un faux AIOS : deux domaines, six éléme
 
 ### 1. Préparer son profil, avec grill-me
 
-Avant un atelier, chacun prépare son profil. La skill `grill-me` pose une liste de quatorze questions imposées, une à la fois, avec à chaque fois une réponse proposée à confirmer ou corriger. Les blocs : identité (le nom et le rôle de ton agent, qui tu es, comment il doit te parler : tu ou vous, le tutoiement par défaut), objectifs (tes trois cibles de l'année, tes objectifs du trimestre), domaines et revenus, projets en cours, outils, routines, mémoire, fichiers lourds.
+Avant un atelier, chacun prépare son profil. La skill `grill-me` pose une liste de quinze questions imposées, une à la fois, avec à chaque fois une réponse proposée à confirmer ou corriger. Les blocs : identité (le nom et le rôle de ton agent, qui tu es, comment il doit te parler : tu ou vous, le tutoiement par défaut), objectifs (tes trois cibles de l'année, tes objectifs du trimestre), domaines et revenus, projets en cours, outils, routines, mémoire, fichiers lourds, et sauvegarde (l'adresse de ton dépôt privé, s'il y en a un : l'installation l'ajoute comme distant `prive`).
 
 Chaque réponse est notée au fur et à mesure dans une fiche. Une question sans réponse s'écrit « À définir » : elle reviendra plus tard dans le point du jour. À la fin, on obtient un profil rempli. Sans dépôt sous la main, on peut donner les trois fichiers de `skills/installation/references/` à n'importe quel Claude.
 
@@ -296,9 +296,13 @@ Il y en a deux sortes :
 - **avec IA** : un prompt qui appelle une skill, quand il y a quelque chose à juger. *Exemple : le rangement de nuit.*
 - **directe** : une simple commande, sans IA, quand il n'y a rien à juger. *Exemple : mettre à jour les fiches de ses vidéos YouTube deux fois par semaine.*
 
-Une routine **active** te remet quelque chose à lire (le point du jour). Une routine **passive** ne remonte dans le point du jour que ce qui mérite ton attention. Les passives tournent à 1 h, pour que le point du jour de 2 h reprenne leurs résultats. Chaque routine a un plafond de coût par semaine.
+Une routine **active** te remet quelque chose à lire (le point du jour). Une routine **passive** ne remonte dans le point du jour que ce qui mérite ton attention. Les passives tournent à 1 h, pour que le point du jour de 2 h reprenne leurs résultats. Chaque routine a un plafond.
 
-La liste est dans `systeme/routines.md`. Aujourd'hui, la skill du rangement de nuit existe ; elle reste à brancher sur le planificateur de chacun. La veille, l'audit mensuel et les fiches YouTube y figurent comme exemples, encore à construire.
+*Exemple : le rangement de nuit range au plus 20 éléments par nuit. Au-delà, il range les plus anciens d'abord et laisse le reste à la nuit suivante. Personne ne surveille la nuit : une veille qui dépose 300 fichiers, ou une boucle, ne doit pas tout consommer. Et le quota de ton abonnement sert aussi le matin.*
+
+La **sauvegarde de nuit** est une routine directe, sans IA, qui tourne à 3 h, après le rangement. Elle enregistre dans Git le travail du jour et l'envoie vers `prive`, ton dépôt privé, jamais vers `socle`. La mettre en place vaut accord pour cet envoi.
+
+La liste est dans `systeme/routines.md`. Aujourd'hui, la skill du rangement de nuit existe ; elle reste à brancher sur le planificateur de chacun. La sauvegarde de nuit est prête dans ce tableau, à brancher de la même façon. La veille, l'audit mensuel et les fiches YouTube y figurent comme exemples, encore à construire.
 
 ### L'interface SM4RT
 
@@ -361,4 +365,4 @@ Le socle ne fait pas tout. Chacun ajoute ce qui lui manque, dans sa section « C
 
 Ce qui suit n'est pas encore fait.
 
-- **Les routines encore à construire** : la veille, l'audit mensuel, les fiches YouTube, et le branchement du rangement de nuit sur un planificateur.
+- **Les routines encore à construire** : la veille, l'audit mensuel, les fiches YouTube, et le branchement du rangement et de la sauvegarde de nuit sur un planificateur.

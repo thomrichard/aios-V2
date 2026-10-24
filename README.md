@@ -58,6 +58,7 @@ Le reste (skills deck, agenda, e-mails, stats) se branche avec les guides de `in
    - Windows (jonction, sans droits admin) : `mklink /J .claude\skills skills` puis `mklink /J .agents\skills skills`
 3. Copie `.env.example` en `.env` et choisis ton agent : `AGENT=claude`, `codex` ou `gemini`. Si tu gardes des vidéos ou des sons, règle `FICHIERS_LOURDS` sur un dossier hors du dépôt (un dossier Google Drive synchronisé, par exemple).
 4. Active le contrôle avant chaque commit : `git config core.hooksPath systeme/hooks`
+   Si tu as un dépôt privé pour ta copie, ajoute-le : `git remote add prive <adresse>`. La routine « Sauvegarde de nuit » y pousse chaque nuit.
 5. Dépose ton profil dans `inbox/` si tu en as un, puis lance la skill `installation` (« installe l'AIOS »). Sans profil, elle pose toutes les questions.
 6. Laisse vide le `CLAUDE.md` global de ta machine : tout vit dans le workspace.
 7. Branche le planificateur sur `systeme/scripts/lancer.py` (voir `systeme/routines.md`).
