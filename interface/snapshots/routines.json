@@ -33,6 +33,14 @@
       "cron": "0 1 * * 0,4"
     },
     {
+      "id": "sauvegarde-de-nuit",
+      "name": "Sauvegarde de nuit",
+      "source": "planificateur",
+      "desc": "chaque nuit, 3 h · sans IA · directe, passive : envoie le travail du jour vers prive",
+      "status": "paused",
+      "cron": "0 3 * * *"
+    },
+    {
       "id": "audit",
       "name": "Audit",
       "source": "planificateur",

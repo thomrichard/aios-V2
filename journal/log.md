@@ -14,3 +14,4 @@ Ajout seul. Format : `- AAAA-MM-JJ · <action> | <sujet>`
 - 2026-10-23 · ajout | skills search-connectors, reprendre, burst et humanizer (d'après Jay E | RoboNuggets)
 - 2026-10-23 · ajout | skill surprise-me (d'après Jay E | RoboNuggets)
 - 2026-10-24 · ajout | les vues (vues/), un index par type et par projet
+- 2026-10-24 · réglage | plafond du rangement à 20 éléments par nuit ; routine « Sauvegarde de nuit » vers le distant prive
