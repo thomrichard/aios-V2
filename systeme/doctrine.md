@@ -6,9 +6,9 @@
 |---|---|---|
 | Règles | `AGENTS.md` | — |
 | Domaines, champs d'un en-tête, types et statuts | `systeme/metadonnees.md` | la carte d'`AGENTS.md` (générée) |
-| Fichier texte | son en-tête | `_index.md` du dossier (généré) |
+| Fichier texte | son en-tête | `_index.md` du dossier, et `vues/<type>.md`, tous domaines confondus (générés) |
 | Image | sa ligne dans `_images.md` du dossier | — |
-| Projet | `projets/<slug>.md` | `projets/_index.md`, et les projets actifs d'`AGENTS.md` (générés) |
+| Projet | `projets/<slug>.md` | `projets/_index.md`, les projets actifs d'`AGENTS.md`, et `vues/projet-<slug>.md` pour ses fichiers, où qu'ils soient (générés) |
 | Souvenir | `memory/<type>_<sujet>.md` | `memory/MEMORY.md` |
 | Skill | `skills/<nom>/SKILL.md` | `skills/_index.md` (généré), et le routeur du domaine qui l'utilise |
 | Process | le tableau des étapes de `processus/<slug>.md` | `processus/_index.md` (généré), et le routeur du domaine qui le porte |

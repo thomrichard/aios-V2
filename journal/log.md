@@ -30,3 +30,5 @@ Ajout seul. Format : `- AAAA-MM-JJ · <action> | <sujet>`
 - 2026-10-23 · ajout | dépôt privé thomrichard/aios-thomas : main y est poussé, le socle public reste la source des mises à jour
 - 2026-10-23 · socle | récupère la PR n° 5 (youtube.py écrit cree)
 - 2026-10-23 · close | session Skool : connexion, skool-ops avec la voix et les types de posts, dépôt privé aios-thomas
+- 2026-10-24 · ajout | les vues (vues/), un index par type et par projet
+- 2026-10-24 · socle | récupère les PR n° 20 à 22 (les vues : un index par type et par projet)
