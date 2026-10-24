@@ -47,3 +47,4 @@ Ajout seul. Format : `- AAAA-MM-JJ · <action> | <sujet>`
 - 2026-10-24 · ajout | l'onglet Fichiers de l'interface : voir, chercher, filtrer et modifier les fichiers du workspace
 - 2026-10-24 · ajout | l'Aperçu de l'onglet Fichiers devient modifiable (barre de mise en forme, raccourcis Markdown)
 - 2026-10-24 · socle | PR n° 32 : l'interface garde le Mac éveillé la nuit (caffeinate -s) ; récupère les PR n° 28 à 32
+- 2026-10-24 · réglage | l'interface garde le Mac éveillé sur secteur (caffeinate -s) : remplace aios-hub pour les routines de nuit
