@@ -10,7 +10,7 @@ Skool n'a pas d'API publique. La CLI et les scripts parlent à Skool avec le coo
 1. Un appel échoue : lance `skool-pp-cli doctor`. Une route `www.skool.com` tombe en `buildId not found` ou en HTTP 202 : renouvelle le jeton WAF, puis réessaie (`references/pieges.md`).
 2. Lecture : la CLI d'abord, avec `--agent` pour une sortie JSON courte ; les scripts du toolkit pour le reste (`references/api.md`).
 3. Compter les membres, les abonnés ou les payants : suis `references/payants.md`.
-4. Écriture (classroom, leçon, image, post, épingle, message, brouillon) : tu as la main, sans demander (`AGENTS.md`), sauf pour supprimer.
+4. Écriture (classroom, leçon, image, post, épingle, message, brouillon) : tu as la main, sans demander (`AGENTS.md`), sauf pour supprimer et pour les messages en masse.
    - un premier essai sur un contenu inconnu porte d'abord sur un seul élément ;
    - après l'envoi, relis ce que Skool a enregistré, puis donne l'URL Skool pour qu'il vérifie à l'œil.
 5. Un module du workspace (`domaines/communaute/<slug>/`, une fiche `NN-<slug>.md` de type `support` par leçon, son schéma `NN-<slug>.png` à côté) : `skool_pousser_module.py` crée le dossier et les leçons, met le schéma en premier bloc, puis écrit l'URL Skool de chaque leçon dans son en-tête (`liens`). Une leçon seule : convertis le Markdown avec `md_to_prosemirror.py`, même règle pour l'en-tête.
@@ -21,9 +21,9 @@ Skool n'a pas d'API publique. La CLI et les scripts parlent à Skool avec le coo
 7. Note chaque écriture dans `journal/log.md` : `- AAAA-MM-JJ · skool | <action> « <titre> » <url>`.
 
 ## Garde-fous
-- Depuis le 2026-10-23, Thomas te donne la main sur Skool : créer, modifier, publier, épingler, envoyer, changer un état, sans demander. Seule exception : ne supprime jamais rien.
+- Depuis le 2026-10-23, Thomas te donne la main sur Skool : créer, modifier, publier, épingler, envoyer, changer un état, sans demander. Deux exceptions : ne supprime jamais rien, et n'envoie jamais de messages privés en masse.
 - Ne supprime jamais une leçon : passe-la en brouillon. Ne la déplace jamais vers une autre classroom (`references/pieges.md`).
-- Messages en masse : la liste des destinataires et le texte sont validés avant ; une pause d'au moins 0,5 s entre deux appels.
+- Messages privés en masse : jamais par toi. Skool interdit l'envoi automatique et contrôle surtout l'envoi de masse : Thomas les envoie lui-même. Un message de masse passera plus tard par un autre outil, sans doute Brevo (`journal/decisions.md`, 2026-10-24).
 - N'ouvre jamais `~/.config/skool-pp-cli/config.toml` pour le lire ou l'afficher : il contient le cookie.
 - L'API rend les montants en cents : convertis en dollars avant tout calcul.
 - Un post n'invente ni témoignage, ni chiffre, ni résultat de membre. Ce qui manque s'écrit « à vérifier ».
@@ -44,3 +44,4 @@ Skool n'a pas d'API publique. La CLI et les scripts parlent à Skool avec le coo
 - 2026-10-23 · toolkit déplacé dans `~/Dev/skool-toolkit` (dépôt privé), scripts rebranchés hors de l'ancien Vault, routines « Jeton Skool » et « Revenus Skool » · plus rien ne dépend de `~/IA-OS`
 - 2026-10-23 · Thomas donne la main sur Skool, sauf pour supprimer ; ajout de la création de classroom, du dépôt d'images, de la couverture et de l'envoi d'un module (`skool_images.py`, `skool_pousser_module.py`), limite des titres à 50 caractères · un module du workspace part sur Skool en une commande, schémas compris
 - 2026-10-23 · ajout de `skool_tirer_classrooms.py` : les 16 classrooms (122 leçons) récupérées dans `domaines/communaute/` · le contenu de Skool est lisible dans le workspace
+- 2026-10-24 · plus d'envoi de messages privés en masse par l'agent : Thomas les envoie lui-même · Skool interdit l'envoi automatique de masse

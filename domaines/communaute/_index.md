@@ -4,6 +4,7 @@
 
 | Fichier | Type | Résumé | Statut | Projet | Maj |
 |---|---|---|---|---|---|
+| [messages-de-masse-avec-brevo.md](messages-de-masse-avec-brevo.md) | idee | Envoyer les messages de masse aux membres du Club SMART avec Brevo, puisque Skool interdit l'envoi automatique de masse | notee |  | 2026-10-24 |
 | [revenus-club-smart.md](revenus-club-smart.md) | tableau | Revenus du Club SMART mois par mois, recalculés depuis les factures Skool (USD et CAD) | en-cours |  | 2026-10-23 |
 
 ## Dossiers

@@ -75,7 +75,7 @@ Dans `~/Dev/skool-toolkit/scripts/` (dépôt privé `thomrichard/skool-toolkit`)
 | Modifier un post | `python3 skool_edit_post.py <post_id> --title "..." --content "..."` |
 | Épingler un post sur une leçon | `python3 skool_pin_post.py <post_id> <lesson_id>` ; `--unpin` pour l'enlever |
 | Envoyer un message privé | `python3 skool_send_dm.py <user_id> --message "..."` (le `user_id`, pas le `member.id`) |
-| Messages en masse | `python3 skool_send_dm.py --bulk membres.json --message "..."` |
+| Messages en masse | Thomas seulement, jamais l'agent (`SKILL.md`, garde-fous) : `python3 skool_send_dm.py --bulk membres.json --message "..."` |
 
 Corps d'un post :
 
