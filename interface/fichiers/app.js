@@ -1,7 +1,7 @@
 /* SM4RT file editor: the Second Brain's Fichiers tab, or /fichiers/ on its own.
    Left: every file of the workspace, folder by folder with the domains first, a search box (name, title,
    summary, then the text itself) and filters on the header fields. Right: the open file, styled, as
-   Markdown, or both side by side. A save goes to /local/files/save, which refuses a file that changed on
+   Markdown, or both side by side; both can be written in. A save goes to /local/files/save, which refuses a file that changed on
    disk since it was opened, then runs systeme/scripts/index.py so the indexes and views follow. */
 (() => {
   'use strict';
@@ -63,6 +63,19 @@
       $('modal-actions').querySelectorAll('button').forEach(b => b.onclick = () => finish(b.dataset.k));
       m.onkeydown = e => { if (e.key === 'Escape') { e.stopPropagation(); finish('cancel'); } };
       ($('modal-actions').querySelector('.primary') || $('modal-actions').querySelector('button')).focus();
+    });
+  }
+  function askText(title, text, value) {
+    return new Promise(done => {
+      const m = $('modal'), input = $('modal-input');
+      $('modal-title').textContent = title; $('modal-text').textContent = text;
+      input.hidden = false; input.value = value || '';
+      $('modal-actions').innerHTML = '<button type="button" data-k="cancel">Annuler</button><button type="button" data-k="ok" class="primary">OK</button>';
+      m.hidden = false;
+      const finish = v => { m.hidden = true; input.hidden = true; m.onkeydown = null; done(v); };
+      $('modal-actions').querySelectorAll('button').forEach(b => b.onclick = () => finish(b.dataset.k === 'ok' ? input.value.trim() : null));
+      m.onkeydown = e => { if (e.key === 'Escape') { e.stopPropagation(); finish(null); } if (e.key === 'Enter') { e.preventDefault(); finish(input.value.trim()); } };
+      input.focus(); input.select();
     });
   }
   function ago(ms) {
@@ -261,9 +274,10 @@
   /* the text box always gives \n; a file written with \r\n gets them back when saved */
   function lineEnds(doc, text) { if (text === undefined) return; doc.eol = /\r\n/.test(text) ? '\r\n' : '\n'; doc.content = doc.saved = text.replace(/\r\n?/g, '\n'); }
   const textDoc = () => S.doc && (S.doc.kind === 'md' || S.doc.kind === 'text') && !S.doc.tooBig && S.doc.content !== undefined;
-  const dirty = () => textDoc() && src.value !== S.doc.saved;
+  const dirty = () => textDoc() && (S.pvPending || src.value !== S.doc.saved);
   const modeNow = () => !S.doc ? '' : S.doc.kind === 'md' && !S.doc.tooBig ? S.mode : S.doc.kind === 'text' && !S.doc.tooBig ? 'source' : 'other';
   async function leaveDoc() {
+    pullNow();
     if (!dirty()) return true;
     const k = await ask('Modifications non enregistrées', `${baseName(S.doc.path)} a des modifications que tu n’as pas enregistrées.`, [['cancel', 'Annuler'], ['drop', 'Ne pas enregistrer'], ['save', 'Enregistrer', 'primary']]);
     if (k === 'save') return await save();
@@ -272,6 +286,7 @@
   async function openFile(p, opts = {}) {
     if (S.doc?.path === p && !opts.reload) { if (opts.line) gotoLine(opts.line - 1, true); closeSideOnPhone(); return; }
     if (!opts.reload && !(await leaveDoc())) return;
+    S.pvPending = false; clearTimeout(pullTimer);
     const d = await api('/local/files/read?path=' + encodeURIComponent(p));
     if (d.error) { toast(d.error, 'bad'); return; }
     S.doc = { ...d, gone: false, changed: false };
@@ -299,7 +314,7 @@
       setText(d.content);
       src.scrollTop = 0; pvPane.scrollTop = 0;
     } else { src.value = ''; paintOther(); }
-    paintMode(); paintState(); paintBanner();
+    paintMode(); paintState(); paintBanner(); syncEditable();
   }
   function paintOther() {
     const d = S.doc;
@@ -318,11 +333,13 @@
     $('modes').querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', b.dataset.mode === m));
     if ((m === 'preview' || m === 'split') && textDoc()) renderPreview(true);
     if (m === 'split') requestAnimationFrame(syncFromEditor);
+    syncEditable();
   }
   function setMode(m) {
     if (!['preview', 'source', 'split'].includes(m)) return;
+    pullNow();
     S.mode = m; store.set('mode', m); paintMode();
-    if (m !== 'preview' && textDoc() && S.doc.editable) src.focus({ preventScroll: true });
+    if (m === 'source' && textDoc() && S.doc.editable) src.focus({ preventScroll: true });
   }
   function paintState() {
     const d = S.doc; if (!d) return;
@@ -359,7 +376,7 @@
     for (let i = b0 - 1; i >= a; i--) kids[i].remove();
     if (b1 > a) parent.insertBefore(build(a, b1), before);
   }
-  function resetPanes() { hl.replaceChildren(); pv.replaceChildren(); hlKeys = []; pvKeys = []; pv.className = 'md'; }
+  function resetPanes() { hl.replaceChildren(); pv.replaceChildren(); hlKeys = []; pvKeys = []; pv.className = 'md'; S.pvTouched = false; mo.takeRecords(); dirtyBlocks.clear(); }
   function paintHl() {
     hlFrame = 0;
     const isPlain = plain();
@@ -375,11 +392,14 @@
   function setText(text) { src.value = text; paintHl(); if (S.doc.kind === 'md') renderPreview(true); }
   function onInput() {
     if (!hlFrame) hlFrame = requestAnimationFrame(paintHl);
-    clearTimeout(pvTimer); pvTimer = setTimeout(() => renderPreview(), 90);
+    if (S.quiet) refreshHeader();
+    else { clearTimeout(pvTimer); pvTimer = setTimeout(() => renderPreview(), 90); }
     paintState();
   }
   /* edits go through insertText, so ⌘ Z / Ctrl Z still undoes them */
   function replaceRange(start, end, text, keepSelection = true) {
+    const busy = document.activeElement;
+    if (busy !== src && busy && (busy.isContentEditable || busy.matches?.('input,select'))) { src.setRangeText(text, start, end, 'preserve'); onInput(); return; }
     const s0 = src.selectionStart, s1 = src.selectionEnd, wasActive = document.activeElement === src;
     src.focus({ preventScroll: true });
     src.setSelectionRange(start, end);
@@ -428,13 +448,15 @@
     const text = src.value;
     if (text === pvFresh && pvKeys.length) return;
     pvFresh = text;
+    if (S.pvTouched) { pv.replaceChildren(); pvKeys = []; S.pvTouched = false; }
     const top = pvPane.scrollTop, list = MD.blocks(text), keys = list.map(b => b.key);
     patch(pv, pvKeys, keys, (a, b) => MD.fragment(list.slice(a, b).map(x => x.html).join('')));
     pvKeys = keys;
-    [...pv.children].forEach((el, i) => { const line = String(list[i]?.line ?? 0); if (el.dataset.line !== line) el.dataset.line = line; });
+    [...pv.children].forEach((el, i) => { const line = String(list[i]?.line ?? 0); if (el.dataset.line !== line) el.dataset.line = line; if (list[i] && !list[i].fm) blockSrc.set(el, list[i].src); });
+    mo.takeRecords(); dirtyBlocks.clear();
     MD.number(pv);
     const boxes = MD.tasks(text), inputs = pv.querySelectorAll('input[data-task]');
-    const canTick = S.doc.editable && boxes.length === inputs.length;
+    const canTick = S.doc.editable && (boxes.length === inputs.length || pvEditable());
     inputs.forEach(box => { box.disabled = !canTick; box.title = canTick ? 'Cocher dans le fichier' : ''; });
     pv.querySelectorAll('img[data-src]:not([data-done])').forEach(img => {
       img.dataset.done = 1;
@@ -467,16 +489,19 @@
     } catch (_) { return null; }
   }
   pv.addEventListener('click', e => {
-    const box = e.target.closest('input[data-task]');
+    const box = e.target.closest('input[type=checkbox]');
     if (box) {
-      const marks = MD.tasks(src.value), t = marks[+box.dataset.task];
-      if (!t || box.disabled) { e.preventDefault(); return; }
-      replaceRange(t.at, t.at + 1, t.checked ? ' ' : 'x');
-      renderPreview(true);
+      if (box.disabled) { e.preventDefault(); return; }
+      /* a page not yet edited here: change the one character in the file; otherwise the block is written again */
+      const marks = MD.tasks(src.value), t = !S.pvTouched && box.dataset.task !== undefined ? marks[+box.dataset.task] : null;
+      if (t && marks.length === pv.querySelectorAll('input[data-task]').length) { replaceRange(t.at, t.at + 1, t.checked ? ' ' : 'x'); renderPreview(true); }
+      else if (pvEditable()) { markDirty(box); onPreviewInput(); }
       return;
     }
     const a = e.target.closest('a');
     if (!a) return;
+    /* in the editable view a click puts the caret in the link; ⌘ or Ctrl click opens it */
+    if (pvEditable() && !e.metaKey && !e.ctrlKey) { e.preventDefault(); return; }
     e.preventDefault();
     if (a.dataset.wiki) {
       const key = fold(a.dataset.wiki.replace(/\.md$/i, '')), hit = S.files.find(f => fold(baseName(f.p).replace(/\.md$/i, '')) === key) || S.files.find(f => fold(f.p.replace(/\.md$/i, '')).endsWith(key));
@@ -493,11 +518,169 @@
   });
   /* a double click in the styled view puts the caret on that block's line */
   pv.addEventListener('dblclick', e => {
-    if (!textDoc() || S.doc.kind !== 'md' || e.target.closest('a,input')) return;
+    if (!textDoc() || S.doc.kind !== 'md' || pvEditable() || e.target.closest('a,input')) return;
     const blk = e.target.closest('[data-line]'); if (!blk) return;
     if (modeNow() === 'preview') setMode('split');
     gotoLine(+blk.dataset.line, true);
   });
+
+  /* ---------------------------- writing in the styled view ----------------------------
+     The Aperçu is an editable page. Each block remembers its own text in the file; a block the user
+     changes (a MutationObserver sees it) is written back to Markdown, the others go back exactly as they
+     were. The Markdown follows 300 ms after the last key, and before any save, mode change or file change. */
+  const blockSrc = new WeakMap(), dirtyBlocks = new Set();
+  const topBlock = n => { while (n && n.parentNode !== pv) n = n.parentNode; return n; };
+  const mo = new MutationObserver(recs => noteMutations(recs));
+  function noteMutations(recs) {
+    for (const r of recs) {
+      if (r.target === pv) { r.addedNodes.forEach(a => dirtyBlocks.add(a)); continue; }
+      const b = topBlock(r.target); if (b) dirtyBlocks.add(b);
+    }
+  }
+  mo.observe(pv, { childList: true, characterData: true, subtree: true });
+  let pullTimer = 0;
+  const pvEditable = () => textDoc() && S.doc.kind === 'md' && S.doc.editable && (modeNow() === 'preview' || modeNow() === 'split');
+  function syncEditable() {
+    const on = !!pvEditable();
+    pv.contentEditable = on ? 'true' : 'false';
+    pv.spellcheck = on;
+    $('fmt').hidden = !on;
+  }
+  const markDirty = n => { const b = topBlock(n); if (b) dirtyBlocks.add(b); };
+  function onPreviewInput() {
+    if (!pvEditable()) return;
+    S.pvTouched = true; S.pvPending = true; paintState();
+    clearTimeout(pullTimer); pullTimer = setTimeout(pullFromPreview, 300);
+  }
+  const pullNow = () => { if (S.pvPending) pullFromPreview(); };
+  function pullFromPreview() {
+    clearTimeout(pullTimer);
+    noteMutations(mo.takeRecords());
+    S.pvPending = false;
+    if (!textDoc() || S.doc.kind !== 'md' || !S.doc.editable) return;
+    const text = src.value, fm = MD.frontMatter(text), body = fm ? text.slice(fm.raw.length) : text;
+    const lead = /^\s*/.exec(body)[0], base = (fm ? fm.raw : '') + lead;
+    let out = base, lines = (out.match(/\n/g) || []).length;
+    const add = s => { out += s; lines += (s.match(/\n/g) || []).length; };
+    const kids = [...pv.children].filter(el => !el.matches('header.fm'));
+    kids.forEach((el, i) => {
+      const raw = blockSrc.get(el), last = i === kids.length - 1;
+      if (raw !== undefined && !dirtyBlocks.has(el)) { el.dataset.line = lines; add(raw); return; }
+      const md = MD.toMarkdown(el).replace(/\s+$/, '');
+      if (!md) return;
+      if (out.length > base.length && !/\n\s*\n$/.test(out)) add(out.endsWith('\n') ? '\n' : '\n\n');
+      el.dataset.line = lines;
+      const trail = raw !== undefined ? /\s*$/.exec(raw)[0] : '';
+      add(md + (last ? '\n' : /\n\s*\n/.test(trail) ? trail : '\n\n'));
+    });
+    if (out === text) { paintState(); return; }
+    src.value = out;
+    pvFresh = out;
+    paintHl(); paintState();
+  }
+  /* the header card is not edited here; when maj changes on saving, only the card is drawn again */
+  function refreshHeader() {
+    const first = MD.blocks(src.value)[0], old = pv.querySelector(':scope > header.fm');
+    if (first?.fm && old) { const el = MD.fragment(first.html).firstElementChild; el.dataset.line = '0'; old.replaceWith(el); pvKeys[0] = first.key; mo.takeRecords(); }
+    pvFresh = src.value;
+  }
+  pv.addEventListener('input', e => {
+    onPreviewInput();
+    if (e.inputType === 'insertText' && e.data === ' ') autoFormat();
+    if (e.inputType === 'insertParagraph') carryTask();
+  });
+  /* pasting brings plain text only: no styles from elsewhere */
+  pv.addEventListener('paste', e => {
+    if (!pvEditable()) return;
+    e.preventDefault();
+    document.execCommand('insertText', false, e.clipboardData.getData('text/plain'));
+  });
+  pv.addEventListener('keydown', e => {
+    if (!pvEditable()) return;
+    const k = e.key.toLowerCase();
+    if (e.key === 'Escape') { pv.blur(); return; }
+    if ((e.metaKey || e.ctrlKey) && !e.altKey && k === 'k') { e.preventDefault(); fmt('link'); return; }
+    if (e.key === 'Tab' && closestIn('LI')) { e.preventDefault(); document.execCommand(e.shiftKey ? 'outdent' : 'indent'); }
+  });
+  function closestIn(tag) {
+    const sel = getSelection(); if (!sel.rangeCount) return null;
+    let n = sel.anchorNode; if (n?.nodeType === 3) n = n.parentNode;
+    const el = n?.closest?.(tag);
+    return el && pv.contains(el) && el !== pv ? el : null;
+  }
+  /* Markdown habits work while typing: "# " a title, "- " a list, "1. " a numbered list, "> " a quote, "[] " a task */
+  function autoFormat() {
+    const sel = getSelection(); if (!sel.isCollapsed || !sel.rangeCount) return;
+    const block = closestIn('p,div,h1,h2,h3,h4,h5,h6,li');
+    if (!block || block.matches('header.fm, header.fm *')) return;
+    const r = document.createRange(); r.setStart(block, 0); r.setEnd(sel.anchorNode, sel.anchorOffset);
+    const m = /^(#{1,3}|[-*]|1[.)]|>|\[ ?\]) $/.exec(r.toString().replace(/ /g, ' '));
+    if (!m || (block.tagName === 'LI' && m[1][0] !== '[')) return;
+    sel.removeAllRanges(); sel.addRange(r); document.execCommand('delete');
+    const k = m[1];
+    if (k[0] === '#') document.execCommand('formatBlock', false, 'h' + k.length);
+    else if (k === '-' || k === '*') document.execCommand('insertUnorderedList');
+    else if (k[0] === '1') document.execCommand('insertOrderedList');
+    else if (k === '>') document.execCommand('formatBlock', false, 'blockquote');
+    else toggleTask();
+  }
+  /* Enter at the end of a task gives a new task */
+  function carryTask() {
+    const li = closestIn('LI'), prev = li?.previousElementSibling;
+    if (li && prev?.querySelector(':scope > input[type=checkbox]') && !li.querySelector(':scope > input[type=checkbox]')) { const b = document.createElement('input'); b.type = 'checkbox'; li.prepend(b); }
+  }
+  function toggleTask() {
+    let li = closestIn('LI');
+    if (!li) { document.execCommand('insertUnorderedList'); li = closestIn('LI'); }
+    if (!li) return;
+    const box = li.querySelector(':scope > input[type=checkbox]');
+    if (box) box.remove(); else { const b = document.createElement('input'); b.type = 'checkbox'; li.prepend(b); }
+    markDirty(li); onPreviewInput();
+  }
+  async function fmt(cmd) {
+    if (!pvEditable()) return;
+    const sel = getSelection();
+    if (cmd !== 'source' && (!sel.rangeCount || !pv.contains(sel.anchorNode))) { toast('Clique d’abord dans le texte.'); return; }
+    if (/^(p|h1|h2|h3)$/.test(cmd)) document.execCommand('formatBlock', false, cmd);
+    else if (cmd === 'quote') { if (closestIn('BLOCKQUOTE')) document.execCommand('outdent'); else document.execCommand('formatBlock', false, 'blockquote'); }
+    else if (cmd === 'bold' || cmd === 'italic') document.execCommand(cmd);
+    else if (cmd === 'ul') document.execCommand('insertUnorderedList');
+    else if (cmd === 'ol') document.execCommand('insertOrderedList');
+    else if (cmd === 'task') toggleTask();
+    else if (cmd === 'link') {
+      const range = sel.getRangeAt(0).cloneRange(), a = closestIn('A');
+      const url = await askText('Lien', 'Une adresse (https://…) ou le chemin d’un fichier du workspace, relatif à celui-ci.', a?.getAttribute('href') || '');
+      pv.focus({ preventScroll: true }); sel.removeAllRanges(); sel.addRange(range);
+      if (url === null) return;
+      if (a && !url) { sel.selectAllChildren(a); document.execCommand('unlink'); }
+      else if (url && range.collapsed && !a) document.execCommand('insertHTML', false, `<a href="${esc(url)}">${esc(url)}</a>`);
+      else if (url) { if (a) sel.selectAllChildren(a); document.execCommand('createLink', false, url); }
+    }
+    else if (cmd === 'source') {
+      pullNow();
+      const b = topBlock(sel.rangeCount && pv.contains(sel.anchorNode) ? sel.anchorNode : null);
+      if (modeNow() === 'preview') setMode('split');
+      gotoLine(b ? +b.dataset.line || 0 : 0, true);
+    }
+    paintFmt();
+  }
+  /* the bar shows what the caret is in */
+  function paintFmt() {
+    if ($('fmt').hidden) return;
+    const block = closestIn('h1,h2,h3,p,li,blockquote');
+    const tag = block ? (block.closest('h1,h2,h3')?.tagName.toLowerCase() || 'p') : '';
+    $('fmt').querySelectorAll('[data-cmd]').forEach(b => {
+      const c = b.dataset.cmd;
+      let on = false;
+      try { on = /^(p|h1|h2|h3)$/.test(c) ? tag === c : c === 'bold' || c === 'italic' ? document.queryCommandState(c) : c === 'ul' ? !!closestIn('UL') : c === 'ol' ? !!closestIn('OL') : c === 'quote' ? !!closestIn('BLOCKQUOTE') : c === 'link' ? !!closestIn('A') : false; } catch (_) { }
+      b.setAttribute('aria-pressed', on);
+    });
+  }
+  document.addEventListener('selectionchange', () => { if (pvEditable() && pv.contains(getSelection().anchorNode)) paintFmt(); });
+  /* buttons keep the caret where it is in the text */
+  $('fmt').addEventListener('pointerdown', e => { if (e.target.closest('[data-cmd]')) e.preventDefault(); });
+  $('fmt').addEventListener('click', e => { const b = e.target.closest('[data-cmd]'); if (b) fmt(b.dataset.cmd); });
+  try { document.execCommand('defaultParagraphSeparator', false, 'p'); } catch (_) { }
 
   /* ---------------------------- the two panes scroll together ---------------------------- */
   let syncing = '', syncTimer = 0;
@@ -558,10 +741,12 @@
     const m = /^maj:[ \t]*(.*)$/m.exec(fm[1]);
     if (!m || m[1].trim() === today()) return;
     const start = 4 + fm[0].slice(4).indexOf(m[0]) + m[0].length - m[1].length;
-    replaceRange(start, start + m[1].length, today());
+    S.quiet = true;
+    try { replaceRange(start, start + m[1].length, today()); } finally { S.quiet = false; }
   }
   async function save(force = false) {
     if (!textDoc() || !S.doc.editable || S.saving) return false;
+    pullNow();
     if (!dirty() && !force) return true;
     bumpMaj();
     const d0 = S.doc, text = src.value;

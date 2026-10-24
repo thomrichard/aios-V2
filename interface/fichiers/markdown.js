@@ -40,16 +40,18 @@
     const resume = get('resume');
     const rest = fm.fields.filter(([k]) => !CHIPS.includes(k) && k !== 'resume')
       .map(([k, v]) => `<dt>${esc(LABELS[k] || k.replace(/_/g, ' '))}</dt><dd>${clean(v) ? esc(clean(v)) : '<span class="none">—</span>'}</dd>`).join('');
-    return `<header class="fm blk">${chips ? `<div class="chips">${chips}</div>` : ''}${resume ? `<p class="resume">${esc(resume)}</p>` : ''}${rest ? `<dl>${rest}</dl>` : ''}</header>`;
+    return `<header class="fm blk" contenteditable="false" title="L’en-tête se modifie dans le Markdown">${chips ? `<div class="chips">${chips}</div>` : ''}${resume ? `<p class="resume">${esc(resume)}</p>` : ''}${rest ? `<dl>${rest}</dl>` : ''}</header>`;
   }
 
-  /* each block: { key, line, html }; the same key means the same html, so the page keeps that block as it is */
+  /* each block: { key, line, html, src }; the same key means the same html, so the page keeps that block as it is.
+     src is the block's own text in the file, blank lines after it included: a block left untouched in the styled
+     view goes back into the file exactly as it was */
   const cache = new Map();
   function blocks(text) {
     text = String(text).replace(/\r\n?/g, '\n');
     const fm = frontMatter(text), body = fm ? text.slice(fm.raw.length) : text, out = [];
-    if (fm) out.push({ key: 'fm\n' + fm.raw, line: 0, html: headerCard(fm) });
-    if (!window.marked) { out.push({ key: body, line: fm ? fm.bodyLine : 0, html: '<div class="blk"><pre>' + esc(body) + '</pre></div>' }); return out; }
+    if (fm) out.push({ key: 'fm\n' + fm.raw, line: 0, html: headerCard(fm), src: '', fm: true });
+    if (!window.marked) { out.push({ key: body, line: fm ? fm.bodyLine : 0, html: '<div class="blk"><pre>' + esc(body) + '</pre></div>', src: body }); return out; }
     const tokens = marked.lexer(body), refs = Object.keys(tokens.links || {}).length ? JSON.stringify(tokens.links) : '';
     if (cache.size > 4000) cache.clear();
     let cursor = 0, line = fm ? fm.bodyLine : 0;
@@ -66,8 +68,10 @@
         try { part = marked.parser(Object.assign([tok], { links: tokens.links })); } catch (_) { part = '<pre>' + esc(tok.raw) + '</pre>'; }
         cache.set(key, part);
       }
-      out.push({ key, line: first, html: `<div class="blk">${part}</div>` });
+      out.push({ key, line: first, html: `<div class="blk">${part}</div>`, start });
     }
+    const own = out.filter(b => !b.fm);
+    own.forEach((b, i) => { b.src = body.slice(b.start, i + 1 < own.length ? own[i + 1].start : body.length); });
     return out;
   }
   /* a fragment safe to put in the page: no scripts, frames, forms or styles, no event handlers, no javascript: links;
@@ -162,5 +166,83 @@
     return out;
   }
 
-  window.FilesMD = { blocks, fragment, number, lines, tasks, frontMatter };
+  /* ---------- back from the styled view to Markdown ----------
+     Only for the blocks the user changed in the styled view. Written the way this workspace writes:
+     # titles, - lists, - [ ] tasks, **bold**, *italic*, [[links]], |---| tables. */
+  const BLOCK = /^(P|DIV|H[1-6]|UL|OL|LI|BLOCKQUOTE|PRE|TABLE|THEAD|TBODY|TFOOT|TR|HR|HEADER|SECTION|ARTICLE|FIGURE|DL)$/;
+  const escText = s => s.replace(/([\\`*\[\]<])/g, '\\$1').replace(/(^|[^\p{L}\p{N}])_|_(?=[^\p{L}\p{N}]|$)/gu, m => m.replace('_', '\\_'));
+  const wrap = (mark, inner) => { const m = /^(\s*)([\s\S]*?)(\s*)$/.exec(inner); return m[2] ? m[1] + mark + m[2] + mark + m[3] : inner; };
+  function inl(n) {
+    if (n.nodeType === 3) return escText(n.nodeValue.replace(/\u00a0/g, ' '));
+    if (n.nodeType !== 1) return '';
+    const t = n.tagName, kids = () => [...n.childNodes].map(inl).join('');
+    if (t === 'BR') return '\\\n';
+    if (t === 'INPUT') return '';
+    if (t === 'STRONG' || t === 'B') return wrap('**', kids());
+    if (t === 'EM' || t === 'I') return wrap('*', kids());
+    if (t === 'DEL' || t === 'S' || t === 'STRIKE') return wrap('~~', kids());
+    if (t === 'CODE') { const c = n.textContent.replace(/\u00a0/g, ' '); return c.includes('`') ? '`` ' + c + ' ``' : '`' + c + '`'; }
+    if (t === 'IMG') { const s = n.dataset.src || (/^blob:/.test(n.getAttribute('src') || '') ? '' : n.getAttribute('src') || ''); return s ? `![${(n.getAttribute('alt') || '').replace(/[\[\]]/g, '')}](${s})` : ''; }
+    if (t === 'A') {
+      const label = kids();
+      if (n.dataset.wiki) { const plainLabel = n.textContent.trim(); return plainLabel && plainLabel !== n.dataset.wiki ? `[[${n.dataset.wiki}|${plainLabel}]]` : `[[${n.dataset.wiki}]]`; }
+      const href = n.getAttribute('href') || '';
+      return href && href !== '#' ? `[${label}](${href.replace(/ /g, '%20')})` : label;
+    }
+    return kids();
+  }
+  const inlineMd = el => [...el.childNodes].map(inl).join('').replace(/(\\\n)+$/, '').replace(/^(\\\n)+/, '');
+  /* a line that would turn into something else (a title, a quote, a list) keeps its first sign as plain text */
+  const plainStart = s => s.replace(/^(#{1,6}\s|>|[-+]\s)/, '\\$1').replace(/^(\d+)([.)]\s)/, '$1\\$2');
+  function list(el, indent) {
+    const ordered = el.tagName === 'OL', lines = [];
+    let n = +(el.getAttribute('start') || 1);
+    for (const li of el.children) {
+      if (li.tagName !== 'LI') continue;
+      const marker = ordered ? (n++) + '.' : '-', pad = indent + ' '.repeat(marker.length + 1);
+      const box = li.querySelector(':scope > input[type=checkbox], :scope > p:first-child > input[type=checkbox]');
+      const own = [], nested = [];
+      for (const c of li.childNodes) (c.nodeType === 1 && (c.tagName === 'UL' || c.tagName === 'OL') ? nested : own).push(c);
+      const holder = document.createElement('div'); own.forEach(c => holder.append(c.cloneNode(true)));
+      const body = mdBlocks(holder.childNodes).join('\n\n').replace(/\n/g, '\n' + pad);
+      lines.push((indent + marker + ' ' + (box ? (box.checked ? '[x] ' : '[ ] ') : '') + body).replace(/\s+$/, ''));
+      for (const sub of nested) lines.push(list(sub, pad));
+    }
+    return lines.join('\n');
+  }
+  function table(el) {
+    const rows = [...el.querySelectorAll('tr')].map(tr => [...tr.children].map(td => inlineMd(td).replace(/\|/g, '\\|').replace(/\\\n/g, '<br>').replace(/\n/g, ' ').trim()));
+    if (!rows.length) return '';
+    const width = Math.max(...rows.map(r => r.length)), cells = r => '| ' + Array.from({ length: width }, (_, i) => r[i] || '').join(' | ') + ' |';
+    const aligns = [...(el.querySelector('tr')?.children || [])].map(c => ({ left: ':---', center: ':---:', right: '---:' }[c.getAttribute('align') || c.style.textAlign] || '---'));
+    return [cells(rows[0]), '|' + Array.from({ length: width }, (_, i) => aligns[i] || '---').join('|') + '|', ...rows.slice(1).map(cells)].join('\n');
+  }
+  function mdBlocks(nodes) {
+    const out = [];
+    let run = [];
+    const flush = () => { const holder = document.createElement('p'); run.forEach(c => holder.append(c.cloneNode(true))); const s = inlineMd(holder).trim(); if (s) out.push(plainStart(s)); run = []; };
+    for (const n of nodes) {
+      if (n.nodeType === 8) { flush(); out.push('<!--' + n.data + '-->'); continue; }
+      if (n.nodeType === 3 || (n.nodeType === 1 && !BLOCK.test(n.tagName))) { run.push(n); continue; }
+      if (n.nodeType !== 1) continue;
+      flush();
+      const t = n.tagName;
+      if (/^H[1-6]$/.test(t)) { const s = inlineMd(n).replace(/\\\n/g, ' ').trim(); if (s) out.push('#'.repeat(+t[1]) + ' ' + s); }
+      /* the browser sometimes puts a list or a title inside a paragraph: then it is only a container */
+      else if (t === 'P' && [...n.children].some(c => BLOCK.test(c.tagName))) out.push(...mdBlocks(n.childNodes));
+      else if (t === 'P') { const s = inlineMd(n).trim(); if (s) out.push(plainStart(s)); }
+      else if (t === 'UL' || t === 'OL') { const s = list(n, ''); if (s.trim()) out.push(s); }
+      else if (t === 'LI') { const ul = document.createElement('ul'); ul.append(n.cloneNode(true)); out.push(list(ul, '')); }
+      else if (t === 'BLOCKQUOTE') { const inner = mdBlocks(n.childNodes).join('\n\n'); if (inner.trim()) out.push(inner.split('\n').map(l => l ? '> ' + l : '>').join('\n')); }
+      else if (t === 'PRE') { const code = n.querySelector('code'), lang = ((code?.className || '').match(/language-(\S+)/) || [])[1] || ''; out.push('```' + lang + '\n' + (n.innerText ?? n.textContent).replace(/\u00a0/g, ' ').replace(/\n$/, '') + '\n```'); }
+      else if (t === 'TABLE') { const s = table(n); if (s) out.push(s); }
+      else if (t === 'HR') out.push('---');
+      else out.push(...mdBlocks(n.childNodes));
+    }
+    flush();
+    return out;
+  }
+  const toMarkdown = el => mdBlocks(el.childNodes).join('\n\n');
+
+  window.FilesMD = { blocks, fragment, number, lines, tasks, frontMatter, toMarkdown };
 })();
