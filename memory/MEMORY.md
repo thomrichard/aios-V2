@@ -9,3 +9,4 @@ Types : `user_` (un fait sur l'utilisateur), `feedback_` (une correction), `refe
 - Une analyse demandée : ne modifier aucun fichier, présenter et attendre le feu vert → feedback_analyse-sans-modification.md
 - Airtable ne fait pas partie du système : tout vit dans le workspace → feedback_airtable.md
 - Le socle reste neutre pour devenir le kit des membres ; profil avec grill-me, puis installation → user_socle-pour-les-membres.md
+- Thomas ne fait jamais de commit : R4 enregistre lui-même dans Git avant toute opération qui en a besoin → feedback_commits-git.md

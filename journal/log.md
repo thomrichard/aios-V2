@@ -41,3 +41,5 @@ Ajout seul. Format : `- AAAA-MM-JJ · <action> | <sujet>`
 - 2026-10-24 · close | session vues, idées et sauvegarde de nuit : socle récupéré (PR #20 à #25), types idee, newsletter et atelier, sauvegarde vers prive en place
 - 2026-10-24 · processus rangement | 2 rangés, 8 questions
 - 2026-10-24 · skool | schéma de la leçon 2 « Pourquoi Claude oublie quand la discussion dure ? » remplacé, avec le titre court https://www.skool.com/club-smart/classroom/17480787?md=d86dccce69244ce9be771bd364ca5995
+- 2026-10-24 · ajout | skill idees ; le type idee et le champ ressortir ajoutés à chaque installation
+- 2026-10-24 · socle | récupère les PR n° 26 et 27 (skill idees, documentation) ; la section « Idées » d'AGENTS.md prend celle du socle

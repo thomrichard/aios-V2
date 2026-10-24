@@ -37,4 +37,16 @@ Explique chaque mot en une phrase, avec un exemple :
 | annonce | Un message à la communauté | sujet, en-cours, publie | publie | `domaines/<domaine>/<slug>-<date>.md` |
 | note | Une note perso qui dure | en-cours, clos | clos | `domaines/<domaine>/<slug>.md` |
 
+## Pour tout le monde : les idées
+
+Ajoute-les à chaque installation, dans « Ce workspace », avec ces mots : « Une idée, c'est une envie à creuser un jour, sans engagement. Tu la notes sans qu'on te pose de question, et elle ressort quand un sujet proche démarre (skill `idees`). » L'utilisateur peut les refuser.
+
+| Type | Ce que c'est | Statuts | Fin | Chemin |
+|---|---|---|---|---|
+| idee | Une envie à creuser un jour, sans engagement | notee, en-reflexion, lancee, abandonnee | lancee, abandonnee | `domaines/<domaine>/<slug>.md` |
+
+| Champ | Ce qu'il dit | Format | Obligatoire pour |
+|---|---|---|---|
+| ressortir | Le contexte où rappeler une idée, pas une date | texte | aucun |
+
 Un contenu commence à `sujet` : ce qu'on compte faire, pas encore commencé. Garde cette règle en ajoutant un type : un mot est soit un type, soit un statut, jamais les deux.

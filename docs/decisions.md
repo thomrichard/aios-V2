@@ -165,3 +165,9 @@ Les choix qui ont façonné le socle, et leur pourquoi. Une entrée par décisio
 - **Décision.** `verifier.py` ne compte plus les blocs générés d'`AGENTS.md` (la carte des domaines et les projets actifs) dans son plafond de 150 lignes.
 - **Pourquoi.** Ces blocs grossissent seuls : un domaine ou un projet de plus, et l'alerte tombait sans qu'aucune règle ait été écrite. Le plafond sert à garder court ce qu'on écrit à la main.
 - **Écarté.** Relever le plafond : l'alerte serait revenue avec les projets. Raccourcir les sections de l'utilisateur pour faire de la place.
+
+## 2026-10-24 · Les idées « un jour, peut-être » entrent dans le socle
+
+- **Décision.** Les idées passent du sur mesure de Thomas au socle. Une skill `idees` : noter sans question, après le test en trois questions (un sujet, un projet ou une idée) ; creuser (`grill-me` court, dans la fiche, statut `en-reflexion`) ; faire ressortir (`vues/idee.md`, colonne Ressortir, quand un sujet proche démarre) ; trier (les `notee` de plus de 3 mois, en un lot) ; lancer (statut `lancee`, projet créé, et `projet: <slug>` sur l'idée). L'installation ajoute le type `idee` et le champ `ressortir` dans « Ce workspace » pour tout le monde, sauf refus. `AGENTS.md` a une section « Idées » de deux lignes.
+- **Pourquoi.** Thomas juge que le système concerne tout le monde.
+- **Écarté.** Le garder comme sur mesure propre à l'AIOS de Thomas. Le mettre dans la base de `systeme/metadonnees.md` : il passe par « Ce workspace », pour qu'on puisse le refuser.

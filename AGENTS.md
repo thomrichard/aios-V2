@@ -59,14 +59,6 @@ Les domaines se règlent dans `systeme/metadonnees.md`, jamais ici : `systeme/sc
 
 Un projet vit dans `projets/<slug>.md` (gabarit : `systeme/gabarits/projet.md`) ; il apparaît ici tant que son statut n'est pas un statut de fin. On ne l'écrit jamais ici.
 
-## Idées
-
-- Le test, dans l'ordre : ça nourrit quelque chose qui existe ou qui revient (newsletter, vidéo, projet actif, offre) → ça va là-bas (un `sujet` ou une tâche) ; l'utilisateur veut s'y mettre maintenant, avec une prochaine étape → c'est un projet ; sinon → c'est une idée (type `idee`). Dans le doute, une seule question.
-- À la capture : aucune question, pas de filtre des objectifs.
-- « Creuse cette idée » : `grill-me` court (5 questions au plus), écrit dans la fiche, statut `en-reflexion`.
-- Quand on démarre un projet, un contenu ou une réflexion d'offre : lis `vues/idee.md` ; si une idée colle à sa colonne Ressortir, dis-le en une ligne.
-- Jamais d'idées dans le point du jour. « Tri des idées » : dans `vues/idee.md`, celles au statut `notee` dont la date Maj a plus de 3 mois, en un lot.
-
 ## Où chercher
 
 | Pour… | Lis |
@@ -137,6 +129,11 @@ Avant de dire « c'est fait », vérifie : relance le test ou relis le fichier. 
 - Ce n'est pas un domaine : son en-tête dit quel domaine le porte, et le routeur de ce domaine le cite.
 - Quand tu suis un process, note le passage dans `journal/log.md` : `- AAAA-MM-JJ · processus <slug> | <sujet>`.
 - Quand une même suite de skills revient deux fois, propose d'en faire un process.
+
+## Idées
+
+- Une envie à creuser un jour, sans engagement, devient une fiche de type `idee` : skill `idees` (noter, creuser, trier, lancer). Toutes les idées : `vues/idee.md`.
+- Quand un projet, un contenu ou une réflexion d'offre démarre, lis `vues/idee.md` : si une idée colle à sa colonne Ressortir, dis-le en une ligne.
 
 ## Interface
 

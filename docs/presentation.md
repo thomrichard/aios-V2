@@ -170,7 +170,7 @@ L'agent récupère le socle, dépose le profil dans l'inbox et lance l'installat
 2. elle propose des domaines et des types tirés d'un catalogue (contenu, clients, produits, communauté, perso…), choisis d'après ton métier ;
 3. tu gardes, tu renommes ou tu retires.
 
-Le socle marche déjà sans rien régler : il fournit le domaine `operations` (pilotage, admin, l'AIOS lui-même) et des types de base (projet, livrable, compte rendu, concept, source…). Le catalogue ajoute ce qui te ressemble. Chacun repart avec son AIOS.
+Le socle marche déjà sans rien régler : il fournit le domaine `operations` (pilotage, admin, l'AIOS lui-même) et des types de base (projet, livrable, compte rendu, concept, source…). Le catalogue ajoute ce qui te ressemble. Une seule chose est proposée à tout le monde : les idées « un jour, peut-être » (voir plus bas), qu'on peut refuser. Chacun repart avec son AIOS.
 
 ## Une journée de travail avec l'agent
 
@@ -195,6 +195,7 @@ flowchart LR
 | `surprise-me` | quand une création visuelle sort « propre mais banale » | une autre direction, poussée loin, relue sur capture avant d'être montrée | la version retenue |
 | `devil` | avant de s'engager sur un choix ou un livrable | des objections sérieuses, puis un verdict | non |
 | `humanizer` | avant de publier un texte écrit avec l'IA | retire les tics d'écriture « IA », garde la voix de l'auteur | le texte, si tu le demandes |
+| `idees` | quand une envie « un jour, peut-être » passe | la note sans question, la fait ressortir au bon moment, la lance en projet | oui, une fiche `idee` |
 | `close` | en fin de session | range tout ce qui compte, écrit le point de reprise | oui |
 | `calibrate` | en fin de session, après des corrections | propose de faire apprendre l'agent | oui, après ton choix |
 
@@ -350,16 +351,28 @@ Pour brancher une application (Notion, un agenda, une messagerie…), tu dis « 
 
 *Un exemple de connexion par l'API : `systeme/scripts/kit.py` lit un compte Kit (la newsletter) en lecture seule, avec la clé `KIT_API_KEY` dans `.env`. « kit.py point » donne les abonnés, leur croissance et les stats des derniers envois.*
 
-## Un exemple de sur mesure : les idées « un jour, peut-être »
+## Les idées « un jour, peut-être »
 
-Le socle ne fait pas tout. Chacun ajoute ce qui lui manque, dans sa section « Ce workspace ». Voici ce que Thomas a ajouté dans son propre AIOS (ce n'est pas dans le socle) :
+Une idée, c'est une envie à creuser un jour, sans engagement. Elle ne doit ni se perdre, ni encombrer les projets. La skill `idees` s'en occupe.
 
-- un type `idee`, avec les statuts `notee`, `en-reflexion`, `lancee`, `abandonnee`, rangé dans son domaine ;
-- un champ `ressortir` : non pas une date, mais un contexte où la rappeler (« quand je prépare le prochain atelier ») ;
-- un test en trois questions, pour savoir ce qu'est vraiment une idée :
-  1. ça nourrit quelque chose qui existe déjà ? → ça va là-bas ;
-  2. je m'y mets maintenant ? → c'est un projet ;
+- **Noter, sans question.** L'agent fait d'abord un test en trois questions :
+  1. ça nourrit quelque chose qui existe déjà (un contenu, un projet, une offre) ? → ce n'est pas une idée : un sujet ou une tâche, là-bas ;
+  2. je veux m'y mettre maintenant, avec une prochaine étape ? → c'est un projet ;
   3. sinon → c'est une idée.
+
+  Il écrit alors une fiche de type `idee`, au statut `notee`, dans le domaine qui colle (`perso` pour ce qui n'est pas le travail). Le champ `ressortir` dit dans quel contexte la rappeler : pas une date, une situation (« quand je prépare le prochain atelier »). Noter doit rester instantané : aucune autre question.
+- **Creuser.** « Creuse cette idée » : un `grill-me` court, cinq questions au plus, dont les réponses vont dans la fiche de l'idée. Statut `en-reflexion`.
+- **Faire ressortir.** Quand un projet, un contenu ou une réflexion d'offre démarre, l'agent lit `vues/idee.md`. Si une idée colle à sa colonne « Ressortir », il le dit en une ligne. Le point du jour, lui, ne rappelle jamais les idées.
+- **Trier.** « Tri des idées » : les idées notées il y a plus de trois mois, en un seul lot. Pour chacune, tu gardes, tu abandonnes (avec le pourquoi en une ligne) ou tu lances.
+- **Lancer.** Statut `lancee` : l'agent crée le projet, et l'idée porte le nom du projet dans son en-tête. Elle apparaît donc dans la vue du projet, sans changer de place.
+
+Une idée ne se supprime jamais : abandonnée, elle garde son pourquoi. Toutes les idées, tous domaines confondus, sont dans `vues/idee.md`.
+
+L'installation ajoute le type `idee` et le champ `ressortir` à chaque AIOS, sauf si tu les refuses.
+
+*Un essai réel, avec un vrai agent : une idée sur la télé a été notée et rangée dans `perso`. Un faux ami, « la page de vente cette semaine », a été reconnu comme un projet, avec une seule question. Le tri et le lancement ont marché.*
+
+Au départ, c'était le sur mesure de Thomas, dans son propre AIOS. Il l'a versé au socle, parce que tout le monde a des idées « un jour, peut-être ».
 
 ## Ce qui est prévu ensuite
 
