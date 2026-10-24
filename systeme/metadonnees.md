@@ -73,6 +73,7 @@ Tes domaines, tes types et tes champs à toi. La skill `installation` les écrit
 | video | Une vidéo, du sujet à la mise en ligne | sujet, en-cours, a-valider, publie | publie | `domaines/<domaine>/<slug>-<date>.md` |
 | newsletter | Un numéro de la newsletter, du sujet à l'envoi | sujet, en-cours, a-valider, publie | publie | `domaines/<domaine>/<slug>-<date>.md` |
 | support | Un support de formation ou d'atelier | en-cours, a-valider, publie | publie | `domaines/<domaine>/<slug>.md` |
+| atelier | Un atelier de groupe : l'offre, la page de vente, les dates et les inscrits | a-preparer, en-vente, termine, annule | termine, annule | `domaines/<domaine>/<slug>-<date>.md` |
 | idee | Un truc que j'aimerais peut-être creuser un jour, sans engagement | notee, en-reflexion, lancee, abandonnee | lancee, abandonnee | `domaines/<domaine>/<slug>.md` |
 
 | Champ | Ce qu'il dit | Format | Obligatoire pour |
