@@ -119,6 +119,11 @@ Avant de dire « c'est fait », vérifie : relance le test ou relis le fichier. 
 - Quand tu suis un process, note le passage dans `journal/log.md` : `- AAAA-MM-JJ · processus <slug> | <sujet>`.
 - Quand une même suite de skills revient deux fois, propose d'en faire un process.
 
+## Idées
+
+- Une envie à creuser un jour, sans engagement, devient une fiche de type `idee` : skill `idees` (noter, creuser, trier, lancer). Toutes les idées : `vues/idee.md`.
+- Quand un projet, un contenu ou une réflexion d'offre démarre, lis `vues/idee.md` : si une idée colle à sa colonne Ressortir, dis-le en une ligne.
+
 ## Interface
 
 - `interface/` : SM4RT, l'interface tirée de l'Agentic OS v2 de Jay E | RoboNuggets (licence MIT), branchée sur ce workspace. Adresse : `http://localhost:50000`. Toujours allumée : `python3 systeme/scripts/interface.py installer` (une fois) ; `etat` pour vérifier, `retirer` pour l'arrêter.

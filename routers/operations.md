@@ -24,6 +24,7 @@ Pilotage (OKR, revue hebdo, revenus), admin et finances, et l'AIOS comme outil d
 - `burst` : N variantes d'un livrable, pour choisir la plus proche de la cible
 - `humanizer` : retirer d'un texte les tics d'écriture qui sentent l'IA
 - `surprise-me` : pour une création visuelle trop banale, une autre direction, trois techniques avancées, et une boucle capture, critique, amélioration
+- `idees` : les idées « un jour, peut-être » (noter, creuser, faire ressortir, trier, lancer)
 
 ## Process
 - Installation : `processus/installation.md` · à la demande, après le clonage
