@@ -181,3 +181,9 @@ Les choix qui ont façonné le socle, et leur pourquoi. Une entrée par décisio
   4. pas de création, de renommage ni de suppression de fichier dans cette première version.
 - **Pourquoi.** Le Markdown reste la source : rien ne se perd (l'en-tête, les tableaux). L'enregistrement relance l'index, pour que les index et les vues suivent. Ranger reste le travail de `classer` et du rangement.
 - **Écarté.** Un outil à part ; un éditeur « tel écran tel résultat » ; l'enregistrement automatique ; créer, renommer ou supprimer depuis l'éditeur.
+
+## 2026-10-24 · L'Aperçu de l'onglet Fichiers devient modifiable
+
+- **Décision.** Dans l'onglet Fichiers, on écrit directement dans l'aperçu mis en forme, sur la page entière, à la demande de Thomas : une barre de mise en forme, et les habitudes du Markdown en tapant. L'en-tête reste une carte non modifiable dans l'aperçu. Garde-fou : chaque bloc garde son texte d'origine, et seuls les blocs touchés sont réécrits en Markdown, à la façon du workspace. Précise le choix 2 de l'entrée « L'onglet Fichiers » : le Markdown reste la source.
+- **Pourquoi.** Écrire sans connaître la syntaxe. Le garde-fou évite qu'un mot changé réécrive tout le fichier : Git ne voit que le passage.
+- **Écarté.** L'édition bloc par bloc, avec une barre qui apparaît sur chaque bloc : même résultat dans le fichier, moins naturel à l'usage. Une simple barre de boutons au-dessus du Markdown.
