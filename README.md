@@ -40,7 +40,7 @@ Le reste (skills deck, agenda, e-mails, stats) se branche avec les guides de `in
 
 1. `AGENTS.md` est la seule source : règles, carte des domaines, projets actifs. `CLAUDE.md` ne fait que l'importer ; `.gemini/settings.json` le désigne à Gemini CLI. La carte, elle, est recopiée depuis `systeme/metadonnees.md`, où se règlent les domaines : changer un domaine là-bas met à jour tous les agents. Les projets actifs sont recopiés depuis l'en-tête des fichiers de `projets/`.
 2. Chaque domaine a un routeur court dans `routers/`.
-3. Chaque dossier a un `_index.md`, généré depuis l'en-tête de chaque fichier ; chaque dossier d'images a son `_images.md`. Les champs, les types et les statuts permis dans un en-tête sont dans `systeme/metadonnees.md`, et nulle part ailleurs.
+3. Chaque dossier a un `_index.md`, généré depuis l'en-tête de chaque fichier ; chaque dossier d'images a son `_images.md`. Les vues de `vues/` traversent les domaines : une par type (toutes les idées, toutes les vidéos), une par projet (tous ses fichiers, où qu'ils soient). Les champs, les types et les statuts permis dans un en-tête sont dans `systeme/metadonnees.md`, et nulle part ailleurs.
 4. La mémoire vit dans `memory/`, une ligne par souvenir dans `memory/MEMORY.md`.
 5. Les skills existent une seule fois, dans `skills/` ; `.claude/skills` et `.agents/skills` sont des liens.
 6. Chaque process (une suite de skills, avec ce qu'on décide à chaque étape) a son fichier dans `processus/`.
@@ -66,7 +66,7 @@ Le reste (skills deck, agenda, e-mails, stats) se branche avec les guides de `in
 
 | Script | Rôle |
 |---|---|
-| `systeme/scripts/index.py` | Génère les `_index.md` depuis les en-têtes, `outbox/index.html`, et dans `AGENTS.md` la carte des domaines (depuis `systeme/metadonnees.md`) et les projets actifs (depuis `projets/`) |
+| `systeme/scripts/index.py` | Génère les `_index.md` et les vues de `vues/` (une par type, une par projet) depuis les en-têtes, `outbox/index.html`, et dans `AGENTS.md` la carte des domaines (depuis `systeme/metadonnees.md`) et les projets actifs (depuis `projets/`) |
 | `systeme/scripts/verifier.py` | Contrôle la source unique, les liens vers `skills/`, les index d'images, la mémoire, les en-têtes (d'après `systeme/metadonnees.md`) et les plafonds de taille |
 | `systeme/scripts/ranger.py <fichier>` | Range un fichier à la place que lui donne son en-tête (colonne « Chemin » de `systeme/metadonnees.md`) ; envoie vidéos et sons dans le dossier des fichiers lourds |
 | `systeme/scripts/lancer.py <skill>` | Lance une skill sans discussion, avec l'agent de `.env` et le modèle de `systeme/modeles.md` |

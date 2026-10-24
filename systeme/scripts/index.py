@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Génère les _index.md depuis les en-têtes des fichiers, la page outbox/index.html (sorties, process, skills),
-la carte des domaines et les projets actifs d'AGENTS.md, et les réglages de l'interface (départements, routines,
-applications) depuis systeme/metadonnees.md, systeme/routines.md et systeme/connexions.md.
+"""Génère les _index.md depuis les en-têtes des fichiers, les vues (vues/ : un index par type et par projet,
+tous domaines confondus), la page outbox/index.html (sorties, process, skills), la carte des domaines et les projets
+actifs d'AGENTS.md, et les réglages de l'interface (départements, routines, applications) depuis
+systeme/metadonnees.md, systeme/routines.md et systeme/connexions.md.
 
 Usage : python3 systeme/scripts/index.py [--check]
   --check : n'écrit rien, liste les index qui ne sont plus à jour (code 1 s'il y en a).
@@ -24,6 +25,7 @@ DEBUT_PROJETS = ("<!-- Début des projets actifs : générés par systeme/script
                  "des fichiers de projets/. -->")
 FIN_PROJETS = "<!-- Fin des projets actifs -->"
 META = os.path.join(RACINE, "systeme", "metadonnees.md")
+VUES = os.path.join(RACINE, "vues")
 LOURDS = (".mp4", ".mov", ".m4v", ".mkv", ".avi", ".webm", ".mp3", ".wav", ".m4a", ".aac", ".flac", ".ogg", ".opus")
 COULEURS = ["#00bcd4", "#e040fb", "#fdd835", "#43a047", "#f44336", "#ec407a", "#26a69a", "#8d6e63"]
 ICONES = ["pen", "people", "build", "data", "pulse", "book", "visual", "clock", "api"]
@@ -278,12 +280,12 @@ def index_dossier(dossier):
             lignes.append(f"| [{nom}]({nom}.md) | {cellule(e.get('domaine'))} | {cellule(', '.join(skills_utilisees(liste)))} "
                           f"| {cellule(e.get('declencheur'))} | {cellule(e.get('statut'))} |")
     else:
-        lignes += ["| Fichier | Résumé | Statut | Projet | Maj |", "|---|---|---|---|---|"]
+        lignes += ["| Fichier | Type | Résumé | Statut | Projet | Maj |", "|---|---|---|---|---|---|"]
         notes = [(f, lire_entete(os.path.join(dossier, f))) for f in fichiers]
         notes.sort(key=lambda n: (n[1].get("maj", ""), n[0]), reverse=True)
         for nom, e in notes:
-            lignes.append(f"| [{nom}]({nom}) | {cellule(e.get('resume'))} | {cellule(e.get('statut'))} "
-                          f"| {cellule(e.get('projet'))} | {cellule(e.get('maj'))} |")
+            lignes.append(f"| [{nom}]({nom}) | {cellule(e.get('type'))} | {cellule(e.get('resume'))} "
+                          f"| {cellule(e.get('statut'))} | {cellule(e.get('projet'))} | {cellule(e.get('maj'))} |")
 
     if sous_dossiers:
         lignes += ["", "## Dossiers", ""]
@@ -317,6 +319,100 @@ def livrables():
             if e.get("statut") == "a-valider" or e.get("type") == "livrable":
                 trouves.append((e.get("maj", ""), os.path.relpath(chemin, RACINE), e))
     return sorted(trouves, reverse=True)
+
+
+def fiches():
+    """Chaque fichier qui a un type, dans les dossiers indexés et le journal : (chemin relatif, en-tête)."""
+    for base in DOSSIERS + ["journal"]:
+        for dossier, sous, fichiers in os.walk(os.path.join(RACINE, base)):
+            sous[:] = sorted(s for s in sous if not s.startswith("."))
+            for nom in sorted(fichiers):
+                if nom.endswith(".md") and nom not in IGNORES:
+                    e = lire_entete(os.path.join(dossier, nom))
+                    if e.get("type"):
+                        yield os.path.relpath(os.path.join(dossier, nom), RACINE).replace(os.sep, "/"), e
+
+
+def projets_de(e):
+    return [p.strip() for p in e.get("projet", "").split(",") if p.strip()]
+
+
+def table_vue(liste, colonnes):
+    """Le tableau d'une vue : une ligne par fichier, un lien relatif depuis vues/, puis les champs demandés."""
+    lignes = ["| Fichier | " + " | ".join(titre for titre, _ in colonnes) + " |", "|---" * (len(colonnes) + 1) + "|"]
+    for rel, e in liste:
+        nom = os.path.basename(rel)[:-3]
+        lignes.append(f"| [{nom}](../{rel}) | " + " | ".join(cellule(e.get(champ)) for _, champ in colonnes) + " |")
+    return lignes
+
+
+def vue_type(type_, liste, couvre):
+    """Tous les fichiers d'un type, tous domaines confondus : les vivants d'abord, dans l'ordre de leurs statuts,
+    puis ceux qui sont finis. Les colonnes en plus : les champs réglés que ces fichiers remplissent."""
+    statuts, fin = types_regles().get(type_, ([], []))
+    rang = {s: i for i, s in enumerate(statuts)}
+    liste = sorted(liste, key=lambda f: f[1].get("maj", ""), reverse=True)
+    liste.sort(key=lambda f: (f[1].get("statut") in fin, rang.get(f[1].get("statut"), len(rang))))
+    communs = {"type", "resume", "statut", "domaine", "cree", "maj", "liens", "fichier"}
+    autres = [c for c in champs_regles() if c not in communs and any(e.get(c) for _, e in liste)]
+    colonnes = [("Domaine", "domaine")] if any(e.get("domaine") for _, e in liste) else []
+    colonnes += [("Résumé", "resume"), ("Statut", "statut")]
+    colonnes += [(c.replace("_", " ").capitalize(), c) for c in autres] + [("Maj", "maj")]
+    lignes = [f"# vues · {type_}", "", AVERTISSEMENT, ""]
+    lignes += [f"Tous les fichiers de type `{type_}`, tous domaines confondus. {couvre}".rstrip(), ""]
+    return "\n".join(lignes + table_vue(liste, colonnes)) + "\n"
+
+
+def vue_projet(slug, liste):
+    """Tous les fichiers qui servent un projet, où qu'ils soient rangés."""
+    liste = sorted(liste, key=lambda f: f[1].get("maj", ""), reverse=True)
+    liste.sort(key=lambda f: f[1].get("type", ""))
+    fiche = f"projets/{slug}.md"
+    lignes = [f"# vues · projet {slug}", "", AVERTISSEMENT, ""]
+    lignes += [f"Tous les fichiers qui portent `projet: {slug}`, où qu'ils soient rangés. "
+               f"La fiche du projet : [{fiche}](../{fiche}).", ""]
+    colonnes = [("Type", "type"), ("Domaine", "domaine"), ("Résumé", "resume"), ("Statut", "statut"), ("Maj", "maj")]
+    return "\n".join(lignes + table_vue(liste, colonnes)) + "\n"
+
+
+def champs_regles():
+    """Les champs réglés dans systeme/metadonnees.md, dans l'ordre."""
+    trouves = []
+    for r in tableaux(META, "Champ"):
+        nom = r.get("Champ", "").strip("`")
+        if nom and nom not in trouves:
+            trouves.append(nom)
+    return trouves
+
+
+def vues():
+    """Les vues : vues/<type>.md pour chaque type qui a des fichiers (sauf projet et processus, qui ont leur
+    index), vues/projet-<slug>.md pour chaque projet que des fichiers servent, et vues/_index.md qui les liste."""
+    par_type, par_projet = {}, {}
+    for rel, e in fiches():
+        par_type.setdefault(e["type"], []).append((rel, e))
+        for p in projets_de(e):
+            par_projet.setdefault(p, []).append((rel, e))
+    couvre = {r.get("Type", "").strip("`"): r.get("Ce que c'est", "") for r in tableaux(META, "Type")}
+    dedies = {"projet": "../projets/_index.md", "processus": "../processus/_index.md"}
+    sommaire = ["# vues · index", "", AVERTISSEMENT, "",
+                "Une vue par type et par projet, générée depuis les en-têtes : tous les fichiers, tous domaines confondus.",
+                "", "| Vue | Ce qu'elle montre | Fichiers |", "|---|---|---|"]
+    for type_ in sorted(par_type):
+        n = len(par_type[type_])
+        if type_ in dedies:
+            sommaire.append(f"| [{type_}]({dedies[type_]}) | {cellule(couvre.get(type_))} | {n} |")
+            continue
+        texte = couvre.get(type_, "").rstrip(".")
+        yield os.path.join(VUES, f"{type_}.md"), vue_type(type_, par_type[type_], texte + "." if texte else "")
+        sommaire.append(f"| [{type_}]({type_}.md) | {cellule(couvre.get(type_))} | {n} |")
+    for slug in sorted(par_projet):
+        yield os.path.join(VUES, f"projet-{slug}.md"), vue_projet(slug, par_projet[slug])
+        resume = lire_entete(os.path.join(RACINE, "projets", f"{slug}.md")).get("resume", "")
+        sommaire.append(f"| [projet-{slug}](projet-{slug}.md) | {cellule(resume)} | {len(par_projet[slug])} |")
+    if len(sommaire) == 8:
+        sommaire[-2:] = ["Aucune vue pour l'instant."]
+    yield os.path.join(VUES, "_index.md"), "\n".join(sommaire) + "\n"
 
 
 def skills():
@@ -535,6 +631,7 @@ def cibles():
         yield os.path.join(RACINE, "skills", "_index.md"), index_skills()
     if os.path.isdir(os.path.join(RACINE, "outbox")):
         yield os.path.join(RACINE, "outbox", "index.html"), page_outbox()
+    yield from vues()
     if os.path.exists(os.path.join(RACINE, "AGENTS.md")):
         yield os.path.join(RACINE, "AGENTS.md"), agents()
     if os.path.isdir(os.path.join(RACINE, "interface", "config")):
@@ -545,10 +642,23 @@ def cibles():
         yield os.path.join(RACINE, "interface", "config", "apps.json"), apps_interface()
 
 
+def vues_en_trop(attendus):
+    """Les fichiers de vues/ qu'aucune vue ne produit plus : un type ou un projet qui n'a plus de fichiers."""
+    if not os.path.isdir(VUES):
+        return []
+    return [os.path.join(VUES, n) for n in sorted(os.listdir(VUES))
+            if n.endswith(".md") and os.path.join(VUES, n) not in attendus]
+
+
 def main():
     verifier_seulement = "--check" in sys.argv
     perimes = []
-    for chemin, contenu in cibles():
+    attendus = list(cibles())
+    for chemin in vues_en_trop({c for c, _ in attendus}):
+        perimes.append(os.path.relpath(chemin, RACINE))
+        if not verifier_seulement:
+            os.remove(chemin)
+    for chemin, contenu in attendus:
         actuel = None
         if os.path.exists(chemin):
             with open(chemin, encoding="utf-8") as f:
@@ -557,6 +667,7 @@ def main():
             continue
         perimes.append(os.path.relpath(chemin, RACINE))
         if not verifier_seulement:
+            os.makedirs(os.path.dirname(chemin), exist_ok=True)
             with open(chemin, "w", encoding="utf-8") as f:
                 f.write(contenu)
     if verifier_seulement:
