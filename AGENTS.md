@@ -51,12 +51,21 @@ Les domaines se règlent dans `systeme/metadonnees.md`, jamais ici : `systeme/sc
 
 <!-- Début des projets actifs : générés par systeme/scripts/index.py depuis l'en-tête des fichiers de projets/. -->
 
+- [references-youtube](projets/references-youtube.md) · contenu · Thomas relit la matrice et la grille d'analyse des concurrents
 - [socle-aios-membres](projets/socle-aios-membres.md) · produits · À définir
 - [video-brevo](projets/video-brevo.md) · contenu · À définir
 
 <!-- Fin des projets actifs -->
 
 Un projet vit dans `projets/<slug>.md` (gabarit : `systeme/gabarits/projet.md`) ; il apparaît ici tant que son statut n'est pas un statut de fin. On ne l'écrit jamais ici.
+
+## Idées
+
+- Le test, dans l'ordre : ça nourrit quelque chose qui existe ou qui revient (newsletter, vidéo, projet actif, offre) → ça va là-bas (un `sujet` ou une tâche) ; l'utilisateur veut s'y mettre maintenant, avec une prochaine étape → c'est un projet ; sinon → c'est une idée (type `idee`). Dans le doute, une seule question.
+- À la capture : aucune question, pas de filtre des objectifs.
+- « Creuse cette idée » : `grill-me` court (5 questions au plus), écrit dans la fiche, statut `en-reflexion`.
+- Quand on démarre un projet, un contenu ou une réflexion d'offre : lis `vues/idee.md` ; si une idée colle à sa colonne Ressortir, dis-le en une ligne.
+- Jamais d'idées dans le point du jour. « Tri des idées » : dans `vues/idee.md`, celles au statut `notee` dont la date Maj a plus de 3 mois, en un lot.
 
 ## Où chercher
 
