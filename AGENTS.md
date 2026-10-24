@@ -58,6 +58,7 @@ Un projet vit dans `projets/<slug>.md` (gabarit : `systeme/gabarits/projet.md`) 
 | Une skill, par son nom | `skills/_index.md` (généré) |
 | Un process : ses étapes, ses skills, ce qu'on décide | `processus/_index.md` (généré) |
 | Un inventaire ou un statut | l'`_index.md` du dossier |
+| Tous les fichiers d'un type ou d'un projet, tous domaines confondus | `vues/<type>.md`, `vues/projet-<slug>.md` (générés ; la liste : `vues/_index.md`) |
 | Une image ou un média | l'`_images.md` du dossier |
 | Les objectifs du trimestre | `domaines/operations/okr.md` |
 | Une préférence, une correction déjà donnée | `memory/MEMORY.md` |
@@ -66,7 +67,7 @@ Un projet vit dans `projets/<slug>.md` (gabarit : `systeme/gabarits/projet.md`) 
 | Les réglages : domaines, champs d'un en-tête, types et statuts | `systeme/metadonnees.md` |
 | Une décision passée | `journal/decisions.md` |
 
-Ordre de recherche : d'abord la carte (ce fichier), puis le routeur ou l'index. Si ça ne suffit pas, une recherche texte dans le dossier le plus proche, puis dans tout le workspace. Si tu as dû chercher partout, propose d'ajouter la route qui manquait.
+Ordre de recherche : d'abord la carte (ce fichier), puis le routeur, l'index ou la vue. Si ça ne suffit pas, une recherche texte dans le dossier le plus proche, puis dans tout le workspace. Si tu as dû chercher partout, propose d'ajouter la route qui manquait.
 
 ## Comment tu travailles
 
@@ -86,7 +87,7 @@ Avant de dire « c'est fait », vérifie : relance le test ou relis le fichier. 
 3. Le statut est un champ de l'en-tête, pas un dossier. Un objet garde son chemin toute sa vie.
 4. Chaque fichier texte a un en-tête (gabarit : `systeme/gabarits/fiche.md`). Ses champs, son type et son statut sont pris dans `systeme/metadonnees.md` : lis-le avant d'écrire un en-tête.
 5. Chaque dossier qui contient des images a son `_images.md` : une ligne par image (fichier, ce qu'elle montre, origine, usage). Écris la ligne dès que l'image arrive.
-6. Les `_index.md` sont générés par `systeme/scripts/index.py`. Ne les écris jamais à la main ; relance le script après avoir écrit un fichier.
+6. Les `_index.md` et les vues de `vues/` sont générés par `systeme/scripts/index.py`. Ne les écris jamais à la main ; relance le script après avoir écrit un fichier.
 7. Quand un fichier bouge ou qu'un projet démarre, mets à jour le routeur concerné dans le même tour. La carte et les projets actifs ci-dessus suivent avec `systeme/scripts/index.py`.
 8. Nommage : minuscules, tirets, sans espaces ni accents. Daté : `<slug>-AA-MM.md` (l'année et le mois de son champ `cree`). Durable : `<slug>.md`. Pas de dossier par type : le type est dans l'en-tête, seul le domaine est un dossier. Un objet qui a plusieurs fichiers a son dossier.
 9. Ne supprime rien : déplace dans `archives/`.
