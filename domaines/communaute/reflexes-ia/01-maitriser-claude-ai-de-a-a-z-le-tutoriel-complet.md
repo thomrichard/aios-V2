@@ -4,7 +4,7 @@ resume: Leçon Skool de « Réflexes IA », dossier « Claude » : Maîtriser Cl
 statut: publie
 domaine: communaute
 cree: 2026-05-20
-maj: 2026-07-29
+maj: 2026-10-24
 liens: [reflexes-ia.md, https://www.skool.com/club-smart/classroom/0f85424d?md=d59738fd3d6a4440996d485c8b1fba82]
 ---
 # Maîtriser Claude AI de A à Z (Le Tutoriel Complet)
@@ -96,8 +96,8 @@ Tout ce qui est mentionné dans la vidéo, regroupé pour t'éviter d'aller le c
 
 ## Ressources
 
-- framework prompting : fichier `frameworks-prompting.pdf`, joint à la leçon sur Skool
-- Configurer claude : fichier `cheat-sheet-settings-claude.pdf`, joint à la leçon sur Skool
-- skill compte rendu de réunion : fichier `compte-rendu-reunion.md`, joint à la leçon sur Skool
-- skill préparation de rendez vous : fichier `preparation-rendez-vous.md`, joint à la leçon sur Skool
-- MCP essentiels : fichier `Les MCP essentiels — connecter Claude à tes outils · Club SMART.pdf`, joint à la leçon sur Skool
+- framework prompting : [`01-frameworks-prompting.pdf`](01-frameworks-prompting.pdf), joint à la leçon sur Skool
+- Configurer claude : [`01-cheat-sheet-settings-claude.pdf`](01-cheat-sheet-settings-claude.pdf), joint à la leçon sur Skool
+- skill compte rendu de réunion : [`01-compte-rendu-reunion.md`](01-compte-rendu-reunion.md), joint à la leçon sur Skool
+- skill préparation de rendez vous : [`01-preparation-rendez-vous.md`](01-preparation-rendez-vous.md), joint à la leçon sur Skool
+- MCP essentiels : [`01-les-mcp-essentiels-connecter-claude-a-tes-outils-club-smart.pdf`](01-les-mcp-essentiels-connecter-claude-a-tes-outils-club-smart.pdf), joint à la leçon sur Skool

@@ -4,7 +4,7 @@ resume: Leçon Skool de « Faire vivre ton AIOS » : Les arbitrages : trace tes 
 statut: publie
 domaine: communaute
 cree: 2026-08-26
-maj: 2026-08-29
+maj: 2026-10-24
 liens: [faire-vivre-ton-aios.md, https://www.skool.com/club-smart/classroom/dd9dc077?md=3b551e0142164ec4a91b1f7c6fde058e]
 ---
 # Les arbitrages : trace tes décisions
@@ -245,7 +245,7 @@ Et le geste qui fait la différence sur la durée : **quand une décision change
 
 ## Ressources
 
-- Arbitrage - la skill : fichier `arbitrage-SKILL.md`, joint à la leçon sur Skool
-- Arbitrage - le template : fichier `arbitrages-TEMPLATE.md`, joint à la leçon sur Skool
-- Arbitrages branchements : fichier `arbitrages-BRANCHEMENT.md`, joint à la leçon sur Skool
-- Arbitrage exemple : fichier `arbitrages-EXEMPLE.md`, joint à la leçon sur Skool
+- Arbitrage - la skill : [`04-arbitrage-skill.md`](04-arbitrage-skill.md), joint à la leçon sur Skool
+- Arbitrage - le template : [`04-arbitrages-template.md`](04-arbitrages-template.md), joint à la leçon sur Skool
+- Arbitrages branchements : [`04-arbitrages-branchement.md`](04-arbitrages-branchement.md), joint à la leçon sur Skool
+- Arbitrage exemple : [`04-arbitrages-exemple.md`](04-arbitrages-exemple.md), joint à la leçon sur Skool

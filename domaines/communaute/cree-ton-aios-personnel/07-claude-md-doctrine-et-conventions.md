@@ -4,7 +4,7 @@ resume: Leçon Skool de « Crée ton AIOS Personnel » : CLAUDE.md, doctrine et 
 statut: publie
 domaine: communaute
 cree: 2026-05-27
-maj: 2026-07-21
+maj: 2026-10-24
 liens: [cree-ton-aios-personnel.md, https://www.skool.com/club-smart/classroom/f93a2706?md=4b4ba73ce8b04aeca8760e9f448f5e98]
 ---
 # CLAUDE.md, doctrine et conventions
@@ -219,7 +219,7 @@ Tu as la mémoire écrite. Maintenant on va l'**interconnecter**. Les wikilinks 
 
 ## Ressources
 
-- démo convention jour 1 : fichier `exemple-conventions-demo-jour1.md`, joint à la leçon sur Skool
-- démo doctrine jour 1 : fichier `exemple-doctrine-demo-jour1.md`, joint à la leçon sur Skool
-- démo doctrine 6 mois : fichier `exemple-doctrine-purgee.md`, joint à la leçon sur Skool
-- démo convention 6 mois : fichier `exemple-conventions-demo-6mois.md`, joint à la leçon sur Skool
+- démo convention jour 1 : [`07-exemple-conventions-demo-jour1.md`](07-exemple-conventions-demo-jour1.md), joint à la leçon sur Skool
+- démo doctrine jour 1 : [`07-exemple-doctrine-demo-jour1.md`](07-exemple-doctrine-demo-jour1.md), joint à la leçon sur Skool
+- démo doctrine 6 mois : [`07-exemple-doctrine-purgee.md`](07-exemple-doctrine-purgee.md), joint à la leçon sur Skool
+- démo convention 6 mois : [`07-exemple-conventions-demo-6mois.md`](07-exemple-conventions-demo-6mois.md), joint à la leçon sur Skool

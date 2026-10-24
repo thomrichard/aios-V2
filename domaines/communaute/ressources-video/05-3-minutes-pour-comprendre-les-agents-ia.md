@@ -4,7 +4,7 @@ resume: Leçon Skool de « Ressources vidéo » : 3 minutes pour comprendre : le
 statut: en-cours
 domaine: communaute
 cree: 2026-10-13
-maj: 2026-10-13
+maj: 2026-10-24
 liens: [ressources-video.md, https://www.skool.com/club-smart/classroom/46bbf311?md=bfb0b37ac4e84d9b997efdc73358eb1e]
 ---
 # 3 minutes pour comprendre : les agents IA
@@ -30,4 +30,4 @@ Tout le monde parle d'agents IA, et on lit partout qu'ils auraient tué les plat
 
 ## Ressources
 
-- Livre blanc agents IA (PDF) : fichier `livre-blanc-agents-ia.pdf`, joint à la leçon sur Skool
+- Livre blanc agents IA (PDF) : [`05-livre-blanc-agents-ia.pdf`](05-livre-blanc-agents-ia.pdf), joint à la leçon sur Skool

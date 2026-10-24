@@ -4,9 +4,14 @@
 
 | Fichier | Type | Résumé | Statut | Projet | Maj |
 |---|---|---|---|---|---|
+| [07-exemple-doctrine-purgee.md](07-exemple-doctrine-purgee.md) | support | démo doctrine 6 mois : pièce jointe de la leçon « CLAUDE.md, doctrine et conventions » | publie |  | 2026-10-24 |
+| [07-exemple-doctrine-demo-jour1.md](07-exemple-doctrine-demo-jour1.md) | support | démo doctrine jour 1 : pièce jointe de la leçon « CLAUDE.md, doctrine et conventions » | publie |  | 2026-10-24 |
+| [07-exemple-conventions-demo-jour1.md](07-exemple-conventions-demo-jour1.md) | support | démo convention jour 1 : pièce jointe de la leçon « CLAUDE.md, doctrine et conventions » | publie |  | 2026-10-24 |
+| [07-exemple-conventions-demo-6mois.md](07-exemple-conventions-demo-6mois.md) | support | démo convention 6 mois : pièce jointe de la leçon « CLAUDE.md, doctrine et conventions » | publie |  | 2026-10-24 |
+| [07-claude-md-doctrine-et-conventions.md](07-claude-md-doctrine-et-conventions.md) | support | Leçon Skool de « Crée ton AIOS Personnel » : CLAUDE.md, doctrine et conventions | publie |  | 2026-10-24 |
+| [02-construis-ton-aios-en-une-session.md](02-construis-ton-aios-en-une-session.md) | support | Leçon Skool de « Crée ton AIOS Personnel » : Construis ton AIOS en une session | publie |  | 2026-10-24 |
+| [02-aios-bootstrap.md](02-aios-bootstrap.md) | support | Le fichier à donner à claude : pièce jointe de la leçon « Construis ton AIOS en une session » | publie |  | 2026-10-24 |
 | [cree-ton-aios-personnel.md](cree-ton-aios-personnel.md) | support | Classroom Skool « Crée ton AIOS Personnel » du Club SMART, 10 leçons, publiée | publie |  | 2026-07-28 |
-| [07-claude-md-doctrine-et-conventions.md](07-claude-md-doctrine-et-conventions.md) | support | Leçon Skool de « Crée ton AIOS Personnel » : CLAUDE.md, doctrine et conventions | publie |  | 2026-07-21 |
-| [02-construis-ton-aios-en-une-session.md](02-construis-ton-aios-en-une-session.md) | support | Leçon Skool de « Crée ton AIOS Personnel » : Construis ton AIOS en une session | publie |  | 2026-07-09 |
 | [10-crons-audit-l-aios-qui-tourne-tout-seul.md](10-crons-audit-l-aios-qui-tourne-tout-seul.md) | support | Leçon Skool de « Crée ton AIOS Personnel » : Crons, audit : l'AIOS qui tourne tout seul | publie |  | 2026-07-07 |
 | [05-setup-vs-code-claude-code-ton-premier-vault.md](05-setup-vs-code-claude-code-ton-premier-vault.md) | support | Leçon Skool de « Crée ton AIOS Personnel » : Setup : VS Code + Claude Code + ton premier Vault | publie |  | 2026-07-07 |
 | [01-masterclass-aios.md](01-masterclass-aios.md) | support | Leçon Skool de « Crée ton AIOS Personnel » : MasterClass AIOS | publie |  | 2026-07-07 |

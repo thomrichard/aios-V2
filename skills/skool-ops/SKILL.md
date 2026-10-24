@@ -45,3 +45,4 @@ Skool n'a pas d'API publique. La CLI et les scripts parlent à Skool avec le coo
 - 2026-10-23 · Thomas donne la main sur Skool, sauf pour supprimer ; ajout de la création de classroom, du dépôt d'images, de la couverture et de l'envoi d'un module (`skool_images.py`, `skool_pousser_module.py`), limite des titres à 50 caractères · un module du workspace part sur Skool en une commande, schémas compris
 - 2026-10-23 · ajout de `skool_tirer_classrooms.py` : les 16 classrooms (122 leçons) récupérées dans `domaines/communaute/` · le contenu de Skool est lisible dans le workspace
 - 2026-10-24 · plus d'envoi de messages privés en masse par l'agent : Thomas les envoie lui-même · Skool interdit l'envoi automatique de masse
+- 2026-10-24 · téléchargement des pièces jointes des leçons (route `download-url`) : 35 fichiers rapatriés à côté de leurs leçons · le contenu joint aux leçons est lisible dans le workspace

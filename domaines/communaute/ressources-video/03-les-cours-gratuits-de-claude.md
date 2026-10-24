@@ -4,7 +4,7 @@ resume: Leçon Skool de « Ressources vidéo » : Les cours gratuits de Claude
 statut: en-cours
 domaine: communaute
 cree: 2026-10-13
-maj: 2026-10-13
+maj: 2026-10-24
 liens: [ressources-video.md, https://www.skool.com/club-smart/classroom/46bbf311?md=6295526a33104249b7068854bd82c873]
 ---
 # Les cours gratuits de Claude
@@ -32,5 +32,5 @@ Anthropic a lancé Claude Academy, sa plateforme de formation gratuite, avec 22 
 
 ## Ressources
 
-- Les 22 cours au crible (PDF) : fichier `les-22-cours-de-claude.pdf`, joint à la leçon sur Skool
-- Les 267 ressources (PDF) : fichier `les-267-ressources-academy.pdf`, joint à la leçon sur Skool
+- Les 22 cours au crible (PDF) : [`03-les-22-cours-de-claude.pdf`](03-les-22-cours-de-claude.pdf), joint à la leçon sur Skool
+- Les 267 ressources (PDF) : [`03-les-267-ressources-academy.pdf`](03-les-267-ressources-academy.pdf), joint à la leçon sur Skool

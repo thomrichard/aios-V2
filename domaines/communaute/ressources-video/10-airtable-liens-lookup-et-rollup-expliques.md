@@ -4,7 +4,7 @@ resume: Leçon Skool de « Ressources vidéo » : Airtable : liens, lookup et ro
 statut: en-cours
 domaine: communaute
 cree: 2026-10-13
-maj: 2026-10-13
+maj: 2026-10-24
 liens: [ressources-video.md, https://www.skool.com/club-smart/classroom/46bbf311?md=84c8357573664bfcaa134737de281dbe]
 ---
 # Airtable : liens, lookup et rollup expliqués
@@ -30,4 +30,4 @@ Pour exploiter Airtable à fond, il faut maîtriser les liens entre enregistreme
 
 ## Ressources
 
-- Livre blanc base de données (PDF) : fichier `livre-blanc-controle-base-de-donnees.pdf`, joint à la leçon sur Skool
+- Livre blanc base de données (PDF) : [`10-livre-blanc-controle-base-de-donnees.pdf`](10-livre-blanc-controle-base-de-donnees.pdf), joint à la leçon sur Skool

@@ -4,7 +4,7 @@ resume: Leçon Skool de « Ressources vidéo » : Tes skills Claude n'obéissent
 statut: en-cours
 domaine: communaute
 cree: 2026-10-13
-maj: 2026-10-13
+maj: 2026-10-24
 liens: [ressources-video.md, https://www.skool.com/club-smart/classroom/46bbf311?md=40db411d725449fb906016fd87c30f07]
 ---
 # Tes skills Claude n'obéissent pas toujours
@@ -32,5 +32,5 @@ Tu passes au nouveau modèle et tes skills se mettent à sauter des étapes, ign
 
 ## Ressources
 
-- Skill d'audit (zip) : fichier `auditer-skills.zip`, joint à la leçon sur Skool
-- Les 7 règles (PDF) : fichier `audit-de-tes-skills.pdf`, joint à la leçon sur Skool
+- Skill d'audit (zip) : [`01-auditer-skills.zip`](01-auditer-skills.zip), joint à la leçon sur Skool
+- Les 7 règles (PDF) : [`01-audit-de-tes-skills.pdf`](01-audit-de-tes-skills.pdf), joint à la leçon sur Skool

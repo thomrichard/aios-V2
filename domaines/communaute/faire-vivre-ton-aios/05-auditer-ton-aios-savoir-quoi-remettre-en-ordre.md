@@ -4,7 +4,7 @@ resume: Leçon Skool de « Faire vivre ton AIOS » : Auditer ton AIOS : savoir q
 statut: publie
 domaine: communaute
 cree: 2026-09-15
-maj: 2026-09-15
+maj: 2026-10-24
 liens: [faire-vivre-ton-aios.md, https://www.skool.com/club-smart/classroom/dd9dc077?md=90a718f7b67d49f6b80987e0eece9d2a]
 ---
 # Auditer ton AIOS : savoir quoi remettre en ordre
@@ -37,4 +37,4 @@ Pour la conserver, demande à ton assistant de l’installer sous le nom **audit
 
 ## Ressources
 
-- La Skill a donner à ton IA : fichier `SKILL.md`, joint à la leçon sur Skool
+- La Skill a donner à ton IA : [`05-skill.md`](05-skill.md), joint à la leçon sur Skool

@@ -4,7 +4,7 @@ resume: Leçon Skool de « Sessions Q&A » : Q&A du 21/08 — emmener les autres
 statut: publie
 domaine: communaute
 cree: 2026-08-22
-maj: 2026-08-22
+maj: 2026-10-24
 liens: [sessions-q-a.md, https://www.skool.com/club-smart/classroom/02b85ba5?md=a680947394d64c618c762d0174bb36c2]
 ---
 # Q&A du 21/08 — emmener les autres sur son AIOS
@@ -119,4 +119,4 @@ Sylvain, lui, n'est resté que deux minutes (des amis arrivaient). Il a signalé
 
 ## Ressources
 
-- transcript 21/08 : fichier `transcript-qa-aios-2026-08-21.md`, joint à la leçon sur Skool
+- transcript 21/08 : [`04-transcript-qa-aios-2026-08-21.md`](04-transcript-qa-aios-2026-08-21.md), joint à la leçon sur Skool

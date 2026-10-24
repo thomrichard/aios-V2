@@ -4,7 +4,7 @@ resume: Leçon Skool de « ⚙️ BIY – Systèmes clés en main », dossier «
 statut: en-cours
 domaine: communaute
 cree: 2025-10-09
-maj: 2026-07-28
+maj: 2026-10-24
 liens: [biy-systemes-cles-en-main.md, https://www.skool.com/club-smart/classroom/d48817a3?md=1e4c835c0e154db1bdec4036289bad98]
 ---
 # 📝 3 — Générer un post LinkedIn avec le transcript
@@ -29,4 +29,4 @@ Respecte les consignes suivantes :
 
 ## Ressources
 
-- Blueprint Make : fichier `YTC - générer post Linkedin.blueprint.json`, joint à la leçon sur Skool
+- Blueprint Make : [`09-ytc-generer-post-linkedin-blueprint.json`](09-ytc-generer-post-linkedin-blueprint.json), joint à la leçon sur Skool

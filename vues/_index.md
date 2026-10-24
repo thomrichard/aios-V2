@@ -15,7 +15,7 @@ Une vue par type et par projet, générée depuis les en-têtes : tous les fichi
 | [processus](../processus/_index.md) | Une suite de skills qui revient | 2 |
 | [projet](../projets/_index.md) | Un chantier avec une fin : son pilotage (échéance, prochaine étape, tâches) | 3 |
 | [source](source.md) | Une source à lire ou lue : un article, un PDF, une vidéo | 20 |
-| [support](support.md) | Un support de formation ou d'atelier | 162 |
+| [support](support.md) | Un support de formation ou d'atelier | 180 |
 | [tableau](tableau.md) | Une vue d'ensemble tenue à jour, comme les revenus | 2 |
 | [video](video.md) | Une vidéo, du sujet à la mise en ligne | 64 |
 | [projet-references-youtube](projet-references-youtube.md) | Tirer de 4 chaînes de référence une matrice de méthode reliée aux objectifs, et une grille pour analyser les concurrents | 26 |

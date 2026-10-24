@@ -4,7 +4,7 @@ resume: Leçon Skool de « Crée ton AIOS Personnel » : Construis ton AIOS en u
 statut: publie
 domaine: communaute
 cree: 2026-06-06
-maj: 2026-07-09
+maj: 2026-10-24
 liens: [cree-ton-aios-personnel.md, https://www.skool.com/club-smart/classroom/f93a2706?md=3702d02fcaa04b7ea1563bb745c37fb1]
 ---
 # Construis ton AIOS en une session
@@ -155,4 +155,4 @@ Ton Vault est debout. Maintenant, on ouvre les trois fichiers que le skill a gé
 
 ## Ressources
 
-- Le fichier à donner à claude : fichier `aios-bootstrap.md`, joint à la leçon sur Skool
+- Le fichier à donner à claude : [`02-aios-bootstrap.md`](02-aios-bootstrap.md), joint à la leçon sur Skool

@@ -68,6 +68,7 @@ Dans `~/Dev/skool-toolkit/scripts/` (dépôt privé `thomrichard/skool-toolkit`)
 | Marquer une leçon faite | `POST /courses/{id}/mark-done`, corps vide |
 | Créer une classroom | `POST /courses` avec `group_id`, `unit_type=course`, `state=1` (brouillon ; `2` = publiée), puis `PUT /courses/{id}` avec le titre |
 | Déposer une image | `python3 skool_images.py <image>` : `POST /files`, envoi des octets sur `write_url`, puis `GET /files?ids=<id>` |
+| Télécharger un fichier joint à une leçon | `POST /files/{id}/download-url`, corps vide : rend un lien signé `files.skool.com`. L'id est dans le champ `resources` de la leçon (`file_id`, `file_name`, `title`) ; la taille, dans `GET /files?ids=<id>` (`src_content_length`). Testé le 2026-10-24 |
 | Couverture d'une classroom | `python3 skool_images.py <image> --couverture <classroom_id>` (`PUT /courses/{id}` avec `cover_image` et `cover_image_file`) ; format 1460 x 752 |
 | Récupérer les classrooms dans le workspace (lecture seule) | `python3 skool_tirer_classrooms.py --sortie ~/AIOS_V2/domaines/communaute --sauf 649f7b14bedb4a3b9f61200bf0784f04` ; une classroom déjà présente n'est pas réécrite, sauf avec `--remplacer`. Agentic AI est exclue : sa source, c'est le workspace |
 | Envoyer un module du workspace | `python3 skool_pousser_module.py <dossier> --classroom <id> --titre "<titre du dossier>"` ; `--a-blanc` contrôle sans envoyer, `--essai` n'envoie que la première leçon |
@@ -88,6 +89,8 @@ Corps d'un post :
 `video_links` prend une URL YouTube ; `video_ids` sert aux vidéos téléversées sur Skool.
 
 Image dans une leçon : un bloc du texte, `{"type": "image", "attrs": {"alt", "fileID", "originalSrc": <read_url>, "src": <image_md_url>, "title"}}`. En premier bloc, c'est elle qu'on voit en ouvrant la leçon. `skool_images.bloc_image()` l'écrit.
+
+Pièces jointes dans le workspace : chaque fichier est à côté de la fiche de sa leçon (`NN-<nom>`), et la fiche y renvoie. `skool_tirer_classrooms.py --remplacer` réécrit les fiches : ces liens seraient perdus.
 
 Conversion du texte : `md_to_prosemirror.py` (Markdown vers Skool) et `prosemirror_to_md.py` (Skool vers Markdown).
 

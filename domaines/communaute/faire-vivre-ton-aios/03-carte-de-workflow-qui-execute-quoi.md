@@ -4,7 +4,7 @@ resume: Leçon Skool de « Faire vivre ton AIOS » : Carte de workflow : qui ex�
 statut: publie
 domaine: communaute
 cree: 2026-08-13
-maj: 2026-08-16
+maj: 2026-10-24
 liens: [faire-vivre-ton-aios.md, https://www.skool.com/club-smart/classroom/dd9dc077?md=f03c14d049ed43df87d53d20b3a6fef4]
 ---
 # Carte de workflow : qui exécute quoi
@@ -119,5 +119,5 @@ C'est ça, faire vivre ton AIOS : `/close` couvre la fin, `grill-me` couvre le d
 
 ## Ressources
 
-- la skill : fichier `SKILL.md`, joint à la leçon sur Skool
-- le patron html : fichier `patron.html`, joint à la leçon sur Skool
+- la skill : [`03-skill.md`](03-skill.md), joint à la leçon sur Skool
+- le patron html : [`03-patron.html`](03-patron.html), joint à la leçon sur Skool

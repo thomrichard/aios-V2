@@ -4,7 +4,7 @@ resume: Leçon Skool de « Faire vivre ton AIOS » : Grill Me : vider ta tête d
 statut: publie
 domaine: communaute
 cree: 2026-07-28
-maj: 2026-07-28
+maj: 2026-10-24
 liens: [faire-vivre-ton-aios.md, https://www.skool.com/club-smart/classroom/dd9dc077?md=2090cfa7a86b4effa1429b6568fbe6bf]
 ---
 # Grill Me : vider ta tête dans un fichier
@@ -84,4 +84,4 @@ C'est ça, faire vivre ton AIOS : chaque rituel que tu ajoutes couvre un moment 
 
 ## Ressources
 
-- Skill Grill-me : fichier `grill-me-SKILL.md`, joint à la leçon sur Skool
+- Skill Grill-me : [`02-grill-me-skill.md`](02-grill-me-skill.md), joint à la leçon sur Skool

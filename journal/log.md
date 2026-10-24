@@ -49,3 +49,5 @@ Ajout seul. Format : `- AAAA-MM-JJ · <action> | <sujet>`
 - 2026-10-24 · socle | PR n° 32 : l'interface garde le Mac éveillé la nuit (caffeinate -s) ; récupère les PR n° 28 à 32
 - 2026-10-24 · réglage | l'interface garde le Mac éveillé sur secteur (caffeinate -s) : remplace aios-hub pour les routines de nuit
 - 2026-10-24 · réglage | skool-ops : plus d'envoi de messages privés en masse par l'agent ; idée « messages de masse avec Brevo » notée
+- 2026-10-24 · support | « Économiser tes tokens » : deck de 32 slides (22 schémas, 7 chapitres), texte à dire dans les notes du présentateur https://claude.ai/artifact/13SoBe27hLUiPKoBVsxQQZ
+- 2026-10-24 · ajout | 35 pièces jointes des leçons Skool rapatriées à côté de leurs leçons (`domaines/communaute/`), le zip audio d'Otter dans le dossier des fichiers lourds ; les 3 fichiers de test laissés de côté

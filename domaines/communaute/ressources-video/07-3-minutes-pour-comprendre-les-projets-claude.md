@@ -4,7 +4,7 @@ resume: Leçon Skool de « Ressources vidéo » : 3 minutes pour comprendre : le
 statut: en-cours
 domaine: communaute
 cree: 2026-10-13
-maj: 2026-10-13
+maj: 2026-10-24
 liens: [ressources-video.md, https://www.skool.com/club-smart/classroom/46bbf311?md=4a20b0b777944798ba30e0aa719dea6c]
 ---
 # 3 minutes pour comprendre : les projets Claude
@@ -29,4 +29,4 @@ Travailler avec Claude sans projet, c'est comme le flex office : chaque matin, t
 
 ## Ressources
 
-- Guide projet Claude (PDF) : fichier `creer-un-projet-dans-claude.pdf`, joint à la leçon sur Skool
+- Guide projet Claude (PDF) : [`07-creer-un-projet-dans-claude.pdf`](07-creer-un-projet-dans-claude.pdf), joint à la leçon sur Skool

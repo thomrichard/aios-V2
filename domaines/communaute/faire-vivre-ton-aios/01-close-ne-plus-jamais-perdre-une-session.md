@@ -4,7 +4,7 @@ resume: Leçon Skool de « Faire vivre ton AIOS » : /close : ne plus jamais per
 statut: publie
 domaine: communaute
 cree: 2026-07-21
-maj: 2026-07-28
+maj: 2026-10-24
 liens: [faire-vivre-ton-aios.md, https://www.skool.com/club-smart/classroom/dd9dc077?md=2b5790b322554f2ebde39fb3412ccdf0]
 ---
 # /close : ne plus jamais perdre une session
@@ -76,4 +76,4 @@ C'est ça, faire vivre ton AIOS : tu ne l'as pas fini en C9, tu l'affûtes à ch
 
 ## Ressources
 
-- La skill CLOSE : fichier `close-SKILL.md`, joint à la leçon sur Skool
+- La skill CLOSE : [`01-close-skill.md`](01-close-skill.md), joint à la leçon sur Skool

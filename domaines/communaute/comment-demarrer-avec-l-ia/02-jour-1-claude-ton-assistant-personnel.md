@@ -4,7 +4,7 @@ resume: Leçon Skool de « Comment démarrer avec l'IA » : 🤖 Jour 1 — Clau
 statut: en-cours
 domaine: communaute
 cree: 2026-02-20
-maj: 2026-04-22
+maj: 2026-10-24
 liens: [comment-demarrer-avec-l-ia.md, https://www.skool.com/club-smart/classroom/ef38ea8e?md=8471069db0f24ef68ec42a7087e43699]
 ---
 # 🤖 Jour 1 — Claude, ton assistant personnel
@@ -24,4 +24,4 @@ Poste ton résultat dans la communauté — ce que tu lui as demandé et ce que 
 
 ## Ressources
 
-- présentation Claude Agents : fichier `Claude_Agent_Alliance.pdf`, joint à la leçon sur Skool
+- présentation Claude Agents : [`02-claude-agent-alliance.pdf`](02-claude-agent-alliance.pdf), joint à la leçon sur Skool

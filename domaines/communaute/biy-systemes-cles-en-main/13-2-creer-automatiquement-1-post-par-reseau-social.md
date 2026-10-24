@@ -4,7 +4,7 @@ resume: Leçon Skool de « ⚙️ BIY – Systèmes clés en main », dossier «
 statut: en-cours
 domaine: communaute
 cree: 2026-02-16
-maj: 2026-07-28
+maj: 2026-10-24
 liens: [biy-systemes-cles-en-main.md, https://www.skool.com/club-smart/classroom/d48817a3?md=ea1eeaf277fb46c08af0ea046a73edaf]
 ---
 # 2 - Créer automatiquement 1 post par réseau social
@@ -41,6 +41,6 @@ _Système documenté dans la série YouTube "De 1 vidéo YouTube à 100 posts au
 
 ## Ressources
 
-- Prompt création des posts : fichier `prompts_creation_posts.txt`, joint à la leçon sur Skool
+- Prompt création des posts : [`13-prompts-creation-posts.txt`](13-prompts-creation-posts.txt), joint à la leçon sur Skool
 - [Template Airtable](https://airtable.com/appVtaPtKDWCbUM8f/shrw2Y8vfq5iDG4nu)
 - [scénario Make](https://eu1.make.com/public/shared-scenario/q2A8XSoqbhP/standardisation-post)

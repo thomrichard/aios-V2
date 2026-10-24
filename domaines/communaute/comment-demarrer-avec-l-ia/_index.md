@@ -4,6 +4,7 @@
 
 | Fichier | Type | Résumé | Statut | Projet | Maj |
 |---|---|---|---|---|---|
+| [02-jour-1-claude-ton-assistant-personnel.md](02-jour-1-claude-ton-assistant-personnel.md) | support | Leçon Skool de « Comment démarrer avec l'IA » : 🤖 Jour 1 — Claude, ton assistant personnel | en-cours |  | 2026-10-24 |
 | [comment-demarrer-avec-l-ia.md](comment-demarrer-avec-l-ia.md) | support | Classroom Skool « Comment démarrer avec l'IA » du Club SMART, 14 leçons, en brouillon | en-cours |  | 2026-04-22 |
 | [14-claude-dans-powerpoint.md](14-claude-dans-powerpoint.md) | support | Leçon Skool de « Comment démarrer avec l'IA » : Claude dans POWERPOINT | en-cours |  | 2026-04-22 |
 | [13-phase-5-l-architecte.md](13-phase-5-l-architecte.md) | support | Leçon Skool de « Comment démarrer avec l'IA », dossier « Les 5 phases IA — et comment passer à la suivante » : 🔴 Phase 5 — L'architecte | en-cours |  | 2026-04-22 |
@@ -17,5 +18,4 @@
 | [05-jour-4-suno-genere-ta-premiere-musique.md](05-jour-4-suno-genere-ta-premiere-musique.md) | support | Leçon Skool de « Comment démarrer avec l'IA » : 🎵 Jour 4 — Suno, génère ta première musique | en-cours |  | 2026-04-22 |
 | [04-jour-3-kling-cree-tes-premieres-videos-ia.md](04-jour-3-kling-cree-tes-premieres-videos-ia.md) | support | Leçon Skool de « Comment démarrer avec l'IA » : 🎬 Jour 3 — Kling, crée tes premières vidéos IA | en-cours |  | 2026-04-22 |
 | [03-jour-2-nano-banana-tes-premieres-images.md](03-jour-2-nano-banana-tes-premieres-images.md) | support | Leçon Skool de « Comment démarrer avec l'IA » : 🎨 Jour 2 — Nano Banana, tes premières images | en-cours |  | 2026-04-22 |
-| [02-jour-1-claude-ton-assistant-personnel.md](02-jour-1-claude-ton-assistant-personnel.md) | support | Leçon Skool de « Comment démarrer avec l'IA » : 🤖 Jour 1 — Claude, ton assistant personnel | en-cours |  | 2026-04-22 |
 | [01-bienvenue-dans-ton-parcours-7-jours.md](01-bienvenue-dans-ton-parcours-7-jours.md) | support | Leçon Skool de « Comment démarrer avec l'IA » : Bienvenue dans ton parcours 7 jours 👋 | en-cours |  | 2026-04-22 |
