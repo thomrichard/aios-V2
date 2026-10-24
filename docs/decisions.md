@@ -153,3 +153,15 @@ Les choix qui ont façonné le socle, et leur pourquoi. Une entrée par décisio
 - **Décision.** `index.py` génère des vues depuis les en-têtes, dans `vues/` : `vues/<type>.md` (tous les fichiers d'un type, tous domaines confondus, les vivants d'abord dans l'ordre de leurs statuts, avec les champs réglés qu'ils remplissent, comme `ressortir` pour une idée) ; `vues/projet-<slug>.md` (tous les fichiers qui portent `projet: <slug>`, où qu'ils soient) ; `vues/_index.md`, la liste des vues (`projet` et `processus` renvoient à leur index). Une vue sans fichier disparaît, et `index.py --check` signale une vue périmée. Les `_index.md` des dossiers gagnent une colonne Type. `AGENTS.md` y mène par une ligne de « Où chercher ».
 - **Pourquoi.** Depuis la règle 8 (pas de dossier par type), aucun dossier ne dit plus le type d'un fichier. Pour voir toutes les idées, ou tous les fichiers d'un projet rangés dans plusieurs domaines, il fallait un `grep`.
 - **Écarté.** Une skill de recherche : le nom de la vue est celui du type, donc une route dans « Où chercher » suffit (deux sauts). Revenir aux dossiers par type. Des vues réglées dans un tableau (filtre, regroupement, colonnes) : rien ne les demande pour l'instant, et le cas `a-valider` est déjà dans `outbox/index.html`. On y reviendra si un besoin revient que les vues automatiques ne couvrent pas.
+
+## 2026-10-24 · Un plafond pour le rangement, et la sauvegarde de nuit
+
+- **Décision.** Le rangement de nuit a un plafond par défaut : 20 éléments par nuit ; au-delà, il range les plus anciens d'abord et laisse le reste à la nuit suivante. Une nouvelle routine directe, sans IA, « Sauvegarde de nuit », tourne à 3 h, après le rangement : elle committe le travail du jour et le pousse vers le distant `prive`, le dépôt privé de l'utilisateur, jamais vers `socle`. La mettre en place vaut accord pour ce push. L'installation a une 15e question : l'adresse du dépôt privé, ajoutée comme distant `prive`.
+- **Pourquoi.** Personne ne surveille la nuit : une veille qui dépose 300 fichiers, ou une boucle, ne doit pas tout consommer, et le quota de l'abonnement sert aussi le matin. La sauvegarde va vers `prive`, parce qu'on ne pousse jamais dans le socle.
+- **Écarté.** Un rangement sans plafond ; pousser vers `socle` ; demander l'accord à chaque push de nuit, alors que personne n'est là pour répondre.
+
+## 2026-10-24 · Le plafond d'AGENTS.md compte le texte écrit
+
+- **Décision.** `verifier.py` ne compte plus les blocs générés d'`AGENTS.md` (la carte des domaines et les projets actifs) dans son plafond de 150 lignes.
+- **Pourquoi.** Ces blocs grossissent seuls : un domaine ou un projet de plus, et l'alerte tombait sans qu'aucune règle ait été écrite. Le plafond sert à garder court ce qu'on écrit à la main.
+- **Écarté.** Relever le plafond : l'alerte serait revenue avec les projets. Raccourcir les sections de l'utilisateur pour faire de la place.

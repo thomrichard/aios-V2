@@ -32,3 +32,6 @@ Ajout seul. Format : `- AAAA-MM-JJ · <action> | <sujet>`
 - 2026-10-23 · close | session Skool : connexion, skool-ops avec la voix et les types de posts, dépôt privé aios-thomas
 - 2026-10-24 · ajout | les vues (vues/), un index par type et par projet
 - 2026-10-24 · socle | récupère les PR n° 20 à 22 (les vues : un index par type et par projet)
+- 2026-10-24 · réglage | plafond du rangement à 20 éléments par nuit ; routine « Sauvegarde de nuit » vers le distant prive
+- 2026-10-24 · réglage | le plafond d'AGENTS.md ne compte plus la carte ni les projets actifs (générés)
+- 2026-10-24 · socle | récupère les PR n° 23 à 25 (plafond du rangement, sauvegarde de nuit, plafond d'AGENTS.md hors blocs générés)

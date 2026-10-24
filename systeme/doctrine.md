@@ -67,14 +67,14 @@ Le socle fournit une base qui marche sans rien changer. Les domaines et les type
 
 - Les cibles de l'année font foi dans `AGENTS.md` ; les OKR du trimestre dans `domaines/operations/okr.md`. On ne recopie pas l'un dans l'autre.
 - Jamais de réécriture complète sans demande.
-- Au-delà de 150 lignes, le détail part dans un routeur ou dans `systeme/`.
+- Au-delà de 150 lignes écrites à la main (la carte et les projets actifs, générés, ne comptent pas), le détail part dans un routeur ou dans `systeme/`.
 - Le `CLAUDE.md` global de la machine reste vide : tout vit dans le workspace, donc tout reste portable.
 
 ## Plafonds
 
 | Fichier | Plafond |
 |---|---|
-| `AGENTS.md` | 150 lignes |
+| `AGENTS.md` | 150 lignes, sans la carte ni les projets actifs (générés) |
 | `routers/<domaine>.md` | 50 lignes |
 | `memory/MEMORY.md` | 100 lignes |
 | `_index.md` | 100 lignes |

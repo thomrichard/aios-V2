@@ -250,6 +250,19 @@ def controler_lourds():
                               "ajoute FICHIERS_LOURDS à .env (un dossier Google Drive synchronisé, par exemple)")
 
 
+def lignes_ecrites(rel):
+    """Les lignes écrites à la main : sans les blocs générés (la carte et les projets actifs d'AGENTS.md)."""
+    gardees, dans_bloc = [], False
+    for ligne in lignes_de(rel):
+        if ligne.strip() in (DEBUT_CARTE, DEBUT_PROJETS):
+            dans_bloc = True
+        elif ligne.strip() in (FIN_CARTE, FIN_PROJETS):
+            dans_bloc = False
+        elif not dans_bloc:
+            gardees.append(ligne)
+    return gardees
+
+
 def controler_plafonds():
     plafonds = list(PLAFONDS)
     if os.path.isdir(chemin("routers")):
@@ -260,9 +273,9 @@ def controler_plafonds():
                 plafonds.append((f"skills/{nom}/SKILL.md", 60))
     for rel, maximum in plafonds:
         if os.path.exists(chemin(rel)):
-            n = len(lignes_de(rel))
+            n = len(lignes_ecrites(rel))
             if n > maximum:
-                avertissements.append(f"{rel} fait {n} lignes (plafond : {maximum})")
+                avertissements.append(f"{rel} fait {n} lignes, hors blocs générés (plafond : {maximum})")
 
 
 def controler_index():

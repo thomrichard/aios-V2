@@ -24,3 +24,4 @@ Pour la Q7, explique d'abord les mots domaine, type et statut, puis propose des 
 | 12 | Routines | Où tournera le rangement de nuit (serveur, ordinateur toujours allumé, Hermes), à quelle heure, et quelles autres routines veux-tu ? | `systeme/routines.md` |
 | 13 | Mémoire | Que doit-il toujours savoir sur toi, ou ne jamais faire ? | `memory/`, souvenirs `user_` et `feedback_`, et leur ligne dans `memory/MEMORY.md` |
 | 14 | Fichiers lourds | Gardes-tu des vidéos ou des sons ? Si oui, dans quel dossier hors du dépôt (un dossier Google Drive synchronisé, par exemple) ? | `.env`, ligne `FICHIERS_LOURDS` |
+| 15 | Sauvegarde | As-tu un dépôt privé (GitHub, par exemple) pour sauvegarder ton AIOS chaque nuit ? Si oui, son adresse. | le distant Git `prive` ; `systeme/routines.md`, ligne « Sauvegarde de nuit » |

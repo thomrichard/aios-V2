@@ -21,7 +21,8 @@ Planificateur : à choisir (serveur avec cron, launchd sur Mac, Hermes, GitHub A
 Les routines passives tournent à 1 h, pour que le point du jour de 2 h reprenne leurs résultats. Exception : Jeton Skool, à 8 h 37 comme avant la migration ; le point du jour du lendemain la reprend.
 Une routine directe peut laisser une ligne dans `journal/log.md` : `- AAAA-MM-JJ · routine <routine> | <résumé>`. Le point du jour la reprend.
 Une routine de capture (la veille) dépose ce qu'elle trouve dans `inbox/`, avec `source:` dans l'en-tête ; le rangement de 2 h le classe ou l'archive, et le point du jour ne garde que ce qui compte.
-Au-delà de son plafond, une routine est allégée.
+Au-delà de son plafond, une routine est allégée : le rangement range les plus anciens d'abord et laisse le reste à la nuit suivante.
+La sauvegarde de nuit, après le rangement, committe le travail du jour et le pousse vers `prive`, ton dépôt privé (jamais vers `socle`). La mettre en place vaut accord pour ce push ; si le vérificateur bloque le commit, seuls les commits déjà faits partent. Pas de `|` dans une commande : il casserait le tableau.
 
 ## Exemple de ligne cron
 
