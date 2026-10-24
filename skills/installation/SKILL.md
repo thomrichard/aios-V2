@@ -23,6 +23,7 @@ description: Installe et personnalise l'AIOS. Reprend le profil déposé dans in
 
 ## Après les réponses
 1. Pour chaque domaine : sa ligne et ses types (avec leurs statuts) dans la section « Ce workspace » de `systeme/metadonnees.md`, un routeur (gabarit `systeme/gabarits/routeur.md`) et un dossier `domaines/<domaine>/`. N'écris pas la carte d'`AGENTS.md` : `index.py` la recopie. Le domaine `operations` existe déjà.
+   Ajoute aussi, pour tout le monde, le type `idee` et le champ `ressortir` (`references/catalogue.md`, « Pour tout le monde : les idées »), sauf refus.
 2. Un fichier par projet en cours (gabarit `systeme/gabarits/projet.md`) ; `index.py` l'ajoute aux projets actifs d'`AGENTS.md`.
 3. Le profil part dans `archives/inbox/AAAA-MM/`.
 4. Lance `systeme/scripts/index.py`, puis `systeme/scripts/verifier.py`, jusqu'à « Tout est en ordre ».
@@ -51,3 +52,4 @@ description: Installe et personnalise l'AIOS. Reprend le profil déposé dans in
 - 2026-10-23 · la carte d'`AGENTS.md` n'est plus écrite à la main · un domaine se règle à un seul endroit, et tous les agents suivent
 - 2026-10-23 · Q14, le dossier des fichiers lourds · vidéos et sons hors du dépôt, rangés par `ranger.py`
 - 2026-10-24 · Q15, le dépôt privé (distant `prive`) · la sauvegarde de nuit y pousse le travail du jour
+- 2026-10-24 · le type `idee` et le champ `ressortir` pour tout le monde · les envies « un jour, peut-être » ont leur place dès l'installation

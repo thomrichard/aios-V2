@@ -27,6 +27,7 @@ La place exacte d'un fichier se déduit de son en-tête : colonne « Chemin » d
 | Une production datée (post, newsletter) | `domaines/<domaine>/<slug>-AA-MM.md`, sans dossier par type |
 | Un livrable, texte ou visuel | dans son domaine, jamais dans `outbox/` |
 | Un projet | `projets/<slug>.md` ; ses fichiers restent dans leur domaine |
+| Une idée « un jour, peut-être » | dans son domaine, type `idee` (skill `idees`) ; toutes les idées : `vues/idee.md` |
 | Un process (une suite de skills qui revient) | `processus/<slug>.md` ; ses skills restent dans `skills/` |
 | Une connaissance durable (concept, source) | `savoir/<slug>.md` |
 | Un média généré, un composant d'interface | `bibliotheques/medias/`, `bibliotheques/composants/` |

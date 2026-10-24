@@ -16,3 +16,4 @@ Ajout seul. Format : `- AAAA-MM-JJ · <action> | <sujet>`
 - 2026-10-24 · ajout | les vues (vues/), un index par type et par projet
 - 2026-10-24 · réglage | plafond du rangement à 20 éléments par nuit ; routine « Sauvegarde de nuit » vers le distant prive
 - 2026-10-24 · réglage | le plafond d'AGENTS.md ne compte plus la carte ni les projets actifs (générés)
+- 2026-10-24 · ajout | skill idees ; le type idee et le champ ressortir ajoutés à chaque installation
