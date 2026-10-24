@@ -43,3 +43,7 @@
 @media(max-width:760px){#file-search{width:100%}}
 /* Skills and Applications have no zoom: their list sits where the zoom buttons were. */
 body[data-view=skills] #zoom,body[data-view=apps] #zoom{display:none!important}
+
+/* AIOS: the Fichiers tab, the file editor (fichiers/). It has its own search box, and nothing to zoom. */
+#files{z-index:3;display:none;top:var(--chrome-bottom,64px);height:calc(100% - var(--chrome-bottom,64px))}
+body[data-view=files] #file-search,body[data-view=files] #zoom{display:none!important}
