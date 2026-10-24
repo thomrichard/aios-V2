@@ -41,7 +41,7 @@ Filtre : chaque proposition doit rapprocher d'une de ces cibles. Sinon, dis-le e
 | communaute | Le Club SMART et la communauté Skool, y compris les abonnements. | `routers/communaute.md` |
 | consulting | Les accompagnements individuels et de groupe, avec la transcription de chaque séance, les rapports et les supports. | `routers/consulting.md` |
 | produits | SM4RT dans sa version publiée (le socle mis à disposition), puis les produits suivants. | `routers/produits.md` |
-| perso | Ce qui ne relève pas du travail : santé, famille, finances personnelles et papiers perso. Les finances pro restent dans operations. | `routers/perso.md` |
+| perso | Ce qui ne relève pas du travail : maison, santé, famille, projets perso, finances personnelles et papiers perso. Les finances pro restent dans operations. | `routers/perso.md` |
 
 <!-- Fin de la carte -->
 
