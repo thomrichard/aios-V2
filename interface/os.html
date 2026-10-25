@@ -411,6 +411,12 @@
   .up { margin-left:auto; font-size:10.5px; color:var(--accent); font-weight:500; letter-spacing:1px; white-space:nowrap; }
   .mailrow .mailic { width:14px; height:14px; flex:0 0 auto; stroke:var(--accent); fill:none;
     stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+  #doubtWrap { margin-top:2px; }
+  #doubtSubj { font-size:12px; font-weight:500; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  #doubtFrom { font-size:10px; color:var(--mute); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-bottom:5px; }
+  #doubtBtns { display:flex; flex-wrap:wrap; gap:4px; }
+  #doubtBtns button, #doubtBtns select { font:inherit; font-size:9px; letter-spacing:1px; padding:3px 6px; border:1px solid var(--mute); border-radius:5px; background:transparent; color:inherit; cursor:pointer; }
+  #doubtBtns button:hover { background:var(--accent); color:#000; }
   .lbl { font-size:8.5px; letter-spacing:2.5px; color:var(--mute); margin:10px 0 4px; text-transform:uppercase; }
   .row2 { display:flex; align-items:center; gap:9px; font-size:12px; padding:4.5px 5px; margin:0 -5px;
     border-radius:5px; cursor:pointer; }
@@ -953,6 +959,10 @@ const APPBODIES = {
       <div class="row2 mailrow" style="display:none"><svg class="mailic" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 8l9 7 9-7"/></svg><b></b><span class="age"></span><span class="act">OUVRIR →</span></div>
       <div class="row2 mailrow" style="display:none"><svg class="mailic" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 8l9 7 9-7"/></svg><b></b><span class="age"></span><span class="act">OUVRIR →</span></div>
     </div>
+    <div id="doubtWrap" style="display:none"><div class="lbl">À CLASSER · R4 NE SAIT PAS <span id="doubtN"></span></div>
+      <div id="doubtSubj"></div><div id="doubtFrom"></div>
+      <div id="doubtBtns"><select id="doubtScope"><option value="expediteur">cette adresse</option><option value="domaine">tout le domaine</option></select>
+        <button data-cat="partenariat">PARTENARIAT</button><button data-cat="coaching">COACHING</button><button data-cat="perso">PERSO</button><button data-cat="autre">AUTRE</button></div></div>
     <div class="nwire" id="mailNW">Pas encore branché : ton agent connecte ta boîte mail. Guide : WIRING.md</div>
     <div id="mixWrap" style="display:none"><div class="lbl">RÉPARTITION DU JOUR</div>
     <div id="mixbar"></div><div id="mixlbl"></div></div>
@@ -2938,6 +2948,26 @@ async function pullEmail() {
       bar.insertAdjacentHTML('beforeend', `<i style="width:${w2}%; background:${c}"></i>`);
       lb.insertAdjacentHTML('beforeend', `<span><b>${v}</b> ${n2}</span>`);
     });
+  }
+  const dw = document.getElementById('doubtWrap'), dl = d.doubtList || [];
+  if (dw) {
+    dw.style.display = dl.length ? '' : 'none';
+    if (dl.length) {
+      const x = dl[0];
+      document.getElementById('doubtN').textContent = '(' + dl.length + ')';
+      document.getElementById('doubtSubj').textContent = x.subject;
+      document.getElementById('doubtFrom').textContent = x.from + ' · ' + x.addr;
+      dw.querySelectorAll('button').forEach(b => b.onclick = async () => {
+        const scope = document.getElementById('doubtScope').value;
+        const value = scope === 'domaine' ? (x.addr.split('@')[1] || '') : x.addr;
+        dw.querySelectorAll('button').forEach(k => k.disabled = true);
+        try {
+          const r = await fetch(API + '/api/email-learn', { method:'POST', headers:{ 'Content-Type':'application/json' }, body: JSON.stringify({ scope, value, cat: b.dataset.cat }) });
+          if (!r.ok) throw new Error(r.status);
+          dw.style.display = 'none'; pullEmail();
+        } catch (_) { document.getElementById('doubtFrom').textContent = 'Échec de l’enregistrement, réessaie.'; dw.querySelectorAll('button').forEach(k => k.disabled = false); }
+      });
+    }
   }
   const foot = w.querySelector('.foot2');
   if (foot) foot.innerHTML = '<i></i>SYNCHRO ' + new Date(d.fetched).toLocaleTimeString('fr-FR',

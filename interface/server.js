@@ -186,6 +186,22 @@ const learnedKind = (rules, addr, subject) => {
   const r = rules.find(x => (x.type === 'expediteur' && x.value === addr) || (x.type === 'domaine' && x.value === dom) || (x.type === 'mot' && subj.includes(x.value)));
   return r && r.kind;
 };
+function learnMail(q) {
+  const scope = String(q.scope || ''), cat = String(q.cat || ''), value = String(q.value || '').trim().toLowerCase();
+  if (!['expediteur', 'domaine', 'mot'].includes(scope) || !MAIL_CATS[cat]) throw new Error('règle inconnue');
+  if (!value || value.length > 80 || /[|\n\r]/.test(value)) throw new Error('valeur refusée');
+  const root = workspaceRoot(); if (!root) throw new Error('aucun workspace défini');
+  const f = path.join(root, 'domaines', 'operations', 'mail-apprentissage.md');
+  let txt = fs.readFileSync(f, 'utf8');
+  const line = `| ${scope} | ${value} | ${cat} |`;
+  if (!txt.split('\n').some(l => l.trim().toLowerCase() === line)) {
+    txt = txt.replace(/\n*$/, '\n') + line + '\n';
+    txt = txt.replace(/^maj: .*$/m, 'maj: ' + new Date().toISOString().slice(0, 10));
+    fs.writeFileSync(f, txt);
+  }
+  cache.delete('mail');
+  return { ok: true, rule: line };
+}
 async function getEmail() {
   if (!EMAIL.enabled) return { needsSetup: true };
   const cli = /^[A-Za-z0-9._-]+$/.test(EMAIL.command || 'gws') ? (EMAIL.command || 'gws') : 'gws';
@@ -207,7 +223,7 @@ async function getEmail() {
   try { fs.writeFileSync(path.join(SNAP, 'mail-doutes.json'), JSON.stringify({ fetched: new Date().toISOString(), doubts }, null, 2)); } catch (_) { }
   const count = k => rows.filter(r => r.kind === k).length;
   return { fetched: new Date().toISOString(), total: list.resultSizeEstimate || rows.length, unread: rows.filter(r => r.unread).length,
-    flagged: rows.filter(r => r.kind === 'partnerships' || r.kind === 'leads').slice(0, 6), doubts: doubts.length, mix: { partnerships: count('partnerships'), leads: count('leads'), personal: count('personal'), other: count('other') } };
+    flagged: rows.filter(r => r.kind === 'partnerships' || r.kind === 'leads').slice(0, 6), doubts: doubts.length, doubtList: doubts.slice(0, 5).map(d => ({ id: d.id, subject: d.subject, from: d.from.replace(/<.*/, '').trim(), addr: d.addr })), mix: { partnerships: count('partnerships'), leads: count('leads'), personal: count('personal'), other: count('other') } };
 }
 
 /* ---------------------------- STATS (WIRING.md) ---------------------------- */
@@ -786,6 +802,10 @@ const server = http.createServer(async (req, res) => {
       return sendJson(res, { job: job.jobId, file }, 200, cors);
     }
     if (post && !isJson(req)) return sendJson(res, { error: 'send JSON (Content-Type: application/json)' }, 415);
+    if (post && p2 === '/api/email-learn') {
+      let q; try { q = JSON.parse(await readBody(req) || '{}'); } catch (e) { return sendJson(res, { error: 'le corps de la requête n’est pas du JSON' }, 400); }
+      try { return sendJson(res, learnMail(q)); } catch (e) { return sendJson(res, { error: e.message }, e.status || 400); }
+    }
     if (post && p2 === '/local/files/save') {
       let q; try { q = JSON.parse(await readBody(req) || '{}'); } catch (e) { return sendJson(res, { error: e.status ? e.message : 'le corps de la requête n’est pas du JSON' }, e.status || 400); }
       try { const r = await saveFile(q); return sendJson(res, r, r.conflict ? 409 : 200); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); }

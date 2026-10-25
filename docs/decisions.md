@@ -201,3 +201,9 @@ Les choix qui ont façonné le socle, et leur pourquoi. Une entrée par décisio
 - **Écarté.** Deviner en silence (le tri ne progresse jamais). Une base de données ou un modèle entraîné (illisible, pas corrigeable à la main). Un serveur qui écrit lui-même dans le workspace : il écrit seulement dans `snapshots/`, et c'est l'agent qui tient le carnet. Poser la question sur tous les messages, newsletters comprises : trop de bruit.
 - **Reste à faire.** Faire passer les doutes dans `outbox/questions.md` par le rangement de 2 h (changement de la skill `rangement`, à décider).
 
+## 2026-10-25 · Les doutes e-mail se règlent dans le widget
+
+- **Décision.** Le widget e-mails affiche un bandeau « À classer » avec le premier doute et quatre boutons (partenariat, coaching, perso, autre), pour l'adresse ou pour tout le domaine. Un clic appelle `POST /api/email-learn`, qui ajoute la règle au carnet `mail-apprentissage.md`. Précise l'entrée « Le widget e-mails apprend dans un carnet » : le serveur écrit maintenant dans le carnet, mais seulement par cette route, avec des valeurs contrôlées (type et catégorie d'une liste, pas de `|` ni de saut de ligne).
+- **Pourquoi.** Thomas veut voir et trancher les questions là où il voit ses e-mails, sans passer par un fichier technique.
+- **Écarté.** Mettre les doutes dans `outbox/questions.md` par le rangement de 2 h : plus lent, et les questions sont éloignées du widget.
+
