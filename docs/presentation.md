@@ -335,9 +335,9 @@ Ce qui le rend utile, c'est qu'il apprend. Trois niveaux, dans cet ordre :
 2. **Les mots-clés** de `os-config.json` (`partnerHints`, `leadHints`) : ils classent ce que le carnet ne connaît pas.
 3. **Le doute.** Ce que rien ne classe devient une question, au lieu d'être rangé au hasard. Les envois automatiques (newsletters, no-reply) sont ignorés, pour ne pas te harceler.
 
-Tu réponds en un mot (partenariat, coaching, perso, autre), l'agent écrit une ligne dans le carnet, et la question ne revient plus. Quand un mot revient souvent dans les réponses, l'agent propose de l'ajouter aux mots-clés. *Exemple : tu réponds « coaching » pour `devis`. Le carnet retient la règle, et tous les prochains « devis » sont classés seuls.*
+Les doutes s'affichent dans le widget, sous les messages signalés : un bandeau « À classer » montre l'e-mail, et quatre boutons (partenariat, coaching, perso, autre) répondent d'un clic, pour cette adresse ou tout le domaine. Le clic écrit une ligne dans le carnet, et la question ne revient plus. Quand un mot revient souvent dans les réponses, l'agent propose de l'ajouter aux mots-clés. *Exemple : tu réponds « coaching » pour `devis`. Le carnet retient la règle, et tous les prochains « devis » sont classés seuls.*
 
-C'est le principe 8 (« dans le doute, l'IA demande ») appliqué à un widget. Les doutes du moment sont dans `interface/snapshots/mail-doutes.json`. Ce même carnet marche pour tout tri qui demande du jugement : seul le carnet change, pas le code.
+C'est le principe 8 (« dans le doute, l'IA demande ») appliqué à un widget. Les doutes du moment sont aussi dans `interface/snapshots/mail-doutes.json`. Ce même carnet marche pour tout tri qui demande du jugement : seul le carnet change, pas le code.
 
 ## Ce qui se règle, et où
 
