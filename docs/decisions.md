@@ -193,3 +193,11 @@ Les choix qui ont façonné le socle, et leur pourquoi. Une entrée par décisio
 - **Décision.** Sur Mac, `interface.py installer` lance l'interface sous `caffeinate -s` : tant qu'elle tourne, le Mac ne se met pas en veille s'il est sur secteur. `etat` dit si c'est en place.
 - **Pourquoi.** Un Mac en veille ne lance pas les routines de nuit : le rangement de 2 h est parti à 10 h 26, au réveil. L'interface est déjà toujours allumée et relancée par launchd : c'est le bon endroit, sans un service de plus. Thomas le faisait déjà avec l'ancien hub de son premier AIOS.
 - **Écarté.** `pmset repeat wake` (réveil programmé) : il demande le mot de passe administrateur et touche un réglage du système. Un service à part, rien que pour `caffeinate`. Garder le Mac éveillé sur batterie : ça viderait la batterie.
+
+## 2026-10-25 · Le widget e-mails apprend dans un carnet
+
+- **Décision.** Le widget e-mails de l'interface classe chaque message en trois temps : les règles du carnet `domaines/operations/mail-apprentissage.md` (expéditeur, domaine ou mot de l'objet), puis les mots-clés de `os-config.json`, puis le doute. Un message que rien ne classe (hors envois automatiques) est écrit dans `interface/snapshots/mail-doutes.json` ; l'agent le demande à l'utilisateur, et la réponse devient une ligne du carnet. Quand un mot revient souvent, l'agent propose de l'ajouter aux mots-clés. Le carnet est un fichier du workspace, de type `tableau`.
+- **Pourquoi.** Les mots-clés seuls se trompent et ne s'améliorent pas : 16 messages sur 38 tombaient dans « autre ». Un carnet en Markdown se lit, se corrige à la main dans l'onglet Fichiers et s'ajoute à Git, contrairement à un modèle opaque. C'est le principe « dans le doute, l'IA demande » appliqué à un widget.
+- **Écarté.** Deviner en silence (le tri ne progresse jamais). Une base de données ou un modèle entraîné (illisible, pas corrigeable à la main). Un serveur qui écrit lui-même dans le workspace : il écrit seulement dans `snapshots/`, et c'est l'agent qui tient le carnet. Poser la question sur tous les messages, newsletters comprises : trop de bruit.
+- **Reste à faire.** Faire passer les doutes dans `outbox/questions.md` par le rangement de 2 h (changement de la skill `rangement`, à décider).
+
