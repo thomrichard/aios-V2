@@ -1,0 +1,161 @@
+{
+  "video_id": "9hetShMMp2s",
+  "chaine": "nate-herk",
+  "titre": "Claude Code Mods Are Game Changers. Set Up These 5 NOW.",
+  "codeur": "agent nate-herk",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "actu",
+    "format_secondaire": "liste",
+    "sujet": "Les mods de Claude Code, nouveauté du jour, et 5 mods à installer : prochaines étapes, cache, mode enregistrement, suivi des /goal, garde-collision",
+    "outils": ["Claude Code (app de bureau)", "mods et plugins", "/goal", "skill de passation de session", "ClickUp"],
+    "niveau": "intermediaire",
+    "objectif_probable": "vues"
+  },
+  "titre": {
+    "attente_au_clic": "Les 5 mods de Claude Code à installer tout de suite (cache, enregistrement, prochaines étapes, objectifs, collisions).",
+    "schema": "<Outil> <Fonction> Are Game Changers. Set Up These <N> NOW.",
+    "promesse": "Installer tout de suite 5 mods qui changent l'usage de Claude Code",
+    "audace": "timide",
+    "registre": "jargon",
+    "briques": ["vitesse"],
+    "marqueurs": ["chiffre", "majuscules"],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "grand sourire",
+    "regard": "camera",
+    "texte": "/mods / Cache / Record / Next Steps / Goals / Collision",
+    "texte_mots": 7,
+    "repete_titre": "partiel",
+    "elements": ["texte « /mods » en très gros", "écran d'ordinateur avec une interface Claude stylisée à cinq tuiles", "Nate qui pointe l'écran"],
+    "nb_elements": 3,
+    "fond": "noir",
+    "couleurs": ["noir", "blanc", "crème", "orange Claude", "bleu clair"],
+    "curiosity_gap": "nouveaute",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "So, Cloud Code just dropped mods, which basically means if there's something that you wish the Cloud Desktop app did, you can just ask it to do it",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Nate face caméra plein cadre, néon AIS ; à 0:02 un extrait du mod « Replay Theater »",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": ["actu-annonce", "pont"],
+    "preuve": {
+      "type": "resultat-montre",
+      "seconde": 11,
+      "description": "Le tweet officiel avec trois mods en vidéo (token weather, blast radius, replay theater)"
+    },
+    "annonce_plan": {"presente": false, "nb_points": null, "a_l_ecran": false},
+    "boucle_vers_la_fin": {
+      "presente": true,
+      "citation": "I'm going to give you guys all of these mods for free as well.",
+      "seconde_resolution": 640,
+      "tenue": "oui"
+    },
+    "seconde_premier_point": 35,
+    "attente_tenue": "oui",
+    "attente_note": "Les cinq mods de la miniature sont montrés et donnés ; le premier (Next Steps) est celui d'un ingénieur d'Anthropic, les quatre autres sont les siens. Des commentaires signalent que les ressources manquaient d'abord dans la communauté."
+  },
+  "structure": {
+    "modele": "liste-numerotee",
+    "segments": [
+      {"debut": 0, "fin": 35, "titre": "What Claude Code Mods Do", "role": "intro", "pull": true, "paint": false, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 35, "fin": 115, "titre": "Next Steps Mod", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 115, "fin": 173, "titre": "Building Mods With Natural Language", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": true},
+      {"debut": 173, "fin": 296, "titre": "Cache Keeper", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 296, "fin": 328, "titre": "SOP gratuit premier client", "role": "cta", "pull": true, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 328, "fin": 443, "titre": "Recording Mode", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 443, "fin": 551, "titre": "Goal Meter", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 551, "fin": 635, "titre": "Collision Guard", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 635, "fin": 679, "titre": "Get the Free Mods", "role": "fin", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 83, "type": "question-spectateur", "citation": "I'm sure you guys are noticing a bunch of other elements here in my UI"},
+      {"seconde": 99, "type": "boucle-ouverte", "citation": "I'm going to give you guys all of these mods for free as well."},
+      {"seconde": 115, "type": "question-spectateur", "citation": "Now what actually are mods?"},
+      {"seconde": 171, "type": "annonce-suite", "citation": "here are some that I think are actually helpful"},
+      {"seconde": 505, "type": "rupture", "citation": "Okay, that's kind of funny. This one finished really quick"},
+      {"seconde": 551, "type": "annonce-suite", "citation": "this last one I wanted to show you guys real quick is called collision guard"}
+    ],
+    "histoires": [
+      {"seconde": 128, "acte": "anecdote", "resume": "Il a fait lire à Claude des tas de sessions pour lui proposer les cinq mods les plus utiles ; il a aussi fait un « pet » inutile"},
+      {"seconde": 505, "acte": "anecdote", "resume": "Sa démo /goal finit en une seconde : le carrousel était déjà fait. Il relance avec un autre objectif"}
+    ],
+    "payoffs": [
+      {"seconde": 51, "resume": "Next Steps propose trois actions après une question sur ses tâches ClickUp"},
+      {"seconde": 184, "resume": "Cache Keeper : minuteur du cache, contexte, limites, coût API, passation de session en deux clics"},
+      {"seconde": 350, "resume": "Le mode enregistrement masque l'adresse e-mail et les prix à l'écran"},
+      {"seconde": 520, "resume": "Goal Meter : les quatre tâches d'un /goal et leur avancement"},
+      {"seconde": 571, "resume": "Collision Guard demande avant de modifier un fichier qu'un autre chat vient de toucher"}
+    ],
+    "premier_payoff_seconde": 51,
+    "jargon": 2,
+    "repetitions": 1,
+    "test_du_tweet": "Claude Code a des mods : on change l'app en décrivant ce qu'on veut. Nate montre Next Steps (d'un ingénieur d'Anthropic) et ses quatre mods : Cache Keeper, mode enregistrement qui masque les données, suivi des /goal, garde-collision. Gratuits dans sa communauté."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine ; en vignette à gauche presque tout le temps", "decor": "bureau, étagères, néon AIS, micro sur bras"},
+    "parts": {"face": 8, "ecran": 92, "motion": 0, "broll": 0},
+    "textes_ecran": "aucun",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["curseur-surligne"],
+    "charte": "Captures de l'app Claude (sombre) et page de l'offre (blanc et bleu) sur le fond bleu-vert avec vignette ; aucun graphisme. La miniature (noir, écran crème et orange Claude) montre une interface stylisée, pas une capture.",
+    "rythme": "regulier",
+    "notes": "Presque tout se passe dans l'app : la preuve est l'interface modifiée elle-même. 14 changements de plan la 1re minute (extraits du tweet), puis 0 à 6."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 99, "type": "communaute-gratuite", "cible": "les mods de la vidéo, offerts", "amene_par": "transition", "citation": "I'm going to give you guys all of these mods for free as well."},
+      {"seconde": 296, "type": "lead-magnet", "cible": "SOP gratuit pour un premier client (lien en commentaire épinglé, pas en description)", "amene_par": "apres-valeur", "citation": "I've got this completely free SOP for you about getting your first Amation client"},
+      {"seconde": 640, "type": "communaute-gratuite", "cible": "les mods dans la classroom de la communauté Skool gratuite", "amene_par": "fin", "citation": "just join my free school community"},
+      {"seconde": 670, "type": "like-commentaire", "cible": "liker la vidéo", "amene_par": "fin", "citation": "if you did, please give it a like."}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"communaute-payante": 1, "communaute-gratuite": 1, "affiliation": 2, "reseaux": 3},
+    "commentaire_epingle": {"texte": "SOP gratuit pour un premier client et Glaido offert un mois", "type": "lead-magnet"},
+    "recap_final": false,
+    "derniere_phrase": "and I will see you all in the next one. Thanks everyone.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["la passation de session, jugée la plus utile", "l'idée de demander à son AIOS quels mods construire", "des demandes de doublage (espagnol, ouzbek, vietnamien)", "les ressources absentes du tableau de la communauté au début"],
+    "demandes": ["publier le mod « pet »", "les mods marchent-ils dans le terminal, VS Code ou le cloud", "avec quoi il filme écran et visage", "un mod pour passer en thème clair ou sombre"],
+    "critiques": ["un cache expiré fait payer la passation au prix fort", "le mode enregistrement ne masque pas ce qu'on tape", "des applis font déjà la même chose"],
+    "reprises": ["« pretty useless » pour le pet, retourné en demande", "Cache Keeper, Goal Meter, Collision Guard"],
+    "signal_promesse": "tenue"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "1re phrase = « Claude Code just dropped mods » ; 1er plan = Nate, sans l'écran à cinq tuiles de la miniature"},
+    "ap_boucle_curiosite": {"note": 1, "preuve": "1:39 les mods promis gratuits, donnés à 10:40 : une promesse gardée, pas une question"},
+    "ap_effort_montre": {"note": 0, "preuve": "Aucun effort dans l'intro ; « I've made a ton of mods » n'arrive qu'à 2:41"},
+    "ap_setup_progress_payoff": {"note": 1, "preuve": "Chaque mod : problème, démo, résultat ; Goal Meter rate puis réussit (8:25 à 8:51)"},
+    "ap_contraste_rythme": {"note": 1, "preuve": "14 changements de plan la 1re minute (extraits du tweet), puis 0 à 6 : un seul contraste, au début"},
+    "ap_montrer_sans_son": {"note": 1, "preuve": "On voit des extraits de mods dans le tweet officiel ; ce qu'est un mod ne se comprend pas sans le son"},
+    "ali_douleur_histoire": {"note": 0, "preuve": "Aucune douleur ni histoire dans l'intro"},
+    "ali_coeur_unique": {"note": 2, "preuve": "0:00 « if there's something that you wish the Cloud Desktop app did, you can just ask it to do it », redit à 7:14"},
+    "alx_pont": {"note": 2, "preuve": "Titre repris, ce que sont les mods, le tweet officiel en preuve, puis l'annonce (1:30) ; aucune accroche"},
+    "alx_pull_paint_point": {"note": 2, "preuve": "Ses quatre mods : pourquoi (cache qui expire, données à l'écran, /goal qu'on perd de vue, deux chats sur un fichier), démo, usage"},
+    "alx_nom_idee": {"note": 2, "preuve": "Cache Keeper, Recording Mode, Goal Meter, Collision Guard, Next Steps ; les tuiles de la miniature reprennent les noms"},
+    "alx_phrase_finale": {"note": 0, "preuve": "Les mods finissent sur « pretty cool » ou « I think you guys get the point of that one »"},
+    "alx_douleur_reve": {"note": 0, "preuve": "Le nom de l'outil et de la fonction porte le titre"},
+    "alx_cta_tot": {"note": 2, "preuve": "1:39 les mods de la vidéo promis gratuits (communauté Skool), donnés à 10:40"},
+    "ed_intro_courte": {"note": 1, "preuve": "Promesse dès la 1re phrase, premier mod à 0:35 après trois exemples du tweet, sans hook net"},
+    "ed_hook": {"note": 1, "preuve": "0:00 « you can just ask it to do it, and it will change » : un fait nouveau, pas un des trois types purs"},
+    "ed_probleme_preuve_consignes": {"note": 2, "preuve": "Cache (4:45 coût après 60 minutes), enregistrement (5:36 données à l'écran), collision : problème, démo, commande à lancer"},
+    "ed_tension_relancee": {"note": 1, "preuve": "1:55 « Now what actually are mods? » ; ailleurs des annonces"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "2:08 il fait analyser ses sessions par Claude pour trouver ses mods : une anecdote"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "Le mode enregistrement allumé et éteint deux fois (6:52 à 7:02) ; « super super » et « pretty cool » reviennent"},
+    "ed_niveau_simple": {"note": 1, "preuve": "4:45 le cache expliqué ; context rot, compact, pre-tool use ne le sont pas"},
+    "tous_video_suivante": {"note": 0, "preuve": "« I will see you all in the next one », sans vidéo précise"}
+  },
+  "a_retenir": {
+    "titre_miniature": "« <Outil> <Fonction> Are Game Changers. Set Up These <N> NOW. » : nouveauté, chiffre et urgence en capitales. Premier titre « 5 Claude Code Mods That Everyone Needs », changé au bout d'une heure ; miniature changée deux fois en trois heures. La miniature montre les cinq mods en tuiles.",
+    "intro_structure": "Une phrase dit ce que change la nouveauté, le tweet officiel sert de preuve, puis le 1er mod à 0:35. Les mods sont promis gratuits à 1:39 et donnés à la fin, dans la communauté.",
+    "habillage": "Presque tout se passe dans l'app avec vignette (92 % d'écran) : la preuve est l'interface modifiée elle-même, sans graphisme ajouté.",
+    "idee_pour_nous": "Sur une nouveauté, montrer nos réglages nés de notre usage (demander à l'IA quels mods lui serviraient) et les offrir dans le Club.",
+    "objectif": "club"
+  }
+}

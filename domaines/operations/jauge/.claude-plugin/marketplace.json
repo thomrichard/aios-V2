@@ -1,0 +1,6 @@
+{
+  "name": "aios-mods",
+  "owner": { "name": "Thomas Richard" },
+  "description": "Les mods Claude Code de l'AIOS de Thomas.",
+  "plugins": [{ "name": "jauge", "source": "./" }]
+}

@@ -4,7 +4,7 @@ resume: Ressources mentionnées dans la vidéo
 statut: publie
 domaine: contenu
 cree: 2026-01-15
-maj: 2026-10-22
+maj: 2026-10-25
 liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md, le-systeme-youtube-ia-qui-cree-du-contenu-a-la-chaine-26-02.md]
 ---
 # Tutoriel NoteBook LM en français - découvre LE meilleur outil IA du moment
@@ -18,23 +18,23 @@ liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, claude-tutoriel-co
 
 ## Stats
 
-YouTube Analytics, données jusqu'au 2026-10-20. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
+YouTube Analytics, données jusqu'au 2026-10-22. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
 
 | | 7 premiers jours | 30 premiers jours | Depuis la sortie |
 |---|---|---|---|
-| Vues | 123 | 663 | 5 231 |
-| Vues engagées | 123 | 663 | 5 031 |
-| Heures regardées | 11,5 | 66,8 | 578,2 |
-| Abonnés gagnés | 4 | 17 | 105 |
-| Revenus estimés | 0,00 $ | 0,00 $ | 9,38 $ |
+| Vues | 123 | 663 | 5 252 |
+| Vues engagées | 123 | 663 | 5 049 |
+| Heures regardées | 11,5 | 66,8 | 579,8 |
+| Abonnés gagnés | 4 | 17 | 106 |
+| Revenus estimés | 0,00 $ | 0,00 $ | 9,46 $ |
 | Durée moyenne regardée | | | 6 min 53 s (18,2 %) |
 | J'aime · commentaires | | | 140 · 7 |
 
 ## Liens
 
-- Cite : [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
-- Cite : [2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
-- Citée par : [2026-02-07-le-systeme-youtube-ia-qui-cree-du-contenu-a-la-chaine](le-systeme-youtube-ia-qui-cree-du-contenu-a-la-chaine-26-02.md)
+- Cite : [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
+- Cite : [claude-tutoriel-complet-pour-passer-de-debutant-a-26-05](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
+- Citée par : [le-systeme-youtube-ia-qui-cree-du-contenu-a-la-chaine-26-02](le-systeme-youtube-ia-qui-cree-du-contenu-a-la-chaine-26-02.md)
 - Description : https://clubsmart.s.gy/masterclass-aios-catalogue
 - Description : https://clubsmart.s.gy/tuto-claude-catalogue
 - Description : https://www.skool.com/club-smart

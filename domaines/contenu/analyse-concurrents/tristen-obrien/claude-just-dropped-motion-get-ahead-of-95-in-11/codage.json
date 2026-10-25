@@ -1,0 +1,170 @@
+{
+  "video_id": "yf2OwchM9nw",
+  "chaine": "tristen-obrien",
+  "titre_video": "Claude Just Dropped MOTION. (Get Ahead of 95% in 11 Minutes.)",
+  "codeur": "R4, étalon codé à la main",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "actu",
+    "format_secondaire": "tuto",
+    "sujet": "Claude Motion : une animation créée par prompt dans Claude, puis retouchée",
+    "outils": ["Claude Motion", "Higgsfield", "Remotion", "Claude Code"],
+    "niveau": "debutant",
+    "objectif_probable": "vues"
+  },
+  "titre": {
+    "attente_au_clic": "Découvrir la nouveauté Claude Motion et savoir s'en servir en 11 minutes, avant les autres.",
+    "schema": "<Outil> Just Dropped <FONCTION>. (Get Ahead of <N>% in <N> Minutes.)",
+    "promesse": "Maîtriser la nouveauté avant 95 % des gens, en 11 minutes",
+    "audace": "audacieux",
+    "registre": "mixte",
+    "briques": ["vitesse", "resultat"],
+    "marqueurs": ["nouveaute", "chiffre", "duree", "majuscules", "comparaison-sociale"],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "sourire complice",
+    "regard": "element",
+    "texte": "Claude motion",
+    "texte_mots": 2,
+    "repete_titre": "partiel",
+    "elements": ["logo et mot Claude", "mot motion en dégradé arc-en-ciel avec traînée de vitesse", "courbe de Bézier", "visage à droite"],
+    "nb_elements": 3,
+    "fond": "sombre, grille discrète",
+    "couleurs": ["violet très foncé", "orange Claude", "arc-en-ciel"],
+    "curiosity_gap": "nouveaute",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Claude just dropped a Claude Motion, and everything [...] was made with that tool",
+    "premiere_phrase_reprend_titre": "oui",
+    "premier_plan": "Face caméra en vignette à gauche ; à droite « Claude Motion » animé sur une mosaïque de graphiques ($2.3M, téléphone, MAKE IT MOVE.)",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": ["actu-annonce", "demo-d-abord", "boucle-curiosite"],
+    "preuve": {
+      "type": "resultat-montre",
+      "seconde": 2,
+      "description": "Toutes les animations à l'écran sont faites avec l'outil ; l'écran l'affiche vers 0:06 (« Plus every animation in this video. »)"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 5, "a_l_ecran": true},
+    "boucle_vers_la_fin": {
+      "presente": true,
+      "citation": "at the end, you'll see an alternative that you can start using today",
+      "seconde_resolution": 545,
+      "tenue": "oui"
+    },
+    "seconde_premier_point": 28,
+    "attente_tenue": "partiel",
+    "attente_note": "La prise en main est tenue, mais la limite d'accès (offres Team et Enterprise seulement) n'arrive qu'à 8:50. Le commentaire le plus aimé (536 likes) le reproche."
+  },
+  "structure": {
+    "modele": "pas-a-pas",
+    "segments": [
+      {"debut": 0, "fin": 28, "titre": "Claude Motion just dropped", "role": "intro", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 28, "fin": 55, "titre": "What Claude Motion is and where to find it", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": true},
+      {"debut": 55, "fin": 113, "titre": "Building a paper bike commercial", "role": "demo", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": true},
+      {"debut": 113, "fin": 199, "titre": "How Claude Motion works (code, not pixels)", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 199, "fin": 217, "titre": "The finished commercial", "role": "demo", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 217, "fin": 258, "titre": "Editing your video with Tweaks", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 258, "fin": 293, "titre": "Changing anything with comments", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 293, "fin": 315, "titre": "Sharing and exporting", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": false},
+      {"debut": 315, "fin": 356, "titre": "What it costs", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 356, "fin": 433, "titre": "Making it premium with Higgsfield", "role": "sponsor", "pull": true, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 433, "fin": 490, "titre": "Connecting Higgsfield to Claude", "role": "sponsor", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": false},
+      {"debut": 490, "fin": 530, "titre": "The paper-to-real result", "role": "demo", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 530, "fin": 545, "titre": "Plans and availability", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 545, "fin": 575, "titre": "The alternative: Claude Code + Higgsfield + Remotion", "role": "point", "pull": true, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 575, "fin": 595, "titre": "Setting up Remotion", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": false},
+      {"debut": 595, "fin": 611, "titre": "Remotion demo", "role": "demo", "pull": false, "paint": true, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 611, "fin": 643, "titre": "Claude Motion vs Remotion", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 643, "fin": 683, "titre": "Recap", "role": "fin", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 15, "type": "boucle-ouverte", "citation": "at the end, you'll see an alternative that you can start using today"},
+      {"seconde": 111, "type": "annonce-suite", "citation": "it's really important for us to go over what Claude is actually doing"},
+      {"seconde": 161, "type": "question-spectateur", "citation": "So, what does that mean for you?"},
+      {"seconde": 258, "type": "question-spectateur", "citation": "But, what if there's one thing that you want to change that doesn't have any words"},
+      {"seconde": 334, "type": "annonce-suite", "citation": "sometimes you need something to look significantly more premium"},
+      {"seconde": 377, "type": "annonce-suite", "citation": "let me show you the power of Higgs Field and Claude motion working together"},
+      {"seconde": 545, "type": "annonce-suite", "citation": "But you still can make some really great animations like this."}
+    ],
+    "histoires": [
+      {"seconde": 548, "acte": "anecdote", "resume": "Il fait ses animations avec Claude Code, Higgsfield et Remotion depuis sa première vidéo. Une preuve d'usage, sans récit."}
+    ],
+    "payoffs": [
+      {"seconde": 199, "resume": "La pub du vélo en papier est finie et montrée"},
+      {"seconde": 230, "resume": "Le nom du vélo change à l'écran dès qu'il le tape"},
+      {"seconde": 283, "resume": "Un commentaire sur le soleil et la scène passe de nuit, le reste intact"},
+      {"seconde": 495, "resume": "La scène premium : le papier devient réel avec Higgsfield"},
+      {"seconde": 602, "resume": "La tour d'horloge en papier devient une fusée avec Remotion"}
+    ],
+    "premier_payoff_seconde": 199,
+    "jargon": 1,
+    "repetitions": 1,
+    "test_du_tweet": "Claude Motion fait d'un prompt une animation dans Claude. C'est du code, pas des pixels : chaque mot se change. Démo d'une pub en papier, retouches, export, version premium avec Higgsfield, et Remotion si tu n'as pas l'offre Team."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine ; souvent en vignette sur un fond de couleur", "decor": "bureau, étagères, enseigne Back to the Future, lumière violette"},
+    "parts": {"face": 10, "ecran": 45, "motion": 45, "broll": 0},
+    "textes_ecran": "constants",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["plan-a-l-ecran", "cartes-chapitre", "etiquettes", "fleches-annotations", "split-screen", "chiffres-animes", "zooms-ecran"],
+    "charte": "Fonds pleins violet, vert sapin, orange et bleu ; texte blanc et jaune en sans-serif gras ; étiquettes en petites capitales à chasse fixe. La miniature, sur fond sombre avec « motion » en arc-en-ciel, ne reprend pas cette charte.",
+    "rythme": "contraste",
+    "notes": "L'habillage est la démonstration : toutes les animations sont faites avec l'outil présenté. Chaque capture d'écran est posée dans un cadre sur un fond de couleur, avec l'étiquette « Real footage » et des flèches orange qui nomment les boutons."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 340, "type": "abonnement", "cible": "s'abonner, liker et commenter", "amene_par": "transition", "citation": "if this video has been helpful so far, please subscribe"},
+      {"seconde": 363, "type": "sponsor", "cible": "Higgsfield", "amene_par": "pendant-demo", "citation": "I did reach out to Higgs Field to see if they wanted to partner"},
+      {"seconde": 591, "type": "autre", "cible": "les étapes d'installation de Remotion dans la description", "amene_par": "pendant-demo", "citation": "I'll put the steps inside of the video description below"},
+      {"seconde": 676, "type": "abonnement", "cible": "liker, s'abonner et commenter", "amene_par": "fin", "citation": "If you like this video, please like it, subscribe, and leave a comment"}
+    ],
+    "sponsor": {"present": true, "nom": "Higgsfield", "debut": 363, "duree": 167, "forme": "integre-a-la-demo"},
+    "liens_description": {"sponsor": 2, "lead-magnet": 1, "produit": 1},
+    "commentaire_epingle": {"texte": "Connect Higgsfield to Claude and make your Claude Motion videos look premium (lien affilié)", "type": "sponsor"},
+    "recap_final": true,
+    "derniere_phrase": "please like it, subscribe, and leave a comment, and I will see you in the next one.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["la vidéo elle-même sert de démo", "la crainte d'animations IA qui se ressemblent toutes", "l'accès réservé aux offres Team et Enterprise"],
+    "demandes": ["savoir quand l'outil arrive sur Pro et Max", "l'utiliser pour des intros YouTube", "comparer en détail avec Claude Code et Remotion"],
+    "critiques": ["la limite d'accès dite à la fin plutôt qu'au début (536 likes)", "la peur d'une vague de contenus « slop »"],
+    "reprises": ["« I want this to look extremely unique », repris avec ironie (69 likes)", "« I choose to be with 95% », réponse au titre"],
+    "signal_promesse": "mixte"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "1re phrase = titre ; 1er plan reprend visage et « Claude Motion » mais pas le style de la miniature"},
+    "ap_boucle_curiosite": {"note": 2, "preuve": "0:15 « at the end, you'll see an alternative », résolue à 9:05"},
+    "ap_effort_montre": {"note": 1, "preuve": "1:12 le prompt travaillé en allers-retours avec Claude ; pas d'heures ni de tests chiffrés"},
+    "ap_setup_progress_payoff": {"note": 2, "preuve": "La pub papier : envie (0:55), construction expliquée (1:51), résultat (3:19) ; même schéma pour la version premium (5:34 à 8:12)"},
+    "ap_contraste_rythme": {"note": 1, "preuve": "De 7 à 20 changements de visuel par minute ; plus lent sur le sponsor, sans rupture nette"},
+    "ap_montrer_sans_son": {"note": 2, "preuve": "Planche intro : titre animé, plan « In this video » et « No Claude Motion yet? You're covered » se lisent sans le son"},
+    "ali_douleur_histoire": {"note": 0, "preuve": "Aucune douleur décrite ni histoire perso dans l'intro"},
+    "ali_coeur_unique": {"note": 2, "preuve": "10:43 « Claude Motion turns your prompt into an animated video [...] because it's just code »"},
+    "alx_pont": {"note": 1, "preuve": "Titre repris, preuve et annonce comme un pont, mais avec une boucle de curiosité en guise d'accroche"},
+    "alx_pull_paint_point": {"note": 1, "preuve": "Complet sur « code, not pixels » (1:53) ; la plupart des points sont des consignes directes"},
+    "alx_nom_idee": {"note": 1, "preuve": "« code, not pixels » nommé et affiché (PIXELS. / writes code.) ; pas d'autre idée nommée"},
+    "alx_phrase_finale": {"note": 1, "preuve": "2:57 « And this makes you the editor of the video. » ; rare ailleurs"},
+    "alx_douleur_reve": {"note": 1, "preuve": "« Get Ahead of 95% » parle du désir, mais le nom de l'outil porte le titre"},
+    "alx_cta_tot": {"note": 0, "preuve": "Aucun lead magnet ni offre dite dans la vidéo ; la newsletter n'est que dans la description"},
+    "ed_intro_courte": {"note": 1, "preuve": "Premier point à 0:28, après 4 phrases et un plan en 5 points : plus long que 3 lignes"},
+    "ed_hook": {"note": 1, "preuve": "« everything you're looking at right now was made with that tool » : un fait qui étonne, mais aucun des trois types purs"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "Le problème est posé à 2:17 (régénérer tout le clip), mais la plupart des points vont droit aux consignes"},
+    "ed_tension_relancee": {"note": 2, "preuve": "2:41 « So, what does that mean for you? » ; 4:18 « what if there's one thing [...] that doesn't have any words »"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "9:08 il fait ses animations ainsi depuis sa première vidéo : une anecdote, pas une histoire"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "« significantly more premium » revient quatre fois ; quelques redites"},
+    "ed_niveau_simple": {"note": 2, "preuve": "0:13 « in really simple terms » ; 7:18 le MCP expliqué en une phrase"},
+    "tous_video_suivante": {"note": 0, "preuve": "« I will see you in the next one », sans vidéo précise"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Un gabarit répété : « <Outil> Just Dropped <FONCTION>. (Get Ahead of 95% in N Minutes.) », soit nouveauté, vitesse et comparaison sociale. La miniature ne garde que le nom de l'outil et le visage.",
+    "intro_structure": "La vidéo est sa propre preuve dès la première phrase. Mais la boucle « une alternative à la fin » a caché une limite d'accès que le public voulait connaître tout de suite : 536 likes de reproche. Une limite qui exclut une partie du public se dit dans l'intro.",
+    "habillage": "Captures toujours posées sur un fond de couleur avec étiquette et flèches orange, face caméra en vignette, cartes de chapitre : un changement de visuel toutes les 3 secondes environ dans la première minute.",
+    "idee_pour_nous": "Pour une sortie d'outil, habiller la vidéo avec l'outil présenté et le dire dès la première phrase.",
+    "objectif": "vues"
+  }
+}

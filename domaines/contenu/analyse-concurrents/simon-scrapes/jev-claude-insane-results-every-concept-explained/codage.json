@@ -1,0 +1,173 @@
+{
+  "video_id": "D-Z5HnLW_ho",
+  "chaine": "simon-scrapes",
+  "titre": "Jev + Claude = INSANE Results (Every Concept Explained)",
+  "codeur": "agent simon-scrapes",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "actu",
+    "format_secondaire": "tuto",
+    "sujet": "Jev, le « judgment model » de Typesafe : ce qu'il est, ses trois types de questions, la confiance, son usage avec Claude, un tri de 50 emails de support en direct, quatre patterns d'usage",
+    "outils": ["Jev (Typesafe)", "skill Typesafe", "Claude Code", "Claude desktop", "OpenRouter"],
+    "niveau": "intermediaire",
+    "objectif_probable": "vues"
+  },
+  "titre": {
+    "attente_au_clic": "Comprendre Jev de A à Z et ce qu'il permet une fois combiné à Claude, avec des résultats spectaculaires.",
+    "schema": "<Outil> + <Outil> = INSANE Results (Every Concept Explained)",
+    "promesse": "Tout comprendre de Jev et obtenir des résultats hors norme avec Claude",
+    "audace": "audacieux",
+    "registre": "jargon",
+    "briques": ["resultat"],
+    "marqueurs": ["majuscules"],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": false,
+    "emotion": null,
+    "regard": null,
+    "texte": "Jev System 1 Noul, Choice & Score Confidence Pair with Claude All at Once 19 concepts",
+    "texte_mots": 15,
+    "repete_titre": "partiel",
+    "elements": ["logo et mot Jev", "cinq tuiles d'icônes néon orange (System 1, Noul/Choice/Score, Confidence, Pair with Claude, All at Once)", "19 concepts en très grand"],
+    "nb_elements": 3,
+    "fond": "noir avec halo orange",
+    "couleurs": ["noir", "orange", "blanc", "vert"],
+    "curiosity_gap": "nouveaute",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "The most talked about AI model this month can't even write a sentence.",
+    "premiere_phrase_reprend_titre": "non",
+    "premier_plan": "Face caméra en plan large au bureau ; à 0:02 un crayon et une bulle de chat dessinés au trait (il ne sait ni écrire ni discuter)",
+    "premier_plan_reprend_miniature": "non",
+    "ouverture": ["hook-fait", "boucle-curiosite", "demo-d-abord"],
+    "preuve": {
+      "type": "resultat-montre",
+      "seconde": 9,
+      "description": "Trois réalisations d'autres à l'écran : Google Flights rempli en 7 s, 3 millions de sessions triées pour 2 $, Chrome piloté à la voix ; puis « I've been through all the official docs »"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 4, "a_l_ecran": false},
+    "boucle_vers_la_fin": {"presente": false, "citation": "", "seconde_resolution": null, "tenue": null},
+    "seconde_premier_point": 46,
+    "attente_tenue": "oui",
+    "attente_note": "Les 19 concepts suivent dans l'ordre des chapitres et la démo en direct livre un résultat chiffré (50 emails en 4,2 s pour 0,0026 $). Le titre a été testé : quatre versions ont tourné du 25 septembre au 7 octobre."
+  },
+  "structure": {
+    "modele": "mixte",
+    "segments": [
+      {"debut": 0, "fin": 46, "titre": "Intro: The AI model that can't write a sentence", "role": "intro", "pull": true, "paint": true, "point": false, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 46, "fin": 211, "titre": "1: What it is: a judgement model", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 211, "fin": 316, "titre": "2: Why it's special compared to LLMs", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 316, "fin": 383, "titre": "3: It replaces one job Claude does, not Claude", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 383, "fin": 449, "titre": "4: Noul — the yes/no that comes back as a probability", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 449, "fin": 484, "titre": "5: Choice — pick one, and see the odds on all of them", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 484, "fin": 560, "titre": "6: Confidence — the second number, and the one that decides", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 560, "fin": 664, "titre": "7: Score — for when the options have an order", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 664, "fin": 760, "titre": "8: Which type, and all three in one request", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 760, "fin": 862, "titre": "9: In front of Claude — the guard that reads everything first", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": false, "relance_sortie": true},
+      {"debut": 862, "fin": 1111, "titre": "10: The skill is a rulebook, not a tool", "role": "demo", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 1111, "fin": 1432, "titre": "11: Start from the action, not from the data", "role": "demo", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": false},
+      {"debut": 1432, "fin": 1536, "titre": "12: State — named fields, and nothing else", "role": "demo", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": false},
+      {"debut": 1536, "fin": 1742, "titre": "13: Extra questions are almost free", "role": "demo", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": true},
+      {"debut": 1742, "fin": 1933, "titre": "14: The checklist for finding your own Jev steps", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 1933, "fin": 1990, "titre": "15: Pattern 1: ask everything at once", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": false},
+      {"debut": 1990, "fin": 2045, "titre": "16: Pattern 2: confidence-gated routing", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": false},
+      {"debut": 2045, "fin": 2107, "titre": "17: Pattern 3: score the parts, weight them yourself", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": false},
+      {"debut": 2107, "fin": 2154, "titre": "18: Pattern 4: route it to the best handler for that job", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": false},
+      {"debut": 2154, "fin": 2213, "titre": "19: All four together: the smart home demo", "role": "demo", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 2213, "fin": 2242, "titre": "Conclusion et appel à commenter", "role": "fin", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 0, "type": "boucle-ouverte", "citation": "The most talked about AI model this month can't even write a sentence."},
+      {"seconde": 35, "type": "annonce-suite", "citation": "by the end of this, you'll know what it is, why it matters"},
+      {"seconde": 89, "type": "annonce-suite", "citation": "we'll talk about how you determine what counts as suspicious"},
+      {"seconde": 205, "type": "question-spectateur", "citation": "So, why is it so special then"},
+      {"seconde": 316, "type": "rupture", "citation": "super important, if you already use Claude [...] it does not replace it"},
+      {"seconde": 511, "type": "rappel-promesse", "citation": "that's exactly what the browser demo that we showed at the start is doing"},
+      {"seconde": 628, "type": "rappel-promesse", "citation": "the website session demo I showed at the start of the video"},
+      {"seconde": 854, "type": "annonce-suite", "citation": "both of those examples we're going to build together in the next 5 or 10 minutes"},
+      {"seconde": 1114, "type": "annonce-suite", "citation": "let's actually deconstruct how you would use this for yourself"},
+      {"seconde": 1746, "type": "annonce-suite", "citation": "This is the bit that I couldn't find online. Nobody has written up."},
+      {"seconde": 1934, "type": "annonce-suite", "citation": "kind of counterintuitive but super interesting insight"},
+      {"seconde": 2026, "type": "rappel-promesse", "citation": "you can see this in the demo from the voice browser from the start"}
+    ],
+    "histoires": [
+      {"seconde": 1749, "acte": "anecdote", "resume": "Faute de méthode publiée pour trouver les bonnes questions, il a écrit sa propre checklist à partir des docs et des vidéos."}
+    ],
+    "payoffs": [
+      {"seconde": 80, "resume": "Jev transforme un email flou en chiffre : « si cette commande paraît suspecte à 95 %, on la signale »"},
+      {"seconde": 205, "resume": "Système 1 contre système 2 : Jev tranche vite, Claude raisonne"},
+      {"seconde": 726, "resume": "Un email, trois questions, trois réponses dans une seule requête"},
+      {"seconde": 1008, "resume": "Premier appel réel : 0,99 « problème de facturation » en 0,3 s pour 0,0000136 $"},
+      {"seconde": 1860, "resume": "50 emails triés en quatre piles en 4,2 s pour 0,0026 $"},
+      {"seconde": 2154, "resume": "La démo maison connectée qui réunit les quatre patterns"}
+    ],
+    "premier_payoff_seconde": 80,
+    "jargon": 2,
+    "repetitions": 1,
+    "test_du_tweet": "Jev ne sait pas écrire : il répond à des questions par des probabilités (oui/non, choix, score) avec une confiance, 40 000 fois moins cher qu'un LLM. Laisse-lui le tri en masse et à Claude le raisonnement : 50 emails de support triés en 4 secondes pour 0,003 $."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "taille, plan large au bureau ; vignette à droite sur les captures", "decor": "bureau, mur à lattes de bois, micro RØDE, affiche, fauteuil vert, lampe"},
+    "parts": {"face": 40, "ecran": 45, "motion": 15, "broll": 0},
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["cartes-chapitre", "chiffres-animes", "etiquettes", "curseur-surligne", "split-screen", "zooms-ecran"],
+    "charte": "Cartes sombres façon tableau noir avec titres en capitales (NOUL, SCORE) et chiffres rose néon (0.9, 2.4) ; dessins au trait sur fond gris ; gros chiffre 3D rouge à chaque chapitre ; terminal et VS Code en thème sombre. La miniature noire et orange reprend le fond sombre, pas le rose.",
+    "rythme": "contraste",
+    "notes": "17 plans dans la première minute, puis 2 à 4 par minute pendant la démo de code (minutes 25 à 31). Le passage le plus revu (heatmap) est l'installation de la skill et le premier appel à Jev, de 14:12 à 16:26."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 740, "type": "abonnement", "cible": "s'abonner pour l'aider à passer 100 000", "amene_par": "transition", "citation": "I'm about 1,000 subs from that magic 100k and that plaque on my wall"},
+      {"seconde": 1754, "type": "lead-magnet", "cible": "sa checklist pour trouver les bonnes questions à poser à Jev (communauté gratuite skool.com/scrapesai)", "amene_par": "apres-valeur", "citation": "my own checklist that you can grab for free in the description below"},
+      {"seconde": 2234, "type": "like-commentaire", "cible": "demander une vidéo sur le GEO ou le browser use", "amene_par": "fin", "citation": "drop a comment below and see you in the next video"}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"formation": 1, "produit": 1, "lead-magnet": 1, "abonnement": 1},
+    "commentaire_epingle": null,
+    "recap_final": true,
+    "derniere_phrase": "if you want to see a video on applying this combination to a domain like GEO or browser use, then drop a comment below and see you in the next video.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["« la meilleure vidéo sur Jev » (25 likes) et la clarté saluée", "Jev n'est qu'un classifieur, rien de neuf", "trier par colère va pousser les clients à écrire en colère", "la précision réelle de Jev"],
+    "demandes": ["une vidéo browser use (faite deux semaines plus tard)", "une vidéo sur le design ou d'autres domaines", "l'usage avec Cowork ou en local", "comparer coût et temps avec Claude seul"],
+    "critiques": ["« That's just a damn classifier »", "montage sans respiration (« did you take a single breath in over 37 minutes? »)", "outil encore en liste d'attente", "ressources Jev introuvables sur Skool"],
+    "reprises": ["judgment model", "system 1", "classer les clients par colère (31:45), repris avec humour"],
+    "signal_promesse": "tenue"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 0, "preuve": "1re phrase sans le nom de l'outil (Jev n'arrive qu'à 0:31) ; 1er plan en face caméra, rien des tuiles de la miniature"},
+    "ap_boucle_curiosite": {"note": 2, "preuve": "0:00 « can't even write a sentence » : quel modèle ? Le nom tombe à 0:31 ; les démos montrées à 0:09 sont expliquées à 8:31 et 33:46"},
+    "ap_effort_montre": {"note": 1, "preuve": "0:31 « I've been through all the official docs so that you don't have to » : dit, pas chiffré"},
+    "ap_setup_progress_payoff": {"note": 2, "preuve": "Les démos du début (setup), les concepts un à un (progress), puis la démo des 50 emails triés en 4,2 s (31:00) qui rend tout concret"},
+    "ap_contraste_rythme": {"note": 1, "preuve": "17 plans dans la 1re minute, 2 à 4 par minute pendant la démo de code (minutes 25 à 31), 11 à 13 vers la fin : un contraste subi plus que voulu"},
+    "ap_montrer_sans_son": {"note": 1, "preuve": "Les dessins (crayon, bulle) et « Zürich → London. In 7.1 seconds. » se lisent, mais le nom Jev et la promesse ne s'affichent pas"},
+    "ali_douleur_histoire": {"note": 0, "preuve": "Une douleur en passant (0:12 Claude est lent avec un navigateur), aucune histoire vécue"},
+    "ali_coeur_unique": {"note": 2, "preuve": "6:08 « Claude is the conversation, and Jev is the plumbing underneath that »"},
+    "alx_pont": {"note": 1, "preuve": "Preuve et annonce en pont (0:31 à 0:46), mais ouvert par un fait-choc et une boucle"},
+    "alx_pull_paint_point": {"note": 1, "preuve": "L'exemple du client en colère porte tous les types de questions ; le pourquoi manque sur beaucoup de concepts"},
+    "alx_nom_idee": {"note": 2, "preuve": "« judgment model », « system 1 », « speculative fan out », « confidence-gated routing », cartes NOUL et SCORE à l'écran"},
+    "alx_phrase_finale": {"note": 1, "preuve": "6:20 « the things that it can do, it can do them really, really well » ; 12:10 « one email in, but three answers out » ; rare sur les patterns"},
+    "alx_douleur_reve": {"note": 1, "preuve": "« INSANE Results » parle du désir, mais deux noms d'outils portent le titre"},
+    "alx_cta_tot": {"note": 0, "preuve": "La checklist gratuite arrive à 29:14 ; l'Agentic Academy n'est jamais citée"},
+    "ed_intro_courte": {"note": 1, "preuve": "1er point à 0:46, après huit phrases, mais chacune montre un résultat"},
+    "ed_hook": {"note": 2, "preuve": "0:00 « The most talked about AI model this month can't even write a sentence » : un fait qui étonne"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "Le 1er concept part d'un problème (un if ne lit pas la colère) ; les types et les patterns vont droit à l'explication"},
+    "ed_tension_relancee": {"note": 2, "preuve": "3:25 « why is it so special then » ; 14:14 « we're going to build together in the next 5 or 10 minutes » ; 29:11 « Nobody has written up »"},
+    "ed_histoire_vecue": {"note": 0, "preuve": "Aucune histoire : des démos d'autres et la sienne"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "Les seuils et la confiance sont réexpliqués à chaque type ; 31:06 une phrase dite deux fois"},
+    "ed_niveau_simple": {"note": 2, "preuve": "4:40 « in plain English, it basically means it works like a weather forecast » ; un seul exemple suivi (le client en colère)"},
+    "tous_video_suivante": {"note": 0, "preuve": "Il demande en commentaire quel domaine traiter ensuite, sans vidéo précise"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Même gabarit que « Claude Changed Completely » : logo de l'outil, tuiles d'icônes et « N concepts ». Le titre a été testé en quatre versions ; « Every Concept Explained » reste dans toutes.",
+    "intro_structure": "Un paradoxe (le modèle dont tout le monde parle ne sait pas écrire), trois résultats d'autres en 20 secondes, puis 37 minutes qui vont du concept à une démo chiffrée. Les commentaires en font « la meilleure vidéo sur Jev ».",
+    "habillage": "Cartes sombres à chiffres rose néon pour chaque type de question, démo de code longue et lente ; le passage le plus revu est l'installation pas à pas.",
+    "idee_pour_nous": "Sur une sortie d'outil, viser la vidéo de référence : tous les concepts dans l'ordre, un seul exemple métier suivi du début à la fin, et une démo en direct avec temps et coût affichés.",
+    "objectif": "vues"
+  }
+}

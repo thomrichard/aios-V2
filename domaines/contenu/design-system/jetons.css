@@ -1,0 +1,100 @@
+/* Design system Club SMART · Lumière (variante M2, retenue le 2026-10-25)
+   Deux modes : nuit (par défaut) et papier. On choisit avec data-mode="nuit" ou "papier" sur <html>.
+   Les gabarits de gabarits/ lisent ces jetons ; le brief est dans design-system.md. */
+
+:root{
+  /* ── Rampes de la charte vert pin ─────────────────────────────
+     Pin : le fond du portrait. Brique : le sweat rouge. Ambre : la lumière chaude.
+     Ardoise : des gris toujours un peu verdis. Papier : le fond clair. */
+  --pin-50:#EFF6F2; --pin-100:#DCEBE3; --pin-200:#B7D7C7; --pin-300:#83BBA4; --pin-400:#4F9B7E;
+  --pin-500:#327A60; --pin-600:#26604C; --pin-700:#1C4B3C; --pin-800:#163526; --pin-900:#10241C; --pin-950:#0C1A15;
+
+  --brique-50:#FDF1ED; --brique-100:#FBE5DF; --brique-300:#EBA391; --brique-400:#DC7C64;
+  --brique-500:#C85B41; --brique-600:#B4472F; --brique-700:#94331F;
+
+  --ambre-100:#FDF4E4; --ambre-200:#F9E8C8; --ambre-300:#F3D69C; --ambre-400:#E8BE6E;
+  --ambre-500:#D9A441; --ambre-600:#B07C1E; --ambre-700:#8A5F14;
+
+  --ardoise-200:#D3D8D4; --ardoise-400:#8B948E; --ardoise-600:#4C554F; --ardoise-800:#232B27;
+
+  --papier-50:#FAF8F3; --papier-100:#F2EEE5; --papier-200:#E7E1D3;
+
+  --rouge-600:#8C1D18; --rouge-100:#F7E4E1; /* seulement pour les messages d'erreur */
+
+  /* ── Typo ─────────────────────────────────────────────────── */
+  --police:"Schibsted Grotesk",system-ui,sans-serif;
+  --titre-graisse:800;
+  --titre-approche:-.04em;
+  --titre-interligne:.95;
+
+  /* ── Formes ───────────────────────────────────────────────── */
+  --r-pilule:999px;
+  --r-carte:24px;
+  --r-petit:12px;
+
+  /* ── Matières ─────────────────────────────────────────────── */
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ── Mode nuit (A1 modernisé) ─────────────────────────────────── */
+:root,[data-mode="nuit"]{
+  --fond:var(--pin-950);
+  --fond-lumiere:radial-gradient(48% 64% at 74% 38%,rgba(50,122,96,.6),transparent 70%),
+                 radial-gradient(34% 42% at 10% 105%,rgba(217,164,65,.2),transparent 70%),
+                 var(--pin-950);
+  --texte:var(--papier-50);
+  --texte-doux:#9DB5A9;
+  --mot-fort:linear-gradient(100deg,var(--ambre-400),var(--ambre-500) 45%,var(--brique-400));
+
+  /* Le Valknut éclairé : un dégradé du haut vers le bas */
+  --vk-haut:var(--pin-200);   --vk-haut-o:.95;
+  --vk-milieu:var(--pin-400); --vk-milieu-o:.55;
+  --vk-bas:var(--pin-700);    --vk-bas-o:0;
+  --halo:var(--ambre-500);    --halo-opacite:.28;
+
+  --verre:rgba(250,248,243,.06);
+  --verre-bord:rgba(250,248,243,.16);
+  --pilule-texte:var(--papier-50);
+  --bandeau-fond:rgba(12,26,21,.84);
+  --grain-opacite:.16;
+  --photo-ombre:drop-shadow(0 0 22px rgba(131,187,164,.55)) drop-shadow(0 16px 32px rgba(0,0,0,.6));
+
+  --carte-forte:rgba(217,164,65,.08);
+  --carte-forte-bord:rgba(217,164,65,.45);
+  --valeur-pin:var(--pin-300);
+  --valeur-chaud:var(--mot-fort);
+
+  --bouton-fond:linear-gradient(120deg,var(--ambre-400),var(--ambre-500) 50%,var(--brique-400));
+  --bouton-texte:var(--pin-950);
+}
+
+/* ── Mode papier (A2 modernisé) ───────────────────────────────── */
+[data-mode="papier"]{
+  --fond:var(--papier-50);
+  --fond-lumiere:radial-gradient(46% 62% at 76% 36%,var(--pin-100),transparent 70%),
+                 radial-gradient(32% 40% at 8% 100%,var(--ambre-100),transparent 70%),
+                 var(--papier-50);
+  --texte:var(--pin-950);
+  --texte-doux:var(--ardoise-600);
+  --mot-fort:linear-gradient(100deg,var(--pin-700),var(--pin-400));
+
+  --vk-haut:var(--pin-400);   --vk-haut-o:.55;
+  --vk-milieu:var(--pin-300); --vk-milieu-o:.25;
+  --vk-bas:var(--pin-100);    --vk-bas-o:0;
+  --halo:var(--pin-300);      --halo-opacite:0;
+
+  --verre:rgba(255,255,255,.62);
+  --verre-bord:#FFFFFF;
+  --pilule-texte:var(--pin-700);
+  --bandeau-fond:rgba(250,248,243,.92);
+  --grain-opacite:.08;
+  --photo-ombre:drop-shadow(0 20px 38px rgba(12,26,21,.22));
+
+  --carte-forte:rgba(180,71,47,.06);
+  --carte-forte-bord:rgba(180,71,47,.35);
+  --valeur-pin:var(--pin-700);
+  --valeur-chaud:linear-gradient(100deg,var(--brique-500),var(--brique-600));
+
+  --bouton-fond:linear-gradient(120deg,var(--brique-500),var(--brique-600));
+  --bouton-texte:#FFF6F2;
+}

@@ -1,0 +1,169 @@
+{
+  "video_id": "j8YDz-VC-AM",
+  "chaine": "jad-mh",
+  "titre": "Claude Opus 5.5 Is INSANE at Video Editing 0$ (Turned it into a skill)",
+  "codeur": "agent jad-mh",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "tuto",
+    "format_secondaire": "liste",
+    "sujet": "Son monteur vidéo IA dans Claude Code (format long et court) : les 7 tâches, les styles, les règles, le coût et l'installation",
+    "outils": ["Claude Code", "Claude Opus 5.5", "Parakeet", "HyperFrames", "FFmpeg", "Chrome"],
+    "niveau": "debutant",
+    "objectif_probable": "communaute"
+  },
+  "titre": {
+    "attente_au_clic": "Découvrir un monteur vidéo IA qui monte une vidéo en un prompt, sans payer, et récupérer la skill.",
+    "schema": "<Outil> Is INSANE at <Domaine> 0$ (Turned it into a skill)",
+    "promesse": "Faire monter ses vidéos par Claude, sans rien payer de plus",
+    "audace": "audacieux",
+    "registre": "jargon",
+    "briques": ["resultat"],
+    "marqueurs": ["majuscules", "chiffre"],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "neutre, sérieux",
+    "regard": "camera",
+    "texte": "THE NEW VIRAL AI EDITOR ONE PROMPT 0$",
+    "texte_mots": 8,
+    "repete_titre": "partiel",
+    "elements": ["visage à gauche", "titre orange et blanc sur bandeau noir", "quatre affiches verticales de mode (Muse, Redes, 6AM Club)", "logo OpenAI vert et flèche courbe"],
+    "nb_elements": 4,
+    "fond": "orange texturé",
+    "couleurs": ["orange", "blanc", "noir", "vert"],
+    "curiosity_gap": "nouveaute",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Okay, I read all your comments, all of them, every single one.",
+    "premiere_phrase_reprend_titre": "non",
+    "premier_plan": "Face caméra plein cadre dans son salon, mains ouvertes, sous-titre « Okay, I read all »",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": ["pont", "hook-question", "histoire-perso"],
+    "preuve": {
+      "type": "resultat-montre",
+      "seconde": 76,
+      "description": "« everything that you're watching right now [...] my Claude did all of it » ; 1:34 16 vidéos en 16 jours, près de 300 000 vues"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 4, "a_l_ecran": false},
+    "boucle_vers_la_fin": {"presente": false, "citation": "", "seconde_resolution": null, "tenue": null},
+    "seconde_premier_point": 255,
+    "attente_tenue": "partiel",
+    "attente_note": "Le monteur est expliqué et donné. Mais aucun montage « en un prompt » n'est montré du début à la fin : « A real edit » dure 18 s. Le premier point arrive à 4:15, et trois commentaires reprochent l'intro. Les affiches de la miniature n'ont rien à voir avec le montage."
+  },
+  "structure": {
+    "modele": "mixte",
+    "segments": [
+      {"debut": 0, "fin": 185, "titre": "I read all your comments", "role": "intro", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 185, "fin": 255, "titre": "Thank you", "role": "transition", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 255, "fin": 313, "titre": "Why you need an AI editor", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 313, "fin": 381, "titre": "Who it's for", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 381, "fin": 593, "titre": "How it works: the 7 jobs", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 593, "fin": 746, "titre": "Styles and rules", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 746, "fin": 764, "titre": "A real edit, start to finish", "role": "demo", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": false},
+      {"debut": 764, "fin": 832, "titre": "What it costs", "role": "point", "pull": true, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 832, "fin": 915, "titre": "How to install it", "role": "cta", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 915, "fin": 973, "titre": "It's not perfect", "role": "fin", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": true, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 24, "type": "question-spectateur", "citation": "the question I get the most is how do I edit my videos?"},
+      {"seconde": 102, "type": "annonce-suite", "citation": "But here's the thing, I could only stay as consistent because of my editor."},
+      {"seconde": 148, "type": "rappel-promesse", "citation": "I would love if you could stay all the way to the end of this video."},
+      {"seconde": 255, "type": "question-spectateur", "citation": "So first, why do you need an AI editor?"},
+      {"seconde": 313, "type": "question-spectateur", "citation": "So, who is this really for?"},
+      {"seconde": 381, "type": "question-spectateur", "citation": "Now, the second part, how does this work?"},
+      {"seconde": 491, "type": "annonce-suite", "citation": "This is the parts people don't expect."},
+      {"seconde": 506, "type": "annonce-suite", "citation": "And this is what most people don't get."},
+      {"seconde": 593, "type": "annonce-suite", "citation": "the tools aren't what makes it look good."},
+      {"seconde": 634, "type": "question-spectateur", "citation": "So, what makes my edit looks like it's mine?"},
+      {"seconde": 764, "type": "question-spectateur", "citation": "Now, the question everybody asks, \"How much does it cost?\""}
+    ],
+    "histoires": [
+      {"seconde": 94, "acte": "anecdote", "resume": "16 vidéos longues en 16 jours, près de 300 000 vues ; un mois plus tôt, il publiait une ou deux fois par semaine"},
+      {"seconde": 237, "acte": "anecdote", "resume": "Après sa vidéo sur les carrousels, quelqu'un lui a écrit un mail mécontent"},
+      {"seconde": 258, "acte": "perso-passe", "resume": "Son monteur humain avait parfois des excuses ; le retard coûte cher sur l'actu IA"},
+      {"seconde": 367, "acte": "client-autre", "resume": "Quelqu'un a mis sa skill de motion design dans son agence et la vend"},
+      {"seconde": 434, "acte": "perso-passe", "resume": "Parakeet a perdu 13 s d'audio sans erreur, tout s'est décalé ; depuis, le monteur vérifie minute par minute"}
+    ],
+    "payoffs": [
+      {"seconde": 381, "resume": "Les 7 tâches du monteur, une par une, cochées à l'écran"},
+      {"seconde": 462, "resume": "Une prise brute de 10:41 coupée à 5:52"},
+      {"seconde": 666, "resume": "Le style mesuré sur une vidéo modèle : 16 %, 39 %, 35 %, la mise en page change toutes les 8 s"},
+      {"seconde": 721, "resume": "La liste noire de 21 règles nées de ses refus"},
+      {"seconde": 764, "resume": "Le coût : 0 $ en plus de l'abonnement, plus de 200 $ pour construire la skill"}
+    ],
+    "premier_payoff_seconde": 381,
+    "jargon": 2,
+    "repetitions": 2,
+    "test_du_tweet": "Son monteur IA, c'est Claude Code et des outils gratuits : 7 tâches (transcrire, couper, chercher, motion design, étalonner, son, finir), des styles copiés sur des vidéos qu'il aime et des règles nées de ses refus. Deux skills gratuites, format long et court."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine ; le plus souvent en vignette à côté des captures", "decor": "salon, tableau, bibliothèque, canapé ; sweat gris"},
+    "parts": {"face": 15, "ecran": 75, "motion": 10, "broll": 0},
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": true,
+    "sous_titres_style": "mot à mot, blanc gras sur une ligne, centré en bas",
+    "elements": ["plan-a-l-ecran", "etiquettes", "split-screen", "curseur-surligne", "chiffres-animes"],
+    "charte": "Fond crème à grille de points, captures en cadres arrondis, étiquettes en petites capitales bleu et rouge, liste des 7 tâches cochée au fil de la vidéo, « $200+ » en rouge. La miniature orange ne reprend pas cette charte.",
+    "rythme": "regulier",
+    "notes": "La vidéo est son propre exemple : le style « screen share » qu'il décrit, avec un changement de mise en page toutes les 8 s environ. Aucune pause de plus de 1,5 s et 195 mots par minute, du début à la fin."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 134, "type": "communaute-gratuite", "cible": "les deux skills gratuites dans Skool", "amene_par": "intro", "citation": "Both are free right now in my school community, link is in description."},
+      {"seconde": 148, "type": "autre", "cible": "rester jusqu'à la fin", "amene_par": "intro", "citation": "I would love if you could stay all the way to the end of this video."},
+      {"seconde": 162, "type": "communaute-gratuite", "cible": "partager son montage dans le post Skool", "amene_par": "intro", "citation": "I would love if you can share in the school community post"},
+      {"seconde": 176, "type": "autre", "cible": "proposer une idée de skill qu'il construira avec ses crédits", "amene_par": "intro", "citation": "if you want to create a skill, I can do that for you."},
+      {"seconde": 834, "type": "communaute-gratuite", "cible": "rejoindre Skool pour télécharger les skills", "amene_par": "apres-valeur", "citation": "Step one, you have to go to my school community. It's free."},
+      {"seconde": 941, "type": "communaute-gratuite", "cible": "installer les skills et poster un montage dans Skool", "amene_par": "fin", "citation": "both skills are free in my school community link is in description"},
+      {"seconde": 950, "type": "abonnement", "cible": "s'abonner pour les prochaines skills", "amene_par": "fin", "citation": "if you haven't clicked on subscribe please do as I will keep posting"},
+      {"seconde": 966, "type": "like-commentaire", "cible": "dire en commentaire ce qu'on ferait monter par l'IA", "amene_par": "fin", "citation": "Tell me in the comments what you let AI edit your videos"}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"communaute-gratuite": 2, "video-suivante": 1, "autre": 3},
+    "commentaire_epingle": null,
+    "recap_final": false,
+    "derniere_phrase": "Tell me in the comments what you let AI edit your videos and I'll see you in the next one.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["soutien et fidélité à la chaîne", "adhésion Skool en attente", "adapter le monteur à sa niche", "des débutants perdus devant tous les outils"],
+    "demandes": ["des cas pour l'immobilier", "une version pour un rappeur", "une skill de présentations animées", "un point de départ pour non-techniciens", "les autres styles, absents de son installation"],
+    "critiques": ["« five minutes of total waffle »", "« u are talking to much in the beginning »", "« 4:15 start », pour sauter l'intro", "la caméra qui bouge sans cesse", "le changement toutes les 8 s devient robotique"],
+    "reprises": ["« 4:15 start »", "le découpage tête devant le texte", "la vérification de la transcription minute par minute"],
+    "signal_promesse": "mixte"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "La 1re phrase parle des commentaires ; à 0:04 « the full process of my Claude editor » reprend le titre. Le 1er plan est le visage seul, sans les visuels de la miniature"},
+    "ap_boucle_curiosite": {"note": 0, "preuve": "Aucune question gardée pour plus tard"},
+    "ap_effort_montre": {"note": 1, "preuve": "0:43 « I tweaked and I worked on my skill » reste vague ; les chiffres d'effort (plus de 200 $, 81 shorts, 21 règles) arrivent après 12:00"},
+    "ap_setup_progress_payoff": {"note": 1, "preuve": "« how does this work? » (6:21) avance tâche par tâche, mais aucun montage fini n'est montré avant et après"},
+    "ap_contraste_rythme": {"note": 0, "preuve": "De 9 à 17 changements de plan par minute, débit stable entre 168 et 232 mots par minute, aucune pause"},
+    "ap_montrer_sans_son": {"note": 1, "preuve": "Planche intro : commentaires surlignés et profil TikTok à 122,7 K vues ; le montage IA ne se voit pas sans les sous-titres"},
+    "ali_douleur_histoire": {"note": 1, "preuve": "4:18 le monteur humain et ses excuses, puis la douleur (l'actu périmée) : douleur et vécu présents, mais après 4 min d'intro"},
+    "ali_coeur_unique": {"note": 1, "preuve": "Deux messages se partagent la vidéo : Claude fait les 7 tâches pour 0 $, et ce sont les styles et les règles qui font le rendu (9:53)"},
+    "alx_pont": {"note": 1, "preuve": "Contexte (commentaires), titre repris à 0:04, preuves et annonce : un pont, mais étiré sur 4 min de digressions"},
+    "alx_pull_paint_point": {"note": 1, "preuve": "Complet sur « why » (4:15), « 7 jobs » (6:35 « Claude is the editor sitting at the desk ») et « styles and rules » ; pas ailleurs"},
+    "alx_nom_idee": {"note": 2, "preuve": "Les 7 tâches portent un nom court (Transcribe, Cut, Research...) cochées à l'écran ; « styles and rules » affichés"},
+    "alx_phrase_finale": {"note": 1, "preuve": "10:10 « The AI isn't really bad. Everybody's using the same defaults. » ; 12:21 « You start with all of my notes. »"},
+    "alx_douleur_reve": {"note": 0, "preuve": "Le titre porte l'outil et la technique ; « INSANE » est du superlatif"},
+    "alx_cta_tot": {"note": 2, "preuve": "2:14 « Both are free right now in my school community, link is in description. »"},
+    "ed_intro_courte": {"note": 0, "preuve": "Premier point à 4:15 ; un commentaire donne « 4:15 start »"},
+    "ed_hook": {"note": 1, "preuve": "0:24 « the question I get the most is how do I edit my videos? » : une question du public, pas en ouverture"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "Problème posé sur « why » et sur l'AI slop (10:08), mais la plupart des points vont droit à la description"},
+    "ed_tension_relancee": {"note": 2, "preuve": "4:15 « why do you need an AI editor? » ; 5:13 « who is this really for? » ; 10:34 « what makes my edit looks like it's mine? »"},
+    "ed_histoire_vecue": {"note": 2, "preuve": "7:14 « what I learned the hard way » : Parakeet perd 13 s d'audio, tout se décale, d'où la règle de vérification"},
+    "ed_sans_surexplication": {"note": 0, "preuve": "La skill gratuite, les remerciements et l'absence de revenus reviennent sans cesse dans les 4 premières minutes"},
+    "ed_niveau_simple": {"note": 2, "preuve": "6:23 « Claude can't watch a video [...] It only reads and writes text » ; les outils sont « ses chapeaux »"},
+    "tous_video_suivante": {"note": 0, "preuve": "« I'll see you in the next one » ; la vidéo suivante n'est que dans la description"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Même gabarit que la vidéo de la veille (« Claude Opus 5.5 Is INSANE at <X> 0$ »). La miniature recycle le modèle des carrousels : visage à gauche, quatre visuels verticaux, logo OpenAI et flèche ; les visuels sont des affiches, pas du montage.",
+    "intro_structure": "4 min 15 avant le premier point : commentaires lus, remerciements, gratuité, mails mécontents. Trois commentaires s'en plaignent, dont un qui donne « 4:15 start ».",
+    "habillage": "La vidéo est son propre exemple : style « screen share » mesuré sur une vidéo modèle, mise en page qui change toutes les 8 s, aucune pause de plus de 1,5 s, 195 mots par minute.",
+    "idee_pour_nous": "Montrer notre propre chaîne de montage IA en disant « cette vidéo a été montée ainsi », et donner aux membres les règles nées de nos refus.",
+    "objectif": "club"
+  }
+}

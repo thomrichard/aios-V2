@@ -1,0 +1,207 @@
+{
+ "id": "FwnIB-RbC-E",
+ "url": "https://www.youtube.com/watch?v=FwnIB-RbC-E",
+ "chaine": "thom-richard",
+ "titre": "Comment j'ai automatisé ma vie avec un AIOS",
+ "titre_ytdlp": "Comment j'ai automatisé ma vie avec un AIOS",
+ "publie": "2026-07-07T10:18:11Z",
+ "duree_s": 4674,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "YYiXz1lJF-dZK7NU95y3Wkaq9b0",
+  "id": "FwnIB-RbC-E",
+  "snippet": {
+   "publishedAt": "2026-07-07T10:18:11Z",
+   "channelId": "UCXd_huFLtKC7Ln0mH9pJKzw",
+   "title": "Comment j'ai automatisé ma vie avec un AIOS",
+   "description": "La masterclass complète pour construire ton AIOS : un système d'exploitation IA personnel qui travaille pour toi — de zéro, sans être développeur.\n\n🎁 TOUTES LES RESSOURCES DE LA MASTERCLASS (gratuites) :\nhttps://clubsmart.s.gy/masterclass-aios\n→ La carte CAPE (1 page) · Le guide setup pas à pas \n→ La skill aios-bootstrap (ta structure IPCCRA en quelques secondes) + Le générateur de fichiers de contexte (CLAUDE.md, doctrine, conventions) \n→ des bonus\n\n🎓 MON AUTRE MASTERCLASS :\n→ Claude : tutoriel complet, de débutant à utilisateur avancé (1h16) :\nhttps://youtu.be/qefrfyxQOEY\n\n👉 REJOINS LE CLUB SMART — la communauté où on construit ton AIOS ensemble :\nhttps://www.skool.com/club-smart/about\n\n✅ Ce que tu vas apprendre :\n• Construire ton second cerveau (structure IPCCRA) et le brancher à l'IA\n• Connecter tes outils — mails, agenda, liens — avec les API, les MCP et le CLI\n• Créer tes skills et tes automatisations pour qu'il produise à ta façon et s'améliore sans toi\n\nUn AIOS, c'est la couche qui organise comment l'IA travaille pour toi : pas un chatbot, pas une stack d'outils empilés, mais un système d'exploitation IA personnel construit autour de ton contexte. Dans ce tutoriel en français, je te montre le framework CAPE — Contexte, Accès, Production, Entretien — pilier par pilier, sur mon vrai système : le second cerveau et son rangement IPCCRA, la connexion de tes outils, les skills qui produisent à ta place, et l'entretien qui rend le tout durable. Objectif : passer de « je pose des questions à l'IA » à « j'ai un système d'automatisation qui fait avancer ma productivité, même quand je dors ». Aucun code requis — juste VS Code, Claude et un dossier.\n\n⏱️ CHAPITRES\n0:00 Introduction — pourquoi un système, pas une stack\n3:41 Le framework CAPE\n7:28 Les 3 morceaux d'un AIOS + le setup\n10:01 Installer VS Code et Obsidian\n16:59 Le pilier Contexte — les 3 fichiers de base\n29:33 La structure IPCCRA — ton second cerveau\n34:10 L'arbre de décision — où ranger chaque info\n35:40 Index, nommage et wiki-links Obsidian\n44:52 Le pilier Accès — API, MCP et CLI\n56:17 Le pilier Production — les skills\n1:04:59 Le pilier Entretien — les automatisations\n1:09:02 L'audit hebdo — les 5 questions\n1:11:10 Sauvegarder ton AIOS sur GitHub\n1:15:10 Récap + par où commencer\n\n🔗 OUTILS MENTIONNÉS\nVisual Studio Code : https://code.visualstudio.com/\nObsidian : https://obsidian.md/\nGitHub : https://github.com/\n\n🔗 OUTILS UTILISÉS\nCAPCUT : Montage vidéo assisté par IA - https://clubsmart.s.gy/capcut\nWhisper AI : dicte au lieu de taper sur le clavier et gagne des heures : https://clubsmart.s.gy/wispr\nTella : enregistre écran + caméra et monte tes vidéos en quelques minutes : https://clubsmart.s.gy/tella\n\n📺 POUR ALLER PLUS LOIN\n→ 3 minutes pour comprendre : les projets dans Claude AI —\nhttps://youtu.be/gTw_qWzTHwQ\n→ 3 minutes pour comprendre : les Claude skills — \nhttps://youtu.be/Le5at0y2zOk\n→ 3 minutes pour comprendre le MCP — \nhttps://youtu.be/8myDPCnV4y4\n\n👉 Et si tu veux construire ton AIOS accompagné, le Club SMART est fait pour ça \nhttps://www.skool.com/club-smart/about\n\n#AIOS #IA #ClaudeAI #SecondCerveau #Automatisation #ProductivitéIA",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/FwnIB-RbC-E/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/FwnIB-RbC-E/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/FwnIB-RbC-E/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/FwnIB-RbC-E/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/FwnIB-RbC-E/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    },
+    "qhd": {
+     "url": "https://i.ytimg.com/vi/FwnIB-RbC-E/qhddefault.jpg",
+     "width": 2560,
+     "height": 1440
+    }
+   },
+   "channelTitle": "ThomRichard ",
+   "tags": [
+    "club smart",
+    "automatisation",
+    "claude code",
+    "aios",
+    "système IA",
+    "ai systems for business",
+    "claude",
+    "claude skills",
+    "ai",
+    "ai productivity",
+    "productivité ia",
+    "tutoriel ia",
+    "apprendre l'ia",
+    "learn ai",
+    "claude code skills",
+    "claude tutorial",
+    "ai for business"
+   ],
+   "categoryId": "28",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "fr",
+   "localized": {
+    "title": "Comment j'ai automatisé ma vie avec un AIOS",
+    "description": "La masterclass complète pour construire ton AIOS : un système d'exploitation IA personnel qui travaille pour toi — de zéro, sans être développeur.\n\n🎁 TOUTES LES RESSOURCES DE LA MASTERCLASS (gratuites) :\nhttps://clubsmart.s.gy/masterclass-aios\n→ La carte CAPE (1 page) · Le guide setup pas à pas \n→ La skill aios-bootstrap (ta structure IPCCRA en quelques secondes) + Le générateur de fichiers de contexte (CLAUDE.md, doctrine, conventions) \n→ des bonus\n\n🎓 MON AUTRE MASTERCLASS :\n→ Claude : tutoriel complet, de débutant à utilisateur avancé (1h16) :\nhttps://youtu.be/qefrfyxQOEY\n\n👉 REJOINS LE CLUB SMART — la communauté où on construit ton AIOS ensemble :\nhttps://www.skool.com/club-smart/about\n\n✅ Ce que tu vas apprendre :\n• Construire ton second cerveau (structure IPCCRA) et le brancher à l'IA\n• Connecter tes outils — mails, agenda, liens — avec les API, les MCP et le CLI\n• Créer tes skills et tes automatisations pour qu'il produise à ta façon et s'améliore sans toi\n\nUn AIOS, c'est la couche qui organise comment l'IA travaille pour toi : pas un chatbot, pas une stack d'outils empilés, mais un système d'exploitation IA personnel construit autour de ton contexte. Dans ce tutoriel en français, je te montre le framework CAPE — Contexte, Accès, Production, Entretien — pilier par pilier, sur mon vrai système : le second cerveau et son rangement IPCCRA, la connexion de tes outils, les skills qui produisent à ta place, et l'entretien qui rend le tout durable. Objectif : passer de « je pose des questions à l'IA » à « j'ai un système d'automatisation qui fait avancer ma productivité, même quand je dors ». Aucun code requis — juste VS Code, Claude et un dossier.\n\n⏱️ CHAPITRES\n0:00 Introduction — pourquoi un système, pas une stack\n3:41 Le framework CAPE\n7:28 Les 3 morceaux d'un AIOS + le setup\n10:01 Installer VS Code et Obsidian\n16:59 Le pilier Contexte — les 3 fichiers de base\n29:33 La structure IPCCRA — ton second cerveau\n34:10 L'arbre de décision — où ranger chaque info\n35:40 Index, nommage et wiki-links Obsidian\n44:52 Le pilier Accès — API, MCP et CLI\n56:17 Le pilier Production — les skills\n1:04:59 Le pilier Entretien — les automatisations\n1:09:02 L'audit hebdo — les 5 questions\n1:11:10 Sauvegarder ton AIOS sur GitHub\n1:15:10 Récap + par où commencer\n\n🔗 OUTILS MENTIONNÉS\nVisual Studio Code : https://code.visualstudio.com/\nObsidian : https://obsidian.md/\nGitHub : https://github.com/\n\n🔗 OUTILS UTILISÉS\nCAPCUT : Montage vidéo assisté par IA - https://clubsmart.s.gy/capcut\nWhisper AI : dicte au lieu de taper sur le clavier et gagne des heures : https://clubsmart.s.gy/wispr\nTella : enregistre écran + caméra et monte tes vidéos en quelques minutes : https://clubsmart.s.gy/tella\n\n📺 POUR ALLER PLUS LOIN\n→ 3 minutes pour comprendre : les projets dans Claude AI —\nhttps://youtu.be/gTw_qWzTHwQ\n→ 3 minutes pour comprendre : les Claude skills — \nhttps://youtu.be/Le5at0y2zOk\n→ 3 minutes pour comprendre le MCP — \nhttps://youtu.be/8myDPCnV4y4\n\n👉 Et si tu veux construire ton AIOS accompagné, le Club SMART est fait pour ça \nhttps://www.skool.com/club-smart/about\n\n#AIOS #IA #ClaudeAI #SecondCerveau #Automatisation #ProductivitéIA"
+   },
+   "defaultAudioLanguage": "fr"
+  },
+  "contentDetails": {
+   "duration": "PT1H17M54S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": true,
+   "contentRating": {},
+   "projection": "rectangular",
+   "hasCustomThumbnail": true
+  },
+  "statistics": {
+   "viewCount": "7570",
+   "likeCount": "188",
+   "dislikeCount": "3",
+   "favoriteCount": "0",
+   "commentCount": "37"
+  }
+ },
+ "ytdlp": {
+  "id": "FwnIB-RbC-E",
+  "title": "Comment j'ai automatisé ma vie avec un AIOS",
+  "description": "La masterclass complète pour construire ton AIOS : un système d'exploitation IA personnel qui travaille pour toi — de zéro, sans être développeur.\n\n🎁 TOUTES LES RESSOURCES DE LA MASTERCLASS (gratuites) :\nhttps://clubsmart.s.gy/masterclass-aios\n→ La carte CAPE (1 page) · Le guide setup pas à pas \n→ La skill aios-bootstrap (ta structure IPCCRA en quelques secondes) + Le générateur de fichiers de contexte (CLAUDE.md, doctrine, conventions) \n→ des bonus\n\n🎓 MON AUTRE MASTERCLASS :\n→ Claude : tutoriel complet, de débutant à utilisateur avancé (1h16) :\nhttps://youtu.be/qefrfyxQOEY\n\n👉 REJOINS LE CLUB SMART — la communauté où on construit ton AIOS ensemble :\nhttps://www.skool.com/club-smart/about\n\n✅ Ce que tu vas apprendre :\n• Construire ton second cerveau (structure IPCCRA) et le brancher à l'IA\n• Connecter tes outils — mails, agenda, liens — avec les API, les MCP et le CLI\n• Créer tes skills et tes automatisations pour qu'il produise à ta façon et s'améliore sans toi\n\nUn AIOS, c'est la couche qui organise comment l'IA travaille pour toi : pas un chatbot, pas une stack d'outils empilés, mais un système d'exploitation IA personnel construit autour de ton contexte. Dans ce tutoriel en français, je te montre le framework CAPE — Contexte, Accès, Production, Entretien — pilier par pilier, sur mon vrai système : le second cerveau et son rangement IPCCRA, la connexion de tes outils, les skills qui produisent à ta place, et l'entretien qui rend le tout durable. Objectif : passer de « je pose des questions à l'IA » à « j'ai un système d'automatisation qui fait avancer ma productivité, même quand je dors ». Aucun code requis — juste VS Code, Claude et un dossier.\n\n⏱️ CHAPITRES\n0:00 Introduction — pourquoi un système, pas une stack\n3:41 Le framework CAPE\n7:28 Les 3 morceaux d'un AIOS + le setup\n10:01 Installer VS Code et Obsidian\n16:59 Le pilier Contexte — les 3 fichiers de base\n29:33 La structure IPCCRA — ton second cerveau\n34:10 L'arbre de décision — où ranger chaque info\n35:40 Index, nommage et wiki-links Obsidian\n44:52 Le pilier Accès — API, MCP et CLI\n56:17 Le pilier Production — les skills\n1:04:59 Le pilier Entretien — les automatisations\n1:09:02 L'audit hebdo — les 5 questions\n1:11:10 Sauvegarder ton AIOS sur GitHub\n1:15:10 Récap + par où commencer\n\n🔗 OUTILS MENTIONNÉS\nVisual Studio Code : https://code.visualstudio.com/\nObsidian : https://obsidian.md/\nGitHub : https://github.com/\n\n🔗 OUTILS UTILISÉS\nCAPCUT : Montage vidéo assisté par IA - https://clubsmart.s.gy/capcut\nWhisper AI : dicte au lieu de taper sur le clavier et gagne des heures : https://clubsmart.s.gy/wispr\nTella : enregistre écran + caméra et monte tes vidéos en quelques minutes : https://clubsmart.s.gy/tella\n\n📺 POUR ALLER PLUS LOIN\n→ 3 minutes pour comprendre : les projets dans Claude AI —\nhttps://youtu.be/gTw_qWzTHwQ\n→ 3 minutes pour comprendre : les Claude skills — \nhttps://youtu.be/Le5at0y2zOk\n→ 3 minutes pour comprendre le MCP — \nhttps://youtu.be/8myDPCnV4y4\n\n👉 Et si tu veux construire ton AIOS accompagné, le Club SMART est fait pour ça \nhttps://www.skool.com/club-smart/about\n\n#AIOS #IA #ClaudeAI #SecondCerveau #Automatisation #ProductivitéIA",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "Introduction — pourquoi un système, pas une stack",
+    "end_time": 221
+   },
+   {
+    "start_time": 221,
+    "title": "Le framework CAPE",
+    "end_time": 448
+   },
+   {
+    "start_time": 448,
+    "title": "Les 3 morceaux d'un AIOS + le setup",
+    "end_time": 601
+   },
+   {
+    "start_time": 601,
+    "title": "Installer VS Code et Obsidian",
+    "end_time": 1019
+   },
+   {
+    "start_time": 1019,
+    "title": "Le pilier Contexte — les 3 fichiers de base",
+    "end_time": 1773
+   },
+   {
+    "start_time": 1773,
+    "title": "La structure IPCCRA — ton second cerveau",
+    "end_time": 2050
+   },
+   {
+    "start_time": 2050,
+    "title": "L'arbre de décision — où ranger chaque info",
+    "end_time": 2140
+   },
+   {
+    "start_time": 2140,
+    "title": "Index, nommage et wiki-links Obsidian",
+    "end_time": 2692
+   },
+   {
+    "start_time": 2692,
+    "title": "Le pilier Accès — API, MCP et CLI",
+    "end_time": 3377
+   },
+   {
+    "start_time": 3377,
+    "title": "Le pilier Production — les skills",
+    "end_time": 3899
+   },
+   {
+    "start_time": 3899,
+    "title": "Le pilier Entretien — les automatisations",
+    "end_time": 4142
+   },
+   {
+    "start_time": 4142,
+    "title": "L'audit hebdo — les 5 questions",
+    "end_time": 4270
+   },
+   {
+    "start_time": 4270,
+    "title": "Sauvegarder ton AIOS sur GitHub",
+    "end_time": 4510
+   },
+   {
+    "start_time": 4510,
+    "title": "Récap + par où commencer",
+    "end_time": 4673
+   }
+  ],
+  "tags": [
+   "club smart",
+   "automatisation",
+   "claude code",
+   "aios",
+   "système IA",
+   "ai systems for business",
+   "claude",
+   "claude skills",
+   "ai",
+   "ai productivity",
+   "productivité ia",
+   "tutoriel ia",
+   "apprendre l'ia",
+   "learn ai",
+   "claude code skills",
+   "claude tutorial",
+   "ai for business"
+  ],
+  "categories": [
+   "Science & Technology"
+  ],
+  "heatmap": null,
+  "upload_date": "20260707",
+  "duration": 4673,
+  "channel": "Thom RICHARD - AI and Automation",
+  "channel_id": "UCXd_huFLtKC7Ln0mH9pJKzw",
+  "channel_follower_count": 5620,
+  "thumbnail": "https://i.ytimg.com/vi_lc/FwnIB-RbC-E/maxresdefault_en-US.jpg",
+  "view_count": 7570,
+  "like_count": 188,
+  "comment_count": 13
+ }
+}

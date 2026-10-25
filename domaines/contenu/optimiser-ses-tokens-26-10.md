@@ -4,13 +4,17 @@ resume: Idée de vidéo sur l'optimisation des tokens et les mods de Claude Code
 statut: sujet
 domaine: contenu
 cree: 2026-10-23
-maj: 2026-10-23
+maj: 2026-10-24
 source: https://www.youtube.com/watch?v=s_1GPN-NXA0
-liens: [../communaute/economiser-tes-tokens/economiser-tes-tokens.md]
+liens: [../communaute/economiser-tes-tokens/economiser-tes-tokens.md, optimiser-ses-tokens-video/_images.md, https://claude.ai/artifact/YVpxzT1CewhBjUosc6dAmR]
 ---
 # Optimiser ses tokens (idée de vidéo)
 
 L'idée de Thomas : une vidéo sur l'optimisation des tokens, tirée de la vidéo de Jay E, avec l'occasion de parler des mods.
+
+## Le support
+Deck de 17 slides, texte à dire dans les notes : https://claude.ai/artifact/YVpxzT1CewhBjUosc6dAmR. Il sert de base au motion design. Les schémas et leur générateur sont dans `optimiser-ses-tokens-video/`.
+La démo de la slide 13 : `optimiser-ses-tokens-video/ranger-telechargements.py` range ~/Downloads, le code choisit la catégorie et Haiku le sous-dossier (`--appliquer` pour ranger, `--sans-ia` pour le code seul).
 
 ## La matière
 Les 22 leçons du module « Économiser tes tokens » en sont la liste complète, en 7 chapitres : comprendre, la discussion, la mémoire, les skills, les routines, les connexions, sortir du chat. Voir le sommaire lié.

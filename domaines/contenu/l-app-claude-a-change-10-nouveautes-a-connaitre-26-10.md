@@ -4,7 +4,7 @@ resume: L'app Claude a changé presque en silence. J'ai testé ses 10 nouveauté
 statut: publie
 domaine: contenu
 cree: 2026-10-06
-maj: 2026-10-22
+maj: 2026-10-25
 liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md, 3-minutes-pour-comprendre-claude-design-26-05.md, l-aios-c-est-quoi-explication-en-3-minutes-26-07.md]
 ---
 # L'app Claude a changé : 10 nouveautés à connaître
@@ -18,24 +18,24 @@ liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, claude-tutoriel-co
 
 ## Stats
 
-YouTube Analytics, données jusqu'au 2026-10-20. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
+YouTube Analytics, données jusqu'au 2026-10-22. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
 
 | | 7 premiers jours | 30 premiers jours | Depuis la sortie |
 |---|---|---|---|
-| Vues | 20 807 | en cours | 22 993 |
-| Vues engagées | 9 674 | en cours | 10 789 |
-| Heures regardées | 781,7 | en cours | 864,8 |
+| Vues | 20 807 | en cours | 23 105 |
+| Vues engagées | 9 674 | en cours | 10 856 |
+| Heures regardées | 781,7 | en cours | 868,3 |
 | Abonnés gagnés | 228 | en cours | 254 |
-| Revenus estimés | 51,48 $ | en cours | 58,69 $ |
-| Durée moyenne regardée | | | 4 min 46 s (36,8 %) |
-| J'aime · commentaires | | | 281 · 10 |
+| Revenus estimés | 51,48 $ | en cours | 59,01 $ |
+| Durée moyenne regardée | | | 4 min 45 s (36,7 %) |
+| J'aime · commentaires | | | 283 · 10 |
 
 ## Liens
 
-- Cite : [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
-- Cite : [2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
-- Cite : [2026-05-08-3-minutes-pour-comprendre-claude-design](3-minutes-pour-comprendre-claude-design-26-05.md)
-- Cite : [2026-07-18-l-aios-c-est-quoi-explication-en-3-minutes](l-aios-c-est-quoi-explication-en-3-minutes-26-07.md)
+- Cite : [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
+- Cite : [claude-tutoriel-complet-pour-passer-de-debutant-a-26-05](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
+- Cite : [3-minutes-pour-comprendre-claude-design-26-05](3-minutes-pour-comprendre-claude-design-26-05.md)
+- Cite : [l-aios-c-est-quoi-explication-en-3-minutes-26-07](l-aios-c-est-quoi-explication-en-3-minutes-26-07.md)
 - Description : https://www.skool.com/club-smart/about
 - Description : https://www.thomrichard.com/ressources/guide-10-nouveautes-claude/
 - Description : https://claude.ai

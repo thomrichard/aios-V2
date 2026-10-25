@@ -1,0 +1,166 @@
+{
+  "video_id": "dfi3BsEPxic",
+  "chaine": "simon-scrapes",
+  "titre": "Claude Just Changed Prompting Forever (You Need To Do THIS)",
+  "codeur": "agent simon-scrapes",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "liste",
+    "format_secondaire": "tuto",
+    "sujet": "Sept règles de prompting des guides Opus 5 et Fable 5, appliquées en direct à un vieux prompt, puis comparées au guide GPT Astra",
+    "outils": ["Claude Opus 5", "Claude Fable 5", "Claude desktop", "Claude Code", "ask user questions", "GPT Astra 6", "skill de réécriture de prompts"],
+    "niveau": "intermediaire",
+    "objectif_probable": "communaute"
+  },
+  "titre": {
+    "attente_au_clic": "Une nouveauté de Claude qui change la façon de prompter, et la chose précise à faire tout de suite.",
+    "schema": "<Outil> Just Changed <Sujet> Forever (You Need To Do THIS)",
+    "promesse": "Savoir quoi changer dans ses prompts maintenant",
+    "audace": "audacieux",
+    "registre": "mixte",
+    "briques": ["audace"],
+    "marqueurs": ["nouveaute", "majuscules"],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "sourire en coin",
+    "regard": "camera",
+    "texte": "2026 Prompts",
+    "texte_mots": 2,
+    "repete_titre": "partiel",
+    "elements": ["pierre tombale gravée du logo Claude et de « 2026 Prompts »", "le visage d'un homme chauve en veste en jean qui n'est pas Simon", "ciel orange de coucher de soleil sur un champ"],
+    "nb_elements": 3,
+    "fond": "ciel orange et champ au crépuscule",
+    "couleurs": ["orange", "gris", "bleu"],
+    "curiosity_gap": "nouveaute",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Everything you were taught about prompting was to be specific, spell out the steps, and tell it to double-check its own work.",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Face caméra en plan large ; dès 0:02 une liste « Be specific / Spell out the steps / Double-check its work » qui se fait barrer sous « Fable 5 » et « Opus 5 »",
+    "premier_plan_reprend_miniature": "non",
+    "ouverture": ["hook-dissonance", "boucle-curiosite"],
+    "preuve": {
+      "type": "autorite",
+      "seconde": 12,
+      "description": "« And that's Anthropic saying it, not me » ; la liste barrée sous Fable 5 et Opus 5, puis le prompt annoté en rouge (SPELL OUT THE STEPS, MAKE IT THINK, DOUBLE-CHECK)"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 7, "a_l_ecran": false},
+    "boucle_vers_la_fin": {"presente": true, "citation": "by the end of the video, we'll have fixed this prompt live", "seconde_resolution": 1008, "tenue": "oui"},
+    "seconde_premier_point": 35,
+    "attente_tenue": "oui",
+    "attente_note": "Le « THIS » du titre devient sept règles appliquées au même prompt, réparé sous nos yeux. Trois titres ont tourné du 14 au 16 septembre ; l'original était « Claude 5 Changed Prompting Forever, Fix Yours Now »."
+  },
+  "structure": {
+    "modele": "setup-progress-payoff",
+    "segments": [
+      {"debut": 0, "fin": 35, "titre": "Why Your Old Prompts Are Now Broken", "role": "intro", "pull": true, "paint": true, "point": false, "nom": false, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 35, "fin": 160, "titre": "Règle 1 : donner le travail entier, pas les étapes", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 160, "fin": 331, "titre": "Règle 2 : donner la raison, pas seulement la demande", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 331, "fin": 486, "titre": "Règle 3 : dire quand s'arrêter (et se faire interviewer pour les gros projets)", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 486, "fin": 513, "titre": "Transition et appel à s'abonner", "role": "cta", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 513, "fin": 657, "titre": "Règle 4 : remplacer les règles en capitales par des raisons", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 657, "fin": 779, "titre": "Règle 5 : enlever « think carefully » et « double-check »", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 779, "fin": 895, "titre": "Règle 6 : dire si on veut une réponse ou une action", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 895, "fin": 1026, "titre": "Règle 7 : fixer la voix une fois (managed prose) et le prompt réparé", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 1026, "fin": 1140, "titre": "Claude vs. GPT-Astra Prompting Rules", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 1140, "fin": 1152, "titre": "Skool et vidéo suivante", "role": "fin", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 17, "type": "boucle-ouverte", "citation": "by the end of the video, we'll have fixed this prompt live"},
+      {"seconde": 29, "type": "annonce-suite", "citation": "how these rules actually apply to OpenAI models, too"},
+      {"seconde": 160, "type": "annonce-suite", "citation": "something is missing from this original prompt"},
+      {"seconde": 331, "type": "annonce-suite", "citation": "The third missing thing then is when to stop actually working."},
+      {"seconde": 417, "type": "question-spectateur", "citation": "what do you actually do when you've got a larger build?"},
+      {"seconde": 486, "type": "annonce-suite", "citation": "what the prompt had in it that's actually going to cause you extra headaches"},
+      {"seconde": 657, "type": "annonce-suite", "citation": "the two lines that I highly recommended 3 months ago [...] are actually ruining your outputs"},
+      {"seconde": 895, "type": "annonce-suite", "citation": "the last bit that's going to dramatically improve the quality of your output"},
+      {"seconde": 1008, "type": "rappel-promesse", "citation": "compare this to what we started with"},
+      {"seconde": 1026, "type": "annonce-suite", "citation": "OpenAI recently published their guide also for GPT-6 Astra"}
+    ],
+    "histoires": [
+      {"seconde": 742, "acte": "perso-passe", "resume": "Il a lui-même conseillé « walk me through your reasoning » dans ses vidéos et ses skills ; il a trouvé 11 cas dans ses fichiers."},
+      {"seconde": 856, "acte": "anecdote", "resume": "Quand il posait une question sur un brouillon, Claude le réécrivait ; d'où sa règle « réponds, ne réécris que sur demande »."}
+    ],
+    "payoffs": [
+      {"seconde": 113, "resume": "Les six étapes remplacées par un seul objectif"},
+      {"seconde": 224, "resume": "Le gabarit « I'm working on [...] they need [...] with that in mind »"},
+      {"seconde": 368, "resume": "La définition du fini : mail de moins de 300 mots, chiffres en tête, tableau des trois raisons"},
+      {"seconde": 431, "resume": "Se faire interviewer par Claude pour écrire le brief d'un gros projet"},
+      {"seconde": 535, "resume": "« use this tool when » au lieu de « CRITICAL, you must »"},
+      {"seconde": 846, "resume": "Le paragraphe « report your findings and stop » dans les instructions du projet"},
+      {"seconde": 966, "resume": "« Please remove all managed prose » en une ligne"},
+      {"seconde": 1008, "resume": "Le prompt réparé, comparé à celui du début"}
+    ],
+    "premier_payoff_seconde": 113,
+    "jargon": 2,
+    "repetitions": 1,
+    "test_du_tweet": "Sur Opus 5 et Fable 5, les vieux réflexes de prompt dégradent le résultat. Donne le travail entier et la raison, dis ce qu'est le fini, enlève les CAPITALES, « réfléchis bien » et « vérifie », dis si tu veux une réponse ou une action. Un vieux prompt réparé en direct."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "taille, plan large au bureau ; vignette à droite sur les captures", "decor": "bureau, mur à lattes de bois, micro RØDE, affiche, fauteuil vert, lampe"},
+    "parts": {"face": 40, "ecran": 50, "motion": 10, "broll": 0},
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["cartes-chapitre", "etiquettes", "curseur-surligne", "split-screen", "zooms-ecran"],
+    "charte": "Le même prompt revient à l'écran, annoté en rouge puis surligné en orange au fil des règles ; bandeau rouge numéroté par règle (« 4 Swap hard rules and capitals for reasons ») ; gros chiffre 3D rouge en transition ; logos OpenAI et Claude pour la comparaison. La miniature (tombe au crépuscule) ne reprend pas cette charte.",
+    "rythme": "regulier",
+    "notes": "Un seul objet suit toute la vidéo : le vieux prompt, qu'on voit raccourcir règle après règle. Un commentaire salue « the numbers across the screen » entre les règles."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 504, "type": "abonnement", "cible": "s'abonner et commenter pour la portée de la vidéo", "amene_par": "transition", "citation": "hit subscribe and drop a comment below because it will massively help the reach"},
+      {"seconde": 621, "type": "lead-magnet", "cible": "la skill de réécriture de prompts, gratuite (skool.com/scrapesai)", "amene_par": "apres-valeur", "citation": "I'd highly recommend grabbing that skill for free down in the description"},
+      {"seconde": 769, "type": "lead-magnet", "cible": "rappel de la même skill", "amene_par": "apres-valeur", "citation": "that rewrite scale [...] you can get below in the description"},
+      {"seconde": 1140, "type": "formation", "cible": "le lien Skool de la description (lequel des deux : à vérifier)", "amene_par": "fin", "citation": "check out the school link in the description below"},
+      {"seconde": 1145, "type": "video-suivante", "cible": "sa vidéo « 37 tricks » pour améliorer Claude Code", "amene_par": "fin", "citation": "in the next video, I'm going to show you 37 tricks to upgrade your Claude code setup"}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"formation": 1, "produit": 1, "lead-magnet": 1},
+    "commentaire_epingle": {"texte": "Commentaire du créateur (épinglage non confirmé) : abonne-toi, puis « Now make AI run without you » vers skool.com/scrapes", "type": "formation"},
+    "recap_final": false,
+    "derniere_phrase": "Now, in the next video, I'm going to show you 37 tricks to upgrade your Claude code setup. See you there.",
+    "video_suivante_precise": true
+  },
+  "commentaires": {
+    "themes": ["la fatigue de changer de style de prompt à chaque modèle", "des modèles moins déterministes", "Claude qui ignore son Claude.md", "les transitions numérotées appréciées"],
+    "demandes": ["un outil qui réécrit les skills pour Opus 5", "la skill promise, introuvable dans la description"],
+    "critiques": ["des « rituels » imposés à l'utilisateur", "ne plus demander le raisonnement paraît fou", "l'IA devrait construire ma version, pas la sienne"],
+    "reprises": ["« whilst », repris avec humour", "les numéros en transition"],
+    "signal_promesse": "mixte"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "1re phrase sur le prompting, en partie le titre ; 1er plan en face caméra, puis la liste barrée qui rejoint l'idée de la tombe sans la reprendre"},
+    "ap_boucle_curiosite": {"note": 2, "preuve": "0:17 « by the end of the video, we'll have fixed this prompt live », résolue à 16:48 « compare this to what we started with »"},
+    "ap_effort_montre": {"note": 0, "preuve": "Aucun effort dans l'intro ; les 11 cas trouvés dans ses fichiers n'arrivent qu'à 12:55"},
+    "ap_setup_progress_payoff": {"note": 2, "preuve": "Le mauvais prompt posé à 0:14, raccourci règle après règle, comparé à l'original à 16:48 puis côte à côte à 18:13"},
+    "ap_contraste_rythme": {"note": 1, "preuve": "De 2 à 10 plans par minute, débit de 205 à 248 mots/min, sans rupture marquée"},
+    "ap_montrer_sans_son": {"note": 2, "preuve": "Planche intro : « Be specific / Spell out the steps / Double-check its work » barré sous Fable 5 et Opus 5, puis le prompt annoté en rouge : la promesse se lit"},
+    "ali_douleur_histoire": {"note": 1, "preuve": "0:06 « every one of those now makes the output worse » ; son propre aveu n'arrive qu'à 12:22"},
+    "ali_coeur_unique": {"note": 2, "preuve": "9:47 « replace the rule with the behavior that you actually want [...] and the reason »"},
+    "alx_pont": {"note": 1, "preuve": "Preuve (Anthropic), annonce des 7 règles et de la comparaison OpenAI, mais ouvert par une dissonance et une boucle"},
+    "alx_pull_paint_point": {"note": 2, "preuve": "Chaque règle dit pourquoi, s'appuie sur le rapport client Rankspot (la baisse de 4 %) et finit sur la ligne à changer"},
+    "alx_nom_idee": {"note": 2, "preuve": "« give the reason not only the request », « state the boundaries », « managed prose » ; bandeaux « 1 Give it the whole job, not the steps », « 7 Fix the voice once »"},
+    "alx_phrase_finale": {"note": 1, "preuve": "1:25 « You're narrowing them down to your version of what you think the job is » ; 15:51 la citation sur la prose qui fatigue ; pas sur la plupart des règles"},
+    "alx_douleur_reve": {"note": 0, "preuve": "« Claude Just Changed Prompting Forever » : une nouveauté et du jargon, sans problème ni désir"},
+    "alx_cta_tot": {"note": 0, "preuve": "La skill gratuite n'arrive qu'à 10:21"},
+    "ed_intro_courte": {"note": 1, "preuve": "1er point à 0:35 après huit phrases"},
+    "ed_hook": {"note": 2, "preuve": "0:00 à 0:12 « every one of those now makes the output worse. And that's Anthropic saying it, not me. »"},
+    "ed_probleme_preuve_consignes": {"note": 2, "preuve": "Chaque règle : la vieille habitude, la phrase du guide Opus 5 ou Fable 5 lue mot pour mot, puis la réécriture"},
+    "ed_tension_relancee": {"note": 2, "preuve": "6:57 « what do you actually do when you've got a larger build? » ; 10:57 « the two lines that I highly recommended 3 months ago »"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "12:22 il a conseillé lui-même ces lignes ; 14:16 son brouillon réécrit sans demande : des aveux courts"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "La justification et le « over trigger » reviennent à chaque règle"},
+    "ed_niveau_simple": {"note": 2, "preuve": "1:17 « in plain English » ; un seul exemple concret (le rapport hebdo du client)"},
+    "tous_video_suivante": {"note": 2, "preuve": "19:05 la vidéo « 37 tricks » nommée, pour « upgrade your Claude code setup »"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Titre de nouveauté avec un « THIS » caché ; miniature-métaphore (une tombe « 2026 Prompts ») avec le visage d'un tiers, comme les deux plus gros succès. Trois titres testés. Score VidIQ 3,7 mais 51 000 vues à 7 jours, sous la médiane.",
+    "intro_structure": "La vidéo la mieux construite de la série : une dissonance prouvée, une boucle (« on répare ce prompt en direct ») tenue jusqu'au bout, un seul objet qui change sous nos yeux.",
+    "habillage": "Le même prompt annoté puis raccourci, bandeau numéroté par règle, chiffre 3D en transition.",
+    "idee_pour_nous": "Réparer en direct un vrai prompt de membre du Club, règle après règle : un fil visible, une boucle tenue, et le prompt réécrit offert au Club.",
+    "objectif": "club"
+  }
+}

@@ -1,0 +1,272 @@
+[
+ {
+  "texte": "So, I’m wondering what the file size of that movie is, and also how would this work on a mobile device where there is no cursor?",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@timz9862",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Thanks. Question.. How would this effect page load speed and SEO?",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Mit_Makes",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "I just love your videos. I never miss one!",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@5JRTs",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "amazing video now i want a tutorial for Claude Code and Rmotion",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@tripios",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Great videos, can you do one on how you edit your videos for youtube",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@nickdoesdigital",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "I use claude to make printable sewing pdfs and it does a good job on them. I even made a few garments with it. You honestly can't tell the difference. I've used it to make simple games like solitare and it does a good job.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ranneecollins7835",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "I like your channel? I want to start a channel too...what is your Youtube setup?",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@SmartFitStudio-f7c",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Great Video. Learning a ton.  I appreciate it.  Couple questions.  Regarding the video that gets generated.  Does either of the AI services provide an optimized web friendly version of the video.  I was curious about the file size and I saw your video was 40mb for 5 second.  I ran the video through FFMPEG with the following string - ffmpeg -i turn.mp4 -r 24 -c:v libx264 -crf 28 -preset veryslow -movflags +faststart -pix_fmt yuv420p -an turn_crf28.mp4 and created a 2mb file that looks really good.  I did a version where I stepped on it all the way down to 434 kb and I have to say it still was not bad.  When you setup your prompts, can you have Claude optimize the video?  Can you build FFMPEG into Claude so you don't have to know how to set the switches when optimizing.  I know this is slightly out of the range of the spirit of the training video you provided but since the hero is a video I thought it applied.  I was just wondering related to load time, if there is anything setup to accommodate how the video loads and reacts to the users mouse. Thanks again for the video and I look forward to your response to hopefully learn a little more about what Claude and Claude Design can do.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@kkokoruz",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "Thank's a lot, finally someone who actually helps with real input ;) Keep it up!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@schakal2566",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "love this! subscribed",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@pelas93",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "NICE!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@TristanScheuer-b1e",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Great video , thanks for sharing and for putting those prompts in the video itself",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@dinis-cruz",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Amazing Video! Thank you",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Wellingtongonzalez",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Thanks Tristen for this video showing how to use Claude Design for creating website animation's.😊🙏\n\nP.S. And yes, you have got a new Subscriber.😊🔔",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ShinilPayamal",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "WHERE IS THE PROMPT IN STEP 3?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@jamesdepaul",
+  "date": 1792846800,
+  "parent": "root"
+ },
+ {
+  "texte": "Great video thanks. Your editing is next level. You must have a team to have graphics so impactful. Or are you using a program to create them?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@lloydjusa",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "is it good for editorial Newsletter?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@carstenmeissner5634",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Lovely video, thank you! Only thing is that you missed the chance to change the cursor to a wooden mallet…",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@jeroendonker",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "What if you wanted it to follow the cursor vertically as well?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@akuralay",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Side question: Are you actually doing all the animation and text layers within your videos with AI as well? :)",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@MRV2302",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Where can I find the prompts? On the website I cannot find them.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@n00men",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "I keep seeing these videos on building websites and it’s always on desktop.. but most people will see your website on an iPhone tho… No?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@matanlalo123",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Cool video and technique but way too much effort. Having an actual 3D character, animated using three.js or GSAP would give far more realistic movement, snappier turns and the eyes that cross a bit in the middle. Meshy, Spline or Higgsfied itself could probably provide the model, and because these are react based Claude could handle the animation part as it did just without the video part. This would provide better loading time, smaller files and better SEO because it's details are embedded in the code. Try it out! Alternately, you can use Lottie or Rive, they are also smaller and would provide far better and more realistic results. :)",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@aleksandarcucukovic9710",
+  "date": 1792108800,
+  "parent": "root"
+ },
+ {
+  "texte": "Is the finished product html?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@lookingup8519",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Hey have the prompts moved? Prior comments say they’re in the YouTube tab, but the tab ‘The Videos’ has no prompts",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@AaronKirkpatrick-z9w",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "a bit dissapointing that it's not real 3D. it won't look at the mouse if the mouse is not on eye level",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@MrInsider33",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Can't find the prompts on your site. Can you guide me to them please?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Xeronimo74",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "We pay for Claude and now for Higgsfield...",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@mustafagladiator",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "So where's the Prompt for the video to follow the mouse? What is it called? you have 147 everyday prompts on your site.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@angelgcastro1",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "I'm wait for Claude or Gemini or some collaboration of AI systems to design a better used interface instead of this commamd line prompt nonsense. Are you listening, Claude? Because the human handlers don't get it. They are still stuck in the MS-dos era.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@factchecker9358",
+  "date": 1790294400,
+  "parent": "root"
+ }
+]

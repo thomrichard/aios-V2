@@ -51,3 +51,6 @@ Ajout seul. Format : `- AAAA-MM-JJ · <action> | <sujet>`
 - 2026-10-24 · réglage | skool-ops : plus d'envoi de messages privés en masse par l'agent ; idée « messages de masse avec Brevo » notée
 - 2026-10-24 · support | « Économiser tes tokens » : deck de 32 slides (22 schémas, 7 chapitres), texte à dire dans les notes du présentateur https://claude.ai/artifact/13SoBe27hLUiPKoBVsxQQZ
 - 2026-10-24 · ajout | 35 pièces jointes des leçons Skool rapatriées à côté de leurs leçons (`domaines/communaute/`), le zip audio d'Otter dans le dossier des fichiers lourds ; les 3 fichiers de test laissés de côté
+- 2026-10-24 · support | « Optimiser ses tokens » : version vidéo du deck, 17 slides (10 schémas repris sans numéro, 7 nouveaux), texte à dire dans les notes https://claude.ai/artifact/YVpxzT1CewhBjUosc6dAmR
+- 2026-10-24 · script | ranger-telechargements.py pour la démo de la vidéo tokens : le code choisit la catégorie, Haiku le sous-dossier ; testé sans rien déplacer (104 noms, 3 447 tokens, ~0,003 $)
+- 2026-10-25 · processus rangement | 0 rangés, 2 questions

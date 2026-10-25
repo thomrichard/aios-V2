@@ -1,0 +1,143 @@
+[00:00] So, there are over 100,000 GitHub repos built for Claude right now.
+[00:03] And most of them are honestly a waste of time.
+[00:05] But, after trying and actually using more than 100 repos, I found 10 that I cannot work without.
+[00:09] And some of these help me finish projects 10 times faster, some save you money on tools you'd otherwise pay for every month, and some have completely replaced me in some parts of my workflow.
+[00:17] So, in this video, I'll show you what they are, what problem each one solves, and how to use them to build something that businesses will actually pay you for.
+[00:24] So, let's not waste any time and just get straight into this one.
+[00:26] Okay.
+[00:26] So, the first repo is Hyperframes, and this is from Haygen.
+[00:30] It's taken over a huge part of my video editing.
+[00:32] You basically just tell Claude what you want in natural language, and it builds the video out of HTML and animations, and Hyperframes renders a real MP4, so a real video, right on your computer.
+[00:41] You can get captions, motion graphics, title cards, product promos, all that kind of stuff.
+[00:45] And then what I do is I build skills on top of Hyperframes to make things like YouTube video intros or Instagram Reels, course videos, ads, so many things.
+[00:53] Editing is no longer the bottleneck for me and my team.
+[00:56] I'll literally drop in a raw clip and say, "Hey, can you add captions and a title card to this?" Or, "Can you turn this into an Instagram Reel?" And a few minutes later, I've got a finished file.
+[01:03] Now, you might have heard of something like Remotion, which also does this, but I've just found way more success with Hyperframes.
+[01:07] It's not a sponsored video at all, and I've enjoyed the experience using Hyperframes a lot.
+[01:11] It's open source, it has no per-render fees, so it's completely free.
+[01:15] And pretty much any business that posts videos will pay for you to edit videos for them, like a gym that wants 20 caption clips a month or something like that.
+[01:22] You can sell that as a monthly content package.
+[01:25] And you don't have to have any video editing experience to actually use these tools.
+[01:28] Okay, so number two is one of the things that I use the most, and it's the Google Workspace CLI.
+[01:33] It lets Claude work with pretty much anything in your Google account, like your Drive, Gmail, Calendar, Docs, Sheets, and Slides, and it formats everything beautifully using the CLI.
+[01:41] Now, you could obviously use the built-in connector for Google inside of Claude, but those only work inside of the Claude desktop app.
+[01:47] They don't cover everything.
+[01:48] But, this is a CLI, a command-line tool.
+[01:50] So, Claude Code, CodeX, or any other agent that you build with can use the this And it comes with over 40 skills, so Claude already knows exactly how to use it.
+[01:59] Now, setting this up will just take a few minutes because you do need a Google Cloud project for the login, but then Claude can just walk you through it step-by-step.
+[02:05] You just have to give access to the apps that you actually want to use through the CLI.
+[02:09] And most small businesses run on Google.
+[02:11] So, weekly reports, invoices, follow-up emails, anything like that, you can help them automate that quicker.
+[02:16] All right, repo number three is Apify, or it's technically the Apify MCP server.
+[02:20] There's a ton of data out there that Claude just cannot naturally, or natively I should have said, reach and touch.
+[02:25] Sites like Instagram and Reddit, they might either block it or just need JavaScript to load it, so Claude basically gets back an empty page.
+[02:32] So, Apify connects Claude to thousands of ready-made scrapers for Instagram, TikTok, Amazon, tons of different websites.
+[02:37] So, I'll basically just ask it, "Hey, can you find bakeries in Chicago on Instagram and give me their follower count and download the videos and show me the ones with, you know, no websites in their bio," things like
+[02:46] that.
+[02:47] And then a couple minutes later, you've got a spreadsheet right there.
+[02:49] The connector is open source, but the scrapers run on Apify's cloud, so you might have to pay a few bucks depending on which scraper you're using.
+[02:55] The free plan gives you five bucks of credit a month, and then the other actors you might have to pay for, like I said, per result.
+[03:01] There are also some other open source repos out there that help you scrape different things like Firecrawl, but Apify has been really easy to use as well.
+[03:07] All right, so full disclosure, this next one I built, and it's called Scrollcraft, and I'll link it in the description.
+[03:12] You've probably seen those Apple-style websites where you scroll and the whole page moves like a movie and it's super immersive.
+[03:17] There's different layers.
+[03:18] It just feels cool.
+[03:20] And if you ask Claude for one, you usually get a very generic page with a couple of different weird text fade-ins or something like that.
+[03:25] Scrollcraft gives Claude a real scroll engine plus the design rules that I've picked up by building a bunch of different websites, and it has a checker built in that screenshots the scrolls and looks at the positions, so Claude
+[03:36] can fix things before you ever have to instruct it to fix those things.
+[03:39] My AI automation society site, my personal site, our event sites, every site that we build uses this repo.
+[03:44] And what you'll notice is that not all of these sites have to be super, super scroll-driven and immersive.
+[03:49] The repo understands things like taste and depth, and layering, spacing, typography, color schemes.
+[03:55] It understands just tons of great stuff for website design and for feel.
+[03:59] Because ultimately, the point of a website is to feel good and to be able to actually convert the user to do what you want them to do.
+[04:04] Nowadays, with AI, a basic landing page is pretty much a commodity.
+[04:08] But brands that sell online still pay a designer real money for, you know, a custom scroll experience or something that's not as easy to vibe code.
+[04:15] So, trust me, this repo is going to come in handy when you're building your next site.
+[04:18] Okay, now, repo number five.
+[04:19] This is something that I found almost by accident, and it's been on every product since.
+[04:22] It's called Humanizer, and it makes whatever Claude writes stop sounding like AI slop.
+[04:26] It's built on a guide that Wikipedia editors use to catch AI-generated text.
+[04:31] So, it knows all of those like AI tells, when you can just immediately look at it and it smells like AI.
+[04:36] Things like not this, but that.
+[04:38] All of those sort of setups or tee-ups.
+[04:40] Everything coming in groups of three.
+[04:42] Over-the-top hype words.
+[04:43] You basically just have to paste in website copy or the cold email that you're about to send or whatever it is, and you just tell it to humanize it using this repo.
+[04:49] And it keeps what you were saying, but it drops the stuff that makes people instantly scroll past or lose trust.
+[04:54] Because obviously, copy that reads like a person wrote it is a way easier pitch than AI-generated content.
+[04:59] Okay, so those first five were really about landing a client.
+[05:02] The rest of these here are more so about when a client asks you to build something real, like a cleaning company that wants customers to book online and pay a deposit.
+[05:10] And you've probably had this happen where you're maybe an hour or two into a build and Claude starts randomly giving you answers like it forgot everything.
+[05:17] And that's because long sessions get compacted or you maybe enter context rot, and details from earlier get summarized away.
+[05:23] So, repo six fixes that.
+[05:25] It's called Agent Skills from Addy Osmani.
+[05:27] Addy spent 14 years at Google and now works on Claude code at Anthropic.
+[05:31] So, it gets the plan out of the chat and into files.
+[05:34] You can run {slash} spec, and it writes a real spec with you.
+[05:37] You can run {slash} plan, which breaks it into small tasks.
+[05:39] And then you can run {slash} build, which works through them one at a time with a check on each one.
+[05:43] So, when a session inevitably gets messy, you can just open up a fresh one and it can pick up right where you left off.
+[05:49] The spec will also ask about things that you probably wouldn't think to bring up, like double bookings or refunds or customers in different time zones.
+[05:55] All of these edge cases that's really important to bake into your actual spec or your build.
+[05:59] And it's something you can hand the client before you build anything, so they know exactly what they're actually getting.
+[06:03] That way you guys stay aligned all the way through.
+[06:05] And if you've been using something like Superpowers from my skills video back in May of this year, Superpowers is still really good, but Addy's is easier to follow if you're newer.
+[06:12] And there's also other skills like Matt Pocock's, which are really really good, especially if you're wanting to build like a developer, even if you're not a developer.
+[06:19] So, I guess Matt Pocock's would be a bonus GitHub repo inside of this one right here.
+[06:23] But, let's move on to number seven, which is Expo's official skills for mobile apps.
+[06:26] You can basically go from an idea to a real app running on your own iPhone in an afternoon, even if you're on Windows.
+[06:32] And they include Expo's own list of 20 things that make an app look AI-built, plus the current rules for getting into the actual app store.
+[06:39] So, one quick tip, tell Claude to use the Expo skills by name, because they don't always load on their own.
+[06:44] You will also need a $99 a year Apple developer account for TestFlight or the App Store.
+[06:48] And most shops already have something like Square, so sell them the one workflow their current software doesn't fit.
+[06:54] But, trust me, if you guys want to get an app into the store and you want to build it in a way that actually makes sense, this repo's going to save you a ton of time and tons of
+[07:00] headaches.
+[07:00] Okay, now number eight is on the back end of that app that you're building or software that you're building with Superbase and Stripe's official skills.
+[07:07] So, if your app needs logins or a database or payments, which pretty much every app does need, Claude knows each company's actual security rules, like making sure users only see their own data and checking that a payment really
+[07:18] came from Stripe.
+[07:19] So, only install Stripe's skill called Stripe best practices.
+[07:22] You don't need the whole plugin to start, because the full plugin might try to route every vendor decision through Stripe.
+[07:26] And then you can set the Superbase connector to read only and then log in as one test user before you launch and make sure you can't see other users' data.
+[07:33] But, trust me, I know that the back end and the payment stuff can get very confusing.
+[07:37] If you're vibe coder, you might get worried about some security stuff, so use these skills.
+[07:41] Now, number nine is what you run before you hand anything over to a client or to the the internet.
+[07:46] Because Claude will happily tell you, "Yeah, this works." But, it might not have actually clicked those buttons and checked if it really did work.
+[07:52] So, Playwright CLI from Microsoft opens a real browser.
+[07:55] It clicks through your app like a customer would, and it writes tests that you can rerun over and over and basically just verify everything.
+[08:00] And since it's a command line tool instead of an MCP, it doesn't dump the whole page into Claude's context.
+[08:05] So, it's a lot lighter on tokens as well, and it's a lot faster, honestly.
+[08:08] So, this helps you verify and test a ton of things and find those edge cases.
+[08:12] And then, we also have Claude Security, which is Anthropic's security plugin.
+[08:15] It sends a team of agents through your code looking for holes, and separate agents try to prove each other wrong, and they try to look for different findings.
+[08:22] >> >> And you basically get a plain English report of everything that survived, and then it can write all those patches and just execute on it for you.
+[08:28] Now, clients don't usually care about all these tests, but what they really care about is that the booking form works and that their customer data doesn't leak.
+[08:35] So, build this into every project.
+[08:37] And last but not least, we have number 10, Open SEO, because once the site or app is live, people have to find it.
+[08:42] It plugs Claude into real keyword data, rankings, backlinks.
+[08:46] So, instead of generic advice, it tells you the exact page and the exact keyword where you're sitting at.
+[08:51] Agencies use an audit like this to win the monthly SEO retainer.
+[08:53] So, just know the free trial credits are small, and by default, your data sits on their server unless you host it yourself.
+[08:59] Now, some of you guys might be wondering about some of the token saving repos like Caveman or RTK, Ponytail, things like that.
+[09:04] Now, JetBrains actually tested all three on real coding tasks.
+[09:07] Caveman cut about 8 and 1/2% of output tokens, where it was kind of advertising 65%.
+[09:12] And RTK didn't really save anything, and at low effort, it made tasks more expensive.
+[09:16] Ponytail was the only one that saved money in these tests, about 10% per task, which is half of what it advertises.
+[09:23] And on Windows, it has an open bug that can stall every message for several seconds.
+[09:27] So, if you want to see where your tokens actually go, a repo called Codeburn shows your spend and flags the waste like an MCP server that you might never use, but still loads on every message.
+[09:36] And two I recommended back in May, Claude Mem and Context Mode, I'd maybe hold off on those for now.
+[09:41] Claude Mem sends usage data by default, and Context Mode has an open bug that can burn through your usage.
+[09:46] So, everything else I tested and left out will be in the description.
+[09:49] All right, so if you're brand new to this, don't install all of these today.
+[09:52] I think that would be extremely overwhelming, cuz if something breaks, you might not know which repo caused it.
+[09:56] So, just pick the one that fixes the problem that you're currently kind of running into the most.
+[10:00] And if you're not sure, then maybe start with the Google CLI or Appy Pie or Scroll Craft.
+[10:05] And you might as well start with Humanizer because that one is super super simple as well.
+[10:08] But, pull a list of businesses with no website, you know, build one off a sample page, clean up the copy, and then send the link.
+[10:13] No one's going to pay you for a GitHub repo, those are free, everyone can install them.
+[10:16] So, what you're selling is the thing that you build around it that solves their problem.
+[10:20] And I'll put every repo from this video inside the description of the video so that you can just go ahead and click on all of them right from there.
+[10:27] But anyways, that is going to do it for this one.
+[10:28] So, if you guys enjoyed and you learned something new, please give it a like, it helps me out a ton.
+[10:31] And as always, I appreciate you guys making it to the end of the video.
+[10:34] I'll see you on the next one.
+[10:35] Peace, everyone.

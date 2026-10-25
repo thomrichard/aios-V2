@@ -4,7 +4,7 @@ resume: Dans cette vidéo, je t'explique rapidement ce qu'apportent les Skills p
 statut: publie
 domaine: contenu
 cree: 2026-04-05
-maj: 2026-10-22
+maj: 2026-10-25
 liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md, 3-minutes-pour-comprendre-creer-un-skill-claude-26-04.md, 3-minutes-pour-comprendre-les-projets-dans-claude-ai-26-04.md, pourquoi-ton-aios-est-malade-et-comment-le-soigner-26-09.md]
 ---
 # 3minutes pour comprendre : les Claude skills
@@ -18,27 +18,27 @@ liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, claude-tutoriel-co
 
 ## Stats
 
-YouTube Analytics, données jusqu'au 2026-10-20. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
+YouTube Analytics, données jusqu'au 2026-10-22. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
 
 | | 7 premiers jours | 30 premiers jours | Depuis la sortie |
 |---|---|---|---|
-| Vues | 443 | 616 | 1 826 |
-| Vues engagées | 443 | 616 | 1 785 |
-| Heures regardées | 11,6 | 16,9 | 55,8 |
+| Vues | 443 | 616 | 1 836 |
+| Vues engagées | 443 | 616 | 1 793 |
+| Heures regardées | 11,6 | 16,9 | 56,1 |
 | Abonnés gagnés | 17 | 24 | 51 |
-| Revenus estimés | 0,00 $ | 0,00 $ | 2,74 $ |
+| Revenus estimés | 0,00 $ | 0,00 $ | 2,80 $ |
 | Durée moyenne regardée | | | 1 min 52 s (60,9 %) |
 | J'aime · commentaires | | | 37 · 1 |
 
 ## Liens
 
-- Cite : [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
-- Cite : [2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
-- Citée par : [2026-04-14-3-minutes-pour-comprendre-creer-un-skill-claude](3-minutes-pour-comprendre-creer-un-skill-claude-26-04.md)
-- Citée par : [2026-04-27-3-minutes-pour-comprendre-les-projets-dans-claude-ai](3-minutes-pour-comprendre-les-projets-dans-claude-ai-26-04.md)
-- Citée par : [2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
-- Citée par : [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
-- Citée par : [2026-09-22-pourquoi-ton-aios-est-malade-et-comment-le-soigner](pourquoi-ton-aios-est-malade-et-comment-le-soigner-26-09.md)
+- Cite : [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
+- Cite : [claude-tutoriel-complet-pour-passer-de-debutant-a-26-05](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
+- Citée par : [3-minutes-pour-comprendre-creer-un-skill-claude-26-04](3-minutes-pour-comprendre-creer-un-skill-claude-26-04.md)
+- Citée par : [3-minutes-pour-comprendre-les-projets-dans-claude-ai-26-04](3-minutes-pour-comprendre-les-projets-dans-claude-ai-26-04.md)
+- Citée par : [claude-tutoriel-complet-pour-passer-de-debutant-a-26-05](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
+- Citée par : [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
+- Citée par : [pourquoi-ton-aios-est-malade-et-comment-le-soigner-26-09](pourquoi-ton-aios-est-malade-et-comment-le-soigner-26-09.md)
 - Description : https://clubsmart.s.gy/masterclass-aios-catalogue
 - Description : https://clubsmart.s.gy/tuto-claude-catalogue
 - Description : https://www.skool.com/club-smart

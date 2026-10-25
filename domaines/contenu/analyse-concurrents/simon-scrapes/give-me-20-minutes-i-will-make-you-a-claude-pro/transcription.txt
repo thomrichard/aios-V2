@@ -1,0 +1,255 @@
+[00:00] Anthropic publishes exact instructions for getting the best out of Claude, right down to lines that they tell you to copy and paste word for word.
+[00:07] And every time a new model is released, they rewrite these rules to the point that some of what made you good at Claude in the last year now actively makes you worse.
+[00:14] Now, I've gone ahead and read all of the instructions so that you don't have to.
+[00:18] So, just give me 20 minutes and I'll make you a pro.
+[00:20] So, we're going to go through five upgrades.
+[00:22] Every one of them is going to be copy and paste and they'll all be available in the resources linked in the description below.
+[00:27] So, upgrade one starts with a prompt that looks a little like this.
+[00:31] And this is a prompt that I covered in my last video.
+[00:33] And it ends with something like, "Before you finish, double check every number against the spreadsheet.
+[00:37] Then verify that the emails sound professional." So, we're asking it to verify against the brief.
+[00:40] And that was the right thing to do around 3 months ago before Claude 5 models.
+[00:44] And it's totally wrong now.
+[00:46] So, let me just go through and correct it properly so you can see exactly how this prompt would be laid out for Clawude 5 models.
+[00:51] So, the newest models verify their own work without being told to do so.
+[00:54] And the Opus 5 guide now lists explicit verification instructions under old habits to drop.
+[00:59] So on the current models, things like check your work is just going to add a second verification pass that's going to be slower, longer, contradicts the first pass, cost you more.
+[01:07] So basically delete those lines.
+[01:08] And that's basically the theme of this whole video.
+[01:10] The rules from anthropic have been completely rewritten.
+[01:12] And then when it comes to prompting, here's what the docs say actually going to make the difference.
+[01:16] And the first one is the simplest.
+[01:17] You're going to tell it what to do and never tell it what not to do.
+[01:20] So don't say things like don't use bullet points.
+[01:22] it's going to confuse the model.
+[01:24] Instead, we're going to say something like, "Write it as flowing paragraph." So, we're giving it the way to write it rather than how to not write it.
+[01:30] Then the second one is the habit I see missing across most of the prompts that people are sharing inside my school community, which is actually given justifications or the intent behind an instruction.
+[01:38] So, it used to say things like don't use m dashes or never use ellipses and it will sort of work, but actually giving it the justification actually helps to enforce the rule.
+[01:47] So something like never use ellipses in your response because this will be read aloud by a texttospech engine and they can't interpret ellipses.
+[01:53] That's going to work dramatically better and that's taken directly from Claude's prompting best practices guide.
+[01:57] So in plain English then basically the model uses the why to handle every case you didn't think to write down.
+[02:03] So it's able to give itself a broader understanding and fix more things on our behalf without having to be super prescriptive in saying exactly what to remove.
+[02:10] So if we're saying it needs to be read by a text to speech engine, then it has an inherent understanding that other things are also going to be stripped out from the response that will not be read well
+[02:17] in a texttospech engine.
+[02:18] Now the thing that's going to tie this all together with your prompting is what anthropic call their golden rule.
+[02:22] So can you show a prompt like this to a colleague with zero context?
+[02:26] If they'd be confused then Claude will probably be confused too.
+[02:29] So when we're prescribing specific steps here, one, the colleague has no understanding of why they're doing those specific steps.
+[02:34] So they lack the intent and two we're being extremely prescriptive.
+[02:37] the model can only do these things in order because it assumes that actually that order is the correct way to do things.
+[02:42] So instead of being super prescriptive, we can actually just use Claude's own template which is I'm working on then give a brief of the larger task and who it's for but also include the justification.
+[02:51] So they need and then let's talk about what the output is actually enabling.
+[02:55] This is our chance to give as much context as possible on the justification of exactly what they need and then we do the definition of done.
+[03:01] So with that in mind, we're going to do this task and this is what done looks like for this task.
+[03:05] So this is actually the template that can be applied to a prompt like this.
+[03:08] And most of this will be stripped out.
+[03:10] So we'll strip out the things like the prescriptive steps.
+[03:12] We'll strip out things like telling it it's important and following this process exactly because it's going to overtrigger Claude for those steps.
+[03:17] And most of these are things that Claude is already doing in the background.
+[03:19] So we can actually strip out those two.
+[03:21] It leaves us with the description of exactly what it's doing, the reason why we're doing it, and then the exact task and the definition of done so it doesn't overdo it.
+[03:27] So in short, prompting and models has gotten way easier, but everything we've done before this point actually contradicts the way the models behave from claude 5 models onwards.
+[03:36] So that's everything prompting done in just a few minutes.
+[03:39] Now upgrade 2 is going to be the biggest change to most people's workflow in this whole video.
+[03:43] And it's literally going to be one command inside code.
+[03:45] And in anthropic's own words, it's going to be the difference between a session that you watch and one that you can actually walk away from.
+[03:50] And we're going to be solely reliant here on the same definition of done.
+[03:53] Because without a check that Claw can run that says, is this done?
+[03:56] it's going to enter into an infinite loop.
+[03:57] So, what we're going to use is the command slash goal.
+[04:00] So, you type in a condition and Claude will keep working until a separate model confirms it's met the done criteria.
+[04:06] So, in plain English, basically after every single turn, a separate fast model, Haiku, by default, will read your conversation and give one of three verdicts.
+[04:15] Have the definition of done criteria been met yet?
+[04:18] If it's not met yet, then Claude takes the reason as guidance and starts the next turn with that additional context and the original context.
+[04:24] So the model is basically going to keep doing the work.
+[04:26] And it's important that we have the model that's doing the work and the model that's verifying the work as separate models there.
+[04:30] And that's what goal does automatically.
+[04:32] And if it's been met, then we finish the criteria and we actually can go through that verification phase.
+[04:36] So I want to give you a real example of how I've recently used goal and that is for rankspot.ai and AI search visibility platform.
+[04:42] So how do you get your brand recommended in chat Gemini and Claude?
+[04:46] Because millions of people every week are asking Claude questions about your category, about your brand.
+[04:50] So you want to actually, you know, rank for certain prompts in there.
+[04:52] So, this is all about how you rank for those.
+[04:54] Now, as part of that, we have this free tools section.
+[04:56] And if you've ever grown a SAS before, you'll know that free tools are a great way to one, get back links from other credible sites in your niche because everyone will want to actually link to your free tool,
+[05:05] or two, offer some value to your customers without them having to actually commit to the full product.
+[05:09] So, for example, we've got this free AI visibility checker.
+[05:12] So, you can come in here, you can enter any example website.
+[05:14] Let's do cow.com.
+[05:15] You can actually then check the visibility of that website for free.
+[05:18] It will give you the chance to rank for five different prompts.
+[05:21] So, these look good.
+[05:21] So, I'm going to go ahead and run the check on those five prompts.
+[05:23] So, we can see, for example, for pow.com versus their different competitors, they are for those five prompts not being mentioned at all.
+[05:30] So, these are five prompts they probably want to go after.
+[05:32] We can see the different sources and the answers we've queried from those different five prompts.
+[05:35] So, here's the prompt.
+[05:36] Here's the answer for those five prompts.
+[05:38] We can then see also that Calendarly and Acuity Scheduling are ranking much higher for those different prompts and they have a higher share of voice and actually across the five prompts, Calendarly gets five mentions in those five prompts.
+[05:48] We can see all the tops pages, the topsighted domains.
+[05:50] Immediately we're giving value to a user here and we're running some prompts in the back end and actually aggregating that data into this three tool.
+[05:56] But the point I'm trying to make is over one weekend using this goal function and obviously some templates we were able to spin out 40 different free tools.
+[06:04] And all of these free tools individually will bring us in more and more organic traffic over time as they get cited as they get mentioned elsewhere.
+[06:10] We've got backlink checker, internal link checker.
+[06:12] All of these different tools were created using that goal functionality.
+[06:15] But for each of those we had a clear definition of done.
+[06:17] Now naturally for this example we have a lot of the supporting infrastructure in the background but goal can actually build out that infrastructure for you but we've kept it very simple something along the lines of the AI visibility
+[06:25] checker will work at this link and it works end to end and you're going to prove that prove the definition of done verify i.e.
+[06:31] we've given it verification criteria by showing these different things.
+[06:34] You're either going to prove that or you're going to stop after 40 turns.
+[06:36] So we've given it that exit condition if it doesn't make it within the 40 turns to preserve our tokens there.
+[06:41] And we can turn that into a quick template for you which is /goal one measurable end state prove it by and then give it the verification criteria and show the output give it some constraints or stop it after
+[06:51] x number of turns or n turns.
+[06:53] So if you take this template I'd highly recommend applying this to a lofty goal that you have to achieve something and this will get you most of the way there and this can run completely autonomously.
+[07:02] So if you've not used this yet this is one way to completely level up the number of outputs and like we said we did 40 free tools in one day at the weekend.
+[07:09] So we were able to run multiple of these simultaneously and because we're just supervising the outputs, we were able to actually then achieve that and get them all up in production.
+[07:17] So this will dramatically increase the quality and the number of outputs that you've got if you write this following this template.
+[07:22] By the way, you still need to run this in auto mode to make sure that it bypasses those permissions.
+[07:26] Otherwise, you defeat the point of it running autonomously.
+[07:28] So every one of these 40 goals that we set started with Claude knowing nothing about RankSpot.
+[07:33] So if you're having to reexplain your business at the top of every session, then that is the next thing that we're going to fix.
+[07:40] So upgrade three then is Claude's projects.
+[07:42] And it's not just knowing about projects.
+[07:44] You probably already know they exist.
+[07:45] But I see people getting this project set up wrong quite often.
+[07:49] So what we're going to do is talk about how to actually set this up in the way that Anthropic suggests.
+[07:52] It all comes down to kind of three rules.
+[07:54] And you can see I've got lots of different projects here.
+[07:55] Some of them which I use very regularly like copywriting.
+[07:58] So rule number one is one project per workstream.
+[08:00] So not one giant work project where you do all your different projects.
+[08:04] And the reason for that is that a project bundles a couple of different things together.
+[08:06] So firstly it bundles things like instructions.
+[08:08] So this is my copywriting in my tone of voice.
+[08:11] It then has a bunch of different files in there.
+[08:13] So reference files.
+[08:14] It then has the memory and then any scheduled tasks now associated with that project.
+[08:17] And I've got no scheduled tasks associated with this copywriting project.
+[08:21] But you can see in the files, for example, I've got 31 different files that you can actually reference in here.
+[08:26] So it's your choice how you want to group these different projects.
+[08:28] But for me personally, I've got things like copywriting, then I've got accounting, then I've got personal projects.
+[08:32] And all of those are kept entirely separate with their own body of context, their own instructions, their own reference files.
+[08:36] And that means that if you put your client work and your YouTube scripts in the same project, for example, you might have a little bit of confusion in the responses over what to use when.
+[08:44] So make sure there's distinct segmentation there in your projects.
+[08:47] Rule number two is where you're going to actually write project instructions, keep them brief.
+[08:52] Don't make them exhaustive.
+[08:53] It's the same advice with these newer models.
+[08:55] What we're trying to do is just give it the minimum information with the justification behind it so it can infer that advice and actually apply that across the project.
+[09:02] So you can see in my project instructions for my copywriting, I've got five different rules, some of which are direct copy paste extracts from the anthropic instructions like please remove all managed pros which shortens the response and then
+[09:13] some information or some bullet points that try and get it to stop doing tasks that I haven't asked it to do because that's a general behavior that's built into models like Opus 5.
+[09:21] It starts doing things that you haven't asked it for.
+[09:22] Starts expanding the scope.
+[09:24] So things like when Simon asks a question, answer the question.
+[09:26] Don't rewrite what you've already written.
+[09:28] So the old advice was like one giant master prompt.
+[09:30] every single preference, every rule, hundreds of lines.
+[09:32] But Anthropic now will say the newest models follow short, clear instruction better than that long file rule list.
+[09:37] And if you find that Claude is breaking a rule, it's probably because the file is actually too long, not that the rule is getting lost.
+[09:41] And rule number three then is actually don't write the instructions yourself.
+[09:44] Make Claude interview you.
+[09:45] So it's quite common to actually just use the ask user questions feature from Claude to actually interview you about the custom instructions for this project.
+[09:52] And I've actually got a template to share with you in this demo project here that sums up exactly what information it's trying to gather from you.
+[09:57] So I'll leave this template in the free resources in the description below.
+[10:00] We basically got who am I and what is this project for?
+[10:02] So you describe your role.
+[10:03] The project is for this reason.
+[10:05] The work is intended to give this outcome for this audience.
+[10:08] Then you talk about the voice you write in.
+[10:09] And actually I'd highly recommend you actually separate that into a separate reference file and reference that.
+[10:14] You give any standard operating procedures priorities.
+[10:16] But the idea is to keep this super succinct.
+[10:18] But this is a template that you can actually copy paste for each of those and ask Claude to actually interview you and fill those out on your behalf.
+[10:23] Now, one more quick rule that's actually small but makes a big difference is when you're actually prompting Claude and you give it a long document, say you're giving it a transcript of a YouTube video, Anthropic say that where
+[10:32] you actually paste that in the conversation matters.
+[10:34] Apparently, if you document it at the top and then put your question at the bottom rather than the other way round, which seems more intuitive, Anthropic have tested this and it produces up to 30% better responses when on
+[10:44] long context tasks, you add the context up front and then the question at the bottom.
+[10:48] So, with all this being said, Claude now knows who you are, but what it still doesn't know is how you do a job.
+[10:52] So every recurring task you ask it to do, you're still asking it to do from scratch.
+[10:55] And the rules around skills or skill building have changed in the last 6 months.
+[10:59] So let's jump into upgrade 4, which is skills.
+[11:03] And I'm not going to fully delve into what a skill is.
+[11:05] But it is a folder with an instructions file that teaches Claude how one job gets done.
+[11:10] But what I want to actually show you is how to build one that actually works based on Anthropic's most recent best practices.
+[11:15] Because the way that most of us built them in the last year is now the way that Anthropic tell you not to build them.
+[11:18] Now, the first rule is that a skill should only come from a task that you've done already.
+[11:24] So, don't just go to a marketplace like skills.sh and search things like uh social and try and get some social media content from that if you're not already posting social media content.
+[11:34] Now, I know that seems completely obvious, but most people that I see go wrong with this are trying to install many, many skills from tasks that they're not currently doing.
+[11:42] So, identify tasks that you're actually doing in your existing day-to-day and work out how to reverse engineer those into skills, not the other way around.
+[11:48] Don't try and find a skill to invent a task that you're not currently doing.
+[11:50] So run the workflow without a skill first and then turn that into a skill.
+[11:54] And even more so than that, run the task in Claude firsthand in the chat window before you turn it into a skill.
+[11:59] And then what you have to keep reexplaining to Claude or give additional context, you can turn those into the instructions inside the skill.
+[12:05] Now the second one which has changed since we used to write skills where we were super prescriptive is assume that Claude is already very smart.
+[12:12] So only give it context that it actually needs to run otherwise you're just wasting tokens.
+[12:15] Don't forget the skill context in the skill.md sits inside the session.
+[12:19] So every line you have in there is a recurring cost.
+[12:22] And not only is it recurring cost due to the nature of the models improving, it's actually going to potentially confuse Claude more unless it already assumes that Claude is very smart and it actually adds value where Claude does
+[12:33] actually really need that context or that explanation.
+[12:35] Now rule three, which stands true, is and this has always been the case, examples are going to be rules.
+[12:40] So don't write a list of rules.
+[12:42] Show examples of what you like and what you don't like, but don't be too prescriptive with those examples.
+[12:46] What we're trying to do is keep the whole skill.md file under 200 lines and then refer it to additional context where it's needed.
+[12:51] So, if you're writing a copywriting skill and you want to write copy for LinkedIn in a landing page, then keep those separate LinkedIn copy rules or examples rather and landing page examples in separate reference files which you reference
+[13:03] inside your skilled MD.
+[13:04] And this is what we know and love as progressive disclosure patterns, right?
+[13:07] the ability to progressively gather more information when Claude needs it and therefore not load it into context all the time.
+[13:13] And the fourth tip to build them well is actually to just to go to the skill authoring best practices page and just adopt the common templates for different skills.
+[13:20] So you don't need to start from scratch every single time when you're building these skills.
+[13:23] They have templates that are for different degrees of freedom so to speak.
+[13:26] So if you've got strict requirements such as API responses, they've got a template that can help you author that skill.
+[13:32] or if you want to be a bit more flexible with your guidance where adaptation from Claude itself is going to be useful or an example where actually examples are really going to show Claude how to do this in
+[13:42] a really flexible way then what we're going to do is use this examples pattern here and they've also got a conditional workflow pattern.
+[13:48] So if you've got multiple paths on which Claude can take dependent on the information that it's given back then they've actually got this conditional workflow pattern that you can copy paste directly with a few examples that you can
+[13:58] use in there.
+[13:58] And a final tip on skill building is actually just to use the record a skill feature.
+[14:02] So in the plus menu of the desktop app, all you're going to do is hit record, do the task once, especially if it's complex desktopbased task, and talk through it as you go.
+[14:10] Claude is going to watch all the intricate steps that you take, listen to why you're clicking it, so you actually get to describe it as you go through, and it will summarize that into a well-built skill.
+[14:18] And you'll notice that that's pretty concise, but covers a lot of the edge cases.
+[14:21] It's built in the way that these models and these latest models are designed to run.
+[14:24] So won't be super prescriptive about the exact steps because that's exactly what we don't want to do inside a skill based on the recent model updates.
+[14:33] And then this last one, upgrade five, is probably arguably the most important thing long-term for the quality of your outputs and to be able to work with Claude.
+[14:41] Like I said, long-term across multiple projects, across multiple clients, etc.
+[14:44] And that is all about memory.
+[14:46] So I've talked about this in a fair few videos before, but every memory system is going to answer three questions.
+[14:50] How does that info actually get saved?
+[14:52] So every time you have a conversation with Claude, where is that info getting saved?
+[14:55] How does it get injected or how does the most important context get injected back into your short-term memory or your agent conversation there and then and how does it do that efficiently?
+[15:03] How does it pull the right information?
+[15:04] How does it know what to store in that injection phase?
+[15:06] And then recalling firstly, how do we store stuff longterm, but then how do we recall that about the past?
+[15:11] So how do we pull in information from the past from a previous project decision made six months ago and give that into the context of Claude without spending a bunch of time searching for that data and without spending
+[15:20] a bunch of tokens searching for that data?
+[15:21] Now, Claude, as you know, has a built-in memory.
+[15:24] So, they have auto memory, and that's getting better and better.
+[15:25] It's saving per project memories and co-work.
+[15:28] And for most people, that's kind of the level that they will use, but it doesn't have any of this ability to recall long-term information or search the information by semantics or meaning rather than just by keyword.
+[15:37] So, it means it's it's kind of not up to scratch versus all the open source memory frameworks out there that exist today.
+[15:43] Now, in previous videos, I described how our Aentic operating system, which is available inside our school community.
+[15:48] It's plug-and-play, helps improve the quality of your outputs, but it also comes with an inbuilt memory system that's set up locally on your system.
+[15:54] And that is basically built out of the open- source frameworks that exist out there that are kind of leading the pack.
+[15:59] So, we've got Hermes agent memory, OpenCore memory, and other memory providers like memarch.
+[16:04] And you can look up all of these and actually download them as plugins, too.
+[16:06] We've combined the best of all of those, used things like stop hooks to capture every single turn and decide at that point using a cheap model whether to store it in short-term memory which is injected back into the
+[16:15] conversation or long-term memory and then made it searchable by putting it into a vector database and allowing somebody to actually recall information super easily with a three tier search capability and reranking to get the most comprehensive information back
+[16:29] but also that information is always cited.
+[16:32] It's always honest.
+[16:32] It's always points you to the source of truth.
+[16:34] So these are principles we've taken from Gary Tan's GBrain as well.
+[16:37] So we've combined all of those things up into our own memory system.
+[16:40] And I'd suggest you do exactly the same to turn your setup from something that kind of remembers your previous project to something that you can rely on long term and inject all of those things back into your working
+[16:50] context and working memory.
+[16:51] This is going to save you a ton of time and a ton of pain when you're working across multiple projects long term.
+[16:55] So like I said, you can either grab that as an install plug-and-play.
+[16:58] It grabs all your previous claw conversations and indexes them inside that.
+[17:01] You can get grab that in the community in the description.
+[17:03] or you can just grab an off-the-shelf tool like mem search that you can actually install as a plug-in directly inside your agentic operating system or your claude setup that will do significantly more work than the in-built claude memory
+[17:15] system.
+[17:15] So when you pull that all together, we've basically got better prompting to suit the claude 5 models.
+[17:20] We've got Claude working autonomously on your goals with the template that we showed earlier with a second model verifying when it's done.
+[17:25] We've got skills which are actually built from real tasks that we need and we can gather context by recording those skills.
+[17:31] And we've also got a memory file or a memory storage and recall system that gets better every single time you use it and can recall all your previous context from conversations super super quickly.
+[17:39] And if you stack all those together, you've got a goal that basically is able to work autonomously, calling a skill that's well packaged inside a project that knows all of your broader context like your brand voice prompted with
+[17:51] the structure from upgrade one and a memory file that remembers what went wrong last time so it can feed into that process.
+[17:56] And that's exactly how you upgrade your claude setup to make you more professional from today.
+[18:01] Thanks for watching.
+[18:01] In the next video, I'm going to break down a series of clawed code tips which will upgrade your setup even more.

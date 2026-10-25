@@ -4,7 +4,7 @@ resume: La masterclass complète pour construire ton AIOS : un système d'exploi
 statut: publie
 domaine: contenu
 cree: 2026-07-07
-maj: 2026-10-22
+maj: 2026-10-25
 liens: [claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md, 3-minutes-pour-comprendre-les-projets-dans-claude-ai-26-04.md, 3minutes-pour-comprendre-les-claude-skills-26-04.md, 3-minutes-pour-comprendre-le-mcp-26-04.md, comment-pre-remplir-un-formulaire-sur-airtable-22-04.md, creer-un-pdf-en-1-clic-depuis-airtable-22-05.md, j-automatise-l-envoi-d-emails-directement-depuis-airtable-22-05.md, la-puissance-d-airtable-liens-lookup-et-rollup-expliques-22-06.md, airtable-comment-synchroniser-plusieurs-bases-de-donnees-22-07.md, comment-bien-gerer-les-expressions-mathematiques-avec-22-08.md, automatisation-airtable-creez-des-factures-pdf-en-un-clic-22-10.md, arrondir-a-0-5-pourquoi-c-est-plus-simple-que-vous-le-pensez-22-11.md, bubble-declencher-un-backend-workflow-depuis-make-ex-22-11.md, tuto-convertir-un-chiffre-en-lettres-dans-un-process-d-23-02.md, demo-e-commerce-et-intelligence-artificielle-je-gere-mon-23-02.md, tuto-comment-transferer-la-propriete-d-une-base-airtable-23-04.md, leonardo-ai-realtime-canvas-le-tutoriel-complet-pour-24-01.md, le-systeme-des-8-elements-pour-des-prompts-leonardo-ai-24-01.md, leonardo-ai-utiliser-des-techniques-d-eclairage-dans-ses-24-02.md, leonardo-prompt-insights-1-je-decortique-deux-prompts-afin-24-02.md, leonardo-prompt-insights-n2-analyse-de-prompt-et-generation-24-03.md, print-on-demand-comment-automatiser-sa-generation-d-images-24-03.md, j-ai-migre-ma-base-airtable-vers-xano-automatiquement-24-05.md, chatgpt-la-methode-pour-imiter-ton-ecriture-a-la-perfection-25-01.md, le-secret-pour-lier-vos-donnees-airtable-sans-cliquer-25-02.md, createurs-le-systeme-incontournable-pour-une-veille-youtube-25-02.md, cree-des-images-de-toi-dans-n-importe-quelle-situation-avec-25-08.md, nouveau-pricing-make-la-fonctionnalite-cachee-qui-va-tout-25-09.md, systeme-rh-comment-filtrer-automatiquement-les-cv-25-09.md, automatise-airtable-avec-make-tous-les-declencheurs-25-09.md, transforme-ta-video-youtube-en-5-posts-automatiquement-tuto-25-10.md, comment-creer-ses-credentials-google-pour-n8n-en-5-minutes-25-10.md, youtube-skool-ia-mon-modele-pour-gagner-ma-liberte-26-01.md, debuter-sur-capcut-desktop-l-essentiel-en-une-video-26-01.md, des-vues-aux-revenus-3-systemes-pour-monetiser-correctement-26-01.md, tutoriel-notebook-lm-en-francais-decouvre-le-meilleur-outil-26-01.md, transforme-youtube-en-machine-de-vente-26-01.md, configuration-youtube-complete-pour-debuter-sans-erreur-26-01.md, comment-creer-une-banniere-qui-convertit-tes-visiteurs-en-26-01.md, vendre-plus-cher-sans-changer-de-produit-la-methode-26-01.md, le-secret-pour-generer-des-idees-de-videos-a-l-infini-26-02.md, le-systeme-youtube-ia-qui-cree-du-contenu-a-la-chaine-26-02.md, airtable-make-claude-le-workflow-secret-des-createurs-26-02.md, ce-systeme-publie-tes-contenus-sur-tous-tes-reseaux-100-26-02.md, intelligence-artificielle-5-phases-pour-apprendre-26-03.md, claude-dans-powerpoint-comment-exploiter-l-outil-a-fond-26-03.md, j-ai-integre-claude-dans-excel-et-mon-flux-de-travail-a-26-03.md, le-framework-en-4-parties-pour-des-resultats-ia-enfin-26-03.md, 3-minutes-pour-comprendre-creer-un-skill-claude-26-04.md, 3-minutes-pour-comprendre-claude-design-26-05.md, 3-minutes-pour-comprendre-les-3-leviers-pour-de-meilleurs-26-06.md, 3-minutes-pour-comprendre-les-agents-ia-26-06.md, l-aios-c-est-quoi-explication-en-3-minutes-26-07.md, tu-n-as-plus-besoin-de-prompter-voici-la-methode-qui-26-08.md, j-ai-passe-les-cours-gratuits-de-claude-ce-qu-il-faut-savoir-26-08.md, watermark-claude-ce-que-ca-change-vraiment-pour-toi-26-09.md, 7-techniques-de-prompting-pour-des-reponses-plus-precises-26-09.md, pourquoi-ton-aios-est-malade-et-comment-le-soigner-26-09.md, l-app-claude-a-change-10-nouveautes-a-connaitre-26-10.md]
 ---
 # Comment j'ai automatisé ma vie avec un AIOS
@@ -18,83 +18,83 @@ liens: [claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md, 3-minutes-po
 
 ## Stats
 
-YouTube Analytics, données jusqu'au 2026-10-20. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
+YouTube Analytics, données jusqu'au 2026-10-22. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
 
 | | 7 premiers jours | 30 premiers jours | Depuis la sortie |
 |---|---|---|---|
-| Vues | 2 460 | 2 932 | 7 369 |
-| Vues engagées | 2 460 | 2 932 | 6 158 |
-| Heures regardées | 296,6 | 372,2 | 897,9 |
-| Abonnés gagnés | 121 | 137 | 228 |
-| Revenus estimés | 0,09 $ | 4,14 $ | 34,77 $ |
+| Vues | 2 460 | 2 932 | 7 461 |
+| Vues engagées | 2 460 | 2 932 | 6 223 |
+| Heures regardées | 296,6 | 372,2 | 908,1 |
+| Abonnés gagnés | 121 | 137 | 230 |
+| Revenus estimés | 0,09 $ | 4,14 $ | 35,59 $ |
 | Durée moyenne regardée | | | 8 min 44 s (11,2 %) |
-| J'aime · commentaires | | | 184 · 14 |
+| J'aime · commentaires | | | 186 · 14 |
 
 ## Liens
 
-- Cite : [2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
-- Cite : [2026-04-27-3-minutes-pour-comprendre-les-projets-dans-claude-ai](3-minutes-pour-comprendre-les-projets-dans-claude-ai-26-04.md)
-- Cite : [2026-04-05-3minutes-pour-comprendre-les-claude-skills](3minutes-pour-comprendre-les-claude-skills-26-04.md)
-- Cite : [2026-04-01-3-minutes-pour-comprendre-le-mcp](3-minutes-pour-comprendre-le-mcp-26-04.md)
-- Citée par : [2022-04-29-comment-pre-remplir-un-formulaire-sur-airtable](comment-pre-remplir-un-formulaire-sur-airtable-22-04.md)
-- Citée par : [2022-05-06-creer-un-pdf-en-1-clic-depuis-airtable](creer-un-pdf-en-1-clic-depuis-airtable-22-05.md)
-- Citée par : [2022-05-13-j-automatise-l-envoi-d-emails-directement-depuis-airtable](j-automatise-l-envoi-d-emails-directement-depuis-airtable-22-05.md)
-- Citée par : [2022-06-09-la-puissance-d-airtable-liens-lookup-et-rollup-expliques](la-puissance-d-airtable-liens-lookup-et-rollup-expliques-22-06.md)
-- Citée par : [2022-07-29-airtable-comment-synchroniser-plusieurs-bases-de-donnees](airtable-comment-synchroniser-plusieurs-bases-de-donnees-22-07.md)
-- Citée par : [2022-08-08-comment-bien-gerer-les-expressions-mathematiques-avec](comment-bien-gerer-les-expressions-mathematiques-avec-22-08.md)
-- Citée par : [2022-10-14-automatisation-airtable-creez-des-factures-pdf-en-un-clic](automatisation-airtable-creez-des-factures-pdf-en-un-clic-22-10.md)
-- Citée par : [2022-11-11-arrondir-a-0-5-pourquoi-c-est-plus-simple-que-vous-le-pensez](arrondir-a-0-5-pourquoi-c-est-plus-simple-que-vous-le-pensez-22-11.md)
-- Citée par : [2022-11-22-bubble-declencher-un-backend-workflow-depuis-make-ex](bubble-declencher-un-backend-workflow-depuis-make-ex-22-11.md)
-- Citée par : [2023-02-03-tuto-convertir-un-chiffre-en-lettres-dans-un-process-d](tuto-convertir-un-chiffre-en-lettres-dans-un-process-d-23-02.md)
-- Citée par : [2023-02-27-demo-e-commerce-et-intelligence-artificielle-je-gere-mon](demo-e-commerce-et-intelligence-artificielle-je-gere-mon-23-02.md)
-- Citée par : [2023-04-17-tuto-comment-transferer-la-propriete-d-une-base-airtable](tuto-comment-transferer-la-propriete-d-une-base-airtable-23-04.md)
-- Citée par : [2024-01-02-leonardo-ai-realtime-canvas-le-tutoriel-complet-pour](leonardo-ai-realtime-canvas-le-tutoriel-complet-pour-24-01.md)
-- Citée par : [2024-01-20-le-systeme-des-8-elements-pour-des-prompts-leonardo-ai](le-systeme-des-8-elements-pour-des-prompts-leonardo-ai-24-01.md)
-- Citée par : [2024-02-08-leonardo-ai-utiliser-des-techniques-d-eclairage-dans-ses](leonardo-ai-utiliser-des-techniques-d-eclairage-dans-ses-24-02.md)
-- Citée par : [2024-02-14-leonardo-prompt-insights-1-je-decortique-deux-prompts-afin](leonardo-prompt-insights-1-je-decortique-deux-prompts-afin-24-02.md)
-- Citée par : [2024-03-05-leonardo-prompt-insights-n2-analyse-de-prompt-et-generation](leonardo-prompt-insights-n2-analyse-de-prompt-et-generation-24-03.md)
-- Citée par : [2024-03-13-print-on-demand-comment-automatiser-sa-generation-d-images](print-on-demand-comment-automatiser-sa-generation-d-images-24-03.md)
-- Citée par : [2024-05-03-j-ai-migre-ma-base-airtable-vers-xano-automatiquement](j-ai-migre-ma-base-airtable-vers-xano-automatiquement-24-05.md)
-- Citée par : [2025-01-23-chatgpt-la-methode-pour-imiter-ton-ecriture-a-la-perfection](chatgpt-la-methode-pour-imiter-ton-ecriture-a-la-perfection-25-01.md)
-- Citée par : [2025-02-05-le-secret-pour-lier-vos-donnees-airtable-sans-cliquer](le-secret-pour-lier-vos-donnees-airtable-sans-cliquer-25-02.md)
-- Citée par : [2025-02-28-createurs-le-systeme-incontournable-pour-une-veille-youtube](createurs-le-systeme-incontournable-pour-une-veille-youtube-25-02.md)
-- Citée par : [2025-08-22-cree-des-images-de-toi-dans-n-importe-quelle-situation-avec](cree-des-images-de-toi-dans-n-importe-quelle-situation-avec-25-08.md)
-- Citée par : [2025-09-01-nouveau-pricing-make-la-fonctionnalite-cachee-qui-va-tout](nouveau-pricing-make-la-fonctionnalite-cachee-qui-va-tout-25-09.md)
-- Citée par : [2025-09-09-systeme-rh-comment-filtrer-automatiquement-les-cv](systeme-rh-comment-filtrer-automatiquement-les-cv-25-09.md)
-- Citée par : [2025-09-22-automatise-airtable-avec-make-tous-les-declencheurs](automatise-airtable-avec-make-tous-les-declencheurs-25-09.md)
-- Citée par : [2025-10-08-transforme-ta-video-youtube-en-5-posts-automatiquement-tuto](transforme-ta-video-youtube-en-5-posts-automatiquement-tuto-25-10.md)
-- Citée par : [2025-10-17-comment-creer-ses-credentials-google-pour-n8n-en-5-minutes](comment-creer-ses-credentials-google-pour-n8n-en-5-minutes-25-10.md)
-- Citée par : [2026-01-06-youtube-skool-ia-mon-modele-pour-gagner-ma-liberte](youtube-skool-ia-mon-modele-pour-gagner-ma-liberte-26-01.md)
-- Citée par : [2026-01-08-debuter-sur-capcut-desktop-l-essentiel-en-une-video](debuter-sur-capcut-desktop-l-essentiel-en-une-video-26-01.md)
-- Citée par : [2026-01-13-des-vues-aux-revenus-3-systemes-pour-monetiser-correctement](des-vues-aux-revenus-3-systemes-pour-monetiser-correctement-26-01.md)
-- Citée par : [2026-01-15-tutoriel-notebook-lm-en-francais-decouvre-le-meilleur-outil](tutoriel-notebook-lm-en-francais-decouvre-le-meilleur-outil-26-01.md)
-- Citée par : [2026-01-19-transforme-youtube-en-machine-de-vente](transforme-youtube-en-machine-de-vente-26-01.md)
-- Citée par : [2026-01-22-configuration-youtube-complete-pour-debuter-sans-erreur](configuration-youtube-complete-pour-debuter-sans-erreur-26-01.md)
-- Citée par : [2026-01-27-comment-creer-une-banniere-qui-convertit-tes-visiteurs-en](comment-creer-une-banniere-qui-convertit-tes-visiteurs-en-26-01.md)
-- Citée par : [2026-01-30-vendre-plus-cher-sans-changer-de-produit-la-methode](vendre-plus-cher-sans-changer-de-produit-la-methode-26-01.md)
-- Citée par : [2026-02-03-le-secret-pour-generer-des-idees-de-videos-a-l-infini](le-secret-pour-generer-des-idees-de-videos-a-l-infini-26-02.md)
-- Citée par : [2026-02-07-le-systeme-youtube-ia-qui-cree-du-contenu-a-la-chaine](le-systeme-youtube-ia-qui-cree-du-contenu-a-la-chaine-26-02.md)
-- Citée par : [2026-02-17-airtable-make-claude-le-workflow-secret-des-createurs](airtable-make-claude-le-workflow-secret-des-createurs-26-02.md)
-- Citée par : [2026-02-20-ce-systeme-publie-tes-contenus-sur-tous-tes-reseaux-100](ce-systeme-publie-tes-contenus-sur-tous-tes-reseaux-100-26-02.md)
-- Citée par : [2026-03-01-intelligence-artificielle-5-phases-pour-apprendre](intelligence-artificielle-5-phases-pour-apprendre-26-03.md)
-- Citée par : [2026-03-10-claude-dans-powerpoint-comment-exploiter-l-outil-a-fond](claude-dans-powerpoint-comment-exploiter-l-outil-a-fond-26-03.md)
-- Citée par : [2026-03-17-j-ai-integre-claude-dans-excel-et-mon-flux-de-travail-a](j-ai-integre-claude-dans-excel-et-mon-flux-de-travail-a-26-03.md)
-- Citée par : [2026-03-24-le-framework-en-4-parties-pour-des-resultats-ia-enfin](le-framework-en-4-parties-pour-des-resultats-ia-enfin-26-03.md)
-- Citée par : [2026-04-01-3-minutes-pour-comprendre-le-mcp](3-minutes-pour-comprendre-le-mcp-26-04.md)
-- Citée par : [2026-04-05-3minutes-pour-comprendre-les-claude-skills](3minutes-pour-comprendre-les-claude-skills-26-04.md)
-- Citée par : [2026-04-14-3-minutes-pour-comprendre-creer-un-skill-claude](3-minutes-pour-comprendre-creer-un-skill-claude-26-04.md)
-- Citée par : [2026-04-27-3-minutes-pour-comprendre-les-projets-dans-claude-ai](3-minutes-pour-comprendre-les-projets-dans-claude-ai-26-04.md)
-- Citée par : [2026-05-08-3-minutes-pour-comprendre-claude-design](3-minutes-pour-comprendre-claude-design-26-05.md)
-- Citée par : [2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
-- Citée par : [2026-06-07-3-minutes-pour-comprendre-les-3-leviers-pour-de-meilleurs](3-minutes-pour-comprendre-les-3-leviers-pour-de-meilleurs-26-06.md)
-- Citée par : [2026-06-11-3-minutes-pour-comprendre-les-agents-ia](3-minutes-pour-comprendre-les-agents-ia-26-06.md)
-- Citée par : [2026-07-18-l-aios-c-est-quoi-explication-en-3-minutes](l-aios-c-est-quoi-explication-en-3-minutes-26-07.md)
-- Citée par : [2026-08-11-tu-n-as-plus-besoin-de-prompter-voici-la-methode-qui](tu-n-as-plus-besoin-de-prompter-voici-la-methode-qui-26-08.md)
-- Citée par : [2026-08-25-j-ai-passe-les-cours-gratuits-de-claude-ce-qu-il-faut-savoir](j-ai-passe-les-cours-gratuits-de-claude-ce-qu-il-faut-savoir-26-08.md)
-- Citée par : [2026-09-03-watermark-claude-ce-que-ca-change-vraiment-pour-toi](watermark-claude-ce-que-ca-change-vraiment-pour-toi-26-09.md)
-- Citée par : [2026-09-15-7-techniques-de-prompting-pour-des-reponses-plus-precises](7-techniques-de-prompting-pour-des-reponses-plus-precises-26-09.md)
-- Citée par : [2026-09-22-pourquoi-ton-aios-est-malade-et-comment-le-soigner](pourquoi-ton-aios-est-malade-et-comment-le-soigner-26-09.md)
-- Citée par : [2026-10-06-l-app-claude-a-change-10-nouveautes-a-connaitre](l-app-claude-a-change-10-nouveautes-a-connaitre-26-10.md)
+- Cite : [claude-tutoriel-complet-pour-passer-de-debutant-a-26-05](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
+- Cite : [3-minutes-pour-comprendre-les-projets-dans-claude-ai-26-04](3-minutes-pour-comprendre-les-projets-dans-claude-ai-26-04.md)
+- Cite : [3minutes-pour-comprendre-les-claude-skills-26-04](3minutes-pour-comprendre-les-claude-skills-26-04.md)
+- Cite : [3-minutes-pour-comprendre-le-mcp-26-04](3-minutes-pour-comprendre-le-mcp-26-04.md)
+- Citée par : [comment-pre-remplir-un-formulaire-sur-airtable-22-04](comment-pre-remplir-un-formulaire-sur-airtable-22-04.md)
+- Citée par : [creer-un-pdf-en-1-clic-depuis-airtable-22-05](creer-un-pdf-en-1-clic-depuis-airtable-22-05.md)
+- Citée par : [j-automatise-l-envoi-d-emails-directement-depuis-airtable-22-05](j-automatise-l-envoi-d-emails-directement-depuis-airtable-22-05.md)
+- Citée par : [la-puissance-d-airtable-liens-lookup-et-rollup-expliques-22-06](la-puissance-d-airtable-liens-lookup-et-rollup-expliques-22-06.md)
+- Citée par : [airtable-comment-synchroniser-plusieurs-bases-de-donnees-22-07](airtable-comment-synchroniser-plusieurs-bases-de-donnees-22-07.md)
+- Citée par : [comment-bien-gerer-les-expressions-mathematiques-avec-22-08](comment-bien-gerer-les-expressions-mathematiques-avec-22-08.md)
+- Citée par : [automatisation-airtable-creez-des-factures-pdf-en-un-clic-22-10](automatisation-airtable-creez-des-factures-pdf-en-un-clic-22-10.md)
+- Citée par : [arrondir-a-0-5-pourquoi-c-est-plus-simple-que-vous-le-pensez-22-11](arrondir-a-0-5-pourquoi-c-est-plus-simple-que-vous-le-pensez-22-11.md)
+- Citée par : [bubble-declencher-un-backend-workflow-depuis-make-ex-22-11](bubble-declencher-un-backend-workflow-depuis-make-ex-22-11.md)
+- Citée par : [tuto-convertir-un-chiffre-en-lettres-dans-un-process-d-23-02](tuto-convertir-un-chiffre-en-lettres-dans-un-process-d-23-02.md)
+- Citée par : [demo-e-commerce-et-intelligence-artificielle-je-gere-mon-23-02](demo-e-commerce-et-intelligence-artificielle-je-gere-mon-23-02.md)
+- Citée par : [tuto-comment-transferer-la-propriete-d-une-base-airtable-23-04](tuto-comment-transferer-la-propriete-d-une-base-airtable-23-04.md)
+- Citée par : [leonardo-ai-realtime-canvas-le-tutoriel-complet-pour-24-01](leonardo-ai-realtime-canvas-le-tutoriel-complet-pour-24-01.md)
+- Citée par : [le-systeme-des-8-elements-pour-des-prompts-leonardo-ai-24-01](le-systeme-des-8-elements-pour-des-prompts-leonardo-ai-24-01.md)
+- Citée par : [leonardo-ai-utiliser-des-techniques-d-eclairage-dans-ses-24-02](leonardo-ai-utiliser-des-techniques-d-eclairage-dans-ses-24-02.md)
+- Citée par : [leonardo-prompt-insights-1-je-decortique-deux-prompts-afin-24-02](leonardo-prompt-insights-1-je-decortique-deux-prompts-afin-24-02.md)
+- Citée par : [leonardo-prompt-insights-n2-analyse-de-prompt-et-generation-24-03](leonardo-prompt-insights-n2-analyse-de-prompt-et-generation-24-03.md)
+- Citée par : [print-on-demand-comment-automatiser-sa-generation-d-images-24-03](print-on-demand-comment-automatiser-sa-generation-d-images-24-03.md)
+- Citée par : [j-ai-migre-ma-base-airtable-vers-xano-automatiquement-24-05](j-ai-migre-ma-base-airtable-vers-xano-automatiquement-24-05.md)
+- Citée par : [chatgpt-la-methode-pour-imiter-ton-ecriture-a-la-perfection-25-01](chatgpt-la-methode-pour-imiter-ton-ecriture-a-la-perfection-25-01.md)
+- Citée par : [le-secret-pour-lier-vos-donnees-airtable-sans-cliquer-25-02](le-secret-pour-lier-vos-donnees-airtable-sans-cliquer-25-02.md)
+- Citée par : [createurs-le-systeme-incontournable-pour-une-veille-youtube-25-02](createurs-le-systeme-incontournable-pour-une-veille-youtube-25-02.md)
+- Citée par : [cree-des-images-de-toi-dans-n-importe-quelle-situation-avec-25-08](cree-des-images-de-toi-dans-n-importe-quelle-situation-avec-25-08.md)
+- Citée par : [nouveau-pricing-make-la-fonctionnalite-cachee-qui-va-tout-25-09](nouveau-pricing-make-la-fonctionnalite-cachee-qui-va-tout-25-09.md)
+- Citée par : [systeme-rh-comment-filtrer-automatiquement-les-cv-25-09](systeme-rh-comment-filtrer-automatiquement-les-cv-25-09.md)
+- Citée par : [automatise-airtable-avec-make-tous-les-declencheurs-25-09](automatise-airtable-avec-make-tous-les-declencheurs-25-09.md)
+- Citée par : [transforme-ta-video-youtube-en-5-posts-automatiquement-tuto-25-10](transforme-ta-video-youtube-en-5-posts-automatiquement-tuto-25-10.md)
+- Citée par : [comment-creer-ses-credentials-google-pour-n8n-en-5-minutes-25-10](comment-creer-ses-credentials-google-pour-n8n-en-5-minutes-25-10.md)
+- Citée par : [youtube-skool-ia-mon-modele-pour-gagner-ma-liberte-26-01](youtube-skool-ia-mon-modele-pour-gagner-ma-liberte-26-01.md)
+- Citée par : [debuter-sur-capcut-desktop-l-essentiel-en-une-video-26-01](debuter-sur-capcut-desktop-l-essentiel-en-une-video-26-01.md)
+- Citée par : [des-vues-aux-revenus-3-systemes-pour-monetiser-correctement-26-01](des-vues-aux-revenus-3-systemes-pour-monetiser-correctement-26-01.md)
+- Citée par : [tutoriel-notebook-lm-en-francais-decouvre-le-meilleur-outil-26-01](tutoriel-notebook-lm-en-francais-decouvre-le-meilleur-outil-26-01.md)
+- Citée par : [transforme-youtube-en-machine-de-vente-26-01](transforme-youtube-en-machine-de-vente-26-01.md)
+- Citée par : [configuration-youtube-complete-pour-debuter-sans-erreur-26-01](configuration-youtube-complete-pour-debuter-sans-erreur-26-01.md)
+- Citée par : [comment-creer-une-banniere-qui-convertit-tes-visiteurs-en-26-01](comment-creer-une-banniere-qui-convertit-tes-visiteurs-en-26-01.md)
+- Citée par : [vendre-plus-cher-sans-changer-de-produit-la-methode-26-01](vendre-plus-cher-sans-changer-de-produit-la-methode-26-01.md)
+- Citée par : [le-secret-pour-generer-des-idees-de-videos-a-l-infini-26-02](le-secret-pour-generer-des-idees-de-videos-a-l-infini-26-02.md)
+- Citée par : [le-systeme-youtube-ia-qui-cree-du-contenu-a-la-chaine-26-02](le-systeme-youtube-ia-qui-cree-du-contenu-a-la-chaine-26-02.md)
+- Citée par : [airtable-make-claude-le-workflow-secret-des-createurs-26-02](airtable-make-claude-le-workflow-secret-des-createurs-26-02.md)
+- Citée par : [ce-systeme-publie-tes-contenus-sur-tous-tes-reseaux-100-26-02](ce-systeme-publie-tes-contenus-sur-tous-tes-reseaux-100-26-02.md)
+- Citée par : [intelligence-artificielle-5-phases-pour-apprendre-26-03](intelligence-artificielle-5-phases-pour-apprendre-26-03.md)
+- Citée par : [claude-dans-powerpoint-comment-exploiter-l-outil-a-fond-26-03](claude-dans-powerpoint-comment-exploiter-l-outil-a-fond-26-03.md)
+- Citée par : [j-ai-integre-claude-dans-excel-et-mon-flux-de-travail-a-26-03](j-ai-integre-claude-dans-excel-et-mon-flux-de-travail-a-26-03.md)
+- Citée par : [le-framework-en-4-parties-pour-des-resultats-ia-enfin-26-03](le-framework-en-4-parties-pour-des-resultats-ia-enfin-26-03.md)
+- Citée par : [3-minutes-pour-comprendre-le-mcp-26-04](3-minutes-pour-comprendre-le-mcp-26-04.md)
+- Citée par : [3minutes-pour-comprendre-les-claude-skills-26-04](3minutes-pour-comprendre-les-claude-skills-26-04.md)
+- Citée par : [3-minutes-pour-comprendre-creer-un-skill-claude-26-04](3-minutes-pour-comprendre-creer-un-skill-claude-26-04.md)
+- Citée par : [3-minutes-pour-comprendre-les-projets-dans-claude-ai-26-04](3-minutes-pour-comprendre-les-projets-dans-claude-ai-26-04.md)
+- Citée par : [3-minutes-pour-comprendre-claude-design-26-05](3-minutes-pour-comprendre-claude-design-26-05.md)
+- Citée par : [claude-tutoriel-complet-pour-passer-de-debutant-a-26-05](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
+- Citée par : [3-minutes-pour-comprendre-les-3-leviers-pour-de-meilleurs-26-06](3-minutes-pour-comprendre-les-3-leviers-pour-de-meilleurs-26-06.md)
+- Citée par : [3-minutes-pour-comprendre-les-agents-ia-26-06](3-minutes-pour-comprendre-les-agents-ia-26-06.md)
+- Citée par : [l-aios-c-est-quoi-explication-en-3-minutes-26-07](l-aios-c-est-quoi-explication-en-3-minutes-26-07.md)
+- Citée par : [tu-n-as-plus-besoin-de-prompter-voici-la-methode-qui-26-08](tu-n-as-plus-besoin-de-prompter-voici-la-methode-qui-26-08.md)
+- Citée par : [j-ai-passe-les-cours-gratuits-de-claude-ce-qu-il-faut-savoir-26-08](j-ai-passe-les-cours-gratuits-de-claude-ce-qu-il-faut-savoir-26-08.md)
+- Citée par : [watermark-claude-ce-que-ca-change-vraiment-pour-toi-26-09](watermark-claude-ce-que-ca-change-vraiment-pour-toi-26-09.md)
+- Citée par : [7-techniques-de-prompting-pour-des-reponses-plus-precises-26-09](7-techniques-de-prompting-pour-des-reponses-plus-precises-26-09.md)
+- Citée par : [pourquoi-ton-aios-est-malade-et-comment-le-soigner-26-09](pourquoi-ton-aios-est-malade-et-comment-le-soigner-26-09.md)
+- Citée par : [l-app-claude-a-change-10-nouveautes-a-connaitre-26-10](l-app-claude-a-change-10-nouveautes-a-connaitre-26-10.md)
 - Description : https://clubsmart.s.gy/masterclass-aios
 - Description : https://www.skool.com/club-smart/about
 - Description : https://code.visualstudio.com/

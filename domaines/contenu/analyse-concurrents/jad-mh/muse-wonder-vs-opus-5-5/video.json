@@ -1,0 +1,158 @@
+{
+ "id": "a4AqKRAp_DE",
+ "url": "https://www.youtube.com/watch?v=a4AqKRAp_DE",
+ "chaine": "jad-mh",
+ "titre": "Muse Wonder vs Opus 5.5",
+ "titre_ytdlp": "Muse Wonder vs Opus 5.5",
+ "publie": "2026-10-12T21:05:19Z",
+ "duree_s": 364,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "hVTVLmnHU5XBCC_YT-ciT4M8lEc",
+  "id": "a4AqKRAp_DE",
+  "snippet": {
+   "publishedAt": "2026-10-12T21:05:19Z",
+   "channelId": "UCkbjWQ7kLFNRY_RiJbqVWRg",
+   "title": "Muse Wonder vs Opus 5.5",
+   "description": "Higgsfield Promo: https://higgsfield.ai/s/katana-inside-claude-yt-jadm-h-xUOkwW\n\nMeta just released Muse Wonder, their first real frontier model. I read Meta's own benchmark chart and checked it against independent scores, and the model you can actually buy is not the one that looks best on the chart. Here's what it is, what it costs, and whether you should switch from Claude 👇\n\n🧠 What Muse Wonder is\n• 2 models: Muse Wonder (Meta Model API + Muse Code) and Muse Wonder Full (Muse Code subscribers only, not on the API)\n• Meta's first frontier model since Alexandr Wang took over Meta's AI\n• Active memory: remembers what matters to you over days, weeks and months\n• Active focus: trained not to give up when it hits a blocker\n• Text, image, video and audio in, text out, 1M token context\n\n🎬 Meta's demos (Meta says they were shortened)\n• Plans a Saturday run from your calendar and health app, then maps the route\n• Designs a birthday T-shirt for Coco the cat from Instagram photos, then orders it\n• Finds the error on an urgent care bill and emails the insurance for you\n• Builds a wedding seating chart from a guest list full of notes\n\n💵 The price\n$4 per million input tokens, $20 output. Exactly the same as Claude Opus 5.5. And it's closed: no open weights like Llama.\n\n📊 Meta's own chart (14 benchmarks)\n✅ Wins: legal work (10.0 vs Opus 4.2), memory (85.6 vs 81.5), long coding (DeepSWE 78.8 vs 74.2)\n❌ Opus 5.5 still has the top score on 6 of the 14 rows, the same as Wonder Full\n❌ The Muse Wonder you can buy beats Opus on only 5 of 14\n⚠️ The memory test and the \"Personal Superintelligence Index\" are Meta's own internal benchmarks, and Meta says its competitor runs are \"best-effort\"\n\n🔎 Independent scores (Artificial Analysis Intelligence Index)\nClaude Opus 5.5: 58 (#1)\nMuse Wonder Full: 56\nClaude Fable 5.1 and GPT-6 Astra: 53\nMuse Wonder: 52 (#9 of 219)\nFair is fair: Muse Wonder costs $4.52 per task vs $5.98 for Opus, because it uses half the tokens. Opus is faster.\n\n💭 My take\nMeta is back, and memory is the right bet. But for coding, editing my videos and building skills, I'm staying on Claude: same price, higher independent score.\n\n⏱️ Chapters\n0:00 Meta's first frontier model\n0:29 Muse Wonder vs Wonder Full\n1:02 Active memory and active focus\n1:18 Meta's demos\n2:21 The price\n2:40 Meta's benchmark chart\n3:18 Who actually wins each row\n3:50 Meta's fine print\n4:14 Independent scores\n4:38 Cost per task\n4:56 The weakness Meta admits\n5:15 My take\n\n🔗 Sources\nMeta's announcement: https://research.meta.ai/blog/muse-wonder\nModel card (all the benchmarks): https://research.meta.ai/static/muse-wonder-model-card\nArtificial Analysis: https://artificialanalysis.ai/models/muse-wonder\nMeta's launch video: https://x.com/AIatMeta/status/2109691148943999167\n\n📺 Watch next: https://youtu.be/j8YDz-VC-AM\n\n🎁 I drop free skills every week in my Skool: https://www.skool.com/nextphase-5790\n\n💬 Would you trust Meta to remember your whole life? Tell me in the comments.\n\n🔔 Subscribe: I'm putting Muse Wonder through the same room quote test I gave Opus and Sol. See you in the next one.\n\n#meta #musewonder #claude muse wonder, meta muse wonder, muse wonder full, meta ai, meta new model, meta frontier model, muse wonder vs claude, muse wonder vs opus 5.5, claude opus 5.5, gpt-6 astra, claude fable 5.1, muse code, meta model api, active memory, ai benchmarks, artificial analysis, ai news, new ai model, alexandr wang, meta superintelligence",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/a4AqKRAp_DE/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/a4AqKRAp_DE/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/a4AqKRAp_DE/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/a4AqKRAp_DE/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/a4AqKRAp_DE/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    },
+    "qhd": {
+     "url": "https://i.ytimg.com/vi/a4AqKRAp_DE/qhddefault.jpg",
+     "width": 2560,
+     "height": 1440
+    }
+   },
+   "channelTitle": "Jad M.H  | AI Automation",
+   "categoryId": "22",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "en",
+   "localized": {
+    "title": "Muse Wonder vs Opus 5.5",
+    "description": "Higgsfield Promo: https://higgsfield.ai/s/katana-inside-claude-yt-jadm-h-xUOkwW\n\nMeta just released Muse Wonder, their first real frontier model. I read Meta's own benchmark chart and checked it against independent scores, and the model you can actually buy is not the one that looks best on the chart. Here's what it is, what it costs, and whether you should switch from Claude 👇\n\n🧠 What Muse Wonder is\n• 2 models: Muse Wonder (Meta Model API + Muse Code) and Muse Wonder Full (Muse Code subscribers only, not on the API)\n• Meta's first frontier model since Alexandr Wang took over Meta's AI\n• Active memory: remembers what matters to you over days, weeks and months\n• Active focus: trained not to give up when it hits a blocker\n• Text, image, video and audio in, text out, 1M token context\n\n🎬 Meta's demos (Meta says they were shortened)\n• Plans a Saturday run from your calendar and health app, then maps the route\n• Designs a birthday T-shirt for Coco the cat from Instagram photos, then orders it\n• Finds the error on an urgent care bill and emails the insurance for you\n• Builds a wedding seating chart from a guest list full of notes\n\n💵 The price\n$4 per million input tokens, $20 output. Exactly the same as Claude Opus 5.5. And it's closed: no open weights like Llama.\n\n📊 Meta's own chart (14 benchmarks)\n✅ Wins: legal work (10.0 vs Opus 4.2), memory (85.6 vs 81.5), long coding (DeepSWE 78.8 vs 74.2)\n❌ Opus 5.5 still has the top score on 6 of the 14 rows, the same as Wonder Full\n❌ The Muse Wonder you can buy beats Opus on only 5 of 14\n⚠️ The memory test and the \"Personal Superintelligence Index\" are Meta's own internal benchmarks, and Meta says its competitor runs are \"best-effort\"\n\n🔎 Independent scores (Artificial Analysis Intelligence Index)\nClaude Opus 5.5: 58 (#1)\nMuse Wonder Full: 56\nClaude Fable 5.1 and GPT-6 Astra: 53\nMuse Wonder: 52 (#9 of 219)\nFair is fair: Muse Wonder costs $4.52 per task vs $5.98 for Opus, because it uses half the tokens. Opus is faster.\n\n💭 My take\nMeta is back, and memory is the right bet. But for coding, editing my videos and building skills, I'm staying on Claude: same price, higher independent score.\n\n⏱️ Chapters\n0:00 Meta's first frontier model\n0:29 Muse Wonder vs Wonder Full\n1:02 Active memory and active focus\n1:18 Meta's demos\n2:21 The price\n2:40 Meta's benchmark chart\n3:18 Who actually wins each row\n3:50 Meta's fine print\n4:14 Independent scores\n4:38 Cost per task\n4:56 The weakness Meta admits\n5:15 My take\n\n🔗 Sources\nMeta's announcement: https://research.meta.ai/blog/muse-wonder\nModel card (all the benchmarks): https://research.meta.ai/static/muse-wonder-model-card\nArtificial Analysis: https://artificialanalysis.ai/models/muse-wonder\nMeta's launch video: https://x.com/AIatMeta/status/2109691148943999167\n\n📺 Watch next: https://youtu.be/j8YDz-VC-AM\n\n🎁 I drop free skills every week in my Skool: https://www.skool.com/nextphase-5790\n\n💬 Would you trust Meta to remember your whole life? Tell me in the comments.\n\n🔔 Subscribe: I'm putting Muse Wonder through the same room quote test I gave Opus and Sol. See you in the next one.\n\n#meta #musewonder #claude muse wonder, meta muse wonder, muse wonder full, meta ai, meta new model, meta frontier model, muse wonder vs claude, muse wonder vs opus 5.5, claude opus 5.5, gpt-6 astra, claude fable 5.1, muse code, meta model api, active memory, ai benchmarks, artificial analysis, ai news, new ai model, alexandr wang, meta superintelligence"
+   },
+   "defaultAudioLanguage": "en"
+  },
+  "contentDetails": {
+   "duration": "PT6M4S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": false,
+   "contentRating": {},
+   "projection": "rectangular"
+  },
+  "statistics": {
+   "viewCount": "8803",
+   "likeCount": "28",
+   "favoriteCount": "0",
+   "commentCount": "8"
+  }
+ },
+ "ytdlp": {
+  "id": "a4AqKRAp_DE",
+  "title": "Muse Wonder vs Opus 5.5",
+  "description": "Higgsfield Promo: https://higgsfield.ai/s/katana-inside-claude-yt-jadm-h-xUOkwW\n\nMeta just released Muse Wonder, their first real frontier model. I read Meta's own benchmark chart and checked it against independent scores, and the model you can actually buy is not the one that looks best on the chart. Here's what it is, what it costs, and whether you should switch from Claude 👇\n\n🧠 What Muse Wonder is\n• 2 models: Muse Wonder (Meta Model API + Muse Code) and Muse Wonder Full (Muse Code subscribers only, not on the API)\n• Meta's first frontier model since Alexandr Wang took over Meta's AI\n• Active memory: remembers what matters to you over days, weeks and months\n• Active focus: trained not to give up when it hits a blocker\n• Text, image, video and audio in, text out, 1M token context\n\n🎬 Meta's demos (Meta says they were shortened)\n• Plans a Saturday run from your calendar and health app, then maps the route\n• Designs a birthday T-shirt for Coco the cat from Instagram photos, then orders it\n• Finds the error on an urgent care bill and emails the insurance for you\n• Builds a wedding seating chart from a guest list full of notes\n\n💵 The price\n$4 per million input tokens, $20 output. Exactly the same as Claude Opus 5.5. And it's closed: no open weights like Llama.\n\n📊 Meta's own chart (14 benchmarks)\n✅ Wins: legal work (10.0 vs Opus 4.2), memory (85.6 vs 81.5), long coding (DeepSWE 78.8 vs 74.2)\n❌ Opus 5.5 still has the top score on 6 of the 14 rows, the same as Wonder Full\n❌ The Muse Wonder you can buy beats Opus on only 5 of 14\n⚠️ The memory test and the \"Personal Superintelligence Index\" are Meta's own internal benchmarks, and Meta says its competitor runs are \"best-effort\"\n\n🔎 Independent scores (Artificial Analysis Intelligence Index)\nClaude Opus 5.5: 58 (#1)\nMuse Wonder Full: 56\nClaude Fable 5.1 and GPT-6 Astra: 53\nMuse Wonder: 52 (#9 of 219)\nFair is fair: Muse Wonder costs $4.52 per task vs $5.98 for Opus, because it uses half the tokens. Opus is faster.\n\n💭 My take\nMeta is back, and memory is the right bet. But for coding, editing my videos and building skills, I'm staying on Claude: same price, higher independent score.\n\n⏱️ Chapters\n0:00 Meta's first frontier model\n0:29 Muse Wonder vs Wonder Full\n1:02 Active memory and active focus\n1:18 Meta's demos\n2:21 The price\n2:40 Meta's benchmark chart\n3:18 Who actually wins each row\n3:50 Meta's fine print\n4:14 Independent scores\n4:38 Cost per task\n4:56 The weakness Meta admits\n5:15 My take\n\n🔗 Sources\nMeta's announcement: https://research.meta.ai/blog/muse-wonder\nModel card (all the benchmarks): https://research.meta.ai/static/muse-wonder-model-card\nArtificial Analysis: https://artificialanalysis.ai/models/muse-wonder\nMeta's launch video: https://x.com/AIatMeta/status/2109691148943999167\n\n📺 Watch next: https://youtu.be/j8YDz-VC-AM\n\n🎁 I drop free skills every week in my Skool: https://www.skool.com/nextphase-5790\n\n💬 Would you trust Meta to remember your whole life? Tell me in the comments.\n\n🔔 Subscribe: I'm putting Muse Wonder through the same room quote test I gave Opus and Sol. See you in the next one.\n\n#meta #musewonder #claude muse wonder, meta muse wonder, muse wonder full, meta ai, meta new model, meta frontier model, muse wonder vs claude, muse wonder vs opus 5.5, claude opus 5.5, gpt-6 astra, claude fable 5.1, muse code, meta model api, active memory, ai benchmarks, artificial analysis, ai news, new ai model, alexandr wang, meta superintelligence",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "Meta's first frontier model",
+    "end_time": 29
+   },
+   {
+    "start_time": 29,
+    "title": "Muse Wonder vs Wonder Full",
+    "end_time": 62
+   },
+   {
+    "start_time": 62,
+    "title": "Active memory and active focus",
+    "end_time": 78
+   },
+   {
+    "start_time": 78,
+    "title": "Meta's demos",
+    "end_time": 141
+   },
+   {
+    "start_time": 141,
+    "title": "The price",
+    "end_time": 160
+   },
+   {
+    "start_time": 160,
+    "title": "Meta's benchmark chart",
+    "end_time": 198
+   },
+   {
+    "start_time": 198,
+    "title": "Who actually wins each row",
+    "end_time": 230
+   },
+   {
+    "start_time": 230,
+    "title": "Meta's fine print",
+    "end_time": 254
+   },
+   {
+    "start_time": 254,
+    "title": "Independent scores",
+    "end_time": 278
+   },
+   {
+    "start_time": 278,
+    "title": "Cost per task",
+    "end_time": 296
+   },
+   {
+    "start_time": 296,
+    "title": "The weakness Meta admits",
+    "end_time": 315
+   },
+   {
+    "start_time": 315,
+    "title": "My take",
+    "end_time": 363
+   }
+  ],
+  "tags": [],
+  "categories": [
+   "People & Blogs"
+  ],
+  "heatmap": null,
+  "upload_date": "20261012",
+  "duration": 363,
+  "channel": "Jad M.H  | AI Automation",
+  "channel_id": "UCkbjWQ7kLFNRY_RiJbqVWRg",
+  "channel_follower_count": 8580,
+  "thumbnail": "https://i.ytimg.com/vi/a4AqKRAp_DE/maxresdefault.jpg",
+  "view_count": 8803,
+  "like_count": 28,
+  "comment_count": 4
+ }
+}

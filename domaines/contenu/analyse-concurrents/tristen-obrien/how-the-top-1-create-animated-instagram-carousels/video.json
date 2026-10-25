@@ -1,0 +1,223 @@
+{
+ "id": "zLkWg1evkpo",
+ "url": "https://www.youtube.com/watch?v=zLkWg1evkpo",
+ "chaine": "tristen-obrien",
+ "titre": "How the Top 1% Create Animated Instagram Carousels With AI",
+ "titre_ytdlp": "How the Top 1% Create Animated Instagram Carousels With AI",
+ "publie": "2026-09-27T13:00:23Z",
+ "duree_s": 506,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "Fxh_vkufY4LLlUvycolDz1nLavA",
+  "id": "zLkWg1evkpo",
+  "snippet": {
+   "publishedAt": "2026-09-27T13:00:23Z",
+   "channelId": "UCruPFdKtGG8Oz5dvha6WWgA",
+   "title": "How the Top 1% Create Animated Instagram Carousels With AI",
+   "description": "⚡️Try Gamma's New Connectors ➡️ https://gam.link/TRISTEN\n\nAnimated Instagram carousels are getting more engagement than almost any other post right now, and AI can do most of the work for you. In this video I walk through my full workflow for making animated carousels with Gamma: using Gamma's AI research to write the cards, picking a template, editing every slide with the Gamma agent, exporting the cards as PNGs, animating each one in ChatGPT with the Gamma plugin, and posting the finished animated carousel to Instagram.\n\nThis video is sponsored by Gamma. I asked them to sponsor it because Gamma is what I actually use to build my carousels.\n\nWhat you'll learn:\n- How to make an Instagram carousel with AI in Gamma (Gamma 5 beta and the classic generator)\n- How Gamma's Research mode digs up the content for each card so you don't have to\n- Light vs Standard vs Max effort, and how credits work\n- How to pick a carousel template or upload your own branded template\n- How Gamma asks clarifying questions and shows an outline before it builds anything\n- How to edit text, images, layouts, colors, and card style\n- How to switch AI image models (GPT Image 2, Nano Banana Pro, and more)\n- How to use Edit with Agent to change any card with a simple prompt, and revert anytime\n- How to export Gamma cards as PNG images\n- How to animate every carousel slide with ChatGPT and the Gamma plugin\n- How to post an animated carousel on Instagram\n\nCHAPTERS\n00:00 Why animated carousels get more engagement\n00:23 Making a carousel in Gamma 5\n00:46 Upload your files or turn on Research\n01:08 Light vs Standard vs Max effort\n01:26 Writing the carousel prompt\n01:49 Picking a carousel template\n02:11 Gamma asks you questions first\n02:56 Reviewing the outline before it builds\n03:11 Generating the carousel cards\n03:25 Editing text and images on each card\n03:50 Choosing an AI image model\n04:09 Edit with Agent\n05:01 Adding images with the agent\n05:23 Changing the layout and card style\n05:43 Exporting the cards as PNGs\n06:15 Animating every card in ChatGPT with the Gamma plugin\n07:02 The animated cards\n07:12 Posting the animated carousel on Instagram\n07:47 Automating the whole thing with Make.com\n08:00 Final thoughts\n\nWant me to show you how to fully automate this, posting included, with Make.com? Comment the word MAKE and I'll make that video.\n\n#GammaPartner #Gamma #InstagramCarousel #AnimatedCarousel #AITools #ChatGPT #ContentCreation #InstagramMarketing #AIForCreators",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/zLkWg1evkpo/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/zLkWg1evkpo/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/zLkWg1evkpo/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/zLkWg1evkpo/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/zLkWg1evkpo/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    },
+    "uhd": {
+     "url": "https://i.ytimg.com/vi/zLkWg1evkpo/uhddefault.jpg",
+     "width": 3840,
+     "height": 2160
+    }
+   },
+   "channelTitle": "Tristen O'Brien",
+   "tags": [
+    "Astra",
+    "ChatGPT Astra",
+    "Insagram",
+    "Instagram carousel",
+    "Instagram carousel AI",
+    "Instagram carousel ChatGPT",
+    "ai",
+    "ai design",
+    "chatgpt",
+    "gamma",
+    "gamma ai"
+   ],
+   "categoryId": "28",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "en",
+   "localized": {
+    "title": "How the Top 1% Create Animated Instagram Carousels With AI",
+    "description": "⚡️Try Gamma's New Connectors ➡️ https://gam.link/TRISTEN\n\nAnimated Instagram carousels are getting more engagement than almost any other post right now, and AI can do most of the work for you. In this video I walk through my full workflow for making animated carousels with Gamma: using Gamma's AI research to write the cards, picking a template, editing every slide with the Gamma agent, exporting the cards as PNGs, animating each one in ChatGPT with the Gamma plugin, and posting the finished animated carousel to Instagram.\n\nThis video is sponsored by Gamma. I asked them to sponsor it because Gamma is what I actually use to build my carousels.\n\nWhat you'll learn:\n- How to make an Instagram carousel with AI in Gamma (Gamma 5 beta and the classic generator)\n- How Gamma's Research mode digs up the content for each card so you don't have to\n- Light vs Standard vs Max effort, and how credits work\n- How to pick a carousel template or upload your own branded template\n- How Gamma asks clarifying questions and shows an outline before it builds anything\n- How to edit text, images, layouts, colors, and card style\n- How to switch AI image models (GPT Image 2, Nano Banana Pro, and more)\n- How to use Edit with Agent to change any card with a simple prompt, and revert anytime\n- How to export Gamma cards as PNG images\n- How to animate every carousel slide with ChatGPT and the Gamma plugin\n- How to post an animated carousel on Instagram\n\nCHAPTERS\n00:00 Why animated carousels get more engagement\n00:23 Making a carousel in Gamma 5\n00:46 Upload your files or turn on Research\n01:08 Light vs Standard vs Max effort\n01:26 Writing the carousel prompt\n01:49 Picking a carousel template\n02:11 Gamma asks you questions first\n02:56 Reviewing the outline before it builds\n03:11 Generating the carousel cards\n03:25 Editing text and images on each card\n03:50 Choosing an AI image model\n04:09 Edit with Agent\n05:01 Adding images with the agent\n05:23 Changing the layout and card style\n05:43 Exporting the cards as PNGs\n06:15 Animating every card in ChatGPT with the Gamma plugin\n07:02 The animated cards\n07:12 Posting the animated carousel on Instagram\n07:47 Automating the whole thing with Make.com\n08:00 Final thoughts\n\nWant me to show you how to fully automate this, posting included, with Make.com? Comment the word MAKE and I'll make that video.\n\n#GammaPartner #Gamma #InstagramCarousel #AnimatedCarousel #AITools #ChatGPT #ContentCreation #InstagramMarketing #AIForCreators"
+   },
+   "defaultAudioLanguage": "en-US"
+  },
+  "contentDetails": {
+   "duration": "PT8M26S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": true,
+   "contentRating": {},
+   "projection": "rectangular"
+  },
+  "statistics": {
+   "viewCount": "6985",
+   "likeCount": "83",
+   "favoriteCount": "0",
+   "commentCount": "9"
+  }
+ },
+ "ytdlp": {
+  "id": "zLkWg1evkpo",
+  "title": "How the Top 1% Create Animated Instagram Carousels With AI",
+  "description": "⚡️Try Gamma's New Connectors ➡️ https://gam.link/TRISTEN\n\nAnimated Instagram carousels are getting more engagement than almost any other post right now, and AI can do most of the work for you. In this video I walk through my full workflow for making animated carousels with Gamma: using Gamma's AI research to write the cards, picking a template, editing every slide with the Gamma agent, exporting the cards as PNGs, animating each one in ChatGPT with the Gamma plugin, and posting the finished animated carousel to Instagram.\n\nThis video is sponsored by Gamma. I asked them to sponsor it because Gamma is what I actually use to build my carousels.\n\nWhat you'll learn:\n- How to make an Instagram carousel with AI in Gamma (Gamma 5 beta and the classic generator)\n- How Gamma's Research mode digs up the content for each card so you don't have to\n- Light vs Standard vs Max effort, and how credits work\n- How to pick a carousel template or upload your own branded template\n- How Gamma asks clarifying questions and shows an outline before it builds anything\n- How to edit text, images, layouts, colors, and card style\n- How to switch AI image models (GPT Image 2, Nano Banana Pro, and more)\n- How to use Edit with Agent to change any card with a simple prompt, and revert anytime\n- How to export Gamma cards as PNG images\n- How to animate every carousel slide with ChatGPT and the Gamma plugin\n- How to post an animated carousel on Instagram\n\nCHAPTERS\n00:00 Why animated carousels get more engagement\n00:23 Making a carousel in Gamma 5\n00:46 Upload your files or turn on Research\n01:08 Light vs Standard vs Max effort\n01:26 Writing the carousel prompt\n01:49 Picking a carousel template\n02:11 Gamma asks you questions first\n02:56 Reviewing the outline before it builds\n03:11 Generating the carousel cards\n03:25 Editing text and images on each card\n03:50 Choosing an AI image model\n04:09 Edit with Agent\n05:01 Adding images with the agent\n05:23 Changing the layout and card style\n05:43 Exporting the cards as PNGs\n06:15 Animating every card in ChatGPT with the Gamma plugin\n07:02 The animated cards\n07:12 Posting the animated carousel on Instagram\n07:47 Automating the whole thing with Make.com\n08:00 Final thoughts\n\nWant me to show you how to fully automate this, posting included, with Make.com? Comment the word MAKE and I'll make that video.\n\n#GammaPartner #Gamma #InstagramCarousel #AnimatedCarousel #AITools #ChatGPT #ContentCreation #InstagramMarketing #AIForCreators",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "Why animated carousels get more engagement",
+    "end_time": 23
+   },
+   {
+    "start_time": 23,
+    "title": "Making a carousel in Gamma 5",
+    "end_time": 46
+   },
+   {
+    "start_time": 46,
+    "title": "Upload your files or turn on Research",
+    "end_time": 68
+   },
+   {
+    "start_time": 68,
+    "title": "Light vs Standard vs Max effort",
+    "end_time": 86
+   },
+   {
+    "start_time": 86,
+    "title": "Writing the carousel prompt",
+    "end_time": 109
+   },
+   {
+    "start_time": 109,
+    "title": "Picking a carousel template",
+    "end_time": 131
+   },
+   {
+    "start_time": 131,
+    "title": "Gamma asks you questions first",
+    "end_time": 176
+   },
+   {
+    "start_time": 176,
+    "title": "Reviewing the outline before it builds",
+    "end_time": 191
+   },
+   {
+    "start_time": 191,
+    "title": "Generating the carousel cards",
+    "end_time": 205
+   },
+   {
+    "start_time": 205,
+    "title": "Editing text and images on each card",
+    "end_time": 230
+   },
+   {
+    "start_time": 230,
+    "title": "Choosing an AI image model",
+    "end_time": 249
+   },
+   {
+    "start_time": 249,
+    "title": "Edit with Agent",
+    "end_time": 301
+   },
+   {
+    "start_time": 301,
+    "title": "Adding images with the agent",
+    "end_time": 323
+   },
+   {
+    "start_time": 323,
+    "title": "Changing the layout and card style",
+    "end_time": 343
+   },
+   {
+    "start_time": 343,
+    "title": "Exporting the cards as PNGs",
+    "end_time": 375
+   },
+   {
+    "start_time": 375,
+    "title": "Animating every card in ChatGPT with the Gamma plugin",
+    "end_time": 422
+   },
+   {
+    "start_time": 422,
+    "title": "The animated cards",
+    "end_time": 432
+   },
+   {
+    "start_time": 432,
+    "title": "Posting the animated carousel on Instagram",
+    "end_time": 467
+   },
+   {
+    "start_time": 467,
+    "title": "Automating the whole thing with Make.com",
+    "end_time": 480
+   },
+   {
+    "start_time": 480,
+    "title": "Final thoughts",
+    "end_time": 506
+   }
+  ],
+  "tags": [
+   "Astra",
+   "ChatGPT Astra",
+   "Insagram",
+   "Instagram carousel",
+   "Instagram carousel AI",
+   "Instagram carousel ChatGPT",
+   "ai",
+   "ai design",
+   "chatgpt",
+   "gamma",
+   "gamma ai"
+  ],
+  "categories": [
+   "Science & Technology"
+  ],
+  "heatmap": null,
+  "upload_date": "20260927",
+  "duration": 506,
+  "channel": "Tristen O'Brien",
+  "channel_id": "UCruPFdKtGG8Oz5dvha6WWgA",
+  "channel_follower_count": 85900,
+  "thumbnail": "https://i.ytimg.com/vi_webp/zLkWg1evkpo/maxresdefault.webp",
+  "view_count": 6985,
+  "like_count": 83,
+  "comment_count": 6
+ }
+}

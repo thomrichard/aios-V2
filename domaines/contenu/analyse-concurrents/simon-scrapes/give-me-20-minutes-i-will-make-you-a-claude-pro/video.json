@@ -1,0 +1,128 @@
+{
+ "id": "-URQjhtvxZo",
+ "url": "https://www.youtube.com/watch?v=-URQjhtvxZo",
+ "chaine": "simon-scrapes",
+ "titre": "Give Me 20 Minutes, I Will Make You a Claude Pro",
+ "titre_ytdlp": "Give Me 20 Minutes, I Will Make You a Claude Pro",
+ "publie": "2026-09-17T16:37:15Z",
+ "duree_s": 1087,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "2FSGTl62iW2GG4bci98aYB3M97U",
+  "id": "-URQjhtvxZo",
+  "snippet": {
+   "publishedAt": "2026-09-17T16:37:15Z",
+   "channelId": "UCdCR4-uYOg5ju-IUuDnfnQA",
+   "title": "Give Me 20 Minutes, I Will Make You a Claude Pro",
+   "description": "🚀 Join the Agentic Academy: https://skool.com/scrapes\n👀 Be the brand AI recommends: https://dub.sh/rankspot-yt\nDon't miss the next build - https://www.youtube.com/@simonscrapes?sub_confirmation=1\nFree resources for this video: https://skool.com/scrapesai\n\nThe official rules for prompting Claude have changed. What worked last year might be hurting your performance today. In this video, I'll walk you through five copy-and-paste upgrades based directly on Anthropic's latest documentation. In just 20 minutes, you'll learn how to build better prompts, set goals, organize projects, create reusable skills, and build a lasting memory for Claude.\n\n00:00 - Intro: The Rules Have Changed\n00:27 - 1: The Perfect Prompt Structure\n03:35 - 2: Autonomous Working\n07:38 - 3: Organize Projects the Right Way\n11:02 - 4: Build Skills How They Were Made to be Built\n14:32 - 5: Claude Memory Upgrades\n17:15 - How to Stack All 5 Upgrades\n#claudecode #claudecodetutorial #claudeskills",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/-URQjhtvxZo/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/-URQjhtvxZo/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/-URQjhtvxZo/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/-URQjhtvxZo/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/-URQjhtvxZo/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    }
+   },
+   "channelTitle": "Simon Scrapes",
+   "categoryId": "28",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "en",
+   "localized": {
+    "title": "Give Me 20 Minutes, I Will Make You a Claude Pro",
+    "description": "🚀 Join the Agentic Academy: https://skool.com/scrapes\n👀 Be the brand AI recommends: https://dub.sh/rankspot-yt\nDon't miss the next build - https://www.youtube.com/@simonscrapes?sub_confirmation=1\nFree resources for this video: https://skool.com/scrapesai\n\nThe official rules for prompting Claude have changed. What worked last year might be hurting your performance today. In this video, I'll walk you through five copy-and-paste upgrades based directly on Anthropic's latest documentation. In just 20 minutes, you'll learn how to build better prompts, set goals, organize projects, create reusable skills, and build a lasting memory for Claude.\n\n00:00 - Intro: The Rules Have Changed\n00:27 - 1: The Perfect Prompt Structure\n03:35 - 2: Autonomous Working\n07:38 - 3: Organize Projects the Right Way\n11:02 - 4: Build Skills How They Were Made to be Built\n14:32 - 5: Claude Memory Upgrades\n17:15 - How to Stack All 5 Upgrades\n#claudecode #claudecodetutorial #claudeskills"
+   },
+   "defaultAudioLanguage": "en"
+  },
+  "contentDetails": {
+   "duration": "PT18M7S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": true,
+   "contentRating": {},
+   "projection": "rectangular"
+  },
+  "statistics": {
+   "viewCount": "15101",
+   "likeCount": "170",
+   "favoriteCount": "0",
+   "commentCount": "9"
+  }
+ },
+ "ytdlp": {
+  "id": "-URQjhtvxZo",
+  "title": "Give Me 20 Minutes, I Will Make You a Claude Pro",
+  "description": "🚀 Join the Agentic Academy: https://skool.com/scrapes\n👀 Be the brand AI recommends: https://dub.sh/rankspot-yt\nDon't miss the next build - https://www.youtube.com/@simonscrapes?sub_confirmation=1\nFree resources for this video: https://skool.com/scrapesai\n\nThe official rules for prompting Claude have changed. What worked last year might be hurting your performance today. In this video, I'll walk you through five copy-and-paste upgrades based directly on Anthropic's latest documentation. In just 20 minutes, you'll learn how to build better prompts, set goals, organize projects, create reusable skills, and build a lasting memory for Claude.\n\n00:00 - Intro: The Rules Have Changed\n00:27 - 1: The Perfect Prompt Structure\n03:35 - 2: Autonomous Working\n07:38 - 3: Organize Projects the Right Way\n11:02 - 4: Build Skills How They Were Made to be Built\n14:32 - 5: Claude Memory Upgrades\n17:15 - How to Stack All 5 Upgrades\n#claudecode #claudecodetutorial #claudeskills",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "Intro: The Rules Have Changed",
+    "end_time": 27
+   },
+   {
+    "start_time": 27,
+    "title": "1: The Perfect Prompt Structure",
+    "end_time": 215
+   },
+   {
+    "start_time": 215,
+    "title": "2: Autonomous Working",
+    "end_time": 458
+   },
+   {
+    "start_time": 458,
+    "title": "3: Organize Projects the Right Way",
+    "end_time": 662
+   },
+   {
+    "start_time": 662,
+    "title": "4: Build Skills How They Were Made to be Built",
+    "end_time": 872
+   },
+   {
+    "start_time": 872,
+    "title": "5: Claude Memory Upgrades",
+    "end_time": 1035
+   },
+   {
+    "start_time": 1035,
+    "title": "How to Stack All 5 Upgrades",
+    "end_time": 1087
+   }
+  ],
+  "tags": [],
+  "categories": [
+   "Science & Technology"
+  ],
+  "heatmap": null,
+  "upload_date": "20260917",
+  "duration": 1087,
+  "channel": "Simon Scrapes",
+  "channel_id": "UCdCR4-uYOg5ju-IUuDnfnQA",
+  "channel_follower_count": 106000,
+  "thumbnail": "https://i.ytimg.com/vi/-URQjhtvxZo/maxresdefault.jpg",
+  "view_count": 15103,
+  "like_count": 170,
+  "comment_count": 5
+ }
+}

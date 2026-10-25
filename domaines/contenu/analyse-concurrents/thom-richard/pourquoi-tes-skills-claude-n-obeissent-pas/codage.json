@@ -1,0 +1,188 @@
+{
+  "video_id": "iUWyBK4qAxM",
+  "chaine": "thom-richard",
+  "titre_video": "Pourquoi tes skills Claude n’obéissent pas toujours (les 7 règles d’Anthropic)",
+  "codeur": "agent thom-richard",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "liste",
+    "format_secondaire": null,
+    "sujet": "Les 7 règles du guide d'Anthropic pour remettre ses skills Claude à niveau face aux nouveaux modèles, et une skill qui les audite",
+    "outils": ["Claude", "Claude Code", "HyperFrames", "pyPDF"],
+    "niveau": "intermediaire",
+    "objectif_probable": "communaute"
+  },
+  "titre": {
+    "attente_au_clic": "Comprendre pourquoi mes skills Claude ne suivent pas mes consignes et les réparer avec les règles officielles d'Anthropic.",
+    "schema": "Pourquoi tes <objet> n'<action> pas toujours (les <N> règles d'<autorité>)",
+    "promesse": "Des skills Claude qui obéissent à nouveau, grâce aux 7 règles d'Anthropic",
+    "audace": "timide",
+    "registre": "mixte",
+    "briques": ["preuve"],
+    "marqueurs": ["chiffre", "question"],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "sérieux, neutre",
+    "regard": "camera",
+    "texte": "CLAUDE / CLAUDE REPARÉ",
+    "texte_mots": 3,
+    "repete_titre": "partiel",
+    "elements": ["visage coupé en deux par une déchirure", "moitié rouge avec code buggé et robot cassé", "main levée en signe de stop", "moitié bleue avec fenêtre de terminal et coche verte", "CLAUDE / CLAUDE REPARÉ en capitales blanches et jaunes"],
+    "nb_elements": 4,
+    "fond": "deux moitiés : rouge avec code glitché à gauche, bleu avec terminal à droite",
+    "couleurs": ["rouge", "bleu", "blanc", "jaune", "vert de la coche"],
+    "curiosity_gap": "transformation",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Est-ce que ça t'est déjà arrivé [...] de lui proposer tes skills et d'être complètement déçu",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Face caméra plein cadre, mur blanc, étagère noire et lampe à ampoule ; aucun texte",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": ["hook-question", "douleur", "hook-dissonance", "boucle-curiosite"],
+    "preuve": {
+      "type": "autorite",
+      "seconde": 24,
+      "description": "Le guide d'Anthropic « Prompting Claude Fable 5 » à l'écran, la phrase sur les skills des anciens modèles surlignée"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 7, "a_l_ecran": true},
+    "boucle_vers_la_fin": {
+      "presente": true,
+      "citation": "à la fin de cette vidéo, je te donne un outil [...] pour faire l'audit",
+      "seconde_resolution": 791,
+      "tenue": "oui"
+    },
+    "seconde_premier_point": 47,
+    "attente_tenue": "oui",
+    "attente_note": "Les symptômes, la cause (le modèle a changé, pas la skill) et la source Anthropic arrivent avant 0:31. L'outil promis « à la fin » arrive à 13:11, avant la 7e règle."
+  },
+  "structure": {
+    "modele": "liste-numerotee",
+    "segments": [
+      {"debut": 0, "fin": 47, "titre": "Ta skill n'obéit pas toujours", "role": "intro", "pull": true, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 47, "fin": 142, "titre": "Règle 1 · La description", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 142, "fin": 278, "titre": "Règle 2 · Libre ou à la lettre", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 278, "fin": 393, "titre": "Règle 3 · L'objectif, pas le mode d'emploi", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 393, "fin": 579, "titre": "Règle 4 · Qu'il la lise en entier", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 579, "fin": 658, "titre": "Tes fichiers aussi : l'exemple de mon AIOS", "role": "demo", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": false, "relance_sortie": false},
+      {"debut": 658, "fin": 791, "titre": "Règles 5 et 6 · La boucle et la liste à cocher", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 791, "fin": 948, "titre": "L'audit de mes skills, en direct", "role": "demo", "pull": true, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 948, "fin": 1078, "titre": "Règle 7 · Ce qu'il faut installer", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 1078, "fin": 1202, "titre": "Le modèle change : la grille à garder", "role": "fin", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 40, "type": "boucle-ouverte", "citation": "à la fin de cette vidéo, je te donne un outil pour toi"},
+      {"seconde": 284, "type": "rappel-promesse", "citation": "tu te souviens, on l'a vu au départ dans l'intro de la vidéo"},
+      {"seconde": 393, "type": "annonce-suite", "citation": "La quatrième raison, et c'est la raison la plus frustrante"},
+      {"seconde": 569, "type": "rappel-promesse", "citation": "ce que j'ai fait dans les ressources dont je te parlais tout à l'heure"},
+      {"seconde": 580, "type": "annonce-suite", "citation": "Le truc, c'est que ça ne concerne pas que les skills."},
+      {"seconde": 661, "type": "question-spectateur", "citation": "Maintenant, est-ce qu'il vérifie son [travail] ?"},
+      {"seconde": 791, "type": "boucle-ouverte", "citation": "il me manque la 7e. On va faire une petite pause"},
+      {"seconde": 1078, "type": "question-spectateur", "citation": "maintenant il reste une question"}
+    ],
+    "histoires": [
+      {"seconde": 558, "acte": "anecdote", "resume": "Il utilise la skill HyperFrames, téléchargée sur GitHub ; il a vérifié, elle n'a pas de sommaire."},
+      {"seconde": 595, "acte": "perso-passe", "resume": "Il montre son AIOS : un fichier de contexte en tableau besoin / référence, gardé sous 100 lignes pour que Claude le lise en entier."},
+      {"seconde": 1117, "acte": "perso-passe", "resume": "Il a installé la skill d'audit dans son AIOS pour qu'elle tourne seule toutes les deux à quatre semaines."}
+    ],
+    "payoffs": [
+      {"seconde": 130, "resume": "Règle 1 : la description écrite à la troisième personne, et le test des premières lignes"},
+      {"seconde": 245, "resume": "Règle 2 : la question « s'il fait autrement, est-ce grave ? » pour doser la liberté"},
+      {"seconde": 373, "resume": "Règle 3 : donner l'objectif, pas le mode d'emploi, avec l'exemple du compte rendu lu en 30 secondes"},
+      {"seconde": 518, "resume": "Règle 4 : un sommaire pour chaque fichier de plus de 100 lignes, un seul niveau de dossiers"},
+      {"seconde": 702, "resume": "Règles 5 et 6 : des critères de vérification précis et une liste à cocher pour les tâches à ordre fixe"},
+      {"seconde": 843, "resume": "Le rapport d'audit montré, puis l'audit lancé en direct sur sa skill aios-bootstrap"},
+      {"seconde": 990, "resume": "Règle 7 : lister les outils à installer et la commande pour les installer"},
+      {"seconde": 1143, "resume": "La grille symptômes et corrections à garder pour chaque nouveau modèle"}
+    ],
+    "premier_payoff_seconde": 130,
+    "jargon": 2,
+    "repetitions": 1,
+    "test_du_tweet": "Tes skills Claude désobéissent au nouveau modèle ? Elles ont été écrites pour un modèle moins capable. 7 règles d'Anthropic : description à la 3e personne, liberté dosée, l'objectif plutôt que les étapes, un sommaire, une vérification, les outils listés. Et une skill d'audit."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine ; en demi-écran à droite presque toute la vidéo, plein cadre par moments", "decor": "mur blanc, étagère noire avec figurines et livres, lampe à ampoule"},
+    "parts": {"face": 42, "ecran": 13, "motion": 45, "broll": 0},
+    "textes_ecran": "constants",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["plan-a-l-ecran", "split-screen", "cartes-chapitre", "etiquettes", "curseur-surligne", "chiffres-animes"],
+    "charte": "Vert sapin avec de grands triangles en filigrane ; titres blancs en sans-serif gras, mots clés en jaune or ; en-têtes et étiquettes en petites capitales à chasse fixe. La miniature, rouge et bleu, ne reprend pas cette charte.",
+    "rythme": "regulier",
+    "notes": "Un panneau vert à gauche porte une phrase par idée pendant qu'il parle à droite : la vidéo se lit presque sans le son. Les captures d'écran (AIOS, audit) sont assombries avec des étiquettes jaunes qui désignent la zone utile."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 40, "type": "lead-magnet", "cible": "l'outil d'audit des skills", "amene_par": "intro", "citation": "je te donne un outil pour toi pour faire l'audit de tout ton système"},
+      {"seconde": 569, "type": "lead-magnet", "cible": "le prompt qui applique les règles à toutes les skills", "amene_par": "apres-valeur", "citation": "je t'ai mis un prompt qui va récupérer ces règles-là"},
+      {"seconde": 793, "type": "lead-magnet", "cible": "la skill d'audit et les prompts de correction", "amene_par": "transition", "citation": "On va faire une petite pause et je vais te parler de l'audit."},
+      {"seconde": 880, "type": "video-suivante", "cible": "la vidéo d'installation de l'AIOS", "amene_par": "pendant-demo", "citation": "Tu peux aller voir cette vidéo, ça permet d'installer [cet AIOS]."},
+      {"seconde": 1170, "type": "lead-magnet", "cible": "l'audit, la skill et la notice dans la description", "amene_par": "fin", "citation": "toutes les ressources [...] sont présents dans la description"},
+      {"seconde": 1184, "type": "video-suivante", "cible": "la masterclass AIOS, affichée « gratuite »", "amene_par": "fin", "citation": "Je te mets une vidéo dans laquelle je présente tout ce système-là."},
+      {"seconde": 1193, "type": "like-commentaire", "cible": "liker et commenter", "amene_par": "fin", "citation": "n'hésite pas à mettre un petit like, un petit commentaire"}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"communaute-payante": 2, "lead-magnet": 1, "affiliation": 1, "autre": 6},
+    "commentaire_epingle": null,
+    "recap_final": true,
+    "derniere_phrase": "Et je te dis à bientôt pour la prochaine vidéo.",
+    "video_suivante_precise": true
+  },
+  "commentaires": {
+    "themes": ["remerciements", "un spectateur annonce qu'il rejoint le Skool"],
+    "demandes": [],
+    "critiques": [],
+    "reprises": [],
+    "signal_promesse": "inconnu"
+  },
+  "retention": {
+    "a_30s": 0.718,
+    "a_la_moitie": 0.26,
+    "pertes": [
+      {"seconde": 30, "chute": 9.8, "passage": "« Dans cette vidéo, on va voir ensemble les sept raisons » (annonce du plan, puis outil promis)", "segment": "Ta skill n'obéit pas toujours"},
+      {"seconde": 61, "chute": 5.4, "passage": "« Alors pour rappel, une skill, c'est un ensemble de fichiers » (plan large face caméra)", "segment": "Règle 1 · La description"},
+      {"seconde": 902, "chute": 2.6, "passage": "« Donc il me sort le rapport d'état » (après 20 s d'attente écran « L'audit tourne... »)", "segment": "L'audit de mes skills, en direct"},
+      {"seconde": 204, "chute": 2.4, "passage": "« Entropic appelle ça les degrés de liberté » (glissement de 9 points entre 3:12 et 4:12)", "segment": "Règle 2 · Libre ou à la lettre"},
+      {"seconde": 300, "chute": 2.3, "passage": "« c'est comme si tu travaillais avec quelqu'un de brillant » (deux analogies à la suite)", "segment": "Règle 3 · L'objectif, pas le mode d'emploi"}
+    ],
+    "remontees": [
+      {"seconde": 577, "chute": -2.7, "passage": "« Le truc, c'est que ça ne concerne pas que les skills. » (début du chapitre AIOS)", "segment": "Tes fichiers aussi : l'exemple de mon AIOS"},
+      {"seconde": 781, "chute": -2.6, "passage": "« il me manque la 7e. On va faire une petite pause » (début du chapitre audit)", "segment": "L'audit de mes skills, en direct"},
+      {"seconde": 276, "chute": -1.3, "passage": "« La 3e raison qui pourrait expliquer ta déception » (début de chapitre)", "segment": "Règle 3 · L'objectif, pas le mode d'emploi"},
+      {"seconde": 889, "chute": -1.3, "passage": "« Audit ma skill [AIOS] Bootstrap. » (audit lancé en direct à l'écran)", "segment": "L'audit de mes skills, en direct"}
+    ]
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "La 1re phrase reprend la déception (partiel) ; le 1er plan ne garde que le visage, sans l'avant-après rouge et bleu de la miniature"},
+    "ap_boucle_curiosite": {"note": 2, "preuve": "0:40 « à la fin de cette vidéo, je te donne un outil », résolue à 13:11 ; 13:11 la 7e règle gardée pour après l'audit"},
+    "ap_effort_montre": {"note": 0, "preuve": "Aucune heure, aucun test ni essai chiffré dans l'intro"},
+    "ap_setup_progress_payoff": {"note": 1, "preuve": "Chaque règle va du symptôme à la cause puis à la correction ; c'est un problème-solution plus qu'un but qui progresse. L'audit en direct suit le schéma (13:11 à 15:47)"},
+    "ap_contraste_rythme": {"note": 1, "preuve": "19 changements de plan la 1re minute, puis 5 à 13 par minute, sans passage nettement plus lent ou plus rapide"},
+    "ap_montrer_sans_son": {"note": 2, "preuve": "Planche intro : « Tu passes ta skill dessus... DÉÇU », « Elle saute des étapes », « 7 raisons pour lesquelles ta skill n'obéit pas » se lisent sans le son"},
+    "ali_douleur_histoire": {"note": 1, "preuve": "Douleur décrite de 0:00 à 0:16 (elle saute des étapes, ignore les consignes) ; aucune histoire vécue dans l'intro"},
+    "ali_coeur_unique": {"note": 2, "preuve": "0:18 « Le modèle a évolué, ta skill non. », repris dans toute la vidéo"},
+    "alx_pont": {"note": 1, "preuve": "Contexte, preuve (guide Anthropic) et annonce du plan comme un pont, mais ouverts par une question et une douleur en guise d'accroche"},
+    "alx_pull_paint_point": {"note": 2, "preuve": "Chaque règle : symptôme vécu, image (tiroir, pont sur un ravin, GPS, livre de recettes), puis la règle"},
+    "alx_nom_idee": {"note": 2, "preuve": "« Libre ou à la lettre », « L'objectif, pas le mode d'emploi », « Un niveau, un sommaire », « le pont », affichés à l'écran"},
+    "alx_phrase_finale": {"note": 1, "preuve": "4:05 « Et s'il fait autrement [...] est-ce que c'est [grave] ? » ; la plupart des règles finissent sur un exemple"},
+    "alx_douleur_reve": {"note": 1, "preuve": "« n'obéissent pas » dit la douleur, mais « skills Claude » et « règles d'Anthropic » supposent de connaître le sujet"},
+    "alx_cta_tot": {"note": 2, "preuve": "0:40 l'outil d'audit gratuit annoncé, lié au sujet ; lien dans la description"},
+    "ed_intro_courte": {"note": 1, "preuve": "1er point à 0:47, après huit phrases : douleur, cause, source, plan et outil promis"},
+    "ed_hook": {"note": 2, "preuve": "0:16 dissonance nette : « Le problème, ça vient pas de Claude. Le modèle a évolué, ta skill non. »"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "Chaque règle part du problème et finit sur des consignes ; la preuve manque le plus souvent (sauf HyperFrames 9:18 et l'audit)"},
+    "ed_tension_relancee": {"note": 1, "preuve": "11:01 « est-ce qu'il vérifie son [travail] ? » et 17:58 « il reste une question » ; ailleurs « La deuxième raison... »"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "9:55 son AIOS montré et 18:42 l'audit qui tourne seul : des usages vécus, sans récit"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "L'audit expliqué deux fois (13:37 et 13:59), deux analogies pour la règle 3 et deux pour la règle 4"},
+    "ed_niveau_simple": {"note": 1, "preuve": "Analogies du quotidien et skill définie à 1:06 ; mais LLM, terminal ou Claude Code passent sans explication"},
+    "tous_video_suivante": {"note": 2, "preuve": "19:44 la vidéo sur son AIOS, affichée « La masterclass AIOS, gratuite », avec la raison : tu l'as aperçu ici"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Titre douleur plus autorité (« les 7 règles d'Anthropic ») ; miniature avant-après coupée en deux, qui ne garde du titre que « Claude ».",
+    "intro_structure": "Une dissonance nette à 0:16 et l'outil promis dès 0:40. Mais la courbe perd 10 points pendant l'annonce du plan, puis 5 sur le rappel « une skill, c'est... ».",
+    "habillage": "Demi-écran vert sapin à gauche, visage à droite, presque toute la vidéo : chaque idée a son carton, mot clé en jaune or.",
+    "idee_pour_nous": "Remplacer l'annonce du plan et le rappel de définition par l'entrée directe dans la règle 1 : ce sont les deux passages qui coûtent le plus.",
+    "objectif": "vues"
+  }
+}

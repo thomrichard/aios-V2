@@ -4,7 +4,7 @@ resume: Ta skill Claude saute une étape, ignore une consigne ou ne se lance mê
 statut: publie
 domaine: contenu
 cree: 2026-10-13
-maj: 2026-10-22
+maj: 2026-10-25
 liens: []
 ---
 # Pourquoi tes skills Claude n’obéissent pas toujours (les 7 règles d’Anthropic)
@@ -18,16 +18,16 @@ liens: []
 
 ## Stats
 
-YouTube Analytics, données jusqu'au 2026-10-20. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
+YouTube Analytics, données jusqu'au 2026-10-22. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
 
 | | 7 premiers jours | 30 premiers jours | Depuis la sortie |
 |---|---|---|---|
-| Vues | 568 | en cours | 573 |
-| Vues engagées | 290 | en cours | 293 |
+| Vues | 568 | en cours | 585 |
+| Vues engagées | 290 | en cours | 299 |
 | Heures regardées | 25,0 | en cours | 25,3 |
 | Abonnés gagnés | 1 | en cours | 1 |
 | Revenus estimés | 2,19 $ | en cours | 2,19 $ |
-| Durée moyenne regardée | | | 5 min 8 s (25,7 %) |
+| Durée moyenne regardée | | | 5 min 2 s (25,2 %) |
 | J'aime · commentaires | | | 15 · 2 |
 
 ## Liens

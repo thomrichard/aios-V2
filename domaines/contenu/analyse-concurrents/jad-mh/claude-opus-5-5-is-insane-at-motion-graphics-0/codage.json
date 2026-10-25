@@ -1,0 +1,174 @@
+{
+  "video_id": "y4GwCCsYwvQ",
+  "chaine": "jad-mh",
+  "titre": "Claude Opus 5.5 Is INSANE at Motion Graphics 0$ (Turned it into a skill)",
+  "codeur": "agent jad-mh",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "cas",
+    "format_secondaire": "comparatif",
+    "sujet": "Un clip musical en motion design fait par Claude, en version payante et en version à 0 $, après l'analyse de trois clips viraux",
+    "outils": ["Claude Code", "Claude Opus 5.5", "ACE-Step 1.5", "Higgsfield", "kie.ai", "Nano Banana 2.1", "Kling 3.0", "FFmpeg", "HyperFrames"],
+    "niveau": "debutant",
+    "objectif_probable": "communaute"
+  },
+  "titre": {
+    "attente_au_clic": "Voir des motion graphics impressionnants faits par Claude Opus 5.5 pour 0 $, et récupérer la skill pour les refaire.",
+    "schema": "<Outil> Is INSANE at <Domaine> 0$ (Turned it into a skill)",
+    "promesse": "Du motion design de haut niveau fait par Claude, sans rien payer de plus",
+    "audace": "audacieux",
+    "registre": "jargon",
+    "briques": ["resultat"],
+    "marqueurs": ["majuscules", "chiffre"],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "neutre, sérieux",
+    "regard": "camera",
+    "texte": "Create Motion Graphics $0",
+    "texte_mots": 4,
+    "repete_titre": "partiel",
+    "elements": ["visage au centre, mains sur un clavier blanc posé sur de la mousse", "quatre cadres de motion design (Vox, Aslani, Nothing, Fast)", "barre de saisie « Create Motion Graphics » avec une étoile en dégradé (style Gemini)", "« $0 » sur une tache verte"],
+    "nb_elements": 4,
+    "fond": "orange vif, cadres vitrés",
+    "couleurs": ["orange", "blanc", "noir", "vert"],
+    "curiosity_gap": "resultat",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "These are some of the most viral motion graphics on the internet right now.",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Une petite vignette de clip animé sur fond crème à grille, face caméra en vignette en bas à droite, sous-titre « These are some of the »",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": ["hook-fait", "demo-d-abord", "boucle-curiosite", "histoire-perso", "douleur", "pont"],
+    "preuve": {
+      "type": "resultat-montre",
+      "seconde": 20,
+      "description": "« this one is mine » : son propre clip apparaît à 0:20 ; puis 1:01 « My motion graphic video did over 120,000 views »"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 5, "a_l_ecran": false},
+    "boucle_vers_la_fin": {
+      "presente": true,
+      "citation": "by the end of this video, you will see exactly what are the differences",
+      "seconde_resolution": 1307,
+      "tenue": "partiel"
+    },
+    "seconde_premier_point": 194,
+    "attente_tenue": "oui",
+    "attente_note": "Les deux clips sont faits et montrés en entier, et la version à 0 $ impressionne en commentaire. Mais le premier point arrive à 3:14, et la comparaison promise est expédiée en 48 s (« Let's go quickly through it »)."
+  },
+  "structure": {
+    "modele": "setup-progress-payoff",
+    "segments": [
+      {"debut": 0, "fin": 57, "titre": "Two music videos: paid vs $0", "role": "intro", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 57, "fin": 194, "titre": "What you asked for", "role": "intro", "pull": true, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 194, "fin": 634, "titre": "How the viral ones were made", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 634, "fin": 682, "titre": "How Claude makes a video", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 682, "fin": 777, "titre": "Step 1: the song", "role": "demo", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 777, "fin": 1069, "titre": "Version 1: paid", "role": "demo", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 1069, "fin": 1307, "titre": "Version 2: $0", "role": "demo", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 1307, "fin": 1355, "titre": "Paid vs $0", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 1355, "fin": 1426, "titre": "How to install the skill", "role": "cta", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 1426, "fin": 1478, "titre": "My take", "role": "fin", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": true, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 52, "type": "boucle-ouverte", "citation": "by the end of this video, you will see exactly what are the differences"},
+      {"seconde": 174, "type": "rappel-promesse", "citation": "the only thing I'm asking, stay to the end of this video."},
+      {"seconde": 194, "type": "annonce-suite", "citation": "because the captions don't tell you the whole story"},
+      {"seconde": 541, "type": "question-spectateur", "citation": "Is it really one prompt or is this a trust me bro situation?"},
+      {"seconde": 617, "type": "question-spectateur", "citation": "So the real question of this, how much of this is actually paid for?"},
+      {"seconde": 707, "type": "annonce-suite", "citation": "And here's the crazy part."},
+      {"seconde": 823, "type": "annonce-suite", "citation": "And this is where it kind of went crazy."},
+      {"seconde": 873, "type": "question-spectateur", "citation": "So, what did the paid version cost?"},
+      {"seconde": 1104, "type": "annonce-suite", "citation": "And here's what blew my mind."},
+      {"seconde": 1309, "type": "question-spectateur", "citation": "Which one is better?"}
+    ],
+    "histoires": [
+      {"seconde": 61, "acte": "anecdote", "resume": "Sa vidéo de motion design a dépassé 120 000 vues ; il est passé de 400 à près de 4 000 abonnés en moins d'une semaine"},
+      {"seconde": 194, "acte": "client-autre", "resume": "Un étudiant de Berkeley fait un clip avec 7 agents Opus en 40 min (2,8 M de vues) ; un remake prétend « un prompt, 12 heures » : il lit le prompt et démonte la promesse"},
+      {"seconde": 737, "acte": "anecdote", "resume": "Le modèle musical prononçait mal Claude ; Claude a écrit son nom « CLAWD » dans les paroles"},
+      {"seconde": 806, "acte": "vision-build", "resume": "Le test de lip-sync marchait mais ressemblait à tous les avatars IA ; il demande à Claude d'en faire du code"}
+    ],
+    "payoffs": [
+      {"seconde": 549, "resume": "Le prompt du remake lu : 2 000 $ de crédits, 114 plans en 2:21, surtout du motion design"},
+      {"seconde": 762, "resume": "La chanson générée en local à 0 $ est jouée"},
+      {"seconde": 830, "resume": "Le personnage transformé en particules de code"},
+      {"seconde": 873, "resume": "La version payante a coûté environ 3 $ et quelques crédits, pas 2 000 $"},
+      {"seconde": 904, "resume": "Le clip payant joué en entier"},
+      {"seconde": 1140, "resume": "Le clip à 0 $ avec la mascotte Cursor joué en entier"},
+      {"seconde": 1307, "resume": "Payant contre 0 $ : commencer par le 0 $, 15 secondes"}
+    ],
+    "premier_payoff_seconde": 830,
+    "jargon": 2,
+    "repetitions": 1,
+    "test_du_tweet": "Les clips viraux « faits en un prompt » sont surtout du code. Jad refait un clip musical avec Claude Opus 5.5 : une version payante (3 $ et des crédits) et une à 0 $ avec une mascotte codée. Musique générée en local, skill gratuite sur Skool."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine ; le plus souvent en vignette à côté des captures", "decor": "salon, tableau, bibliothèque, canapé ; lunettes, sweat gris"},
+    "parts": {"face": 15, "ecran": 40, "motion": 45, "broll": 0},
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": true,
+    "sous_titres_style": "mot à mot, blanc gras sur une ligne, centré en bas",
+    "elements": ["etiquettes", "split-screen", "curseur-surligne", "fleches-annotations", "chiffres-animes"],
+    "charte": "Fond crème à grille de points, captures en cadres arrondis, étiquettes en petites capitales bleu et vert, croix rouge sur Suno, « $2,000 » en rouge. La miniature orange vif ne reprend pas cette charte.",
+    "rythme": "contraste",
+    "notes": "Plus de dix minutes de clips plein écran : environ cinq minutes de clips d'autres créateurs, puis ses deux versions en entier. De 10 changements de plan par minute quand il parle à 41 pendant les clips."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 43, "type": "communaute-gratuite", "cible": "la skill gratuite", "amene_par": "intro", "citation": "I turned all of it into a skill. It's free."},
+      {"seconde": 122, "type": "formation", "cible": "un cours de 2 heures en préparation", "amene_par": "intro", "citation": "I'm working on a 2hour long full course on this"},
+      {"seconde": 143, "type": "communaute-gratuite", "cible": "la communauté Skool gratuite", "amene_par": "intro", "citation": "This skill is free in my school community. Link is in the description."},
+      {"seconde": 174, "type": "autre", "cible": "rester jusqu'à la fin pour l'algorithme", "amene_par": "intro", "citation": "the only thing I'm asking, stay to the end of this video."},
+      {"seconde": 1356, "type": "communaute-gratuite", "cible": "rejoindre Skool pour télécharger la skill", "amene_par": "apres-valeur", "citation": "Step one, go to my school community. It's free."},
+      {"seconde": 1451, "type": "communaute-gratuite", "cible": "la skill et poster sa vidéo dans Skool", "amene_par": "fin", "citation": "I would love to see that in the school if you guys can post it"},
+      {"seconde": 1470, "type": "like-commentaire", "cible": "dire en commentaire quelle version il préfère", "amene_par": "fin", "citation": "Tell me in the comments which one do you like the more"},
+      {"seconde": 1474, "type": "abonnement", "cible": "s'abonner", "amene_par": "fin", "citation": "if you haven't hit the follow, please do."}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"communaute-gratuite": 2, "video-suivante": 1},
+    "commentaire_epingle": {"texte": "Témoignage d'un spectateur : la skill installée, une vidéo de 15 s en moins de 5 min pour 2 % d'usage", "type": "autre"},
+    "recap_final": false,
+    "derniere_phrase": "And if you haven't hit the follow, please do. and I'll see you on the next one.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["la croissance éclair de la chaîne", "la transparence sur les coûts", "pourquoi la chaîne n'est pas monétisée", "la version à 0 $ qui bluffe"],
+    "demandes": ["des visuels publicitaires prêts à lancer", "des vidéos marketing produit plutôt que des chansons", "un film IA à 0 $ documenté", "quel mode d'effort choisir"],
+    "critiques": ["un spectateur n'obtient pas le résultat : « trust me, bro »", "le clip musical est trop de niche", "Claude Code reste payant", "Skool en maintenance ou adhésion en attente"],
+    "reprises": ["l'astuce « CLAWD »", "la règle des 0,4 seconde (« golden »)", "la transparence de l'intro"],
+    "signal_promesse": "tenue"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "La 1re phrase dit « viral motion graphics » sans Claude ni 0 $ ; le 1er plan montre un clip animé et la face en vignette, pas la composition de la miniature"},
+    "ap_boucle_curiosite": {"note": 2, "preuve": "0:52 « by the end of this video, you will see exactly what are the differences », résolue à 21:47"},
+    "ap_effort_montre": {"note": 1, "preuve": "0:57 « today I went all out » ; les 4 prises et les 15 builders viennent plus tard"},
+    "ap_setup_progress_payoff": {"note": 2, "preuve": "10:17 « how much of this is actually paid for? », puis la chanson, la version payante et la version à 0 $ construites et jouées"},
+    "ap_contraste_rythme": {"note": 2, "preuve": "De 10 à 41 changements de plan par minute ; débit de 228 mots par minute quand il parle, clips en musique sans voix"},
+    "ap_montrer_sans_son": {"note": 2, "preuve": "Planche intro : clips viraux avec leurs vues, « THIS ONE IS MINE », « Paid » et « $0 » écrits, sous-titres incrustés"},
+    "ali_douleur_histoire": {"note": 1, "preuve": "1:21 « Nobody explains the actual costs » vient des commentaires ; l'histoire perso (120 000 vues) ne montre pas qu'il a vécu ce manque"},
+    "ali_coeur_unique": {"note": 2, "preuve": "14:56 « you don't need to spend $2,000 because most of his video is already code »"},
+    "alx_pont": {"note": 0, "preuve": "Ouverture sur un fait chiffré et une boucle, pas sur un pont"},
+    "alx_pull_paint_point": {"note": 1, "preuve": "Complet sur l'analyse des clips viraux (3:14 « the captions don't tell you the whole story ») ; les versions vont de la démo au point sans pourquoi"},
+    "alx_nom_idee": {"note": 1, "preuve": "« THE RULES » à l'écran et la mascotte « Cursor », mais les idées elles-mêmes ne portent pas de nom"},
+    "alx_phrase_finale": {"note": 1, "preuve": "14:56 « most of his video is already code » ; 24:01 « I direct it. Claude did the work. » ; rare ailleurs"},
+    "alx_douleur_reve": {"note": 0, "preuve": "Le titre porte l'outil et la technique (« Claude Opus 5.5 », « Motion Graphics ») ; « INSANE » est du superlatif, pas un désir"},
+    "alx_cta_tot": {"note": 2, "preuve": "0:43 la skill gratuite, 2:23 le lien Skool, 2:02 un cours de 2 h annoncé"},
+    "ed_intro_courte": {"note": 0, "preuve": "Premier point à 3:14, après deux minutes de réponses aux commentaires et de gratuité"},
+    "ed_hook": {"note": 2, "preuve": "0:04 « This music video has 2.5 million views [...] posted by a student with 1,600 followers »"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "L'analyse pose un problème (9:01 « trust me bro situation ») et le prouve ; les versions vont droit aux consignes"},
+    "ed_tension_relancee": {"note": 2, "preuve": "10:17 « how much of this is actually paid for? » ; 14:33 « what did the paid version cost? » ; 21:49 « Which one is better? »"},
+    "ed_histoire_vecue": {"note": 2, "preuve": "3:14 l'histoire de l'étudiant de Berkeley puis du remake « 12 hours » démonté (acte 2)"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "La gratuité et l'absence de sponsor reviennent plusieurs fois ; les clips viraux passent presque en entier"},
+    "ed_niveau_simple": {"note": 2, "preuve": "10:46 « Claude doesn't make videos. It only writes text » : page web, captures, FFmpeg expliqués simplement"},
+    "tous_video_suivante": {"note": 0, "preuve": "« I'll see you on the next one » ; la vidéo suivante n'est que dans la description"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Gabarit « <Outil> Is INSANE at <domaine> 0$ (Turned it into a skill) ». Miniature : visage au centre qui tape, quatre cadres de motion design, « $0 » en vert ; l'icône est une étoile façon Gemini, pas Claude.",
+    "intro_structure": "Hook chiffré (2,5 M de vues pour un étudiant à 1 600 abonnés), boucle « payant contre 0 $ » tenue à 21:47, puis deux minutes de réponses aux commentaires. La vidéo est construite sur les critiques des spectateurs (coûts, couleurs, process).",
+    "habillage": "Les clips passent en entier, plein écran, dont cinq minutes de clips d'autres créateurs. Un plan toutes les 2,6 s, jusqu'à 41 changements par minute pendant les clips.",
+    "idee_pour_nous": "Ouvrir sur un cas viral fait par un inconnu, le décortiquer (« un seul prompt, vraiment ? »), puis le refaire en version gratuite.",
+    "objectif": "vues"
+  }
+}

@@ -1,0 +1,550 @@
+{
+  "video_id": "z82i2sbAmaM",
+  "chaine": "tristen-obrien",
+  "titre_video": "Prompt Claude Like the Top 1% (in 30 Seconds).",
+  "codeur": "agent tristen-obrien",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "tuto",
+    "format_secondaire": "liste",
+    "sujet": "La règle des 30 secondes : dicter son vrac à Claude avec Wispr Flow, puis une skill qui pose 5 questions et écrit le prompt",
+    "outils": [
+      "Claude",
+      "Wispr Flow",
+      "Wispr Flow Notetaker",
+      "MCP",
+      "skills Claude"
+    ],
+    "niveau": "debutant",
+    "objectif_probable": "vente"
+  },
+  "titre": {
+    "attente_au_clic": "Corriger sa façon de prompter Claude avec une astuce de 30 secondes, pour des réponses du niveau du top 1 %.",
+    "schema": "<Action> <Outil> Like the Top <N>% (in <N> Seconds).",
+    "promesse": "Prompter Claude comme le top 1 %, en 30 secondes",
+    "audace": "audacieux",
+    "registre": "mixte",
+    "briques": [
+      "vitesse",
+      "resultat"
+    ],
+    "marqueurs": [
+      "chiffre",
+      "duree",
+      "comparaison-sociale"
+    ],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "sourire en coin, sceptique",
+    "regard": "camera",
+    "texte": "YOU'RE PROMPTING WRONG",
+    "texte_mots": 3,
+    "repete_titre": "non",
+    "elements": [
+      "texte en trois lignes, WRONG en corail",
+      "gribouillis corail relié par un fil à l'icône Claude",
+      "visage à droite"
+    ],
+    "nb_elements": 3,
+    "fond": "vert sauge clair uni",
+    "couleurs": [
+      "vert sauge",
+      "noir",
+      "corail"
+    ],
+    "curiosity_gap": "transformation",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "You're prompting wrong, and I mean that in the most nicest way possible",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Face caméra plein cadre, sous-titre incrusté « You're prompting wrong », « wrong » en orange",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": [
+      "hook-dissonance",
+      "demo-d-abord"
+    ],
+    "preuve": {
+      "type": "resultat-montre",
+      "seconde": 10,
+      "description": "Deux prompts côte à côte, un court et un long ; le bon est celui « that looks like a prompt engineer wrote it »"
+    },
+    "annonce_plan": {
+      "presente": true,
+      "nb_points": 3,
+      "a_l_ecran": true
+    },
+    "boucle_vers_la_fin": {
+      "presente": false,
+      "citation": "",
+      "seconde_resolution": null,
+      "tenue": null
+    },
+    "seconde_premier_point": 37,
+    "attente_tenue": "partiel",
+    "attente_note": "La règle des 30 secondes et la skill sont livrées. Mais près des deux tiers de la vidéo montrent le sponsor Wispr Flow et son Notetaker ; le commentaire le plus aimé (8 likes) demande « Is this actually just an ad? »."
+  },
+  "structure": {
+    "modele": "liste-numerotee",
+    "segments": [
+      {
+        "debut": 0,
+        "fin": 38,
+        "titre": "You're Prompting Wrong",
+        "role": "intro",
+        "pull": true,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": true,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 38,
+        "fin": 87,
+        "titre": "Rule #1: The 30-Second Rule",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": false,
+        "preuve": false,
+        "consignes": true,
+        "payoff": false,
+        "relance_sortie": true
+      },
+      {
+        "debut": 87,
+        "fin": 117,
+        "titre": "Why Typing Your Prompt Isn't Enough",
+        "role": "point",
+        "pull": false,
+        "paint": true,
+        "point": true,
+        "nom": false,
+        "phrase_finale": true,
+        "probleme": true,
+        "preuve": true,
+        "consignes": true,
+        "payoff": false,
+        "relance_sortie": true
+      },
+      {
+        "debut": 117,
+        "fin": 208,
+        "titre": "The Right Tool: Wispr Flow on your computer, snippets",
+        "role": "sponsor",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 208,
+        "fin": 272,
+        "titre": "Wispr Flow on Your Phone",
+        "role": "sponsor",
+        "pull": false,
+        "paint": true,
+        "point": true,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": true,
+        "consignes": false,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 272,
+        "fin": 322,
+        "titre": "Rule #3: Have Claude Ask You 5 Questions + the Brain Dump skill",
+        "role": "point",
+        "pull": true,
+        "paint": false,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": true
+      },
+      {
+        "debut": 322,
+        "fin": 401,
+        "titre": "The Ceiling, Wispr Flow Notetaker, custom dictionary",
+        "role": "sponsor",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": true,
+        "consignes": false,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 401,
+        "fin": 513,
+        "titre": "Notetaker to Claude with MCP, the full prompt process",
+        "role": "demo",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 513,
+        "fin": 554,
+        "titre": "Writing the Client Email with Your Voice",
+        "role": "sponsor",
+        "pull": false,
+        "paint": true,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": false,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 554,
+        "fin": 573,
+        "titre": "Pricing and Promo Code",
+        "role": "sponsor",
+        "pull": false,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 573,
+        "fin": 589,
+        "titre": "Wrap-up",
+        "role": "fin",
+        "pull": false,
+        "paint": false,
+        "point": true,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      }
+    ],
+    "relances": [
+      {
+        "seconde": 11,
+        "type": "question-spectateur",
+        "citation": "Which one do you think gets a better result?"
+      },
+      {
+        "seconde": 62,
+        "type": "annonce-suite",
+        "citation": "the right tool is going to clean up all of this"
+      },
+      {
+        "seconde": 106,
+        "type": "annonce-suite",
+        "citation": "you need to talk to Claude with your voice"
+      },
+      {
+        "seconde": 272,
+        "type": "rappel-promesse",
+        "citation": "we've already covered two of the three things that are needed"
+      },
+      {
+        "seconde": 282,
+        "type": "annonce-suite",
+        "citation": "But there's one more rule."
+      },
+      {
+        "seconde": 320,
+        "type": "rupture",
+        "citation": "there actually is a ceiling here"
+      },
+      {
+        "seconde": 324,
+        "type": "question-spectateur",
+        "citation": "Do you remember everything that was said in it?"
+      },
+      {
+        "seconde": 437,
+        "type": "annonce-suite",
+        "citation": "this is where it gets really cool"
+      }
+    ],
+    "histoires": [
+      {
+        "seconde": 140,
+        "acte": "anecdote",
+        "resume": "Il a dicté 140 000 mots avec Wispr Flow, dont 70 % de prompts pour l'IA."
+      },
+      {
+        "seconde": 229,
+        "acte": "anecdote",
+        "resume": "Il tape mal au pouce, déteste la correction auto et laisse ses fautes ; la dictée sur téléphone le sauve."
+      },
+      {
+        "seconde": 342,
+        "acte": "anecdote",
+        "resume": "Un appel avec un client fictif (O'Brien's Irish Pizza) dont il ne se rappelle pas tout ; le Notetaker comble le trou."
+      }
+    ],
+    "payoffs": [
+      {
+        "seconde": 196,
+        "resume": "Les « um » disparaissent et « Thursday » corrigé devient « Wednesday »"
+      },
+      {
+        "seconde": 263,
+        "resume": "Sur le téléphone, le texte dicté arrive ponctué"
+      },
+      {
+        "seconde": 307,
+        "resume": "La skill écrit le prompt et choisit seule le rôle à donner à Claude"
+      },
+      {
+        "seconde": 415,
+        "resume": "Les vrais noms, bien écrits, à la place de « speaker one »"
+      },
+      {
+        "seconde": 452,
+        "resume": "Claude liste les quatre engagements pris pendant l'appel, avec les moments cités"
+      },
+      {
+        "seconde": 503,
+        "resume": "Un brouillon de mail attend avec le PDF et le flyer joints"
+      }
+    ],
+    "premier_payoff_seconde": 196,
+    "jargon": 1,
+    "repetitions": 1,
+    "test_du_tweet": "Avant tout projet avec Claude, parle-lui 30 secondes en vrac : à la voix, c'est 70 mots au lieu de 20. Wispr Flow nettoie la dictée, une skill fait poser 5 questions à Claude puis écrit le prompt, et le Notetaker branché en MCP apporte tes réunions."
+  },
+  "habillage": {
+    "face_camera": {
+      "presente": true,
+      "cadrage": "poitrine ; souvent plein cadre, parfois en demi-écran ou en vignette",
+      "decor": "bureau, étagères, enseigne Back to the Future, lumière violette ; pull gris"
+    },
+    "parts": {
+      "face": 38,
+      "ecran": 30,
+      "motion": 30,
+      "broll": 2
+    },
+    "textes_ecran": "constants",
+    "sous_titres_incrustes": true,
+    "sous_titres_style": "Mots en blanc sur pavés noirs, mot fort en orange, sur certains plans face caméra (« You're prompting wrong », « prompt engineering »)",
+    "elements": [
+      "plan-a-l-ecran",
+      "cartes-chapitre",
+      "etiquettes",
+      "fleches-annotations",
+      "chiffres-animes",
+      "split-screen",
+      "curseur-surligne",
+      "emojis-stickers"
+    ],
+    "charte": "Fonds blanc cassé, titres noirs en capitales grasses, accents orange Claude et violet ; cartes à bord orange (« RULE 01 », « RULE 03 ONE MORE »). Le corail de la miniature est repris, pas son vert sauge.",
+    "rythme": "contraste",
+    "notes": "Seule vidéo des dix avec des sous-titres incrustés mot à mot. Des étiquettes orange commentent la capture (« I NEVER ASKED FOR THIS », « CLAUDE PICKED IT »)."
+  },
+  "fin": {
+    "ctas": [
+      {
+        "seconde": 32,
+        "type": "autre",
+        "cible": "une skill Claude gratuite à copier (texte en description)",
+        "amene_par": "intro",
+        "citation": "I'm going to give you a Claude skill that you can copy"
+      },
+      {
+        "seconde": 124,
+        "type": "sponsor",
+        "cible": "Wispr Flow",
+        "amene_par": "transition",
+        "citation": "they're a new partner to this channel, and they're also sponsoring this video today"
+      },
+      {
+        "seconde": 568,
+        "type": "sponsor",
+        "cible": "Wispr Flow, lien et code promo en description",
+        "amene_par": "fin",
+        "citation": "I have a link in the description. I also have a promo code"
+      },
+      {
+        "seconde": 582,
+        "type": "abonnement",
+        "cible": "s'abonner, liker, commenter",
+        "amene_par": "fin",
+        "citation": "please subscribe, hit like, leave a comment"
+      }
+    ],
+    "sponsor": {
+      "present": true,
+      "nom": "Wispr Flow",
+      "debut": 117,
+      "duree": 456,
+      "forme": "integre-a-la-demo"
+    },
+    "liens_description": {
+      "sponsor": 1,
+      "autre": 1,
+      "reseaux": 1
+    },
+    "commentaire_epingle": {
+      "texte": "Wispr Flow (lien de parrainage)",
+      "type": "sponsor"
+    },
+    "recap_final": true,
+    "derniere_phrase": "please subscribe, hit like, leave a comment, and I will see you",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": [
+      "une vidéo perçue comme une publicité",
+      "ses graphismes et son montage"
+    ],
+    "demandes": [
+      "un tuto sur ses graphismes et son montage (deux fois)"
+    ],
+    "critiques": [
+      "« Is this actually just an ad? » (8 likes, le plus aimé)"
+    ],
+    "reprises": [],
+    "signal_promesse": "mixte"
+  },
+  "techniques": {
+    "ap_alignement_5s": {
+      "note": 2,
+      "preuve": "La 1re phrase dit le texte de la miniature (« You're prompting wrong ») et les 30 secondes du titre ; le 1er plan montre visage et ces mots incrustés"
+    },
+    "ap_boucle_curiosite": {
+      "note": 1,
+      "preuve": "0:32 la skill promise en troisième, donnée à 4:59 ; la question des deux prompts est résolue tout de suite"
+    },
+    "ap_effort_montre": {
+      "note": 0,
+      "preuve": "Rien dans l'intro ; les 140 000 mots dictés n'arrivent qu'à 2:20"
+    },
+    "ap_setup_progress_payoff": {
+      "note": 2,
+      "preuve": "But : un dossier client complet ; règle, outil, skill, Notetaker ; résultat : le mail avec PDF et flyer joints (8:23)"
+    },
+    "ap_contraste_rythme": {
+      "note": 1,
+      "preuve": "De 6 à 21 changements de visuel par minute ; la fin (dictée du mail, prix) ralentit nettement"
+    },
+    "ap_montrer_sans_son": {
+      "note": 2,
+      "preuve": "Planche intro : « THE FIX ONLY TAKES 30 SECONDS », « I PROMISE », « USE THIS FIX ON YOUR very next prompt », « THREE THINGS »"
+    },
+    "ali_douleur_histoire": {
+      "note": 1,
+      "preuve": "Douleur posée (« You're prompting wrong », des prompts trop courts), sans histoire vécue dans l'intro"
+    },
+    "ali_coeur_unique": {
+      "note": 2,
+      "preuve": "0:42 « Before you can start any project with Claude, you have to take [...] 30 seconds »"
+    },
+    "alx_pont": {
+      "note": 0,
+      "preuve": "Intro par accroche (dissonance) et démonstration, pas en pont"
+    },
+    "alx_pull_paint_point": {
+      "note": 2,
+      "preuve": "La règle, la frappe (20 mots contre 70), la dictée (les « um » effacés), les 5 questions : pourquoi, exemple, action"
+    },
+    "alx_nom_idee": {
+      "note": 2,
+      "preuve": "« the 30-second rule », « brain dump », « snippets », « the ceiling », cartes « RULE 01 » et « RULE 03 »"
+    },
+    "alx_phrase_finale": {
+      "note": 1,
+      "preuve": "1:09 « Your job is just to get everything out. » ; 1:12 « these 30 seconds are not your prompt » ; rare ensuite"
+    },
+    "alx_douleur_reve": {
+      "note": 1,
+      "preuve": "« Like the Top 1% » parle du désir, mais Claude porte le titre"
+    },
+    "alx_cta_tot": {
+      "note": 1,
+      "preuve": "0:32 une skill gratuite annoncée, liée au sujet, mais en description sans capture de contact"
+    },
+    "ed_intro_courte": {
+      "note": 1,
+      "preuve": "Hook, promesse, démo et plan en trois choses ; premier point à 0:37"
+    },
+    "ed_hook": {
+      "note": 2,
+      "preuve": "0:00 « You're prompting wrong » : dissonance nette"
+    },
+    "ed_probleme_preuve_consignes": {
+      "note": 2,
+      "preuve": "1:30 problème (20 mots tapés), preuve (70 mots dits), consigne (parle) ; même ordre pour le Notetaker (5:56)"
+    },
+    "ed_tension_relancee": {
+      "note": 2,
+      "preuve": "4:42 « But there's one more rule. » ; 5:20 « there actually is a ceiling here » puis « Do you remember everything [...]? »"
+    },
+    "ed_histoire_vecue": {
+      "note": 1,
+      "preuve": "3:49 « I'm a terrible typer » ; l'appel client est fictif : des anecdotes"
+    },
+    "ed_sans_surexplication": {
+      "note": 1,
+      "preuve": "« 30 seconds » et « brain dump » redits souvent ; le rappel des règles à 4:32 est voulu"
+    },
+    "ed_niveau_simple": {
+      "note": 2,
+      "preuve": "3:32 « snippets is basically a shortcut » ; 7:21 le MCP en une phrase"
+    },
+    "tous_video_suivante": {
+      "note": 0,
+      "preuve": "Aucune vidéo suivante proposée"
+    }
+  },
+  "a_retenir": {
+    "titre_miniature": "Le titre promet (« Like the Top 1% (in 30 Seconds) »), la miniature accuse (« YOU'RE PROMPTING WRONG »), et la première phrase reprend mot pour mot la miniature.",
+    "intro_structure": "Hook dissonance, deux prompts comparés, plan en trois choses à l'écran. Mais le sponsor prend près des deux tiers du temps, et le commentaire le plus aimé demande si c'est une pub.",
+    "habillage": "Sous-titres incrustés mot à mot sur les plans face, étiquettes orange qui commentent les captures.",
+    "idee_pour_nous": "Une règle nommée et chiffrée (« la règle des 30 secondes ») et une skill à copier : un bon format de ressource pour le Club. Garder un sponsor sous la moitié du temps.",
+    "objectif": "club"
+  }
+}

@@ -1,0 +1,532 @@
+{
+  "video_id": "gvESqM6s0kM",
+  "chaine": "robonuggets",
+  "titre": {
+    "attente_au_clic": "Découvrir les 23 erreurs que je fais sans doute encore avec les modèles Claude 5.5, et comment les corriger.",
+    "schema": "<Outil> <Version> Mistakes you may still be making (<N> Tips and Fixes)",
+    "promesse": "Corriger les erreurs qui gâchent l'usage de Claude 5.5",
+    "audace": "timide",
+    "registre": "douleur-reve",
+    "briques": [
+      "resultat"
+    ],
+    "marqueurs": [
+      "chiffre",
+      "erreur"
+    ],
+    "nom_outil": true
+  },
+  "codeur": "agent robonuggets",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "liste",
+    "format_secondaire": null,
+    "sujet": "23 erreurs d'usage de Claude avec les modèles 5.5, surtout celles qui mangent les limites d'usage",
+    "outils": [
+      "Claude",
+      "Claude Code",
+      "Opus 5.5",
+      "Sonnet 5.5",
+      "Haiku 5.5",
+      "/clear",
+      "/rewind",
+      "/btw",
+      "/compact",
+      "/usage",
+      "DCG",
+      "Git",
+      "Jev"
+    ],
+    "niveau": "intermediaire",
+    "objectif_probable": "communaute"
+  },
+  "miniature": {
+    "visage": false,
+    "emotion": "gêne (la mascotte se prend la tête)",
+    "regard": "element",
+    "texte": "23 Mistakes 5.5 MODELS",
+    "texte_mots": 4,
+    "repete_titre": "partiel",
+    "elements": [
+      "logo Claude",
+      "texte « 23 Mistakes » en très gros",
+      "étiquette « 5.5 MODELS » avec flèche",
+      "mascotte Claude orange qui se prend la tête et pointe",
+      "grille de 23 icônes numérotées barrées d'une croix rouge"
+    ],
+    "nb_elements": 4,
+    "fond": "clair, blanc cassé, pâte à modeler 3D",
+    "couleurs": [
+      "blanc cassé",
+      "orange Claude",
+      "noir",
+      "rouge"
+    ],
+    "curiosity_gap": "aucun",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "With the recent release of the Claude 5.5 models, we are now in a whole new era",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Logo Claude et « 5.5 » en 3D lumineux sur fond noir, puis les fiches Opus, Sonnet et Haiku 5.5",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": [
+      "actu-annonce",
+      "hook-dissonance",
+      "douleur",
+      "pont"
+    ],
+    "preuve": {
+      "type": "effort",
+      "seconde": 21,
+      "description": "« I went through Anthropic's own guides [...] and hundreds of tips from power users », avec un schéma des trois sources à l'écran"
+    },
+    "annonce_plan": {
+      "presente": true,
+      "nb_points": 23,
+      "a_l_ecran": true
+    },
+    "boucle_vers_la_fin": {
+      "presente": false,
+      "citation": "",
+      "seconde_resolution": null,
+      "tenue": null
+    },
+    "seconde_premier_point": 51,
+    "attente_tenue": "oui",
+    "attente_note": "Les 23 erreurs sont données, chacune avec sa correction. Petit accroc : la 23e est annoncée « Number 22 » à 19:14."
+  },
+  "structure": {
+    "modele": "liste-numerotee",
+    "segments": [
+      {
+        "debut": 0,
+        "fin": 48,
+        "titre": "Intro : les 5.5 changent tout, vos habitudes coûtent cher, 23 erreurs",
+        "role": "intro",
+        "pull": true,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": true,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": true
+      },
+      {
+        "debut": 48,
+        "fin": 178,
+        "titre": "Faciles 1 et 2 : kitchen sink session, changer de modèle en cours",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 178,
+        "fin": 196,
+        "titre": "Guide PDF gratuit",
+        "role": "cta",
+        "pull": true,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 196,
+        "fin": 612,
+        "titre": "Faciles 3 à 11 : discuter au lieu de rembobiner, questions à côté, effort max, prompts vagues, règles sans raison, premier jet...",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": true,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": true
+      },
+      {
+        "debut": 612,
+        "fin": 657,
+        "titre": "Bilan des faciles, puis la communauté RoboNuggets",
+        "role": "cta",
+        "pull": true,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": true
+      },
+      {
+        "debut": 657,
+        "fin": 1040,
+        "titre": "Intermédiaires 12 à 19 : cache froid, Claude.md bourré, sécurité coupée, pas de sauvegarde, tout connecté, exploration infinie...",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": true,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": true
+      },
+      {
+        "debut": 1040,
+        "fin": 1207,
+        "titre": "Avancées 20 à 23 : historique perdu, plugins installés à l'aveugle, compaction sans consigne, pas de routage de modèle",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 1207,
+        "fin": 1231,
+        "titre": "Wrap up",
+        "role": "fin",
+        "pull": false,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      }
+    ],
+    "relances": [
+      {
+        "seconde": 31,
+        "type": "annonce-suite",
+        "citation": "all the way to the advanced ones that even pro users get wrong"
+      },
+      {
+        "seconde": 612,
+        "type": "annonce-suite",
+        "citation": "if you just fix those, you'd be ahead already of most people"
+      },
+      {
+        "seconde": 618,
+        "type": "annonce-suite",
+        "citation": "the mistakes that even regular Claude code users make every day"
+      },
+      {
+        "seconde": 778,
+        "type": "rupture",
+        "citation": "Now, this one's a bit serious"
+      },
+      {
+        "seconde": 917,
+        "type": "question-spectateur",
+        "citation": "And guess who's really good at text?"
+      },
+      {
+        "seconde": 1038,
+        "type": "annonce-suite",
+        "citation": "now the advanced ones. These are the mistakes that I see even some power users make"
+      }
+    ],
+    "histoires": [
+      {
+        "seconde": 501,
+        "acte": "anecdote",
+        "resume": "Jay a une skill « burst » qui lui sort plusieurs versions quand il veut des idées neuves."
+      },
+      {
+        "seconde": 778,
+        "acte": "client-autre",
+        "resume": "Un utilisateur dit que Claude a effacé tout son disque C en mode sans permissions ; quatre cas semblables depuis septembre."
+      },
+      {
+        "seconde": 1020,
+        "acte": "anecdote",
+        "resume": "Avant presque chaque grosse tâche, Jay se fait interviewer par sa skill « align »."
+      },
+      {
+        "seconde": 1169,
+        "acte": "client-autre",
+        "resume": "Un utilisateur a vidé sa limite de 5 heures en 5 minutes : Fable a lancé 10 agents."
+      },
+      {
+        "seconde": 1184,
+        "acte": "anecdote",
+        "resume": "Sur 3 semaines, Jev a envoyé 9 prompts sur 10 de Jay vers Sonnet ou Haiku, pour 13 cents de routage."
+      }
+    ],
+    "payoffs": [
+      {
+        "seconde": 102,
+        "resume": "Une session par tâche, /clear pour changer de sujet"
+      },
+      {
+        "seconde": 228,
+        "resume": "Après deux corrections ratées, /rewind"
+      },
+      {
+        "seconde": 272,
+        "resume": "/btw pour une question à côté qui n'entre pas dans l'historique"
+      },
+      {
+        "seconde": 682,
+        "resume": "Le cache froid : 15 cents au chaud contre près de 12 dollars à froid, et l'astuce /loop"
+      },
+      {
+        "seconde": 753,
+        "resume": "Claude.md sous 200 lignes, comme un routeur"
+      },
+      {
+        "seconde": 1184,
+        "resume": "Le routage de modèle par Jev, chiffres de Jay à l'appui"
+      }
+    ],
+    "premier_payoff_seconde": 102,
+    "jargon": 1,
+    "repetitions": 1,
+    "test_du_tweet": "Avec les modèles 5.5, de vieilles habitudes mangent tes limites et dégradent les réponses. 23 erreurs, des faciles aux avancées : une session par tâche, /rewind, /btw, effort moyen, prompts avec contexte, Claude.md court, sauvegardes, sous-agents, routage de modèle."
+  },
+  "habillage": {
+    "face_camera": {
+      "presente": true,
+      "cadrage": "poitrine dans un grand carré arrondi à droite, titre de l'erreur à gauche ; vignette ronde en bas à gauche sur les écrans",
+      "decor": "bureau, étagère, fleurs, lumière chaude ; casquette blanche, micro"
+    },
+    "parts": {
+      "face": 40,
+      "ecran": 30,
+      "motion": 30,
+      "broll": 0
+    },
+    "textes_ecran": "constants",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": [
+      "plan-a-l-ecran",
+      "cartes-chapitre",
+      "etiquettes",
+      "chiffres-animes",
+      "curseur-surligne"
+    ],
+    "charte": "Fond noir à grille discrète, titre en serif blanc avec sous-titre gris, accent orange ; interface Claude sombre recréée. La grille d'icônes de la miniature revient à 0:24 ; la miniature claire en pâte à modeler ne reprend pas le fond noir.",
+    "rythme": "contraste",
+    "notes": "Chaque erreur a sa carte : un titre court, un sous-titre, Jay dans un grand cadre arrondi. Les captures de Claude ressemblent à une interface recréée ; un commentaire demande si c'est simulé."
+  },
+  "fin": {
+    "ctas": [
+      {
+        "seconde": 178,
+        "type": "lead-magnet",
+        "cible": "guide PDF des 23 erreurs (communauté Skool gratuite)",
+        "amene_par": "apres-valeur",
+        "citation": "I've put this entire list and all the resources and prompts [...] into this free PDF guide"
+      },
+      {
+        "seconde": 624,
+        "type": "communaute-payante",
+        "cible": "RoboNuggets (Claude Living Masterclass, cours Agents as a Service)",
+        "amene_par": "transition",
+        "citation": "if you want to learn how to build and sell AI systems that businesses actually pay for"
+      },
+      {
+        "seconde": 653,
+        "type": "communaute-payante",
+        "cible": "lien dans le commentaire épinglé",
+        "amene_par": "transition",
+        "citation": "check that just in the pinned comment below"
+      },
+      {
+        "seconde": 1043,
+        "type": "lead-magnet",
+        "cible": "guide PDF",
+        "amene_par": "transition",
+        "citation": "you can just grab that PDF in the description and have Claude explain these simply"
+      },
+      {
+        "seconde": 1209,
+        "type": "abonnement",
+        "cible": "s'abonner",
+        "amene_par": "fin",
+        "citation": "consider tapping subscribe below, because that just helps me a lot"
+      }
+    ],
+    "sponsor": {
+      "present": false,
+      "nom": null,
+      "debut": null,
+      "duree": null,
+      "forme": null
+    },
+    "liens_description": {
+      "lead-magnet": 1,
+      "communaute-payante": 1,
+      "produit": 1,
+      "service": 1,
+      "affiliation": 5,
+      "abonnement": 1,
+      "reseaux": 4
+    },
+    "commentaire_epingle": {
+      "texte": "Le PDF des 23 erreurs gratuit (Skool gratuit, « search for n83 ») et la communauté payante",
+      "type": "lead-magnet"
+    },
+    "recap_final": false,
+    "derniere_phrase": "I'll see you all next time. Cheers.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": [
+      "le routage de modèle par Jev",
+      "des astuces reprises tout de suite (/btw, /loop)",
+      "la clarté de la chaîne",
+      "la contradiction entre l'erreur 2 et l'erreur 23"
+    ],
+    "demandes": [
+      "un pas-à-pas pour régler Jev comme routeur (au moins 5 commentaires)",
+      "un doublage en portugais",
+      "savoir si Claude Code et l'appli de bureau comptent pareil"
+    ],
+    "critiques": [
+      "ne pas changer de modèle (erreur 2) contre le routage automatique (erreur 23)",
+      "le PDF oblige à rejoindre une communauté",
+      "quelques commandes ne marchent plus avec les projets",
+      "la suppression à 30 jours ne vaut que pour la CLI"
+    ],
+    "reprises": [
+      "« /btw »",
+      "« /loop 30m »",
+      "« kitchen sink »",
+      "« Jev »"
+    ],
+    "signal_promesse": "tenue"
+  },
+  "techniques": {
+    "ap_alignement_5s": {
+      "note": 1,
+      "preuve": "1re phrase sur les modèles 5.5, sans les erreurs ; 1er plan logo Claude et « 5.5 », comme la miniature mais sans la grille d'erreurs : partiel des deux côtés"
+    },
+    "ap_boucle_curiosite": {
+      "note": 0,
+      "preuve": "0:31 une gradation annoncée jusqu'aux erreurs avancées, mais aucune question ouverte"
+    },
+    "ap_effort_montre": {
+      "note": 2,
+      "preuve": "0:21 « I went through Anthropic's own guides [...] and hundreds of tips from power users »"
+    },
+    "ap_setup_progress_payoff": {
+      "note": 1,
+      "preuve": "Une gradation facile, intermédiaire, avancé, mais chaque erreur est un point de liste, sans but qui avance"
+    },
+    "ap_contraste_rythme": {
+      "note": 1,
+      "preuve": "21 changements de plan la 1re minute, puis 4 à 14 par minute ; pas de rupture nette"
+    },
+    "ap_montrer_sans_son": {
+      "note": 2,
+      "preuve": "Planche intro : « Quietly eating your limits », « Worse answers », « The 23 mistakes costing you the most », « Easy fixes anyone can do today »"
+    },
+    "ali_douleur_histoire": {
+      "note": 1,
+      "preuve": "0:14 la douleur est nette (« quietly eating your usage limits »), mais aucune histoire vécue ne suit"
+    },
+    "ali_coeur_unique": {
+      "note": 1,
+      "preuve": "0:14 une thèse (les vieilles habitudes coûtent cher), mais 23 conseils indépendants"
+    },
+    "alx_pont": {
+      "note": 1,
+      "preuve": "Contexte, preuve d'effort, plan et crédits comme un pont, mais avec une accroche dissonance et douleur"
+    },
+    "alx_pull_paint_point": {
+      "note": 2,
+      "preuve": "La plupart des erreurs : une scène (1:00 « say you're writing a client email »), le coût, puis la correction"
+    },
+    "alx_nom_idee": {
+      "note": 2,
+      "preuve": "« Kitchen sink session », « Infinite exploration », « Rules without a reason », chacun en titre à l'écran"
+    },
+    "alx_phrase_finale": {
+      "note": 1,
+      "preuve": "6:31 « it starts from your standards instead of from scratch every single time » ; pas sur la plupart"
+    },
+    "alx_douleur_reve": {
+      "note": 2,
+      "preuve": "« Mistakes you may still be making » : le titre parle du problème du spectateur"
+    },
+    "alx_cta_tot": {
+      "note": 2,
+      "preuve": "2:58 le PDF des 23 erreurs, lié au sujet, avant 4 minutes"
+    },
+    "ed_intro_courte": {
+      "note": 1,
+      "preuve": "Premier point à 0:51, après la douleur, la preuve, le plan et les crédits"
+    },
+    "ed_hook": {
+      "note": 2,
+      "preuve": "0:14 « habits that worked before are now quietly eating your usage limits » : dissonance nette"
+    },
+    "ed_probleme_preuve_consignes": {
+      "note": 2,
+      "preuve": "La plupart des erreurs : problème, ce qu'en dit Anthropic ou un test (5:11 artificialanalysis.ai), puis la correction"
+    },
+    "ed_tension_relancee": {
+      "note": 1,
+      "preuve": "Les niveaux sont relancés (10:18), mais d'une erreur à l'autre c'est « Number X is », sans question"
+    },
+    "ed_histoire_vecue": {
+      "note": 1,
+      "preuve": "Anecdotes d'usage (8:21 burst, 17:00 align, 19:44 Jev) ; pas d'histoire racontée"
+    },
+    "ed_sans_surexplication": {
+      "note": 1,
+      "preuve": "La relecture de toute la conversation à chaque prompt est réexpliquée aux erreurs 1, 3, 10 et 12"
+    },
+    "ed_niveau_simple": {
+      "note": 2,
+      "preuve": "1:12 le cache « Claude's short-term memory » ; 14:04 Git « a save button for your whole project » ; 15:55 sous-agent expliqué"
+    },
+    "tous_video_suivante": {
+      "note": 0,
+      "preuve": "« I'll see you all next time », sans vidéo précise"
+    }
+  },
+  "a_retenir": {
+    "titre_miniature": "Titre d'origine « 23 Claude Mistakes that Devour Your Usage Limits (tips for 5.5 Models) », changé environ 16 h 45 après la sortie (relevé VidIQ), miniature changée deux fois. La miniature : la mascotte Claude se prend la tête devant une grille de 23 icônes barrées.",
+    "intro_structure": "23 erreurs en trois niveaux (facile, intermédiaire, avancé). Chaque erreur suit le même moule : une scène, le coût, la preuve d'Anthropic, la correction, souvent un prompt à capturer. Le PDF arrive à 2:58, après la 2e erreur.",
+    "habillage": "Une carte par erreur : titre court, sous-titre, Jay dans un grand cadre arrondi à droite. Interface Claude recréée, chiffres animés.",
+    "idee_pour_nous": "Une liste d'erreurs graduée avec la preuve de l'éditeur pour chacune, et un PDF à donner à son agent pour auditer ses propres sessions, sur la communauté gratuite.",
+    "objectif": "club"
+  }
+}

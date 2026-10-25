@@ -1,0 +1,210 @@
+{
+ "recupere_le": "2026-10-25",
+ "breakout": 0.98,
+ "vph": 66.77,
+ "stats_jour": [
+  {
+   "timestamp": "2026-10-02T01:33:33.650Z",
+   "views": 223,
+   "likes": 10,
+   "comments": 1,
+   "vph": 446
+  },
+  {
+   "timestamp": "2026-10-03T00:37:18.591Z",
+   "views": 49149,
+   "likes": 754,
+   "comments": 25,
+   "vph": 855
+  },
+  {
+   "timestamp": "2026-10-04T00:42:11.151Z",
+   "views": 60972,
+   "likes": 931,
+   "comments": 27,
+   "vph": 341
+  },
+  {
+   "timestamp": "2026-10-05T00:57:22.814Z",
+   "views": 66828,
+   "likes": 1017,
+   "comments": 28,
+   "vph": 227.21311475409837
+  },
+  {
+   "timestamp": "2026-10-06T00:35:35.964Z",
+   "views": 71014,
+   "likes": 1093,
+   "comments": 28,
+   "vph": 169
+  },
+  {
+   "timestamp": "2026-10-07T00:53:32.374Z",
+   "views": 74232,
+   "likes": 1142,
+   "comments": 28,
+   "vph": 123
+  },
+  {
+   "timestamp": "2026-10-08T00:35:00.956Z",
+   "views": 77390,
+   "likes": 1191,
+   "comments": 30,
+   "vph": 138
+  },
+  {
+   "timestamp": "2026-10-09T00:40:38.860Z",
+   "views": 81092,
+   "likes": 1231,
+   "comments": 30,
+   "vph": 159
+  },
+  {
+   "timestamp": "2026-10-10T00:36:38.117Z",
+   "views": 84549,
+   "likes": 1279,
+   "comments": 31,
+   "vph": 128
+  },
+  {
+   "timestamp": "2026-10-11T00:38:39.550Z",
+   "views": 87257,
+   "likes": 1309,
+   "comments": 32,
+   "vph": 76
+  },
+  {
+   "timestamp": "2026-10-12T00:57:58.200Z",
+   "views": 89994,
+   "likes": 1344,
+   "comments": 33,
+   "vph": 93.87096774193547
+  },
+  {
+   "timestamp": "2026-10-13T00:09:34.702Z",
+   "views": 92367,
+   "likes": 1359,
+   "comments": 33,
+   "vph": 90
+  },
+  {
+   "timestamp": "2026-10-14T00:13:48.030Z",
+   "views": 94427,
+   "likes": 1383,
+   "comments": 33,
+   "vph": 46.4516129032258
+  },
+  {
+   "timestamp": "2026-10-15T00:33:16.924Z",
+   "views": 96296,
+   "likes": 1400,
+   "comments": 33,
+   "vph": 77
+  },
+  {
+   "timestamp": "2026-10-16T00:33:00.960Z",
+   "views": 97986,
+   "likes": 1416,
+   "comments": 33,
+   "vph": 82
+  },
+  {
+   "timestamp": "2026-10-17T00:32:55.021Z",
+   "views": 99270,
+   "likes": 1430,
+   "comments": 33,
+   "vph": 48
+  },
+  {
+   "timestamp": "2026-10-18T00:58:22.773Z",
+   "views": 100534,
+   "likes": 1441,
+   "comments": 33,
+   "vph": 39.677419354838705
+  },
+  {
+   "timestamp": "2026-10-19T00:35:50.357Z",
+   "views": 101825,
+   "likes": 1460,
+   "comments": 33,
+   "vph": 52.13114754098361
+  },
+  {
+   "timestamp": "2026-10-20T00:32:04.741Z",
+   "views": 103278,
+   "likes": 1478,
+   "comments": 33,
+   "vph": 35.59322033898305
+  },
+  {
+   "timestamp": "2026-10-21T00:32:23.879Z",
+   "views": 104657,
+   "likes": 1495,
+   "comments": 34,
+   "vph": 53.14285714285714
+  },
+  {
+   "timestamp": "2026-10-22T00:32:16.340Z",
+   "views": 105921,
+   "likes": 1510,
+   "comments": 34,
+   "vph": 45.6
+  },
+  {
+   "timestamp": "2026-10-23T01:00:00.955Z",
+   "views": 107004,
+   "likes": 1524,
+   "comments": 35,
+   "vph": 36.774193548387096
+  },
+  {
+   "timestamp": "2026-10-24T00:32:03.696Z",
+   "views": 107881,
+   "likes": 1535,
+   "comments": 35,
+   "vph": 29.508196721311478
+  },
+  {
+   "timestamp": "2026-10-25T00:10:48.004Z",
+   "views": 108757,
+   "likes": 1544,
+   "comments": 36,
+   "vph": 66
+  }
+ ],
+ "changements": [
+  {
+   "createdAt": "2026-10-02T01:33:33Z",
+   "title": "Claude Sonnet 5.5 is a BEAST for Video Editing (2x Cheaper)",
+   "thumbnails": null
+  },
+  {
+   "createdAt": "2026-10-02T03:49:22Z",
+   "title": null,
+   "thumbnails": [
+    {
+     "id": "c279e56f-e322-4cf9-ba90-9c87dfc69699",
+     "ytUrl": "https://i.ytimg.com/vi/uaVYHiF8f7k/maxresdefault.jpg",
+     "snapshotUrl": "https://vidiq-video-thumbnails.s3.us-east-1.amazonaws.com/uaVYHiF8f7k/c279e56f-e322-4cf9-ba90-9c87dfc69699.jpg"
+    }
+   ]
+  },
+  {
+   "createdAt": "2026-10-02T07:33:22Z",
+   "title": "Turn Claude Into a Video Editing GENIUS (in 3 simple steps)",
+   "thumbnails": null
+  },
+  {
+   "createdAt": "2026-10-02T07:49:11Z",
+   "title": null,
+   "thumbnails": [
+    {
+     "id": "165d22f8-b5e1-492d-9d3b-4e997445dfcd",
+     "ytUrl": "https://i.ytimg.com/vi/uaVYHiF8f7k/maxresdefault.jpg",
+     "snapshotUrl": "https://vidiq-video-thumbnails.s3.us-east-1.amazonaws.com/uaVYHiF8f7k/165d22f8-b5e1-492d-9d3b-4e997445dfcd.jpg"
+    }
+   ]
+  }
+ ],
+ "ab_tests": []
+}

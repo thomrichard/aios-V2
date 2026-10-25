@@ -1,0 +1,153 @@
+[00:00] Every animation you're going to see in this video, I didn't edit a single frame of it.
+[00:04] No After Effects, no video model.
+[00:06] Claude wrote every single one of them in code.
+[00:08] And that's exactly what Anthropic just released.
+[00:11] It's called Claude Motion.
+[00:12] You tell Claude what video you want in normal words, and it builds it for you as an animation.
+[00:18] And here's why it's a big deal now, because it's code and not a video model.
+[00:21] You can change one word, one price, one color, and everything else stays exactly the same.
+[00:27] No regeneration, no hoping that next one comes out better.
+[00:30] And no need to pay a lot of extra credits.
+[00:32] So today, I'm going to show you what Claude Motion is, how it works, and what it can do and can't do.
+[00:38] Right now, it's only on certain plans.
+[00:40] I'll also show you the skill that I have made that will give you access to this in your $20 month plan.
+[00:44] So by the end of this video, you'll be able to make your own promos, explainers, and ads without ever opening an edit app.
+[00:51] And if you're new here, I'm Jad.
+[00:53] I've been making motion graphics videos with Claude every day for the past weeks, and one of my videos just passed 200,000 views.
+[00:59] And everything I build, I turn it into a skill, and I give it away for free.
+[01:03] So join my school community.
+[01:04] We do weekly calls to help you set up these skills.
+[01:07] Timestamps are also below, so if you want to see something specific, you can just go over it.
+[01:11] So let's get straight into it.
+[01:12] So what is Claude Motion?
+[01:13] It came out on October 8th in beta.
+[01:15] You type {slash} motion and Claude message box.
+[01:18] You describe what you want, and Claude makes an animation that plays like a short video.
+[01:22] And the examples Anthropic gives are really business stuff.
+[01:26] A 30-second explainer for a company meeting, a chart from a board deck, but animated.
+[01:31] A product walk-through for new users.
+[01:33] When it's done, you can change it yourself in the editor.
+[01:36] Or you just ask Claude to change it, and you download it as an MP4.
+[01:40] And here's what I actually find the most interesting.
+[01:42] Anthropic lists the apps you can open it in after.
+[01:46] Adobe, Descript, HeyGen, Hixfield, InVideo, Luma AI, and Runway.
+[01:50] And Canva and Captions are coming soon.
+[01:52] So So Anthropic isn't really trying to replace video tools.
+[01:55] It plugs them right into the system.
+[01:57] Now, just to note, right now Claude Motion is on beta on Team and Enterprise.
+[02:02] That's it.
+[02:02] Free, Pro, and Max are not on the list.
+[02:05] And if your company is on Enterprise, it's off by default, so your admin has to turn it on.
+[02:11] I'm on Max, so I don't have it either.
+[02:13] Will it come to Max?
+[02:14] Anthropic hasn't said so, so I'm not waiting.
+[02:17] So, if you don't have Team or Enterprise, don't worry.
+[02:20] I made a skill that gives you motion graphics on the $20 a month plan.
+[02:24] Now, I'll be honest with you.
+[02:25] It's going to use your usage fast because motion graphics is heavy code.
+[02:30] Every scene, every movement, every second is code that Claude has to write, check, and fix, so it works on the $20 plan.
+[02:38] You just won't make 10 videos a day on it.
+[02:40] But there are workarounds where you use HiQ 5.5, which is a really cheap model and does also the work.
+[02:46] In a few minutes, I'll show you exactly how I make these videos with that skill.
+[02:50] But first, you need to understand how this actually works because once you give this, you will know exactly what it's good at and what it's not.
+[02:56] So, basically, think of it like this.
+[02:58] A video model, like the ones everyone's posting on X, gives you a JPEG.
+[03:02] A flat picture, every frame is just pixels.
+[03:04] So, if there's a typo on the screen, you have to generate the whole thing again, and the new one comes out different.
+[03:10] Different colors, different shapes, different everything.
+[03:12] And you pay for it again.
+[03:14] Claude Motion gives you the Canva file.
+[03:16] Every word, every color, every movement, every second of the timing is its own piece.
+[03:22] Written in code, Claude changes that one line, and everything else comes out identical.
+[03:27] So, what does that mean for you?
+[03:28] It means you can actually fix things.
+[03:29] When a client tells you the price changed or we are open on Sundays, now that's a 10-second change, not a whole new video.
+[03:37] But fair is fair, there is a catch.
+[03:39] Because it's code, Claude can only use what it can draw.
+[03:42] Text, shapes, charts, and your own images.
+[03:44] Anthropic says it straight up.
+[03:46] No generated footage and no AI-generated people.
+[03:49] So, if you want a real-looking product shot on a person on screen, Claude Motion won't make that for you.
+[03:54] And I'll show you how I get around that, too.
+[03:56] Now, the most important tip, whether you use Claude Motion or my way, don't just type "Make me an ad." Plan it with Claude first in a normal chat.
+[04:05] Go back and forth until you have a real prompt.
+[04:07] And every good motion prompt I write has four parts.
+[04:11] Number one, who is it for, where is it going, and how long is it?
+[04:14] A 20-second promo for a barber shop for Instagram, for example.
+[04:18] Number two, the look, the colors, the hex codes, the fonts, the mood.
+[04:21] That's super important.
+[04:22] Number three, scene by scene with the seconds.
+[04:25] Scene one, 0 to 4 seconds, this happens.
+[04:29] Scene two, this happens, and so on.
+[04:31] Number four, the rules.
+[04:32] What it should never do, never more than six words on screen, prices are always in the brand color.
+[04:37] And honestly, the rules are the secret.
+[04:39] The same thing I do with my style sheets.
+[04:41] When you give Claude all four, the first version comes back so much closer to what you had in your head.
+[04:47] Okay, so now the part that I promised, the skill, and how I make this without a team or enterprise.
+[04:53] So, my setup is Claude Code with a tool called HyperFrames.
+[04:56] HyperFrames is free and open source.
+[04:58] It's made by the team of Haydn.
+[05:00] It's what lets Claude turn code in actual video file.
+[05:04] And Claude Code, if you've never used it, is basically Claude working inside a folder on your computer.
+[05:09] It can create files, run them, and check its own work.
+[05:12] So, it's the same idea as Claude Motion.
+[05:14] You describe the video, Claude writes it as code.
+[05:17] The difference is it runs on your own computer.
+[05:20] On the Claude plan, you already pay for.
+[05:21] Let me show you.
+[05:22] I asked for a 20-second promo for a barber shop, Fade House, and gave it four parts.
+[05:27] Who is it for, the look, scene by scene, and the rules.
+[05:30] And this is what it came back came back with.
+[05:32] I'll let you watch the video.
+[05:34] >> >> Now watch this.
+[05:54] This is the part I love.
+[05:55] I told Claude to put every word, every price, and every color in one block at the top of the file.
+[06:00] So, here it is.
+[06:01] The haircut is $25.
+[06:03] The owner texts me it's $30 now.
+[06:06] So, I just tell Claude change the haircut to $30 line, and everything else is identical.
+[06:11] Same timing, same movement, same everything.
+[06:14] And it's not just words.
+[06:15] Make the poll gold, same thing, one line, done.
+[06:19] That's literally the whole point of actually making videos with code.
+[06:22] It's how much you can modify.
+[06:24] And I'm sure Hicksfield will have kind of the same thing where they generate a lot of things with code, so you can save your tokens.
+[06:30] And if you want to check it before it renders, Hyperframes opens a preview in your browser, and you can scrub through it second by second.
+[06:38] When I'm happy, Claude renders it into an MP4 right on my laptop.
+[06:41] Here's the difference.
+[06:42] Claude Motion lives inside Claude app, so it's easier, and you can share it with your team.
+[06:47] My way runs on my computer.
+[06:49] So, how fast it renders depends on your laptop.
+[06:52] For my computer on a MacBook, it works completely fine.
+[06:55] And like I said, it eats also your usage.
+[06:58] So, if you have a $20 plan, make sure you strategize your prompt properly.
+[07:03] But, the way I turn the scale is literally $0 with Hyperframes Ace 1.5.
+[07:09] Now, let's turn the motion graphic better with real images.
+[07:12] Remember the catch, Claude can't make a real-looking photo.
+[07:15] So, you do it in two steps.
+[07:17] First, you make the images with an image model.
+[07:20] Then Claude animates everything on top, like this one.
+[07:22] This sneaker doesn't exist.
+[07:24] I made the image in Hicksfield, and every move, every word, every transition on top of it, that's Claude in code.
+[07:30] So, I can still change my word anytime without making the images again.
+[07:35] And funny enough, Hicksfield is one of the apps Anthropic lists for Claude Motion, too.
+[07:39] So, whichever route you take, it fits right in.
+[07:42] And I was able to get an offer for you guys.
+[07:44] The link is in the description.
+[07:45] If you don't want to get a subscription, you can also use their API.
+[07:48] You'll probably see a link in the description, and just click it and see if if it fits your budget.
+[07:52] And as you know me, I'm not gatekeeping any of this.
+[07:54] I've been sharing a lot of skills.
+[07:55] The motion graphic skill is in my school community.
+[07:58] The link is in the description, too.
+[08:00] And I hope I'll see you in the weekly calls.
+[08:01] Now, if you were wondering which one you should use, if your company already pays for team or enterprise, try Claude Motion.
+[08:08] It's the easiest.
+[08:09] It's right inside the app, and your whole team can use it.
+[08:12] But, in my personal take, it's not the best.
+[08:14] I believe this skill is much better if you're on your own $20 plan or max, and you want real images or music and files, this skill is much, much better.
+[08:23] Thanks for staying until the end of this video.
+[08:25] It means a lot to me.
+[08:27] Subscribe if you want more skills like these.
+[08:29] I drop free skills every single week, and I'll see you in the next one.

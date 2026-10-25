@@ -1,0 +1,148 @@
+{
+ "id": "1CSh8tBR1oc",
+ "url": "https://www.youtube.com/watch?v=1CSh8tBR1oc",
+ "chaine": "jad-mh",
+ "titre": "VIRAL Carousels With Motion Graphics 0$ (Turned It Into a Skill)",
+ "titre_ytdlp": "VIRAL Carousels With Motion Graphics 0$ (Turned It Into a Skill)",
+ "publie": "2026-10-07T20:15:10Z",
+ "duree_s": 898,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "X8qgMgPORMG_sgXVK4o_hAvQhVM",
+  "id": "1CSh8tBR1oc",
+  "snippet": {
+   "publishedAt": "2026-10-07T20:15:10Z",
+   "channelId": "UCkbjWQ7kLFNRY_RiJbqVWRg",
+   "title": "VIRAL Carousels With Motion Graphics 0$ (Turned It Into a Skill)",
+   "description": "These are 3 Instagram carousels for 3 real businesses: a SaaS app, a restaurant and a clothing brand. Every slide moves, and Claude built all of them. A lot of you asked \"cool, but what's the use case?\", so here's what I asked for, what it made, what it cost and which model I used 👇\n\n🎁 Get the free carousel skill: https://www.skool.com/nextphase-5790\n\n🙅 Not sponsored. Nobody paid me for this video, I don't make money from these skills, and my Skool community is free.\n\n🎬 How motion graphics works (5 rules)\n1. Easing: nothing in real life moves at 1 splike a robot.\n2. Weight: things squash when they land and stretch when they fall fast.\n3. Rhythm: every hit, bounce and flash lands  sound off.\n4. The loop: Instagram loops a video slide forever, so the last frame has to flow back into the first.\n5. One world: 1 long scene cut into 6 slides, camera moving.\nClaude isn't an AI video model. It writes code, and your computer renders it frame by frame. That's why the loops are\nperfect and you can change anything after wit\n\n📱 The 3 use cases\n1️⃣ SaaS app: Flowpilot, an AI tool for team busywork. I barely told Claude anything: tell a story, make the UI look real, no dark background with neon glow, and he whole carousel into a flight chart, becausethe product is called Flowpilot. No images, no API calls, just code.\n2️⃣ Restaurant: Ember & Bun, a smash burger sp$14.99). This time I wrote out every slide. Atthe end of each slide a piece of the burger whips into the next one, so you watch the burger get built as you swipe. The burger isn't a photo: Claude drew every i\n3️⃣ Clothing brand: VOIDWEAR, dropping Collection 01: Gravity on Friday at 8 PM. I connected Claude to Higgsfield so it\nmade the product images itself, then built the 3D sneaker spins, explodes and snaps backtogether. It has its own music, made on my computer for free, and every slide is exactly 4 bars, so the loop never\njumps. My best one so far.\n\n💸 What it actually cost\nI went back into all 3 Claude Code sessions and counted every token.\nThe renderer, fonts, music and sound effects  computer. What you pay for is Claude. I'm onthe Max plan, so I don't pay per carousel.\nIf you paid through the API (Opus 5.5 prices)urant about $13, clothing brand about $16. Each took about an hour and a half, all 3 running at the same time.\nThe clothing brand also used about 46 Higgsfi GPT Image 2.5 Sunburst (2.75 each), 5background removals (1 each) and the 3D models (18 + 9). If you already have product photos, you don't need\nHiggsfield.\n\n🤖 Which model: Opus 5.5. I built all 3 with\n\n⚙️ How to install the skill\n1. Join my free Skool community: https://www.skool.com/nextphase-5790\n2. Open the post for this video and click the free resources.\n3. Download the zip from the Google Drive and copy the prompt.\n4. Open Claude Code, drag the zip in and pastthe skill and renders a demo to prove it works.\n5. Start a new session and say \"build me a carousel for my SaaS platform\" (or your business).\n\n💡 Where you can use this\n• Ads: Instagram carousel ads take up to 10 is that move stop the scroll.\n• Your own marketing: organic posts or a launch.\n• Your existing carousels: give it your Canva to life without changing the design.\n• Local businesses: restaurants, gyms, salons, real estate, events. For clients or for yourself.\n\n⏱️ Chapters\n0:00 3 carousels, made by Claude\n2:22 How motion graphics works\n4:11 Use case 1: a SaaS app\n6:20 Use case 2: a restaurant\n8:12 Use case 3: a clothing brand\n10:43 What it actually cost\n11:50 Which model to use\n12:05 How to install the skill\n13:19 Where you can use this\n14:09 My honest take\n\n🔗 Tools used\nHyperFrames (free, open source; the SaaS caroics skill):https://github.com/heygen-com/hyperframes\nHiggsfield: https://higgsfield.ai\n\n📺 Watch next: the motion graphics carousels ttps://youtu.be/hZ_w1d0uYT4\n\n🙏 To everyone who subscribed: thank you. 400 in 3 days. You're the reason I keep givingthese skills away.\n\n💬 Tell me in the comments: what business would you make one of these for?\n\n🔔 Subscribe if you want more skills like these. See you in the next one.\n\n#claude #motiongraphics #instagramcarousel\n\nPaste these into YouTube's Tags box:\n\nmotion graphics carousel, instagram carousel, carousel use cases, animated carousel, video carousel instagram, carousel ads, instagram carousel ideas, claudopus 5.5, opus 5.5, claude skills, free claudeskill, live carousel, ai carousel, higgsfield, gpt image 2.5, hyperframes, ai marketing, restaurant marketing, saas marketing, clothing brand marketing, social m",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/1CSh8tBR1oc/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/1CSh8tBR1oc/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/1CSh8tBR1oc/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/1CSh8tBR1oc/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/1CSh8tBR1oc/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    },
+    "qhd": {
+     "url": "https://i.ytimg.com/vi/1CSh8tBR1oc/qhddefault.jpg",
+     "width": 2560,
+     "height": 1440
+    }
+   },
+   "channelTitle": "Jad M.H  | AI Automation",
+   "categoryId": "22",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "en",
+   "localized": {
+    "title": "VIRAL Carousels With Motion Graphics 0$ (Turned It Into a Skill)",
+    "description": "These are 3 Instagram carousels for 3 real businesses: a SaaS app, a restaurant and a clothing brand. Every slide moves, and Claude built all of them. A lot of you asked \"cool, but what's the use case?\", so here's what I asked for, what it made, what it cost and which model I used 👇\n\n🎁 Get the free carousel skill: https://www.skool.com/nextphase-5790\n\n🙅 Not sponsored. Nobody paid me for this video, I don't make money from these skills, and my Skool community is free.\n\n🎬 How motion graphics works (5 rules)\n1. Easing: nothing in real life moves at 1 splike a robot.\n2. Weight: things squash when they land and stretch when they fall fast.\n3. Rhythm: every hit, bounce and flash lands  sound off.\n4. The loop: Instagram loops a video slide forever, so the last frame has to flow back into the first.\n5. One world: 1 long scene cut into 6 slides, camera moving.\nClaude isn't an AI video model. It writes code, and your computer renders it frame by frame. That's why the loops are\nperfect and you can change anything after wit\n\n📱 The 3 use cases\n1️⃣ SaaS app: Flowpilot, an AI tool for team busywork. I barely told Claude anything: tell a story, make the UI look real, no dark background with neon glow, and he whole carousel into a flight chart, becausethe product is called Flowpilot. No images, no API calls, just code.\n2️⃣ Restaurant: Ember & Bun, a smash burger sp$14.99). This time I wrote out every slide. Atthe end of each slide a piece of the burger whips into the next one, so you watch the burger get built as you swipe. The burger isn't a photo: Claude drew every i\n3️⃣ Clothing brand: VOIDWEAR, dropping Collection 01: Gravity on Friday at 8 PM. I connected Claude to Higgsfield so it\nmade the product images itself, then built the 3D sneaker spins, explodes and snaps backtogether. It has its own music, made on my computer for free, and every slide is exactly 4 bars, so the loop never\njumps. My best one so far.\n\n💸 What it actually cost\nI went back into all 3 Claude Code sessions and counted every token.\nThe renderer, fonts, music and sound effects  computer. What you pay for is Claude. I'm onthe Max plan, so I don't pay per carousel.\nIf you paid through the API (Opus 5.5 prices)urant about $13, clothing brand about $16. Each took about an hour and a half, all 3 running at the same time.\nThe clothing brand also used about 46 Higgsfi GPT Image 2.5 Sunburst (2.75 each), 5background removals (1 each) and the 3D models (18 + 9). If you already have product photos, you don't need\nHiggsfield.\n\n🤖 Which model: Opus 5.5. I built all 3 with\n\n⚙️ How to install the skill\n1. Join my free Skool community: https://www.skool.com/nextphase-5790\n2. Open the post for this video and click the free resources.\n3. Download the zip from the Google Drive and copy the prompt.\n4. Open Claude Code, drag the zip in and pastthe skill and renders a demo to prove it works.\n5. Start a new session and say \"build me a carousel for my SaaS platform\" (or your business).\n\n💡 Where you can use this\n• Ads: Instagram carousel ads take up to 10 is that move stop the scroll.\n• Your own marketing: organic posts or a launch.\n• Your existing carousels: give it your Canva to life without changing the design.\n• Local businesses: restaurants, gyms, salons, real estate, events. For clients or for yourself.\n\n⏱️ Chapters\n0:00 3 carousels, made by Claude\n2:22 How motion graphics works\n4:11 Use case 1: a SaaS app\n6:20 Use case 2: a restaurant\n8:12 Use case 3: a clothing brand\n10:43 What it actually cost\n11:50 Which model to use\n12:05 How to install the skill\n13:19 Where you can use this\n14:09 My honest take\n\n🔗 Tools used\nHyperFrames (free, open source; the SaaS caroics skill):https://github.com/heygen-com/hyperframes\nHiggsfield: https://higgsfield.ai\n\n📺 Watch next: the motion graphics carousels ttps://youtu.be/hZ_w1d0uYT4\n\n🙏 To everyone who subscribed: thank you. 400 in 3 days. You're the reason I keep givingthese skills away.\n\n💬 Tell me in the comments: what business would you make one of these for?\n\n🔔 Subscribe if you want more skills like these. See you in the next one.\n\n#claude #motiongraphics #instagramcarousel\n\nPaste these into YouTube's Tags box:\n\nmotion graphics carousel, instagram carousel, carousel use cases, animated carousel, video carousel instagram, carousel ads, instagram carousel ideas, claudopus 5.5, opus 5.5, claude skills, free claudeskill, live carousel, ai carousel, higgsfield, gpt image 2.5, hyperframes, ai marketing, restaurant marketing, saas marketing, clothing brand marketing, social m"
+   },
+   "defaultAudioLanguage": "en"
+  },
+  "contentDetails": {
+   "duration": "PT14M58S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": false,
+   "contentRating": {},
+   "projection": "rectangular"
+  },
+  "statistics": {
+   "viewCount": "12905",
+   "likeCount": "349",
+   "favoriteCount": "0",
+   "commentCount": "40"
+  }
+ },
+ "ytdlp": {
+  "id": "1CSh8tBR1oc",
+  "title": "VIRAL Carousels With Motion Graphics 0$ (Turned It Into a Skill)",
+  "description": "These are 3 Instagram carousels for 3 real businesses: a SaaS app, a restaurant and a clothing brand. Every slide moves, and Claude built all of them. A lot of you asked \"cool, but what's the use case?\", so here's what I asked for, what it made, what it cost and which model I used 👇\n\n🎁 Get the free carousel skill: https://www.skool.com/nextphase-5790\n\n🙅 Not sponsored. Nobody paid me for this video, I don't make money from these skills, and my Skool community is free.\n\n🎬 How motion graphics works (5 rules)\n1. Easing: nothing in real life moves at 1 splike a robot.\n2. Weight: things squash when they land and stretch when they fall fast.\n3. Rhythm: every hit, bounce and flash lands  sound off.\n4. The loop: Instagram loops a video slide forever, so the last frame has to flow back into the first.\n5. One world: 1 long scene cut into 6 slides, camera moving.\nClaude isn't an AI video model. It writes code, and your computer renders it frame by frame. That's why the loops are\nperfect and you can change anything after wit\n\n📱 The 3 use cases\n1️⃣ SaaS app: Flowpilot, an AI tool for team busywork. I barely told Claude anything: tell a story, make the UI look real, no dark background with neon glow, and he whole carousel into a flight chart, becausethe product is called Flowpilot. No images, no API calls, just code.\n2️⃣ Restaurant: Ember & Bun, a smash burger sp$14.99). This time I wrote out every slide. Atthe end of each slide a piece of the burger whips into the next one, so you watch the burger get built as you swipe. The burger isn't a photo: Claude drew every i\n3️⃣ Clothing brand: VOIDWEAR, dropping Collection 01: Gravity on Friday at 8 PM. I connected Claude to Higgsfield so it\nmade the product images itself, then built the 3D sneaker spins, explodes and snaps backtogether. It has its own music, made on my computer for free, and every slide is exactly 4 bars, so the loop never\njumps. My best one so far.\n\n💸 What it actually cost\nI went back into all 3 Claude Code sessions and counted every token.\nThe renderer, fonts, music and sound effects  computer. What you pay for is Claude. I'm onthe Max plan, so I don't pay per carousel.\nIf you paid through the API (Opus 5.5 prices)urant about $13, clothing brand about $16. Each took about an hour and a half, all 3 running at the same time.\nThe clothing brand also used about 46 Higgsfi GPT Image 2.5 Sunburst (2.75 each), 5background removals (1 each) and the 3D models (18 + 9). If you already have product photos, you don't need\nHiggsfield.\n\n🤖 Which model: Opus 5.5. I built all 3 with\n\n⚙️ How to install the skill\n1. Join my free Skool community: https://www.skool.com/nextphase-5790\n2. Open the post for this video and click the free resources.\n3. Download the zip from the Google Drive and copy the prompt.\n4. Open Claude Code, drag the zip in and pastthe skill and renders a demo to prove it works.\n5. Start a new session and say \"build me a carousel for my SaaS platform\" (or your business).\n\n💡 Where you can use this\n• Ads: Instagram carousel ads take up to 10 is that move stop the scroll.\n• Your own marketing: organic posts or a launch.\n• Your existing carousels: give it your Canva to life without changing the design.\n• Local businesses: restaurants, gyms, salons, real estate, events. For clients or for yourself.\n\n⏱️ Chapters\n0:00 3 carousels, made by Claude\n2:22 How motion graphics works\n4:11 Use case 1: a SaaS app\n6:20 Use case 2: a restaurant\n8:12 Use case 3: a clothing brand\n10:43 What it actually cost\n11:50 Which model to use\n12:05 How to install the skill\n13:19 Where you can use this\n14:09 My honest take\n\n🔗 Tools used\nHyperFrames (free, open source; the SaaS caroics skill):https://github.com/heygen-com/hyperframes\nHiggsfield: https://higgsfield.ai\n\n📺 Watch next: the motion graphics carousels ttps://youtu.be/hZ_w1d0uYT4\n\n🙏 To everyone who subscribed: thank you. 400 in 3 days. You're the reason I keep givingthese skills away.\n\n💬 Tell me in the comments: what business would you make one of these for?\n\n🔔 Subscribe if you want more skills like these. See you in the next one.\n\n#claude #motiongraphics #instagramcarousel\n\nPaste these into YouTube's Tags box:\n\nmotion graphics carousel, instagram carousel, carousel use cases, animated carousel, video carousel instagram, carousel ads, instagram carousel ideas, claudopus 5.5, opus 5.5, claude skills, free claudeskill, live carousel, ai carousel, higgsfield, gpt image 2.5, hyperframes, ai marketing, restaurant marketing, saas marketing, clothing brand marketing, social m",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "3 carousels, made by Claude",
+    "end_time": 142
+   },
+   {
+    "start_time": 142,
+    "title": "How motion graphics works",
+    "end_time": 251
+   },
+   {
+    "start_time": 251,
+    "title": "Use case 1: a SaaS app",
+    "end_time": 380
+   },
+   {
+    "start_time": 380,
+    "title": "Use case 2: a restaurant",
+    "end_time": 492
+   },
+   {
+    "start_time": 492,
+    "title": "Use case 3: a clothing brand",
+    "end_time": 643
+   },
+   {
+    "start_time": 643,
+    "title": "What it actually cost",
+    "end_time": 710
+   },
+   {
+    "start_time": 710,
+    "title": "Which model to use",
+    "end_time": 725
+   },
+   {
+    "start_time": 725,
+    "title": "How to install the skill",
+    "end_time": 799
+   },
+   {
+    "start_time": 799,
+    "title": "Where you can use this",
+    "end_time": 849
+   },
+   {
+    "start_time": 849,
+    "title": "My honest take",
+    "end_time": 897
+   }
+  ],
+  "tags": [],
+  "categories": [
+   "People & Blogs"
+  ],
+  "heatmap": null,
+  "upload_date": "20261007",
+  "duration": 897,
+  "channel": "Jad M.H  | AI Automation",
+  "channel_id": "UCkbjWQ7kLFNRY_RiJbqVWRg",
+  "channel_follower_count": 8580,
+  "thumbnail": "https://i.ytimg.com/vi/1CSh8tBR1oc/maxresdefault.jpg",
+  "view_count": 12905,
+  "like_count": 349,
+  "comment_count": 16
+ }
+}

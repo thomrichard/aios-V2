@@ -1,0 +1,143 @@
+{
+ "id": "y4GwCCsYwvQ",
+ "url": "https://www.youtube.com/watch?v=y4GwCCsYwvQ",
+ "chaine": "jad-mh",
+ "titre": "Claude Opus 5.5 Is INSANE at Motion Graphics 0$ (Turned it into a skill)",
+ "titre_ytdlp": "Claude Opus 5.5 Is INSANE at Motion Graphics 0$ (Turned it into a skill)",
+ "publie": "2026-10-09T18:46:32Z",
+ "duree_s": 1478,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "Zf4Vvfbd-d5pvUyk_Lsx_rIW1pg",
+  "id": "y4GwCCsYwvQ",
+  "snippet": {
+   "publishedAt": "2026-10-09T18:46:32Z",
+   "channelId": "UCkbjWQ7kLFNRY_RiJbqVWRg",
+   "title": "Claude Opus 5.5 Is INSANE at Motion Graphics 0$ (Turned it into a skill)",
+   "description": "I made the same viral-style music video twice with Claude: one paid, one for $0. Here's what each cost, how much Claude usage it took, and the whole process 👇\n\n🎁 Get the free music video skill: https://www.skool.com/nextphase-5790\n\n🙅 Not sponsored. I don't make money from the skill and I'm not monetized. Everything here came out of my own pocket.\n\n👀 How the viral ones were really made\n1️⃣ The original (2.8M views) was posted by a Berkeley master's student with about 1,600 followers. Claude ran 7 Opus 5.5 agents, each coding a scene at the same time.\n2️⃣ Donald's remake (almost 4M views) says \"one prompt\" and \"Claude worked for 12 hours\". His prompt is 9,608 characters, tells Claude to spend all his Max plan usage, and gives it roughly $2,000 in AI credits (Seedance 2.5, ElevenLabs). Frame by frame: 114 cuts in 2:21, and most of it is motion graphics, not AI video.\n3️⃣ The Blender one: Opus 5.5 wrote the code, but the girl, key images and music came from paid models (MiniMax, Midjourney).\n\n🎬 How Claude makes a video\nClaude can't output video. It writes code (a web page), a browser screenshots every frame, and FFmpeg (free) glues them together. 2:45 at 30 fps = 4,950 screenshots. Because it's code, you can change anything and render again.\n\n🎵 Step 1: the song ($0)\nClaude wrote the lyrics and made the song on my MacBook Air (16 GB) with ACE-Step 1.5, a free, open-source music model. No Suno, no subscription. It made 4 takes, transcribed each one and picked the clearest. The singer kept saying Claude wrong, so Claude spelled its name \"Clawd\" in the lyrics. Then it timed every word.\n\n💰 Version 1: paid\n• Her character sheet: Higgsfield, 10 credits\n• 21 poses (Nano Banana 2.1) + 6 clips of her moving, 5 s each (Kling 3.0), through kie.ai (pay as you go, no subscription)\n• A lip-sync test ($0.24). It worked, but it looked like every AI avatar, so I dropped it and told Claude: make her out of code.\n• 17 scenes, 15 builders coding at the same time. Then Claude watched it and fixed what was wrong.\nTotal: $2.97 on kie.ai + 10 Higgsfield credits. Not $2,000.\n\n🆓 Version 2: $0\nOne rule: nothing paid. No Higgsfield, no kie.ai, no AI images, no AI video. Only my Claude subscription.\n• Code can't draw an anime girl yet, so Claude made its own mascot: CURSOR.\n• He sings with no lip-sync model. His mouth follows the vowels measured from the song itself.\n• The rulebook: nothing stays still for more than 0.4 s, something hits on every beat, everything bright.\n• Claude grades itself: it puts a screenshot of every shot on one page, caught the galaxy turning into a white blob, and fixed it.\n\n📊 Paid vs $0\n• Character: paid wins if you want a real character or your own avatar. A few credits is enough, then code does the rest. My take: a mix of both.\n• Money: $2.97 + 10 Higgsfield credits vs $0.\n• Claude usage (Max plan, weekly limit): paid about 16-19%, $0 about 19%. $0 saves you money, not usage.\n• Time: each one took Claude about 1.5 to 2 hours. Not 12.\n• Just starting? Use the $0 one and ask for 15 seconds first.\n\n⚙️ How to install the skill\n1. Join my free Skool: https://www.skool.com/nextphase-5790\n2. Find the post with this video's title (or go to the free resources). It links to my Google Drive. Download the folder.\n3. Open Claude Code, open the install prompt from the Drive, copy everything, paste it in and hit enter. It sets up the free tools (ACE-Step, HyperFrames) for you.\n4. Start a new Claude Code session so the skill loads.\n5. Use Opus 5.5: type /model and pick it. These are big builds.\nThe music model takes about 11 GB of disk space. On Pro? Start with a 30-second video, not the full song.\n\n⏱️ Chapters\n0:00 Two music videos: paid vs $0\n0:57 What you asked for\n3:12 How the viral ones were made\n10:34 How Claude makes a video\n11:22 Step 1: the song\n12:57 Version 1: paid\n17:49 Version 2: $0\n21:47 Paid vs $0\n22:35 How to install the skill\n23:46 My take\n\n📺 Watch next: https://youtu.be/zke3bTtvmLo\n\n🙏 400 to almost 4,000 subscribers in less than a week. Thank you. I read every comment, and this whole video is built on your feedback.\n\n💬 Which one did you like more: the paid one or the $0 one?\n\n🔔 Subscribe if you want more skills like these. See you in the next one.\n\n#claude #motiongraphics #aimusicvideo #claude #motiongraphics #aimusicvideo #claudecode #aivideo #aimusic #anthropic #acestep #higgsfield #aitools #musicvideo #aianimation #contentcreator",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/y4GwCCsYwvQ/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/y4GwCCsYwvQ/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/y4GwCCsYwvQ/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/y4GwCCsYwvQ/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/y4GwCCsYwvQ/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    }
+   },
+   "channelTitle": "Jad M.H  | AI Automation",
+   "categoryId": "22",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "en",
+   "localized": {
+    "title": "Claude Opus 5.5 Is INSANE at Motion Graphics 0$ (Turned it into a skill)",
+    "description": "I made the same viral-style music video twice with Claude: one paid, one for $0. Here's what each cost, how much Claude usage it took, and the whole process 👇\n\n🎁 Get the free music video skill: https://www.skool.com/nextphase-5790\n\n🙅 Not sponsored. I don't make money from the skill and I'm not monetized. Everything here came out of my own pocket.\n\n👀 How the viral ones were really made\n1️⃣ The original (2.8M views) was posted by a Berkeley master's student with about 1,600 followers. Claude ran 7 Opus 5.5 agents, each coding a scene at the same time.\n2️⃣ Donald's remake (almost 4M views) says \"one prompt\" and \"Claude worked for 12 hours\". His prompt is 9,608 characters, tells Claude to spend all his Max plan usage, and gives it roughly $2,000 in AI credits (Seedance 2.5, ElevenLabs). Frame by frame: 114 cuts in 2:21, and most of it is motion graphics, not AI video.\n3️⃣ The Blender one: Opus 5.5 wrote the code, but the girl, key images and music came from paid models (MiniMax, Midjourney).\n\n🎬 How Claude makes a video\nClaude can't output video. It writes code (a web page), a browser screenshots every frame, and FFmpeg (free) glues them together. 2:45 at 30 fps = 4,950 screenshots. Because it's code, you can change anything and render again.\n\n🎵 Step 1: the song ($0)\nClaude wrote the lyrics and made the song on my MacBook Air (16 GB) with ACE-Step 1.5, a free, open-source music model. No Suno, no subscription. It made 4 takes, transcribed each one and picked the clearest. The singer kept saying Claude wrong, so Claude spelled its name \"Clawd\" in the lyrics. Then it timed every word.\n\n💰 Version 1: paid\n• Her character sheet: Higgsfield, 10 credits\n• 21 poses (Nano Banana 2.1) + 6 clips of her moving, 5 s each (Kling 3.0), through kie.ai (pay as you go, no subscription)\n• A lip-sync test ($0.24). It worked, but it looked like every AI avatar, so I dropped it and told Claude: make her out of code.\n• 17 scenes, 15 builders coding at the same time. Then Claude watched it and fixed what was wrong.\nTotal: $2.97 on kie.ai + 10 Higgsfield credits. Not $2,000.\n\n🆓 Version 2: $0\nOne rule: nothing paid. No Higgsfield, no kie.ai, no AI images, no AI video. Only my Claude subscription.\n• Code can't draw an anime girl yet, so Claude made its own mascot: CURSOR.\n• He sings with no lip-sync model. His mouth follows the vowels measured from the song itself.\n• The rulebook: nothing stays still for more than 0.4 s, something hits on every beat, everything bright.\n• Claude grades itself: it puts a screenshot of every shot on one page, caught the galaxy turning into a white blob, and fixed it.\n\n📊 Paid vs $0\n• Character: paid wins if you want a real character or your own avatar. A few credits is enough, then code does the rest. My take: a mix of both.\n• Money: $2.97 + 10 Higgsfield credits vs $0.\n• Claude usage (Max plan, weekly limit): paid about 16-19%, $0 about 19%. $0 saves you money, not usage.\n• Time: each one took Claude about 1.5 to 2 hours. Not 12.\n• Just starting? Use the $0 one and ask for 15 seconds first.\n\n⚙️ How to install the skill\n1. Join my free Skool: https://www.skool.com/nextphase-5790\n2. Find the post with this video's title (or go to the free resources). It links to my Google Drive. Download the folder.\n3. Open Claude Code, open the install prompt from the Drive, copy everything, paste it in and hit enter. It sets up the free tools (ACE-Step, HyperFrames) for you.\n4. Start a new Claude Code session so the skill loads.\n5. Use Opus 5.5: type /model and pick it. These are big builds.\nThe music model takes about 11 GB of disk space. On Pro? Start with a 30-second video, not the full song.\n\n⏱️ Chapters\n0:00 Two music videos: paid vs $0\n0:57 What you asked for\n3:12 How the viral ones were made\n10:34 How Claude makes a video\n11:22 Step 1: the song\n12:57 Version 1: paid\n17:49 Version 2: $0\n21:47 Paid vs $0\n22:35 How to install the skill\n23:46 My take\n\n📺 Watch next: https://youtu.be/zke3bTtvmLo\n\n🙏 400 to almost 4,000 subscribers in less than a week. Thank you. I read every comment, and this whole video is built on your feedback.\n\n💬 Which one did you like more: the paid one or the $0 one?\n\n🔔 Subscribe if you want more skills like these. See you in the next one.\n\n#claude #motiongraphics #aimusicvideo #claude #motiongraphics #aimusicvideo #claudecode #aivideo #aimusic #anthropic #acestep #higgsfield #aitools #musicvideo #aianimation #contentcreator"
+   },
+   "defaultAudioLanguage": "en"
+  },
+  "contentDetails": {
+   "duration": "PT24M38S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": false,
+   "contentRating": {},
+   "projection": "rectangular"
+  },
+  "statistics": {
+   "viewCount": "39532",
+   "likeCount": "877",
+   "favoriteCount": "0",
+   "commentCount": "92"
+  }
+ },
+ "ytdlp": {
+  "id": "y4GwCCsYwvQ",
+  "title": "Claude Opus 5.5 Is INSANE at Motion Graphics 0$ (Turned it into a skill)",
+  "description": "I made the same viral-style music video twice with Claude: one paid, one for $0. Here's what each cost, how much Claude usage it took, and the whole process 👇\n\n🎁 Get the free music video skill: https://www.skool.com/nextphase-5790\n\n🙅 Not sponsored. I don't make money from the skill and I'm not monetized. Everything here came out of my own pocket.\n\n👀 How the viral ones were really made\n1️⃣ The original (2.8M views) was posted by a Berkeley master's student with about 1,600 followers. Claude ran 7 Opus 5.5 agents, each coding a scene at the same time.\n2️⃣ Donald's remake (almost 4M views) says \"one prompt\" and \"Claude worked for 12 hours\". His prompt is 9,608 characters, tells Claude to spend all his Max plan usage, and gives it roughly $2,000 in AI credits (Seedance 2.5, ElevenLabs). Frame by frame: 114 cuts in 2:21, and most of it is motion graphics, not AI video.\n3️⃣ The Blender one: Opus 5.5 wrote the code, but the girl, key images and music came from paid models (MiniMax, Midjourney).\n\n🎬 How Claude makes a video\nClaude can't output video. It writes code (a web page), a browser screenshots every frame, and FFmpeg (free) glues them together. 2:45 at 30 fps = 4,950 screenshots. Because it's code, you can change anything and render again.\n\n🎵 Step 1: the song ($0)\nClaude wrote the lyrics and made the song on my MacBook Air (16 GB) with ACE-Step 1.5, a free, open-source music model. No Suno, no subscription. It made 4 takes, transcribed each one and picked the clearest. The singer kept saying Claude wrong, so Claude spelled its name \"Clawd\" in the lyrics. Then it timed every word.\n\n💰 Version 1: paid\n• Her character sheet: Higgsfield, 10 credits\n• 21 poses (Nano Banana 2.1) + 6 clips of her moving, 5 s each (Kling 3.0), through kie.ai (pay as you go, no subscription)\n• A lip-sync test ($0.24). It worked, but it looked like every AI avatar, so I dropped it and told Claude: make her out of code.\n• 17 scenes, 15 builders coding at the same time. Then Claude watched it and fixed what was wrong.\nTotal: $2.97 on kie.ai + 10 Higgsfield credits. Not $2,000.\n\n🆓 Version 2: $0\nOne rule: nothing paid. No Higgsfield, no kie.ai, no AI images, no AI video. Only my Claude subscription.\n• Code can't draw an anime girl yet, so Claude made its own mascot: CURSOR.\n• He sings with no lip-sync model. His mouth follows the vowels measured from the song itself.\n• The rulebook: nothing stays still for more than 0.4 s, something hits on every beat, everything bright.\n• Claude grades itself: it puts a screenshot of every shot on one page, caught the galaxy turning into a white blob, and fixed it.\n\n📊 Paid vs $0\n• Character: paid wins if you want a real character or your own avatar. A few credits is enough, then code does the rest. My take: a mix of both.\n• Money: $2.97 + 10 Higgsfield credits vs $0.\n• Claude usage (Max plan, weekly limit): paid about 16-19%, $0 about 19%. $0 saves you money, not usage.\n• Time: each one took Claude about 1.5 to 2 hours. Not 12.\n• Just starting? Use the $0 one and ask for 15 seconds first.\n\n⚙️ How to install the skill\n1. Join my free Skool: https://www.skool.com/nextphase-5790\n2. Find the post with this video's title (or go to the free resources). It links to my Google Drive. Download the folder.\n3. Open Claude Code, open the install prompt from the Drive, copy everything, paste it in and hit enter. It sets up the free tools (ACE-Step, HyperFrames) for you.\n4. Start a new Claude Code session so the skill loads.\n5. Use Opus 5.5: type /model and pick it. These are big builds.\nThe music model takes about 11 GB of disk space. On Pro? Start with a 30-second video, not the full song.\n\n⏱️ Chapters\n0:00 Two music videos: paid vs $0\n0:57 What you asked for\n3:12 How the viral ones were made\n10:34 How Claude makes a video\n11:22 Step 1: the song\n12:57 Version 1: paid\n17:49 Version 2: $0\n21:47 Paid vs $0\n22:35 How to install the skill\n23:46 My take\n\n📺 Watch next: https://youtu.be/zke3bTtvmLo\n\n🙏 400 to almost 4,000 subscribers in less than a week. Thank you. I read every comment, and this whole video is built on your feedback.\n\n💬 Which one did you like more: the paid one or the $0 one?\n\n🔔 Subscribe if you want more skills like these. See you in the next one.\n\n#claude #motiongraphics #aimusicvideo #claude #motiongraphics #aimusicvideo #claudecode #aivideo #aimusic #anthropic #acestep #higgsfield #aitools #musicvideo #aianimation #contentcreator",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "Two music videos: paid vs $0",
+    "end_time": 57
+   },
+   {
+    "start_time": 57,
+    "title": "What you asked for",
+    "end_time": 192
+   },
+   {
+    "start_time": 192,
+    "title": "How the viral ones were made",
+    "end_time": 634
+   },
+   {
+    "start_time": 634,
+    "title": "How Claude makes a video",
+    "end_time": 682
+   },
+   {
+    "start_time": 682,
+    "title": "Step 1: the song",
+    "end_time": 777
+   },
+   {
+    "start_time": 777,
+    "title": "Version 1: paid",
+    "end_time": 1069
+   },
+   {
+    "start_time": 1069,
+    "title": "Version 2: $0",
+    "end_time": 1307
+   },
+   {
+    "start_time": 1307,
+    "title": "Paid vs $0",
+    "end_time": 1355
+   },
+   {
+    "start_time": 1355,
+    "title": "How to install the skill",
+    "end_time": 1426
+   },
+   {
+    "start_time": 1426,
+    "title": "My take",
+    "end_time": 1478
+   }
+  ],
+  "tags": [],
+  "categories": [
+   "People & Blogs"
+  ],
+  "heatmap": null,
+  "upload_date": "20261009",
+  "duration": 1478,
+  "channel": "Jad M.H  | AI Automation",
+  "channel_id": "UCkbjWQ7kLFNRY_RiJbqVWRg",
+  "channel_follower_count": 8580,
+  "thumbnail": "https://i.ytimg.com/vi/y4GwCCsYwvQ/maxresdefault.jpg",
+  "view_count": 39536,
+  "like_count": 877,
+  "comment_count": 49
+ }
+}

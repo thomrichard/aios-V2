@@ -4,7 +4,7 @@ resume: Comment configurer sa OAuth Google pour N8N et autres services web
 statut: publie
 domaine: contenu
 cree: 2025-10-17
-maj: 2026-10-22
+maj: 2026-10-25
 liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md]
 ---
 # Comment créer ses credentials Google pour N8N en 5 minutes !
@@ -18,22 +18,22 @@ liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, claude-tutoriel-co
 
 ## Stats
 
-YouTube Analytics, données jusqu'au 2026-10-20. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
+YouTube Analytics, données jusqu'au 2026-10-22. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
 
 | | 7 premiers jours | 30 premiers jours | Depuis la sortie |
 |---|---|---|---|
-| Vues | 52 | 116 | 1 726 |
-| Vues engagées | 52 | 116 | 1 637 |
-| Heures regardées | 1,2 | 4,4 | 82,1 |
+| Vues | 52 | 116 | 1 732 |
+| Vues engagées | 52 | 116 | 1 641 |
+| Heures regardées | 1,2 | 4,4 | 82,4 |
 | Abonnés gagnés | 2 | 3 | 14 |
 | Revenus estimés | 0,00 $ | 0,00 $ | 0,60 $ |
-| Durée moyenne regardée | | | 3 min 0 s (45,3 %) |
+| Durée moyenne regardée | | | 3 min 0 s (45,4 %) |
 | J'aime · commentaires | | | 22 · 3 |
 
 ## Liens
 
-- Cite : [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
-- Cite : [2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
+- Cite : [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
+- Cite : [claude-tutoriel-complet-pour-passer-de-debutant-a-26-05](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
 - Description : https://clubsmart.s.gy/masterclass-aios-catalogue
 - Description : https://clubsmart.s.gy/tuto-claude-catalogue
 - Description : https://www.skool.com/club-smart

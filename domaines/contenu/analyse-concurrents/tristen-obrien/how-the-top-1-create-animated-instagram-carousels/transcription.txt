@@ -1,0 +1,120 @@
+[00:00] Have you seen the animated carousels that are showing up on over Instagram?
+[00:03] Well, carousels are already getting way more engagement than any other post, and the ones that are animated are doing even better.
+[00:11] And now, AI can do most of the work for you.
+[00:13] In this video, I'm going to walk you through my workflow on creating these animated carousels, starting with the part that takes me the most time, which is figuring out what goes on each card.
+[00:23] The full transparency, I did ask Gamma to sponsor this video because that's where I used to build these carousels, and I'm going to be using Gamma 5, which is in beta, by the way, but this does work the
+[00:32] same as if you were using the classic generator as well.
+[00:35] Okay, so to start, you can see that you can make a lot of things with Gamma.
+[00:39] It's known for its presentations, but if you look right here, you can see that carousels is an option as well.
+[00:44] So, we are going to start with that.
+[00:46] Now, if you click this plus button right here, you are going to get a bunch of options.
+[00:49] If you're going to build a carousel, and you already have the notes and files and photos of everything that you want to use, well, you can upload them right here if you want to build from those.
+[00:58] But for me, a lot of the time, I just want to click research.
+[01:01] Like, I have an idea, but I want Gamma to do the digging for me, and then build the carousel based off of the information that it found out.
+[01:08] There's also a level of effort that you can choose.
+[01:11] You're going to use light if it's the simple stuff, you're going to use standard if it's regular work, then you're going to use max if it's the most important things that you want to focus on.
+[01:20] Now, the higher the effort, the more credits it's going to use, so I'm going to stick with standard on this one.
+[01:25] And then, you're just going to tell it what you want.
+[01:27] And in this case, I want to make a carousel on Clauds / goal command.
+[01:31] I think it's one of the best commands that's out there.
+[01:33] And I want to teach people what it is, and I want to show people how powerful it is, all within a carousel.
+[01:39] And that's really it.
+[01:40] You just put in a couple of sentences, select the effort that you want.
+[01:43] I turned on research, so it's going to do all the research for me, and then it's going to start building that carousel.
+[01:48] But, before I hit go, take a look down here.
+[01:50] These are templates that are available.
+[01:52] Now, you can upload your own template.
+[01:54] Maybe you have your own branded template, but there are a bunch down here to choose from.
+[01:59] For this one, I'm going to pick one of my favorites, which is featured flow.
+[02:01] I think it looks really professional.
+[02:03] And when you click it, you can read a little bit more about what it does.
+[02:06] You can see the colors that are in it.
+[02:08] And I am going to click add this as my template.
+[02:11] And since we already have research on, I'm just going to click go and let it do its thing.
+[02:15] Now, what I like about this is once we click go, you can take a look over on the left-hand side.
+[02:19] You can see that it's deciding the next steps and it's checking on what it's found.
+[02:22] And what I find really convenient is that if it's unsure on what it should build, it's going to ask you questions before it does anything.
+[02:29] And in this case, it's going to ask me who this is for.
+[02:31] So, I'm going to go ahead and say this is for a broader audience.
+[02:35] It's going to ask me how deep it should go.
+[02:36] So, I'm going to say that I want to keep this quick and maybe just six slides.
+[02:41] And then of course, we want it to add hook because it's a carousel.
+[02:43] We want people to stop and read it.
+[02:45] And again, you can add your own brand if you want to.
+[02:47] But it's going to also suggest some designs.
+[02:50] Now, since I already picked one before we clicked go, that's the one that popped up and that's the one we're going to use.
+[02:55] So, I'm going to click next.
+[02:56] Now, it's going to give you an outline here so you can see exactly what's going on before it generates anything.
+[03:01] And let's take a quick look here.
+[03:02] I really like the hook here where it says stop typing continue.
+[03:05] And I think everything else looks pretty good as well.
+[03:08] So, that is the plan.
+[03:09] Nothing has been designed yet, but since I like it, I'm going to go ahead and click generate.
+[03:14] And on the left-hand side, you can see what the AI is doing right now.
+[03:18] Now, that panel is where we're going to make most of our changes.
+[03:21] So, let's keep an eye on that as this builds out.
+[03:23] Okay, let's take a look at what it made.
+[03:25] Now, the first thing you should know is that anything you see here can be changed.
+[03:29] It can be edited.
+[03:30] And most of the things in this card right now are free form, which means that you can just move them around wherever you want.
+[03:35] And then any word in here, if you don't like them, you can click on it and you can just type whatever you want.
+[03:41] And if you don't like the images as well, well, you can just click on the image that you don't like and it's going to tell you the prompt that it used, but it's also going to show you the
+[03:47] art style.
+[03:48] And you can change the art style to anything that you'd like.
+[03:51] Now, this is editorial.
+[03:52] I it looks pretty good, but it also has every major AI image model that's out there.
+[03:57] It looks like this used GPT image two for this one, but again, basically every model you can think of is in here.
+[04:03] The best one in my opinion is Nano Banana Pro, but you can pick whichever one you want or just go with whatever is recommended.
+[04:10] But, the biggest power here is the edit with agent over on the left-hand side.
+[04:14] So, if there's something on the card that you don't like, you can just tell it that you don't like it.
+[04:18] For example, this flag right here is green.
+[04:20] If I want to say that I want this flag to be blue, well, I would go over here and I'll just type in that I want the flag blue.
+[04:27] You can see it's deciding on what the next steps are, and now it is blue.
+[04:31] Now, the cool thing here is that it's going to show you the modified version, but you can always go back to the original if you want to.
+[04:37] So, I'm just going to click on use original, and it's going to go back to the green color.
+[04:41] Now, while it's working on that, you don't have to sit around and wait, you can move on to the next card if you'd like, and you're never stuck with a change you don't like.
+[04:47] So, if you don't like the text or the image or whatever you changed, you can always revert back to the one that you just had before.
+[04:53] And really quick, before I show you the next one, if this is helping, please do me a favor and hit subscribe.
+[04:57] It really helps out the channel, it's something that I appreciate.
+[05:00] So, take a look at this card right here.
+[05:01] It is all text, and honestly, I think it looks kind of boring.
+[05:04] So, let's go back over to the agent and ask it to add an image that represents this slide.
+[05:09] Notice that the image doesn't fit correctly here.
+[05:11] I'm just going to go back over to Gamma, and I'm going to say, "Hey, I think you need to make this image fit better." And by the way, I think that's normal, right?
+[05:19] So, Gamma's going to get you most of the way there, but you're able to go in and tweak it however you want.
+[05:23] The more specific you are, the better it does.
+[05:25] You can also change how the whole card is laid out.
+[05:28] So, right now, the image is on the side, but if you want it down below, you just select down below, or if you want it on the other side, you have it on the other side.
+[05:34] And you can look at the style of the card as well.
+[05:36] So, the style is going to show you the colors, and of course, you can change the colors if you want to.
+[05:40] You can pretty much edit anything on this card, but no matter how good these look, these are still just images, and we're making an animated carousel.
+[05:49] So, once you get the cards the way that you like them, you can click on share and then export and then export these as PNGs.
+[05:56] Now, that's going to give you every card as an image, and you can just post those just like that if you wanted to on Instagram, but you will have a regular carousel.
+[06:04] But, what we want to do is we want to create an animated carousel.
+[06:07] So, what we're going to do is we're going to remember that name of the gamma that we just created because we are going to use that in the next step.
+[06:14] Now, what I like to do is I like to go over to ChatGPT to animate this.
+[06:18] What we're going to do is we are going to use the GPT-6 Astra model.
+[06:22] One of the best things here is that in ChatGPT, if you go to plugins, you can see that you can add gamma as an option.
+[06:29] So, if it's not one of your plugins yet, go ahead and set it up, but since it is one of mine, I can have ChatGPT actually look at the gamma that we just created.
+[06:38] So, I'm going to go back to the chat, and I'm going to tell it to look at gamma, and I'm going to have it look at what we just created.
+[06:43] I titled it stop typing continue.
+[06:45] Now, I'm going to tell it to animate every single slide even if there wasn't an image, and I'm going to tell it that we want this to look premium and that it's for our Instagram carousel.
+[06:54] I also have a folder on my desktop, and I've called it gamma, so I'm going to have everything saved in there for me, but what I want to do is I want to use Astra's brain to figure out
+[07:02] the best way to animate each card.
+[07:04] And when it's done, this is what we get.
+[07:06] If we go into my folder, we can see that all of the cards that gamma created are now animated and moving, and this is true for even the cards that didn't have any images on them.
+[07:16] So, the last thing we have to do is we have to head over to Instagram, we have to start a new post, we have to select the cards in the order that we want them to be displayed.
+[07:23] We can swipe through these really quick to make sure that they look good.
+[07:26] Then, of course, we'll add our caption here, and mine is going to be Claude/Goal is the best tool ever invented, and then we're going to share it.
+[07:35] And that's it.
+[07:35] We started with just a couple sentences in gamma with it doing some research, and now we have a six-card animated carousel on Instagram that I didn't have to design or animate by hand.
+[07:46] We just used AI tools to do it.
+[07:48] And if you want this whole thing animated, it's really easy to do including posting it online.
+[07:53] You can use a service called make.com for that.
+[07:55] If that's something you want to see, go ahead and comment the word make and I will create a video on it.
+[08:00] Now, I'm sure you can be way more creative than I am.
+[08:02] There are lots of ways to customize this.
+[08:05] But I really like that Gamma does the research for me, it asks the right questions, and then it builds up cards.
+[08:10] And of course, it gives me the complete flexibility to make the cards look like however I want them to look like.
+[08:16] If you want to try out Gamma yourself, the link is in the description.
+[08:19] And if this video was helpful, please subscribe, like the video, leave a comment, and I will see you in the next one.

@@ -1,0 +1,123 @@
+[00:00] Every single animation you're about to see in this video was not edited manually and not generated with Higgs Field.
+[00:06] It's all done through Anthropic's newest release called Claude Motion, where you describe a video in plain English and Claude builds it as an animation like the examples you're seeing here.
+[00:16] And unlike other AI video tools, Claude does all of this using code, which means that you can give comments to the video and Claude can just tweak it without having to charge you for every video generated.
+[00:28] So today I'll show you what Claude Motion is, how to use it, and how to master it.
+[00:32] So that by the end you can automate your own animated promos, explainers, and any video material that you need for your business.
+[00:39] And if you're new, my name is Jay.
+[00:41] I spent over a decade working with brands you probably know, have been in AI since my masters in data science, and now I'm leading our AI business in one of the largest AI communities globally.
+[00:50] So Claude Motion is a new feature in the Claude desktop app, where you describe a video in plain English and Claude creates it for you.
+[00:56] It was released in beta on the 8th of October.
+[00:59] And to find it, you just click artifacts in the sidebar, and at the top you'll see two new buttons, dashboard and motion.
+[01:06] Or in any chat, you can actually just type {slash} motion or pick motion from the output menu.
+[01:11] When it opens, your chat would be on the left, and the video that Claude is about to create is on the right, where you can also give comments to edit it.
+[01:18] And the big difference of Claude Motion from AI video models like Kling or Veo, is how much control you get.
+[01:24] So with a video model, you generate the clip from a prompt, and if you don't like it, you generate it again.
+[01:30] Because you can't actually reach in and fix just one part of it.
+[01:33] But Claude Motion writes the video as code, which means that you can change exactly the part you want, like one word or one element, and everything else stays as it was.
+[01:43] So right now, just to note, Claude Motion is limited to the team and enterprise plans, but knowing Anthropic, I'd expect it to be available on more plans soon.
+[01:51] So it's a good time to get ahead of it.
+[01:53] And in case you're not yet on team now, then you can stick around because near the end I'll also show you an alternative on how to make these videos that you can edit with Claude on any of their
+[02:02] plans.
+[02:03] Now, let's talk about how to use Claude Motion.
+[02:05] Let's say we want a 20-second ad for a small-batch coffee roaster.
+[02:09] Now, the first thing I would recommend is to align first with Claude on a plan because the last thing you want is a video that is off brief.
+[02:16] So, in a normal chat, you just give it your rough idea, and you can also add your reference images, your brand's websites, or even a video whose style you want to copy.
+[02:24] Then just do a bit of back on it until it hands you a detailed prompt with the look, the scenes, and their timing.
+[02:31] Then we go into motion.
+[02:32] So, you can click artifacts and then motion, or again, you can just type {slash} motion in that same session.
+[02:37] Paste that prompt in.
+[02:38] Then for the model and effort, if you want the best results, I would recommend Opus 5.5 on extra high.
+[02:44] And once you send that prompt, the right sidebar will now show the scenes for you, and Claude is now going to start creating your video.
+[02:50] Now, this usually takes around 1 to 4 minutes depending on the complexity of your video, but because we agreed with Claude on the plan first, it would now come back much closer to what we had in mind.
+[03:00] Now, while Claude is building here, it's actually good to understand what's going on behind the scenes and to also compare it versus a normal AI video model.
+[03:08] Because one analogy that you can think about is AI video models, they're sort of like a bakery that sells you a finished cake.
+[03:14] So, every frame that they generate, it is baked in as pixels.
+[03:18] So, for example, if there's a typo on the screen, you can't actually fix just that one bit, and you end up ordering a whole new cake or in this case, generating an entirely new video, which can cost a
+[03:29] lot.
+[03:29] Now, what Claude Motion gives you is the recipe.
+[03:32] So, every word, every color, movement, and timing is actually written down as code, which dictates what you see in the final video.
+[03:40] So, if you want to fix the typo, you can just have Claude change that one line, and the rest of it comes out identical.
+[03:46] However, because it is a recipe, it can only use ingredients that it can draw, which means text, shapes, charts, and your own images.
+[03:54] And it can't generate images or videos the same way you would expect other generative AI models.
+[04:00] But of course, there's a workaround here, and near the end I'll also show how you do that without having to have another monthly subscription to another tool like Higgsfield.
+[04:07] But now let's go back to Claude Motion because once it's finished, you can see we can now play the animation here on the second panel.
+[04:14] And in the bottom right, you can see there's a button called tweaks.
+[04:17] Now let's say yourself or the client tells you the name of the coffee brand is actually Dawn Roast and the bag is $22 now instead of $19.
+[04:25] Well, what you can do is open tweaks where every word in the current scene is listed, type Dawn Roast over the current name, and change the 19 to 22, and the video now updates as you type.
+[04:38] You can also change each scene's length, the speed, and also the number of scenes.
+[04:42] So that is the granularity that you can actually tweak using Claude Motion.
+[04:47] Now the tweak feature that covers the words as well as the timing, but for anything without words on it, like let's say you want to change this element, the coffee cup, what you need to do is to click
+[04:56] the little comic button at the top, then click the cup right there in the preview, and type something a comment like make it an iced coffee with, let's say, ice cubes.
+[05:04] Claude then now works on that one piece only, and when it's done, the cup is iced while the beans, the roast, and the name stay exactly as they were.
+[05:12] So the implication of this is that you can fix one object in a scene you already like without changing the rest of it because those already look okay.
+[05:20] Now when you're happy with it, you can actually click share and send it to your team.
+[05:24] And that way they too can duplicate this project and have their Claude apply edits to it.
+[05:28] The same way that you would with a Google Doc or a Microsoft SharePoint document, for example.
+[05:33] And to get the actual video file, you can just click export, choose MP4, then pick the resolution, frame rate, and quality, and it saves straight to your computer.
+[05:41] Or you can actually just ask Claude to do that, and that would result to the same thing.
+[05:45] And with that, you just created a video without ever opening an editing app.
+[05:49] Now, in terms of how much it costs, there's actually no extra charge for motion.
+[05:53] So, if your plan already includes it, then you already have it.
+[05:55] But, of course, every animation does count towards your plan's usage limits.
+[05:59] And obviously, the longer and more complex the animation, the more of your limit it uses compared to a normal prompt.
+[06:05] Now, Autotrope hasn't said how many videos that works out to, so do keep an eye on your usage while you're testing.
+[06:11] And as a general advice, at least for videos, it is much better to agree on a plan with Claude first before you just let it go forth and create that complex video for you.
+[06:20] So, now let's take it to another level because everything we've made so far is just text, shapes, and charts because that's what Claude motion can draw on its own.
+[06:29] Now, where it gets really interesting is when you give Claude image and video generation, which basically means that you can connect it to AI models that can make pictures and realistic footage.
+[06:40] Then, what happens is that Claude can make the real-looking shots while motion still handles the words, the timing, and the movement on top.
+[06:48] And just to give you a couple of examples, here are some demos of what that can give you.
+[06:52] And as we dive into this more complex topic, what I did is just create a PDF guide where all of the prompts and the resources that I'm about to talk about, you can just grab that, send that to
+[07:01] Claude so that you can immediately teach Claude all the best practices that we are about to cover.
+[07:06] So, the link for that is just in the description if that is something that you need.
+[07:10] Now, when connecting Claude to image and video models, lot of people immediately think that you need Higgs Field for this, which is not surprising because Higgs Field's marketing is sensational, but there are actually tons of other providers that
+[07:21] offer the same models for cheap.
+[07:23] For example, I use key.ai.
+[07:25] We're not sponsored by them, but we just use them quite a lot, especially in our work.
+[07:28] And to give an example, they have GPT image 2, which is one of the best image models out there for about 5 US cents an image, which is much cheaper versus having to subscribe on any monthly plan from
+[07:40] Higgs Field.
+[07:40] To connect it, you can just use a free community connector called the Key MCP.
+[07:45] And an MCP that's basically just a connector that plugs an outside application into Claude.
+[07:50] And to do that, you can get started using this prompt on screen and just send that to Claude, and it sets everything up for you, including instructions on how to connect your account using an API key, which is
+[08:00] sort of like a password that lets Claude access your account in key.ai.
+[08:04] So, once it's connected, what you can now do is to have Claude generate the images or the video clips first and then ask it to build the animation around them.
+[08:13] For our sample ad, you can now see that's a real-looking photo of the roastery behind the opening scene, and we can also have a short clip of beans pouring behind the price.
+[08:22] And all the text that you're seeing right now are still animated by motion on top, so we can still freely change them.
+[08:28] So, now our video gets quality shots, and because the words still come from motion, you can change any of them in tweaks without having to remake the footage again.
+[08:37] Or another technique is that you can do the reverse.
+[08:40] So, you can have Claude Motion make the scenes first as a sort of storyboard, and then you can pass those scenes to a video model like SeeDance, for example, and the model will now reference those storyboard scenes and
+[08:52] create them in the exact style that you like.
+[08:54] For example, these ones are in a soft hand-painted anime style, a bit like a Studio Ghibli film, and SeeDance turned each scene that Claude Motion did into a moving shot.
+[09:04] In that way, you're able to use Claude Motion to unlock more video ideas and options for you.
+[09:10] And by the way, if you want to learn how to build and sell AI systems that businesses actually pay for, then that's pretty much all we do over at the Robo Nuggets community, where not only do you get
+[09:19] access to the Claude Living Masterclass, which we update every week and takes you from zero to mastery with the latest on AI, but you also get access to our Agents as a Service course, which walks you through how
+[09:29] to actually get paid for all these AI skills that you are learning.
+[09:32] You also get to be part of a genuinely great community of AI builders.
+[09:35] In fact, you can see just some of the recent wins our members are getting from the program right here.
+[09:40] So, if you want to start earning from AI, then check that just in the pin comment below.
+[09:43] Now, back to the video.
+[09:44] However, if you're not on the team or enterprise plan yet, and you don't have Claude Motion, don't worry because you of course have some alternatives.
+[09:51] And in fact, you actually have two.
+[09:53] The first one is Hyperframes.
+[09:55] It's a popular option because it's a free and open-source tool by the team from Haegemon.
+[10:00] And to use it, you just send Claude the prompt on screen, which installs the Hyperframes plugin for you, which is basically an add-on that teaches Claude how to make videos with it.
+[10:09] And from then on, when you ask Claude to make or edit videos using Hyperframes, it can actually drive that application for you.
+[10:16] It has a built-in studio that can open in your browser, which is another editor where you can scroll through the video, change things yourself, pretty much similar to Claude Motion.
+[10:25] Now, the second alternative is that you can actually build your own rig, which essentially is just your own little editing app that runs on your computer.
+[10:33] You can actually get started with a prompt on screen.
+[10:35] And if you use Opus 5.5, you can get pretty far with a self-built tool.
+[10:39] Personally, this is what I do most of the time, and I use Rubric Editor, which is part of the tools that we built for our community.
+[10:46] And on top of the motion graphics, it also lets me edit around raw footage of a person talking.
+[10:51] So, it gives me the exact cuts for each video, edits out the pauses, apart from just the normal animations and image and video generations that we illustrated a while ago.
+[11:01] This, in my view, where you have a custom application that is customized for your needs, I think is the most effective way for you to edit videos and animations with Claude.
+[11:10] Just note that versus Claude Motion, these tools that I mentioned, Hyperframes and your own local rig, there is one clear difference, and is that Claude Motion runs in Anthropic's cloud.
+[11:20] So, when it's editing and rendering footage, it is usually much faster because it's essentially using Anthropic's computers.
+[11:26] If you're using a local rig or Hyperframes, that runs on your computer.
+[11:30] So, depending on your CPU, that can render much slower.
+[11:33] So, there you go.
+[11:34] That is Claude Motion where you describe a video in plain English and Claude creates it for you.
+[11:39] As usual, thanks for watching till the end and if that was useful, consider tapping subscribe below because that just helps us a lot to put out more educational stuff like this which helps you use AI better for your
+[11:49] business.
+[11:50] And like I mentioned, you can just grab that PDF guide down below if you need all of the resources that I mentioned in this one.
+[11:56] I'll see you next time.
+[11:57] Cheers.
+[12:01] >>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr" data-mode="nuit">
+<head>
+<meta charset="utf-8">
+<title>Gabarit · bandeau nom et titre</title>
+<!-- 1920 × 1080 sur fond transparent, à poser sur la vidéo. Champs : mode, nom, role. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../jetons.css">
+<link rel="stylesheet" href="gabarits.css">
+<style>
+.cadre{width:1920px;height:1080px;background:transparent}
+.bandeau{left:120px;bottom:120px;display:flex;align-items:center;gap:30px;padding:26px 48px 26px 30px;border-radius:28px;
+  background:var(--bandeau-fond);border:1px solid var(--verre-bord);box-shadow:0 20px 60px rgba(0,0,0,.35);z-index:5}
+.marque{position:relative;width:88px;height:82px;flex:none}
+.marque svg{position:absolute;left:0;top:0;width:88px}
+.marque .halo{--halo-flou:14px;opacity:calc(var(--halo-opacite) * 2.4)}
+.marque .vk{color:var(--texte)}
+.nom{font-size:52px;font-weight:700;letter-spacing:-.025em;line-height:1.05}
+.role{font-size:31px;color:var(--texte-doux);margin-top:6px}
+</style>
+</head>
+<body>
+<div class="cadre">
+  <div class="bandeau">
+    <span class="marque">
+      <svg class="halo" viewBox="0 0 1240 1143.15"><use href="#valknut"/></svg>
+      <svg class="vk" viewBox="0 0 1240 1143.15"><use href="#valknut"/></svg>
+    </span>
+    <span>
+      <div class="nom" data-champ="nom">Thomas Richard</div>
+      <div class="role" data-champ="role">Formateur et consultant IA · Club SMART</div>
+    </span>
+  </div>
+</div>
+<script src="commun.js"></script>
+</body>
+</html>

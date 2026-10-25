@@ -4,7 +4,7 @@ resume: Marre de collectionner les vues sans voir d'impact sur ton chiffre d'aff
 statut: publie
 domaine: contenu
 cree: 2026-01-19
-maj: 2026-10-22
+maj: 2026-10-25
 liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md]
 ---
 # Transforme Youtube en machine de vente
@@ -18,22 +18,22 @@ liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, claude-tutoriel-co
 
 ## Stats
 
-YouTube Analytics, données jusqu'au 2026-10-20. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
+YouTube Analytics, données jusqu'au 2026-10-22. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
 
 | | 7 premiers jours | 30 premiers jours | Depuis la sortie |
 |---|---|---|---|
-| Vues | 30 | 40 | 64 |
-| Vues engagées | 30 | 40 | 61 |
+| Vues | 30 | 40 | 65 |
+| Vues engagées | 30 | 40 | 62 |
 | Heures regardées | 1,6 | 2,2 | 3,1 |
 | Abonnés gagnés | 0 | 1 | 4 |
 | Revenus estimés | 0,00 $ | 0,00 $ | 0,03 $ |
-| Durée moyenne regardée | | | 3 min 4 s (21,7 %) |
+| Durée moyenne regardée | | | 3 min 1 s (21,4 %) |
 | J'aime · commentaires | | | 3 · 0 |
 
 ## Liens
 
-- Cite : [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
-- Cite : [2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
+- Cite : [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
+- Cite : [claude-tutoriel-complet-pour-passer-de-debutant-a-26-05](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
 - Description : https://clubsmart.s.gy/masterclass-aios-catalogue
 - Description : https://clubsmart.s.gy/tuto-claude-catalogue
 - Description : https://www.skool.com/club-smart

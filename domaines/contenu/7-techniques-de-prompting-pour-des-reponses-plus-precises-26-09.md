@@ -4,7 +4,7 @@ resume: Obtiens des réponses plus précises avec l’IA : je te montre 7 techni
 statut: publie
 domaine: contenu
 cree: 2026-09-15
-maj: 2026-10-22
+maj: 2026-10-25
 liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, tu-n-as-plus-besoin-de-prompter-voici-la-methode-qui-26-08.md, l-aios-c-est-quoi-explication-en-3-minutes-26-07.md]
 ---
 # 7 techniques de prompting pour des réponses plus précises (et quand les utiliser)
@@ -17,23 +17,23 @@ liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, tu-n-as-plus-besoi
 
 ## Stats
 
-YouTube Analytics, données jusqu'au 2026-10-20. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
+YouTube Analytics, données jusqu'au 2026-10-22. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
 
 | | 7 premiers jours | 30 premiers jours | Depuis la sortie |
 |---|---|---|---|
-| Vues | 463 | 541 | 588 |
-| Vues engagées | 177 | 226 | 251 |
-| Heures regardées | 13,2 | 17,4 | 19,5 |
+| Vues | 463 | 541 | 592 |
+| Vues engagées | 177 | 226 | 253 |
+| Heures regardées | 13,2 | 17,4 | 19,7 |
 | Abonnés gagnés | 0 | 3 | 3 |
 | Revenus estimés | 1,67 $ | 2,39 $ | 2,50 $ |
-| Durée moyenne regardée | | | 4 min 37 s (26,8 %) |
-| J'aime · commentaires | | | 18 · 0 |
+| Durée moyenne regardée | | | 4 min 38 s (26,8 %) |
+| J'aime · commentaires | | | 19 · 0 |
 
 ## Liens
 
-- Cite : [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
-- Cite : [2026-08-11-tu-n-as-plus-besoin-de-prompter-voici-la-methode-qui](tu-n-as-plus-besoin-de-prompter-voici-la-methode-qui-26-08.md)
-- Cite : [2026-07-18-l-aios-c-est-quoi-explication-en-3-minutes](l-aios-c-est-quoi-explication-en-3-minutes-26-07.md)
+- Cite : [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
+- Cite : [tu-n-as-plus-besoin-de-prompter-voici-la-methode-qui-26-08](tu-n-as-plus-besoin-de-prompter-voici-la-methode-qui-26-08.md)
+- Cite : [l-aios-c-est-quoi-explication-en-3-minutes-26-07](l-aios-c-est-quoi-explication-en-3-minutes-26-07.md)
 - Description : https://www.skool.com/club-smart/about
 - Description : https://clubsmart.s.gy/hub-newsletter
 - Description : https://claude.ai

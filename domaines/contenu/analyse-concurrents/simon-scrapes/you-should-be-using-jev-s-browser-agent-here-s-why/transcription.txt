@@ -1,0 +1,165 @@
+[00:00] Browser agents have always been terrible.
+[00:02] A 2-minute job for you as a person often takes 10 to 20 minutes using them, which means you may as well do the task yourself.
+[00:08] But with Jev, when you set it up correctly, it's totally different.
+[00:12] Every click can be decided in about a third of a second.
+[00:15] And there's a multitude of brilliant examples showing it in action on a browser, people driving search with their voice, people navigating the web and posting from Twitter.
+[00:22] And it was so good that even browser.com, which is infrastructure for agents to browse the web, rebuilt their agent on it and did a successful Google flight search in just 7 seconds.
+[00:32] So this video will show you how they work and how to build your own in less than 15 minutes.
+[00:37] So firstly then, how do they actually work?
+[00:40] Well, Jev is a judgment model built by the founder who helped build the methods behind chatbt at OpenAI.
+[00:45] So you're going to give it some text as the input which they call the state and you're also going to give it a question or a list of questions and it gives back an answer from options that you've
+[00:53] defined plus how sure it is about the answer.
+[00:56] So it can't chat and it can't write a word as the output but it gives you the probabilities that your answer is the right answer to those questions as well as a confidence and that is why it's about
+[01:05] 4 cents per million tokens in and the output is completely free and it can basically answer in a fraction of a second.
+[01:12] It can take thousands of decisions in just seconds.
+[01:14] So three kinds of question are possible to send to Jev.
+[01:16] We've got yes or no questions which they call a null.
+[01:19] We've got pick one from a list that you give it which is a choice or we've got a score which is a scale that you describe in different words.
+[01:26] And the way to choose between those three is to basically ask what you actually need to do with the answer.
+[01:30] So yes or no decisions are whether you need to take an action or not after it.
+[01:34] A choice is when you want to route it based on the answer.
+[01:37] Say you want to route that query to a specific team or use a score when you want to sort that data by the score or by the outputs there.
+[01:43] And by the way, it doesn't replace Claude.
+[01:45] Type safe say that it's terrible at reasoning and anything that needs writing because it doesn't output any text, right?
+[01:51] So Jev makes thousands of small calls, also known as a classifier, and Claude thinks, writes, and validates the responses from Jev.
+[01:59] So we can basically use them together really well.
+[02:01] And we use Jev for those thousands of questions that we need answered really quickly and cheaply.
+[02:06] So given all that information, I personally found it really difficult to understand at first how that works with a browser that has to read a dynamic UI, a different web page every time and how Jev could play any
+[02:16] part of that.
+[02:17] How is this navigating a browser?
+[02:18] But here's the trick that makes a browser agent fast by using Jev.
+[02:22] So yes, you are passing in dynamic data and asking questions about what it's seeing on the page.
+[02:27] So we're going to combine a few different tools.
+[02:28] The first of which is Playright or you will also see later that you can use Jev ultraast which is an open source framework built behind browser.com and Playright or Jev ultraast is just a tool for driving chrome from
+[02:39] code and it's going to write down everything you could interact with on that page.
+[02:42] So they're then going to get numbered and passed into Jev.
+[02:44] So number one might be a link to pricing.
+[02:46] Number two is a button to start a free trial.
+[02:49] Number three is a text input box for entering your email address for example.
+[02:52] And we might have up to a hundred items that are passed in as the inputs into Jev.
+[02:56] And the fact it's taking it in as data is the exact reason this is way faster than the other methods.
+[03:00] There's no screenshots, no pixels to load and no thinking.
+[03:03] It just decides against the question set what to answer based on the inputs or the different numbers on the page.
+[03:09] So it might recognize on this page that this is a cookie banner and actually we should click accept to proceed to the next step.
+[03:14] So the way this manifests itself is Jev is going to get asked two choice questions in a single call.
+[03:20] So on a given web page we've got firstly what to do.
+[03:23] So what is the action type?
+[03:24] Is it to click, type, select, scroll down, scroll up, wait?
+[03:29] Is it done or is it blocked?
+[03:31] So again, think of that as your action set of all the things that you can do on a given web page.
+[03:35] And then secondly, the question is going to be which numbered element to do that to or maybe there's actually not the correct element.
+[03:41] So we give it an out or a none at all option.
+[03:43] So the webpage data is fed into Jev with those two questions against it.
+[03:48] And the goal you typed in or spoke is assessed against those questions.
+[03:52] Now there might be more granular questions that ask about the data but that's effectively the essence of it which is why it can run so quickly.
+[03:58] Both of the answers to those questions will come back with a confidence and if both are above the confidence level that we've set let's say it's 0.7 then playright or Jev ultraast is actually going to accept that and
+[04:08] take the action.
+[04:09] For example, it's going to do the click on the page wait for a fraction of a second for the page to actually settle and reload and then it's going to read all that data into that again and Jev
+[04:17] is going to get the new list of elements with the same set of questions passed back in.
+[04:20] And this is a really important distinction to make that it knows to do that action and doesn't take any AI after that because we define executable scripts using the type safe skill as part of the input plan.
+[04:32] So it's just going to run against those scripts.
+[04:34] It's pure code, no AI.
+[04:35] It's very deterministic.
+[04:37] So the sequence then would be plan with Claude, collect data from the page using playright or Jev ultraast or something else.
+[04:43] We're going to send all the questions to Jev against an input state.
+[04:46] And for example, in this case, our input state is each page of the browser with the numbered elements.
+[04:51] We're then going to receive the answers from Jev into our executable scripts or our code.
+[04:56] And then we're going to use those scripts to actually process the answers.
+[04:59] We might do some verification with Claude, but that is effectively the full process to go from a given goal to an output using Jeff really, really quickly.
+[05:06] And then it's going to continue to loop around on each input stage.
+[05:08] So once we've clicked the back button, we then read in the new elements, which is effectively the new input state for the question set.
+[05:14] And where Claude comes in is if either the confidence level comes back below our acceptance level, below that 0.7, or Jev says it's blocked, then basically it's going to stop.
+[05:22] Claude is then able to add an element of reasoning into it, assess against our goal, what has actually happened so far, and then either send back to Jev with a new set of questions or actually get Claude or
+[05:31] another LLM to help.
+[05:32] And then if the action type is something like typing text in, typing your email address in, then Jev's picked the box, but it can't actually write what goes in it.
+[05:39] So the text is either going to come from the goal if it's in there.
+[05:42] Otherwise, Claude is actually going to intervene and write that text that they need to enter into that box.
+[05:46] And you've probably noticed that in this whole loop, that's the only part where writing is actually required.
+[05:51] Hence why it can work so quickly through the other decisions.
+[05:53] And crucially, when Jev says it's done, the runner together, Claude code, and Jev is not going to believe it.
+[05:59] So we're going to hand it back to Claude at that point.
+[06:00] And even the browser use team themselves say in their own readme that done or the definition of done needs that independent verification check which we use claude for.
+[06:09] Now I actually went ahead and built out my own little tool here using jev as well as claude with a UI so we could see exactly what was happening here.
+[06:16] So this goes to any SAS flow and basically goes to the website, uses Jev to achieve the goal on the website using Jev ultraast in the background and is able to screenshot and document all different SAS onboarding flows
+[06:27] or pricing pages or blog pages, anything you want.
+[06:30] Basically grab any different flow from a given website.
+[06:33] And you don't strictly need this dynamic page where you can watch it happen, but what we're going to do is choose the number of flows that we want it to assess.
+[06:39] Give it a goal.
+[06:40] Pricing pages with annual toggles for SAS tools.
+[06:42] is going to go and do some research and then let us decide exactly what we want to go and screenshot so that we can then use that as inspiration for our own app for example.
+[06:49] So you can see with the pricing pages with annual toggles for SAS tools we've got all these different SAS tools that's identified here.
+[06:55] You can add your own or you can start the five flows.
+[06:57] It's going to open independent browsers again using Jev ultraast in the background here.
+[07:01] We're going to see it start to navigate through those different flows to find the pricing pages in the different tools.
+[07:05] And you can see how quickly it's actually navigating through those pages and that's because it's using Jev ultraast in the background.
+[07:11] Now for browseruse.com specifically, they actually documented that on the Google flights run, the number of browser calls using this method dropped from 1,092 to 101.
+[07:21] So basically 10% of the previous amount by using this combined method, cheap and fast LLM plus jev for the actual deterministic decisions on a web page.
+[07:29] Now, how do you actually build something like this yourself?
+[07:32] Well, we can just get claw code to do it with the right skill and prompt and it's going to literally take you about 5 minutes.
+[07:37] So two things you'll need first.
+[07:38] The first is a type- safe key in yourv file.
+[07:42] And the second links heavily to that type safe skill or the jev skill effectively.
+[07:46] And the skill matters here because it's what tells Claude how to word the questions that get passed to Jev and batch them in one call to optimize for what Jev expects to make the calls happen really quickly.
+[07:56] And then for the actual prompt or plan, you can grab this down below in the description for free.
+[08:00] And this will help you build out exactly what you saw today, the grab any flow from the web UX that you saw, as well as the flow that combines Claude and Jeff together to achieve that goal.
+[08:08] And you can see this has got a full breakdown of the plan after I'd entered a prompt to tell it what exactly I wanted to achieve.
+[08:14] And I based this demo on what I saw from Omar on Twitter doing exactly this.
+[08:18] He didn't give away the code, but decided to actually try and build this myself.
+[08:21] And it literally took about 20 minutes using claw code, which was quite incredible.
+[08:25] You can see the full plan contains screenshots of the video so that it can replicate almost identically exactly what was shown on Twitter as well as the different build phases that allow claw code to go and build it
+[08:34] but also make sure that it's actually sending the API request to the Jev model.
+[08:38] Now in this example we've used the Jev ultraast library to run that web search instead of playright which has saved us the setup time to achieve the same result.
+[08:45] So you can do this with playright or you can actually keep the prompt with jev ultraast and just go and use that tool there.
+[08:49] Now, from this plan running on Opus 5.5, you'll have a working browser agent from one prompt.
+[08:55] And all of this was built as part of the feedback inside our school community where we combine builds like this with Jev and with Claude and post the results so you get to play around with them and use
+[09:03] them.
+[09:04] So, you get the prompts, the bits that broke, the bits that were more difficult, and the links in the description below if you want to check that out.
+[09:09] Right now, let's quickly touch on where it's not so good.
+[09:12] Because on the surface, this looks like a perfect demo of everything working incredibly smoothly.
+[09:16] But even when you're using Jev Ultraast as the browser layer here, you're going to get stuck in a few of these traps when you're using these browser agents.
+[09:22] So, I want to precurs this by saying that it's certainly not magic.
+[09:26] It looks like it works perfectly all the time.
+[09:28] But I hit all of these issues whilst I was testing them.
+[09:30] And all of them required extra questions to be added to the Jev request.
+[09:34] It required thinking.
+[09:35] It required iterations on this design.
+[09:37] So, you might have to do the same, too.
+[09:38] And all of those things, I guess, make this flow a little bit more deterministic than you'd like it to be.
+[09:42] You'd expect it to just receive a goal, understand how to tackle a cookie banner, but actually in reality, a lot of the time it fails on those kind of steps, and you got to teach it how to not
+[09:50] do that.
+[09:50] So, the first thing is actually those cookie banners.
+[09:52] Is that consent popup?
+[09:53] But we can fix this just by telling it actually accept cookies if asked.
+[09:57] This should just be a yes, no.
+[09:58] Is this a cookie banner?
+[09:59] Is this a manage preferences banner?
+[10:01] Yes or no?
+[10:01] If it is, then the script should actually enforce the approve or accept on that.
+[10:05] The second thing is like iframes and file uploads on a page.
+[10:08] So if you're using something like playright, it's not going to be able to see inside those embedded frames.
+[10:13] So a payment form or an embedded signup form is basically going to be invisible to the inputs of Jev.
+[10:18] Same for things like upload buttons.
+[10:20] And even browser use which has the infrastructure for this list these as out of scope for these agents for now.
+[10:25] Then the next one is a false positive.
+[10:28] For example, here I've asked this to visit 10 blog pages on four AI search visibility specialist sites to basically retrieve the last 10 blog posts that they've done and screenshot those.
+[10:38] This was just an example to test for my other business, Rankspot.ai, which helps you effectively get recommended on Chat GPT by taking automated actions on your behalf.
+[10:47] I wanted to understand and assess the competitor landscape.
+[10:50] But you can see here we've got the false positive.
+[10:52] It says it's done.
+[10:53] It took 77 seconds and 10 pages were complete.
+[10:56] So, it's got 10 different pages listed here, and some of them are blog pages.
+[11:02] In fact, this one, it looks like none of them have been achieved as actual blog pages.
+[11:05] You can see it continues to click through and view different pages until it finally finds something like an actual blog page.
+[11:11] But you can see that when we get to the end of the flow in that whole set of screenshots there, we probably had one or two blog pages that were actually documented.
+[11:17] So, this is like a false done where Jeff said it was done on a page that was actually an error, for example.
+[11:22] So, this is where Claude's final check should come in.
+[11:25] you should actually send those back into Claude and understand if the output or the goal has actually been achieved against the question set and the inputs.
+[11:31] And then the final one is memory.
+[11:33] So basically, it's only going to see the last five actions it took.
+[11:36] So when we've got here 39 different tasks, then it actually may get a little bit lost in what it's trying to do on its way to a given goal.
+[11:42] It needs the goals to be kept short and basically chained.
+[11:46] So it's one goal per page or per form.
+[11:48] Now, all those limitations being said, this is still incredibly useful and a massive step forward from what browser agents were like before.
+[11:54] If you've ever used them inside something like Claude, you'll know how painful it was to achieve a simple task.
+[11:59] This is a massive step in the right direction.
+[12:00] Thanks for watching.

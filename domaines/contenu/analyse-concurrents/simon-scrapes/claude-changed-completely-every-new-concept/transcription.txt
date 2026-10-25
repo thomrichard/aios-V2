@@ -1,0 +1,249 @@
+[00:00] Some of the most popular skills that you've been starring on GitHub are now basically useless.
+[00:04] Someone ran nine of the most popular Claude skill packs against a dummy file of the same length, and seven of the nine did no better than the dummy.
+[00:11] And that's because Claude can now do most of what those skills were telling it to do out of the box.
+[00:15] And that's just one of 15 new things from the last 10 months that most people have missed.
+[00:19] So, we're talking about Claude, but most of them apply also to whatever interface you use, Codex, Cursor, the desktop apps, or even your own setups.
+[00:27] So, let me first show you which skills you should keep, and I want to make sure the messaging isn't confusing here.
+[00:32] I'm by all means not saying to delete all of your skills and start again, but the way in which you should think about building new skills, or testing whether you even need external skill packs, has completely changed as
+[00:41] the models have gotten better.
+[00:42] Now, back in Jan-Feb time, a skill used to be the whole process written out step-by-step.
+[00:47] Basically, like a manual for Claude to follow, and that's what me and all the other popular skill advice would basically tell you to build them like.
+[00:53] I even went through the full skill building guide to learn how to best engineer them with progressive disclosure and all of the other rules that we were told And a lot of that logic still actually remains the same.
+[01:03] However, we were building more detailed standard operating procedure type skills for the most basic of tasks.
+[01:08] Take my copywriting skill, for example, or humanizing our outputs.
+[01:12] Both of these were hundreds of lines of rules and step-by-steps on how to write.
+[01:16] But, Claude now does most of the rules from its own logic anyway.
+[01:19] It understands that people don't want AI slop.
+[01:20] And a lot of it with the new models is already humanized.
+[01:23] So, the actual skill then should now be just what Claude can't work out on its own, or nuanced rules that you want to add into the logic, which is actually so much less than it was 10 months ago.
+[01:32] So, Anthropic actually recommend here, as their own first step, to try and complete every job without a skill at first.
+[01:37] What you're then going to do is write down only what Claude got wrong, and we're going to add that back into the skill.
+[01:42] So, a skill isn't that standard operating procedure anymore.
+[01:44] It's a list of corrections to a process that Claude actually can't do out the box yet.
+[01:49] And in 6 months, maybe that will change and actually won't need skills at all.
+[01:52] So, the easiest way to understand whether you need those skills still or not is actually to install the skill eval plugin by Anthropic, which is basically going to run the same job with your skill side by side without
+[02:02] the skill.
+[02:02] You're going to run it before and after, and you're going to remove any skill that doesn't beat the no skill output.
+[02:07] So, you're going to need to do some checks on the outputs to compare the outputs of no skill versus skill.
+[02:11] And it's going to give you two things to do, basically.
+[02:13] You're going to either know how to trim your skill and remove things that actually it's done by default by itself, or remove the skill entirely if it's not needed anymore and free up more of your context.
+[02:22] And then moving on to models, we've basically got the same trap with models now.
+[02:25] So, picking a cheaper one to save money, let's say we're going down to Haiku, is often going to cost you more for two reasons.
+[02:31] Now, first, it's the cash, and I'm not talking about the dollar value, I'm talking about save data that's going to cost you fewer tokens.
+[02:37] So, think about it like this.
+[02:38] You're an hour into a session on Opus, an easy question comes up, so actually you want to maintain the context, so you switch to Haiku to save money or tokens on that question.
+[02:47] But, each model actually keeps its own cash of your conversation, so the whole thing gets read again from scratch on the new model at full price.
+[02:55] And this can end up as an order of magnitude more expensive because that full conversation history you've had is going to get ingested into that conversation.
+[03:02] And when you ultimately switch back to Opus for the harder task, then you're going to read it back into the memory of Opus, and guess what?
+[03:08] It's uncached also in Opus at that point.
+[03:10] So, by uncaching it, caching it, uncaching it, you're effectively costing yourself more tokens switching between models.
+[03:15] Now, that isn't the only way it's going to cost you more.
+[03:17] Secondly, it might look cheaper on the surface because it's cheaper per token, but it's not necessarily cheaper per job.
+[03:22] So, a smaller model can take more attempts and more edits to land the same result, and every retry is more tokens and more of your time.
+[03:28] And one specific test this month found that Haiku 5.5 needed more requests than the bigger models did.
+[03:33] And at the same quality, it took almost twice as long as Sonnet on long sessions.
+[03:38] And this is why Anthropic's own guide says most work should start on Opus 5.5 and that turning effort down is usually a better lever than switching between models.
+[03:46] So, the idea then is you pick your model at the start of a job and stick with it.
+[03:49] And then for an easy question, you either drop the effort level or you can literally tell it, "Just give me a quick answer." and it can work out how to not use the thinking of the reasoning model and
+[03:56] just give you a quicker answer.
+[03:57] But, there is a way to mix models without actually paying that surcharge for it, and it's called using the advisor, and hardly anyone has turned this advisor setting on.
+[04:05] So, you're going to run a cheaper model for the main work, say you use Sonnet, and give it a stronger model, Opus or Fable, to ask when it hits a hard bit that needs more thinking or reasoning.
+[04:14] So, you're basically allowing Claude in this case with the advisor to decide when it should actually switch between models.
+[04:18] And it's going to choose to do that usually in three cases.
+[04:21] Number one is before it commits to an approach.
+[04:23] Number two is when the same error keeps coming back, it's going to switch model.
+[04:26] Or number three, it's also going to do that before it says it's done.
+[04:30] So, it's going to come back and validate itself with a different model.
+[04:32] And turning this on, the advisor mid-session, doesn't actually break or uncache that data, unlike switching between models.
+[04:38] So, on a Sonnet session, you're going to type /advisor Opus, and Anthropic says that usually costs less than running the stronger model the full way through.
+[04:46] This is still something that's marked experimental, so expect it to change.
+[04:49] And to be honest, my personal preference is just to stick to one model for a job and keep it super simple, especially when you're on a subscription plan and you're not paying for API credits, for example.
+[04:57] Now, next up, we have plan mode, or actually a lack of plan mode, it now seems.
+[05:01] So, in my last video, I said you could drop plan mode entirely, and loads of you pushed back in the comments, which is totally fair.
+[05:07] And reading them, I think we're actually arguing about two different things.
+[05:11] So, the people who built it have mostly moved on from plan mode.
+[05:14] So, Boris Cherny, who created Claude Code, said plan mode was useful and is no longer useful.
+[05:19] And on the 23rd of September, Tarik on the Claude Code team posted that they're thinking of killing it and using shift plus tab to control the different effort levels instead.
+[05:28] And he even stated, too, that he doesn't think the models need it anymore.
+[05:31] So, he mostly plans inside artifacts now, and he literally asked plan mode diehards to tell him why they still use it.
+[05:37] Now, the best answer, which made a lot of sense, was plan mode isn't for the agent, it's for me.
+[05:43] And Tarik actually agreed that this was a good way to put it.
+[05:45] And I think that's what you were saying in the comments too.
+[05:47] Changing a plan is far cheaper than changing hundreds of lines across a lot of files.
+[05:52] And if you're not technical, then the plan in the first place is how you find out what guardrails to write inside the prompt that you're giving Claude.
+[05:58] So I actually agree with Boris and Tarek that the mode itself is no longer as useful, but I also see the concept of planning is still important.
+[06:04] I.e.
+[06:05] deciding what done looks like and what Claude should abide by.
+[06:08] Or in other words, the guardrails that you're giving Claude.
+[06:10] Now the one thing that the planning mode still does is blocking edits until you approve the plan.
+[06:15] So if you want that safety net, then plan is still there for now.
+[06:18] But when the job is actually big, unclear, or touches lots of files, you can switch out of plan mode.
+[06:24] And we're talking about the specific mode here, and still just get Claude to interview you, write a specific plan to a file, so we're still planning, then start in a fresh session to actually build it.
+[06:33] And that's Anthropic's own advice.
+[06:34] But if you could describe the change in a short paragraph, the change you want Claude to make, or it's not a multi-day build, then skip the planning process altogether, or have a short succinct set of goals, definition of
+[06:45] done, and guardrails.
+[06:46] Now next up is why {slash} goal can tell you it's done when it actually isn't done, and how to fix that.
+[06:52] But first, quickly, this video follows the same order as my new 15-hour course being released inside the Agentic Academy.
+[06:59] So over 30 days, you're going to build out four layers in Claude, Codex, or Cursor.
+[07:03] And firstly, we're going to push the limits of working inside the chat window.
+[07:06] We're going to expand on that and learn how to run a proper project that already knows your context.
+[07:10] And then we're going to build on top of that a series of processes that are able to run autonomously on their own across content, SEO, client work, and more.
+[07:18] And finally, we're going to install your own Agentic OS to hold all of it.
+[07:21] And you learn how those pieces fit together and why each piece is important as you give it more context.
+[07:26] So by day 30, you're going to have your first process running autonomously without you, and then a framework to do the same for any other work that you don't need to be supervised.
+[07:33] So check out the link in the description below if that's of interest to you.
+[07:36] So {slash} goal then is supposed to keep Claude working until a condition is met.
+[07:40] So you're not sat there typing in continue every time.
+[07:42] So, after every turn, a separate small model actually checks whether the goal's been hit and therefore decides whether to loop back or not.
+[07:48] And the catch here is that the checker doesn't open files or actually run anything.
+[07:51] It only reads the conversation that we've had before it.
+[07:54] So, if your goal is the report is finished or something ambiguous, then it's going to take Claude's word for it whether the report is finished or not, and then it's going to stop early.
+[08:01] So, the goal basically needs proof that shows up inside that original chat.
+[08:05] So, something like {slash} goal, the check report script passes and you show me the output.
+[08:11] The template is going to be unchanged, stop after 15 turns.
+[08:14] And we need ourselves before we run goal to actually use Claude to create that check report script and make sure it has some deterministic statements or goals that can be validated against.
+[08:23] So, all of the things we talked about so far is how to get the most out of the chat window.
+[08:26] But what about when we introduce saved context?
+[08:28] Now, Opus and Sonnet come with a million tokens of context by default.
+[08:33] So, it's tempting to load in more context as you progress through a conversation.
+[08:36] But on Anthropic's own test for Opus 4.6, finding eight details hidden in the context scored 93% when you had a quarter of those tokens, so 250,000 tokens in, and 76% at a million tokens.
+[08:49] So, a bigger window of context is just more room to lose the details in, which is actually why we highly recommend saving reusable context inside nested folders and using pointers from your Claude.md or your skills to those files
+[09:01] so they can load in the context of that specific file only when it needs it and not lose that detail.
+[09:05] And that is the direction that Anthropic has certainly stated they're heading on with their new projects feature, too.
+[09:10] So, projects in Claude code actually changed in September.
+[09:13] So, it used to be a folder with multiple chats inside it.
+[09:16] You'd start individual chat sessions and not have an easy link between them.
+[09:19] Now, it is one long conversation that doesn't do the work itself.
+[09:23] So, you brief it like a team lead, and it's going to start multiple threads underneath itself.
+[09:27] Now, each one is a full Claude code session inside the cloud starting with a project's instructions and memory of the conversation.
+[09:34] And they're going to keep going after you close your laptop.
+[09:36] But there's two things to know before you start one of these projects.
+[09:40] The first thing is that the main conversation can't use your connectors.
+[09:43] Only threads can use the connectors.
+[09:45] So, you got to treat it like an orchestrator that can go out and use your tools, but in its independent threads and kind of delegate that to Claude.
+[09:51] And then the threads are going to default to Opus on high effort.
+[09:54] It's going to burn through your limits a lot faster.
+[09:57] So, check that in the project settings first and you can actually go in and adjust that.
+[10:00] This is something that's in beta on Claude code only at the moment with chat still operating the old way with multiple chats inside that session.
+[10:06] So, if you're still living inside the chat window, you're going to still need to pass the context between different chats by just referring and giving the share link between those chats.
+[10:14] So, projects are where your broader context lives and this is literally broadly applicable context like our brand voice, for example.
+[10:20] But, for specific jobs, say if you're doing the same job every week, you don't want to explain it to Claude every single time.
+[10:25] Which brings us back to skills.
+[10:26] So, if a skill is just the corrections like we talked about the start, there's now a way to get them without writing anything.
+[10:32] And you might have seen that in the desktop app now, record a skill watches you do the job and writes the skill from what it saw.
+[10:38] So, when I ran this on a DM automation job, it quite literally picked up all the things I'd got wrong in my demo of the person that manually does that task and wrote those things into the rules.
+[10:47] And the skill came out surprisingly small, which now makes total sense because it was only picking up on the corrections and the niche knowledge that Claude wouldn't understand out the box.
+[10:55] So, once a job is set up like that into a skill, it's tempting to start changing settings to make it run better.
+[11:01] But, most of the time that's proven to actually make it worse.
+[11:03] So, on to settings then, a lot of the settings that we all used to change now have defaults that are better than most of us would pick.
+[11:09] Take the model, for example, Anthropic's own advice is to start with Opus 5.5 for most work and that's already the default on paid plans.
+[11:17] Then effort.
+[11:18] Most of us turn it up because higher sounds like better effort, but Opus 5.5 on medium matches or beats Opus 5 on high and on max.
+[11:26] And there's certain nuances that you might not understand as well when you're messing with these settings.
+[11:30] Like Anthropic's docs say that it's prone to overthinking.
+[11:32] So, giving it more tokens or more effort level doesn't necessarily improve the outcome for a given model.
+[11:37] And this is the same with permissions.
+[11:38] Auto mode has been the default since August with a classifier checking each action instead of you going through and having to actually approve everything.
+[11:45] And even the point where it compacts your conversation is now tuned to each model.
+[11:50] So, you might have noticed when you're using a different model that it compacts earlier in the conversation and that's because it's specifically tuned to that model now.
+[11:56] So, my advice is leave them alone until something actually goes wrong.
+[11:59] Use the defaults that Anthropic or OpenAI have actually set there.
+[12:02] They've set them for a reason and they know a lot more than us.
+[12:04] And one of those defaults is how Claude actually splits up the work once a job gets bigger.
+[12:09] So, when Claude hands off the work now, it can actually do it in two ways and they behave really differently.
+[12:13] So, it's important to understand both.
+[12:15] So, a sub-agent, which you might already understand the concept of it and have used before, is going to start fresh.
+[12:20] So, it's going to get its own instructions plus whatever Claude tells it and it's going to come back with a summary or the outputs only.
+[12:25] And you can see this in the built-in explore and plan agents that don't even read your Claude.md.
+[12:29] So, it can't understand those house rules that apply to other files.
+[12:33] And the reason it does this is because it's trying to keep your main conversation clean.
+[12:36] So, think back to that orchestrator model.
+[12:38] Let's say I want to just run an image generation script.
+[12:40] It calls an image model from OpenAI and what we're going to basically do or Claude is going to do for us is it's going to use a sub-agent to do just that task and return only the image output,
+[12:49] not the workings, so to speak, of the code that's just run.
+[12:52] The main context doesn't need to see all of the workings, the prompting to OpenAI.
+[12:56] It just needs to understand and take the output and use it for your goal or your definition of your done.
+[13:00] So, sub-agents is number one.
+[13:01] Then separately, Claude can also fork the conversation.
+[13:04] So, fork is a copy of your conversation.
+[13:06] So, it's going to know everything you've said so far and it's also going to share the cache.
+[13:10] So, the first turn of that fork is going to be cheaper too.
+[13:12] Now, this is little known, but fork mode has actually been on by default since August.
+[13:16] So, Claude is going to pick between forking the conversation and sub-agents dependent on the task.
+[13:21] So, I'd highly recommend just leaving this to Claude.
+[13:23] But, if you do have a side task that needs your conversation history, then you can actually invoke it manually using subtask to fork it manually.
+[13:29] Now, those two options are fine for a couple of helpers at a time, but some jobs like proper research need dozens of workers.
+[13:36] They're not just spinning off one or two sub-agents.
+[13:38] They actually just need a whole structured workflow.
+[13:41] And Claude can now write a literal bespoke workflow for it.
+[13:44] And it's called ultra code or dynamic workflows.
+[13:47] And it's a script that runs dozens of agents in the background and checks their findings against each other before you see anything.
+[13:52] And the easiest way to demonstrate a task that might need this is actually deep research, as that is one of the use cases that Anthropic have a separate slash command for.
+[14:00] So, you're going to type in deep research and your question, and it's going to search from several angles, cross-check the sources.
+[14:05] It's going to throw out the claims that don't hold up and hands you one sided report at the end.
+[14:09] Now, what makes this different is each time you run it, the research it does and the methods it uses will vary based on the specific tasks.
+[14:15] But in general, they follow one of six predefined patterns.
+[14:18] This, however, still doesn't start on its own though, unless you're running a command like deep research.
+[14:23] So, only use it if you think you really need it.
+[14:25] But if you are going to use it, then I'd highly recommend going to slash config and setting the dynamic workflow size to small, which is basically going to tell it to aim for fewer than five agents to save
+[14:34] your tokens, because this can really get out of hand and spin out, you know, 20 to 30 different sub-agents.
+[14:39] And to be honest, I'd love to hear from you what you've actually used ultra code for, because so far, I've mostly seen research.
+[14:44] So, let me know down below in the comments.
+[14:46] Now, moving on to second standards with hooks.
+[14:49] So, hooks run at a set moment every single time, no matter what.
+[14:52] So, the line in your Claude.md that used to say "Never email the client, always add it to my inbox as a draft" is basically a request that you want to be formalized into something that's very deterministic.
+[15:01] And a hook is basically a guarantee that that thing will happen.
+[15:03] But what's changed about hooks is that hook doesn't have to be a script anymore.
+[15:07] So, it can be a prompt or a sub-agent, so the check can actually read the work.
+[15:11] So, here's how that actually works.
+[15:12] So, the moment that Claude says it's finished is called the stop event, and you can attach a check to that stop event.
+[15:19] So, when Claude tries to stop, a second model looks at the work, because it's told to in the hook and it answers with one of two things.
+[15:25] Yes, Claude is okay to finish or it's not okay because of this reason.
+[15:30] And if it's not okay, that reason is going to go straight back to Claude as its next instruction and it's going to keep working until that check passes.
+[15:36] So, there are two types of hooks here.
+[15:37] We firstly got a prompt hook which is only reading the conversation, so it's super quick and cheap.
+[15:42] And then we've got an agent hook which can actually go and open files, so it can read your brand voice doc and the draft itself, but this is still marked as experimental.
+[15:49] And by the way, hooks are quite confusing to write, but you don't have to write any of it yourself.
+[15:52] You're just going to tell Claude to add a stop hook that reads your brand voice document and the latest report and then it's going to send you back a summary of if the report is breaking any of your
+[16:01] rules in the voice documents.
+[16:02] So, you turn something that's very non-deterministic into something that's very deterministic with these hooks.
+[16:06] And then once you've got those checks that run every single time and they're not just in your skill instructions, you can start letting jobs actually run without you there at all.
+[16:14] So, that brings us to routines.
+[16:15] So, routines run Claude in the cloud, so your laptop can actually be shut, and they've been around for a while, but there's a few little known things about them.
+[16:22] Number one, they can also start from a web request or a GitHub event like a new pull request for example.
+[16:28] So, any tool that can send a web request can basically determine if an agent should spin off and something should happen.
+[16:35] So, this makes them way more reactive and mean your agent can turn on when an event happens.
+[16:39] Something that's not available now inside scheduled tasks in the chat window.
+[16:42] They're all time based, so this is event based.
+[16:44] So, you can set up the routine with a name, the prompt, the repo it's going to work in, and a trigger.
+[16:49] If we pick APIs the trigger, we're going to save it and you get a URL and a token.
+[16:53] And anything that sends a request to that URL starts a fresh run in the cloud, i.e.
+[16:57] it's going to trigger the workflow.
+[16:59] So, when you create a routine, every connector that you've connected into your app is included by default and Claude can use all of them.
+[17:05] So, I'd highly recommend stripping that back to the only ones that that job needs, otherwise you're effectively filling it with more context that doesn't necessarily need to use.
+[17:12] And OpenAI by the way have gone exactly the same way and they're making it even easier to trigger events like this.
+[17:16] So, at the dev day at the end of September, they announced MCP events where the connected app starts the job itself.
+[17:22] So, you basically tell ChatGPT what to watch, like is it a new message in the feedback channel in Slack, and what you actually should do, or what the agent should actually do, when that event arrives.
+[17:33] So, they're 100% moving towards this reactive style event-based triggers.
+[17:37] But, not every job fits a schedule or a trigger, right?
+[17:40] And routines aren't the only thing that run in the cloud now.
+[17:43] So, Anthropic literally just put out a walk-through on cloud sessions this week.
+[17:46] And they're now the simplest way to run any Claude code task on a machine that actually isn't yours.
+[17:51] You can see all the model providers moving exactly the same direction.
+[17:54] So, each task is going to get its own machine, so you can start a few machines at once, or a few tasks at once, close your laptop, and all of them are going to keep going.
+[18:01] So, you can start one from claude.ai/code.
+[18:04] You're going to start it from the desktop app by picking cloud instead of local, or by typing in your terminal claude--cloud.
+[18:09] And the best thing about this is it's going to run on your normal plan, and there's no extra charge for the machine.
+[18:13] And when you want it back, you can use claude--teleport, which will pull the whole session conversation and all of the conversation history back down to your laptop.
+[18:21] And with jobs running now whilst you're away from your own computer, there's one thing that used to catch you out, but no longer will.
+[18:27] And that used to be that if you hit your usage limit halfway through a task, Claude just stopped immediately, and you come back to a half-finished job.
+[18:35] So, you had to restart that job for yourself, and you'd lose some contacts and some of the work that'd been done there.
+[18:39] But, now it literally waits.
+[18:40] Now, when the limit resets, it picks the task back up where it stopped, and code, that's on by default.
+[18:46] So, the task actually gets finished, but it basically starts spending your next token window without asking you.
+[18:51] So, it's going to do this for the 5-hour limit token, but no, not the weekly one, so you can't spend all of your next week's tokens on a task from this week.
+[18:58] So, those are the 15 things that have changed dramatically in the last 10 months.
+[19:01] And this will take you from a single chat all the way to Claude running jobs while you're away.
+[19:05] So, our full course is available inside the Agentic Academy, and we'll build on all of these concepts with practical examples to get you running things completely autonomously.
+[19:12] See you in the next one.
+[19:13] Thanks for watching.

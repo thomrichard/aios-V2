@@ -1,0 +1,160 @@
+[00:00] So, when Claude opens a long reference file inside one of your skills, it doesn't always read the whole thing.
+[00:05] It runs a head {dash} 100 command, which basically reads the first 100 lines only to work out whether the reference file is going to add any information that it actually needs.
+[00:15] So, if your important rules sit after line 100, as far as Claude's concerned, they actually don't exist.
+[00:22] Now, skills launched early this year, and we all learned how to build them properly with good descriptions, total lines under 200, reference files separated, and writing them like a set of instructions.
+[00:32] But, the rules have now completely changed.
+[00:34] If your reference file is over 100 lines and contains no contents list, then the chances of it being used are actually low.
+[00:41] And Anthropic's even updated their best practice guide with six more rules like this one, and they apply to every skill you've already built.
+[00:48] So, get these right, and your skills will give you far more consistent results, whichever model is running them.
+[00:54] So, number one then is putting a contents list, like an index, at the top of any reference file that is over 100 lines, so that Claude can read the whole file, or literally just jump straight to the section
+[01:04] it needs.
+[01:04] So, Anthropic's own example is an API reference here.
+[01:08] So, contents at the top, then we've got five different lines.
+[01:10] So, we've got authentication and setup, core methods, advanced features, error handling patterns, and code examples.
+[01:17] Then, the sections come underneath it for each of those sections.
+[01:19] So, you can see authentication and setup here.
+[01:21] All you're going to do is go into Claude Code or Co-work, which is now actually merged with chat.
+[01:25] So, we've got Claude Code or Chat, and you're going to go through every skill in your {dot} Claude {slash} skills folder.
+[01:31] You're going to find any reference file over 100 lines, and you're going to add a contents list at the top that matches its headings.
+[01:37] It's as simple as that.
+[01:39] Now, for number two, this totally changed the way I think about skills.
+[01:42] So, before, I treated every skill as having the same level of detail, giving the same precise instructions where I could.
+[01:49] But, in reality, business processes aren't as black and white as that.
+[01:52] Anthropic's say the detail in the skill should depend on how fragile the task is, and how much it varies.
+[01:58] So, they call this setting appropriate degrees of freedom, and there are three different levels to this.
+[02:03] So, high freedom is plain instructions.
+[02:05] And their example is a code review process.
+[02:08] So, it's going to check the structure, look for bugs, suggest improvements for readability and maintainability, and then check it's going to follow the project conventions.
+[02:16] Now, there are lots of good ways to do a code review, and the right one depends on the actual code.
+[02:21] So, Claude gets the goal, and is actually able to work out the rest.
+[02:24] The models are intelligent enough to work out how to achieve those goals.
+[02:27] And if you're not a coder, you're a business owner, that might be reviewing a sales call, or drafting a LinkedIn post.
+[02:33] Where we've got high degrees of freedom.
+[02:34] It's plain text, and the approach can be ambiguous.
+[02:37] So, medium freedom is a template with different settings in, basically.
+[02:41] So, they've got this template down here, and we set up the different settings.
+[02:44] So, it can be including charts true or false, and the format could be markdown, it could be HTML, it could be something else.
+[02:50] So, it's basically, with medium freedom, a preferred shape, a template with some variation allowed, or some variation is actually fine.
+[02:58] So, that might be a weekly client report, for example.
+[03:00] Versus low degrees of freedom, where basically operations are super fragile and error-prone.
+[03:05] We need to be super consistent, and a specific sequence must be followed.
+[03:08] So, think of low degrees of freedom as an exact command.
+[03:11] So, their example here is a database migration.
+[03:13] And the instruction here is to run exactly this script.
+[03:16] Don't change the command.
+[03:17] Don't add flags.
+[03:18] And for you, that might be anything touching money, or deleting things.
+[03:22] So, might be raising invoices, removing members.
+[03:26] These are things where we want it to have strict adherence, and therefore, we'd give it a specific script, or few or no parameters where it can actually vary there.
+[03:33] Now, the three things I actually took from these rules.
+[03:35] First, one skill can actually mix different levels.
+[03:38] So, the writing step in an invoicing skill can be high degrees of freedom, while the create the invoice step might be really locked down and low degrees of freedom.
+[03:46] Second, the question for each step is what happens if Claude actually does it differently.
+[03:51] If the answer is nothing much changes, then we can actually give it higher degrees of freedom or loosen it.
+[03:56] But actually, if there's something consequential, then we need to make sure that we give it low degrees of freedom.
+[04:01] And then the third thing I learned is that low freedom usually means a script and not more plain text.
+[04:05] With a script, we're able to ask Claude to do something the same way every single time.
+[04:09] Now, the third rule change that we're going to go on to is about different models for different skills.
+[04:15] Now, before we do that, I just want to give a massive shout out to you guys and say thank you so much for helping me hit 100K subs.
+[04:21] I appreciate you, all the time you spend watching, and your kind comments massively.
+[04:26] So, number three seems so obvious, but actually nobody is doing it.
+[04:30] So, when you write and test your skills, you've likely done it with one model.
+[04:34] You've chosen Sonnet, you've chosen Opus, you've chosen new Fable models, probably just using whatever is newest that month.
+[04:39] And I know I'm guilty of doing this sometimes.
+[04:41] But Anthropic say a skill's result will depend on the model underneath it, which is quite obvious.
+[04:45] So, you need to test it on every model you plan to use it with.
+[04:49] And then you're writing your skills based on the amount of detail that that model requires.
+[04:53] And the right amount of detail has actually changed a lot.
+[04:55] So, around 6 to 8 months ago, some of the older models would skip steps.
+[04:59] So, we wrote numbered lists and capital letters emphasizing certain things like important.
+[05:04] Now, it's the total opposite with some of the newer higher-end reasoning models.
+[05:08] So, the Fable 5 guide says that skills developed for older models are often too prescriptive for it, and they can make the output worse.
+[05:14] And as a result, Anthropic are telling you to remove older instructions if the model does better without them.
+[05:19] But when you consider some of the smaller models, some of the earlier Sonnet models, they haven't moved or progressed as far.
+[05:24] So, the best practices page gives you one question per model.
+[05:27] So, when you're testing these different models, for Claude Haiku, for example, does the skill provide enough guidance for Haiku?
+[05:33] For Sonnet, is the skill clear and efficient?
+[05:35] And for Opus, does the skill avoid over-explaining?
+[05:38] So, different levels of detail required for different models that they're required to be used with.
+[05:42] So, the skill has to sit somewhere that works for all three unless you're going to use it with a very specific model.
+[05:47] And I'd highly recommend running your most used skill on the same task with high Q, then with Opus, and then with Sonnet.
+[05:53] And if high Q misses a step, that step either needs to be clearer, or it should be a script you should give it low degree of freedom.
+[05:59] Because a script, remember, runs the same on every single model.
+[06:02] And then if the same output with Opus does worse with the skill than without the skill, then you're going to basically start cutting instructions from the skill until Opus is able to perform better.
+[06:11] And also, if you're planning on sharing these skills, make sure that in that YAML front matter, that block at the beginning of a skill, that you actually write what model these are intended to be used with.
+[06:20] So, onto the next rules, which are about how the skill is actually laid out and how it checks its own work, starting with the nesting of files, or what you shouldn't do when it comes to actually nesting reference
+[06:29] files within skills.
+[06:31] So, Anthropic say to keep the body of the skill.md file under 500 lines and treat it like the contents page for everything else.
+[06:38] It also advises to split content into separate files when approaching this limit.
+[06:42] And that's where nesting comes in, because actually we're splitting into separate reference files, we're going to have to point to that file from the skill.md.
+[06:47] And their example here is a PDF skill.
+[06:49] So, the skill.md has the instructions, and next to it, there's a forms guide, and there's a reference guide.
+[06:55] This is an API reference, and this is examples of how it should fill out forms.
+[06:59] And when Claude is reading through this skill, it's only going to open the reference file and the forms file when it needs it in a step of that skill.
+[07:05] So, the actual skill directory structure might look a little bit like this.
+[07:08] We have the PDF skill with the skill.md file, a forms.md file, which is the form filling guide, the reference, or which is the API reference, examples, and then a separate scripts file.
+[07:18] Remember, these scripts are where we have low degrees of freedom, where we basically need it to complete this exactly and consistently as is.
+[07:25] And it's important to know when you're using scripts that scripts actually get run, they don't get read into the memory.
+[07:30] So, Claude doesn't actually use up any of its context on those scripts.
+[07:33] Then they proceed to give some more advice about how you should set up skills, and they say that when a skill covers several areas, split those references by the area.
+[07:41] So, their example is a data skill with separate files for finance, for sales, for product and marketing.
+[07:47] So, a question about revenue never loads their marketing.md file.
+[07:51] So, for a client reporting skill that you might have, that's one file per client, for example.
+[07:55] Now, onto nested references.
+[07:57] So, this is where that trick from earlier, the head-100 problem from the start actually comes in.
+[08:03] So, skill.md points to advance.md, and advance.md points to details.md, then Claude is more likely to only preview details.md, so the actual information at the bottom of the chain, the details.md, is only going to get read partially.
+[08:17] So, the fix for this is that every reference file is going to link directly from the skill.md, just one level deep.
+[08:23] So, they recommend keeping all references one level deep from skill.md.
+[08:26] So, you're going to open your skill.md, you're going to list every file that it points to, and look for any file that's only reachable through another file, and you can actually get Claude to do this, too.
+[08:34] And you're going to make sure that all of those are linked directly straight from skill.md.
+[08:38] Next, we're going to give longer processes a proper checklist, because Claude actually loves that.
+[08:44] So, for these complex jobs, these complex skills, Anthropic say to break the work into steps and give Claude a checklist that it copies into its reply and ticks off as it goes.
+[08:54] So, you can see here for this research progress, we've got the five different steps written down as a checklist.
+[08:59] Now, this does sound like the opposite advice of the updated prompting advice they've given to give it the whole job, not the prescriptive steps, but it actually isn't.
+[09:07] So, steps are for when the order actually matters, like checking the data before you build the report on the data.
+[09:13] But, if the order actually doesn't matter, then we're still going to leave this checklist out.
+[09:16] And their example doesn't use any code.
+[09:19] It's a research synthesis workflow, and the checklist is basically five lines, and they're not super prescriptive.
+[09:25] Read all source documents.
+[09:26] Identify key themes.
+[09:27] So, it gives it a goal and still leaves it ambiguous.
+[09:30] Each step is then going to get a short paragraph underneath it, and the important one I want to point out is step five, which is verify citations.
+[09:37] Check that every claim references the correct source document, and if citations are incomplete, return to step three.
+[09:43] So, that go back to step three line is what stops it ticking a failed step in this checklist and actually moving on.
+[09:49] So, this is self-verification effectively, and this is part of the next rule, which is about making sure our skills have a self-feedback loop to correct their own courses of action.
+[09:59] So, Anthropic's own pattern on running skill output validation is to run a check or set of checks and then fix the errors, and then repeat those steps until it passes.
+[10:08] They say that this greatly improves output quality.
+[10:10] And the check itself doesn't have to be code.
+[10:12] In their first example, it's basically a style guide.
+[10:14] Claude is going to draft, review the draft against the guide, note each issue with the section it breaks, revise it, and review it again.
+[10:21] So, only finalizes when everything passes.
+[10:23] So, for you, that style guide might be your brand voice document that you're checking and verifying against.
+[10:28] And this is the process under which the skill starts improving itself.
+[10:31] So, when a draft fails for reason that isn't in your voice document yet, have Claude suggest a new rule at the end of the run.
+[10:39] You're going to approve that rule, and it's going to go into the doc, and the next run gets checked against that new rule.
+[10:43] And the Fable Five guide says specifically that the model is good at updating skills from what it learns on the task.
+[10:51] Which brings us to the final rule, building skills with portability in mind.
+[10:55] So, you may be working on your own now on Claude, but what happens when your teammate installs the skill that you use every day?
+[11:01] Inevitably, it's going to break on day one for them.
+[11:03] So, the skill that you built is going to work on your laptop because you basically installed it and all the dependencies, the libraries six months ago and forgot which dependencies were in that.
+[11:12] But on a teammate's machine or on a fresh code work session, it's not going to be there.
+[11:15] The dependency is going to need to be installed.
+[11:17] And the rule is to avoid assuming tools are installed.
+[11:20] So, an example of doing this badly is actually use the PDF library to process the file, but instead, what we would say in every single skill is something along the lines of install the required package, and then give
+[11:30] it the package name because if it's already installed, it will effectively skip that step.
+[11:33] It's intelligent enough to understand that it is installed and it will skip that step.
+[11:36] So, for every script in a skill, put the install line next to that script.
+[11:42] So that if you are sharing skills with your team or selling your skills, this is going to be a massive difference between a skill that works on them on day one and one that you have to help them
+[11:49] set up and potentially continue to maintain.
+[11:51] So, when we bring that all together, we've got a ton of new rules.
+[11:52] We've got a contents list on long files over 100 lines.
+[11:55] We've got multiple degrees of freedom that can be used on the same skill.
+[11:59] We've got testing on the model that you're going to use and documenting that inside the skill front matter.
+[12:04] We've got references which sit one level deep only.
+[12:07] We've got checklists.
+[12:08] We've got feedback loops and then the dependencies explicitly spelled out inside the skills.
+[12:13] And you'll probably have noticed that most of these fixes weren't about the words inside the skill, which is why I think it's becoming more important that the quality of the skill comes from how its files are laid out
+[12:22] and what checks they run, far more from how well the instructions are written, especially as models get better at interpreting different goals and creating the instructions for themselves.
+[12:30] So, I've put an audit prompt in the description for free that checks a skill against all nine of these and shows you what it would change before it changes anything.
+[12:38] And then if you stay on to the next video, I'm going to talk about Anthropic's prompting updates as they've drastically changed in the last 6 months and you're going to need to update all of your skill prompts.
+[12:47] See you in the next one.

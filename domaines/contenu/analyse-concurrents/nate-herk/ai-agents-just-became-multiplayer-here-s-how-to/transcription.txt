@@ -1,0 +1,321 @@
+[00:00] So, right here you can see I have this sort of like Slack style interface with different channels on the left and chats on the right.
+[00:05] And what's happening is I'm in a channel called AIS Media.
+[00:07] I'm talking to an agent named Herk as you can see, but it's not just me because Cody is also talking to my agent and now Aiden is also talking to my agent and we're all able to collaborate and
+[00:16] build things out together inside of this channel.
+[00:18] So, apps, automations, files, knowledge, all of that kind of stuff.
+[00:22] So, we're basically in this workspace where it's like ClickUp, but it's also like Claude Code and Codeex because you can see I can see my actual users.
+[00:29] So me, Aiden, and Cody are in here right now.
+[00:31] But when I go to my agents, I can see this is our head of agents.
+[00:34] This is Aiden's cloud code subscription and his codec subscription.
+[00:37] And this is my cloud code subscription and my codec subscription.
+[00:40] And all of our agents and actual humans can all collaborate now inside of this environment.
+[00:45] Here's an example where I was working with my Herk agent to actually build us out a dashboard.
+[00:48] And then what I did is I brought in my cloud code subscription to make it feel more AIS branded.
+[00:53] So then it went ahead and changed the design.
+[00:55] And the agents are also proactively communicating.
+[00:57] Here you can see my cloud code subscription was talking to Herk and then Herk sent a message back to my cloud code subscription and now they were collaborating on actually getting things done without me being in the mix.
+[01:06] And per channel you can have different apps.
+[01:09] So right here is our dashboard and you can have different automations.
+[01:11] So right here is our check-in and then you can have different files and you can have things that were created by the agent or things that were uploaded by the users.
+[01:17] So basically today what I wanted to dive into was how you can actually create a team of agents and humans that can work together.
+[01:23] Because right now we've all been sort of playing single player version of AI, but the future is multiplayer AI where all of us can collaborate together and we're not just building such siloed AI operating systems essentially.
+[01:35] So this is what that looks like.
+[01:37] Right now, I've been teaching you guys, and I've been doing this myself, how to use Cloud Code, Grockbot, Codeex, Hermes, agent, whatever it is, to make yourself way more productive and to make you be able to do 10
+[01:47] times the output as you used to, where you're connecting your AI operating system, your second brain on top of all these different agent harnesses.
+[01:53] And then you're connecting it to all of your different tools, right?
+[01:56] Like your Slack, your ClickUp, your Gmail, your notion, your school, your bank accounts, whatever it is that you're connecting it to.
+[02:01] You're building this ecosystem that basically gives you 20 arms and 30 desktops, but you're just one person talking into a microphone getting work done.
+[02:10] And ideally, what's been going on is your team is also doing the same thing.
+[02:13] And your guys are all collaborating with your agents by having them reach at the same tools.
+[02:17] So my agents and my skills help me put stuff into Google Drive or ClickUp that my other teammates, their agents are also grabbing off these tools.
+[02:25] And this is essentially like the source of truth.
+[02:27] But at the end of the day, all of my skills, my memory, and my connected accounts kind of belong to me in my ecosystem.
+[02:33] And for a lot of things, that's good.
+[02:34] But there have been a lot of moments where you wish that everything was a bit more multiplayer where instead of every teammate building their own integrations and skills and sometimes work is getting duplicated, we want to move into
+[02:45] this ecosystem that's multiplayer where we're now having everyone in the team collaborating on building different agents that everyone can talk to.
+[02:53] and now their agents can talk to each other.
+[02:55] Especially when you can bring your own cloud coding and codecs, it gets really cool.
+[02:58] And that's why today I'm going to show you guys this new tool called Kylon.
+[03:01] Now, full transparency, Kylon did approach me and wanted me to make a video about their tool.
+[03:06] And honestly, for a while, I was hesitant because I wasn't sure exactly how it would work and I had a lot of objections around price.
+[03:12] You know, why would we pay for Kylon if we have cloud code and the subscription is goes a lot longer, things like that.
+[03:18] But as I've talked more to the Kylon team, a lot of the objections that I initially had, they kind of showed me a way that they were handling them.
+[03:23] So excited to show you guys a little bit about this tool today.
+[03:26] But I just wanted to start off by sort of explaining the context behind the difference of single player AI, multiplayer AI, and building your personal AIOS or your team AIOS.
+[03:35] Now, ideally, the transition is a lot easier because right now, pretty much everyone in my team has their own AI operating system, which is really great.
+[03:41] I mean, we're a pretty small team and we've been able to expand into tons of different business units and move so much quicker than we could if we all weren't using AI.
+[03:49] So, that's great.
+[03:50] But, there are some times where it's like, okay, Google Drive, someone has to keep this updated.
+[03:53] We have to have a bunch of automations to keep making sure this data is syncing.
+[03:56] There's a lot of other pain points that come with everyone building their own skills and their own AIOS.
+[04:01] But, like I showed you guys in here, we now have this ecosystem where I can introduce my agents to my team.
+[04:07] I can introduce my agent to Cody and then they get to know a little bit more about Cody.
+[04:11] But I can also have my chats where I'm just talking to my own agent.
+[04:13] I can just talk to Herk in here or I have this council where I can just talk to, you know, the agents that I invite.
+[04:18] And in this room, I've got me, Aiden, Cody, Herk, my cloud code.
+[04:23] And then if Aiden wanted to invite his cloud code, he could.
+[04:25] Anyways, I know that this new interface might seem a little bit overwhelming and it seems like there's a lot going on.
+[04:29] So, let me just show you a few more things and then I'm going to open up a completely fresh account and just show you what the setup looks like and kind of give you the action steps to doing
+[04:37] this with your own team.
+[04:38] Because one thing that I think is really interesting, I've been watching a lot of podcasts and discussions around what does it look like to transition a big team to be AI native.
+[04:47] And it's really really hard to just say like let's say you have a team of 20 people to initially all in one fell swoop make them start using AI.
+[04:54] What has been shown to work more successfully is when you transition people one at a time over or you're transitioning one business unit at a time over.
+[05:03] And what's really cool about us using Kylon here is that we are starting this whole sort of like new AIS media initiative and it's very much like a new little business unit.
+[05:12] So me, Cody, Aiden, and when we bring on our our founding host here, we're all going to be trying to build our processes and our automations and our tracker sheets and everything like that inside of Kylon first and
+[05:24] see how that really works.
+[05:25] And so far, it's been pretty successful and it's been pretty beneficial and I think that there's potential here.
+[05:30] Right here you can see I have a different room called the AIS Instagram.
+[05:33] And right here inside of this one, it's just me, my codeex, and my claude code.
+[05:37] It's just us three in in this environment.
+[05:39] So I basically just started off by giving them an agent brief because I normally do this on my own cloud code every single day.
+[05:45] So I gave them this brief and I had them read about it.
+[05:48] But because Claude Code and Codeex are signed in through my local subscription, they already have all this stuff.
+[05:54] They already have my environment variables.
+[05:55] They already have all these processes and these skills.
+[05:57] So, they didn't really have to get caught up to speed that much.
+[06:00] So, we got started in here.
+[06:01] I made sure that they could access everything like X and Bot and um you know, my key.ai account.
+[06:06] And once I knew that they had all access, they just started working and they started building some carousels for me and we started testing things out.
+[06:13] I also then had them build this app where we now have this sort of board where I can see the status of different posts.
+[06:19] We can see the analytics on them.
+[06:20] We can see the different stages and all of this kind of stuff.
+[06:23] We also have a pipeline which is pretty cool.
+[06:24] And if I wanted to make a new one, let's say I saw an expost or I had an idea, I could basically just throw that in right here and then shoot it off and ask an agent to add
+[06:32] that and start creating it.
+[06:33] So this is a nice app example of what you could do in here.
+[06:36] And then what's cool is when you're building this app, you actually just work on it right here.
+[06:40] So you can have your different agents help you out and push changes to the app.
+[06:44] And you can also where it gets really cool have people contribute in here.
+[06:48] So let's say you wanted to build a website for, you know, a new product launch or something.
+[06:53] You could invite your developer, you can invite your, you know, CEO, you can invite your CMO and all of you guys could be making tweaks and making changes to the app.
+[07:02] And then in order to actually publish it, you can choose who has to give the final approval to publish that app to make it go live.
+[07:09] And like I said, everything's organized by channels.
+[07:11] So right here, the app in AIS Instagram channel is different than the app that's in the AIS media channel.
+[07:16] So you can keep the rooms very organized and specific as far as what the goal is.
+[07:20] Inside of this AIS Instagram, we also have automations.
+[07:23] So these run every six hours where my cloud code subscription is looking through news and other things going on in the space and basically creating carousels and updating everything.
+[07:33] It's researching, ideulating, creating, publishing, analyzing, and it's doing this every 6 hours.
+[07:38] And I'm able to track and change and do anything I want to all these automations right from here.
+[07:43] And the end result is basically something that looks like this live on Instagram where we can see we have the actual carousel.
+[07:49] It's completely branded.
+[07:50] It even put videos in this specific example.
+[07:52] And this is exactly following the carousel creation skills and everything like that we have told it to do based on our processes for this Instagram account.
+[08:01] Now, what you're seeing here is different threads within the actual channel.
+[08:04] So, this is the AI's Instagram channel and this is where I talk to my agents right here.
+[08:08] But sometimes when you kick off a response or you kick off a prompt like this one when I asked for that canband board, it will create a thread from it and that's where you open up the thread and
+[08:16] you can see specifically what's going on with this exact conversation.
+[08:21] And that's what you see down here is inside of the channel you can at a glance view all the different threads.
+[08:26] So you can hop into them for example and this thread was for this carousel.
+[08:29] So it created this carousel.
+[08:31] It asked me if I approved.
+[08:32] I approved it and then it said it was live.
+[08:34] And now that that is live, I could just go ahead and I could leave this thread to clean it off my interface, even though that thread still exists.
+[08:40] And if I wanted to get back in there and talk, I certainly could.
+[08:43] So that's all you're seeing here.
+[08:44] You're going to have a bunch of different channels, and each channel is going to start to slowly kick off some threads as you're doing different like little work streams and processes.
+[08:50] But then you can just leave them and close out of them.
+[08:53] But that's what we're actually looking at right here.
+[08:55] That's pretty much how this works.
+[08:56] You can start a new work, which means you can auto select a room, create a new room, or choose a different one and kick off some information.
+[09:02] You can look at all the apps you have right here.
+[09:04] You can search through different threads by, you know, different messages that you've submitted.
+[09:08] And it's a really simple interface once you actually get in there and you understand that you can just see all of your rooms.
+[09:12] You can see recent things.
+[09:13] You can see things that are unread and things that have explicitly mentioned you.
+[09:17] So, after playing with this for a while, it literally just feels like Slack with the customization of like ClickUp lists and dashboards and things like that with the ability to have Cloud Code and Codeex right inside of it.
+[09:28] Now, let's talk a little bit more about some of the technical details, like how it works, how it charges you, what that looks like.
+[09:34] So, I'm going to open up this other workspace, up at AAI.
+[09:36] And this is what the onboarding looks like.
+[09:38] Hey, Nate Herk, what should we call our team?
+[09:40] I'm just going to say up AI.
+[09:41] We hit continue.
+[09:42] Your workspace is almost ready.
+[09:44] Who else should be on the team?
+[09:45] So, this is right away where you invite your teammates into the workspace.
+[09:48] And what's cool is you don't get charged in Kylon by member.
+[09:52] You just get charged per workspace.
+[09:53] And I'll show you what that looks like because you can see how different members are using your credits on the team plan.
+[09:59] But that's pretty cool.
+[09:59] So I'm not going to invite anyone now.
+[10:00] I'll just click not now.
+[10:02] And then it just basically sets up your workspace.
+[10:03] It starts off with a welcome Nate Herk section where you get your initial agent and you're able to just start talking to the agent right away on, you know, it's going to ask you about what's going on and
+[10:14] what you're interested in and how it can help.
+[10:16] You can see right away it said, "Hey, confirm that this is your website so I can tailor the first task to your business." So I'm just going to go ahead and say confirm.
+[10:22] Otherwise, you could switch out that URL or you could change the website, whatever you need to do there.
+[10:26] Now, you can see because I just started this workspace, if I go to the members, it's literally just me and it's my head of agent right now named Herk.
+[10:33] This is where you could obviously make new agents.
+[10:36] You can invite actual human members or you can invite your subscriptions, whether you want to use Claude or Codeex or Devon.
+[10:42] And then, as you can see, they're adding Gemini, Hermes, and Grock Build as well in the future.
+[10:47] So, Herk just asked me, I saved your website.
+[10:49] What work do you personally own at UPAI day-to-day?
+[10:52] So, this is where you would basically just onboard.
+[10:54] And really, what I would do here is I would go to your cloud code or codeex, go to your AIOS, and say, "Hey, I'm trying to have a new AI agent understand everything about me and my business.
+[11:03] Extract all your knowledge about me and give me a markdown file so I can give it to this agent." And then I would just put that markdown file in here and say, "Just read this brief.
+[11:11] Ask me any other questions you might have." And right away, it's going to start suggesting things.
+[11:15] Oh, I can build you an app for this.
+[11:17] Let's do that.
+[11:18] I can build you an automation for this.
+[11:19] Let's do that.
+[11:20] The next thing it starts to ask about is what tools you use day-to-day.
+[11:23] So, like let's say, you know, I kind of just manage the business.
+[11:26] We have a lot of different things going on.
+[11:27] I have a community and I've got a ton of employees that are helping with, you know, building courses and products and events and things like that.
+[11:33] So, I have to do a lot of communication and a lot of project management.
+[11:36] Based on this, it will start to help you get connected different things.
+[11:39] And you can see right here, if I go to the connections, we can actually just connect through Gmail, Google Calendar, GitHub, Notion.
+[11:45] It has a lot of these base connections or you can set up some custom API and I'm sure you guys understand how APIs work by now but basically you would just go to the software you would grab your
+[11:54] API key and then you would connect it through here where you basically like I said you add the API key value in there it's kind of just like your password to that website and if you can't get that
+[12:03] figured out Kylon could help you figure that out cloud code super super simple because after you do that it will just go read the API documentation and figure out how to work with that service so it's not going
+[12:12] to be difficult for you at all now what's actually happening Right now, when you're running the Kylon agent, it goes through the whole harness.
+[12:18] It goes through the whole agentic loop.
+[12:19] As you can see, it's looking through existing services.
+[12:22] It's looking through all these other things.
+[12:23] It just got cut away, but I think you guys got the point.
+[12:25] And now you can see that it's asking me to connect some tools.
+[12:28] So, for Gmail, I would literally just click connect.
+[12:30] It would pull up a Gmail OOTH, and then I would be able to sign in.
+[12:33] So, super simple, the same way that you've probably ooth into other things for Grockbot or um Cloud Code, whatever it may be.
+[12:40] And then you just go ahead and sign in right here with the right account.
+[12:43] Now it says that I have connected to Gmail and then I can go back into Kylon and you can see it says connected.
+[12:48] I'm going to go ahead and just skip for now as far as the other services just to show you guys what that actual sort of like onboarding connection process looked like.
+[12:55] Now what I think is the coolest part about all this is the fact that you can bring in your subscriptions.
+[12:59] We'll just do new agent for now.
+[13:01] Let's call this one Nate's Claude.
+[13:03] We will say a specialty.
+[13:05] If you want to have a bunch of different agents that are specialized for different things, you can do that.
+[13:08] And then you choose how it runs.
+[13:10] So right here is a Kylon hosted agent.
+[13:12] It runs on Kylon's cloud.
+[13:13] Kylon hosted agents are a mixture of models.
+[13:16] It kind of will use some GBT or some claude.
+[13:18] It sounds like it kind of routes to the most intelligent model for the task because you also choose intelligence.
+[13:23] You can see that you can choose fast which is 1 out of 10 cost.
+[13:26] You can see pro which is 1/ half of max cost and then you can see max which is for custom you know complex system development engineering.
+[13:34] But I did hear from the Kylon team that when you use max this is actually going to be using opus on the back end.
+[13:39] So right now, Opus 5.5, which is an incredible model, my favorite model.
+[13:43] So it's actually not too bad if you're doing a Kylon hosted agent on Max.
+[13:46] It's using Opus, not like Fable or Astra.
+[13:48] So just want to let you guys know about that.
+[13:51] And so that's why it's good to create a bunch of different agents, right?
+[13:53] You could build a fast one that's just for like general admin stuff.
+[13:57] You could create a pro one that's for like reasoning and maybe this is like your seuite or something like that inside of Kylon.
+[14:04] And then you could make a max one that's maybe like your motion designer or your, you know, graphic designer or even your engineer or something like that.
+[14:13] So you can play with those intelligence levels.
+[14:15] But if you don't want to run them just on Kylon cloud, you can run them from your computer.
+[14:18] So you can connect your codecs.
+[14:20] You could also do codecs on Kylon cloud, which is pretty cool.
+[14:23] That would basically mean you connect your chatbt account and it will run 24/7 because it's being hosted on Kylon cloud.
+[14:29] Whereas the cloud code and the codeex because you can see it says runs on your computer that just means it's going to use your cloud code subscriptions which is great.
+[14:37] But if your computer's turned off and you have the Kylon mobile app on your phone, you won't be able to talk to this specific agent if your computer's turned off.
+[14:44] Now there are some workarounds.
+[14:45] You could host Cloud Code on a VPS and that's always on.
+[14:48] You could host it on like a Mac Mini on your on your desk and that Mac Mini always stays on.
+[14:53] So that that would mean that this always stays on.
+[14:55] There are some workarounds, but by default, if you just run this and you sign in on this laptop or desktop, if that desktop is powered off or, you know, turned off, then this agent won't respond until that laptop
+[15:07] is turned back on.
+[15:08] So, that is something to be aware of, but there are other workarounds if you guys are interested in learning more about that.
+[15:12] But anyways, let's say I'm just connecting this simple Claude account.
+[15:15] I would hit next and then it gives you this prompt.
+[15:17] Connect this computer to my Kylon Workspace as the agent Nate Claude.
+[15:21] You read this documentation and then do exactly what it says.
+[15:24] So, you literally would just copy this prompt.
+[15:26] You would open up Cloud Code and you would just paste that in.
+[15:29] And as soon as you hit run, it's going to go to this documentation.
+[15:32] It's going to run a command and then it's just going to ask you to sign in.
+[15:36] So then you can see right here, if I go back into Kylon, we now have this agent called Nate's Claude and it's connected.
+[15:41] And because I already did this, I already signed in like in the past.
+[15:44] It automatically did that connection, but everything has connected.
+[15:47] And now right inside of here, this is using my cloud code subscription rather than using my actual Kylon credits because inside of here, if you go to your billing and usage, you basically get on a plan, you get
+[15:57] a certain amount of monthly credits.
+[15:59] And then your messages is what actually eats up the credits.
+[16:02] As you can see right here, we've spent three today.
+[16:04] Now, real quick, I want to show you if I go back to my other workspace and I go to the billing in credits, you can see that we have a credit breakdown, but then we can also go to
+[16:12] people and we can see how many credits everyone has spent.
+[16:15] And we can also see per room how many credits are being spent.
+[16:18] So you get a lot of good visibility onto what's actually going on, what agents are eating credits.
+[16:22] You can see that the claude code subscriptions and the codeex ones are not eating any credits because they're using subscription instead.
+[16:28] But that type of visibility is huge.
+[16:30] So how do I actually imagine that you get started with all this kind of stuff?
+[16:33] Because we've been spending months and months and months building our own AI operating systems.
+[16:37] And I'm not saying that you should completely restart.
+[16:39] I mean you've got all these good skills, you've got all this good context and you just want to bring that into this ecosystem.
+[16:44] Have you ever thought to yourself, "Wow, my AIOS knows me so well.
+[16:48] It talks like me.
+[16:48] It responds like me.
+[16:49] I just wish that my teammates could message it, or I wish that my teammates could utilize some of the stuff in here." That's what we're doing.
+[16:56] We're basically bringing everything together where now, you know, I could invite my team and then I could have a group chat with me and my team and my cloud code and their cloud code and I could talk to
+[17:07] their cloud code if they have like a file that I need or they have things that I need or skills that I need, but maybe that person isn't responding right now.
+[17:14] I'm not saying that you change up your entire tech stack either.
+[17:16] Like we live on ClickUp and Google Drive.
+[17:19] Like that's the two places where we have all of our coms and our data sources.
+[17:24] And I was like, "Hey, so I'm not going to like remake ClickUp inside of Kylon." They're like, "No, you don't have to at all.
+[17:29] Just connect ClickUp and then you can use, you know, a Kylon automation to help you guys move faster in ClickUp and stay more organized." Which is exactly why one of the first things I built in here was basically
+[17:40] this tracker where we can now see our weekly commitments on, you know, this little subunit of the team.
+[17:45] We can see how people are progressing throughout the week.
+[17:48] And the automation is set up in here so that Herk, you know, this agent is basically checking in with us at the end of every day.
+[17:54] Because what happens a lot of time in our ClickUp is that we're completing tasks, but we're forgetting to mark them off as complete.
+[18:00] And then everyone else, like the visibility gets weird, and then my AIOS thinks that Cody has only done one out of eight of the things he said he was going to do this week, when in reality, he's actually
+[18:08] done four out of eight.
+[18:09] So using agents like this that we can all talk to, that we can all build apps with together to keep us more accountable and to keep our data sources more accurate and more real time.
+[18:18] That's going to be a big help.
+[18:19] We're building out this show format called Humanly Possible and we're going to be like interviewing community members.
+[18:24] So if you want to be featured on the show, stay tuned.
+[18:26] More information coming.
+[18:27] But there's going to be a lot of little handoffs in that pipeline.
+[18:30] There's going to be so many opportunities for something to get missed or for something to slip through the cracks.
+[18:35] But we're going to be building Kylon agents and automations to help make sure that things are progressing through the pipeline and if they're sitting there for like a day and it hasn't been touched or moved by anyone that
+[18:44] someone is being pinged and saying, "Hey, this is your item.
+[18:47] You own this.
+[18:48] You need to move this along." And that's going to be basically Herk or my Cloud Code subscription or our other project management agents that we build inside of this specific channel to help out with that.
+[18:57] And then once we get comfortable with that and we've really found a good process for me, Aiden and Cody and our host, then we're going to add a new channel and maybe we'll add another channel in here and
+[19:06] we'll invite some other people from the team and say, "Hey, let's build some apps and automations in here for one specific sort of like workstream." So maybe just like the newsletter part of our business, not you know, our
+[19:16] entire AI+ community or anything like that.
+[19:18] I think when you're starting with new tools and you're starting with new processes at the end of the day, you need to find the quick wins that actually provide value, not just a bunch of apps and automations you
+[19:26] want to slap down and then, you know, a week later you kind of forget they're there or you never use them again.
+[19:31] So, what I would recommend is you get into Kylon and you start to explain how this works.
+[19:35] You explain your AIOS, you explain the tools you use, you explain the automations you already have going on, and then start to explain some of your pain points.
+[19:42] Where do things slip through the cracks?
+[19:44] what is overwhelming you and things that you might forget about week to week and just start to explain how does your team work like what's important to your editor and what's important to your host what's important to your
+[19:53] ops manager and then what happens is every agent and every user starts to have a profile in here so if I click on Aiden we can see information about him like his responsibilities his current goals and his work
+[20:03] context same thing with Cody because as your users get in here they basically get onboarded and they explain what they're doing what they're good at blah blah blah and then you can see if you click on your different
+[20:13] agents Not only can you see the model they use, the reasoning effort, and you can change this kind of stuff, you can also see the provider usage, so how much is left on that weekly limit.
+[20:21] You can also see who they are, you know, their personality, how they think, their voice, and we can change all this stuff as well.
+[20:26] Same thing with my Claude subscription using Opus.
+[20:28] It's on the default.
+[20:29] We've got 97% left.
+[20:31] And same thing, how they think, what their voice is.
+[20:33] Now, Aiden has not yet shared me access to his Claude or his codec subscription.
+[20:37] And that's good for privacy, right?
+[20:39] Like if you don't want to share your codec subscription with someone else on your team, then don't.
+[20:43] But if they do, then I can look at it.
+[20:45] I can maybe alter some of the stuff about how it works.
+[20:47] I can start a DM with it.
+[20:48] I can start chats with it.
+[20:49] And that's going to be pretty cool, especially when we're all building apps together and we want to like test out different versions and test out different things and we want to see the working versions together.
+[20:57] Now, at the end of the day with Kylon, is it anything that we couldn't have done beforehand?
+[21:01] No.
+[21:02] All of this stuff could have been built.
+[21:04] I've experimented with building agents like this in ClickUp that my team can talk to, that I can talk to, and it all works, but it's just way more headache because you have to build these custom apps, you have
+[21:13] to build these polling features, you have to kind of like teach everyone how to use it, and it's not as intuitive, and you have to do a lot more things with like GitHub and deployment and versions, and it
+[21:23] just feels a little bit more technical.
+[21:25] It works, but it's just not as easy as how what Kylon has done.
+[21:28] Kylin has made this really, really good for small teams to be able to get in there quick and just start building and just start producing actual apps and workflows that will change the way that your work works dayto-day.
+[21:39] So, like I said guys, get in here, test out Kylon, let me know what you think.
+[21:43] Like I said, I'm going to be building with this a lot with my team in here as we're building out some new processes with like AIS media type of stuff.
+[21:49] And I have a ton of great ideas and I've been talking to the Kylon team about different use cases and different ways that I can make this feel more like always on.
+[21:56] The way that I started to feel as I was using this is that it's like Grockbot.
+[21:59] And I absolutely love Grockbot.
+[22:00] I use Grockbot a ton.
+[22:02] But imagine if you had Grockbot, but you could invite teammates into your Grockbot as well.
+[22:06] So you could talk to them and you could have them talk to agents.
+[22:08] You can make group chats.
+[22:09] That's the way that this whole Kylon thing is feeling to me right now.
+[22:12] And it's pretty cool.
+[22:13] But anyways, that is going to do it for this one.
+[22:14] I hope that you guys enjoyed you learned something new.
+[22:16] And if you did, please give it a like.
+[22:17] It definitely helps me out a ton.
+[22:18] And as always, I appreciate you guys making it to the end of the video.
+[22:21] And I'll see you on the next one.
+[22:22] Thanks everyone.

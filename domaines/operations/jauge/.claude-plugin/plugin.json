@@ -1,0 +1,7 @@
+{
+  "name": "jauge",
+  "version": "0.1.0",
+  "description": "Ta consommation en direct au-dessus du message : limites 5 h et 7 j, contexte, cache, coût estimé. Aucun appel de modèle.",
+  "author": { "name": "Thomas Richard" },
+  "types": "./types/index.d.ts"
+}

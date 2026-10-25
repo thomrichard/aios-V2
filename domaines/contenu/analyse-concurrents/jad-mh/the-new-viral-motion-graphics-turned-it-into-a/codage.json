@@ -1,0 +1,165 @@
+{
+  "video_id": "98KlVeJ9ylg",
+  "chaine": "jad-mh",
+  "titre": "The New Viral Motion Graphics (Turned it into a skill)",
+  "codeur": "agent jad-mh",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "actu",
+    "format_secondaire": "tuto",
+    "sujet": "Higgsfield Katana (sponsor) refait dans Claude un montage viral plan par plan avec son visage ; sa skill « Katana Director »",
+    "outils": ["Higgsfield Katana", "Higgsfield MCP", "Claude", "Claude Opus 5.5", "Claude Motion"],
+    "niveau": "debutant",
+    "objectif_probable": "vente"
+  },
+  "titre": {
+    "attente_au_clic": "Découvrir le nouveau style de motion design qui devient viral, et la skill pour le faire.",
+    "schema": "The New Viral <Technique> (Turned it into a skill)",
+    "promesse": "Faire le motion design viral du moment grâce à une skill",
+    "audace": "timide",
+    "registre": "mixte",
+    "briques": ["resultat"],
+    "marqueurs": ["nouveaute"],
+    "nom_outil": false
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "neutre, sérieux",
+    "regard": "camera",
+    "texte": "Create Motion Graphics",
+    "texte_mots": 3,
+    "repete_titre": "partiel",
+    "elements": ["visage au centre, mains sur un clavier blanc posé sur de la mousse", "quatre cadres de motion design (Vox, Aslani, Nothing, Fast)", "barre « Create Motion Graphics » avec le logo Higgsfield vert citron"],
+    "nb_elements": 3,
+    "fond": "orange brun sombre, cadres vitrés",
+    "couleurs": ["orange", "brun", "blanc", "vert citron"],
+    "curiosity_gap": "resultat",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "This is motion graphics on the left.",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Avant/après côte à côte : silhouettes et loups en noir et blanc (original) contre la version refaite, face caméra en vignette",
+    "premier_plan_reprend_miniature": "non",
+    "ouverture": ["demo-d-abord", "hook-fait", "actu-annonce"],
+    "preuve": {
+      "type": "resultat-montre",
+      "seconde": 0,
+      "description": "L'original (son clip à plus de 160 000 vues) et la version refaite plan par plan défilent côte à côte, étiquetés"
+    },
+    "annonce_plan": {"presente": false, "nb_points": null, "a_l_ecran": false},
+    "boucle_vers_la_fin": {"presente": false, "citation": "", "seconde_resolution": null, "tenue": null},
+    "seconde_premier_point": 134,
+    "attente_tenue": "partiel",
+    "attente_note": "Le motion design refait est bien montré. Mais le titre ne nomme ni Katana ni Higgsfield : la vidéo est la présentation sponsorisée d'un outil, et la seconde moitié est une démo brute. La description garde un « [PASTE YOUR HIGGSFIELD TRACKING LINK] » non rempli."
+  },
+  "structure": {
+    "modele": "mixte",
+    "segments": [
+      {"debut": 0, "fin": 38, "titre": "Can Katana remake a viral edit shot for shot?", "role": "intro", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 38, "fin": 134, "titre": "Why is this video sponsored by Higgsfield?", "role": "sponsor", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 134, "fin": 188, "titre": "What is Katana, and how it runs on the Higgsfield MCP", "role": "sponsor", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": true},
+      {"debut": 188, "fin": 245, "titre": "Why Katana edits look like real motion graphics, and the cost", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 245, "fin": 289, "titre": "What the Katana Director skill does", "role": "point", "pull": true, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 289, "fin": 326, "titre": "A burger restaurant ad", "role": "demo", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 326, "fin": 493, "titre": "Community presets, the 3 ways, your own clips", "role": "demo", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 493, "fin": 545, "titre": "Installing the Katana Director skill", "role": "cta", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": false},
+      {"debut": 545, "fin": 798, "titre": "A clothing brand ad and an aura farming edit", "role": "demo", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 798, "fin": 835, "titre": "Who is Katana for?", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 835, "fin": 885, "titre": "Is Katana worth trying?", "role": "fin", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 31, "type": "rupture", "citation": "Wait, that's just give me one more minute. I'm almost done."},
+      {"seconde": 125, "type": "rappel-promesse", "citation": "stay all the way to the end of this video first"},
+      {"seconde": 134, "type": "question-spectateur", "citation": "So what is even Katana?"},
+      {"seconde": 189, "type": "annonce-suite", "citation": "Now, this part that I'm most excited about"},
+      {"seconde": 245, "type": "question-spectateur", "citation": "You connect it, you open a new chat, and then what?"},
+      {"seconde": 627, "type": "question-spectateur", "citation": "So, what if you don't want to go buy my skill?"},
+      {"seconde": 730, "type": "annonce-suite", "citation": "I wonder how it's going to look like the final result."},
+      {"seconde": 798, "type": "question-spectateur", "citation": "So really, who is this for?"}
+    ],
+    "histoires": [
+      {"seconde": 5, "acte": "anecdote", "resume": "Le clip de sa vidéo de motion design a fait plus de 160 000 vues"},
+      {"seconde": 38, "acte": "anecdote", "resume": "Des marques le contactent depuis que ses vidéos marchent ; il en a refusé, accepte Higgsfield qu'il utilisait déjà"}
+    ],
+    "payoffs": [
+      {"seconde": 233, "resume": "La ligne de coût : le code et ses propres images coûtent 0 crédit"},
+      {"seconde": 289, "resume": "La pub burger faite avec Katana"},
+      {"seconde": 466, "resume": "Ses propres clips transformés en montage motion design"},
+      {"seconde": 744, "resume": "Le montage « aura farming » fini, lui à moto, sans prompt"}
+    ],
+    "premier_payoff_seconde": 289,
+    "jargon": 2,
+    "repetitions": 1,
+    "test_du_tweet": "Higgsfield Katana (sponsor) tourne dans Claude : donne-lui un montage viral, il le refait plan par plan avec ton visage ou ton produit. Le mouvement est du code (0 crédit), l'IA ne génère que les plans manquants. Sa skill Katana Director choisit le montage et écrit l'histoire."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine ; presque toujours en vignette", "decor": "salon, tableau, bibliothèque ; t-shirt noir"},
+    "parts": {"face": 8, "ecran": 82, "motion": 10, "broll": 0},
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": true,
+    "sous_titres_style": "mot à mot, blanc gras, centré en bas ; seulement sur les 5 premières minutes",
+    "elements": ["split-screen", "etiquettes", "chiffres-animes"],
+    "charte": "Première partie au style maison (fond crème à grille, captures en cadres arrondis, étiquettes bleu et vert, barres de vues animées) ; seconde partie en enregistrement d'écran brut sur fond d'eau turquoise. La miniature ne reprend ni l'une ni l'autre.",
+    "rythme": "contraste",
+    "notes": "Deux vidéos en une : 5 min montées, puis 9 min de démo brute sans sous-titres, de 6 à 24 changements de plan par minute. Un sketch avec des personnages générés par IA casse l'intro à 0:31."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 61, "type": "sponsor", "cible": "Higgsfield, sponsor de la vidéo", "amene_par": "intro", "citation": "this video is sponsored by Hicksfield and that's a company I was already using"},
+      {"seconde": 89, "type": "sponsor", "cible": "l'offre Higgsfield en description", "amene_par": "intro", "citation": "They also have an offer that is in the link in the description."},
+      {"seconde": 99, "type": "sponsor", "cible": "essayer Katana avec son lien", "amene_par": "intro", "citation": "if you want to try the katana, it would mean the world to me."},
+      {"seconde": 112, "type": "communaute-gratuite", "cible": "la skill dans Skool", "amene_par": "intro", "citation": "The skill is in my school community. The link is in description, too."},
+      {"seconde": 125, "type": "autre", "cible": "rester jusqu'à la fin", "amene_par": "intro", "citation": "stay all the way to the end of this video first"},
+      {"seconde": 494, "type": "lead-magnet", "cible": "la skill Katana Director, lien Google Drive en description", "amene_par": "pendant-demo", "citation": "in the link in the description you go and install the zip."},
+      {"seconde": 850, "type": "sponsor", "cible": "le lien Katana et la skill dans Skool", "amene_par": "fin", "citation": "The link is in description and the skill is in my school."},
+      {"seconde": 853, "type": "communaute-gratuite", "cible": "poster sa création dans Skool", "amene_par": "fin", "citation": "If you make something with it, post it in school."},
+      {"seconde": 859, "type": "like-commentaire", "cible": "commenter son besoin, il le fera avec ses crédits", "amene_par": "fin", "citation": "if you struggle a little bit of knowing what you want to do, just comment"},
+      {"seconde": 880, "type": "abonnement", "cible": "s'abonner", "amene_par": "fin", "citation": "if you didn't click on subscribe button, please do."}
+    ],
+    "sponsor": {"present": true, "nom": "Higgsfield (Katana)", "debut": 38, "duree": 847, "forme": "integre-a-la-demo"},
+    "liens_description": {"sponsor": 1, "lead-magnet": 1, "communaute-gratuite": 1, "autre": 1},
+    "commentaire_epingle": {"texte": "Get Acces to the promo (lien Higgsfield Katana avec code d'invitation)", "type": "sponsor"},
+    "recap_final": false,
+    "derniere_phrase": "And if you didn't click on subscribe button, please do. and I'll see you on the next one.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["bravo pour le premier sponsor", "la valeur donnée vite", "l'honnêteté sur les crédits dépensés"],
+    "demandes": [],
+    "critiques": ["« Fun fact jump to 2:00 to start learning »"],
+    "reprises": ["le coût en crédits montré, salué comme rare"],
+    "signal_promesse": "tenue"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "0:00 « This is motion graphics on the left » reprend le titre en partie ; le 1er plan est un avant/après, pas la miniature"},
+    "ap_boucle_curiosite": {"note": 0, "preuve": "Aucune question gardée pour plus tard"},
+    "ap_effort_montre": {"note": 0, "preuve": "Aucun effort dit ou montré dans l'intro"},
+    "ap_setup_progress_payoff": {"note": 2, "preuve": "Le montage aura farming : trois images et une moto (10:45), les plans qui arrivent (11:54 « that looks really like me »), le résultat (12:24)"},
+    "ap_contraste_rythme": {"note": 2, "preuve": "De 6 à 24 changements de plan par minute ; une première moitié montée et une démo brute plus lente, un sketch à 0:31"},
+    "ap_montrer_sans_son": {"note": 2, "preuve": "Planche intro : original et version refaite côte à côte, étiquetés, avec les vues"},
+    "ali_douleur_histoire": {"note": 0, "preuve": "Ni douleur ni histoire dans l'intro"},
+    "ali_coeur_unique": {"note": 2, "preuve": "3:49 « So, the motion is code and the AI only draws the hero. »"},
+    "alx_pont": {"note": 0, "preuve": "Ouverture sur une démo, puis le sponsor ; pas de pont"},
+    "alx_pull_paint_point": {"note": 1, "preuve": "Complet sur 3:09 (pourquoi c'est du vrai motion design) ; ailleurs, démo sans pourquoi"},
+    "alx_nom_idee": {"note": 0, "preuve": "Les noms sont ceux de produits (Katana, Katana Director), pas des idées"},
+    "alx_phrase_finale": {"note": 1, "preuve": "3:49 « the motion is code and the AI only draws the hero » ; rare ailleurs"},
+    "alx_douleur_reve": {"note": 1, "preuve": "« Viral » parle du désir, « Motion Graphics » de la technique ; aucun outil nommé"},
+    "alx_cta_tot": {"note": 2, "preuve": "1:52 la skill dans Skool, 1:29 l'offre du sponsor, liées au sujet"},
+    "ed_intro_courte": {"note": 0, "preuve": "Premier point à 2:14, après la démo, un sketch et 95 s de sponsor"},
+    "ed_hook": {"note": 1, "preuve": "L'avant/après et « over 160,000 views » : un fait montré, pas un hook pur"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "4:05 « where people get really lost » pose le problème de la skill ; les démos vont droit aux consignes"},
+    "ed_tension_relancee": {"note": 2, "preuve": "2:14 « So what is even Katana? » ; 4:09 « and then what? » ; 13:18 « who is this for? »"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "0:38 les marques qui le contactent et celles qu'il refuse : une anecdote"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "Le soutien du sponsor et la gratuité des skills reviennent plusieurs fois entre 0:38 et 2:05"},
+    "ed_niveau_simple": {"note": 1, "preuve": "4:26 la skill expliquée simplement, mais le MCP n'est jamais expliqué"},
+    "tous_video_suivante": {"note": 0, "preuve": "« I'll see you on the next one », sans vidéo précise"}
+  },
+  "a_retenir": {
+    "titre_miniature": "La seule vidéo sponsorisée a le titre le plus vague : ni Katana ni Higgsfield. La miniature reprend celle du 9 octobre (même visage, mêmes quatre cadres), logo Higgsfield à la place de l'étoile.",
+    "intro_structure": "Avant/après dès 0:00, un sketch, puis 95 s de transparence sur le sponsor : il promet de montrer « every credit ». Un commentaire conseille de sauter à 2:00.",
+    "habillage": "Deux vidéos en une : 5 min montées au style maison, puis 9 min d'écran brut sur fond turquoise, sans sous-titres. Le gabarit de la description laisse un lien de suivi non rempli.",
+    "idee_pour_nous": "Annoncer un sponsor en disant ce que son argent permet (garder les ressources gratuites) et garder les coûts affichés.",
+    "objectif": "vues"
+  }
+}

@@ -1,0 +1,212 @@
+{
+ "recupere_le": "2026-10-25",
+ "breakout": 1.96,
+ "vph": 87.55,
+ "stats_jour": [
+  {
+   "timestamp": "2026-09-27T08:35:06.560Z",
+   "views": 187,
+   "likes": 20,
+   "comments": 2,
+   "vph": 255.00000000000003
+  },
+  {
+   "timestamp": "2026-09-28T00:32:13.721Z",
+   "views": 33019,
+   "likes": 873,
+   "comments": 36,
+   "vph": 2040
+  },
+  {
+   "timestamp": "2026-09-29T00:38:03.377Z",
+   "views": 67656,
+   "likes": 1734,
+   "comments": 47,
+   "vph": 1060
+  },
+  {
+   "timestamp": "2026-09-30T00:10:50.863Z",
+   "views": 88818,
+   "likes": 2237,
+   "comments": 55,
+   "vph": 477
+  },
+  {
+   "timestamp": "2026-10-01T00:37:13.650Z",
+   "views": 103614,
+   "likes": 2568,
+   "comments": 58,
+   "vph": 431
+  },
+  {
+   "timestamp": "2026-10-02T00:15:09.149Z",
+   "views": 115560,
+   "likes": 2850,
+   "comments": 62,
+   "vph": 427
+  },
+  {
+   "timestamp": "2026-10-03T00:34:10.385Z",
+   "views": 124505,
+   "likes": 3049,
+   "comments": 66,
+   "vph": 415.93220338983053
+  },
+  {
+   "timestamp": "2026-10-04T00:39:26.268Z",
+   "views": 133926,
+   "likes": 3257,
+   "comments": 66,
+   "vph": 392
+  },
+  {
+   "timestamp": "2026-10-05T00:36:52.269Z",
+   "views": 141253,
+   "likes": 3431,
+   "comments": 67,
+   "vph": 219
+  },
+  {
+   "timestamp": "2026-10-06T00:06:36.039Z",
+   "views": 147547,
+   "likes": 3580,
+   "comments": 68,
+   "vph": 267
+  },
+  {
+   "timestamp": "2026-10-07T00:29:26.112Z",
+   "views": 152957,
+   "likes": 3669,
+   "comments": 69,
+   "vph": 166.56716417910448
+  },
+  {
+   "timestamp": "2026-10-08T00:35:12.113Z",
+   "views": 156769,
+   "likes": 3751,
+   "comments": 69,
+   "vph": 115
+  },
+  {
+   "timestamp": "2026-10-09T00:56:24.936Z",
+   "views": 159825,
+   "likes": 3820,
+   "comments": 69,
+   "vph": 122.85714285714285
+  },
+  {
+   "timestamp": "2026-10-10T00:36:45.837Z",
+   "views": 162445,
+   "likes": 3878,
+   "comments": 69,
+   "vph": 97
+  },
+  {
+   "timestamp": "2026-10-11T00:47:02.624Z",
+   "views": 164456,
+   "likes": 3925,
+   "comments": 69,
+   "vph": 73.125
+  },
+  {
+   "timestamp": "2026-10-12T00:21:23.781Z",
+   "views": 166463,
+   "likes": 3968,
+   "comments": 69,
+   "vph": 82
+  },
+  {
+   "timestamp": "2026-10-13T00:42:53.039Z",
+   "views": 168365,
+   "likes": 4002,
+   "comments": 69,
+   "vph": 64.76190476190476
+  },
+  {
+   "timestamp": "2026-10-14T00:14:43.248Z",
+   "views": 170084,
+   "likes": 4044,
+   "comments": 69,
+   "vph": 14
+  },
+  {
+   "timestamp": "2026-10-15T00:36:16.563Z",
+   "views": 172059,
+   "likes": 4090,
+   "comments": 69,
+   "vph": 74.28571428571428
+  },
+  {
+   "timestamp": "2026-10-16T00:33:00.960Z",
+   "views": 174064,
+   "likes": 4127,
+   "comments": 69,
+   "vph": 72
+  },
+  {
+   "timestamp": "2026-10-17T00:32:55.021Z",
+   "views": 175728,
+   "likes": 4161,
+   "comments": 69,
+   "vph": 68
+  },
+  {
+   "timestamp": "2026-10-18T00:50:35.416Z",
+   "views": 177390,
+   "likes": 4202,
+   "comments": 70,
+   "vph": 88.18181818181817
+  },
+  {
+   "timestamp": "2026-10-19T00:35:50.357Z",
+   "views": 179599,
+   "likes": 4252,
+   "comments": 70,
+   "vph": 125.9016393442623
+  },
+  {
+   "timestamp": "2026-10-20T00:32:04.808Z",
+   "views": 181751,
+   "likes": 4300,
+   "comments": 72,
+   "vph": 79.3220338983051
+  },
+  {
+   "timestamp": "2026-10-21T00:32:23.846Z",
+   "views": 183664,
+   "likes": 4336,
+   "comments": 72,
+   "vph": 83.26530612244898
+  },
+  {
+   "timestamp": "2026-10-22T00:32:16.340Z",
+   "views": 185529,
+   "likes": 4373,
+   "comments": 72,
+   "vph": 67.77777777777777
+  },
+  {
+   "timestamp": "2026-10-23T00:49:24.899Z",
+   "views": 187557,
+   "likes": 4423,
+   "comments": 73,
+   "vph": 105
+  },
+  {
+   "timestamp": "2026-10-24T00:40:44.821Z",
+   "views": 189606,
+   "likes": 4458,
+   "comments": 74,
+   "vph": 107.41935483870967
+  },
+  {
+   "timestamp": "2026-10-25T00:17:24.222Z",
+   "views": 191600,
+   "likes": 4498,
+   "comments": 74,
+   "vph": 137.41935483870967
+  }
+ ],
+ "changements": [],
+ "ab_tests": []
+}

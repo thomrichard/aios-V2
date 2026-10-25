@@ -1,0 +1,136 @@
+[00:00] I gave Claude Opus 5.5, Gemini 4 Argon, and GBT-6 Astra the same job.
+[00:06] Make the first 30 seconds of a music video, same song, same lyric, the same shot list, same images.
+[00:11] The three best models in the world right now.
+[00:14] And I'm not going to tell you which one won.
+[00:16] I'm going to show you what each one made, the time that it took, and how much it cost it.
+[00:20] And you will be the judge of it.
+[00:22] And all the way to the end, we're going to look at the results.
+[00:24] What are people sharing on Twitter?
+[00:25] Because recently, Argon just got released, and people are being very vocal about it.
+[00:30] Be sure to subscribe because I drop weekly skills for free.
+[00:33] So, let's get straight into it.
+[00:35] So, let me explain to you the setup.
+[00:36] I made the song locally with Ace Step with $0.
+[00:39] The images and clips are from Nano Banana, Claim, and Higgs Field.
+[00:43] And by the way, I was able to get an offer for you guys on Higgs Field.
+[00:46] The link is in description.
+[00:48] Take a look at the promo, and if it fits your budget, you should definitely get it.
+[00:51] If not, that's fine.
+[00:52] They also offer an API, so you can pay as you go.
+[00:56] Just click on the link, and then the video gets re-rendered by Hyper Frames, which is open source right now on my Mac.
+[01:02] Every model got all of that.
+[01:04] The same prompts, word for word, and the same scales.
+[01:07] So, basically, the only thing that changes is the model.
+[01:10] We're only looking at one thing, the motion graphics.
+[01:14] Each model had to do everything on its own, the design, the effects, the code checking on its own work, and re-rendering the final video.
+[01:21] No help from me whatsoever.
+[01:23] The only thing I sent was the same.
+[01:26] Keep going.
+[01:27] Message when the tool paused.
+[01:29] Now, fair fair, because I know some of you are going to ask, I ran Gemini through an open router, but not in the chat window where you paste a prompt and get one answer back.
+[01:38] I ran inside open code, which is a coding agents, just like Claude Code.
+[01:42] I gave it the full context.
+[01:44] It had access to the whole project folder, the song, the lyrics with the timing of the word, the shot list, all the images, and the same scales.
+[01:52] And it had the same tools Opus had.
+[01:54] It could read and write files, run commands, render the video, look at its own frames, and even spin up Calper agents.
+[02:02] GPT did the exact same setup inside Codex, Open AI's own tool.
+[02:08] So, all three had the full setup, not just a chatbot.
+[02:11] The one thing Opus had that they didn't, Opus made its version last week.
+[02:16] It had a 50-second test around that.
+[02:19] I reviewed it.
+[02:20] Gemini and GPT got one prompt, no feedback, and the song literally stays the same as Opus 5.5.
+[02:26] Gemini even named its terminal with a cloud Opus 5.5, so keep that in mind.
+[02:30] So, let's start immediately with Gemini 4 Argon cuz it's just the model that recently got released.
+[02:35] Gemini split the video in five scenes.
+[02:37] It opens on their eyes with a cursor, so I'll stay quiet and I'll let you watch it.
+[02:43] >> >> Now the stats.
+[03:12] Gemini took about 63 minutes and 179 model calls.
+[03:17] It cost me $9.87, which is real money on Open Router.
+[03:21] And to be fair, about $1.60 of that got wasted on a bug in Open Code, the tool I ran in it.
+[03:28] That's not on Gemini, and keep that in mind, that's Argon's launch price.
+[03:32] It's supposed to be double later.
+[03:34] Now, GPT 6 Astro.
+[03:36] GPT splits it into four scenes, same eye opening and then the particles, so I'll stay again quiet and you watch it.
+[03:47] >> >> Type one line in the terminal.
+[03:54] Here and then let her go.
+[03:56] Opus 5.5 on the other side.
+[03:58] No After Effects, no studio, no team.
+[04:00] Just go right and code building every scene.
+[04:03] Every shape there's a line.
+[04:04] Every frame is a choice.
+[04:05] He's an in, he's an out.
+[04:06] Give the pixels a voice.
+[04:07] I don't touch the timeline.
+[04:09] I don't move a thing.
+[04:10] It's on autopilot, baby.
+[04:11] Let it sing.
+[04:13] >> GPT is more impressive.
+[04:15] It did all of this in 23 minutes and 116 calls.
+[04:19] It ran on my ChatGPT plan, the $20 plan.
+[04:22] It hit the halfway and it cost at around $11.
+[04:25] And then we have Opus 5.5.
+[04:27] Opus splits it into four scenes.
+[04:30] So, I'll stay quiet and you watch this one, too.
+[04:34] >> >> Come alive.
+[04:41] Type one line in the terminal.
+[04:43] Here and then let her go.
+[04:44] Opus 5.5 on the other side.
+[04:47] No After Effects, no studio, no team.
+[04:49] Just go right and code building every scene.
+[04:52] Every shape there's a line.
+[04:53] Every frame is a choice.
+[04:55] He's an in, he's an out.
+[04:56] Give the pixels a voice.
+[04:57] I don't I don't move a thing.
+[04:59] It's on autopilot, baby.
+[05:00] Let it sing.
+[05:02] >> The final build of these 30 seconds took Opus about 1 hour and 15 minutes with four helpers building the four scenes at the same time.
+[05:11] Before that, there were 15 seconds test round, about 50 minutes, about 544 model calls in total.
+[05:17] It ran on my Claude Max plan, the $200 a month $0 on top of my subscription.
+[05:23] These first 30 seconds took about 5% of my weekly limits.
+[05:28] If you split the $200 across the month, that's about $2.30 of my plan.
+[05:33] Now, let's look at the same shots from all three so you can compare.
+[05:37] I'll stay quiet and you watch it.
+[05:39] >> No After Effects, no studio, no team.
+[05:41] Just go right and code building every scene.
+[05:44] Every shape there's a line.
+[05:45] Every frame is a choice.
+[05:46] He's an in, he's in out.
+[05:47] Give the pixels a voice.
+[05:49] >> So, here are the numbers side by side.
+[05:51] Opus about 1 hour and 15 minutes for the final build, plus a 50-minute test around 544 calls, $0 on top of my $200 max plan, about 5% of my weekly limit.
+[06:03] Gemini about 63 minutes, 179 calls, $9.87 with no subscription.
+[06:09] I just paid for what I used.
+[06:10] GPT about 23 minutes and $11.
+[06:14] Now, let's see what people on X are sharing.
+[06:16] Argon came out yesterday, so these are all day first test.
+[06:20] And every one of them has the video side by side.
+[06:23] This one has over 500,000 views, gave Opus 5.5 and Argon the same prompt, gummy bears.
+[06:30] You can play with Opus, and you can see the difference here is actually insane.
+[06:35] And to be fair, Gemini is still a very, very powerful model, but when it comes to this, I'm not entirely sure it can compete with Opus.
+[06:43] This one has over 1,200 likes.
+[06:45] Argon versus Opus 5.5, a voxel pelican riding a bike on top of a jet.
+[06:50] This one is Argon versus GPT-6 Astra, a pixel art night scene.
+[06:55] They say Astra took 25 minutes and cost $11, and Argon took 3 minutes and cost 50 cents.
+[07:03] And keep in mind, this accounts is a company that sells access to these models.
+[07:07] Brightmind gave the same level up prompts to six models.
+[07:11] Argon cost 80 cents and took under 2 minutes.
+[07:14] Opus cost $1.27 and took 9 and 1/2 minutes.
+[07:18] And they say Google might be quietly cooking.
+[07:20] Jazzy gave Opus and Argon the same pixel art city animation.
+[07:25] And they say the results came out almost the same.
+[07:28] Opus took 15 minutes and cost $8.20 in Claude code.
+[07:32] Argon took 30 minutes and cost $1.20 in Devon.
+[07:36] And keep in mind, Devon has Argon at 75% off right now.
+[07:41] So, that's what people are saying.
+[07:43] Now, you've seen all three and you've got the numbers.
+[07:46] You're the judge.
+[07:47] Let me know in the comments which one you think won.
+[07:49] In my opinion, I'll stick to Opus 5.5.
+[07:53] As Anthropic, I'm sure they're about to release a model and they're going definitely to be better than Opus 5.5.
+[07:59] That's my best bet.
+[08:00] Thank you for watching.
+[08:01] It means a lot to me and these past few days have been actually insane.
+[08:06] The growth in this channel genuinely means a lot to me and I'm trying to give as much value as I can to you guys.
+[08:13] So, from now on, we will be having weekly calls on school for free just to help you if you have any problems with setting up one of the skills.
+[08:21] Thank you so much and I'll see you in the next one.

@@ -1,0 +1,220 @@
+{
+ "id": "c3B5OMF9MNs",
+ "url": "https://www.youtube.com/watch?v=c3B5OMF9MNs",
+ "chaine": "tristen-obrien",
+ "titre": "Claude Design | Get DANGEROUSLY Good at Website Animation",
+ "titre_ytdlp": "Claude Design | Get DANGEROUSLY Good at Website Animation",
+ "publie": "2026-09-08T13:00:24Z",
+ "duree_s": 589,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "iioDrUIXIorVyeHo9EfCk77NESY",
+  "id": "c3B5OMF9MNs",
+  "snippet": {
+   "publishedAt": "2026-09-08T13:00:24Z",
+   "channelId": "UCruPFdKtGG8Oz5dvha6WWgA",
+   "title": "Claude Design | Get DANGEROUSLY Good at Website Animation",
+   "description": "Higgsfield — the image and video tool I used for the gopher, right inside Claude: https://higgsfield.ai?fpr=tristen15\n\n📚 Buy my book, The Smartest Move 👉 https://tristenobrien.ai/smartest-move/\n\n🎁 FREE — Every prompt from this video, plus my Prompt Library and AI newsletter: https://tristenobrien.ai\n\nMobbin — the design reference library I pull layout examples from. This link gets you 20% off: https://mobbin.com/tristen\n\n👀 Go move your mouse at the finished site: https://tristenobrien.ai/gopher\n\n________________________________________________\n\nBuild animated websites that react to your mouse movements using the new Claude slash command. Here is the three-step workflow to get it done.\n\nClaude Code just introduced a way to handle design before you write any code. I am walking through a three-step workflow where we build a functional landing page for a lawn care business. The goal is to move beyond static layouts by adding interactive elements, like a character that tracks your cursor across the screen.\n\nThis is a practical look at how to use the Claude design command to iterate on your ideas without getting stuck in a loop. Whether you are building for a client or yourself, these techniques show how to integrate custom web animation into a layout without needing to be a developer. It is a clean, no code approach to making your pages feel alive rather than just another template.\n\n_________________________________________\n\n⏱️ CHAPTERS\n0:00 What you're building\n0:15 The demo: a gopher that follows your cursor\n0:33 Step 1: Design the page\n0:47 Where the image actually comes from\n1:19 The character prompt\n1:58 The one rule: keep it centered\n2:29 Setting up the project folder\n2:47 What /design actually does\n3:33 Giving it websites you like\n4:11 Three artboards and the first draft\n4:50 Step 2: Make the character move\n5:16 The fix: pin both ends of the turn\n5:43 The 70 degree trick\n6:19 Label them 1, 2, 3\n7:03 Picking the smoothest take\n7:21 What scrubbing means\n8:08 Step 3: Put it on the site\n8:23 How the cursor tracking works\n9:12 Recap and what else you can make\n\n__________________________________________\n\nSponsored by Higgsfield\n\nLeave a comment if you want to see a full deep dive on these interactions, and subscribe for weekly AI workflow breakdowns.",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/c3B5OMF9MNs/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/c3B5OMF9MNs/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/c3B5OMF9MNs/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/c3B5OMF9MNs/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/c3B5OMF9MNs/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    },
+    "uhd": {
+     "url": "https://i.ytimg.com/vi/c3B5OMF9MNs/uhddefault.jpg",
+     "width": 3840,
+     "height": 2160
+    }
+   },
+   "channelTitle": "Tristen O'Brien",
+   "tags": [
+    "animated websites",
+    "Claude design",
+    "no code",
+    "web animation",
+    "slash command",
+    "Claude",
+    "Claude Code",
+    "Claude /Design",
+    "claude design web",
+    "how to use claude design",
+    "claude design website",
+    "claude design system"
+   ],
+   "categoryId": "28",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "en",
+   "localized": {
+    "title": "Claude Design | Get DANGEROUSLY Good at Website Animation",
+    "description": "Higgsfield — the image and video tool I used for the gopher, right inside Claude: https://higgsfield.ai?fpr=tristen15\n\n📚 Buy my book, The Smartest Move 👉 https://tristenobrien.ai/smartest-move/\n\n🎁 FREE — Every prompt from this video, plus my Prompt Library and AI newsletter: https://tristenobrien.ai\n\nMobbin — the design reference library I pull layout examples from. This link gets you 20% off: https://mobbin.com/tristen\n\n👀 Go move your mouse at the finished site: https://tristenobrien.ai/gopher\n\n________________________________________________\n\nBuild animated websites that react to your mouse movements using the new Claude slash command. Here is the three-step workflow to get it done.\n\nClaude Code just introduced a way to handle design before you write any code. I am walking through a three-step workflow where we build a functional landing page for a lawn care business. The goal is to move beyond static layouts by adding interactive elements, like a character that tracks your cursor across the screen.\n\nThis is a practical look at how to use the Claude design command to iterate on your ideas without getting stuck in a loop. Whether you are building for a client or yourself, these techniques show how to integrate custom web animation into a layout without needing to be a developer. It is a clean, no code approach to making your pages feel alive rather than just another template.\n\n_________________________________________\n\n⏱️ CHAPTERS\n0:00 What you're building\n0:15 The demo: a gopher that follows your cursor\n0:33 Step 1: Design the page\n0:47 Where the image actually comes from\n1:19 The character prompt\n1:58 The one rule: keep it centered\n2:29 Setting up the project folder\n2:47 What /design actually does\n3:33 Giving it websites you like\n4:11 Three artboards and the first draft\n4:50 Step 2: Make the character move\n5:16 The fix: pin both ends of the turn\n5:43 The 70 degree trick\n6:19 Label them 1, 2, 3\n7:03 Picking the smoothest take\n7:21 What scrubbing means\n8:08 Step 3: Put it on the site\n8:23 How the cursor tracking works\n9:12 Recap and what else you can make\n\n__________________________________________\n\nSponsored by Higgsfield\n\nLeave a comment if you want to see a full deep dive on these interactions, and subscribe for weekly AI workflow breakdowns."
+   },
+   "defaultAudioLanguage": "en-US"
+  },
+  "contentDetails": {
+   "duration": "PT9M49S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": true,
+   "contentRating": {},
+   "projection": "rectangular"
+  },
+  "statistics": {
+   "viewCount": "98698",
+   "likeCount": "1377",
+   "favoriteCount": "0",
+   "commentCount": "65"
+  }
+ },
+ "ytdlp": {
+  "id": "c3B5OMF9MNs",
+  "title": "Claude Design | Get DANGEROUSLY Good at Website Animation",
+  "description": "Higgsfield — the image and video tool I used for the gopher, right inside Claude: https://higgsfield.ai?fpr=tristen15\n\n📚 Buy my book, The Smartest Move 👉 https://tristenobrien.ai/smartest-move/\n\n🎁 FREE — Every prompt from this video, plus my Prompt Library and AI newsletter: https://tristenobrien.ai\n\nMobbin — the design reference library I pull layout examples from. This link gets you 20% off: https://mobbin.com/tristen\n\n👀 Go move your mouse at the finished site: https://tristenobrien.ai/gopher\n\n________________________________________________\n\nBuild animated websites that react to your mouse movements using the new Claude slash command. Here is the three-step workflow to get it done.\n\nClaude Code just introduced a way to handle design before you write any code. I am walking through a three-step workflow where we build a functional landing page for a lawn care business. The goal is to move beyond static layouts by adding interactive elements, like a character that tracks your cursor across the screen.\n\nThis is a practical look at how to use the Claude design command to iterate on your ideas without getting stuck in a loop. Whether you are building for a client or yourself, these techniques show how to integrate custom web animation into a layout without needing to be a developer. It is a clean, no code approach to making your pages feel alive rather than just another template.\n\n_________________________________________\n\n⏱️ CHAPTERS\n0:00 What you're building\n0:15 The demo: a gopher that follows your cursor\n0:33 Step 1: Design the page\n0:47 Where the image actually comes from\n1:19 The character prompt\n1:58 The one rule: keep it centered\n2:29 Setting up the project folder\n2:47 What /design actually does\n3:33 Giving it websites you like\n4:11 Three artboards and the first draft\n4:50 Step 2: Make the character move\n5:16 The fix: pin both ends of the turn\n5:43 The 70 degree trick\n6:19 Label them 1, 2, 3\n7:03 Picking the smoothest take\n7:21 What scrubbing means\n8:08 Step 3: Put it on the site\n8:23 How the cursor tracking works\n9:12 Recap and what else you can make\n\n__________________________________________\n\nSponsored by Higgsfield\n\nLeave a comment if you want to see a full deep dive on these interactions, and subscribe for weekly AI workflow breakdowns.",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "What you're building",
+    "end_time": 15
+   },
+   {
+    "start_time": 15,
+    "title": "The demo: a gopher that follows your cursor",
+    "end_time": 33
+   },
+   {
+    "start_time": 33,
+    "title": "Step 1: Design the page",
+    "end_time": 47
+   },
+   {
+    "start_time": 47,
+    "title": "Where the image actually comes from",
+    "end_time": 79
+   },
+   {
+    "start_time": 79,
+    "title": "The character prompt",
+    "end_time": 118
+   },
+   {
+    "start_time": 118,
+    "title": "The one rule: keep it centered",
+    "end_time": 149
+   },
+   {
+    "start_time": 149,
+    "title": "Setting up the project folder",
+    "end_time": 167
+   },
+   {
+    "start_time": 167,
+    "title": "What /design actually does",
+    "end_time": 213
+   },
+   {
+    "start_time": 213,
+    "title": "Giving it websites you like",
+    "end_time": 251
+   },
+   {
+    "start_time": 251,
+    "title": "Three artboards and the first draft",
+    "end_time": 290
+   },
+   {
+    "start_time": 290,
+    "title": "Step 2: Make the character move",
+    "end_time": 316
+   },
+   {
+    "start_time": 316,
+    "title": "The fix: pin both ends of the turn",
+    "end_time": 343
+   },
+   {
+    "start_time": 343,
+    "title": "The 70 degree trick",
+    "end_time": 379
+   },
+   {
+    "start_time": 379,
+    "title": "Label them 1, 2, 3",
+    "end_time": 423
+   },
+   {
+    "start_time": 423,
+    "title": "Picking the smoothest take",
+    "end_time": 441
+   },
+   {
+    "start_time": 441,
+    "title": "What scrubbing means",
+    "end_time": 488
+   },
+   {
+    "start_time": 488,
+    "title": "Step 3: Put it on the site",
+    "end_time": 503
+   },
+   {
+    "start_time": 503,
+    "title": "How the cursor tracking works",
+    "end_time": 552
+   },
+   {
+    "start_time": 552,
+    "title": "Recap and what else you can make",
+    "end_time": 589
+   }
+  ],
+  "tags": [
+   "animated websites",
+   "Claude design",
+   "no code",
+   "web animation",
+   "slash command",
+   "Claude",
+   "Claude Code",
+   "Claude /Design",
+   "claude design web",
+   "how to use claude design",
+   "claude design website",
+   "claude design system"
+  ],
+  "categories": [
+   "Science & Technology"
+  ],
+  "heatmap": null,
+  "upload_date": "20260908",
+  "duration": 589,
+  "channel": "Tristen O'Brien",
+  "channel_id": "UCruPFdKtGG8Oz5dvha6WWgA",
+  "channel_follower_count": 85900,
+  "thumbnail": "https://i.ytimg.com/vi_webp/c3B5OMF9MNs/maxresdefault.webp",
+  "view_count": 98699,
+  "like_count": 1377,
+  "comment_count": 30
+ }
+}

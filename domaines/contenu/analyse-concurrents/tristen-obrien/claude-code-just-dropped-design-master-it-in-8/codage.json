@@ -1,0 +1,533 @@
+{
+  "video_id": "Fqlc0N1qyMo",
+  "chaine": "tristen-obrien",
+  "titre_video": "Claude Code Just Dropped /Design. (Master it in 8 Minutes).",
+  "codeur": "agent tristen-obrien",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "actu",
+    "format_secondaire": "tuto",
+    "sujet": "La commande /design de Claude Code : des maquettes avant le code, comment la lancer, et quand préférer l'appli Claude Design",
+    "outils": [
+      "Claude Code",
+      "/design",
+      "Claude Design",
+      "Mobbin",
+      "Higgsfield",
+      "Nano Banana"
+    ],
+    "niveau": "intermediaire",
+    "objectif_probable": "vues"
+  },
+  "titre": {
+    "attente_au_clic": "Découvrir la nouvelle commande /design de Claude Code et savoir s'en servir en 8 minutes.",
+    "schema": "<Outil> Just Dropped /<Commande>. (Master it in <N> Minutes).",
+    "promesse": "Maîtriser /design en 8 minutes",
+    "audace": "audacieux",
+    "registre": "jargon",
+    "briques": [
+      "vitesse",
+      "resultat"
+    ],
+    "marqueurs": [
+      "nouveaute",
+      "duree"
+    ],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "grand sourire",
+    "regard": "camera",
+    "texte": "Claude > /design",
+    "texte_mots": 2,
+    "repete_titre": "partiel",
+    "elements": [
+      "fenêtre de navigateur blanche",
+      "logo et mot Claude",
+      "commande « > /design » en bleu lumineux avec curseur",
+      "visage à droite"
+    ],
+    "nb_elements": 4,
+    "fond": "bleu nuit",
+    "couleurs": [
+      "blanc",
+      "noir",
+      "bleu lumineux",
+      "orange Claude",
+      "bleu nuit"
+    ],
+    "curiosity_gap": "nouveaute",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Claude Code just released [...] slash design, and it is the most useful command",
+    "premiere_phrase_reprend_titre": "oui",
+    "premier_plan": "Capture du terminal Claude Code et de son menu de commandes, face caméra en vignette ; à 0:02 /design surligné en orange",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": [
+      "actu-annonce",
+      "pont"
+    ],
+    "preuve": {
+      "type": "resultat-montre",
+      "seconde": 4,
+      "description": "Une page « GOOD DOGS » puis trois maquettes côte à côte, avant toute explication"
+    },
+    "annonce_plan": {
+      "presente": true,
+      "nb_points": 3,
+      "a_l_ecran": true
+    },
+    "boucle_vers_la_fin": {
+      "presente": false,
+      "citation": "",
+      "seconde_resolution": null,
+      "tenue": null
+    },
+    "seconde_premier_point": 34,
+    "attente_tenue": "oui",
+    "attente_note": "La commande est expliquée, lancée et comparée à l'appli. Un commentaire (5 likes) reproche des « premade cool slides » plutôt que le vrai déroulé, un autre le saut du terminal à l'appli vers 2:40."
+  },
+  "structure": {
+    "modele": "pas-a-pas",
+    "segments": [
+      {
+        "debut": 0,
+        "fin": 34,
+        "titre": "The command that designs before it builds",
+        "role": "intro",
+        "pull": false,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 34,
+        "fin": 97,
+        "titre": "What /design actually is",
+        "role": "point",
+        "pull": false,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": false,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 97,
+        "fin": 146,
+        "titre": "The problem it fixes",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": false,
+        "phrase_finale": true,
+        "probleme": true,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": true
+      },
+      {
+        "debut": 146,
+        "fin": 200,
+        "titre": "How to run it, give it a site to look at",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": true,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 200,
+        "fin": 252,
+        "titre": "The prompt that gets 3 real options, your own colors",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": false,
+        "consignes": true,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 252,
+        "fin": 276,
+        "titre": "Name the artboard and hit save",
+        "role": "point",
+        "pull": false,
+        "paint": false,
+        "point": true,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": true,
+        "payoff": false,
+        "relance_sortie": true
+      },
+      {
+        "debut": 276,
+        "fin": 285,
+        "titre": "Subscribe, like, comment",
+        "role": "cta",
+        "pull": false,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 285,
+        "fin": 309,
+        "titre": "The image problem nobody warns you about",
+        "role": "point",
+        "pull": true,
+        "paint": false,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": true,
+        "preuve": false,
+        "consignes": true,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 309,
+        "fin": 349,
+        "titre": "What Claude actually built",
+        "role": "demo",
+        "pull": false,
+        "paint": true,
+        "point": true,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 349,
+        "fin": 412,
+        "titre": "Why not just use the Claude Design app",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": false,
+        "preuve": false,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 412,
+        "fin": 440,
+        "titre": "It's still a research preview",
+        "role": "point",
+        "pull": false,
+        "paint": false,
+        "point": true,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": true,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 440,
+        "fin": 483,
+        "titre": "3 things to remember",
+        "role": "fin",
+        "pull": false,
+        "paint": false,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": false,
+        "preuve": false,
+        "consignes": true,
+        "payoff": false,
+        "relance_sortie": false
+      }
+    ],
+    "relances": [
+      {
+        "seconde": 22,
+        "type": "boucle-ouverte",
+        "citation": "why you would ever use slash design over the Claude design app"
+      },
+      {
+        "seconde": 114,
+        "type": "question-spectateur",
+        "citation": "So, what would you do?"
+      },
+      {
+        "seconde": 273,
+        "type": "boucle-ouverte",
+        "citation": "there's one more really important thing that you need to do before you hit enter"
+      },
+      {
+        "seconde": 348,
+        "type": "question-spectateur",
+        "citation": "so why would I run this inside of Claude code?"
+      }
+    ],
+    "histoires": [
+      {
+        "seconde": 182,
+        "acte": "anecdote",
+        "resume": "Il prend ses exemples de mise en page sur Mobbin."
+      }
+    ],
+    "payoffs": [
+      {
+        "seconde": 61,
+        "resume": "La toile s'ouvre avec des maquettes finies au choix"
+      },
+      {
+        "seconde": 79,
+        "resume": "On retape un titre et on déplace un bloc directement sur la maquette"
+      },
+      {
+        "seconde": 314,
+        "resume": "La version 1 de la page Happy Tails, fidèle à la maquette choisie"
+      },
+      {
+        "seconde": 398,
+        "resume": "Code pour une vraie page ou appli, l'appli Claude Design pour un visuel"
+      }
+    ],
+    "premier_payoff_seconde": 61,
+    "jargon": 2,
+    "repetitions": 1,
+    "test_du_tweet": "/design dans Claude Code dessine avant de coder : trois maquettes modifiables, tu choisis, puis il construit. Donne-lui des sites que tu aimes, dis pour qui et à quoi sert la page, exige trois pistes vraiment différentes. Claude Code pour une vraie page, l'appli pour un visuel."
+  },
+  "habillage": {
+    "face_camera": {
+      "presente": true,
+      "cadrage": "poitrine ; plein cadre, en demi-écran ou en vignette",
+      "decor": "bureau, étagères, enseigne Back to the Future, lumière violette ; chemise à carreaux"
+    },
+    "parts": {
+      "face": 30,
+      "ecran": 35,
+      "motion": 35,
+      "broll": 0
+    },
+    "textes_ecran": "constants",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": [
+      "plan-a-l-ecran",
+      "cartes-chapitre",
+      "etiquettes",
+      "split-screen",
+      "zooms-ecran",
+      "curseur-surligne",
+      "fleches-annotations",
+      "emojis-stickers"
+    ],
+    "charte": "Fonds crème et dégradés bleu-violet, titres en capitales grasses noires avec mots orange (« WHY THREE? »), étiquettes orange en capitales à chasse fixe, terminal sombre. Le bleu des fonds rappelle celui de la miniature.",
+    "rythme": "regulier",
+    "notes": "Le prompt se construit à l'écran en pastilles de couleur (HERO, SERVICES, PRICING, REVIEWS, BOOK). Les mauvaises pistes sont barrées (« THE SAME DESIGN 3X »)."
+  },
+  "fin": {
+    "ctas": [
+      {
+        "seconde": 276,
+        "type": "abonnement",
+        "cible": "s'abonner, liker, commenter",
+        "amene_par": "transition",
+        "citation": "if this video has been helpful so far, please subscribe to the channel"
+      },
+      {
+        "seconde": 469,
+        "type": "video-suivante",
+        "cible": "sa vidéo complète sur Claude Design",
+        "amene_par": "fin",
+        "citation": "check out my full Claude design video right here"
+      },
+      {
+        "seconde": 476,
+        "type": "abonnement",
+        "cible": "s'abonner, liker, commenter",
+        "amene_par": "fin",
+        "citation": "please subscribe, give it a like, and leave a comment"
+      }
+    ],
+    "sponsor": {
+      "present": false,
+      "nom": null,
+      "debut": null,
+      "duree": null,
+      "forme": null
+    },
+    "liens_description": {
+      "lead-magnet": 1,
+      "affiliation": 2,
+      "produit": 1
+    },
+    "commentaire_epingle": null,
+    "recap_final": true,
+    "derniere_phrase": "please subscribe, give it a like, and leave a comment, and I will see you",
+    "video_suivante_precise": true
+  },
+  "commentaires": {
+    "themes": [
+      "un ton calme qui repose (39 likes, le plus aimé)",
+      "le montage et les animations",
+      "/design dans l'appli de bureau ou seulement dans le terminal",
+      "Claude Design contre /design"
+    ],
+    "demandes": [
+      "comment il fait ses animations",
+      "si /design marche dans l'onglet Code de l'appli",
+      "montrer le monde de la vidéo précédente",
+      "des présentations HTML modifiables"
+    ],
+    "critiques": [
+      "« premade cool slides but not the real workflow » (5 likes)",
+      "le passage du terminal à l'appli vers 2:40",
+      "Claude Design exporte déjà du HTML",
+      "/design-sync existe déjà"
+    ],
+    "reprises": [
+      "« /design »",
+      "« artboard »",
+      "« RIP figma »"
+    ],
+    "signal_promesse": "tenue"
+  },
+  "techniques": {
+    "ap_alignement_5s": {
+      "note": 1,
+      "preuve": "La 1re phrase reprend le titre ; le 1er plan montre le menu de Claude Code et /design, pas la mise en page de la miniature"
+    },
+    "ap_boucle_curiosite": {
+      "note": 2,
+      "preuve": "0:22 « why you would ever use slash design over the Claude design app », tenue à 5:48"
+    },
+    "ap_effort_montre": {
+      "note": 0,
+      "preuve": "Ni heures, ni essais, ni nombre de projets dans l'intro"
+    },
+    "ap_setup_progress_payoff": {
+      "note": 1,
+      "preuve": "Une grande partie suit le schéma (la page Happy Tails, livrée à 5:10) ; le reste explique"
+    },
+    "ap_contraste_rythme": {
+      "note": 0,
+      "preuve": "De 10 à 21 changements de visuel par minute, sans passage nettement lent"
+    },
+    "ap_montrer_sans_son": {
+      "note": 2,
+      "preuve": "Planche intro : menu avec /design, page « GOOD DOGS », « DESIGN → BUILD », « YOU PICK FIRST. », « RUN IT », « THE WORDS », « CODE / APP »"
+    },
+    "ali_douleur_histoire": {
+      "note": 0,
+      "preuve": "Aucune douleur dans l'intro ; le problème n'arrive qu'à 1:37"
+    },
+    "ali_coeur_unique": {
+      "note": 2,
+      "preuve": "0:07 « it designs your page before it builds anything »"
+    },
+    "alx_pont": {
+      "note": 2,
+      "preuve": "Titre repris, définition, maquettes montrées, plan en trois, sans accroche"
+    },
+    "alx_pull_paint_point": {
+      "note": 2,
+      "preuve": "Le problème (on corrige à l'aveugle), pourquoi trois pistes (la même maquette barrée), code ou appli (affiche, flyer) : pourquoi, image, action"
+    },
+    "alx_nom_idee": {
+      "note": 2,
+      "preuve": "« artboard », « creative director », « WHY THREE? », « the image problem nobody warns you about », « 3 things to remember »"
+    },
+    "alx_phrase_finale": {
+      "note": 1,
+      "preuve": "2:10 « you're describing a design instead of looking at a design » ; 4:50 « a thousand times better if it has real images » ; pas pour la plupart"
+    },
+    "alx_douleur_reve": {
+      "note": 0,
+      "preuve": "Le nom de l'outil et de la commande porte le titre"
+    },
+    "alx_cta_tot": {
+      "note": 0,
+      "preuve": "Aucun lead magnet ni offre dite dans la vidéo"
+    },
+    "ed_intro_courte": {
+      "note": 1,
+      "preuve": "Annonce, définition, plan, premier point à 0:34 : plus que trois lignes"
+    },
+    "ed_hook": {
+      "note": 1,
+      "preuve": "« the most useful command [...] all year » et « designs your page before it builds anything » : un fait fort, pas un des trois types purs"
+    },
+    "ed_probleme_preuve_consignes": {
+      "note": 2,
+      "preuve": "1:37 problème (tout est décidé avant que tu voies), consignes pour lancer /design, preuve par la page construite (5:10) ; idem pour les images"
+    },
+    "ed_tension_relancee": {
+      "note": 2,
+      "preuve": "1:54 « So, what would you do? » ; 4:33 « one more really important thing [...] before you hit enter »"
+    },
+    "ed_histoire_vecue": {
+      "note": 1,
+      "preuve": "3:02 il se sert de Mobbin : une anecdote d'usage"
+    },
+    "ed_sans_surexplication": {
+      "note": 1,
+      "preuve": "« three different » redit quatre fois entre 3:41 et 3:47"
+    },
+    "ed_niveau_simple": {
+      "note": 2,
+      "preuve": "0:12 un artboard, « just editable design options » ; 0:40 une commande, « a shortcut with a prompt built into it »"
+    },
+    "tous_video_suivante": {
+      "note": 2,
+      "preuve": "7:49 « If you want to see what Claude can actually do on the design side », sa vidéo « right here »"
+    }
+  },
+  "a_retenir": {
+    "titre_miniature": "Même gabarit que MODS : « <Outil> Just Dropped /<Commande>. (Master it in N Minutes). », la miniature montre la commande tapée « > /design » et le visage souriant.",
+    "intro_structure": "Intro en pont sans accroche, puis le problème que la commande règle avant la démo. La question « pourquoi pas l'appli ? » est posée à 0:22 et tenue à 5:48.",
+    "habillage": "Prompt construit à l'écran en pastilles, mauvaises pistes barrées, chapitres numérotés « 01/03 ».",
+    "idee_pour_nous": "Pour une nouvelle commande : dire d'abord le problème qu'elle règle (« avant, tu corrigeais à l'aveugle »), puis la montrer, et finir sur quand la préférer à l'outil voisin.",
+    "objectif": "vues"
+  }
+}

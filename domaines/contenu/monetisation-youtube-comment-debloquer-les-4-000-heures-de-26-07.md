@@ -4,7 +4,7 @@ resume: J'ai débloqué la monétisation YouTube en 6 mois : les 4 000 heures de
 statut: publie
 domaine: contenu
 cree: 2026-07-28
-maj: 2026-10-22
+maj: 2026-10-25
 liens: [youtube-skool-ia-mon-modele-pour-gagner-ma-liberte-26-01.md, des-vues-aux-revenus-3-systemes-pour-monetiser-correctement-26-01.md]
 ---
 # Monétisation YouTube : comment débloquer les 4 000 heures de visionnage en 6 mois 
@@ -18,22 +18,22 @@ liens: [youtube-skool-ia-mon-modele-pour-gagner-ma-liberte-26-01.md, des-vues-au
 
 ## Stats
 
-YouTube Analytics, données jusqu'au 2026-10-20. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
+YouTube Analytics, données jusqu'au 2026-10-22. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
 
 | | 7 premiers jours | 30 premiers jours | Depuis la sortie |
 |---|---|---|---|
-| Vues | 140 | 236 | 332 |
-| Vues engagées | 140 | 236 | 281 |
-| Heures regardées | 15,3 | 25,8 | 30,8 |
+| Vues | 140 | 236 | 333 |
+| Vues engagées | 140 | 236 | 282 |
+| Heures regardées | 15,3 | 25,8 | 30,9 |
 | Abonnés gagnés | 1 | 4 | 6 |
 | Revenus estimés | 0,63 $ | 0,98 $ | 1,33 $ |
-| Durée moyenne regardée | | | 6 min 34 s (14,2 %) |
+| Durée moyenne regardée | | | 6 min 33 s (14,2 %) |
 | J'aime · commentaires | | | 13 · 1 |
 
 ## Liens
 
-- Cite : [2026-01-06-youtube-skool-ia-mon-modele-pour-gagner-ma-liberte](youtube-skool-ia-mon-modele-pour-gagner-ma-liberte-26-01.md)
-- Cite : [2026-01-13-des-vues-aux-revenus-3-systemes-pour-monetiser-correctement](des-vues-aux-revenus-3-systemes-pour-monetiser-correctement-26-01.md)
+- Cite : [youtube-skool-ia-mon-modele-pour-gagner-ma-liberte-26-01](youtube-skool-ia-mon-modele-pour-gagner-ma-liberte-26-01.md)
+- Cite : [des-vues-aux-revenus-3-systemes-pour-monetiser-correctement-26-01](des-vues-aux-revenus-3-systemes-pour-monetiser-correctement-26-01.md)
 - Description : https://clubsmart.s.gy/vidiq
 - Description : https://clubsmart.s.gy/skool
 - Description : https://clubsmart.s.gy/capcut

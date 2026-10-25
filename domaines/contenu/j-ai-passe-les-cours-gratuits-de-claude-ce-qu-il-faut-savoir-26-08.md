@@ -4,7 +4,7 @@ resume: J'ai suivi les cours gratuits officiels de Claude pendant une vingtaine 
 statut: publie
 domaine: contenu
 cree: 2026-08-25
-maj: 2026-10-22
+maj: 2026-10-25
 liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md, tu-n-as-plus-besoin-de-prompter-voici-la-methode-qui-26-08.md, l-aios-c-est-quoi-explication-en-3-minutes-26-07.md, watermark-claude-ce-que-ca-change-vraiment-pour-toi-26-09.md]
 ---
 # J'ai passé les cours gratuits de Claude : ce qu'il faut savoir
@@ -18,25 +18,25 @@ liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, claude-tutoriel-co
 
 ## Stats
 
-YouTube Analytics, données jusqu'au 2026-10-20. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
+YouTube Analytics, données jusqu'au 2026-10-22. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
 
 | | 7 premiers jours | 30 premiers jours | Depuis la sortie |
 |---|---|---|---|
-| Vues | 22 631 | 28 048 | 29 108 |
-| Vues engagées | 10 817 | 13 149 | 13 808 |
-| Heures regardées | 947,0 | 1 141,7 | 1 200,5 |
-| Abonnés gagnés | 327 | 366 | 377 |
-| Revenus estimés | 48,02 $ | 59,26 $ | 64,48 $ |
+| Vues | 22 631 | 28 048 | 29 188 |
+| Vues engagées | 10 817 | 13 149 | 13 850 |
+| Heures regardées | 947,0 | 1 141,7 | 1 204,8 |
+| Abonnés gagnés | 327 | 366 | 379 |
+| Revenus estimés | 48,02 $ | 59,26 $ | 64,73 $ |
 | Durée moyenne regardée | | | 5 min 10 s (24,2 %) |
 | J'aime · commentaires | | | 399 · 16 |
 
 ## Liens
 
-- Cite : [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
-- Cite : [2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
-- Cite : [2026-08-11-tu-n-as-plus-besoin-de-prompter-voici-la-methode-qui](tu-n-as-plus-besoin-de-prompter-voici-la-methode-qui-26-08.md)
-- Cite : [2026-07-18-l-aios-c-est-quoi-explication-en-3-minutes](l-aios-c-est-quoi-explication-en-3-minutes-26-07.md)
-- Citée par : [2026-09-03-watermark-claude-ce-que-ca-change-vraiment-pour-toi](watermark-claude-ce-que-ca-change-vraiment-pour-toi-26-09.md)
+- Cite : [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
+- Cite : [claude-tutoriel-complet-pour-passer-de-debutant-a-26-05](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
+- Cite : [tu-n-as-plus-besoin-de-prompter-voici-la-methode-qui-26-08](tu-n-as-plus-besoin-de-prompter-voici-la-methode-qui-26-08.md)
+- Cite : [l-aios-c-est-quoi-explication-en-3-minutes-26-07](l-aios-c-est-quoi-explication-en-3-minutes-26-07.md)
+- Citée par : [watermark-claude-ce-que-ca-change-vraiment-pour-toi-26-09](watermark-claude-ce-que-ca-change-vraiment-pour-toi-26-09.md)
 - Description : https://www.thomrichard.com/ressources/les-22-cours-de-claude
 - Description : https://www.skool.com/club-smart/about
 - Description : https://academy.claude.com/

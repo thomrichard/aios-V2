@@ -1,0 +1,521 @@
+{
+  "video_id": "R2FFvPDUo7g",
+  "chaine": "tristen-obrien",
+  "titre_video": "Learn 95% of Claude Cowork in Under 9 Minutes",
+  "codeur": "agent tristen-obrien",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "liste",
+    "format_secondaire": null,
+    "sujet": "Les six choses qui font de Claude Cowork un outil à utiliser : quatre fonctions de base et deux « superpouvoirs »",
+    "outils": [
+      "Claude Cowork",
+      "Claude Code",
+      "Dispatch",
+      "connecteurs (MCP)",
+      "skills",
+      "Record a skill"
+    ],
+    "niveau": "debutant",
+    "objectif_probable": "vues"
+  },
+  "titre": {
+    "attente_au_clic": "Faire le tour de l'essentiel de Claude Cowork en moins de 9 minutes.",
+    "schema": "Learn <N>% of <Outil> in Under <N> Minutes",
+    "promesse": "Connaître 95 % de Claude Cowork en moins de 9 minutes",
+    "audace": "audacieux",
+    "registre": "jargon",
+    "briques": [
+      "vitesse",
+      "resultat"
+    ],
+    "marqueurs": [
+      "chiffre",
+      "duree"
+    ],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "sourire",
+    "regard": "camera",
+    "texte": "COWORK Claude",
+    "texte_mots": 2,
+    "repete_titre": "partiel",
+    "elements": [
+      "mot COWORK géant en crème, en partie caché par la tête",
+      "logo et mot Claude en noir",
+      "visage et buste au centre"
+    ],
+    "nb_elements": 3,
+    "fond": "orange brique uni",
+    "couleurs": [
+      "orange brique",
+      "crème",
+      "noir"
+    ],
+    "curiosity_gap": "aucun",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "If you're using Claude every day, you have certainly heard of Claude co-work.",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Face caméra en vignette à gauche ; à droite une zone de saisie Claude (« Rewrite this email so it sounds ») avec les onglets Chat et Cowork",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": [
+      "hook-question",
+      "pont"
+    ],
+    "preuve": {
+      "type": "effort",
+      "seconde": 7,
+      "description": "« I've spent way over a thousand hours inside of Claude », carte « 1,000+ hours in Claude »"
+    },
+    "annonce_plan": {
+      "presente": true,
+      "nb_points": 6,
+      "a_l_ecran": true
+    },
+    "boucle_vers_la_fin": {
+      "presente": false,
+      "citation": "",
+      "seconde_resolution": null,
+      "tenue": null
+    },
+    "seconde_premier_point": 26,
+    "attente_tenue": "oui",
+    "attente_note": "Les six fonctions sont expliquées. Mais plusieurs commentaires disent que Cowork a été fondu dans le chat les 15 et 16 septembre, la veille de la sortie (à vérifier), et que Dispatch a disparu."
+  },
+  "structure": {
+    "modele": "liste-numerotee",
+    "segments": [
+      {
+        "debut": 0,
+        "fin": 26,
+        "titre": "Why Cowork is the tool you're sleeping on",
+        "role": "intro",
+        "pull": true,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": true,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 26,
+        "fin": 106,
+        "titre": "#1 Give It a Job to Do (vs Chat, vs Claude Code)",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": false,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 106,
+        "fin": 162,
+        "titre": "#2 Cowork Can Now Use the Browser",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": false,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": true
+      },
+      {
+        "debut": 162,
+        "fin": 258,
+        "titre": "#3 It Keeps Working With Your Laptop Closed",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": true,
+        "preuve": false,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 258,
+        "fin": 346,
+        "titre": "#4 Cowork Follows You Device to Device + Dispatch",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": true
+      },
+      {
+        "debut": 346,
+        "fin": 355,
+        "titre": "Subscribe, like, comment",
+        "role": "cta",
+        "pull": false,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 355,
+        "fin": 407,
+        "titre": "#5 Connectors (and what MCP really means)",
+        "role": "point",
+        "pull": false,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 407,
+        "fin": 478,
+        "titre": "#6 Skills, Record a Skill, the pizza demo",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": true,
+        "preuve": false,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 478,
+        "fin": 499,
+        "titre": "The warning + which plans get it",
+        "role": "point",
+        "pull": false,
+        "paint": false,
+        "point": true,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": true,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 499,
+        "fin": 527,
+        "titre": "Recap: all 6 in 30 seconds",
+        "role": "fin",
+        "pull": false,
+        "paint": false,
+        "point": true,
+        "nom": false,
+        "phrase_finale": true,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      }
+    ],
+    "relances": [
+      {
+        "seconde": 3,
+        "type": "question-spectateur",
+        "citation": "if you still can't figure out why you need to use it"
+      },
+      {
+        "seconde": 17,
+        "type": "boucle-ouverte",
+        "citation": "the other two act as superpowers that make those four incredibly powerful"
+      },
+      {
+        "seconde": 47,
+        "type": "boucle-ouverte",
+        "citation": "which we'll talk about here just in a couple seconds"
+      },
+      {
+        "seconde": 63,
+        "type": "question-spectateur",
+        "citation": "you may be thinking, why not just use Claude code inside of the app?"
+      },
+      {
+        "seconde": 157,
+        "type": "annonce-suite",
+        "citation": "And guess what? You don't always have to have your computer on"
+      },
+      {
+        "seconde": 335,
+        "type": "annonce-suite",
+        "citation": "the two upgrades that really make Claude co-work absolutely amazing to work with"
+      },
+      {
+        "seconde": 476,
+        "type": "rupture",
+        "citation": "Best pizza in town."
+      }
+    ],
+    "histoires": [
+      {
+        "seconde": 7,
+        "acte": "anecdote",
+        "resume": "Plus de mille heures dans Claude ; il se sert de Cowork tous les jours."
+      },
+      {
+        "seconde": 392,
+        "acte": "anecdote",
+        "resume": "Il utilise une douzaine de connecteurs, dont Google Drive et Google Calendar."
+      }
+    ],
+    "payoffs": [
+      {
+        "seconde": 60,
+        "resume": "Chat répond à une question, Cowork accomplit une tâche"
+      },
+      {
+        "seconde": 91,
+        "resume": "Claude Code pour le code, Cowork pour le travail de bureau"
+      },
+      {
+        "seconde": 137,
+        "resume": "Le navigateur va chercher les chiffres sur un site et les range dans un fichier"
+      },
+      {
+        "seconde": 209,
+        "resume": "Ordinateur fermé, la tâche tourne dans le cloud"
+      },
+      {
+        "seconde": 279,
+        "resume": "La même session reprend sur le téléphone"
+      },
+      {
+        "seconde": 330,
+        "resume": "La différence entre l'appli Cowork et Dispatch"
+      },
+      {
+        "seconde": 471,
+        "resume": "Une skill enregistrée commande la pizza toute seule"
+      }
+    ],
+    "premier_payoff_seconde": 60,
+    "jargon": 1,
+    "repetitions": 1,
+    "test_du_tweet": "Cowork, c'est Claude à qui on confie une tâche, pas une question. Six raisons de s'en servir : il navigue sur le web, travaille ordinateur fermé et selon un planning, te suit d'un appareil à l'autre (Dispatch), parle à tes applis par connecteurs et apprend tes tâches en skills, même en les enregistrant."
+  },
+  "habillage": {
+    "face_camera": {
+      "presente": true,
+      "cadrage": "poitrine ; plein cadre, en demi-écran ou en vignette",
+      "decor": "bureau, étagères, enseigne Back to the Future, lumière violette ; chemise à carreaux"
+    },
+    "parts": {
+      "face": 35,
+      "ecran": 20,
+      "motion": 45,
+      "broll": 0
+    },
+    "textes_ecran": "constants",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": [
+      "plan-a-l-ecran",
+      "cartes-chapitre",
+      "chiffres-animes",
+      "etiquettes",
+      "split-screen",
+      "fleches-annotations",
+      "zooms-ecran",
+      "emojis-stickers"
+    ],
+    "charte": "Fonds crème et dégradés pêche ou rose, icônes orange Claude en relief, titres sans-serif noirs avec mots en orange ou violet (« IT FOLLOWS YOU »). La miniature orange brique reprend l'orange.",
+    "rythme": "regulier",
+    "notes": "Une frise des six icônes reste en haut de l'écran pour situer où on en est (quatre de base, deux superpouvoirs). Les écrans sont souvent recréés en maquettes animées plutôt que filmés."
+  },
+  "fin": {
+    "ctas": [
+      {
+        "seconde": 346,
+        "type": "abonnement",
+        "cible": "s'abonner, liker, commenter",
+        "amene_par": "transition",
+        "citation": "if you're finding this helpful, if you could, please subscribe, please like this video"
+      },
+      {
+        "seconde": 520,
+        "type": "abonnement",
+        "cible": "s'abonner, liker, commenter",
+        "amene_par": "fin",
+        "citation": "please hit subscribe, like the video, leave a comment"
+      }
+    ],
+    "sponsor": {
+      "present": false,
+      "nom": null,
+      "debut": null,
+      "duree": null,
+      "forme": null
+    },
+    "liens_description": {
+      "lead-magnet": 1,
+      "produit": 1
+    },
+    "commentaire_epingle": null,
+    "recap_final": true,
+    "derniere_phrase": "please hit subscribe, like the video, leave a comment, and I will see you",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": [
+      "une explication claire et courte, « no pointless intro »",
+      "Cowork fondu dans le chat juste avant la sortie",
+      "le montage et les animations",
+      "Dispatch introuvable"
+    ],
+    "demandes": [
+      "une vidéo d'usage réel en multitâche",
+      "comment il fait ses visuels",
+      "plus de vidéos Claude Code",
+      "Claude Code ou Cowork pour un usage précis"
+    ],
+    "critiques": [
+      "vidéo sortie le jour où Cowork a été intégré au chat, selon plusieurs commentaires",
+      "ordinateur fermé, plus d'accès aux dossiers locaux",
+      "des tâches de nuit qui consomment des crédits",
+      "« Papa Johns?? »"
+    ],
+    "reprises": [
+      "« Papa Johns »",
+      "« Dispatch »"
+    ],
+    "signal_promesse": "mixte"
+  },
+  "techniques": {
+    "ap_alignement_5s": {
+      "note": 1,
+      "preuve": "1re phrase sur Claude Cowork, sans « 95 % » ni « 9 minutes » ; 1er plan : visage en vignette et onglet Cowork, pas le grand COWORK de la miniature"
+    },
+    "ap_boucle_curiosite": {
+      "note": 1,
+      "preuve": "0:17 « the other two act as superpowers », révélés à 5:55 ; boucle légère"
+    },
+    "ap_effort_montre": {
+      "note": 2,
+      "preuve": "0:07 « way over a thousand hours inside of Claude », carte « 1,000+ hours in Claude »"
+    },
+    "ap_setup_progress_payoff": {
+      "note": 1,
+      "preuve": "Le navigateur et les skills posent un but et livrent (chiffres dans un fichier, pizza commandée) ; les autres fonctions sont expliquées sans progression"
+    },
+    "ap_contraste_rythme": {
+      "note": 0,
+      "preuve": "De 11 à 21 changements de visuel par minute, sans passage nettement lent"
+    },
+    "ap_montrer_sans_son": {
+      "note": 2,
+      "preuve": "Planche intro : « Why do I actually need Cowork? » tapé, « This video is for you. », « 1,000+ hours », « 6 things that make Cowork a must-use tool »"
+    },
+    "ali_douleur_histoire": {
+      "note": 1,
+      "preuve": "0:03 « if you still can't figure out why you need to use it » : douleur, sans histoire vécue"
+    },
+    "ali_coeur_unique": {
+      "note": 2,
+      "preuve": "8:23 « you're giving it a task instead of just having it answer a question »"
+    },
+    "alx_pont": {
+      "note": 1,
+      "preuve": "Preuve et annonce comme un pont, mais ouvert sur une question-accroche"
+    },
+    "alx_pull_paint_point": {
+      "note": 2,
+      "preuve": "Portail fournisseur à 20 minutes par site, ordinateur fermé la nuit, pizza enregistrée : pourquoi, exemple, action"
+    },
+    "alx_nom_idee": {
+      "note": 2,
+      "preuve": "Six fonctions nommées avec icône, « superpowers », Dispatch, « the easy button to skills »"
+    },
+    "alx_phrase_finale": {
+      "note": 1,
+      "preuve": "1:36 « if you're writing code, use Claude code » ; 3:14 « running on somebody else's computer » ; pas pour la plupart"
+    },
+    "alx_douleur_reve": {
+      "note": 0,
+      "preuve": "Le nom de l'outil porte le titre ; « Learn 95% » promet de couvrir l'outil, pas un désir du spectateur"
+    },
+    "alx_cta_tot": {
+      "note": 0,
+      "preuve": "Aucun lead magnet ni offre dite dans la vidéo"
+    },
+    "ed_intro_courte": {
+      "note": 1,
+      "preuve": "Question, preuve, promesse et plan, premier point à 0:26 : un peu plus que trois lignes"
+    },
+    "ed_hook": {
+      "note": 2,
+      "preuve": "0:03 « if you still can't figure out why you need to use it », la question tapée à l'écran"
+    },
+    "ed_probleme_preuve_consignes": {
+      "note": 1,
+      "preuve": "Problème posé pour le navigateur (20 minutes par site) et les skills ; peu de preuves réelles, des maquettes animées"
+    },
+    "ed_tension_relancee": {
+      "note": 2,
+      "preuve": "2:37 « And guess what? You don't always have to have your computer on » ; 5:35 les « two upgrades »"
+    },
+    "ed_histoire_vecue": {
+      "note": 1,
+      "preuve": "0:07 il utilise Cowork chaque jour ; 6:32 ses connecteurs : des anecdotes d'usage"
+    },
+    "ed_sans_surexplication": {
+      "note": 1,
+      "preuve": "Code contre Cowork redit deux fois (1:11 et 1:36) ; quelques redites"
+    },
+    "ed_niveau_simple": {
+      "note": 2,
+      "preuve": "3:14 le cloud, « a real machine in a real building » ; 6:19 « You don't need to know what an MCP is »"
+    },
+    "tous_video_suivante": {
+      "note": 0,
+      "preuve": "Aucune vidéo suivante proposée"
+    }
+  },
+  "a_retenir": {
+    "titre_miniature": "« Learn 95% of <Outil> in Under N Minutes » : la promesse de tout couvrir vite, cousine de « Get Ahead of 95% ». Miniature minimale : le mot COWORK géant, le visage, le logo. VidIQ relève deux versions de la miniature, la seconde au troisième jour.",
+    "intro_structure": "La question que le spectateur se pose est tapée à l'écran (« Why do I actually need Cowork? »), puis preuve en heures et plan « 4 de base + 2 superpouvoirs ». « And guess what? » relance entre deux points.",
+    "habillage": "Une frise d'icônes en haut de l'écran situe le spectateur ; maquettes animées plutôt que captures.",
+    "idee_pour_nous": "Ouvrir sur la question que le spectateur taperait lui-même, écrite à l'écran, puis un plan en N fonctions dont deux « superpouvoirs » gardés pour la fin.",
+    "objectif": "vues"
+  }
+}

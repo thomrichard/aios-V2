@@ -1,0 +1,81 @@
+[00:00] There's only 100 days left in this year, and if you're still jumping between AI platforms, you are falling behind.
+[00:05] And that's because you can't master any of them if you're trying to keep up with all of them.
+[00:10] So, in this video, I'm going to give you the five things that you have to focus on over the next 100 days to get ahead of 99% of the people that are using AI today.
+[00:19] So, let's start with number one, which is mastering one platform.
+[00:22] In the past few months, Claude and ChatGPT have been battling back and forth to prove who has the best AI model out there.
+[00:30] Now, I'm glad that they're doing that because all of them are really good.
+[00:33] But what I'm seeing is people jump from one platform to the other every single time a new model comes out.
+[00:39] And when you do that, your brain never fully gets a chance to go deep on any one of those models.
+[00:44] In fact, there's a lot of research out there on this.
+[00:46] It's called the switching cost.
+[00:48] Every time you switch, a part of your attention gets stuck on the last thing that you were looking at, so you never get to fully settle into the new one.
+[00:55] And I'm here to challenge you today to pick one platform and master it.
+[01:00] Now, you can still look at all the other cool stuff that's out there.
+[01:03] In fact, I think you should be a generalist on all the other AI tools that are out there.
+[01:07] Now, I'm not going to tell you which platform to pick.
+[01:09] There's ChatGPT, there's Claude, there's Gemini, there's Perplexity, there's dozens of others that are out there.
+[01:14] What I am going to say is that you should stick with the one that you're most comfortable with today and focus on that for the next 100 days because that focus, no matter what the platform is, is what's
+[01:25] going to let you actually learn the technology that's underneath all of these platforms.
+[01:29] Now, I'm talking about things like memory, slash commands, skills, MCP servers, agents, etc.
+[01:35] All those things that are out there.
+[01:37] This is how you actually get better at AI than 99% of the people that are out there.
+[01:41] So, how do you pick the one that you're going to focus on?
+[01:43] Well, don't go after the one that has the newest model because like I just mentioned, ChatGPT and Claude are going back and forth every single month.
+[01:49] What I would do is pick the one that's already working for you today.
+[01:53] For me, I use Claude.
+[01:54] I've been using it for a long time.
+[01:55] It's my primary tool, but I still use a bunch of other AI tools every single day.
+[02:00] I use ChatGPT, I use Gemini, Perplexity, and dozens of others.
+[02:04] But what I'm saying is to master AI, I'm asking you to commit to one platform to the end of the year because every time you switch, your projects get scattered across different platforms and you never get to actually
+[02:14] master any of the technology underneath it.
+[02:17] Which brings me to number two, and that is building an AI employee to help you run your personal life.
+[02:22] Now, I've already built over 150 AI agents that run my personal life, and I can tell you that learning how to build an AI agent is the number one skill that you want to focus on for the next
+[02:31] 100 days.
+[02:32] So, what is an AI agent?
+[02:34] Well, it's just an AI that you give a job to, and it's going to complete that job for you.
+[02:38] And it's not going to stop until that job is completely done to your liking.
+[02:41] Now, it could be as easy as scheduling your haircut or your dentist appointment.
+[02:45] It could send you your morning rundown for the day.
+[02:48] It could order you a burrito.
+[02:49] It could send out birthday cards.
+[02:50] I don't care what it is.
+[02:51] It just needs to be something that helps you in your personal life.
+[02:54] Now, here's the challenge that I have for you.
+[02:56] I want you to build one AI agent every single week for the rest of the year.
+[03:00] Now, you can start small by giving it just one small little job, but by New Year's, you should have 14 different agents that are working to make your personal life better.
+[03:08] And that takes me to number three, which is skills.
+[03:11] And skills is different from agents.
+[03:13] An agent is the employee that's doing the job, but a skill is a saved set of instructions that teaches the agent how to do that job exactly the way that you want it done.
+[03:22] For example, when my AI agent books a trip for me, it knows the airline that I like to fly on.
+[03:27] It knows that I always like an aisle seat.
+[03:29] It knows that I always like to stay at a Marriott, and that I don't want any flights before 8:00 a.m.
+[03:34] because waking up that early is not fun.
+[03:37] So, every time it books a trip for me, it comes back exactly the way that I want it, and that is a skill.
+[03:42] So, you want to master skills because that's how your AI is going to learn the way that you like things done.
+[03:47] And every single time that you catch yourself explaining how to do something, you need to turn that into a skill.
+[03:52] And your challenge is, just like your agents, is that I want you to build one every single week for the rest of the year.
+[03:58] Which brings me to number four, and that is plugging in the tools that you use every single day.
+[04:03] And right now, most people are just copy and pasting things into AI, and then they take that answer and they paste it into a tool that they're using.
+[04:10] Well, MCP fixes that.
+[04:12] And MCP stands for Model Context Protocol, and it's basically just a standard way for your AI to connect to all the tools that you use, like your email and your calendar and your files and all the applications that
+[04:23] you're using every single day.
+[04:24] Now, some platforms call these connectors, some call them plugins, but I need you to master this.
+[04:30] And what you're going to do is you're going to connect one new tool to AI, you guessed it, every single week for the rest of the year.
+[04:36] And by the end of the year, your AI employees are going to be plugged in to about every single thing that you do.
+[04:41] And that takes us to number five, which is stay a generalist on purpose.
+[04:45] Meaning that if you master one platform, that doesn't mean that you have to ignore the rest.
+[04:50] Take a look at my AI stack right here.
+[04:52] I use these every single day, but I have mastered Claude, which means that I understand most of the technology that these are built on.
+[05:00] But I still use other AI tools.
+[05:02] And so, what I'd like you to do is block off an hour a week.
+[05:05] If there's a new model that comes out, take those same three prompts that you use every single day, and then run them through the new model.
+[05:11] And you'll quickly see if that new model or that new tool is worth using for a specific job.
+[05:16] But you still have your home base, which will stay the same.
+[05:18] And again, for me, that's Claude.
+[05:20] But that's how you stay current without rebuilding everything every single month.
+[05:24] Okay, so to close this out, there's only 100 days left this year.
+[05:27] And if you want to get better at AI than 99% of the people that are out there, you need to focus on mastering one platform.
+[05:33] I spent way over 1,000 hours on Claude at this point, and what I just gave you is how I would spend the next 100 days if I was wanting to master AI.
+[05:41] So, I'm calling this the 100 Days of AI Challenge.
+[05:44] Subscribe to the channel and follow along because I'll be sharing other AI tips along the way.
+[05:49] And if this was helpful, please subscribe, like the video, leave a comment, and I will see you in the next one.

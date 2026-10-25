@@ -1,0 +1,1034 @@
+[00:00] Regarde cet écran 2 secondes.
+[00:01] Tout ça, c'est mon second cerveau.
+[00:03] Tous les points que tu vois apparaître, les liaisons qui se font, c'est ce que je sais, ce que je produis, mes projets, mes outils et mes idées, tout ça relié au même endroit.
+[00:10] Et ça pour moi, c'est le meilleur moyen d'utiliser l'IA à titre personnel.
+[00:13] Pas pour lui poser des questions une à une et se faire dépanner comme ça, mais vraiment pour en faire un véritable assistant.
+[00:18] Un assistant qui te connaît parfaitement, toi, ton business, ta façon de travailler, tes process et qui sait t'épauler dans toutes tes tâches.
+[00:24] Ce système, ça s'appelle un système AIOS, ton système d'exploitation personnelle.
+[00:29] Et dans cette masterclass, je te donne le plan complet pour construire le tien.
+[00:32] Et c'est pas un outil de plus, c'est un système qui est à toi.
+[00:35] Donc voilà le plan en trois étapes.
+[00:36] On va d'abord parler du problème, pourquoi tu as besoin d'un système par rapport à une accumulation d'outils.
+[00:40] On va ensuite définir exactement ce qu'est un AIOS et pour ça, on va utiliser le framework CAP, contexte, accès, production, entretien.
+[00:48] Et ensuite, on va rentrer en détail dans chacun de ces piliers.
+[00:51] Mais c'est une masterclass, il y a énormément de valeur que tu vas récupérer de cette vidéo.
+[00:55] Moi, ce que je te conseille, c'est de l'enregistrer, de la mettre dans tes favoris afin de pouvoir y revenir de façon régulière.
+[01:02] Tu peux te servir également du chapitre et des menus, je les ai détaillés pour que ça suive exactement le plan de la vidéo.
+[01:07] Tu les retrouveras dans la description et dans la description, tu retrouveras également un lien vers toutes les ressources dont je parle dans cette vidéo.
+[01:12] Ces ressources, c'est un peu le mode d'emploi de cette vidéo, le how to, le comment faire pour installer ton propre AIOS sur ta machine.
+[01:19] Allez, on y va, c'est parti.
+[01:20] La première question que tu dois te poser, c'est pourquoi des gens qui ont les mêmes outils que moi semblent aller 10 fois plus vite que je ne le fais.
+[01:26] Et ben ça, c'est simple, c'est pas l'outil le problème, c'est le système qu'il y a autour.
+[01:30] En fait, beaucoup parlent de leur stack d'outils.
+[01:31] Donc ils ont des outils pour résumer, pour écrire, pour créer des images, pour faire de la veille, pour faire des tâches et cetera.
+[01:36] Et tous ces outils-là sont empilés, c'est-à-dire qu'ils ne communiquent pas forcément entre eux.
+[01:40] Moi, ce que je te propose, c'est de mettre au cœur de tout ça un AIOS, donc ton système IA personnalisé, qui va te permettre d'être au cœur de tes outils et de les orchestrer de la même façon que
+[01:48] toi tu le ferais.
+[01:49] Quand tu utilises une ta stack d'outils, tu utilises un outil pour une tâche isolée.
+[01:54] En fait, tu vas recommencer les mêmes tâches à chaque fois.
+[01:56] Et ça vit dans ta tête et personne ne peut le reprendre de façon naturelle, simple.
+[02:00] En fait, mon AIOS, il va venir couvrir cinq besoins que ta stack ne couvre pas.
+[02:05] Le premier besoin, ça va être de réutiliser.
+[02:08] Donc, réutiliser ce qui marche, un bon prompt, une bonne formule, un bon outil.
+[02:11] Donc, tout ça, c'est écrit une fois, c'est disponible tout le temps.
+[02:15] Le deuxième besoin, c'est le besoin d'information.
+[02:17] C'est le besoin de retrouver l'information.
+[02:19] Dans le Dans un bon AIOS, chaque fichier a une place bien déterminée.
+[02:23] Toi et ton AI savent toujours où est fiché.
+[02:26] Le troisième besoin, c'est de mémoriser.
+[02:27] L'IA doit suivre ton process, ton évolution, sans que tu aies besoin de réexpliquer à chaque session.
+[02:32] Le quatrième besoin, c'est l'autonomie, c'est de savoir survivre au changement d'outil.
+[02:36] Par exemple, tu changes de LLM, donc le LLM, c'est des large language model, donc c'est par exemple ChatGPT, GPT, et cetera.
+[02:43] C'est le moteur IA de ton de ton système d'exploitation.
+[02:47] Si tu dois en changer, si par exemple Anthropic décide ou est contraint de fermer ses modèles, si Intel va augmenter ses prix de façon à ce que son modèle devienne trop cher pour toi, ou alors que tout simplement
+[02:58] il y a un nouveau modèle plus performant qui arrive, tu es capable de le changer sans rien perdre et en quelques secondes.
+[03:05] Et le dernier besoin que doit couvrir ton AIOS, c'est de transmettre.
+[03:09] Tout doit être documenté afin que tu puisses transmettre, tu puisses déléguer ton travail ou tout simplement attendre et reprendre un projet dans six mois.
+[03:17] En gros, l'écosystème doit être complètement vivant.
+[03:19] Donc, un truc à retenir, la stack, c'est une collection, un système, c'est construit autour de toi.
+[03:24] Il marche avec n'importe quel outil, avec n'importe quel changement de LLM et plus tu l'utilises, plus il devient adapté à toi et plus il est puissant.
+[03:31] Et donc, ce système, c'est ce qu'on appelle un AIOS personnel.
+[03:34] Bon, j'ai dit à peu près 20 fois, voire plus, le mot système.
+[03:37] Mais concrètement, c'est ?
+[03:38] C'est quoi un ?
+[03:39] Donc, je vais t'expliquer clairement ce que c'est avec les différentes couches qui le composent.
+[03:44] Un AI Un AIOS, c'est la couche logique qui organise comment l'IA travaille pour toi.
+[03:48] Vu de l'intérieur, c'est quatre composants.
+[03:51] Je les ai résumés dans un framework, un truc simple à retenir, que j'appelle CAP.
+[03:55] Contexte, accès, production, entretien.
+[03:57] Et c'est pas hasard si j'ai choisi euh l'acronyme CAP, c'est que pour moi ce sont ces quatre piliers qui donnent les super pouvoirs à ton AIOS.
+[04:04] Donc, on va les parcourir vite fait pour avoir une vue d'ensemble, puis ensuite on va entrer euh en profondeur dans chacun d'entre eux.
+[04:09] Donc, on a le C, le contexte.
+[04:12] C'est ce que ton AIOS sait de toi.
+[04:14] C'est qui tu es, ta voix, tes décisions, tes projets en cours, ce que tu veux, ce que tu ne veux pas.
+[04:19] Le test, pour savoir si ton contexte est bon, c'est que tu ouvres une nouvelle fenêtre de IA et tu poses une question sur ton travail en cours.
+[04:26] Est-ce que l'IA te répond comme une personne qui te connaît depuis plusieurs mois, ou est-ce qu'elle te répond comme un inconnu, de façon générique, quelqu'un que tu as rencontré il y a 10 ?
+[04:34] Le A, c'est pour accès.
+[04:35] Concrètement, c'est ce que ton AIOS peut atteindre.
+[04:38] Ça va être la liste des outils que tu utilises au quotidien et dans lesquels l'AIOS peut faire des fonctionnalités de CRUD, ce qu'on appelle le CRUD.
+[04:45] Create, read, update, delete.
+[04:47] Donc, créer, lire, mettre à jour, supprimer.
+[04:50] Donc, c'est par exemple Gmail pour tes mails, c'est ton calendrier, euh c'est tes réseaux sociaux avec LinkedIn et cetera, c'est ton logiciel que tu utilises tous les jours au boulot.
+[04:59] Euh et on verra après comment connecter tout ça à l'IA, les différentes façons de faire.
+[05:02] Et un bon test, par exemple, pour un outil de pour savoir si ton outil de mail est bien connecté, c'est que tu vas demander à ton IA quels sont les trois derniers mails les plus importants que j'ai reçus.
+[05:09] S'il te répond, bah c'est que tu es pas mal.
+[05:11] S'il sait pas répondre, tu as du boulot à faire.
+[05:14] Le P, c'est pour production.
+[05:16] C'est ce que l'AIOS va faire pour toi.
+[05:18] Donc, ça va être l'ensemble des skills, des compétences.
+[05:21] J'ai une vidéo là-dessus, tu tu retrouveras le lien soit en description, soit ici à l'écran.
+[05:25] C'est sont tes automatisations et les différents agents que tu peux avoir.
+[05:27] Et là, le test pour savoir à quel point tu es mature, tu vas par exemple lui demander d'écrire un post LinkedIn sur tel sujet.
+[05:32] Tu vas lui demander de faire un cahier de cadrage sur un projet client.
+[05:35] Pour savoir si tu es à jour sur dans son système, c'est quel est le niveau de retour que je dois appliquer pour que le résultat soit 100 % ce que je veux envoyer.
+[05:43] Et le E, dernier et dernier pilier, le E, c'est l'entretien.
+[05:47] C'est comment tu fais vivre le dans le temps ton système.
+[05:50] La question c'est que tu crées ton système maintenant, tu reviens dans 2 mois, tu tu tu analyses ce que tu as dans 2 mois.
+[05:56] Est-ce que ton système est meilleur et qu'il a des des nouvelles compétences et cetera ou est-ce qu'il a évolué avec du bazar dedans, du ?
+[06:03] Et pour la mise en place de tout ça, il y a un ordre.
+[06:05] C'est pas négociable.
+[06:06] Tu vas commencer par le contexte, puis les axes, puis les éléments de production, puis l'entretien.
+[06:11] Tu peux pas faire d'entretien sur un un système qui ne produit rien.
+[06:14] Tu n'as pas de production sans accès aux différents outils et tu n'as pas d'accès utile si tu ne donnes pas du contexte à ton IA.
+[06:22] Donc c'est exactement l'ordre dans lequel on va aller voir chacun de ces piliers.
+[06:25] Alors juste pour terminer là-dessus, pour la partie un peu théorique, ce qu'on est en train de construire ici, c'est un IAOS personnel.
+[06:31] C'est ce que c'est c'est ce qui te sert à toi dans ton activité, ta semaine, tes décisions.
+[06:35] Tu peux tout à fait construire ce genre d'IAOS pour une structure plus grande avec plus de personnes.
+[06:40] C'est pas le but de cette vidéo, ce sera certainement le but d'une prochaine vidéo, donc n'hésite pas à t'abonner si ça t'intéresse.
+[06:45] Donc si on résume, l'IAOS, c'est la couche qui organise comment l'IA travaille pour toi.
+[06:49] C'est pas un chatbot, c'est pas un agent isolé, c'est pas une stack, c'est pas un SAS, c'est quatre piliers dans l'ordre qui vont être le contexte, les accès, la production et l'entretien.
+[06:57] Et donc avant de commencer ces quatre piliers, on va voir tout simplement le setup.
+[07:01] Qu'est-ce que tu dois installer sur ta machine pour commencer ton ton ?
+[07:05] En fait, le mot IAOS ça fait technique, mais en vrai ça tient à trois morceaux tout simple.
+[07:09] Le premier morceau, le plus important, c'est un dossier.
+[07:12] Un dossier avec des fichiers texte dedans.
+[07:15] C'est sur ton ordinateur et c'est là que vit le contexte.
+[07:17] Donc voilà par exemple, mon IAOS.
+[07:19] Dedans, tu as des fichiers texte avec du point MD, c'est un format qui est très simple.
+[07:23] On peut en ouvrir un.
+[07:24] Je peux vous en montrer un rapidement.
+[07:26] Voilà, c'est du texte comme ça.
+[07:28] Donc éditable très facilement, pas besoin de logiciel compliqué.
+[07:30] Et c'est dans tout ça que va vivre ce dont on a parlé un peu avant et donc on va explorer en détail après.
+[07:35] C'est tout ce que l'IA doit savoir de toi.
+[07:38] Et dans ce dossier, il y a ici du rangement, un système de rangement qui est très important, qu'on va détailler également.
+[07:43] C'est la clé d'un AI iOS qui soit pérenne et qui tienne dans le temps.
+[07:47] Le deuxième item important, c'est le moteur, c'est ton LLM, donc large language model.
+[07:52] Donc les LLM les plus connus, c'est ChatGPT, Gemini, Claude.
+[07:56] Il y en a d'autres qui existent, il y en a d'autres qui vont apparaître, c'est sûr.
+[08:00] Et donc c'est lui qui va interroger ses fichiers, qui va produire pour toi et cetera.
+[08:04] Et la troisième, c'est l'interface.
+[08:06] C'est la fenêtre par laquelle toi, moi, tu vas parler à l'IA.
+[08:09] Et là, tu as plusieurs possibilités et tu peux faire un choix.
+[08:13] Donc moi, j'utilise Claude comme principal LLM.
+[08:15] Je peux donc utiliser Claude Code sur l'application desktop d'Anthropic.
+[08:20] Je peux utiliser Claude Code sur le terminal directement, en le branchant sur ce dossier.
+[08:24] Et je peux également utiliser d'autres outils, comme par exemple VS Code qui est un outil de développement, mais en fait qui te permet à la fois d'avoir le modèle et tes fichiers, on va le voir juste après.
+[08:34] Tu as Obsidian, je je t'ai déjà montré rapidement, on va également en parler.
+[08:38] Bref, plusieurs possibilités.
+[08:39] L'important, c'est que tu sois à l'aise avec.
+[08:41] On parle beaucoup de code, en vrai, tu as pas besoin de faire du code.
+[08:44] Tu as juste besoin de savoir taper, de savoir échanger avec l'IA et le reste, c'est juste une interface qui est un peu plus austère que ce que tu as d'habitude.
+[08:51] Bon, maintenant, tu as normalement compris le pourquoi, tu as compris le quoi, donc les trois quatre éléments qu'on vient de voir.
+[08:57] Maintenant, on va mettre les mains dedans.
+[08:58] Je vais te montrer en vrai.
+[09:00] Et tu vas voir, c'est beaucoup plus simple que ça en a l'air.
+[09:03] Et en quelques minutes, tu peux avoir un terrain de de jeu qui est prêt et complet.
+[09:07] Comme on a rapidement vu avant, il te faut un éditeur un peu malin, un peu facile d'accès.
+[09:12] Moi, j'ai choisi VS Code, il y en a d'autres.
+[09:13] Donc VS Code, c'est Visual Studio Code, c'est gratuit, c'est dispo sur Mac, Windows et Linux.
+[09:18] Tu as accès à l'agent IA dedans.
+[09:20] Le deuxième objet, c'est donc une IA, un LLM.
+[09:23] Moi, j'utilise Claude.
+[09:25] Tu peux très bien le faire, comme je t'ai déjà dit, avec Gemini, avec ChatGPT.
+[09:27] Pour Claude, ça commence avec l'abonnement à partir de 17 euros par mois.
+[09:31] Et le troisième élément dont tu as besoin, c'est ton ordinateur avec un dossier réservé à à usage.
+[09:35] C'est tout, pas besoin d'un gros serveur à des milliers d'euros.
+[09:38] Donc maintenant, tu dois avoir compris le quoi et le pourquoi.
+[09:41] Ce qu'on va faire, c'est qu'on va mettre les mains dedans.
+[09:43] Je vais te montrer concrètement comment marchent les outils dont je viens de te parler.
+[09:46] On va prendre le premier, qui s'appelle Visual Studio Code.
+[09:49] Donc ça peut faire peur, en plus quand tu regardes l'écran, tu peux voir que c'est un outil de développement.
+[09:55] Mais la façon dont on va l'utiliser va être très simple.
+[09:58] Pour l'installer, alors je vais te montrer concrètement euh ce que ça donne sur le mien.
+[10:01] En fait, quand tu vas être sur VS Code, tu vas avoir une fenêtre de chat exactement comme sur l'appli euh de de Claude ou de Gemini ou de GPT.
+[10:09] Donc par exemple ici, je vais dire "Salut Claude, comment ça ?
+[10:12] Euh qu'est-ce que tu as envie de travailler ?" Et donc là, il réfléchit, il me répond et en parallèle, ce que je peux te montrer, c'est que tu as ici l'accès à l'intégralité de tes fichiers.
+[10:20] Donc là, c'est mon AI OS, on le on le voit ici.
+[10:24] Et ce qu'on voit dedans, c'est tous les dossiers.
+[10:26] Donc par exemple, sur le contenu, euh ici on a sur mon Claude Smart, euh j'ai mes différents classrooms et j'ai par exemple ici, ça c'est tout le contenu de la classroom sur laquelle j'explique comment intégrer euh ce système
+[10:36] AI.
+[10:37] Et là, tu vas voir tu vois, il me répond "Salut Thomas, ça va très bien.
+[10:40] Prêt à bosser.
+[10:41] Vu là où on en est, quelques fils chauds sur lesquels je peux embrayer tout de suite." Donc élément très concret de mon AI OS, c'est que il sait exactement sur quoi je travaille.
+[10:52] La branche courante refactor pilotage AI OS Airtable existe.
+[10:56] Mon chantier du moment.
+[10:57] En fait, je suis en train de sortir Airtable pour stocker euh mes infos sur le principal, sur ces fichiers.
+[11:02] Masterclass AI OS, c'est exactement ce qu'on est en train de faire.
+[11:06] Le cadrage block par block est prêt, on peut avancer dans le flow des blocks suivants.
+[11:09] Donc voilà.
+[11:10] Des articles LinkedIn, chantier ouvert le 30 juin euh et cetera.
+[11:14] Éveil vidéo, il me parle de mon pipeline de veille.
+[11:17] Donc voilà les derniers sujets que j'ai travaillé avec lui, il est au courant.
+[11:20] Donc ça, c'est pour la partie AI OS et pour la partie interface, tu vois que c'est très simple d'aller chercher un fichier.
+[11:26] Voilà, je prends par exemple une newsletter que j'ai faite.
+[11:29] Quand je clique ici, je vois le contenu de ma newsletter.
+[11:32] Alors c'est en MD donc c'est du code vraiment très très simple.
+[11:35] Les deux dièses là, ça veut dire que c'est un titre.
+[11:37] Tout simplement.
+[11:39] Et pour le reste, euh on le voit comme ça.
+[11:41] Pour VS Code, tu vas tout simplement sur le site, je te mets le lien en description.
+[11:45] Tu vas cliquer sur download, c'est ensuite un install classique de de logiciel.
+[11:50] Ce que je veux te montrer tout simplement, c'est la partie plugin que tu retrouves ici.
+[11:55] Donc c'est des enfin ils appellent ça extension.
+[11:57] Et tu vas chercher Claude Code.
+[11:59] Donc ici, tu vas chercher Claude Code.
+[12:02] Si tu utilises Claude évidemment.
+[12:04] Et tu vas ajouter cette extension-là faite par Anthropic qui te permet d'avoir cette fenêtre de chat qui ressemble énormément à ce que tu peux trouver sur l'application.
+[12:13] Et tu vois qu'il y en a d'autres.
+[12:14] Si à un moment tu veux mettre ici euh Gemini, tu peux très bien euh venir également installer Gemini ou euh ou alors on va mettre Open AI.
+[12:26] Et il va voilà, il va trouver euh et tu auras à chaque fois une extension qui va te permettre d'utiliser de la même manière que moi j'utilise Claude, le LLM dont dont tu as envie.
+[12:33] Alors si on revient ici sur Claude, donc tu l'installes, ça va t'ouvrir cette extension qui est ici.
+[12:42] Là, c'est toutes les discussions que j'ai eues avec lui.
+[12:44] Tu installes l'extension, c'est tout simple, tu dois te tu ouvres une fenêtre qui va te connecter à ton compte.
+[12:48] Donc qui va faire le lien entre ton compte Anthropic et VS Code.
+[12:51] L'intérêt dans tout ça, c'est que ça consomme ton forfait.
+[12:55] Tu peux également choisir de le faire via API.
+[12:57] Si si tu penses que ton usage ne va pas dépasser les 19 dollars, tu peux très bien le faire comme ça.
+[13:02] Et une fois que tu as installé Claude dans VS Code, tu peux venir ici et là tu vas mettre open folder et tu vas aller chercher un dossier que tu as créé spécifiquement pour ton vault.
+[13:14] Donc moi, par exemple, j'ai identifié un dossier que j'ai appelé AIOS et à chaque fois que je vais interagir ici avec Claude, il va être dedans.
+[13:22] Donc tu je fais fichier open folder et ici j'ai moi j'ai mon né iOS ici, je le sélectionne et m'ouvrir ma session et à partir de là, Claude va lire tous les éléments, toutes les instructions qu'on verra ensuite
+[13:36] pour travailler dans le cadre de mon né iOS.
+[13:38] Alors un autre outil qui est optionnel et moi je te le le conseille, c'est Obsidian.
+[13:46] Donc ça tu tu dois reconnaître, c'est le schéma qu'on a vu en début de vidéo.
+[13:50] Et concrètement, de la même manière que je l'ai fait sur VS Code, je suis allé ici fichier ouvrir un vault.
+[13:56] Donc un vault, c'est en fait c'est le dossier dans lequel tu gardes ton tout ton ton savoir, donc vault en en anglais, c'est coffre.
+[14:03] Et donc tu tu ouvres un vault.
+[14:07] Là, je te mets ici, tu peux aller choisir ton ton coffre.
+[14:09] Donc moi euh voilà, de moi j'en avais deux, j'en ai j'ai changé pour en mettre qu'un seul.
+[14:14] Tu peux le créer directement à partir d'ici et cetera.
+[14:18] L'intérêt d'Obsidian, c'est ?
+[14:19] C'est que tu as ici une vue plus propre de ce que tu as.
+[14:23] Donc par exemple, je retourne sur VS Code.
+[14:24] Ici, j'ai j'affiche les fichiers avec ici cette icône.
+[14:27] Il va me mettre tous les fichiers dont des fichiers qui sont masqués.
+[14:30] Le qu'on a un point trash par exemple, c'est que le fichier est masqué ou j'ai aussi mon point Claude qui est masqué notamment.
+[14:36] Donc là, j'ai vraiment l'intégralité des fichiers qui sont sur euh mon vault, sur mon mon dossier.
+[14:42] Ici, j'ai une vue beaucoup plus propre.
+[14:46] Donc premier élément, il y a également des extensions qui permettent d'afficher des fichiers et notamment par exemple sur YouTube, là j'ai fait une vidéo sur les les les skills de Claude.
+[14:55] J'ai ici des fichiers Excalidraw.
+[14:58] Donc tout ça, ça a été créé par euh via mon second cerveau et c'est une présentation que j'affiche quand je fais la vidéo sur ce sujet-là.
+[15:05] Mais je peux la retrouver ici et potentiellement venir l'éditer.
+[15:08] Donc pour aller télécharger Obsidian, bah tu fais tout simplement tu vas chercher Obsidian ici sur Google, tu cliques dessus et de la même manière, tu vas ici cliquer sur euh télécharger Obsidian pour Mac ou il mettra Windows si
+[15:19] tu es sur Windows.
+[15:22] Tu peux voir qu'il y a une partie pricing mais sache que c'est simplement de la synchronisation si tu veux si tu veux sauvegarder tes fichiers sur les serveurs d'Obsidian.
+[15:31] C'est tu n'en as pas besoin, ça marche très bien sans, c'est gratuit.
+[15:34] Et on va euh je vais te montrer un moyen tout à l'heure pour sauvegarder de façon gratuite sur un autre outil qui s'appelle GitHub euh qui permet d'avoir beaucoup plus de possibilités de synchronisation, de mise en ligne, de
+[15:46] gestion de ton site web.
+[15:47] Donc il faut passer par GitHub et euh donc le le pricing de Obsidian ne sert à rien.
+[15:52] Donc une fois que tu as téléchargé, tu ouvres l'interface qui ressemble à celle-ci et tu vas faire fichier ouvrir un vault.
+[15:59] Là, potentiellement, si c'est ta première fois, il va te il va te proposer de créer un nouveau coffre.
+[16:06] Là, c'est la fameuse fonctionnalité payante, tu n'en as pas besoin.
+[16:09] Si tu as déjà créé ton dossier euh par ailleurs, tu vas venir le chercher ici.
+[16:12] Donc tout simplement, il va aller te proposer.
+[16:15] Donc moi par exemple, c'est AIOS, hop, je peux l'ouvrir et il va me il va m'ouvrir mon coffre.
+[16:19] Il a déjà ouvert ici.
+[16:20] Donc on l'a vu, ton AIOS finalement tient dans un dossier que tu as sur ton ordinateur.
+[16:24] On pourra le mettre en ligne plus tard.
+[16:26] Tu as besoin d'une interface qui te permet d'ajouter le moteur, le LLM qui va utiliser, qui va interagir avec ce dossier et toi-même.
+[16:35] Donc là, je viens de te montrer moi les outils que j'utilise.
+[16:38] Maintenant, si tu veux utiliser d'autres choses, c'est tout à fait possible et c'est là toute la puissance de ce système-là, c'est qu'il est tool agnostic.
+[16:44] Ça veut dire qu'il ne tient pas compte, il ne dépend pas de euh d'outils particulier.
+[16:49] Et je vais te montrer ça.
+[16:50] Donc là, j'utilise j'ai montré que j'utilise l'interface de de VS euh code pour euh pour discuter avec euh Claude.
+[16:59] Je vais te montrer que je pourrais très bien le faire sur Claude, sur l'application Claude.
+[17:02] Alors en fait, je vais te montrer que je peux me connecter très facilement à mon AIOS.
+[17:06] Et en fait, tu peux le faire avec n'importe quel outil qui te permet d'utiliser une IA avec le contexte d'un dossier.
+[17:12] Et c'est exactement ce que fait Cowork ici.
+[17:14] Donc là, je vais utiliser mon AIOS.
+[17:16] J'autorise l'accès.
+[17:17] Je lui mets la même question que tout à l'heure.
+[17:19] Salut Claude, comment ça ?
+[17:20] Qu'est-ce que tu as envie de travailler ?
+[17:21] Et je vais te montrer en parallèle la même chose ici dans Claude Code.
+[17:25] Donc ici, je vois déjà que je suis sur l'AIOS.
+[17:28] Je peux aller ouvrir un autre dossier.
+[17:29] C'est comme ça que tu peux aller chercher le dossier de ton AIOS.
+[17:32] Et je vais lui mettre la même question.
+[17:33] !
+[17:34] Alors il va pas me le dire de la même manière, mais il va me donner le même fond.
+[17:38] Donc là, de mon côté euh c'est ce qui te fait avancer toi, c'est sympa.
+[17:42] Virage euh vu où tu en es, virage contenu nouveau posté AIOS.
+[17:46] Bon ça c'est une voilà, c'est perso.
+[17:47] Donc là, il me répond avec mes éléments de contexte également.
+[17:50] Il est moins précis par contre sur le sur ce que je faisais vraiment il y a une heure ou deux.
+[17:54] Et si je vais voir sur Claude, je jette un œil à ce qui est chaud en ce moment, la masterclass AIOS.
+[17:59] La newsletter, le pipeline euh Donc là, il me ressort exactement les mêmes infos que la FVS quoi.
+[18:05] Donc peut-être que Cowork, lui qui est plus accès outils, euh n'a pas le même a la même façon de d'aborder le le dossier.
+[18:12] Mais l'interface de Claude Code est exactement la même.
+[18:14] Donc une fois que tu as accès au dossier et à un LLM, tu as ton AIOS et donc tu peux le bouger partout.
+[18:20] Tu peux utiliser n'importe quel outil.
+[18:21] Donc maintenant, on va rentrer vraiment dans le détail de ce qu'il y a dans ce dossier.
+[18:25] Alors le langage Obsidian, c'est le Vault.
+[18:27] Moi, j'appelle ça le second cerveau parce que la manière dont on va l'organiser, c'est vraiment pour structurer toutes tes idées.
+[18:32] En fait, tout ça, c'est le pilier contexte.
+[18:34] Le pilier Donc rappelle-toi, on est sur un framework qui s'appelle CAP.
+[18:37] On est sur le C, c'est le contexte.
+[18:40] C'est le plus important des quatre parce que tout le reste finalement s'appuie dessus.
+[18:43] Et c'est ça qui va apporter ta richesse, ta propre richesse dans l'utilisation de ton AIOS.
+[18:47] Donc le contexte de base dans un AIOS, ça va être trois fichiers que ton IA lit à chaque fois que tu la connectes, à chaque fois que tu lances Claude.
+[18:55] Claude, mais quand je je vais te parler de Claude, je dis-toi que c'est n'importe quel LLM.
+[19:00] Donc les trois fichiers de base de ton système euh AIOS, ce sont les fichiers Claude.md qui vont dire à peu près Enfin, on on va voir en détail, mais en gros, ça dit qui tu es, comment tu travailles,
+[19:10] et cetera.
+[19:11] Ça va être ensuite ça va être ensuite tes conventions.
+[19:14] Donc c'est la façon donc les conventions en fait ça sert à maintenir ton iOS de manière à ce que tout soit fait de la même manière.
+[19:21] Donc que les gens que les fichiers soient nommés de façon identique et cetera et cetera.
+[19:25] Pareil, on en parle vraiment juste après.
+[19:31] Et le troisième c'est ta doctrine.
+[19:33] Donc des doctrines c'est des règles des règles d'animation, des règles métiers de logique que tu appliques à fond.
+[19:40] Donc on commence par le chef d'orchestre le cloud.md.
+[19:43] Donc le cloud.md il se le c'est le fichier que lit cloud en premier quand il se lance.
+[19:47] Il dit qui Il dit qui tu es, comment bosser avec toi et tu peux lui donner un peu plus d'infos pour un projet précis.
+[19:54] Voilà.
+[19:55] Je ferai certainement une vidéo dédiée sur le sujet sur le cloud.md et la façon de l'orchestrer quand tu travailles sur un projet bien précis.
+[20:02] Là on nous on travaille sur un iOS.
+[20:05] Donc le cloud.md change un peu de rôle.
+[20:07] En fait ça va devenir le chef d'orchestre de ton second cerveau.
+[20:11] En fait il va garder en tout ce qui est endur donc ce qui change très peu c'est qui tu es, ce que tu fais globalement comme métier, un très court résumé de ta vie avec tes différentes casquettes et
+[20:19] cetera.
+[20:20] Ce que tu veux faire et ce que tu veux pas faire.
+[20:22] On reste très simple.
+[20:23] Pour le reste, il va déléguer.
+[20:25] Ça veut dire qu'il va envoyer le LLM vers les différents dossiers qui sont intéressants.
+[20:30] Et par exemple si tes projets en cours, ce sur quoi tu travailles, ça va être dans un dossier qui va s'appeler projet.
+[20:36] Et ça va pas vivre dans le fichier cloud.md.
+[20:38] Donc cloud.md va dire "Va chercher dans le dossier projet.
+[20:41] Il y a un sommaire qui va te lister tous les projets et ensuite tu peux aller chercher le projet en détail spécifique sur lequel je veux travailler." Pourquoi faire comme ?
+[20:48] C'est qu'en gros c'est le principe de single source of truth.
+[20:52] Ça veut dire que la vérité n'est qu'à un seul endroit.
+[20:55] Si tu commences à avoir deux index la liste de tes projets sur ton cloud.md et la liste de tes projets dans un autre endroit, tu vas créer des à terme tu vas forcément à un moment donné créer des
+[21:04] différences et l'IA ne sait plus le sur lequel travailler.
+[21:07] Et pourquoi on met pas tout dans le Cloud MD, c'est qu'il est chargé euh à chaque fois que tu utilises Cloud et donc on veut on veut le faire le plus light possible pour consommer le moins de tokens
+[21:17] possible.
+[21:18] Les tokens, imagine ça comme des crédits que tu obtiens avec ton forfait ou que tu vas payer directement via l'API.
+[21:25] Donc finalement, c'est la monnaie d'échange pour l'utilisation euh de de Cloud.
+[21:28] Et plus tu charges du contexte, plus euh il utilise de de tokens.
+[21:33] Et en même temps, c'est ça qui fait la richesse de tes réponses.
+[21:34] Donc tu dois être très précis dans la façon dont tu vas l'orienter vers le bon contenu.
+[21:39] Donc un Cloud MD très simple qui oriente pour utiliser le moins de tokens possible tout en gardant l'efficacité d'un contexte fort.
+[21:47] Et on va marcher de la même manière avec la liste des outils et cetera.
+[21:49] Donc là, je te montre rapidement mon Cloud MD.
+[21:52] Donc là, j'explique que euh le Cloud MD, c'est le chef d'orchestre.
+[21:55] Ici, je lui donne la carte des différents euh du système, qui je suis, comment je veux qu'on qu'on travaille, la façon dont il va accéder aux différentes ressources, les opérations du Vault et cetera et cetera.
+[22:06] Voilà, bon, il fait 135 lignes euh 136.
+[22:10] Faut le le relire tous les 3 6 mois euh pour le faire évoluer, mais globalement, il donne un peu de contexte sur moi, il il explique comment on va travailler, mais de façon très succincte.
+[22:20] Alors pourquoi il le fait de façon ?
+[22:21] C'est parce que le deuxième fichier, ça va être la doctrine.
+[22:24] Donc on va on va lui dire d'aller lire les doctrines.
+[22:26] La doctrine, ce sont toutes les règles métier.
+[22:29] Donc là, ici, je vais j'explique ce qu'on va avoir juste après, c'est l'organisation du Vault.
+[22:34] Comment quels sont les dossiers et comment je vais ranger une information de façon à ce que les règles soient toujours les mêmes.
+[22:42] Ici, je lui donne par type d'asset, donc par type de contenu, d'outils, de maîtrise, d'outils, voilà, de tout ce que je vais utiliser dans mon dans mon mon iOS, je lui dis quelle est la source de vérité.
+[22:52] Donc potentiellement, par exemple, pour ma liste de contacts, j'ai un CRM à côté, il va aller piocher dans le CRM.
+[22:58] Je pourrais l'avoir directement sur le sur mon Vault.
+[23:02] Ça dépend de plein de choses et c'est vraiment personnel à chaque fois.
+[23:06] J'ai une grande notion moi qui s'appelle les concepts, ça me permet de gérer mon contenu.
+[23:10] Je lui explique comment ça marche.
+[23:11] Là, je lui donne un principe de liaison bidirectionnelle.
+[23:13] On va avoir après c'est pour pouvoir utiliser dans Obsidian.
+[23:18] Obsidian te permet de lier des fichiers entre eux et donc je lui indique comment faire pour créer de ces fameux liens.
+[23:23] Le dernier fichier important, c'est la convention.
+[23:26] Donc là ici, c'est vraiment le quotidien.
+[23:28] Donc la doctrine, c'est un niveau plutôt haut.
+[23:31] La convention, c'est un niveau plutôt bas.
+[23:32] C'est comment je nomme mes mes fichiers.
+[23:35] Comment il va nommer c'est il va nommer mes fichiers parce que c'est Claude qui va le faire.
+[23:39] Ici, j'ai un je lui explique un combat pour ma production de de vidéos YouTube, comment j'organise les différents flows.
+[23:44] Ici, comment je stocke mes médias.
+[23:46] En fait, pour résumer, on va prendre les fichiers, on va dire à quoi ça répond, comment ça marche dans cette architecture de de iOS et après on fait une analogie pour bien comprendre.
+[23:53] Donc le Claude MD, ça répond à qui je suis, comment on bosse et où tu vas trouver l'ensemble de mon contexte et tout le reste.
+[23:59] Donc lui, il va piloter et il va pointer les bonnes directions.
+[24:02] Globalement, analogie, c'est un chef d'orchestre.
+[24:06] Le deuxième fichier, c'est la doctrine.md.
+[24:08] Donc ça répond aux questions où vit la vérité, quels outils je choisis.
+[24:12] Et ça au global, moi j'ai jamais mis trop les mains dedans, c'est vraiment des discussions que il y a le met à jour et te tiens informé.
+[24:18] Ce sont des décisions d'archi, elles sont datées.
+[24:21] Et si tu dois faire une analogie, c'est vraiment l'architecture de ton iOS.
+[24:26] Ensuite, on a les conventions, on descend d'un niveau.
+[24:28] Ça répond aux questions comment je nomme, comment je range ça.
+[24:31] Parce qu'on va trouver dedans, c'est vraiment des normes passives, des tables, vraiment un travail un peu de de bibliothécaire, comment ranger où et cetera.
+[24:38] C'est en fait, si tu fais une analogie, c'est un peu le règlement intérieur de ton iOS.
+[24:42] Et dernier élément, là c'est pas un fichier, c'est juste pour bien comprendre par rapport aux skills que tu dois connaître.
+[24:48] Si tu connais pas, si tu veux voir une vidéo, je t'invite à regarder celle-ci.
+[24:51] Et là les skills, c'est ce qui va répondre à fais telle tâche pour moi.
+[24:56] Là, c'est des procédures qui sont actives, elles produisent des livrables, ce sont tes outils.
+[25:00] Et concrètement, si tu fais une analogie, en fait, c'est les employés virtuels de ton iOS.
+[25:06] Donc, encore une fois, ne t'inquiète pas, ça a l'air complexe.
+[25:10] Ces fichiers-là, finalement, moi, j'y touche très peu ou j'y touche au travers de discussions que j'ai avec l'IA en lui disant "Je trouve que là, euh, par exemple, quand je travaille sur mes vidéos YouTube, euh, j'aimerais que mes
+[25:19] fichiers soient organisés de telle façon.
+[25:21] Euh, je trouve que la Enfin, voilà, je trouve que la façon dont on dont c'est organisé aujourd'hui, ça marche pas très bien.
+[25:24] On va faire plutôt comme ça, comme ça, comme ça." Et j'aimerais que les les vidéos, tu les nommes de telle manière, comme ça je les retrouve facilement.
+[25:29] Et hop, lui, il va mettre à jour les différents fichiers en question.
+[25:32] Et surtout, à l'initialisation de ton Vault, je Moi, je te propose un skill qui va t'écrire un peu la structure et la première pierre de ces différents fichiers.
+[25:42] Donc, ce skill, tu le retrouves dans les ressources, les ressources, elles sont disponibles dans la description, il y a juste à suivre le lien.
+[25:49] Et si tu veux plus d'accompagnement, si tu te poses des questions, c'est l'objectif de mon club Smart.
+[25:55] C'est pouvoir échanger sur la façon dont on le fait, euh, c'est avoir des sessions live pour discuter de problèmes, pour discuter de méthodes, pour échanger et apprendre ensemble.
+[26:04] Donc, pareil, tu retrouves le lien en description.
+[26:06] Et donc, comment ces trois fichiers s'articulent ensemble, c'est qu'à chaque session, Claude euh, va lire les trois.
+[26:11] Donc, quand elle lit le Claude MD, elle sait qui tu es, elle sait euh, où trouver tout le reste.
+[26:15] Quand elle Quand l'IA lit la doctrine, elle sait comment tu penses et comment ton système est construit.
+[26:21] Et les conventions, elle sait comment tu opères.
+[26:23] Donc, elle sait euh, ta façon de fonctionner.
+[26:32] Et donc, si tu lui dis, par exemple "Fais-moi le cadrage de tel projet." Elle sait où aller chercher les différentes discussions que tu as eues avec ton prospect ou avec les membres de ton équipe.
+[26:40] Elle sait la façon dont toi tu rédiges le cadrage et elle va orchestrer tout ça, elle va le produire.
+[26:45] Et donc, je reviens sur l'évolution, la mise à jour de ces fichiers.
+[26:48] En fait, finalement, tout Ce qu'il faut bien comprendre, c'est que ton système est vivant.
+[26:52] Donc il va évoluer avec tes avec tes projets, il va évoluer avec tes nouveaux outils, il va évoluer avec ta façon de travailler.
+[26:58] Et surtout il va grandir, tu vas pas construire tout d'un coup, tu vas tu vas étape par étape.
+[27:02] Et voilà le réflexe plus important à à récupérer de cette vidéo, c'est que à chaque fois que tu vas parler d'une nouvelle règle ou que tu vas corriger ton IA, il faut que tu te demandes est-ce que ça
+[27:12] c'est une règle qui est ponctuelle ou est-ce que c'est vraiment un ?
+[27:16] Donc c'est comme ça que je vais faire à chaque fois.
+[27:18] Et moi ma règle perso c'est simple, c'est qu'à partir du moment où je fais quelque chose trois fois de suite de la même manière ou que je corrige trois fois l'IA de la même façon, ça veut dire que
+[27:27] ça nécessite une évolution, un cadre plus permanent.
+[27:29] Et souvent j'en discute avec l'IA, je lui dis je explique ce que j'ai envie de faire et là, c'est l'IA qui va faire les modifications en fonction de la compréhension de l'échange que tu vas avoir avec et qui
+[27:39] va écrire dans les différents fichiers.
+[27:40] Je peux aussi aller les vérifier manuellement et écrire de façon manuelle.
+[27:43] Et à terme, l'objectif c'est que l'IA puisse apprendre tout seul.
+[27:47] Donc avoir une skill qui lui permet d'évoluer tout seul et de dire "Tiens, tu ça fait trois fois que tu me demandes ça, je te propose d'écrire de changer la convention, d'écrire ça de telle manière." Et il va
+[27:56] le faire automatiquement.
+[27:57] En fait finalement c'est là où ça devient vraiment un assistant, ça devient une entité que tu formes, qui apprend avec toi.
+[28:03] Et en fait c'est ça, c'est exactement comme si tu allais le former.
+[28:05] Donc si on fait un petit récap, le contexte de base c'est ces trois fichiers.
+[28:10] Le cloud MD qui orchestre, la doctrine qui pose les principes et l'architecture et la convention qui est le mode d'emploi vraiment à très haut niveau.
+[28:17] L'IA va les lire à chaque session et tu les enrichis à chaque fois en fonction de ton évolution, c'est toi qui choisis quand tu vas les faire évoluer.
+[28:25] Mais tout ça c'est la base, c'est le socle et il manque encore quelque chose, c'est tes infos personnelles.
+[28:31] C'est vraiment le cœur de de ton système, le cœur de de l'AIOS, c'est ce que moi j'appelle le second cerveau, c'est prendre tout ce que tu as dans la tête et le poser sur un ordinateur, sur un dossier
+[28:42] pour que ce soit utilisable par l'IA et par d'autres personnes.
+[28:47] Donc le second cerveau c'est ?
+[28:48] C'est l'organisation de tout ton savoir, de tes compétences, de tes workflows, de tes process, de tes outils.
+[28:57] C'est tout ça à la fois.
+[28:58] Et l'enjeu déjà, c'est de faire un système qui soit durable.
+[29:01] Et pour ça, le risque c'est de venir ajouter des choses de façon désorganisée.
+[29:06] Et là, tu perds ton IA complètement et tu as l'effet inverse de ce que tu es venu chercher.
+[29:10] Et pour ça, je vais utiliser une structure dont l'acronyme est IPCCRA.
+[29:17] Et le grand principe de cette méthode de classement, c'est que tu vas ranger tes fichiers, en fait, en vrai, c'est l'IA qui va le faire pour toi, mais tu vas ranger tes fichiers par utilité et pas par thème.
+[29:29] Donc, faut bien comprendre euh ce principe, c'est vraiment ça qui va tout changer.
+[29:33] Dans un système classique, quand tu crées un fichier, tu vas te dire "Bon, où est-ce que je le Où est-ce que je le ?
+[29:38] Où est-ce que je pourrais bien ranger ?" Tu vas naturellement venir les ranger euh par thème.
+[29:41] Mais à un moment donné, si tu n'utilises que la dimension de thème, tu as des fichiers, tu vas te demander si c'est dans tel dossier ou dans tel dossier.
+[29:49] Donc des fichiers un peu transverses qui pourraient être dans plusieurs endroits à la fois.
+[29:53] Et donc, sur le premier, tu vas le mettre dans le dossier A, sur le deuxième, peut-être ou peut-être le 10e dans le dossier B, et tu commences à avoir une information qui est diluée et que tu n'arrives pas
+[30:02] à retrouver de façon facile, de façon simple.
+[30:07] Et donc le truc, c'est d'inverser la question et de pas se dire "De quoi ça ?" mais "À quoi ça me ?
+[30:13] À quoi cette information va me servir moi dans mon ?" Et surtout, quand est-ce que je vais avoir besoin de retomber ?
+[30:19] Donc la structure utilisée, c'est une structure en six dossiers.
+[30:22] Et donc, encore une fois, l'acronyme c'est IPCCRA.
+[30:25] Le Le dossier I, c'est inbox.
+[30:27] Pour résumer en une phrase, c'est ce que tu n'as pas le temps de classer maintenant ou ce qui vient d'entrer dans ton système.
+[30:31] Le dossier numéro 2, ce sont les projets.
+[30:33] Alors, un projet, c'est ?
+[30:34] C'est ce qui a une date de début, une date de fin.
+[30:36] Mais tout ça, on en parlera un tout petit peu plus tard.
+[30:40] Le suivant, moi je l'ai utilisé, celui-là, il est plutôt optionnel, ça correspond très bien à mon usage, c'est mon contenu.
+[30:46] C'est ce que je crée, c'est ma matière de contenu, c'est ce que ce qui est déjà créé et ce qui est en cours, mais ça c'est vraiment ma touche perso, donc potentiellement celui-là tu peux t'en passer.
+[30:55] Ensuite, c'est un dossier qui s'appelle casquette et en gros, c'est quelque chose qui n'a pas de fin, contrairement contrairement au projet.
+[31:02] Donc c'est par exemple, moi je suis le papa de le le père de trois enfants, je je suis marié, ça c'est une casquette, je suis Thomas, le papa de la famille Richard.
+[31:09] J'ai également une casquette qui va être je suis créateur de contenu, c'est ce que je fais ici avec toi.
+[31:13] Je suis le créateur d'une communauté dans lesquelles les dans laquelle les gens parlent d'IA, c'est une autre casquette.
+[31:19] Et j'ai une casquette d'employé, je suis responsable de l'automatisation et de l'intelligence artificielle au sein d'une entreprise.
+[31:26] C'est une autre casquette par exemple.
+[31:27] Et donc tout ça, ça n'a pas de date de fin, c'est pas quand je commence l'une de ces casquettes, je vais pas me dire bah je me suis marié tel jour et je vais divorcer dans 10 ans, non,
+[31:36] ça n'a pas de date de fin, pareil pour un emploi et cetera.
+[31:38] Le dossier suivant, c'est le R et là on va parler des ressources.
+[31:43] Donc les ressources, c'est quelque chose qui est plus transverse evergreen, donc qui n'a pas de date de fin et qui va être réutilisable dans n'importe quel dossier.
+[31:51] Et enfin, le dernier, c'est le A, ce sont les archives, c'est tout ce qui est fini ou abandonné.
+[31:56] Donc cette structure, je l'ai pas inventée, c'est elle vient pas de moi, elle vient de plusieurs modèles qui ont évolué où chacun est venu apporter sa sa sa patte.
+[32:03] Si tu veux creuser un peu plus, tout d'abord, c'est David Allen dans son bouquin Getting Things Done qui a posé les notions de projet et d'aire de responsabilité.
+[32:13] Ensuite, il y a Thiago Forte qui en a tiré la méthode PARA, donc projet, A c'est area, resources and archive.
+[32:19] Ensuite, il y a Elliot Meunier, excellent, je vous conseille d'aller voir ses vidéos qui explique tout ça très bien et qui l'a adapté en français sous le nom de IPCRA, en ajoutant le inbox.
+[32:28] Et moi, donc comme je te l'ai dit tout à l'heure, j'ai rajouté mon C parce que mon mon cœur de métier, c'est de produire, enfin c'est pas mon cœur de métier.
+[32:35] Ce que j'ai envie de faire avec le système PARA, c'est construire du contenu et au final je trouvais que c'était plus facile d'aller le mettre d'aller créer un dossier compte.
+[32:42] Donc c'est un très bonne très bonne illustration ces méthodes c'est vraiment des bases très solides de rangement.
+[32:49] C'est partagé c'est utilisé par énormément de monde mais toi ton système c'est le tien, il doit être personnel.
+[32:54] Donc si tu vois qu'il y a quelque chose qui colle pas avec ta réalité réfléchis-y quand même un petit peu avant de modifier parce que vraiment ce sont des systèmes qui sont éprouvés mais à un moment si tu
+[33:04] as besoin de faire un nouveau dossier si tu as besoin de changer quelques règles adapte-les en fonction de ce que toi tu veux faire et il y a quelque chose de commun dans tout ça c'est une règle d'or
+[33:14] c'est que ton système de rangement doit être tellement clair que le jour où tu crées un fichier ou que l'IA crée un fichier donc tu sais où ce fichier va aller.
+[33:22] Et s'il y en a si jamais tu as une hésitation c'est que la structure est pas bonne et qu'il y a quelque chose à creuser.
+[33:27] C'est exactement comme ça et uniquement comme ça que ton second cerveau va tenir dans le temps et qu'il va rester organisé.
+[33:35] Et que ça va pas devenir un dépotoir dans trois.
+[33:37] J'aurais pu essayer de faire un mot ou un acronyme un peu plus sympa avec PCCRA.
+[33:43] Peut-être compliqué quand même mais pourquoi cet ?
+[33:47] En fait c'est un arbre de décision.
+[33:49] C'est pas un classement alphabétique c'est un arbre de décision.
+[33:51] D'ailleurs c'est pour ça que quand tu regardes mes mes fichiers tu vas avoir des 0 1 2 3 et cetera c'est pour que ce soit classé selon une suite bien précise quand j'ouvre mon ordinateur quand je regarde les
+[33:58] Enfin ce classement il a vraiment une suite logique et globalement ça correspond à une grille de routine.
+[34:03] Donc tu travailles un sujet est-ce que tu as le temps de le ?
+[34:06] Non bah c'est pas grave ça va dans l'Inbox.
+[34:08] Ou alors moi par exemple j'ai un système qui va me récupérer des des concepts dans des vidéos dans des vidéos qui sont pas forcément les miennes mais c'est une bonne idée c'est un concept paf ça arrive dans l'Inbox
+[34:17] et ensuite je peux voir et valider si je le si je le garde là ou si je le fais évoluer.
+[34:22] Ensuite si c'est non si si tu tu n'as pas besoin de le mettre dans l'Inbox question suivante est-ce que ça fait avancer un objectif qui a une ?
+[34:29] Est-ce que c'est le cas d'un ?
+[34:31] Si oui tu le mets dans projet.
+[34:32] Sinon, tu te reposes une autre question, est-ce que c'est un contenu que tu ?
+[34:37] Est-ce que Donc ça c'est vraiment ma ma Pour le coup, c'est cette question-là que j'arrivais pas à qui me posait des problèmes et je je mis en place cette question et donc si je dis oui, pour moi, ça
+[34:46] va dans mon dossier contenu.
+[34:48] Est-ce que ça concerne l'une de mes responsabilités ?
+[34:52] Donc est-ce que ça concerne l'une de mes ?
+[34:54] Oui, ça part dans casquette.
+[34:55] Non, est-ce que c'est réutilisable ?
+[34:59] Si c'est oui, c'est une ressource.
+[35:01] Si c'est non, ça veut dire que bah c'est fini, tu as pas besoin d'y toucher et tu le mets dans archive.
+[35:05] Tu normalement tu tu as répondu au moins oui à l'une des premières questions, sinon tu n'avais pas besoin de le mettre dans ton inbox.
+[35:10] Et donc en cas de doute, il vaut mieux le mettre dans inbox et euh les traiter à un moment donné.
+[35:14] Et ça ça fait partie de l'entretien et on en parle euh plutôt en fin de vidéo.
+[35:17] Donc l'idée, c'est que quand tu ouvres ton N iOS, le LLM va lire le fichier, alors dans mon cas c'est Claude MD, qui va lui expliquer, qui va faire le le chef d'orchestre et qui va lui expliquer où
+[35:26] il doit se rendre pour trouver des informations.
+[35:27] Et on a vu ensuite que dans le second cerveau, on a six dossiers qui ont des des des objectifs bien précis.
+[35:34] Donc comment l'IA va aller chercher une information et pourquoi ça va être le plus efficace possible.
+[35:38] Ce que j'ai mis en place, c'est un système où dans chaque dossier, tu vas avoir un fichier qui va indexer le contenu euh de de ce dossier.
+[35:45] Donc par exemple, je vais prendre ici les projets.
+[35:48] Et donc j'ai des dossiers J'ai un dossier sur N iOS, j'ai un dossier qui s'appelle N carte, un dossier R 6 Lab.
+[35:55] Et quand je vais ici sur le fichier projet.md, j'ai ici une liste des projets actifs avec le lien vers justement vers le bon dossier.
+[36:04] Donc l'objectif, c'est que l'IA vienne lire cet index, il va retrouver ici la liste des projets actifs avec des alias.
+[36:10] Donc ça c'est les mots que j'ai utilisés pour lui indiquer que euh je veux travailler sur ce projet-là avec un statut rapide et le lien vers le sous-dossier qui contient tout le détail.
+[36:22] Donc on a ici la structure du de ce projet.
+[36:25] Donc on voit ici que on a un projet.md, c'est ce qu'on est en train de lire et ensuite on a les trois dossiers.
+[36:31] C'est exactement ce que je retrouve là.
+[36:32] Donc, ça ce sont les indications données à l'IA pour qu'il puisse retrouver les informations ici.
+[36:37] J'ai même ici la priorité du moment, création de contenu, tac tac tac.
+[36:42] Et de la même manière, quand je vais ici, par exemple, sur sur ce projet Recess Lab, j'ai ici un MD qui va lui donner toute l'information avec où j'en suis, euh la roadmap, les chantiers techniques, et cetera et
+[36:53] cetera.
+[36:55] J'ai également des ressources comme des Excalidraw, donc qui permettent de de tra- enfin voilà, c'est du du support et un fichier plus technique, voilà.
+[37:01] Donc là là on a vu pour projet, ça marche également ici sur le contenu.
+[37:05] Donc le contenu, il y a le il explique les différents dossiers, donc YouTube, mon Clos Smart, la newsletter.
+[37:10] Mon système de contenu, mon AIOS et euh LinkedIn.
+[37:14] Voilà, donc tu peux le voir ici, le le dossier contenu est assez riche, il y a quand même beaucoup d'éléments.
+[37:20] Et la seule chose que va lire l'IA en entrée, c'est ça.
+[37:23] C'est euh c'est quelques lignes ici avec ce tableau.
+[37:26] Et à partir de ça, il va savoir exactement où aller chercher l'information ou ou la ranger.
+[37:31] Donc, au lieu de tout parcourir, il parcourt un index rapide et il va chercher l'information si besoin.
+[37:37] Ça permet de gagner des tokens, ça permet de gagner du temps de traitement.
+[37:40] Ensuite, un autre point important, c'est le nommage des fichiers.
+[37:43] Donc ça a l'air un peu bête comme ça, mais la façon dont tu vas nommer tes fichiers, c'est très important.
+[37:47] Moi j'y mets trois règles.
+[37:48] La première, c'est le kebab case.
+[37:51] Qu'est-ce que ça veut ?
+[37:52] Ça veut dire que j'écris tout en minuscule avec des tirets à la place des espaces.
+[37:56] Si tu regardes ici les les les lignes magnètes que j'ai déjà créées, tu vois ici que j'ai bloc description YouTube, cheat sheet, settings cloud, créer un projet dans cloud, framework prompting, et cetera et cetera.
+[38:07] Alors ?
+[38:08] C'est parce que c'est plus lisible pour la machine, ça casse jamais et c'est cohérent partout.
+[38:12] La deuxième règle, c'est que je mets des préfixes courts quand ça m'aide à trier.
+[38:15] Par exemple, une date devant un bilan pour un mois.
+[38:17] Ce qui fait que tout se classe par ordre alphabétique.
+[38:20] Et Et troisième règle, c'est qu'à l'intérieur du fichier, tout est écrit pour un humain.
+[38:24] Donc concrètement, ce système euh tout le ce le second cerveau, l'idée, c'est que n'importe qui puisse le lire.
+[38:30] C'est pas destiné à l'IA.
+[38:31] À la base, tu pourrais l'utiliser de façon entièrement autonome sans intelligence artificielle et uniquement pour toi.
+[38:37] Moi, je m'en sers avec l'IA parce que c'est l'IA qui va écrire dedans, qui va aller le consulter et cetera.
+[38:41] Mais c'est écrit pour des humains.
+[38:43] Et là, je vais te montrer l'intérêt euh d'Obsidian.
+[38:45] Tout à l'heure, on a regardé un petit peu son son interface.
+[38:48] L'intérêt d'Obsidian, c'est qu'il permet de faire des liens vers d'autres dossiers.
+[38:52] Donc par exemple, enfin vers des dossiers ou vers des fichiers.
+[38:55] Donc tu vois par exemple qu'ici il y a indiqué YouTube sur du du sur le fichier classique, on va juste avoir le libellé YouTube.
+[39:02] Là, on a un lien qui fait que quand je clique, j'arrive sur la fiche YouTube.
+[39:06] Donc c'est là où Obsidian fait vraiment du sens, c'est que ton ta fonction d'index ou la fonction de lien entre les différents éléments, c'est visible physiquement.
+[39:15] Et c'est là qu'on retrouve ici le graphique que je t'ai montré au départ.
+[39:19] Donc tout ça, c'est le contenu de mon second cerveau qui est organisé.
+[39:23] Donc là par exemple ici, j'ai ça c'est ?
+[39:25] C'est le mon profil professionnel.
+[39:27] J'ai enregistré tous les projets sur lesquels j'ai travaillé et toutes les expériences professionnelles que j'ai eues dans les différentes entreprises.
+[39:33] Donc par exemple, ça c'est un projet donc PRJ projet.
+[39:36] CPT, c'est des compétences que j'ai mis en place.
+[39:39] Donc là ici, j'ai mes expériences.
+[39:41] Et là par exemple ici, expéri EXP, c'est expérience.
+[39:43] Donc je travaille chez Kiabi, chez Auchan, chez Leroy Merlin et cetera et cetera.
+[39:47] Donc j'ai lié projet, compétences, entreprises et postes.
+[39:50] Ici, Envisage par exemple, c'est dans mes archives.
+[39:52] C'est un client avec lequel j'ai travaillé pendant quelques temps.
+[39:55] Et je vois ici le fichier, si je clique dessus, j'ai le fichier de base et euh de de tout ce que j'ai fait.
+[40:02] Et là, j'ai euh j'ai par exemple du mapping, j'ai le détail de workflow.
+[40:07] Qu'est-ce que j'ai ?
+[40:08] J'ai des livrables euh et cetera et cetera.
+[40:10] Donc vraiment pour moi, la grosse différence entre VS Code ici et Obsidian, c'est que VS Code, je l'utilise avec l'IA, c'est ma mon échange avec Lia et Obsidian, c'est quand moi je veux aller chercher un fichier, quand je
+[40:21] veux explorer, relire.
+[40:23] Euh, c'est plus une interface utilisateur, tandis que l'autre est plus une interface de connexion avec Lia.
+[40:27] Alors, comment ça marche ?
+[40:29] Obsidian utilise ce qu'il a appelé des WikiLinks.
+[40:33] Alors, comment ça marche pour écrire un ?
+[40:35] Tu vas tout simplement venir ici par exemple Alors, oui, Obsidian est c'est un éditeur de texte, donc je peux saisir moi-même directement.
+[40:42] Donc là, je vais faire par exemple un lien vers "Sass feature" qui a pas de sens, mais je l'effacerai juste après.
+[40:48] Donc là, ce que je dois faire, c'est mettre le nom de la page.
+[40:51] Donc le lien, en fait, fonctionne avec le nom de la page, ce qui veut dire que si je veux après bouger ce fichier, je peux le bouger n'importe où, il va le retrouver tant qu'il reste dans le dossier
+[40:58] de départ.
+[41:00] Donc "feature map" Et ce ce nom de fichier, je l'encadre par Alors là, on voit déjà quand je quand je tape les deux crochets, il va me proposer différents noms de fichiers.
+[41:15] Et donc bah, à la limite, je vais faire celui-là.
+[41:18] Et voilà, là j'ai un lien.
+[41:19] Donc ça y est.
+[41:19] Donc là, on fait ça et là j'ai un lien vers le fichier en question.
+[41:23] Et ce qui est intéressant également avec Obsidian, c'est que tu peux avoir des plugins.
+[41:26] Donc j'ai par exemple moi mis euh ici, on a un plugin PDF qui te permet de voir directement les fichiers PDF.
+[41:31] Donc ça, c'est un de mes lead magnets, c'est euh les settings de Cloud à activer.
+[41:35] Alors si ça t'intéresse, tu vas le retrouver en bas dans les ressources.
+[41:38] Euh, ici un document pour créer un projet dans Cloud et tu auras la même chose sur le le second cerveau disponible sur cette vidéo.
+[41:48] J'ai également des assets, donc ce sont des visuels que j'utilise lors de mes vidéos YouTube et je les fais dans Excalidraw.
+[41:55] Donc Excalidraw, c'est un peu un board comme Miro, sauf qu'il y a un design un peu assez euh que je trouve assez sympa, qui fait un peu écrit à la main et euh et l'intérêt de d'avoir le le
+[42:05] plugin dans dans Obsidian, c'est que je peux visualiser ce que j'ai fait.
+[42:09] Et comme ça, tu en as plein.
+[42:10] Pour voir les plugins, tu vais aller ici sur Obsidian dans les préférences et tu vas pouvoir trouver des modules complémentaires ici.
+[42:20] Donc moi pour l'instant, j'en ai que trois.
+[42:21] Euh, il y en a énormément.
+[42:23] Donc tout ça, ça mérite un utilisation ouh, Kanban, ça c'est excellent.
+[42:29] Ah bah voilà, ça ça m'intéresse par exemple, bah voilà, je vais le faire en direct, j'installe le Kanban parce que j'adore les vues Kanban.
+[42:35] Et ça me sert notamment pour euh mes process de de création de contenu.
+[42:39] Donc tu vois, j'ai simplement cliqué dessus et j'ai installé le le Kanban et maintenant je vais pouvoir l'activer, voilà.
+[42:46] Tout ça, je vais certainement faire un tutoriel complet sur Obsidian, n'hésite pas à t'abonner si ça t'intéresse pour ne pas le louper.
+[42:54] Euh, tu peux t'abonner là sur la chaîne en cliquant ici en bas.
+[42:57] Et euh, voilà, on va s'arrêter là pour Obsidian, je pourrais en parler pendant des heures, on va revenir sur le le second cerveau.
+[43:02] Mais pour re se re répéter euh, mais vraiment insister là-dessus, c'est que les liens donc Obsidian, c'est pour toi, mais les liens permettent également à l'IA de faire le lien entre les différents dossiers et donc d'aller faire cette
+[43:14] recherche optimisée en token et en contexte.
+[43:16] Donc il va vraiment aller chercher les informations qui l'intéressent et c'est là où ça devient extrêmement puissant.
+[43:20] Voilà, donc on a terminé la partie contexte euh, très dense, c'est vraiment la la la plus dense, mais c'est la plus importante.
+[43:27] Encore une fois, dans les ressources, je vais te mettre une skills qui te permet de déclencher la création de ton second cerveau, donc définir les bonnes structures.
+[43:37] J'enlève la partie contenu parce que c'est vraiment quelque chose qui me concerne moi de façon assez basique, elle n'y est pas, mais tu peux évidemment la la la rajouter.
+[43:44] Donc en suivant ce skills, l'IA va t'installer ton second cerveau avec la structure IPCR.
+[43:49] Dans ce second cerveau, cette skills va également créer le fichier de convention qui va expliquer à l'IA comment organiser ce second cerveau, ce qui fait que dans chacune des discussions que tu vas avoir ensuite avec l'IA, l'IA va
+[44:00] venir enrichir tout ça et le faire grossir au fur et à mesure avec tes sujets dans un mode dans un modèle où tu peux toi te retrouver très facilement.
+[44:08] Donc ces liens vont vraiment transformer ce dossier en cerveau navigable.
+[44:12] Maintenant, avec ce contexte, l'IA sait qui tu es.
+[44:16] Elle sait où trouver tes informations.
+[44:18] Mais pour l'instant, l'IA, elle reste enfermée dans ton dossier.
+[44:21] Par exemple, elle ne voit pas accès à tes mails, elle ne voit pas ton agenda, elle n'a pas accès à tes outils.
+[44:25] Et c'est exactement ce qu'on va lui permettre d'avoir avec le pilier suivant, l'accès.
+[44:30] On va lui ouvrir les portes.
+[44:31] Alors l'accès, c'est tout simple, c'est la liste des outils et des données que ton IA peut atteindre.
+[44:37] Ça peut être en lecture uniquement, comme par exemple pour tes mails, ton agenda, ton fichier Drive, ton CRM, et cetera.
+[44:42] Mais ça peut être également en écriture.
+[44:44] C'est toi qui va donner les différents niveaux d'accès.
+[44:46] Euh donc comme par exemple sur ton agenda, créer un événement, créer un contact dans ton CRM, envoyer un email, et cetera, et cetera.
+[44:53] En fait, si tu ne donnes pas ces accès, tu vas travailler avec l'IA, mais à la fin, tu vas devoir faire du copier-coller entre l'interface que tu as, donc par exemple VS Code, et tes outils.
+[45:02] Et c'est exactement ce qu'on veut éviter.
+[45:07] Alors pour brancher les différents accès à ton IA, tu as deux façons simples de le faire et une troisième qui est déjà un peu plus avancée.
+[45:14] La Les deux façons simples, c'est les API et les MCP.
+[45:17] Donc les API, tu dois brancher fonctionnalité par fonctionnalité les fonctionnalités de l'outil à ton IA.
+[45:22] Et le MCP va changer un peu la donne, c'est que tu vas juste simplement brancher l'outil à ton IA et via le MCP, il va automatiquement et nativement avoir accès à toute une liste de fonctionnalités.
+[45:33] Les deux sont différents et je pense que les deux ont leur place dans un AI OS.
+[45:38] Donc Enfin, je vais expliquer davantage chacun de ces chacune de chacun de ces branchements.
+[45:42] Donc tu as d'abord le MCP.
+[45:44] MCP, ça veut dire Model Context Protocol.
+[45:47] Donc il faut vraiment le voir comme une prise universelle.
+[45:49] C'est un peu comme si tu mettais un C'est un peu comme si tu avais un port USB euh sur ton sur ton outil, un port USB sur ton IA et tu mets un câble entre les deux.
+[45:56] C'est un format qui devient standard de Enfin, de plus en plus d'outils possèdent leur MCP nativement.
+[46:01] Tu peux également aller chercher des MCP développés d' par d'autres personnes ou si tu as les compétences ou si tu veux te servir de l'IA, tu peux développer ton propre MCP.
+[46:09] Et globalement, ça rend l'accès très simple.
+[46:11] Donc maintenant, on va détailler un peu plus les API.
+[46:12] Donc les API, comment expliquer ?
+[46:15] C'est une sorte de bibliothèque avec des actions euh avec plusieurs URL.
+[46:20] Euh chaque URL correspond à une action.
+[46:22] Donc tu peux par exemple, euh si j'utilise euh je sais pas euh admettons le l'API de de de Gmail, tu vas avoir une action qui va être de lister euh tous les derniers mails euh des X derniers jours.
+[46:35] Donc tu vas avoir une URL avec une variable qui va être le nombre de jours et tu vas entrer cette variable.
+[46:41] Et euh le en retour, tu vas avoir cette liste de mails avec des informations bien précises qui sont définies à l'avance.
+[46:47] Donc c'est assez technique.
+[46:49] Une fois que tu as compris le système, ça reste simple.
+[46:51] L'IA est tout à fait capable de t'accompagner là-dessus.
+[46:53] L'inconvénient des API, c'est que quand tu dois connaître la liste de toutes les routes.
+[46:56] Cela dit, à partir du moment où tu donnes la documentation à ton IA, tu peux Elle va elle va l'IA va maîtriser ses routes et euh va aller chercher la bonne info au bon moment.
+[47:04] Le MCP, c'est plus facile, tu as juste à le connecter.
+[47:06] L'inconvénient du MCP par rapport à l'API, c'est que tout est chargé à chaque fois.
+[47:12] Donc ça veut dire que ça va consommer plus de tokens.
+[47:14] Donc si jamais un jour tu te retrouves bloqué par l'usage de tes outils via ton IAOS, vaut mieux basculer sur de de l'API plutôt que du MCP.
+[47:23] Maintenant, le MCP est beaucoup plus simple à activer.
+[47:26] Il existe une 3e façon de se connecter qui est plus un peu plus avancée.
+[47:30] Je te la mentionne, je vais pas forcément rentrer dans le détail.
+[47:33] Je pense que vraiment tous ces sujets-là, ça mérite des vidéos bien dédiées.
+[47:35] Et ça dépend vraiment des outils.
+[47:37] Donc c'est là où dans mon club Smart, on va explorer chacune des chacun des cas.
+[47:41] Mais cette 3e connexion, c'est le CLI.
+[47:43] Le CLI, en fait, ça correspond aux lignes de commande.
+[47:45] Je t'ai montré tout à l'heure mon terminal.
+[47:46] Et pour le coup, c'est technique.
+[47:47] Euh ça s'ouvre un peu au grand public, on va dire.
+[47:49] Et ça permet de faire davantage de choses que euh le MCP, les API pour moins de tokens.
+[47:54] Donc retiens juste que ça existe, retiens les trois façons.
+[47:57] Dans tous les cas, moi je t'invite à euh à t'aider de l'IA pour connecter tes outils.
+[48:03] On va faire une démo maintenant très concrète où je vais connecter un outil qui s'appelle short.io qui permet en fait de de gérer des liens.
+[48:10] Donc je crée des liens courts, donc avec une URL propre.
+[48:13] Euh c'est c'est ça concerne mon club smart.
+[48:16] En général, je mets des liens soit d'affiliation, des liens euh vers des outils spécifiques et cetera et euh je vais avoir une URL où on voit club smart et on voit de quoi ça parle.
+[48:24] Donc là ici système YouTube IA.
+[48:26] OK.
+[48:27] Donc euh ça c'est pour l'utilisation de l'outil, l'intérêt tu peux avoir les clics sur ces liens.
+[48:32] Euh potentiellement des conversions.
+[48:34] Et ça peut prendre du temps quand tu quand tu dois aller là, que ajouter un lien, aller chercher le bon lien, imaginer un nouveau lien et vérifier qu'il est dispo et cetera.
+[48:42] Donc tout simplement, je vais chercher dans le menu ici intégration et API.
+[48:47] Je vais trouver toutes les méthodes qui permettent de créer euh de connecter cet outil là.
+[48:50] J'en ai deux qui m'intéressent, les API ici, le MCP.
+[48:53] Tu peux avoir accès à la documentation.
+[48:55] Donc là ça va t'expliquer, mais concrètement autant avant il fallait euh bah tu as lire tout ça, bien comprendre comment ça marche et cetera ou regarder les tutos.
+[49:03] Euh moi je faisais pas mal de tutos sur ces sur ce type d'outils.
+[49:07] On a ici euh toutes les fonctionnalités qui sont possibles avec euh ce MCP.
+[49:11] Donc créer des liens courts en personnalisant les titres et cetera, rechercher des liens existants, accéder aux analyses, ça je l'avais pas avec l'API.
+[49:19] Euh lien par clic et cetera.
+[49:20] Donc on testera ça quand on l'aura mis en place.
+[49:22] Et analyser les statistiques globales d'un domaine sur des périodes définies.
+[49:25] OK.
+[49:26] Ce qui me dit par contre ici, c'est que on ne peut pas supprimer euh ou modifier des liens existants.
+[49:33] Donc euh voilà.
+[49:34] On peut les lire, on peut les créer, on peut pas les supprimer ni les modifier.
+[49:38] Donc on connaît les règles du jeu.
+[49:40] Si jamais j'avais besoin de les supprimer, c'est là où tu dois aller chercher euh un autre serveur MCP qui va pas être celui officiel de short.io, mais je suis sûr que quelque part sur le web existe un MCP
+[49:50] et permet de le faire.
+[49:51] Maintenant en terme de sécurité, moi je te conseille déjà de commencer par les MCP officiels de de chacun de tes outils.
+[49:57] Donc, on a identifié ce qu'il fallait.
+[49:59] Moi, ce que je vais simplement faire j'ai j'ai ouvert le site pour te montrer, mais euh Claude ne le sait pas, il n'y a pas accès.
+[50:06] Et je vais lui dire tout simplement j'aimerais connecter un nouveau MCP à mon AIOS et ce MCP, c'est celui de short.io.
+[50:15] Est-ce que tu peux m'accompagner pour ?
+[50:20] Donc à nouveau, j'ai utilisé la voix, ça va beaucoup plus vite.
+[50:22] Là, il va chercher.
+[50:23] Ce qu'il va faire, c'est qu'il va aller lire la doc.
+[50:24] J'aurais pu euh j'aurais pu lui donner directement le lien.
+[50:29] Là, euh moi j'ai mis une doctrine en place qui lui dit "Va vérifier qu'un outil n'existe pas ou qu'il y a pas un doublon ou que ça va pas faire doublon par rapport au reste." Et si ça fait
+[50:39] doublon, il m'alerte.
+[50:40] Euh ça permet de garder une cohérence dans les outils que tu as et de pas trop surcharger ta les outils de ton AIOS.
+[50:46] Donc toi, finalement, la seule chose qui qui reste à bien comprendre, c'est la différence entre les API et le MCP.
+[50:51] Ça, je t'ai expliqué rapidement.
+[50:52] Tu peux aussi t'aider, demander conseil à l'IA et voir ce qui est le plus intéressant.
+[50:55] Ce qui reste à faire, c'est savoir aller chercher une clé API, la créer.
+[50:58] Donc en général, c'est très simple, hein.
+[50:59] Tu as euh souvent "Intégration et API" ou "API" dans les menus.
+[51:04] Je vais ici sur les API et je crée la clé.
+[51:07] Donc la clé, c'est un espèce de c'est un peu comme un mot de passe qui va me permettre d'accéder enfin de donner l'accès à mon outil à euh au LLM.
+[51:14] Donc là, il me dit que c'est connecté.
+[51:15] Donc tu vois, j'ai j'ai rien fait, j'ai juste demandé.
+[51:18] Donc je démarre une nouvelle version et je lui dis "On va tester." "Liste-moi les trois liens les plus cliqués euh sur mes short.io." Donc ça, c'est une fonctionnalité que j'avais pas avant avec uniquement l'API.
+[51:28] Je vais voir si ça m'apporte quelque chose.
+[51:31] Et euh j'ai toute une session de dashboard, je pourrais potentiellement les mettre de.
+[51:35] Donc, il me répond "Voici les trois liens les plus cliqués." Donc celui-ci, 3 minutes Claude project, donc tout ce c'est des ressources que je donne dans mes vidéos.
+[51:42] Donc on a vu comment euh tu peux connecter facilement des outils dans ton à ton IA iOS.
+[51:49] Là, contrairement pour au reste, je je vais pas te donner d'indication, je vais pas te dire faut que tu branches ceci, ceci, cela, c'est à toi de lister les différents outils que tu utilises au quotidien.
+[51:57] Et en fait finalement on a vu que le contexte c'était tes informations mais on les classait selon un ordre bien précis que je partage avec toi.
+[52:03] Là, c'est vraiment tes outils, c'est à toi de déterminer lequel vaut le plus le coup d'intégrer directement.
+[52:10] Alors honnêtement, tu peux très facilement commencer avec euh la lecture de tes mails, la lecture de ton calendrier.
+[52:16] Si tu produis, bah tu mets les les choses sur lesquelles tu produis.
+[52:19] Là, je peux pas forcément t'aider plus loin, c'est ce qu'on fait un peu dans le Close Smart.
+[52:23] Moi j'utilise Airtable sur certaines choses, peut-être que tu utilises Notion, euh peut-être que tu as Outlook, moi j'utilise Gmail.
+[52:29] Mais bon, globalement les les mécanismes, ça reste les mêmes.
+[52:33] Euh mais ces branchements, c'est à ta stack, c'est toi qui les fais.
+[52:37] L'important c'est que la liste des des outils que tu utilises doit être présente dans ton dans ton second cerveau et moi je peux te montrer rapidement.
+[52:46] Donc tu vois ici tu donc tu vois ici dans les ressources un fichier qui s'appelle outils dans lequel je liste tous les outils que j'utilise par fonction métier.
+[52:55] Euh donc par exemple, la newsletter, j'utilise Kit euh et j'ai des détails donc diffusion newsletter bi-mensuelle et cetera et cetera.
+[53:03] Donc ça ce sont pardon, ça ce sont des connecteurs Cloud, ici ce sont des serveurs MCP dédiés.
+[53:09] Les CLI.
+[53:11] Donc ce qui fait que le jour où je dois changer de LLM, le LLM, je vais devoir refaire les connexions mais le LLM est capable d'aller chercher tous ces MCP et de les réactiver de façon quasi automatique.
+[53:23] Ce que je t'invite quand même à faire quand tu branches tes outils, c'est vraiment regarder le scope, les capacités de cet outil-là et de la connexion que tu lui donnes.
+[53:30] Donc par exemple, il y a une notion qui est la notion de CRUD qui est très importante, c'est CRUD c'est create, read, update, delete.
+[53:39] Donc créer, lire, mettre à jour ou modifier et euh supprimer, il faut que tu saches exactement ce que te permet de faire l'outil.
+[53:47] Et quand tu es en mode lecture, c'est tranquille.
+[53:49] L'IA va lire tes mails, ton agenda, elle peut rien casser.
+[53:51] Par contre, à partir du moment où tu mets l'écriture, la modification ou la suppression, il faut euh faire très attention.
+[53:58] Tu veux pas que ton IA envoie un mail à un client, euh supprime une fiche sans que tu aies à valider.
+[54:03] Donc moi, ma règle elle est très très simple, c'est que tout ce qui est public, toute action qui va être publique et toute action qui va être destructive doit passer par ma validation.
+[54:14] Donc je Donc si l'IA, dans sa réflexion, arrive à un moment où il dit "Je vais supprimer telle information", il me demande la la validation.
+[54:22] Et il y a une chose qui est importante, c'est une règle anti-usine à gaz, c'est pas de doublon d'outils.
+[54:27] Donc euh c'est un peu un piège dans lequel tout le monde tombe, il y a énormément d'outils qui sortent euh régulièrement, on a toujours envie de tester un peu tout.
+[54:34] Euh mais en tout cas, il faut pas ajouter des outils pour ajouter des outils.
+[54:37] C'est pas parce que tu en as 100 que tu vas être plus efficace.
+[54:40] Moi, ma règle elle est simple, c'est que je n'ajoute plus l'as vu tout à l'heure en action, avant d'ajouter un outil, on va vérifier qu'il y a pas déjà un outil qui fait à peu près la même chose.
+[54:48] Je peux tester un nouvel outil, tu peux le faire aussi.
+[54:50] Euh tu te donnes X jours pour tester, comparer et cetera avant de l'intégrer dans ton IA.
+[54:56] Tu Tu peux le tester, mais à un moment, va falloir choisir entre les deux outils.
+[54:59] Autre étape importante, c'est quand tu as installé un outil, fais une petite vérification, comme je viens de le faire, pour t'assurer que tu arrives à accéder à tes données.
+[55:05] Donc là, je l'ai vu tout à l'heure, j'ai demandé des stats sur sur short.io qu'on venait de mettre en place.
+[55:11] Donc là, avec l'accès, si on fait une analogie, on vient de de créer un lien entre ton monde, tes outils et ton système IA.
+[55:17] Tu peux le faire de plusieurs façons, on l'a vu ça, tu branches ta Tu te branches ta stack à toi, tu mets les garde de de fou qui conviennent, tu n'empiles pas les outils juste pour le plaisir de
+[55:26] collectionner.
+[55:28] Je te conseille de le faire de façon incrémentale, tu commences par quelques outils, au fur à mesure, tu rajoutes.
+[55:33] Et euh une fois que tu as fait ça, ton IA sait qui tu es avec le contexte et elle voit ton monde.
+[55:39] Donc elle est capable d'accéder à tes outils.
+[55:41] Mais voir savoir ça suffit pas.
+[55:43] Ce qu'on veut, c'est qu'elle soit productive.
+[55:46] L'objectif, c'est qu'elle produise à ta place, à ta manière.
+[55:50] Et ça c'est le pilier l'un des piliers les plus excitants et les plus importants, c'est la production, le P de production et on y va maintenant.
+[55:58] Donc l'objectif de cette section, c'est vraiment de savoir comment l'IA va faire à ta place.
+[56:03] Et pas n'importe comment, faire à ta place mais à ta façon à chaque fois sans que tu réexpliques.
+[56:08] C'est pilier de la production et l'outil clé de tout ça, c'est ce qu'on appelle une skill.
+[56:13] Et je vais te montrer du concret parce que là moi ce que je suis en train de de d'enregistrer, je l'ai travaillé avec une skill.
+[56:19] J'ai demandé à l'IA de me créer un script de masterclass.
+[56:23] Donc j'ai beaucoup d'échanges, j'ai passé plus de deux jours à faire tout ça avec une skill mais concrètement il me met à chaque fois le voilà, il va me créer un script, il va me lier des concepts et
+[56:34] euh si je vais voir le script voilà, il me crée des hooks.
+[56:38] Donc je lui ai dit que un hook ça se construit de telle manière, je veux qu'on retrouve ça devant, je lui demande de réfléchir à ce qu'on va voir à l'écran et cetera et cetera.
+[56:48] Donc c'est une skill qui connaît ma structure de vidéo, mes règles, mon ton et globalement j'ai plus à lui réexpliquer, je lui dis juste "Viens, on va faire une vidéo sur ce sujet-là." et il m'accompagne et on échange
+[56:56] et on construit ça ensemble.
+[56:59] Un skill ou une skill, qu'est-ce que ?
+[57:00] Ça veut dire compétence en anglais, c'est une recette réutilisable que tu donnes à ton IA et ton IA va exécuter cette recette à la demande.
+[57:09] Et globalement comment ça se ?
+[57:10] Voici dans mon second cerveau la liste de mon fichier skills, la liste de tous les skills que j'utilise.
+[57:17] Alors je vois beaucoup passer de de posts euh sur LinkedIn qui t'offrent des catalogues de 100 skills, de 500 skills.
+[57:24] Pour moi ça sert à rien.
+[57:25] Ça me fait penser à au proverbe "Donne un poisson à un homme et tu le nourris un jour, apprends-lui à pêcher et tu le nourris tous les jours." Globalement, ça sert à rien de te donner une skill qui
+[57:34] n'est pas la tienne.
+[57:35] Il faut que ta skill corresponde à ce que toi tu fais, la façon dont tu le fais.
+[57:39] Il y a peut-être des petites exceptions, mais globalement, vaut mieux le les créer toi-même et c'est beaucoup plus intéressant.
+[57:45] Donc dans un skill, tu as non seulement les étapes comme ça, mais tu as également un texte qui va venir détailler euh la skill, quand quel est son objectif, comment tu l'utilises et cetera.
+[57:54] Donc ça permet à l'IA de comprendre le contexte et à partir des échanges que tu as avec lui, d'aller chercher le bon skill ou la bonne skill pour effectuer cette tâche.
+[58:03] Si tu fais une analogie par rapport à un cuisinier, si tu fais un prompt, tu vas demander à ton commis d'écrire de faire une tarte aux pommes.
+[58:09] Et donc il va te créer la tarte aux pommes, il va la faire de telle ou telle manière en fonction de ce que tu lui as dit.
+[58:15] Moins tu lui donnes d'infos, plus il va innover et la faire à sa façon.
+[58:19] Et s'il doit la refaire le lendemain, il va la faire de façon un peu différente.
+[58:23] Si tu utilises un skill, c'est comme si tu donnais à ce commis une recette vraiment très détaillée en disant "Pour ta tarte aux pommes, tu prends tant telle quantité de pommes, telle tant quantité de de pâte, de sucre,
+[58:35] de et cetera et tu fais, tu suis étape 1, étape 2, étape 3 et cetera." Et donc ta tarte aux pommes sera à chaque fois la même tous les jours euh même si tu changes de commis, il sera
+[58:46] capable de recréer cette tarte aux pommes.
+[58:49] Donc ça c'est la partie vraiment euh théorique.
+[58:51] Je vais te montrer maintenant en pratique euh je vais te montrer une skill que j'utilise.
+[58:56] Donc voilà euh mon skill.md pour le Gmail triage.
+[59:00] Donc c'est une euh une skill que j'utilise de façon régulière deux à trois fois par jour.
+[59:05] L'idée, c'est d'aller lire les mails et de venir les classer en fonction de différents critères.
+[59:09] Donc dans ton skill, tu vas retrouver une description ici "Trie l'inbox Gmail de Thomas en appliquant deux dimensions de label, priorité 1 à 5 et catégorie client, job, stats, newsletter et cetera.
+[59:19] Lance le pipeline en code manuel et cetera euh ou déclenche quand Thomas dit "Trie mes mails, trie Gmail, labellise mes mails" et cetera et cetera.
+[59:28] Donc là, je lui donne l'objectif.
+[59:32] Ça répète à nouveau mes priorités 1 égale action immédiate, 5 égale bruit, catégorie la nature du mail.
+[59:38] Et donc, ça se fait le matin et après le lunch, et cetera.
+[59:40] Mode opératoire.
+[59:42] Et donc, là par exemple, je vais Alors, il y a des déclencheurs, donc les mots que je vais pouvoir utiliser euh les routines cron, donc des C'est quelque chose que je mets sur GitHub qui va aller lire le
+[59:53] fichier Enfin, qui va aller déclencher déclencher l'utilisation de cette de cette skill, et cetera.
+[60:00] Et là, je lui donne par exemple, je mets grille de de priorité, P1 action immédiate, le sens c'est bloque quelqu'un ou une décision.
+[60:08] Euh s'il y a pas de réponse sur l'ordi, il y a des conséquences concrètes.
+[60:11] Donc, voilà comment je lui permets de définir une priorité 1, priorité 2 opportunité réelle ou échange en cours, à ne pas laisser pourrir 48-72h.
+[60:21] Et la fréquence, c'est rare, et cetera, et cetera.
+[60:23] Et de la même manière après, je lui donne d'autres règles qui permettent de d'identifier ces ces priorités.
+[60:30] Et ensuite, euh Enfin, je vais pas rentrer dans tous les détails, mais ici, j'ai une grille de catégorie.
+[60:35] Donc, c'est pour le 2e classement, donc des clients.
+[60:38] Euh job, alors ça, c'est c'est plus d'actualité, faudrait que je l'enlève.
+[60:40] Le stat, et cetera, et cetera.
+[60:43] Et donc, en parcourant tout ça, et ensuite en regardant mes emails, il y a c'est exactement quel label attribuer à quel à quel email.
+[60:49] Alors, pourquoi c'est ?
+[60:51] D'abord, euh tu vas capitaliser.
+[60:55] C'est-à-dire que un prompt, quand tu écris un prompt, même si tu passes du temps, et cetera, c'est jetable, c'est-à-dire que le lendemain, à moins d'avoir une bibliothèque de prompt, et de chercher, et cetera, mais euh c'est de la
+[61:04] valeur qui qui s'évapore.
+[61:06] Un skill, c'est de la valeur qui reste.
+[61:08] Tu paies l'effort une fois, tu dois le structurer, tu dois bien l'écrire, tu dois le travailler avec l'IA.
+[61:13] Je te montre pas l'écrire à la main, c'est ça se fait vraiment avec l'IA.
+[61:15] La la première skill qu'a Claude, c'est un skill creator.
+[61:18] C'est lui qui t'aide à bien structurer.
+[61:20] Et en fait, une fois que c'est fait, et ben tu en profites pendant des semaines, des mois, voire des années.
+[61:25] Et tu peux la faire évoluer au fur et à mesure en fonction des retours que tu vas donner à l'IA.
+[61:28] L'intérêt, c'est également que ça reste.
+[61:31] Donc, toi dans 6 mois, si tu dois revenir sur un process que tu n'as pas fait pendant quelques pendant ces 6 mois, tu retrouves tout ça.
+[61:39] Le savoir-faire, il est dans le fichier, il est pas dans ta tête.
+[61:41] Et ça marche avec toi, ça marche avec d'autres personnes.
+[61:43] Si quelqu'un demain doit par exemple doit venir m'aider à faire mon transcript, j'ai montré tout à l'heure, c'est un skill, il va pouvoir bénéficier de ce skill pour créer ce transcript ce script.
+[61:53] Et euh l'autre logique, c'est que un skill, ça peut appeler un outil, mais ça peut appeler un autre skill.
+[61:59] Donc par exemple, euh par exemple, je fais un tableau de bord, j'ai mon skill tableau de bord qui va appeler le skill euh synthèse des vues YouTube par exemple.
+[62:09] Donc si tu veux créer ta première skill, encore une fois, tu n'as pas à l'écrire à la main.
+[62:13] Ce que tu fais, c'est que commence par une tâche que tu fais une fois par semaine et tu l'expliques à l'IA.
+[62:17] Et tu demandes à ton IA de créer cette skill.
+[62:20] Et c'est là où l'utilisation de la voix devient très intéressante parce que clairement en utilisant le micro, tu vas pouvoir euh être beaucoup plus donner beaucoup plus d'informations que si tu tapes à la main.
+[62:30] Donc tu lui expliques, tu racontes comme si tu racontais à ben un collaborateur, un stagiaire, à euh un nouvel employé.
+[62:37] Tu lui expliques ce que tu fais, les étapes par étapes, et tu lui dis "Pose-moi toutes les questions euh dont tu as besoin pour écrire la skill." Et là, tu vas rentrer dans un jeu de d'échange de questions-réponses
+[62:48] et à la fin, IAva te proposer la skill.
+[62:50] Si tu veux, tu peux également euh utiliser ce prompt "Pose-moi les questions une par une, quand l'utiliser, quelles sont les étapes, quelles sont mes règles non ?" Une fois que tu as fait ça, que tu as une première
+[63:00] version de ta skill, l'idée, c'est de rentrer dans une boucle.
+[63:03] Donc en fait, à chaque fois que tu as utilisé ta skill, tu vas re tu vas récupérer un résultat.
+[63:08] Donc ce résultat, tu vas le relire avant de l'utiliser et potentiellement, tu vas avoir un retour à faire.
+[63:14] Donc tu vas dire "Ben, cette partie-là, elle est pas bonne parce que tac-tac-tac.
+[63:19] Et la règle, c'est de dire que la 3e fois que tu corriges la même chose, tu l'ajoutes dans le skill.
+[63:24] Tu fais une amélioration.
+[63:26] Et ce cette fonction-là, tu peux même la transformer en skill d'amélioration de skill.
+[63:31] Et l'IA va le faire de façon automatique.
+[63:33] Quand tu vas lui faire plusieurs retours, plusieurs fois sur le même sujet, automatiquement, elle va venir s'améliorer.
+[63:37] Et tu vois, ces skills, c'est typiquement ce qu'on va construire et ce qu'on va échanger entre nous dans le club Smart.
+[63:43] C'est les meilleures pratiques, des astuces pour les créer, du partage d'expérience, et cetera.
+[63:48] Euh, je t'en parle à la fin, mais on va continuer pour l'instant.
+[63:51] Donc, la production, au final, c'est le moment où ton IA arrête de te répondre et elle se met à faire à ta place.
+[63:58] Donc, on l'a vu, pour produire, il faut avoir des skills.
+[64:01] C'est tes règles métier, c'est tes compétences que tu transmets à l'IA au travers de fichiers qu'on appelle donc les skills.md.
+[64:07] Je te conseille à nouveau d'y aller étape par étape, créant une, créant une 2e, et cetera, fais-les évoluer.
+[64:12] Et là, là où on en est dans le système, on a fait vu le A, le C le A et le P de production.
+[64:18] La dernière étape, c'est l'entretien, et c'est là où ça devient magique, parce que dans l'entretien, il y a deux choses.
+[64:22] Il y a la la mise à jour de tout cet écosystème pour éviter que ça devienne une usine à gaz, pour la maintenir, mais également, quand cet entretien et ses évolutions se font automatiquement, et quand l'IA, finalement, va
+[64:34] travailler quand toi tu dors.
+[64:36] Donc, ça, c'est le E, l'entretien, le dernier la dernière lettre euh du framework CAPE.
+[64:42] Et on y va.
+[64:42] Donc, ce E, c'est entretien, on j'aurais pu dire évolution, c'est celui qui va tout transformer.
+[64:47] Euh, jusqu'ici, ton IA, elle sait faire des choses, tu lui as donné du contexte, tu lui as donné des accès à tes outils, tu lui as donné la façon de faire à ta façon.
+[64:57] L'entretien, c'est quand il se met à tourner tout seul.
+[65:00] Et pour ça, il y a deux piliers.
+[65:02] Le 1er pilier, c'est donc les IAOS qui travaillent à ta place.
+[65:06] Ça va être des tâches programmées.
+[65:07] Je vais prendre un exemple, c'est celui que j'ai que j'ai mentionné juste avant, c'est euh le classement des emails.
+[65:13] Donc, ce que j'ai envie de voir moi le matin, je peux je peux te montrer rapidement.
+[65:16] Donc là, je rentre tout tout juste de vacances, donc c'est un peu chargé, mais euh je vais voir par exemple ici les clients.
+[65:21] J'ai euh j'ai toutes ces informations là avec ici des priorités, priorité 1, priorité 2, euh 3 et cetera.
+[65:29] Donc ça, je veux que ça se fasse automatiquement et j'ai pas à lui demander à l'IA de venir me le classer, mais je veux qu'il me le fasse le matin, en fin de matinée, en fin de journée.
+[65:37] J'ai également d'autres routines par exemple qui récupèrent des des stats toutes les semaines, euh tous les mois, qui créent des tableaux de bord.
+[65:42] Donc comment on va créer euh une ?
+[65:45] C'est simple.
+[65:46] En fait, tu vas écrire le prompt complet de ce que tu veux ou alors tu vas définir une skill, tu vas donner euh la fréquence à laquelle tu veux avoir euh ces informations où où tu veux faire tourner
+[65:56] cette skill.
+[65:58] Donc c'est ça qui est un peu magique dans dans tout ce système-là, c'est que aujourd'hui, c'est plus toi qui va programmer euh ton IA, tu vas simplement lui demander de faire quelque chose.
+[66:08] Donc on a maintenant créé un accès à l'outil short.io qui va te permettre d'aller créer des liens courts, de voir les stats externes.
+[66:15] Donc moi ce que j'aimerais, c'est récupérer des stats pour alimenter mon tableau de bord, en tout cas me faire une alerte où je reçois les 10 meilleurs liens euh chaque semaine.
+[66:24] Donc je vais parler à Claude.
+[66:25] Claude, peux-tu me créer une tâche récurrente dans laquelle euh tu vas aller chercher les 10 meilleurs liens que j'ai sur short.io et euh pendant la au cours de la semaine écoulée et me les envoyer par email.
+[66:35] Je veux recevoir cette alerte le lundi matin à 8h.
+[66:40] Donc encore une fois, la voix, ça va 10 fois plus vite qu'écrire au clavier.
+[66:43] Et ça te permet euh de réfléchir au fur et à mesure à toutes les infos que tu pourrais ne pas avoir données.
+[66:47] Donc sa réponse, on va construire proprement de A à Z, je pars sur un cron GitHub action.
+[66:51] Donc dans ce cas précis, dans mon cas, euh Claude va utiliser un cron GitHub.
+[66:56] Euh on en parle juste après, c'est la plateforme qui te permet de sauvegarder ton vault, donc sauvegarder ton second serveur et avoir toujours une copie.
+[67:03] Et ça te permet en août de faire ça, de faire des des des tâches programmées.
+[67:06] Il aurait pu le faire directement sur Claude, mais c'est moins cher pour moi en token de le de passer par Cron.
+[67:11] Donc, tu n'es pas obligé d'avoir GitHub, tu peux les demander directement.
+[67:15] De toute façon, l'IA c'est ça qui est fabuleux aujourd'hui, c'est que l'IA va t'orienter et va te donner les contraintes et les les intérêts à faire avec telle ou telle méthode.
+[67:23] Le tout quand tu crées une automatisation comme celle-là, c'est de bien anticiper les risques, bien identifier les actions qui sont faites et à quel point elles peuvent être risquées pour toi, pour tes clients, pour ton business.
+[67:32] Donc là, Claude me dit que ça s'est bien terminé.
+[67:34] Donc on le voit maintenant on voit toutes les étapes qu'il fait pour créer cette cette automatisation.
+[67:38] Là, run vert, je confirme que l'étape d'envoi bien réussi.
+[67:41] Donc le mail a été envoyé.
+[67:42] Donc maintenant, je vais vérifier dans mes mails.
+[67:44] Voilà, je viens de recevoir ça, top 5 shortlinks des derniers jours.
+[67:48] Alors, je pense que voilà, en fait, ils m'en mettent que 5 parce que ici, j'en ai que 4 finalement qui ont des des clics.
+[67:54] Mais c'est exactement ce que je lui ai demandé.
+[67:56] Donc maintenant, à partir d'aujourd'hui, je vais recevoir tous les lundis ça, le la liste des liens qui ont été cliqués parmi tout ce que je partage sur YouTube, TikTok et cetera.
+[68:05] Je sais ce qui est cliqué, ce qui est pas cliqué.
+[68:07] J'en ai pas mal d'autres qui tournent en cours, j'ai je reçois mes stats YouTube toutes les semaines, tous les mois.
+[68:11] J'ai un triage de mails qui se fait plusieurs fois par jour, ce qui me permet d'avoir une boîte propre et bien organisée.
+[68:18] Idem pour mes dossiers en locaux.
+[68:20] On en vient donc au deuxième pilier du E de CAP, du framework CAP.
+[68:25] Donc E de entretien.
+[68:26] Donc on vient de le voir, les tâches programmées font tourner ton IAOS, permettent de te faire tourner ton IAOS même quand tu n'es pas là.
+[68:31] Mais qu'est-ce qui fait qu'il devient meilleur dans le ?
+[68:33] Ça c'est le deuxième pilier du E de la partie entretien et c'est peut-être le plus important.
+[68:37] L'objectif, c'est de faire un audit de ton système et toutes les semaines, tu prends 10, 20 minutes pour échanger avec l'IA sur euh sur un espèce d'audit interne.
+[68:49] Donc, qu'est-ce que j'ai utilisé cette ?
+[68:52] Qu'est-ce qui a foiré et que j'ai dû ?
+[68:54] Qu'est-ce qui me manque et que j'ai dû faire à la ?
+[68:57] Qu'est-ce qui est devenu inutile et qui est donc ?
+[69:00] Et ensuite, identifier la prochaine évolution la prochaine amélioration de ton système qui est celle qui est le plus rentable.
+[69:08] Si tu ne fais pas ça, ton ton EOS va se dégrader.
+[69:11] Les fichiers vont s'accumuler, tu as des skills qui vont devenir obsolètes.
+[69:15] Et si tu fais ça, c'est l'inverse.
+[69:16] Au bout de 3 mois, il est radicalement meilleur.
+[69:19] Au bout d'un an, il est carrément devenu irremplaçable.
+[69:21] Et c'est comme ça que ton EOS va rester au cœur de ton actif.
+[69:25] En fait, c'est c'est un peu ton anti-usine à gaz.
+[69:27] Tout système qui va grossir sans qu'on taille dedans finit en bordel.
+[69:32] C'est des skills que tu vas plus utiliser.
+[69:34] C'est des fichiers morts un peu partout, des fichiers sans lien.
+[69:36] L'audit, c'est un peu comme un sécateur.
+[69:38] En fait, tu vas couper ce qui ce dont tu sers plus.
+[69:41] Tu Soit tu le supprimes, soit tu l'archives tout simplement.
+[69:44] L'idée, c'est de de garder un EOS qui soit léger et vivant.
+[69:47] Le plus beau dans tout ça, c'est que tu peux même automatiser ton audit.
+[69:52] Tu fais une skill audit tête d'eau qui va te poser les cinq questions dont on a parlé juste avant et qui va même pré-remplir les questions avec ce que elle a remarqué.
+[70:00] Donc toi, tu viens juste ajouter, tu viens valider ce qu'elle a mis en avant comme retour et tu viens ajouter ce que toi tu as vu qu'elle n'a pas forcément Donc tu arrives le dimanche soir par exemple, si
+[70:10] tu veux faire ça le dimanche soir et ben ton analyse est déjà mâchée, tu as plus qu'à valider.
+[70:13] Et honnêtement, ça c'est la skill la plus rentable que tu vas créer.
+[70:16] Je peux te mettre une skill en ressource.
+[70:19] Ce sera personnalisé avec ton propre cas.
+[70:21] Là, on va parler d'un dernier réflexe et franchement, il est con, c'est la sauvegarde de ton système.
+[70:26] On l'a vu, le le gros intérêt de ce système, c'est son indépendance.
+[70:30] c'est que ce sont simplement des fichiers texte qui tournent sur ton ordinateur.
+[70:34] Problème, ton ordinateur tombe à l'eau, tu te le fais voler, tu perds tout.
+[70:38] Donc, l'objectif, c'est de faire une sauvegarde de tout ça.
+[70:41] Moi, au début, je le faisais sur Google Drive.
+[70:43] Honnêtement, c'était un peu lourd à synchroniser et ça fonctionnait pas très bien.
+[70:47] Moi, je te propose de le mettre sur GitHub.
+[70:49] Alors, GitHub, c'est un c'est un outil de développeur qui va aller chercher tes fichiers sur VS Code et qui va permettre de synchroniser.
+[70:55] Avec GitHub, si tu travailles plusieurs, tu peux avoir les versions.
+[70:57] bref, il y a plein d'options.
+[70:58] Là, on utilise vraiment de façon très simple, on va l'utiliser en mode sauvegarde.
+[71:01] Et l'intérêt dans tout ça, c'est aussi que si un jour tu veux changer de machine, si tu veux te connecter ailleurs, tu n'as plus qu'à télécharger ton GitHub, c'est du texte, ça va aller très vite, et tu peux
+[71:09] travailler sur ce nouvel ordinateur.
+[71:11] Donc, je te montre simplement, là j'ai pris un on voit un autre compte que celui que j'utilise actuellement.
+[71:17] Je vais créer, donc tu vois, je clique sur sign up, je vais utiliser mon compte Gmail ici pour créer ce compte-là.
+[71:24] Il faut te donner un username, donc je l'ai ici.
+[71:27] Alors, ma région, c'est pas le Mexique, moi je suis au Canada.
+[71:31] Et je crée le compte.
+[71:33] Et là, tout simplement, tu vas ici créer un repository.
+[71:36] Donc là, on va mettre ici AIOS, tu le mets en privé et tu crées le repo.
+[71:41] Et là, tu prends cette URL que tu vois ici et tu vas tout simplement demander à ton à ton AIOS de venir sauvegarder ton dossier.
+[71:49] Donc, là je vais expliquer à Claude, je suis en train de faire une démo, j'ai créé un nouveau compte GitHub et j'aimerais j'aimerais en fait pousser mon second cerveau dessus.
+[71:59] Voici l'URL du dossier.
+[72:01] Je lui colle l'adresse GitHub et je lui envoie.
+[72:02] Donc là, il me dit qu'il va inspecter le le repo.
+[72:04] Il fait quelques vérifications de sécurité pour être sûr que je ne pousse pas de choses sensibles.
+[72:09] Donc, Claude m'a donné une commande pour aller dans le bon reposi dans le bon dossier sur mon ordinateur et l'envoyer sur GitHub.
+[72:14] Donc, je suis sur le terminal, Claude m'a donné une ligne de commande que je j'ai juste à coller ici.
+[72:20] Donc, CD, ça ça va chercher mon dossier AIOS et ensuite ça va le pousser vers le bon repo, donc le bon dossier sur GitHub.
+[72:28] Voilà, il est en train de le faire.
+[72:31] il est déjà là à 40 % euh voilà, bah ça y est, il est à 100 %.
+[72:35] J'ai Donc maintenant, on va voir ici sur mon dossier et j'ai je retrouve donc dans le dossier je retrouve sur GitHub tout ce que j'ai mis.
+[72:46] Je peux le voir ici.
+[72:47] Donc ça y est, mon ma sauvegarde est faite et et je vois je vais pouvoir demander ensuite à Claude de pousser régulièrement euh toutes les modifications que je fais via VS Code, c'est l'intérêt de VS Code, ça va
+[72:59] se faire quasiment automatiquement.
+[73:00] Et comme ça mon repo sera toujours euh à jour sur GitHub.
+[73:03] Donc le E de l'entretien ou évolution, ce sont les deux dernières marches, c'est un système qui travaille pour toi même quand tu n'es pas connecté en automatisant.
+[73:11] Et c'est un système qui euh qui s'auto-améliore et qui est maintenu grâce à l'automatisation.
+[73:18] Donc maintenant, si tu as suivi toutes les étapes que je viens de faire, tu as déjà ton AIOS.
+[73:21] GitHub, vraiment c'est optionnel, fais-le dans quelques temps quand tu auras pas mal de matière.
+[73:25] Donc tout à l'heure, je t'ai dit que mon AIOS devait être indépendant du modèle utilisé.
+[73:29] Donc je te je je t'ai fait toute la démo avec Claude.
+[73:31] Là, je suis sur Antigravity, c'est l'équivalent de VS Code mais euh fait par Google et Gemini, il est directement installé.
+[73:39] Ce que je fais ici, c'est que je vais aller chercher mon euh le dossier de mon second cerveau.
+[73:44] Et là, je vais lui dire prends connaissance du fichier Claude.md.
+[73:51] Si je devais faire une vraie migration, je devrais créer un autre fichier que Claude.md euh qui correspond au standard de Gemini.
+[73:58] Donc un fichier que Gemini va aller chercher à chaque à chaque ouverture.
+[74:02] Et euh voilà, il a pris connaissance du fichier Claude.md ainsi que des documents de pilotage associés.
+[74:06] Donc ça y est, il a lu les tout ce qu'on avait en tout début de master class, il a lu les premiers fichiers, donc Claude.md, la doctrine, les conventions et il est même allé voir les skills.
+[74:16] Donc je vais lui dire par exemple fais-moi un état des lieux euh de mon projet LinkedIn.
+[74:21] Donc il me répond "Voici un état des lieux euh donc j'ai bien analysé les éléments du vault relatifs à ton projet LinkedIn.
+[74:27] Euh tac tac tac", il me dit ce qu'il a regardé euh l'opportunité, LinkedIn est la deuxième source de citation pour les LLM.
+[74:32] Euh voilà, donc il explique un peu les les chantiers que j'ai identifiés et le plan de démarrage priorisé, un article, une série et cetera.
+[74:39] Donc tu vois, on part directement dans le dur, l'agent connaît ce que j'ai en tête, connaît mes dossiers et je peux continuer avec un nouvel agent.
+[74:46] Donc, récapitulons CAP.
+[74:49] Un AIOS c'est quatre piliers.
+[74:51] Le contexte, ton IA c'est qui tu es avec les trois fichiers principaux et ta structure de dossier.
+[74:57] Ensuite, il y a le A de accès.
+[74:59] L'IA voit ton monde, voit tes outils et tes données.
+[75:03] Ensuite, il y a le P de la production.
+[75:05] L'IA c'est produire L'IA c'est faire le travail à ta manière.
+[75:10] Ensuite, il y a l'entretien évolution.
+[75:12] Elle tourne sans toi et elle s'améliore toute seule.
+[75:15] Donc, contexte, accès, production, entretien, c'est le framework CAP.
+[75:19] Rien qu'en démarrant ce système-là, tu vas vraiment passer de quelqu'un qui pose des questions à l'IA régulièrement à quelqu'un qui a un système d'IA qui travaille pour lui.
+[75:27] Tu verras, c'est un autre niveau de productivité et tu n'as pas besoin d'être développeur pour y arriver.
+[75:32] Alors, par où tu peux ?
+[75:35] Surtout, tu ne dois pas commencer par tout.
+[75:37] En fait, tu vas juste commencer par créer un dossier un dossier qui sera le contenant de tout ton second cerveau.
+[75:41] Donc, moi je l'ai appelé AIOS.
+[75:43] Au début, je l'avais appelé Volt de Thomas et cetera.
+[75:45] C'est j'ai eu plusieurs versions.
+[75:47] Mais tu lui donnes un nom qui te parle.
+[75:48] Tu peux l'appeler Alfred si tu es fan de Batman ou ou quoi que ce soit.
+[75:51] Et dedans, tu peux utiliser une skill que je vais mettre dans les ressources pour monter ta structure IPCC.
+[75:56] Donc, tu télécharges le skill, tu le copies tel quel euh ou tu la télécharges dans ton ton cloud et le cloud va te recréer toute l'arborescence en quelques secondes.
+[76:05] Tu auras ensuite une deuxième skill qui va te permettre d'écrire le cloud.md qui va avoir des une une bonne euh structure de base euh pour les autres fichiers comme la convention.
+[76:13] Et ensuite, là tu commences à échanger.
+[76:15] À chaque fois que tu dois faire quelque chose, tu tu travailles avec ce système-là et petit à petit, tu lui apprends des nouveaux skills et ou si tu en as déjà, tu peux tout simplement les intégrer dedans.
+[76:23] Faire lui demander de l'intégrer dedans.
+[76:25] Et en fait, tu fais ça chaque semaine et au fur et à mesure, à chaque fois tu rajoutes une couche.
+[76:28] Et faut bien garder ça en tête, le AIOS, c'est pas un truc que tu construis d'un seul coup et qu'ensuite tu ranges dans un coin.
+[76:33] Non, c'est un système qui va vivre qui va grandir avec toi.
+[76:37] Tu vas voir, il faut le nourrir.
+[76:39] En fait, plus tu Plus tu plus il sera efficace.
+[76:42] Et surtout, n'oublie pas les 15 minutes d'audit quotidiennes, c'est vraiment ça qui va changer tout et qui va le rendre meilleur.
+[76:48] Alors, j'ai dit quotidiennes, c'est c'est hebdomadaire.
+[76:51] Dans les premiers temps, je te je je te conseille même de le faire tous les mois.
+[76:55] Tu auras le à partir du moment où tu auras déjà bien utilisé le système et que il y aura le les fichiers qui grandiront, c'est là qu'il faut faire un audit.
+[77:02] Alors maintenant, la vraie question, c'est est-ce que tu vas le ?
+[77:05] Parce que regarder, c'est bien, construire, c'est autre chose.
+[77:09] C'est un système qui est quand même complexe.
+[77:11] Pas besoin d'être développeur, mais il faut bien être concentré, il faut suivre des étapes.
+[77:15] Et en fait, c'est exactement pour ça, pour ce système que j'ai créé le club Smart.
+[77:19] Tout ce que je t'ai montré aujourd'hui, que ce soit le framework, les fichiers, les skills, les automatisations, c'est ce qu'on se construit ensemble en vrai dans la communauté.
+[77:27] Donc, l'objectif, c'est vraiment de s'aider, de s'accompagner.
+[77:30] Tu viens avec ton besoin, si tu expliques là où tu es bloqué et et d'autres vont venir t'aider ou moi pour améliorer les choses.
+[77:36] Donc, n'hésite pas, le lien est en description.
+[77:38] J'espère t'y retrouver.
+[77:39] J'espère qu'on construira ton système ensemble.
+[77:41] Et surtout, ben j'espère que cette masterclass t'a plu.
+[77:44] Si c'est le cas, mets un petit like, un petit commentaire, abonne-toi à la chaîne, ça récompense le travail.
+[77:48] J'ai passé vraiment pas mal de temps dessus.
+[77:50] Ce sera vraiment apprécié.
+[77:51] Je te dis merci et à la prochaine.

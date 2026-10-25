@@ -4,7 +4,7 @@ resume: On construit le système Youtube + Skool + IA qui t'amènerea à la libe
 statut: publie
 domaine: contenu
 cree: 2026-02-07
-maj: 2026-10-22
+maj: 2026-10-25
 liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md, tutoriel-notebook-lm-en-francais-decouvre-le-meilleur-outil-26-01.md, airtable-make-claude-le-workflow-secret-des-createurs-26-02.md]
 ---
 # Le système YouTube + IA qui crée du contenu à la chaîne
@@ -18,11 +18,11 @@ liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, claude-tutoriel-co
 
 ## Stats
 
-YouTube Analytics, données jusqu'au 2026-10-20. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
+YouTube Analytics, données jusqu'au 2026-10-22. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
 
 | | 7 premiers jours | 30 premiers jours | Depuis la sortie |
 |---|---|---|---|
-| Vues | 113 | 172 | 351 |
+| Vues | 113 | 172 | 352 |
 | Vues engagées | 113 | 172 | 346 |
 | Heures regardées | 4,0 | 7,8 | 19,3 |
 | Abonnés gagnés | 2 | 3 | 7 |
@@ -32,11 +32,11 @@ YouTube Analytics, données jusqu'au 2026-10-20. Revenus estimés en dollars US.
 
 ## Liens
 
-- Cite : [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
-- Cite : [2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
-- Cite : [2026-01-15-tutoriel-notebook-lm-en-francais-decouvre-le-meilleur-outil](tutoriel-notebook-lm-en-francais-decouvre-le-meilleur-outil-26-01.md)
-- Cite : [2026-02-17-airtable-make-claude-le-workflow-secret-des-createurs](airtable-make-claude-le-workflow-secret-des-createurs-26-02.md)
-- Citée par : [2026-02-17-airtable-make-claude-le-workflow-secret-des-createurs](airtable-make-claude-le-workflow-secret-des-createurs-26-02.md)
+- Cite : [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
+- Cite : [claude-tutoriel-complet-pour-passer-de-debutant-a-26-05](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
+- Cite : [tutoriel-notebook-lm-en-francais-decouvre-le-meilleur-outil-26-01](tutoriel-notebook-lm-en-francais-decouvre-le-meilleur-outil-26-01.md)
+- Cite : [airtable-make-claude-le-workflow-secret-des-createurs-26-02](airtable-make-claude-le-workflow-secret-des-createurs-26-02.md)
+- Citée par : [airtable-make-claude-le-workflow-secret-des-createurs-26-02](airtable-make-claude-le-workflow-secret-des-createurs-26-02.md)
 - Description : https://clubsmart.s.gy/masterclass-aios-catalogue
 - Description : https://clubsmart.s.gy/tuto-claude-catalogue
 - Description : https://www.skool.com/mon-plan-v

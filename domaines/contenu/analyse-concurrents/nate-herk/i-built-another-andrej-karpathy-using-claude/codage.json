@@ -1,0 +1,164 @@
+{
+  "video_id": "bvGptCLDhyo",
+  "chaine": "nate-herk",
+  "titre": "I Built Another Andrej Karpathy Using Claude",
+  "codeur": "agent nate-herk",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "tuto",
+    "format_secondaire": "cas",
+    "sujet": "Transformer 700 000 mots de Karpathy en agent Claude Code qui enseigne comme lui : collecte, wiki LLM, 7 règles sourcées, sous-agent et skill, garde-fou d'exécution",
+    "outils": ["Claude Code", "yt-dlp", "YouTube Transcript API", "twitterapi.io", "Obsidian", "LLM wiki (gist de Karpathy)", "sous-agent", "skill", "hook"],
+    "niveau": "intermediaire",
+    "objectif_probable": "vues"
+  },
+  "titre": {
+    "attente_au_clic": "Voir le faux Andrej Karpathy que Nate a fabriqué avec Claude, et ce qu'il sait faire.",
+    "schema": "I Built Another <Personne célèbre> Using <Outil>",
+    "promesse": "Avoir son propre Karpathy, un expert de l'IA à portée de main",
+    "audace": "audacieux",
+    "registre": "mixte",
+    "briques": ["audace", "resultat"],
+    "marqueurs": [],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "sourires, bras dessus bras dessous",
+    "regard": "camera",
+    "texte": "HE'S NOT REAL",
+    "texte_mots": 3,
+    "repete_titre": "non",
+    "elements": ["texte « HE'S NOT REAL » avec le logo Claude à la place du O", "Nate et un sosie de Karpathy côte à côte", "flèche rouge"],
+    "nb_elements": 3,
+    "fond": "bureau sombre, étagères de livres, lumière chaude",
+    "couleurs": ["brun sombre", "blanc", "orange", "bleu clair", "rouge"],
+    "curiosity_gap": "nouveaute",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "So, this isn't the Claude that you know.",
+    "premiere_phrase_reprend_titre": "non",
+    "premier_plan": "Nate face caméra, une capture de graphe Obsidian (nuage de points) en vignette en haut à gauche",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": ["hook-fait", "pont"],
+    "preuve": {
+      "type": "autorite",
+      "seconde": 3,
+      "description": "Karpathy présenté : cofondateur d'OpenAI, chez Anthropic, « explains AI better than anyone alive »"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 4, "a_l_ecran": true},
+    "boucle_vers_la_fin": {
+      "presente": false,
+      "citation": "",
+      "seconde_resolution": null,
+      "tenue": null
+    },
+    "seconde_premier_point": 17,
+    "attente_tenue": "partiel",
+    "attente_note": "La miniature montre un faux Karpathy en chair et en os ; la vidéo dit à 0:41 « not a voice clone [...] not an impression » : l'agent est textuel. Les 4 étapes et les tests sont tenus."
+  },
+  "structure": {
+    "modele": "pas-a-pas",
+    "segments": [
+      {"debut": 0, "fin": 17, "titre": "Karpathy's brain", "role": "intro", "pull": true, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 17, "fin": 67, "titre": "Who is he? et ce qu'on construit", "role": "point", "pull": false, "paint": false, "point": true, "nom": true, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 67, "fin": 148, "titre": "Why bother?", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 148, "fin": 163, "titre": "Kit AI OS gratuit", "role": "cta", "pull": true, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 163, "fin": 230, "titre": "Étape 1. 700K words", "role": "point", "pull": true, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 230, "fin": 337, "titre": "Étape 2. His own wiki", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 337, "fin": 402, "titre": "Étape 3. 7 rules", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 402, "fin": 458, "titre": "Mini Karpathy : sous-agent et skill", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 458, "fin": 528, "titre": "Étape 4. Run it first : le hook et le test du tokenizer", "role": "demo", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 528, "fin": 610, "titre": "Would it ship? : la revue et l'ingestion", "role": "demo", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 610, "fin": 645, "titre": "Récap des 4 étapes et citation finale", "role": "fin", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 69, "type": "question-spectateur", "citation": "So, now I bet you guys are wondering, why would you actually build this?"},
+      {"seconde": 163, "type": "annonce-suite", "citation": "there are going to be six prompts to run here, and I'll show all of them on screen"},
+      {"seconde": 269, "type": "rupture", "citation": "We're storing Karpathy's brain inside of Karpathy's own LLM wiki memory system."},
+      {"seconde": 337, "type": "annonce-suite", "citation": "this next step is what makes it think like him instead of just knowing what he said"},
+      {"seconde": 498, "type": "annonce-suite", "citation": "And watch what it does here."},
+      {"seconde": 528, "type": "annonce-suite", "citation": "Now, another thing you can test is its review."}
+    ],
+    "histoires": [
+      {"seconde": 86, "acte": "client-autre", "resume": "Karpathy a voulu que Claude Code lui apprenne en codant ; selon lui, ça n'a pas marché du tout"},
+      {"seconde": 192, "acte": "anecdote", "resume": "La collecte : 45 minutes à une heure d'agents en parallèle, et environ un dollar pour tous ses posts X depuis 2023"},
+      {"seconde": 538, "acte": "anecdote", "resume": "Un script de commentaires YouTube qui marchait chez Claude plante sur un emoji dans un terminal Windows"}
+    ],
+    "payoffs": [
+      {"seconde": 223, "resume": "Un dossier brut de plus de 700 000 mots de Karpathy"},
+      {"seconde": 289, "resume": "Le wiki dans Obsidian : pages reliées, chaque règle liée à sa source"},
+      {"seconde": 351, "resume": "Les sept règles, chacune avec sa citation et sa source"},
+      {"seconde": 498, "resume": "L'agent enseigne un tokenizer pas à pas : prédire, exécuter, montrer la version cassée"},
+      {"seconde": 540, "resume": "La revue prédit le plantage sur un emoji, le provoque, puis allège le script"},
+      {"seconde": 575, "resume": "/karpathy-ingest ajoute un post et fait passer une règle de candidate à confirmée"}
+    ],
+    "premier_payoff_seconde": 223,
+    "jargon": 2,
+    "repetitions": 1,
+    "test_du_tweet": "Nate transforme 700 000 mots de Karpathy en agent Claude Code qui enseigne comme lui : collecte en parallèle, wiki LLM dans Obsidian, 7 règles sourcées, sous-agent et skill, un hook qui force à exécuter le code. Testé sur un tokenizer et une revue de script. Valable pour tout expert."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine, plein cadre", "decor": "bureau, étagères, néon AIS, micro sur bras"},
+    "parts": {"face": 40, "ecran": 27, "motion": 29, "broll": 4},
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["plan-a-l-ecran", "etiquettes", "bandeau-nom", "curseur-surligne", "chiffres-animes"],
+    "charte": "Fond noir et vert sapin, cartes vert d'eau numérotées (#1 à #7, « 01 Prompt »), texte blanc, surlignage jaune et orange sur les articles. La miniature, brune et chaude avec « HE'S NOT REAL », ne la reprend pas.",
+    "rythme": "regulier",
+    "notes": "Chaque prompt est affiché en carte lisible, « take a screenshot » ; la biographie de Karpathy passe par des articles de presse surlignés. Le faux Karpathy de la miniature n'apparaît jamais."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 148, "type": "lead-magnet", "cible": "kit AI OS gratuit", "amene_par": "transition", "citation": "I've got this completely free AI OS kit for you guys"},
+      {"seconde": 263, "type": "autre", "cible": "le gist du LLM wiki, dit en description mais absent de la description", "amene_par": "pendant-demo", "citation": "The link to the gist is in the description of this video."},
+      {"seconde": 636, "type": "like-commentaire", "cible": "liker la vidéo", "amene_par": "fin", "citation": "please give it a like. It definitely helps me out a ton."}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"lead-magnet": 2, "communaute-gratuite": 1, "affiliation": 2, "reseaux": 3},
+    "commentaire_epingle": {"texte": "Modèle AI OS gratuit et Glaido offert un mois", "type": "lead-magnet"},
+    "recap_final": true,
+    "derniere_phrase": "and I'll see you on the next one. Thanks, everyone.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["l'envie de le refaire avec Hormozi ou avec Nate lui-même", "des fans qui ont déjà une base de connaissance de Nate", "la peur d'un gadget qui alourdit et biaise Claude", "les ressources introuvables"],
+    "demandes": ["un repo GitHub tout fait (Hormozi)", "où ranger le wiki : dans le second cerveau ou à part", "où est le lien du gist", "où est l'étape du skill /karpathy-ingest"],
+    "critiques": ["six prompts annoncés, cinq montrés", "les ressources absentes du tableau de la communauté", "à quoi ça sert concrètement", "le coût en usage"],
+    "reprises": ["0:42 (« not a voice clone ») relevé en riant", "« Claude maxxing »"],
+    "signal_promesse": "mixte"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "0:01 « I just turned one of the biggest minds in AI into a Claude agent » reprend le titre ; 1er plan = Nate, sans le sosie de la miniature"},
+    "ap_boucle_curiosite": {"note": 1, "preuve": "0:52 les sept règles annoncées, détaillées à 5:37 ; pas de vraie question gardée"},
+    "ap_effort_montre": {"note": 0, "preuve": "Rien dans l'intro ; 700 000 mots et 45 minutes de collecte n'arrivent qu'à 3:39"},
+    "ap_setup_progress_payoff": {"note": 2, "preuve": "But posé (cloner sa façon de penser), quatre étapes qui montent, puis deux tests réels (8:06 et 8:47)"},
+    "ap_contraste_rythme": {"note": 1, "preuve": "De 12 à 24 changements de plan par minute, vif partout, sans passage nettement plus lent"},
+    "ap_montrer_sans_son": {"note": 1, "preuve": "Portraits et titres de Karpathy lisibles (OpenAI Co-founder, AI's Best Explainer) ; l'idée d'agent n'apparaît qu'à 0:56 (« Agent Karpathy »)"},
+    "ali_douleur_histoire": {"note": 1, "preuve": "1:11 Claude explique trop, invente, on n'apprend rien ; l'histoire est celle de Karpathy, pas de Nate"},
+    "ali_coeur_unique": {"note": 2, "preuve": "10:21 « you can outsource your thinking, but you cannot outsource your understanding »"},
+    "alx_pont": {"note": 1, "preuve": "Autorité, contexte et plan en 4 étapes, mais ouvert par une accroche (« this isn't the Claude that you know »)"},
+    "alx_pull_paint_point": {"note": 2, "preuve": "Chaque étape dit pourquoi (mots en vrac, aiguille dans une botte de foin), montre et donne l'action"},
+    "alx_nom_idee": {"note": 2, "preuve": "Sept règles nommées et numérotées à l'écran (« Build it or you don't understand it »...), run gate, LLM wiki, Mini Karpathy"},
+    "alx_phrase_finale": {"note": 1, "preuve": "1:42 « sounding right instead of being right » ; 10:21 la citation de Karpathy ; les étapes finissent sans formule"},
+    "alx_douleur_reve": {"note": 1, "preuve": "Avoir « another Karpathy » parle d'un désir, mais Claude porte aussi le titre"},
+    "alx_cta_tot": {"note": 2, "preuve": "2:28 le kit AI OS, relié au sujet (« combine this sort of setup with things like Karpathy's brain »)"},
+    "ed_intro_courte": {"note": 2, "preuve": "17 secondes : accroche, autorité, promesse des 4 étapes, puis le 1er point"},
+    "ed_hook": {"note": 1, "preuve": "0:00 « this isn't the Claude that you know » : une taquinerie, pas un des trois types purs"},
+    "ed_probleme_preuve_consignes": {"note": 2, "preuve": "Étapes : problème (paywall, mots en vrac, Claude invente, code jamais lancé), preuve à l'écran, prompt à copier"},
+    "ed_tension_relancee": {"note": 1, "preuve": "1:09 « I bet you guys are wondering, why would you actually build this? » ; ailleurs des annonces"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "1:29 l'échec de Karpathy avec Claude Code, en deux phrases : acte 2 esquissé"},
+    "ed_sans_surexplication": {"note": 2, "preuve": "Script serré, une idée par étape, sans redite"},
+    "ed_niveau_simple": {"note": 2, "preuve": "6:51 le sous-agent expliqué ; 7:43 le hook, « a little script that runs right when the agent tries to finish » ; le tokenizer en une phrase"},
+    "tous_video_suivante": {"note": 0, "preuve": "« I'll see you on the next one », sans vidéo précise"}
+  },
+  "a_retenir": {
+    "titre_miniature": "« I Built Another <Personne célèbre> Using <Outil> » : familiarité et audace. La miniature montre Nate avec un sosie de Karpathy (« HE'S NOT REAL ») ; la vidéo dit à 0:41 que ce n'est ni une voix ni une imitation. Deuxième plus faible des 10 à 7 jours (69 328 vues).",
+    "intro_structure": "17 secondes : accroche, autorité de Karpathy, 4 étapes affichées. Puis pourquoi (Claude explique mal), les 4 étapes avec chacune sa carte de prompt, deux tests réels et une citation finale.",
+    "habillage": "Un plan toutes les 3,5 secondes ; chaque prompt en carte lisible « à capturer », les sept règles numérotées, des articles de presse surlignés pour la biographie.",
+    "idee_pour_nous": "Construire l'agent d'un expert à partir de ses écrits en 4 étapes, prompts affichés à l'écran, puis donner le kit dans le Club.",
+    "objectif": "club"
+  }
+}

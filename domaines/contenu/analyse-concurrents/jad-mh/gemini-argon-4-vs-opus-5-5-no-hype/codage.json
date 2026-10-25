@@ -1,0 +1,156 @@
+{
+  "video_id": "wBWumXBbDbA",
+  "chaine": "jad-mh",
+  "titre": "Gemini Argon 4 VS Opus 5.5 (No Hype)",
+  "codeur": "agent jad-mh",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "actu",
+    "format_secondaire": "comparatif",
+    "sujet": "Gemini 4 Argon sort : le buzz de X, les tests côte à côte, les classements indépendants, puis son test (une appli de devis 3D pour un peintre) contre Opus 5.5",
+    "outils": ["Gemini 4 Argon", "Claude Opus 5.5", "Claude Code", "Arena", "Artificial Analysis", "Vals"],
+    "niveau": "intermediaire",
+    "objectif_probable": "vues"
+  },
+  "titre": {
+    "attente_au_clic": "Savoir, sans le battage, si Gemini 4 Argon bat vraiment Claude Opus 5.5.",
+    "schema": "<Modèle A> VS <Modèle B> (No Hype)",
+    "promesse": "Un comparatif honnête des deux modèles, sans le battage du lancement",
+    "audace": "timide",
+    "registre": "jargon",
+    "briques": ["preuve"],
+    "marqueurs": [],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": false,
+    "emotion": null,
+    "regard": null,
+    "texte": "Gemini 4 ARGON VS Opus 5.5",
+    "texte_mots": 6,
+    "repete_titre": "oui",
+    "elements": ["logo Gemini et « Gemini 4 Argon » sur la Terre vue de l'espace", "rond « VS » au centre", "logo Claude orange et « Opus 5.5 » sur un ciel au coucher du soleil"],
+    "nb_elements": 3,
+    "fond": "coupé en deux : espace bleu nuit à gauche, coucher de soleil à droite",
+    "couleurs": ["bleu nuit", "blanc", "orange"],
+    "curiosity_gap": "resultat",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Okay, so Gemini 4 Argon is officially out today and Twitter is going crazy.",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Le « 4 » animé du film de lancement de Google, dans un cadre sur fond crème",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": ["actu-annonce", "hook-fait", "hook-dissonance", "pont"],
+    "preuve": {
+      "type": "social",
+      "seconde": 5,
+      "description": "Les tweets à l'écran, surlignés : 16 000 likes, 700 000 vues, un employé de DeepMind"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 2, "a_l_ecran": false},
+    "boucle_vers_la_fin": {
+      "presente": true,
+      "citation": "then I'm putting myself, Argon, and Opus 5.5 head-to-head myself",
+      "seconde_resolution": 256,
+      "tenue": "oui"
+    },
+    "seconde_premier_point": 84,
+    "attente_tenue": "oui",
+    "attente_note": "Le battage est confronté aux classements indépendants, puis à son test : verdict net (Opus pour coder, Argon pour écrire et chercher). Deux commentaires signalent un son de voix abîmé."
+  },
+  "structure": {
+    "modele": "setup-progress-payoff",
+    "segments": [
+      {"debut": 0, "fin": 84, "titre": "What X is saying about Argon", "role": "intro", "pull": true, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 84, "fin": 123, "titre": "What people are building with it", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 123, "fin": 191, "titre": "Side-by-side tests", "role": "point", "pull": true, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 191, "fin": 256, "titre": "Independent benchmarks", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 256, "fin": 354, "titre": "My test: Argon vs Opus 5.5", "role": "demo", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 354, "fin": 419, "titre": "Price and my take", "role": "fin", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 32, "type": "annonce-suite", "citation": "And honestly, this one is my favorite."},
+      {"seconde": 60, "type": "annonce-suite", "citation": "So in this video, we're not going to look at what Google is saying."},
+      {"seconde": 84, "type": "question-spectateur", "citation": "So first, what are people actually building with it?"},
+      {"seconde": 123, "type": "annonce-suite", "citation": "because this is where it gets interesting."},
+      {"seconde": 168, "type": "annonce-suite", "citation": "And here's the part most people will miss."},
+      {"seconde": 252, "type": "annonce-suite", "citation": "But charts are charts, so let's test it ourselves."},
+      {"seconde": 303, "type": "question-spectateur", "citation": "Can it actually open the camera and spot real furniture live?"},
+      {"seconde": 322, "type": "rappel-promesse", "citation": "because if the price is wrong, nothing else matters."}
+    ],
+    "histoires": [],
+    "payoffs": [
+      {"seconde": 203, "resume": "Arena : Argon 1er en texte, Opus 1er en WebDev, Argon 9e"},
+      {"seconde": 225, "resume": "Artificial Analysis : Opus 58, Argon 53 ; mais Argon hallucine bien moins (15 % contre 59 %)"},
+      {"seconde": 246, "resume": "La règle : écrire et chercher, Argon ; construire avec du code, Opus"},
+      {"seconde": 289, "resume": "Les deux applis côte à côte : écran d'accueil, scan raté des deux côtés, pièce 3D"},
+      {"seconde": 327, "resume": "Le devis à 3 104,68 $ vérifié"},
+      {"seconde": 340, "resume": "Verdict : Opus 5.5 fait la meilleure appli"}
+    ],
+    "premier_payoff_seconde": 203,
+    "jargon": 2,
+    "repetitions": 0,
+    "test_du_tweet": "X dit que Gemini 4 Argon a « détruit » Opus 5.5. Les tests côte à côte sont biaisés ; les classements indépendants tranchent : Argon pour écrire et chercher, Opus pour coder. Son test (une appli de devis 3D pour un peintre) : Opus fait la meilleure appli."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine, souvent plein cadre", "decor": "salon, tableau, bibliothèque, lumière violette ; casquette, t-shirt noir"},
+    "parts": {"face": 40, "ecran": 55, "motion": 5, "broll": 0},
+    "textes_ecran": "rares",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["cartes-chapitre", "curseur-surligne", "split-screen", "etiquettes"],
+    "charte": "Fond crème à grille, tweets et tableaux en cadres arrondis avec surlignage jaune, carte de chapitre bleu roi (« 04 MY TEST »), applis côte à côte avec étiquettes « Gemini 4 Argon » et « Claude Opus 5.5 ». La miniature ne reprend pas cette charte.",
+    "rythme": "regulier",
+    "notes": "Pas de sous-titres et beaucoup de face caméra, comme l'autre vidéo du même jour. Chaque citation de X est surlignée sur la capture du tweet."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 80, "type": "abonnement", "cible": "s'abonner pour les skills de la semaine", "amene_par": "intro", "citation": "Be sure to subscribe because I drop weekly skills for free."},
+      {"seconde": 411, "type": "like-commentaire", "cible": "dire s'il a testé Argon et quoi leur faire construire", "amene_par": "fin", "citation": "Tell me in the comments if you have tried Argon yet"}
+    ],
+    "sponsor": {"present": true, "nom": "Higgsfield", "debut": null, "duree": null, "forme": "lien-seul"},
+    "liens_description": {"sponsor": 1, "communaute-gratuite": 1, "autre": 9},
+    "commentaire_epingle": {"texte": "Higgsfield (lien Katana)", "type": "sponsor"},
+    "recap_final": true,
+    "derniere_phrase": "Thank you for watching, and I'll see you in the next one.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["Argon pas disponible pour les abonnés Pro (28 likes)", "Claude meilleur pour l'implémentation réelle", "Argon meilleur en droit et en recherche"],
+    "demandes": ["Argon peut-il faire du motion design et du montage comme Opus ?", "une IA qui sort une appli iPhone prête à l'emploi"],
+    "critiques": ["le son de la voix abîmé (« What's wrong with your voice-track? »)", "désaccord sur le verdict code, tests C++ à l'appui", "« twitter bro »"],
+    "reprises": ["le verdict « Argon pour la recherche et l'écriture »"],
+    "signal_promesse": "tenue"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "La 1re phrase annonce Argon sans Opus ; le 1er plan montre le « 4 » de Gemini, pas le face-à-face de la miniature"},
+    "ap_boucle_curiosite": {"note": 1, "preuve": "1:10 le test maison est annoncé et livré à 4:16 : une annonce plus qu'une question ouverte"},
+    "ap_effort_montre": {"note": 1, "preuve": "1:10 « the exact same prompts, the same efforts » : le test est dit, sans durée ni nombre d'essais"},
+    "ap_setup_progress_payoff": {"note": 2, "preuve": "Le test pose le prompt et la bonne réponse (3 104,68 $), passe écran par écran, puis donne le verdict (5:40)"},
+    "ap_contraste_rythme": {"note": 0, "preuve": "De 12 à 18 changements de plan par minute, débit stable"},
+    "ap_montrer_sans_son": {"note": 1, "preuve": "Les tweets surlignés (« DESTROYED Claude Opus 5.5 ») se lisent, mais sans sous-titres l'angle « no hype » ne passe pas"},
+    "ali_douleur_histoire": {"note": 0, "preuve": "Ni douleur ni histoire"},
+    "ali_coeur_unique": {"note": 2, "preuve": "4:08 « Writing research, business stuff, Argon. Building things with code, Opus. »"},
+    "alx_pont": {"note": 1, "preuve": "Contexte (X) et annonce du plan comme un pont, mais ouverts par un fait choc"},
+    "alx_pull_paint_point": {"note": 1, "preuve": "Complet sur les classements (Arena expliqué, puis le point) ; ailleurs, la preuve sans le pourquoi"},
+    "alx_nom_idee": {"note": 0, "preuve": "Aucune idée nommée"},
+    "alx_phrase_finale": {"note": 2, "preuve": "2:19 « Not exactly a fair fight. » ; 3:09 « that's exactly why we need independent tests. » ; 6:44 « launch days, both are always hype. »"},
+    "alx_douleur_reve": {"note": 0, "preuve": "Deux noms de modèles ; « No Hype » promet l'honnêteté, pas un désir"},
+    "alx_cta_tot": {"note": 0, "preuve": "Aucune offre ni ressource dans la vidéo"},
+    "ed_intro_courte": {"note": 1, "preuve": "Premier point à 1:24 : l'accroche dure une minute de tweets, mais sans digression"},
+    "ed_hook": {"note": 2, "preuve": "0:55 « a lot of these it destroyed Opus posts come from one place, Google's own charts » : une dissonance nette"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "Problème (tests biaisés) puis preuves ; la consigne n'arrive qu'au verdict final"},
+    "ed_tension_relancee": {"note": 2, "preuve": "1:24 « what are people actually building with it? » ; 4:12 « charts are charts, so let's test it ourselves »"},
+    "ed_histoire_vecue": {"note": 0, "preuve": "Aucune histoire"},
+    "ed_sans_surexplication": {"note": 2, "preuve": "Aucune redite en 7 minutes"},
+    "ed_niveau_simple": {"note": 2, "preuve": "3:16 Arena expliqué (des gens comparent deux réponses sans savoir qui les a écrites) ; 4:28 « Like a little dollhouse »"},
+    "tous_video_suivante": {"note": 0, "preuve": "« I'll see you in the next one »"}
+  },
+  "a_retenir": {
+    "titre_miniature": "« A VS B (No Hype) » : la parenthèse promet l'honnêteté plutôt qu'un résultat. Miniature sans visage, deux logos ; la moitié droite est identique à celle de « Muse Wonder vs Opus 5.5 ».",
+    "intro_structure": "Le buzz de X tweet par tweet, puis la dissonance (« these posts come from one place, Google's own charts ») et la promesse d'un test maison. Premier point à 1:24, sans digression ni demande d'attention.",
+    "habillage": "Pas de sous-titres, beaucoup de face caméra (environ 40 %), tweets surlignés en jaune, applis côte à côte. Deux commentaires signalent une piste voix abîmée.",
+    "idee_pour_nous": "Pour une sortie de modèle : partir du buzz, le confronter aux classements indépendants, puis un test maison avec une seule bonne réponse vérifiable.",
+    "objectif": "vues"
+  }
+}

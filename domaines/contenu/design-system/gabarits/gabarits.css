@@ -1,0 +1,21 @@
+/* Base commune des gabarits : un cadre à taille fixe, le fond lumière, le Valknut, le grain.
+   Les couleurs viennent de ../jetons.css ; chaque gabarit ne règle que sa mise en page. */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:transparent}
+body{font-family:var(--police);color:var(--texte);-webkit-font-smoothing:antialiased}
+svg{display:block}
+
+.cadre{position:relative;overflow:hidden;background:var(--fond-lumiere)}
+.cadre > *{position:absolute}
+
+.grain{inset:0;background-image:var(--grain);opacity:var(--grain-opacite);mix-blend-mode:overlay;pointer-events:none;z-index:9}
+.halo{color:var(--halo);opacity:var(--halo-opacite);filter:blur(var(--halo-flou,48px));z-index:1}
+.vk{z-index:2}
+.photo{bottom:0;height:84%;left:79%;transform:translateX(-50%);filter:var(--photo-ombre);z-index:3}
+
+.pilule{display:inline-flex;align-items:center;gap:.5em;font-weight:600;line-height:1;padding:.55em 1em;border-radius:var(--r-pilule);
+  color:var(--pilule-texte);background:var(--verre);border:1px solid var(--verre-bord);backdrop-filter:blur(10px);white-space:nowrap;z-index:5}
+.titre{margin:0;font-weight:var(--titre-graisse);letter-spacing:var(--titre-approche);line-height:var(--titre-interligne);z-index:5}
+.fort{background:var(--mot-fort);-webkit-background-clip:text;background-clip:text;color:transparent;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone}
+.verre{background:var(--verre);border:1px solid var(--verre-bord);backdrop-filter:blur(14px);border-radius:var(--r-carte)}

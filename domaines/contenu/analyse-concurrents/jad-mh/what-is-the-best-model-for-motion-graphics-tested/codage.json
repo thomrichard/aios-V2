@@ -1,0 +1,166 @@
+{
+  "video_id": "cA3_8D1NiUU",
+  "chaine": "jad-mh",
+  "titre": "What Is The Best Model For Motion Graphics (Tested)",
+  "codeur": "agent jad-mh",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "comparatif",
+    "format_secondaire": "actu",
+    "sujet": "Opus 5.5, Gemini 4 Argon et GPT-6 Astra font les 30 premières secondes d'un même clip musical ; temps, appels et coût comparés, puis les tests partagés sur X",
+    "outils": ["Claude Opus 5.5", "Claude Code", "Gemini 4 Argon", "opencode", "OpenRouter", "GPT-6 Astra", "Codex", "HyperFrames", "ACE-Step", "Nano Banana", "Kling", "Higgsfield"],
+    "niveau": "intermediaire",
+    "objectif_probable": "vues"
+  },
+  "titre": {
+    "attente_au_clic": "Voir lequel de GPT-6 Astra, Opus 5.5 et Gemini 4 Argon fait le meilleur motion design, sur un vrai test.",
+    "schema": "What Is The Best <Outil> For <Domaine> (Tested)",
+    "promesse": "Savoir quel modèle choisir pour le motion design, preuve à l'appui",
+    "audace": "timide",
+    "registre": "mixte",
+    "briques": ["preuve"],
+    "marqueurs": ["question", "test", "superlatif"],
+    "nom_outil": false
+  },
+  "miniature": {
+    "visage": false,
+    "emotion": null,
+    "regard": null,
+    "texte": "GPT-6 Astra VS Opus 5.5 VS Gemini 4 ARGON",
+    "texte_mots": 9,
+    "repete_titre": "non",
+    "elements": ["galaxie en spirale et « GPT-6 Astra » au-dessus de la Terre", "logo Claude et « Opus 5.5 » sur un coucher de soleil", "logo Gemini et « Gemini 4 Argon » sur l'espace", "deux ronds « VS »"],
+    "nb_elements": 3,
+    "fond": "trois panneaux : espace, coucher de soleil, espace",
+    "couleurs": ["noir", "bleu nuit", "orange", "blanc"],
+    "curiosity_gap": "resultat",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "I gave Claude Opus 5.5, Gemini 4 Argon, and GBT-6 Astra the same job.",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Une vignette du clip d'Opus sur fond beige, étiquetée « Claude Opus 5.5 » ; Gemini et GPT arrivent à 0:02 et 0:04, floutés",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": ["boucle-curiosite", "actu-annonce", "pont"],
+    "preuve": {
+      "type": "effort",
+      "seconde": 6,
+      "description": "Le même travail pour les trois modèles : même chanson, mêmes paroles, même liste de plans, mêmes images ; les résultats floutés à l'écran"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 3, "a_l_ecran": true},
+    "boucle_vers_la_fin": {
+      "presente": true,
+      "citation": "all the way to the end, we're going to look at the results.",
+      "seconde_resolution": 374,
+      "tenue": "oui"
+    },
+    "seconde_premier_point": 35,
+    "attente_tenue": "oui",
+    "attente_note": "Les trois clips sont montrés avec leur temps et leur coût. Pas de verdict tranché (« You're the judge »), puis il garde Opus. Un commentaire conteste l'égalité des conditions (outils différents)."
+  },
+  "structure": {
+    "modele": "setup-progress-payoff",
+    "segments": [
+      {"debut": 0, "fin": 35, "titre": "Which AI is the best at motion graphics?", "role": "intro", "pull": true, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 35, "fin": 89, "titre": "The setup", "role": "point", "pull": false, "paint": false, "point": true, "nom": true, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": true},
+      {"debut": 89, "fin": 150, "titre": "Fair is fair", "role": "point", "pull": true, "paint": false, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 150, "fin": 214, "titre": "Gemini 4 Argon", "role": "demo", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 214, "fin": 266, "titre": "GPT-6 Astra", "role": "demo", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 266, "fin": 333, "titre": "Opus 5.5", "role": "demo", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 333, "fin": 349, "titre": "The same shots from all three", "role": "demo", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 349, "fin": 374, "titre": "The numbers side by side", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 374, "fin": 463, "titre": "What people on X are sharing", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 463, "fin": 508, "titre": "You're the judge", "role": "fin", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 14, "type": "boucle-ouverte", "citation": "And I'm not going to tell you which one won."},
+      {"seconde": 22, "type": "boucle-ouverte", "citation": "all the way to the end, we're going to look at the results."},
+      {"seconde": 89, "type": "question-spectateur", "citation": "Now, fair fair, because I know some of you are going to ask"},
+      {"seconde": 157, "type": "rupture", "citation": "so I'll stay quiet and I'll let you watch it."},
+      {"seconde": 216, "type": "rupture", "citation": "so I'll stay again quiet and you watch it."},
+      {"seconde": 333, "type": "annonce-suite", "citation": "let's look at the same shots from all three so you can compare."},
+      {"seconde": 374, "type": "annonce-suite", "citation": "Now, let's see what people on X are sharing."},
+      {"seconde": 463, "type": "question-spectateur", "citation": "You're the judge. Let me know in the comments which one you think won."}
+    ],
+    "histoires": [
+      {"seconde": 146, "acte": "anecdote", "resume": "Gemini a nommé sa fenêtre de terminal « Claude Opus 5.5 », la chanson citant Opus"}
+    ],
+    "payoffs": [
+      {"seconde": 163, "resume": "Le clip de Gemini 4 Argon, en cinq scènes"},
+      {"seconde": 192, "resume": "Gemini : 63 min, 179 appels, 9,87 $"},
+      {"seconde": 220, "resume": "Le clip de GPT-6 Astra, en quatre scènes"},
+      {"seconde": 255, "resume": "GPT : 23 min, 116 appels"},
+      {"seconde": 274, "resume": "Le clip d'Opus 5.5, en quatre scènes"},
+      {"seconde": 302, "resume": "Opus : 1 h 15, 544 appels, 0 $ en plus, 5 % de la limite hebdo"},
+      {"seconde": 333, "resume": "Les mêmes plans des trois modèles côte à côte"},
+      {"seconde": 349, "resume": "Les chiffres côte à côte"}
+    ],
+    "premier_payoff_seconde": 163,
+    "jargon": 2,
+    "repetitions": 1,
+    "test_du_tweet": "Même job pour Opus 5.5, Gemini 4 Argon et GPT-6 Astra : les 30 premières secondes d'un clip musical, mêmes fichiers, mêmes outils. Argon : 63 min et 9,87 $. Astra : 23 min. Opus : 1 h 15, 0 $ en plus de l'abonnement Max. À vous de juger ; lui garde Opus."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine, micro sur bras ; souvent en vignette", "decor": "pièce avec fenêtre et tableau, lumière violette ; casquette, t-shirt noir"},
+    "parts": {"face": 15, "ecran": 25, "motion": 60, "broll": 0},
+    "textes_ecran": "constants",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["cartes-chapitre", "chiffres-animes", "etiquettes", "split-screen"],
+    "charte": "Beige éditorial, police à empattements noire, mots-clés en orange (« 30 seconds », « Twitter »), cartes de chapitre numérotées (« 01 The setup », « 02 Fair is fair »), bouton S'abonner animé. La miniature (trois panneaux spatiaux) ne reprend pas cette charte.",
+    "rythme": "contraste",
+    "notes": "Un nouveau style de montage, éditorial, différent de celui de la semaine précédente. Les résultats sont floutés dans l'intro, puis les clips passent sans commentaire ; de 9 à 29 changements de plan par minute."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 30, "type": "abonnement", "cible": "s'abonner pour les skills de la semaine", "amene_par": "intro", "citation": "Be sure to subscribe because I drop weekly skills for free."},
+      {"seconde": 43, "type": "sponsor", "cible": "l'offre Higgsfield en description", "amene_par": "transition", "citation": "I was able to get an offer for you guys on Higgs Field."},
+      {"seconde": 467, "type": "like-commentaire", "cible": "voter en commentaire pour le gagnant", "amene_par": "fin", "citation": "Let me know in the comments which one you think won."},
+      {"seconde": 493, "type": "communaute-gratuite", "cible": "les appels hebdomadaires gratuits dans Skool", "amene_par": "fin", "citation": "we will be having weekly calls on school for free"}
+    ],
+    "sponsor": {"present": true, "nom": "Higgsfield", "debut": 43, "duree": 18, "forme": "integre-a-la-demo"},
+    "liens_description": {"sponsor": 1, "communaute-gratuite": 1, "autre": 5},
+    "commentaire_epingle": {"texte": "Higgsfield (lien Katana)", "type": "sponsor"},
+    "recap_final": false,
+    "derniere_phrase": "Thank you so much and I'll see you in the next one.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["Opus impressionne (13 likes)", "un test jugé équitable", "essayer Haiku, moins cher"],
+    "demandes": ["le prompt, demandé trois fois", "un tuto pour faire ces vidéos de zéro", "une traduction automatique en portugais", "comment il monte ses propres vidéos"],
+    "critiques": ["« an unfair comparison » : les modèles tournent dans des outils différents", "« The video is entirely in black »"],
+    "reprises": ["« Cluad cooked them »", "« Same folder, same tools, same render step »"],
+    "signal_promesse": "tenue"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "La 1re phrase pose le test des trois modèles de la miniature ; le 1er plan les étiquette, mais pas dans la composition de la miniature"},
+    "ap_boucle_curiosite": {"note": 2, "preuve": "0:14 « I'm not going to tell you which one won », résultats floutés à l'écran, montrés de 2:43 à 5:49"},
+    "ap_effort_montre": {"note": 2, "preuve": "0:06 « same song, same lyric, the same shot list, same images » : le test à trois modèles est posé dès la 2e phrase"},
+    "ap_setup_progress_payoff": {"note": 2, "preuve": "Conditions (0:35), équité (1:29), puis chaque clip et ses chiffres, et le côte à côte (5:33)"},
+    "ap_contraste_rythme": {"note": 2, "preuve": "De 9 à 29 changements de plan par minute ; 230 mots par minute au début, clips muets ensuite"},
+    "ap_montrer_sans_son": {"note": 2, "preuve": "Planche intro : les trois modèles étiquetés, résultats floutés, « the first 30 seconds of a music video » écrit"},
+    "ali_douleur_histoire": {"note": 0, "preuve": "Ni douleur ni histoire"},
+    "ali_coeur_unique": {"note": 1, "preuve": "Pas de message tranché par choix (« You're the judge ») ; 7:49 il garde Opus"},
+    "alx_pont": {"note": 1, "preuve": "Prémisse, contexte et plan comme un pont, avec une boucle de curiosité en accroche"},
+    "alx_pull_paint_point": {"note": 1, "preuve": "« Fair is fair » a le pourquoi (1:29 « because I know some of you are going to ask ») ; les démos n'ont que la preuve"},
+    "alx_nom_idee": {"note": 1, "preuve": "« Fair is fair » nommé et affiché en carte de chapitre ; rien d'autre"},
+    "alx_phrase_finale": {"note": 1, "preuve": "2:08 « all three had the full setup, not just a chatbot. » ; rare ailleurs"},
+    "alx_douleur_reve": {"note": 1, "preuve": "La question du spectateur (quel modèle choisir ?), mais en jargon (« model », « motion graphics »)"},
+    "alx_cta_tot": {"note": 1, "preuve": "0:43 l'offre du sponsor Higgsfield, liée au sujet ; aucune ressource à lui avant la fin"},
+    "ed_intro_courte": {"note": 1, "preuve": "Premier point à 0:35, après six phrases et un appel à s'abonner"},
+    "ed_hook": {"note": 1, "preuve": "« I'm not going to tell you which one won » : une boucle, pas un des trois hooks"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "L'équité est posée comme un problème puis prouvée ; les démos n'ont ni problème ni consigne"},
+    "ed_tension_relancee": {"note": 1, "preuve": "Les points s'enchaînent par annonces (« Now, GPT 6 Astro ») ; une seule question du spectateur à 1:29"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "2:26 Gemini nomme son terminal « Claude Opus 5.5 » : une anecdote"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "Les chiffres sont redits dans le côte à côte, la chanson passe trois fois"},
+    "ed_niveau_simple": {"note": 1, "preuve": "1:38 opencode expliqué (« a coding agent, just like Claude Code ») ; OpenRouter et les appels de modèle ne le sont pas"},
+    "tous_video_suivante": {"note": 0, "preuve": "« I'll see you in the next one »"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Le seul titre en question, sans outil, avec « (Tested) » ; la miniature nomme les trois modèles. Le titre pose la question, la miniature donne les candidats.",
+    "intro_structure": "« I'm not going to tell you which one won » et les résultats floutés à l'écran : une boucle tenue jusqu'au bout. Premier point à 0:35.",
+    "habillage": "Nouveau style éditorial : beige, police à empattements, cartes de chapitre numérotées, chiffres en grand ; les trois clips passent sans commentaire.",
+    "idee_pour_nous": "Un test « à vous de juger » : même tâche, mêmes fichiers, trois modèles, temps et coût affichés, et le public vote en commentaire.",
+    "objectif": "vues"
+  }
+}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr" data-mode="nuit">
+<head>
+<meta charset="utf-8">
+<title>Gabarit · schéma en liste</title>
+<!-- 1920 × 1080, pour une leçon ou une vidéo. Champs : mode, surtitre, titre, total, conclusion,
+     lignes (liste de { label, sous, valeur, ton }, ton = pin, neutre ou chaud ; 2 à 5 lignes). -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../jetons.css">
+<link rel="stylesheet" href="gabarits.css">
+<style>
+.cadre{width:1920px;height:1080px;background:radial-gradient(56% 58% at 100% 0%,rgba(50,122,96,.45),transparent 70%),var(--fond)}
+[data-mode="papier"] .cadre{background:radial-gradient(56% 58% at 100% 0%,var(--pin-100),transparent 70%),radial-gradient(30% 40% at 0% 100%,var(--ambre-100),transparent 70%),var(--fond)}
+.vk{width:1340px;right:-430px;top:-340px;opacity:.38}
+
+.gauche{left:120px;top:0;bottom:0;width:640px;display:flex;flex-direction:column;justify-content:center;gap:40px;z-index:5}
+.pilule{align-self:flex-start;font-size:30px}
+.titre{font-size:96px;font-weight:700;letter-spacing:-.035em;line-height:1}
+.total{margin:0;font-size:30px;line-height:1.35;color:var(--texte-doux)}
+.conclusion{margin:0;padding:36px 40px;border-radius:var(--r-carte);font-size:40px;font-weight:700;line-height:1.25;
+  background:var(--carte-forte);box-shadow:inset 0 0 0 1px var(--carte-forte-bord),0 0 80px var(--carte-forte)}
+
+.droite{left:840px;right:120px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;gap:24px;z-index:5}
+.ligne{display:flex;align-items:center;justify-content:space-between;gap:40px;padding:38px 48px}
+.lab{font-size:46px;font-weight:600;line-height:1.15}
+.sous{display:block;font-size:30px;font-weight:400;color:var(--texte-doux);margin-top:8px}
+.val{font-size:108px;font-weight:800;letter-spacing:-.04em;line-height:1;white-space:nowrap}
+[data-ton="pin"] .val{color:var(--valeur-pin)}
+[data-ton="chaud"] .val{background:var(--valeur-chaud);-webkit-background-clip:text;background-clip:text;color:transparent}
+</style>
+</head>
+<body>
+<div class="cadre">
+  <svg class="vk" viewBox="0 0 1240 1143.15"><use href="#valknut-lumiere"/></svg>
+  <div class="gauche">
+    <span class="pilule" data-champ="surtitre">Comprendre</span>
+    <h1 class="titre" data-champ="titre">Ce que coûte un message</h1>
+    <p class="total" data-champ="total">= ta consommation, message après message</p>
+    <p class="conclusion" data-champ="conclusion">Plus la discussion est longue, plus chaque message pèse.</p>
+  </div>
+  <div class="droite">
+    <div class="ligne verre" data-item data-ton="pin"><span class="lab"><span>Tout ce qu'il relit</span><span class="sous">ou moins, si le cache est chaud</span></span><span class="val">×0,1</span></div>
+    <div class="ligne verre" data-item data-ton="neutre"><span class="lab"><span>Ce qu'il lit de neuf</span><span class="sous">le prix normal</span></span><span class="val">×1</span></div>
+    <div class="ligne verre" data-item data-ton="chaud"><span class="lab"><span>Ce qu'il écrit</span><span class="sous">5 fois le prix de lecture</span></span><span class="val">×5</span></div>
+    <template data-liste="lignes"><div class="ligne verre"><span class="lab"><span data-cle="label"></span><span class="sous" data-cle="sous"></span></span><span class="val" data-cle="valeur"></span></div></template>
+  </div>
+  <span class="grain"></span>
+</div>
+<script src="commun.js"></script>
+</body>
+</html>

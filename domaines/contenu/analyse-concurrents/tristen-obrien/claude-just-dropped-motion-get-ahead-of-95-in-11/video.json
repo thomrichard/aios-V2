@@ -1,0 +1,199 @@
+{
+ "id": "yf2OwchM9nw",
+ "url": "https://www.youtube.com/watch?v=yf2OwchM9nw",
+ "chaine": "tristen-obrien",
+ "titre": "Claude Just Dropped MOTION. (Get Ahead of 95% in 11 Minutes.)",
+ "titre_ytdlp": "Claude Just Dropped MOTION. (Get Ahead of 95% in 11 Minutes.)",
+ "publie": "2026-10-14T15:31:12Z",
+ "duree_s": 683,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "xYIXQs8xEcozjRpO9yDXZAWtZ0I",
+  "id": "yf2OwchM9nw",
+  "snippet": {
+   "publishedAt": "2026-10-14T15:31:12Z",
+   "channelId": "UCruPFdKtGG8Oz5dvha6WWgA",
+   "title": "Claude Just Dropped MOTION. (Get Ahead of 95% in 11 Minutes.)",
+   "description": "Connect Higgsfield to Claude and make your Claude Motion videos look premium: https://higgsfield.ai?fpr=tristen15\n\n👇 FREE: Get my full Prompt Library and AI newsletter: https://tristenobrien.ai\n\n📘 Check out my book, The Smartest Move: https://tristenobrien.ai/smartest-move\n\nClaude just dropped Claude Motion, and every Claude Motion animation in this video was made with it. Claude Motion turns a prompt into an animated video right inside Claude. It doesn't generate pixels the way AI video tools do. Claude writes the animation as code, so you can change any word, number, or timing without starting over.\n\nIn this video I build a 20-second paper-style commercial for a bike company, show you how to edit it with Tweaks and comments, and export it. Then I show you how to make it look far more premium by blending Claude Motion with real images and video from Higgsfield, right inside Claude. And if you can't get Claude Motion yet, I show you the alternative I've been using: Claude Code with Remotion.\n\n⏱️ CHAPTERS\n0:00 Claude Motion just dropped\n0:28 What Claude Motion is and where to find it\n0:55 Building a paper bike commercial\n1:53 How Claude Motion works (code, not pixels)\n3:19 The finished commercial\n3:37 Editing your video with Tweaks\n4:18 Changing anything with comments\n4:53 Sharing and exporting\n5:15 What it costs\n5:56 Making it premium with Higgsfield\n7:13 Connecting Higgsfield to Claude\n8:10 The paper-to-real result\n8:50 Plans and availability\n9:05 The alternative: Claude Code + Higgsfield + Remotion\n9:35 Setting up Remotion\n9:55 Remotion demo\n10:11 Claude Motion vs Remotion\n10:43 Recap\n\nWHO CAN USE CLAUDE MOTION\n\nClaude Motion is in beta on Claude Team and Enterprise plans. It's on by default for Team. On Enterprise, an owner has to turn it on in Organization settings. It doesn't cost anything extra, but every animation counts toward your plan's usage limits, and longer, more complex animations use more.\n\nHOW TO SET UP REMOTION (the alternative if you're on Pro or Max)\n\nIn the terminal (what I recommend): claude plugin marketplace add remotion-dev/claude-code-plugin claude plugin install \n\nThis video is sponsored by Higgsfield. Try it here: https://higgsfield.ai?fpr=tristen15\n\n#Claude #ClaudeMotion #ClaudeAI #Anthropic #MotionGraphics #AIAnimation #Higgsfield #Remotion #ClaudeCode #AITools",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/yf2OwchM9nw/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/yf2OwchM9nw/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/yf2OwchM9nw/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/yf2OwchM9nw/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/yf2OwchM9nw/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    },
+    "uhd": {
+     "url": "https://i.ytimg.com/vi/yf2OwchM9nw/uhddefault.jpg",
+     "width": 3840,
+     "height": 2160
+    }
+   },
+   "channelTitle": "Tristen O'Brien",
+   "tags": [
+    "claude",
+    "claude motion",
+    "higgsfield ai",
+    "claude code"
+   ],
+   "categoryId": "28",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "en",
+   "localized": {
+    "title": "Claude Just Dropped MOTION. (Get Ahead of 95% in 11 Minutes.)",
+    "description": "Connect Higgsfield to Claude and make your Claude Motion videos look premium: https://higgsfield.ai?fpr=tristen15\n\n👇 FREE: Get my full Prompt Library and AI newsletter: https://tristenobrien.ai\n\n📘 Check out my book, The Smartest Move: https://tristenobrien.ai/smartest-move\n\nClaude just dropped Claude Motion, and every Claude Motion animation in this video was made with it. Claude Motion turns a prompt into an animated video right inside Claude. It doesn't generate pixels the way AI video tools do. Claude writes the animation as code, so you can change any word, number, or timing without starting over.\n\nIn this video I build a 20-second paper-style commercial for a bike company, show you how to edit it with Tweaks and comments, and export it. Then I show you how to make it look far more premium by blending Claude Motion with real images and video from Higgsfield, right inside Claude. And if you can't get Claude Motion yet, I show you the alternative I've been using: Claude Code with Remotion.\n\n⏱️ CHAPTERS\n0:00 Claude Motion just dropped\n0:28 What Claude Motion is and where to find it\n0:55 Building a paper bike commercial\n1:53 How Claude Motion works (code, not pixels)\n3:19 The finished commercial\n3:37 Editing your video with Tweaks\n4:18 Changing anything with comments\n4:53 Sharing and exporting\n5:15 What it costs\n5:56 Making it premium with Higgsfield\n7:13 Connecting Higgsfield to Claude\n8:10 The paper-to-real result\n8:50 Plans and availability\n9:05 The alternative: Claude Code + Higgsfield + Remotion\n9:35 Setting up Remotion\n9:55 Remotion demo\n10:11 Claude Motion vs Remotion\n10:43 Recap\n\nWHO CAN USE CLAUDE MOTION\n\nClaude Motion is in beta on Claude Team and Enterprise plans. It's on by default for Team. On Enterprise, an owner has to turn it on in Organization settings. It doesn't cost anything extra, but every animation counts toward your plan's usage limits, and longer, more complex animations use more.\n\nHOW TO SET UP REMOTION (the alternative if you're on Pro or Max)\n\nIn the terminal (what I recommend): claude plugin marketplace add remotion-dev/claude-code-plugin claude plugin install \n\nThis video is sponsored by Higgsfield. Try it here: https://higgsfield.ai?fpr=tristen15\n\n#Claude #ClaudeMotion #ClaudeAI #Anthropic #MotionGraphics #AIAnimation #Higgsfield #Remotion #ClaudeCode #AITools"
+   },
+   "defaultAudioLanguage": "en-US"
+  },
+  "contentDetails": {
+   "duration": "PT11M23S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": true,
+   "contentRating": {},
+   "projection": "rectangular"
+  },
+  "statistics": {
+   "viewCount": "579603",
+   "likeCount": "9864",
+   "favoriteCount": "0",
+   "commentCount": "249"
+  }
+ },
+ "ytdlp": {
+  "id": "yf2OwchM9nw",
+  "title": "Claude Just Dropped MOTION. (Get Ahead of 95% in 11 Minutes.)",
+  "description": "Connect Higgsfield to Claude and make your Claude Motion videos look premium: https://higgsfield.ai?fpr=tristen15\n\n👇 FREE: Get my full Prompt Library and AI newsletter: https://tristenobrien.ai\n\n📘 Check out my book, The Smartest Move: https://tristenobrien.ai/smartest-move\n\nClaude just dropped Claude Motion, and every Claude Motion animation in this video was made with it. Claude Motion turns a prompt into an animated video right inside Claude. It doesn't generate pixels the way AI video tools do. Claude writes the animation as code, so you can change any word, number, or timing without starting over.\n\nIn this video I build a 20-second paper-style commercial for a bike company, show you how to edit it with Tweaks and comments, and export it. Then I show you how to make it look far more premium by blending Claude Motion with real images and video from Higgsfield, right inside Claude. And if you can't get Claude Motion yet, I show you the alternative I've been using: Claude Code with Remotion.\n\n⏱️ CHAPTERS\n0:00 Claude Motion just dropped\n0:28 What Claude Motion is and where to find it\n0:55 Building a paper bike commercial\n1:53 How Claude Motion works (code, not pixels)\n3:19 The finished commercial\n3:37 Editing your video with Tweaks\n4:18 Changing anything with comments\n4:53 Sharing and exporting\n5:15 What it costs\n5:56 Making it premium with Higgsfield\n7:13 Connecting Higgsfield to Claude\n8:10 The paper-to-real result\n8:50 Plans and availability\n9:05 The alternative: Claude Code + Higgsfield + Remotion\n9:35 Setting up Remotion\n9:55 Remotion demo\n10:11 Claude Motion vs Remotion\n10:43 Recap\n\nWHO CAN USE CLAUDE MOTION\n\nClaude Motion is in beta on Claude Team and Enterprise plans. It's on by default for Team. On Enterprise, an owner has to turn it on in Organization settings. It doesn't cost anything extra, but every animation counts toward your plan's usage limits, and longer, more complex animations use more.\n\nHOW TO SET UP REMOTION (the alternative if you're on Pro or Max)\n\nIn the terminal (what I recommend): claude plugin marketplace add remotion-dev/claude-code-plugin claude plugin install \n\nThis video is sponsored by Higgsfield. Try it here: https://higgsfield.ai?fpr=tristen15\n\n#Claude #ClaudeMotion #ClaudeAI #Anthropic #MotionGraphics #AIAnimation #Higgsfield #Remotion #ClaudeCode #AITools",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "Claude Motion just dropped",
+    "end_time": 28
+   },
+   {
+    "start_time": 28,
+    "title": "What Claude Motion is and where to find it",
+    "end_time": 55
+   },
+   {
+    "start_time": 55,
+    "title": "Building a paper bike commercial",
+    "end_time": 113
+   },
+   {
+    "start_time": 113,
+    "title": "How Claude Motion works (code, not pixels)",
+    "end_time": 199
+   },
+   {
+    "start_time": 199,
+    "title": "The finished commercial",
+    "end_time": 217
+   },
+   {
+    "start_time": 217,
+    "title": "Editing your video with Tweaks",
+    "end_time": 258
+   },
+   {
+    "start_time": 258,
+    "title": "Changing anything with comments",
+    "end_time": 293
+   },
+   {
+    "start_time": 293,
+    "title": "Sharing and exporting",
+    "end_time": 315
+   },
+   {
+    "start_time": 315,
+    "title": "What it costs",
+    "end_time": 356
+   },
+   {
+    "start_time": 356,
+    "title": "Making it premium with Higgsfield",
+    "end_time": 433
+   },
+   {
+    "start_time": 433,
+    "title": "Connecting Higgsfield to Claude",
+    "end_time": 490
+   },
+   {
+    "start_time": 490,
+    "title": "The paper-to-real result",
+    "end_time": 530
+   },
+   {
+    "start_time": 530,
+    "title": "Plans and availability",
+    "end_time": 545
+   },
+   {
+    "start_time": 545,
+    "title": "The alternative: Claude Code + Higgsfield + Remotion",
+    "end_time": 575
+   },
+   {
+    "start_time": 575,
+    "title": "Setting up Remotion",
+    "end_time": 595
+   },
+   {
+    "start_time": 595,
+    "title": "Remotion demo",
+    "end_time": 611
+   },
+   {
+    "start_time": 611,
+    "title": "Claude Motion vs Remotion",
+    "end_time": 643
+   },
+   {
+    "start_time": 643,
+    "title": "Recap",
+    "end_time": 682
+   }
+  ],
+  "tags": [
+   "claude",
+   "claude motion",
+   "higgsfield ai",
+   "claude code"
+  ],
+  "categories": [
+   "Science & Technology"
+  ],
+  "heatmap": null,
+  "upload_date": "20261014",
+  "duration": 682,
+  "channel": "Tristen O'Brien",
+  "channel_id": "UCruPFdKtGG8Oz5dvha6WWgA",
+  "channel_follower_count": 85900,
+  "thumbnail": "https://i.ytimg.com/vi_webp/yf2OwchM9nw/maxresdefault.webp",
+  "view_count": 579621,
+  "like_count": 9864,
+  "comment_count": 100
+ }
+}

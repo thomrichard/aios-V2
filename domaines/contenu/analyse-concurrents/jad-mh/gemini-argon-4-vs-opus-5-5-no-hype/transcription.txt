@@ -1,0 +1,97 @@
+[00:00] Okay, so Gemini 4 Argon is officially out today and Twitter is going crazy.
+[00:05] This post has over 16,000 likes.
+[00:09] Gemini 4 Argon just destroyed Claude Opus 5.5 and GPT-6 Astra.
+[00:14] Google is officially back.
+[00:16] This one has 700,000 views.
+[00:19] Someone who says they work at Google DeepMind wrote, "I don't reach for Opus anymore for any work." But then you have this one from yesterday.
+[00:29] Opus 5.5 is still the best model in the world.
+[00:32] And honestly, this one is my favorite.
+[00:34] Someone posted Google's official charts from when Gemini 3.1 Pro came out and those charts were also destroying Claude across the board.
+[00:45] And it said, "Quote, it's crazy that one has the slightest bit of skepticism given Google's track record." And that's the thing, a lot of these it destroyed Opus posts come from one place, Google's own charts.
+[01:00] So in this video, we're not going to look at what Google is saying.
+[01:04] We're going straight to the independent benchmarks, the ones run by people who aren't selling the model.
+[01:10] And then I'm putting myself, Argon, and Opus 5.5 head-to-head myself with the exact same prompts, the same efforts, so we can see it on our own eyes.
+[01:20] Be sure to subscribe because I drop weekly skills for free.
+[01:23] So let's get straight to the point.
+[01:24] >> >> So first, what are people actually building with it?
+[01:26] This one kind of blew my mind.
+[01:28] Max Winbach took Alan Wake 2, which is a Windows game, and had Argon cover it to run natively on Mac.
+[01:36] Graphics and everything and Max says it runs over 140 frames per sec.
+[01:40] And that's actually crazy.
+[01:42] Then, Just then more asked it for an interactive museum of Apple computers without giving it a single image.
+[01:50] It found old Mac photos by itself, cleaned them up, pulled 50 years of specs, and built this 3D carousel where the whole design changes with a decade you're in.
+[02:00] So, yeah, the visual stuff is really really good.
+[02:03] But, let's look at it side-by-side tests because this is where it gets interesting.
+[02:08] This one is Argon versus Opus 5.5 and Argon's version has way more going on, but look at the label.
+[02:15] Opus 5.5 medium.
+[02:17] So, Opus wasn't even on its top setting.
+[02:19] Not exactly a fair fight.
+[02:21] This one says GPT-6 Astro took 25 minutes and costed $11.
+[02:26] Argon took 3 minutes, costed 50 cents.
+[02:30] Sounds amazing, but keep in mind this is a company that sells access to Argon.
+[02:34] And then this person says the complete opposite, quote, "Gemini for Argon is extremely inefficient and slow.
+[02:41] In their test, every model passed, but Argon cost $5.20.
+[02:45] Even at half price, Opus cost about $1.50." >> >> And here's the part most people will miss.
+[02:51] Devin, the AI coding company, posted that Argon is now the best Gemini on their coding test.
+[02:58] True, but look at their own charts.
+[03:00] Opus 5.5 is above it and cheaper.
+[03:02] So, people can't even agree if it's cheap or expensive or if it's better at coding.
+[03:09] >> >> And that's exactly why we need independent tests.
+[03:12] All right.
+[03:12] So, now let's look at the independent test.
+[03:14] What are people saying?
+[03:15] First, Arena.
+[03:16] This is where real people compare two answers without knowing which model wrote them.
+[03:20] And they vote on the main text leaderboard.
+[03:23] Argon is number one and Opus 5.5 is number two.
+[03:26] So, for chatting and writing, people actually prefer Argon.
+[03:29] But, look at this.
+[03:30] On web dev Arena, where people vote on the websites and apps the model builds, Opus 5.5 is number one and Argon number nine.
+[03:41] Then, Artificial Analysis.
+[03:42] They run the same test on every model.
+[03:45] Overall, Opus 5.5 is at 58 and Argon is at 53.
+[03:50] But, fair is fair.
+[03:51] Argon makes stuff up way less.
+[03:54] It's hallucination rate is 15% and Opus is at 59%.
+[03:58] And on valves, Argon is number one overall, but on coding in a terminal, Opus is number one and Argon is number six.
+[04:06] So the pattern is pretty clear.
+[04:08] Writing research, business stuff, Argon.
+[04:10] Building things with code, Opus.
+[04:12] But charts are charts, so let's test it ourselves.
+[04:16] So here's the prompt that I asked both of them to build a phone app for painting and flooring company.
+[04:21] You can scan the room with your camera, the AI spots the furniture live, it measures the room, and builds it in 3D.
+[04:28] Like a little dollhouse you can spin with your finger.
+[04:31] You pick a paint color and floor and it prices everything into a quote that the customer signs with their finger.
+[04:37] One single file, no server, nothing to install, and there's a sample room with exactly one correct price, which is $3,104.68.
+[04:47] Same prompt, word for word.
+[04:49] Argon on the left, Opus 5.5 on the right.
+[04:52] So first, the start screen.
+[04:54] This is the first thing your customer sees.
+[04:56] Look at the design, the logo, and the QR code to open it on your phone.
+[05:01] Now the scan, it this is the hard part.
+[05:03] Can it actually open the camera and spot real furniture live?
+[05:06] Both of them failed.
+[05:08] Now the 3D room, let's spin it around.
+[05:11] Are the walls, the doors, the windows, and the furniture actually there?
+[05:15] Opus is the one really good.
+[05:16] Now let's change the paint and the color and see if the room updates.
+[05:20] Also Opus we can see it works.
+[05:22] And now the most important part, the price, because if the price is wrong, nothing else matters.
+[05:27] The right answer is $3,104.68.
+[05:31] So honestly, I didn't expect this.
+[05:32] Argon actually >> >> doing this well, but Opus in my opinion did better.
+[05:37] But I'll let you judge yourself.
+[05:40] So whether it's Google hyping itself up, I still believe they have done a really good job, but even with all the hype, on my own test, Opus 5.5 still built the better app.
+[05:50] And that lines up with every independent coding test we just looked at.
+[05:54] Now, real quick with pricing right now, Argon is $2 per million tokens in and $10 out.
+[06:00] That's half the price of Opus, but that's an intro price, and it ends November 30th.
+[06:05] After that, it's the exact same price as Opus, line by line.
+[06:10] And you need Google's Pro or Ultra plan or the paid API on their free plan.
+[06:16] Not yet.
+[06:16] My personal take, Argon is the real deal if you do research, writing, legal, or finance, I would 100% try it because it has less hallucinations, especially right now that it's half price.
+[06:27] Whereas for what I do personally, coding, editing my videos, building skills, my choice comes down to the test like this one, and I'll keep testing every model that comes out so you don't have to.
+[06:37] And I'm sure we might hear this week a new model dropping for Claude.
+[06:44] And honestly, launch days, both are always hype.
+[06:47] Let's see what people say after a few weeks of actually using it.
+[06:51] Tell me in the comments if you have tried Argon yet, and what should I make them build next.
+[06:56] Thank you for watching, and I'll see you in the next one.

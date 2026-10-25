@@ -1,0 +1,105 @@
+{
+ "recupere_le": "2026-10-25",
+ "breakout": 1.13,
+ "vph": 402.3,
+ "stats_jour": [
+  {
+   "timestamp": "2026-10-17T23:32:17.875Z",
+   "views": 427,
+   "likes": 30,
+   "comments": 1,
+   "vph": 640.5
+  },
+  {
+   "timestamp": "2026-10-18T00:34:00.448Z",
+   "views": 1288,
+   "likes": 104,
+   "comments": 7,
+   "vph": 846.8852459016393
+  },
+  {
+   "timestamp": "2026-10-19T00:34:34.844Z",
+   "views": 81302,
+   "likes": 1354,
+   "comments": 40,
+   "vph": 2598
+  },
+  {
+   "timestamp": "2026-10-20T00:32:04.741Z",
+   "views": 108830,
+   "likes": 1796,
+   "comments": 38,
+   "vph": 812.0689655172414
+  },
+  {
+   "timestamp": "2026-10-21T00:32:23.846Z",
+   "views": 120879,
+   "likes": 2002,
+   "comments": 42,
+   "vph": 480
+  },
+  {
+   "timestamp": "2026-10-22T00:32:16.340Z",
+   "views": 134136,
+   "likes": 2228,
+   "comments": 48,
+   "vph": 354.6428571428571
+  },
+  {
+   "timestamp": "2026-10-23T00:57:25.565Z",
+   "views": 141960,
+   "likes": 2358,
+   "comments": 53,
+   "vph": 226
+  },
+  {
+   "timestamp": "2026-10-24T00:42:15.512Z",
+   "views": 148190,
+   "likes": 2443,
+   "comments": 55,
+   "vph": 303.75
+  },
+  {
+   "timestamp": "2026-10-25T00:20:00.680Z",
+   "views": 153982,
+   "likes": 2555,
+   "comments": 55,
+   "vph": 344.26229508196724
+  }
+ ],
+ "changements": [
+  {
+   "createdAt": "2026-10-17T23:32:17Z",
+   "title": "How the Top 1% Use Claude Differently (per Anthropic's Lead Engineer)",
+   "thumbnails": null
+  },
+  {
+   "createdAt": "2026-10-18T00:53:46Z",
+   "title": null,
+   "thumbnails": [
+    {
+     "id": "446e9f5d-e53c-4a4e-b35f-885ff5c58ef9",
+     "ytUrl": "https://i.ytimg.com/vi/NarezKh3w4o/maxresdefault.jpg",
+     "snapshotUrl": "https://vidiq-video-thumbnails.s3.us-east-1.amazonaws.com/NarezKh3w4o/446e9f5d-e53c-4a4e-b35f-885ff5c58ef9.jpg"
+    }
+   ]
+  },
+  {
+   "createdAt": "2026-10-18T05:34:14Z",
+   "title": "Anthropic just shared how they use Claude differently (Master it in 12 mins)",
+   "thumbnails": null
+  },
+  {
+   "createdAt": "2026-10-18T05:49:14Z",
+   "title": null,
+   "thumbnails": [
+    {
+     "id": "cbc7b54b-ddcb-4005-be09-bef3a6352e08",
+     "ytUrl": "https://i.ytimg.com/vi/NarezKh3w4o/maxresdefault.jpg",
+     "snapshotUrl": "https://vidiq-video-thumbnails.s3.us-east-1.amazonaws.com/NarezKh3w4o/cbc7b54b-ddcb-4005-be09-bef3a6352e08.jpg"
+    }
+   ]
+  }
+ ],
+ "ab_tests": []
+}

@@ -1,0 +1,268 @@
+[00:00] Ces attestations que tu vois sur mon profil LinkedIn, je les ai obtenus en suivant les cours gratuits et officiels de Cloud.
+[00:05] Je les ai quasiment tous passés pour à peu près une vingtaine d'heures.
+[00:08] Et l'un des seuls regrets que j'avais jusqu'à présent, c'est que ça manquait un peu de concret.
+[00:11] Et bien Anthropic vient d'y remédier car ils viennent tout juste d'annoncer le lancement de leur plateforme Cloud Academy qui regroupe ces cours plus un tas de contenus supplémentaires dont plus de 150 tutoriels et use case pour l'usage de
+[00:22] Cloud.
+[00:23] Alors dans cette vidéo, on va se concentrer sur le cœur de cette formation gratuite, donc sur les 22 cours et je vais te donner mon avis et mon ressenti pour chacun d'entre eux.
+[00:30] Et à partir de ça, on va dégager trois parcours qui s'adressent à des profils différents qui se concrétisent par une certification officielle de Cloud.
+[00:38] Et à la fin de la vidéo, on verra comment associer ces cours avec les tutoriels et les use case présents sur la plateforme.
+[00:45] Alors pour moi, c'est vraiment une bonne nouvelle qu'Anthropic ait mis à jour cette plateforme car pour moi, un cours seul ne suffit pas.
+[00:50] Ça t'apprend les bases, ça t'apprend de bons réflexes, mais rien ne vaut le cas concret et de mettre les mains dans le cambouis.
+[00:56] Et en plus de tout ça, ce qui est intéressant, c'est qu'Anthropic a créé aussi une entrée produit où il va expliquer chacun de ses produits, donc Cloud Code, Cloud Chat, Cloud Co-work, et cetera et cetera.
+[01:05] Et je tiens aussi à te préciser que cette vidéo, elle est pas du tout sponsorisée par Anthropic.
+[01:09] On va tout de suite identifier les trois profils dont je vais te parler.
+[01:12] Le premier profil, c'est le profil du débutant.
+[01:14] Donc c'est quand tu découvres Cloud et tu veux dépasser le stade du simple chat et tu veux commencer à faire un vrai assistant personnel.
+[01:20] Le deuxième profil, c'est le builder.
+[01:22] Là, tu vas sur l'étape d'après, tu commences à travailler sur tes workflows, à automatiser tes processus et tu vas même jusqu'à te créer tes propres petits outils.
+[01:29] Et le dernier c'est celui du développeur.
+[01:31] Là, on monte d'un cran dans la technicité.
+[01:33] Tu utilises Cloud pour envoyer des solutions en ligne, en production, qui utilisent l'IA.
+[01:38] Moi, je suis passé par les trois et donc j'ai assez de recul pour pouvoir identifier dans chacun de ces cours ce qui est intéressant.
+[01:43] Et cette vidéo, elle est pas sponsorisée par Anthropic, donc je vais te dire quand les cours sont intéressants, mais je vais aussi te dire quand il faut les écarter pour pas perdre ton temps.
+[01:51] Alors voici les trois profils, j'ai fait une petite interface pour les représenter.
+[01:55] Donc on a le débutant, le builder, le développeur et tu vois que certains cours se chevauchent un peu.
+[02:01] Alors même si tu te retrouves dans l'un des profils et que tu ne t'identifies pas du tout aux autres, moi je t'invite quand même à écouter ce qu'il y a dans chacun des parcours car tu vas y trouver
+[02:08] des choses intéressantes même si à première vue ce n'est pas ce n'est pas ton profil.
+[02:11] Alors si on reprend les parcours, chaque parcours se termine par une certification.
+[02:17] Ce sont des certifications officielles de Cloud.
+[02:19] Donc pour pour bien faire la distinction, si tu finis un cours tu obtiens une attestation qui dit que tu as terminé le cours, tu as répondu à une dizaine de questions, c'est gratuit et tu peux l'afficher sur ton
+[02:28] profil LinkedIn pour montrer que tu as suivi le cours.
+[02:31] Quand tu as une certification, ça veut dire que tu as passé un examen officiel, le niveau est bien plus élevé, c'est payant et il y a un petit piège dont je te parlerai à la fin quand on parlera
+[02:39] des certifications.
+[02:40] On démarre par le parcours du débutant et tu vas commencer par le cours qui s'appelle AI Fluency.
+[02:45] Donc AI Fluency c'est un cours assez particulier parce qu'il ne va pas du tout parler de concret, il va vraiment prendre un pas de recul.
+[02:52] L'idée c'est de de te poser le framework des 4D.
+[02:55] Donc les 4D c'est déléguer, euh est-ce que je donne mon travail à l'IA, décrire comment je de traduire mon travail pour l'IA, discerner comment j'évalue la réponse de l'IA et diligence comment je j'exploite cette réponse.
+[03:08] Donc ça c'est vraiment un cours qui est différent parce qu'il peut ça pourrait s'appliquer à n'importe quel En fait c'est sur l'usage de l'IA, ça pourrait s'appliquer à n'importe quel LLM.
+[03:16] Euh donc là on est sur Cloud, ça pourrait s'appliquer à Gemini, ça peut s'appliquer à ChatGPT, un modèle open source et cetera.
+[03:22] Et vraiment c'est intéressant, ça te fait réfléchir et ça te pose aussi les bons réflexes.
+[03:27] Donc moi ce cours-là, je le conseille à tout le monde.
+[03:29] Tu as ensuite un second cours qui va être le AI Capabilities and Limits.
+[03:33] Pour moi ces deux-là, c'est le même socle.
+[03:35] En fait, ce cours-là t'explique comment fonctionne une intelligence artificielle générative.
+[03:41] Et donc c'est c'est par exemple ChatGPT ou ici Cloud.
+[03:44] Et en fait ça va t'expliquer pourquoi des fois ça se trompe, ce que tu peux faire avec mais également quelles sont sont ses limites, quels réflexes tu peux avoir à partir du moment où tu vois qu'il y a
+[03:52] quelque chose qui se dégrade, ça t'indique comment recalibrer un peu ton ton exploitation de l'IA.
+[03:58] Donc vraiment très intéressant, je te conseille également ces deux-là à faire quel que soit ton profil.
+[04:05] On a ensuite le Cloud 101 ou Cloud 101.
+[04:09] Ça, c'est un peu le tour du propriétaire.
+[04:11] Ça t'explique toutes les interfaces de Cloud, est-ce que tu vas pouvoir trouver entre Cloud Chat, Cloud Code et Work.
+[04:17] Pour ce cours-là, si tu as appris par toi-même, si tu as un peu exploré, tu vas avoir l'impression d'avoir beaucoup de redites.
+[04:22] Par contre, des fois, moi personnellement, j'ai découvert des petites choses que j'avais pas deviné en explorant comme je l'ai fait.
+[04:28] Et moi, je t'invite réellement à le regarder là aussi quel que soit ton profil sur les sujets des Skills et des Connecteurs.
+[04:35] Vraiment, les deux cours sont très bien faits et ça vaut la peine.
+[04:38] Certains pourraient reprocher que ce qui est montré dedans couvre beaucoup de formes de fonctions payantes.
+[04:43] Moi, j'ai envie de dire que si tu veux utiliser l'IA correctement, euh tu es un peu obligé à un moment de passer, enfin en tout cas pour Cloud, tu es un peu obligé de passer par le mode abonnement.
+[04:52] Et normalement, si tu utilises un temps soit peu correctement, tu vas t'y retrouver.
+[04:56] Donc on reprend maintenant la dernière leçon que je conseille pour le débutant, c'est Introduction to Cloud Cowork.
+[05:02] Et celle-là, moi je l'ai trouvée vraiment intéressante parce que j'avais skippé euh Cowork.
+[05:05] Donc si tu découvres l'outil, vraiment ça te pose toutes les bases.
+[05:08] Et Cowork, c'est ton premier pas vers l'automatisation, ton premier pas vers les process.
+[05:13] Donc moi, vraiment, je pense que tu devrais le faire à moins vraiment que tu aies envie de rester sur du Cloud Code et euh tu vas pas te servir de Cowork.
+[05:21] À mon avis, c'est une erreur parce qu'il y a quand même pas mal de choses qui te facilitent la vie, euh notamment pour les tâches récurrentes et tout ça.
+[05:26] Mais je t'invite à le faire.
+[05:27] Donc ce parcours-là, il se traduit par l'association par le la certification Associate CCA O-F.
+[05:34] Et celle-ci, elle se concentre principalement sur l'usage métier, on va en parler tout à l'heure.
+[05:39] Maintenant, on va prendre le parcours du Builder.
+[05:42] Donc le Builder, comme je te le disais, c'est quelqu'un qui va travailler sur ses euh sur ses process.
+[05:47] Donc moi, par exemple, je je me considère comme un builder parce que j'ai euh mis en place tout un système de veille dans lequel chaque matin, je récupère des articles que je peux ensuite transformer en concept, puis les
+[05:57] faire travailler comme ça jusqu'à ce que je j'ai de la matière pour créer du contenu.
+[06:00] Donc comme je te disais, c'est un peu c'est complémentaire.
+[06:02] Donc ici, je t'ai mis un code où quand quand tu as un carré, c'est ce qu'il faut faire.
+[06:06] Quand tu as un triangle, c'est à faire si si tu as le temps, si tu veux t'intéresser vraiment à tout, mais c'est optionnel.
+[06:11] Et euh le le signe interdit, c'est ça veut dire faut pas y aller.
+[06:15] Donc on a déjà vu ces quatre premiers.
+[06:17] Le 5e, c'est Cloud Code 101.
+[06:19] Donc là, on va t'expliquer donc que c'est un agent qui te permet de faire du code, mais qui peut te faire autre chose.
+[06:25] Et on te on t'explique en quoi c'est différent euh d'une conversation.
+[06:29] On va t'expliquer comment l'installer.
+[06:30] On va t'expliquer une méthode de travail qui va être explorée, planifiée, codée codée, validée.
+[06:35] On t'explique les fichiers de contexte et cetera.
+[06:37] Bref, c'est vraiment une belle introduction.
+[06:39] Par contre, comme on le dit dans le titre, c'est une introduction.
+[06:43] 101, ça veut dire que c'est vraiment le début.
+[06:45] Donc tu peux être euh tu peux rester sur ta faim et au final, c'est un peu les ça reste un peu léger, mais il faut le faire.
+[06:51] Tu as ensuite un cours assez particulier qui va être ici les déclinaisons de AI Fluency.
+[06:59] On l'a vu AI Fluency tout à l'heure, c'est comment poser un cadre dans ton utilisation de l'IA.
+[07:04] Et un cette euh c'est vraiment une méthode que Anthropic propose installe, je pense qu'ils ont une partie conseil qui met en place cette cette cette méthodologie là.
+[07:13] Et globalement, ils ont décliné euh le cours le premier cours qu'on a vu sur tout un tas de profils.
+[07:19] Donc eux, ils ont les enseignants, les étudiants, euh les PME et cetera.
+[07:23] Alors moi ce que moi j'en ai fait trois.
+[07:24] J'ai fait euh celle pour les petites entreprises.
+[07:28] J'ai fait celle pour apprendre l'AI Fluency, pour l'enseigner et j'ai fait celle pour les builders.
+[07:33] Parce que c'est celle qui me me correspondent euh dans le profil que que j'ai en tête.
+[07:39] Et ce Alors, c'est intéressant, c'est quand même un peu redondant euh par rapport à l'AI fluency.
+[07:45] Moi je te conseille d'en faire une quand même c'est c'est assez rapide donc je pense que ça vaut le coup.
+[07:49] Ça te met plus de concret sur cette ce framework des 4D qu'on a vu tout à l'heure enfin qu'on a vu rapidement.
+[07:55] Justement par rapport à tout ça je t'ai préparé un document.
+[07:58] Là je survole les cours.
+[08:00] Je t'explique juste de quoi ça parle globalement, si c'est bien, mon ressenti et est-ce qu'il faut le regarder en fonction du profil.
+[08:06] Je te mets un document dans la description où je vais plus loin.
+[08:09] Je sors les grands concepts que tu vas retrouver dans les cours et cetera.
+[08:12] Donc regarde le le lien il est en description et si tu veux plus d'informations sur le framework des 4D par exemple va voir tu auras un bon résumé condensé.
+[08:20] Ensuite pour ce parcours de builder il faut que tu fasses le l'introduction aux skills donc introduction to skills.
+[08:28] Alors il y a que il y a que six leçons mais le cours est vraiment dense.
+[08:31] Ça va t'expliquer ce que c'est une skill et comment tu la déclenches.
+[08:34] Ça te dit quand il faut utiliser une skill, un sous-agent les hook, les MCP et cetera et ça t'explique comment la partager mais surtout ça ça t'explique comment la débugger.
+[08:43] Donc à partir du moment où tu as une skill qui n'a pas le résultat escompté, ça te donne les clés pour identifier là où il faut creuser.
+[08:49] Vraiment le cours est très bien fait.
+[08:51] C'est ce dernier point là sur le débuggage c'est vraiment intéressant.
+[08:54] Seul bémol un peu couvert maintenant c'est que il n'y a pas d'exercices concrets dessus.
+[08:58] Autant il y en avait sur les autres un peu mais pas beaucoup mais au moins ils avaient le mérite d'être là.
+[09:04] Ici il y en a pas du tout.
+[09:05] Donc il y a des tutoriels, il y a des use cases qui peuvent se rattacher à ça mais Anthropic n'a fait pour l'instant aucun maillage au sein de sa plateforme.
+[09:13] Et ça justement c'est autre chose que je je je fais pour toi c'est que le document dont je te parlais tout à l'heure va également lister tous les cours et les associer aux bons exercices et aux bons use
+[09:22] cases que tu vas trouver sur la plateforme.
+[09:24] Donc c'est intéressant parce que si tu as envie de travailler en même temps que tu suis le cours tu suis le tu regardes le document, tu as plus qu'à cliquer sur les liens et cetera.
+[09:31] Le cours suivant ça va être l'introduction aux sous-agents.
+[09:36] Donc ça t'explique ce que c'est, comment ça marche.
+[09:38] Moi j'ai appris plein de trucs euh et des limites euh parce qu'il y a quand même des limites au sous-agent.
+[09:42] Ça t'évite les certains pièges dans lesquels tu serais tombé et tu aurais pas forcément compris pourquoi.
+[09:46] Bref, euh la leçon est intéressante.
+[09:48] Donc tout ce ça prend une bonne grosse demi-journée.
+[09:51] C'est vraiment intéressant.
+[09:54] Euh c'est les deux derniers là, introduction to skills et to au sub au subagent enfin sous-agent, ça reste quand même très orienté cloud code là où ben tes skills, tu peux également les appliquer dans co-work et euh dans
+[10:07] le chat.
+[10:08] Donc bon c'est ça vaut le coup.
+[10:10] Dans tous les cas, ça vaut le coup de le faire.
+[10:11] Il y il y a des petites limites, il y a des petites faiblesses.
+[10:14] Les cours sont pas parfaits à 100 % mais ils sont quand même très bons.
+[10:17] Donc le dernier euh le dernier parcours, c'est celui du développeur.
+[10:20] Et là moi je te je te conseille donc de faire le AI fluency, le AI capabilities and limits.
+[10:26] Toute cette partie-là enfin le cloud 101 101 euh introduction to co-work, tu peux éventuellement passer si tu considères que tu ne n'utiliseras jamais euh ces ces outils-là dans dans cloud.
+[10:38] Ensuite, toute cette partie-là, ben je te je te conseille de les suivre.
+[10:40] Et alors ce que tu vas découvrir en plus, c'est euh le cloud code in action.
+[10:45] Donc là euh ça te donne de la méthode, comment cadrer tout ça avec le mode plan, euh comment lancer des longues sessions où tu ne vas pas surveiller ton IA tout le temps.
+[10:52] Comment tu configures tout ?
+[10:53] Bref, ça vaut le coup.
+[10:54] C'est indiqué également euh comment utiliser cloud dans GitHub, les SDK et cetera.
+[10:59] Alors pour les autres profils, il y a du code.
+[11:01] Forcément, ça décrit du code, ça ça montre du code, ça demande parfois des exercices avec du code.
+[11:06] Moi je suis pas développeur, je sais lire les codes et cetera parce que j'ai beaucoup travaillé avec eux.
+[11:10] Mais euh voilà, si le code pour toi c'est euh tu comprends rien, tu auras du mal à suivre le tu auras du mal à suivre le cours.
+[11:18] Et c'est dommage parce que il y a quand même des choses à à retenir même quand tu es utilisateur via l'interface.
+[11:22] Ensuite, on a cloud platform 101.
+[11:26] Donc la plateforme la plateforme en fait, c'est la plateforme qui va te permettre de gérer enfin d'utiliser cloud en appelant directement l'API.
+[11:32] Donc ça va être quand toi tu codes ta propre solution, tu fais appel à Claude pour un process, pour n'importe quoi et ça t'explique comment faire.
+[11:40] Donc comment appeler l'API, comment paramétrer ton appel, quel modèle, quel et cetera, comment tu utilises les outils.
+[11:46] C'est très intéressant.
+[11:47] Là aussi, il y a du code.
+[11:49] Honnêtement, moi ça m'a parlé parce que j'ai beaucoup utilisé les LLM via des outils comme Make, des outils d'automatisation, Make and Written et cetera et finalement c'est les champs que tu retrouves à remplir quand tu utilises ces modèles-là
+[12:01] via les modules de d'appel d'API.
+[12:04] Et mais j'aurais bien aimé avoir ce cours-là quand j'ai commencé parce que ça m'aurait évité de tâtonner, d'aller creuser dans la doc et cetera.
+[12:10] Là le cours est est bien fait, concis, précis et et donc je te conseille de le faire.
+[12:16] Aujourd'hui, est-ce que moi j'en aurais ?
+[12:18] Je ne sais pas parce que je pour l'instant je ça fait un moment que j'ai pas réutilisé Claude de cette manière-là parce que aujourd'hui je fais directement en discutant avec Claude code.
+[12:27] Donc est-ce que ça faire, je ne sais pas.
+[12:29] Pour un développeur, c'est clair que oui.
+[12:31] Pour un builder, pas forcément.
+[12:34] On a ensuite l'introduction au MCP.
+[12:36] Alors attention, je ne parle pas ça ne parle pas de connecter ton Claude à un MCP, le MCP d'un de tes outils, ça t'apprend à créer ton serveur MCP et c'est vraiment quelque chose de différent.
+[12:47] Ce cours-là, il est très technique.
+[12:49] Moi je l'ai survolé, j'ai réussi à comprendre quand même pas mal de choses en m'accrochant.
+[12:52] Maintenant, euh maintenant c'est il y a du il y a plein de pythons dedans et cetera.
+[12:58] Donc pas les serpents mais le code.
+[12:59] Donc euh voilà, pour un développeur qui veut, si tu veux créer ton application et la brancher, la rendre accessible à de l'IA et ou à d'autres d'autres applications finalement, oui, il faut le faire et c'est vraiment intéressant.
+[13:12] Si euh tu c'est pas dans c'est pas dans tes objectifs, bah tu peux passer parce que clairement c'est c'est ça.
+[13:18] Par contre, si tu as déjà une des connaissances avec le MCP et tout, tu peux le skipper si tu es développeur avancé entre on va dire, tu peux le skipper, il y a un autre cours après, on en
+[13:26] parle, euh qui est le MCP Advanced.
+[13:30] On a ensuite Building with the API.
+[13:32] Ça va t'apprendre à travailler avec ton API de manière avancée.
+[13:35] Donc, comment par exemple créer des outils pour ton API, comment les installer, comment faire l'appel à l'outil, déclencher l'utilisation de l'outil, récupérer euh le le contenu de l'outil, et cetera et cetera.
+[13:46] Bref, c'est un cours complet sur l'utilisation de l'API euh de Cloud.
+[13:50] Et c'est vraiment intéressant pour les développeurs.
+[13:54] Euh et je pense que c'est un incontournable.
+[13:57] Donc, en suivant ce parcours, tu vas avoir accès à la partie développeur, même si les premiers ne vont pas servir à ça.
+[14:05] Donc, si tu si tu le fais juste pour avoir la certification, tu n'as pas besoin de faire euh les quatre premiers et la Fluency, Capabilities and Limits, Cloud 101, Co-work et cetera.
+[14:16] Si tu veux faire ensuite celle de l'architecte, tu as quand même euh les notions de Fluency qui sont importantes.
+[14:22] Et euh le Cloud 101, ben qui va te permettre quand même de bien comprendre tout l'environnement euh de Cloud, ce qui est ton boulot en tant qu'architecte quand tu veux mettre en place euh des solutions.
+[14:31] Il y a ensuite trois cours supplémentaires que euh que moi je n'ai pas fait.
+[14:36] Euh j'ai Alors, je les ai pas fait parce que je n'ai pas le besoin.
+[14:39] Ces trois cours, ça permet d'avoir la certification architecte avancée.
+[14:44] Et euh pour pour la faire, tu as le cours MCP Advanced.
+[14:48] Là, j'ai j'ai j'ai ouvert, c'est là où j'ai arrêté parce que vraiment, c'est trop technique.
+[14:52] Donc, pour un développeur, je pense que c'est vraiment intéressant.
+[14:55] Ça a l'air vraiment complet, mais euh pour le coup, faut vraiment avoir des besoins d'architecture d'entreprise et pas d'une architecture d'une entreprise de 20-30 personnes, mais plutôt d'un de de taille plus grande.
+[15:06] Et les deux autres euh cours sont sur comment installer euh Cloud, enfin comment utiliser Cloud dans euh dans un environnement de développement sur des plateformes euh de d'hébergement cloud.
+[15:17] Donc là, on a Amazon Bedrock et on a euh l'autre, je ne sais plus laquelle c'est.
+[15:23] Euh bah c'est AWS, tout simplement.
+[15:25] Donc pareil, là je l'ai pas fait parce que c'est pas mon cas d'usage.
+[15:29] Vu la qualité des autres cours, je pense que si tu as ce besoin-là, il faut suivre le cours.
+[15:33] Mais encore une fois, pour moi, c'est trop c'était trop avancé.
+[15:35] Donc on va reparler rapidement de ces certifications et des attestations.
+[15:40] Donc une attestation, ça se passe ?
+[15:42] Tu as 12-13 cours, dont deux ou trois qui vont te demander si le cours était bien.
+[15:46] Et à partir du moment où tu as moins de deux deux mauvaises réponses, tu obtiens la l'attestation.
+[15:52] C'est gratuit.
+[15:54] Tu l'as immédiatement, tu peux la coller directement sur ton profil LinkedIn.
+[15:57] Tu n'as pas de contrainte de temps, de contrainte de non-utilisation de Cloud et cetera.
+[16:02] C'est très facile, honnêtement, c'est très facile à partir du moment où tu as suivi un tant soit peu euh le cours, tu vas l'avoir.
+[16:08] Et moi, en fait, j'ai souvent, quand je me je me sentais à l'aise avec le cours, j'ai commencé par l'attestation pour voir où je devais creuser davantage.
+[16:15] Et j'ai quasiment tout eu du premier coup, il y en a un que j'ai loupé, c'était AI Fluency.
+[16:19] Euh bah parce que c'était en anglais quand je l'ai passé et je je me suis loupé sur une question, il y avait du vocabulaire vraiment que je je maîtrisais pas.
+[16:24] On a ensuite la certification.
+[16:26] Donc là, c'est un véritable examen.
+[16:28] C'est valable pendant un an.
+[16:29] Tu dois répondre à peu près à une soixantaine de questions.
+[16:32] Tu as un temps limité qui est de 2h.
+[16:34] Tu es surveillé, donc tu ne peux pas accéder à l'IA, demander à l'IA de répondre à ta place.
+[16:39] Et tu dois avoir un score de 7200 sur 1000.
+[16:43] Comme je te disais, c'est valable 12 mois, donc si tu veux continuer à afficher cette certification, tu dois la repasser.
+[16:49] Il y a un prix d'entrée, bref, c'est vraiment complètement autre chose.
+[16:52] Par contre, quand tu mets ça sur ton CV ou sur LinkedIn, honnêtement, ça montre que tu as un niveau de maîtrise qui est vraiment conséquent.
+[16:59] Et donc autant l'attestation, je trouve que alors ça vaut le coup de les faire ça enfin en fait, ça vaut le coup de suivre les cours pour te pour bien comprendre Cloud, comment ça marche et cetera.
+[17:07] Si tu veux vraiment progresser sur l'IA, vas-y, fais fais-le et affiche l'attestation sur ton LinkedIn.
+[17:13] Je suis pas sûr que ça t'apporte grand-chose dans ta recherche de boulot.
+[17:16] Par contre, la certification, si tu fais-la si tu veux travailler dans l'IA.
+[17:20] Fais-la aussi pour progresser.
+[17:22] Et là, ça t'aide vraiment, je pense, à trouver du travail, à passer les les premières étapes et surtout à négocier ton salaire derrière puisque tu affiches un maîtrise un niveau de maîtrise qui est avancé.
+[17:30] Et là, je vais te parler de la condition qui est un peu pénible, c'est que euh pour passer les certifications, tu vas pas ça titre individuel, mais tu dois être rattaché à une entreprise qui est l'un des partenaires
+[17:40] d'Anthropic.
+[17:41] Et pour être partenaire d'Anthropic, il faut installer de l'IA.
+[17:43] Et il faut surtout être plus de 10 employés.
+[17:45] Donc moi, j'ai fait une demande avec ma propre société et euh j'ai honnêtement, je l'ai fait parce que euh bah au pire, on va me dire non, mais euh voilà, si ça passe, tant mieux.
+[17:55] Et à ce moment-là, je ferai ces efforts supplémentaires et je ferai certainement une vidéo pour ça pour donner le feedback sur le les certificats et cetera.
+[18:02] Euh mais j'ai peu de chance de pouvoir passer malheureusement.
+[18:04] Donc maintenant, on va regarder vite fait sur la plateforme d'Anthropic Academy.
+[18:08] Donc tu verras, il y a des tutoriels, il y a des cas d'usage.
+[18:11] La frontière, elle est un elle est pas très nette entre les deux.
+[18:13] Je saurais pas moi définir la différence vraiment entre les deux.
+[18:16] Enfin, en tout cas, pourquoi ça nécessite deux entrées vraiment différentes comme ça.
+[18:20] C'est plutôt des formats courts en général entre euh 4 et 20 minutes affichés.
+[18:24] Parfois, il y a qu'une vidéo, une prière d'autre, une vidéo que tu peux retrouver d'ailleurs sur YouTube.
+[18:28] Parfois, il y a du texte, des étapes, c'est plutôt bien bien construit.
+[18:32] Donc je pense que cette plateforme, elle est euh elle est en cours de développement.
+[18:34] Elle va elle va continuer à être enrichie au fil de du temps et ça, c'est une bonne nouvelle.
+[18:38] Tu as beaucoup de contenu comme donc comme je t'ai dit, j'ai euh j'ai travaillé justement avec Claude pour associer les cours et euh les exercices pour essayer de les mailler ensemble.
+[18:47] On se rend compte qu'il y a beaucoup plus de contenu pour les builders et les débutants que pour les développeurs.
+[18:51] La qualité est un peu inégale et surtout rien n'est lié au cours.
+[18:54] Donc ça c'est ça c'est là où je t'apporte un peu le le complément.
+[18:57] Par contre, il y a beaucoup beaucoup beaucoup de cas d'usage et je pense qu'ils vont dans le bon sens puisque à nouveau, je t'ai déjà dit, mais pour moi, tu vas apprendre plus vite en travaillant sur du concret.
+[19:08] Et grâce à ça, tu trouves des cas concrets auxquels tu aurais pas forcément pensé.
+[19:11] Je reviens sur les cours, ce que ça apporte vraiment finalement c'est des réflexes, une base solide.
+[19:16] Le principe qu'ils affichent que j'aime beaucoup c'est leur objectif c'est plus de te donner un mindset que de te donner des fonctionnalités.
+[19:24] Ce qui veut dire que ce mindset il va jamais changer, c'est comment tu vas réfléchir avec l'IA, comment tu vas penser, c'est l'IA influence aussi.
+[19:32] Et par contre les features bah elles sont valables aujourd'hui dans avec la la vitesse où va l'IA aujourd'hui, dans 6 mois elles sont peut-être plus valables.
+[19:38] Et justement pour moi les plateformes c'est très bien si tu débutes fonce, vas-y vas-y vas-y.
+[19:44] Si tu es déjà avancé, si tu trouves que tu te débrouilles déjà bien, c'est pas ça qui va t'aider.
+[19:49] Pour moi il faut de l'échange, il faut parler à d'autres personnes, il faut confronter tes problématiques aux problématiques d'autres personnes.
+[19:56] Tu vas échanger des idées, tu vas échanger des méthodes, tu vas parfois te peut-être pas d'accord et et voilà et c'est pas grave mais c'est l'échange qui te fait progresser à fond.
+[20:05] Et ça c'est ce que c'est ce qu'on fait moi dans ma communauté.
+[20:08] Voilà, on est aujourd'hui on est 180.
+[20:10] On a régulièrement des réunions où on va prendre un sujet, on va dire bah moi ce sujet-là je le fais comme ça et cetera, qu'est-ce que vous en pensez et toi tu fais comment et tout ça.
+[20:18] Donc ça pour moi c'est une communauté, c'est le le meilleur moyen d'apprendre aujourd'hui et de se tenir informé.
+[20:24] Voilà, parce que ça va très vite.
+[20:26] Et deuxième limite que je trouve dans tout ça c'est qu'en fait l'IA c'est personnalisable et ça doit être personnalisé.
+[20:36] L'IA ça marche avec ton environnement de travail.
+[20:38] Là à la fin des 22 cours tu sais écrire le skill, tu sais la déclencher et cetera mais pour moi ça reste qu'un truc un peu cloisonné, un peu figé.
+[20:45] Ce que tu dois faire c'est avoir tout un tas de systèmes qui enfin d'outils qui communiquent entre eux.
+[20:50] Quand tu demandes à l'IA, tu lui demandes un truc, elle sait exactement où aller chercher, comment le ressortir et tout ça.
+[20:55] Et ça c'est ce qu'on appelle un AI OS.
+[20:57] Pour moi c'est vraiment l'étape d'après, l'étape de l'utilisateur avancé.
+[21:00] Ça connait ton contexte, ça connait ton historique, tes décisions et cetera, comment tu réfléchis et tu gagnes un temps fou.
+[21:06] Donc j'ai fait une masterclass là-dessus, je te la mets ici en vidéo.
+[21:09] Franchement, va jeter un coup d'œil si ça t'intéresse.
+[21:12] Tu verras, c'est un vrai game changer dans ta productivité.
+[21:15] Dernière chose, dis-moi en commentaire quel parcours tu comptes faire sur la la Cloud Academy, ça m'intéresse et j'ai envie de savoir.
+[21:22] Donc, mets-le en commentaire et je te dis à bientôt pour la prochaine vidéo.

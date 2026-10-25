@@ -51,7 +51,7 @@ Les domaines se règlent dans `systeme/metadonnees.md`, jamais ici : `systeme/sc
 
 <!-- Début des projets actifs : générés par systeme/scripts/index.py depuis l'en-tête des fichiers de projets/. -->
 
-- [references-youtube](projets/references-youtube.md) · contenu · Thomas relit la matrice et la grille d'analyse des concurrents
+- [references-youtube](projets/references-youtube.md) · contenu · Thomas lit les croisements des 60 vidéos et choisit comment les présenter visuellement
 - [socle-aios-membres](projets/socle-aios-membres.md) · produits · À définir
 - [video-brevo](projets/video-brevo.md) · contenu · À définir
 

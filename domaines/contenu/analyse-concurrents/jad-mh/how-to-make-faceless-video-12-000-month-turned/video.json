@@ -1,0 +1,133 @@
+{
+ "id": "E8Qz5fXZIaw",
+ "url": "https://www.youtube.com/watch?v=E8Qz5fXZIaw",
+ "chaine": "jad-mh",
+ "titre": "How To Make Faceless Video $12,000/month (Turned Into A Skill)",
+ "titre_ytdlp": "How To Make Faceless Video $12,000/month (Turned Into A Skill)",
+ "publie": "2026-10-15T19:46:18Z",
+ "duree_s": 599,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "BglGrAoqM5OdEWMcAhuNmY3O9Hg",
+  "id": "E8Qz5fXZIaw",
+  "snippet": {
+   "publishedAt": "2026-10-15T19:46:18Z",
+   "channelId": "UCkbjWQ7kLFNRY_RiJbqVWRg",
+   "title": "How To Make Faceless Video $12,000/month (Turned Into A Skill)",
+   "description": "✅Higgsfield Promo: https://higgsfield.ai/s/katana-inside-claude-yt-jadm-h-xUOkwW\n\nI made 3 faceless videos with Claude: a 3-minute survival story, a 33-second horror short and a 30-second 3D history explainer. No image generator, no video model, no stock footage. Claude built every frame in code, and the voice, music and sound effects run locally on my Mac. Here's how I built them step by step, what they cost, and 3 ways people make money with faceless content 👇\n\n⚡ The Higgsfield offer I mentioned (promo for the API, so you don't need a subscription): [HIGGSFIELD PROMO LINK]\n\n🎁 The skill is free in my Skool, in the post for this video (Google Drive folder + install prompt + the style sheet prompt): https://www.skool.com/nextphase-5790\nStuck installing it? We run free weekly calls in the Skool to help you set it up.\n\n🧪 How it works\n1. Start from a faceless format that's already getting views. Take the format (pacing, layout, how the narrator talks), never the story or the characters.\n2. Make a style sheet: 1 image with all the rules of your world (fonts, colors with hex codes, characters, props, the world, frame layout, rules). I made mine in Higgsfield with GPT Image 2.0.\n3. Give Claude Code (Opus 5.5) the style sheet + a link to the reference video. It studies the reference, writes a brand new story, makes the voice, music and sound, builds the world in code, checks every shot and renders the video.\n\n⏱️ What it took\n• Survival story (BLACKOUT, Part 1, 3:04, vertical): about 53 minutes from my message to the finished video\n• Horror short (The 2 A.M. Call, 0:33, 16:9 + 9:16): about 40 minutes\n• 3D history explainer (Hard Boiled, 0:30, 16:9): about 66 minutes\n\n💸 What it cost\n• Style sheets: 3.5 Higgsfield credits each. The hard hat one took 2 tries, so 14 credits for all 3.\n• Claude: my Max plan, no API, nothing extra. It's heavy work, so on a smaller plan you'll hit your limit faster.\n• Voice (free local model), music (free local model for 2 of them, code for the horror one), sound effects and rendering: free, all on my Mac.\n• Not perfect yet: faces look a bit like clay up close, and the people move more like posed mannequins than real actors.\n\n💰 3 ways faceless content makes money (checked Oct 15, 2026)\n1. Your own YouTube channel. Partner Program today: 1,000 subs + 4,000 watch hours (12 months) or 10M Shorts views (90 days). From Feb 1, 2027, new channels need 8,000 watch hours or 20M Shorts views. Channels already in keep their spot: https://support.google.com/youtube/answer/12843009\n2. TikTok Creator Rewards: videos of at least 1 minute, 10,000 followers, 100,000 views in the last 30 days: https://www.tiktok.com/legal/page/global/creator-rewards-program-us/en\n3. Sell it to a business: one style sheet in their colors, a new video every week.\n\n✏️ Correction\n• 8:37 I say inauthentic content \"could definitely strike the channel\". It's not a strike: mass-produced, repetitive or template videos just can't be monetized, so a channel full of them loses its monetization: https://support.google.com/youtube/answer/1311392\n\n🐦 The posts shown in the video\n• 4 faceless channels, $33,962 in March (1 of them $12,518), @Ed_FacelessYT: https://x.com/Ed_FacelessYT/status/2040543745943220686\n• \"$51,599 generated (47 day old channel)\", @tye1337: https://x.com/tye1337/status/2041000225188294962\n• The Fortune profile post (1.6M views), @knoxtwts: https://x.com/knoxtwts/status/2023808679137443976\n• Fortune: a 22-year-old making \"roughly $40,000 to $60,000 a month\" with faceless channels, scripts written with Claude: https://fortune.com/2025/12/30/ai-slop-faceless-youtube-accounts-adavia-davis-user-generated-content/\nThese are their numbers, not a promise of what you'll make.\n\n🎬 Formats that inspired the 3 videos: @beaniesurvives (TikTok), @enthyme (YouTube), @zackdfilms (YouTube). The stories in my videos are new.\n\n⏱️ Chapters\n0:00 These 3 videos were made in code\n0:32 The posts on X\n1:26 Step 1: The format already exists\n2:10 Step 2: The style sheet\n3:26 Step 3: Claude builds it\n5:33 How long did it take? (and the cost)\n7:12 The skill\n7:51 How to actually profit\n\n🙏 We just passed 6,200 subscribers. Thank you for every comment and every sub. I'll keep giving these skills away.\n\n💬 Which of the 3 would you post on your channel: the survival story, the horror short or the history explainer? Tell me in the comments.\n\n🔔 Subscribe, I drop free skills every week. See you in the next one.\n\n#claude #facelessyoutube #claudecode\nclaude, claude code, claude opus 5.5, opus 5.5, faceless youtube, faceless youtube channel, faceless channel, faceless videos, ai faceless videos, faceless youtube automation, youtube automation, make money faceless youtube, faceless tiktok, ai video, ai animation, motion graphics, code animation, horror short, survival story, 3d explainer, style sheet, higgsfield, gpt image 2, claude skill, youtube partner program 2027, tiktok creator rewards",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/E8Qz5fXZIaw/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/E8Qz5fXZIaw/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/E8Qz5fXZIaw/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/E8Qz5fXZIaw/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/E8Qz5fXZIaw/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    }
+   },
+   "channelTitle": "Jad M.H  | AI Automation",
+   "categoryId": "22",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "en",
+   "localized": {
+    "title": "How To Make Faceless Video $12,000/month (Turned Into A Skill)",
+    "description": "✅Higgsfield Promo: https://higgsfield.ai/s/katana-inside-claude-yt-jadm-h-xUOkwW\n\nI made 3 faceless videos with Claude: a 3-minute survival story, a 33-second horror short and a 30-second 3D history explainer. No image generator, no video model, no stock footage. Claude built every frame in code, and the voice, music and sound effects run locally on my Mac. Here's how I built them step by step, what they cost, and 3 ways people make money with faceless content 👇\n\n⚡ The Higgsfield offer I mentioned (promo for the API, so you don't need a subscription): [HIGGSFIELD PROMO LINK]\n\n🎁 The skill is free in my Skool, in the post for this video (Google Drive folder + install prompt + the style sheet prompt): https://www.skool.com/nextphase-5790\nStuck installing it? We run free weekly calls in the Skool to help you set it up.\n\n🧪 How it works\n1. Start from a faceless format that's already getting views. Take the format (pacing, layout, how the narrator talks), never the story or the characters.\n2. Make a style sheet: 1 image with all the rules of your world (fonts, colors with hex codes, characters, props, the world, frame layout, rules). I made mine in Higgsfield with GPT Image 2.0.\n3. Give Claude Code (Opus 5.5) the style sheet + a link to the reference video. It studies the reference, writes a brand new story, makes the voice, music and sound, builds the world in code, checks every shot and renders the video.\n\n⏱️ What it took\n• Survival story (BLACKOUT, Part 1, 3:04, vertical): about 53 minutes from my message to the finished video\n• Horror short (The 2 A.M. Call, 0:33, 16:9 + 9:16): about 40 minutes\n• 3D history explainer (Hard Boiled, 0:30, 16:9): about 66 minutes\n\n💸 What it cost\n• Style sheets: 3.5 Higgsfield credits each. The hard hat one took 2 tries, so 14 credits for all 3.\n• Claude: my Max plan, no API, nothing extra. It's heavy work, so on a smaller plan you'll hit your limit faster.\n• Voice (free local model), music (free local model for 2 of them, code for the horror one), sound effects and rendering: free, all on my Mac.\n• Not perfect yet: faces look a bit like clay up close, and the people move more like posed mannequins than real actors.\n\n💰 3 ways faceless content makes money (checked Oct 15, 2026)\n1. Your own YouTube channel. Partner Program today: 1,000 subs + 4,000 watch hours (12 months) or 10M Shorts views (90 days). From Feb 1, 2027, new channels need 8,000 watch hours or 20M Shorts views. Channels already in keep their spot: https://support.google.com/youtube/answer/12843009\n2. TikTok Creator Rewards: videos of at least 1 minute, 10,000 followers, 100,000 views in the last 30 days: https://www.tiktok.com/legal/page/global/creator-rewards-program-us/en\n3. Sell it to a business: one style sheet in their colors, a new video every week.\n\n✏️ Correction\n• 8:37 I say inauthentic content \"could definitely strike the channel\". It's not a strike: mass-produced, repetitive or template videos just can't be monetized, so a channel full of them loses its monetization: https://support.google.com/youtube/answer/1311392\n\n🐦 The posts shown in the video\n• 4 faceless channels, $33,962 in March (1 of them $12,518), @Ed_FacelessYT: https://x.com/Ed_FacelessYT/status/2040543745943220686\n• \"$51,599 generated (47 day old channel)\", @tye1337: https://x.com/tye1337/status/2041000225188294962\n• The Fortune profile post (1.6M views), @knoxtwts: https://x.com/knoxtwts/status/2023808679137443976\n• Fortune: a 22-year-old making \"roughly $40,000 to $60,000 a month\" with faceless channels, scripts written with Claude: https://fortune.com/2025/12/30/ai-slop-faceless-youtube-accounts-adavia-davis-user-generated-content/\nThese are their numbers, not a promise of what you'll make.\n\n🎬 Formats that inspired the 3 videos: @beaniesurvives (TikTok), @enthyme (YouTube), @zackdfilms (YouTube). The stories in my videos are new.\n\n⏱️ Chapters\n0:00 These 3 videos were made in code\n0:32 The posts on X\n1:26 Step 1: The format already exists\n2:10 Step 2: The style sheet\n3:26 Step 3: Claude builds it\n5:33 How long did it take? (and the cost)\n7:12 The skill\n7:51 How to actually profit\n\n🙏 We just passed 6,200 subscribers. Thank you for every comment and every sub. I'll keep giving these skills away.\n\n💬 Which of the 3 would you post on your channel: the survival story, the horror short or the history explainer? Tell me in the comments.\n\n🔔 Subscribe, I drop free skills every week. See you in the next one.\n\n#claude #facelessyoutube #claudecode\nclaude, claude code, claude opus 5.5, opus 5.5, faceless youtube, faceless youtube channel, faceless channel, faceless videos, ai faceless videos, faceless youtube automation, youtube automation, make money faceless youtube, faceless tiktok, ai video, ai animation, motion graphics, code animation, horror short, survival story, 3d explainer, style sheet, higgsfield, gpt image 2, claude skill, youtube partner program 2027, tiktok creator rewards"
+   },
+   "defaultAudioLanguage": "en"
+  },
+  "contentDetails": {
+   "duration": "PT9M59S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": false,
+   "contentRating": {},
+   "projection": "rectangular"
+  },
+  "statistics": {
+   "viewCount": "10463",
+   "likeCount": "236",
+   "favoriteCount": "0",
+   "commentCount": "28"
+  }
+ },
+ "ytdlp": {
+  "id": "E8Qz5fXZIaw",
+  "title": "How To Make Faceless Video $12,000/month (Turned Into A Skill)",
+  "description": "✅Higgsfield Promo: https://higgsfield.ai/s/katana-inside-claude-yt-jadm-h-xUOkwW\n\nI made 3 faceless videos with Claude: a 3-minute survival story, a 33-second horror short and a 30-second 3D history explainer. No image generator, no video model, no stock footage. Claude built every frame in code, and the voice, music and sound effects run locally on my Mac. Here's how I built them step by step, what they cost, and 3 ways people make money with faceless content 👇\n\n⚡ The Higgsfield offer I mentioned (promo for the API, so you don't need a subscription): [HIGGSFIELD PROMO LINK]\n\n🎁 The skill is free in my Skool, in the post for this video (Google Drive folder + install prompt + the style sheet prompt): https://www.skool.com/nextphase-5790\nStuck installing it? We run free weekly calls in the Skool to help you set it up.\n\n🧪 How it works\n1. Start from a faceless format that's already getting views. Take the format (pacing, layout, how the narrator talks), never the story or the characters.\n2. Make a style sheet: 1 image with all the rules of your world (fonts, colors with hex codes, characters, props, the world, frame layout, rules). I made mine in Higgsfield with GPT Image 2.0.\n3. Give Claude Code (Opus 5.5) the style sheet + a link to the reference video. It studies the reference, writes a brand new story, makes the voice, music and sound, builds the world in code, checks every shot and renders the video.\n\n⏱️ What it took\n• Survival story (BLACKOUT, Part 1, 3:04, vertical): about 53 minutes from my message to the finished video\n• Horror short (The 2 A.M. Call, 0:33, 16:9 + 9:16): about 40 minutes\n• 3D history explainer (Hard Boiled, 0:30, 16:9): about 66 minutes\n\n💸 What it cost\n• Style sheets: 3.5 Higgsfield credits each. The hard hat one took 2 tries, so 14 credits for all 3.\n• Claude: my Max plan, no API, nothing extra. It's heavy work, so on a smaller plan you'll hit your limit faster.\n• Voice (free local model), music (free local model for 2 of them, code for the horror one), sound effects and rendering: free, all on my Mac.\n• Not perfect yet: faces look a bit like clay up close, and the people move more like posed mannequins than real actors.\n\n💰 3 ways faceless content makes money (checked Oct 15, 2026)\n1. Your own YouTube channel. Partner Program today: 1,000 subs + 4,000 watch hours (12 months) or 10M Shorts views (90 days). From Feb 1, 2027, new channels need 8,000 watch hours or 20M Shorts views. Channels already in keep their spot: https://support.google.com/youtube/answer/12843009\n2. TikTok Creator Rewards: videos of at least 1 minute, 10,000 followers, 100,000 views in the last 30 days: https://www.tiktok.com/legal/page/global/creator-rewards-program-us/en\n3. Sell it to a business: one style sheet in their colors, a new video every week.\n\n✏️ Correction\n• 8:37 I say inauthentic content \"could definitely strike the channel\". It's not a strike: mass-produced, repetitive or template videos just can't be monetized, so a channel full of them loses its monetization: https://support.google.com/youtube/answer/1311392\n\n🐦 The posts shown in the video\n• 4 faceless channels, $33,962 in March (1 of them $12,518), @Ed_FacelessYT: https://x.com/Ed_FacelessYT/status/2040543745943220686\n• \"$51,599 generated (47 day old channel)\", @tye1337: https://x.com/tye1337/status/2041000225188294962\n• The Fortune profile post (1.6M views), @knoxtwts: https://x.com/knoxtwts/status/2023808679137443976\n• Fortune: a 22-year-old making \"roughly $40,000 to $60,000 a month\" with faceless channels, scripts written with Claude: https://fortune.com/2025/12/30/ai-slop-faceless-youtube-accounts-adavia-davis-user-generated-content/\nThese are their numbers, not a promise of what you'll make.\n\n🎬 Formats that inspired the 3 videos: @beaniesurvives (TikTok), @enthyme (YouTube), @zackdfilms (YouTube). The stories in my videos are new.\n\n⏱️ Chapters\n0:00 These 3 videos were made in code\n0:32 The posts on X\n1:26 Step 1: The format already exists\n2:10 Step 2: The style sheet\n3:26 Step 3: Claude builds it\n5:33 How long did it take? (and the cost)\n7:12 The skill\n7:51 How to actually profit\n\n🙏 We just passed 6,200 subscribers. Thank you for every comment and every sub. I'll keep giving these skills away.\n\n💬 Which of the 3 would you post on your channel: the survival story, the horror short or the history explainer? Tell me in the comments.\n\n🔔 Subscribe, I drop free skills every week. See you in the next one.\n\n#claude #facelessyoutube #claudecode\nclaude, claude code, claude opus 5.5, opus 5.5, faceless youtube, faceless youtube channel, faceless channel, faceless videos, ai faceless videos, faceless youtube automation, youtube automation, make money faceless youtube, faceless tiktok, ai video, ai animation, motion graphics, code animation, horror short, survival story, 3d explainer, style sheet, higgsfield, gpt image 2, claude skill, youtube partner program 2027, tiktok creator rewards",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "These 3 videos were made in code",
+    "end_time": 32
+   },
+   {
+    "start_time": 32,
+    "title": "The posts on X",
+    "end_time": 86
+   },
+   {
+    "start_time": 86,
+    "title": "Step 1: The format already exists",
+    "end_time": 130
+   },
+   {
+    "start_time": 130,
+    "title": "Step 2: The style sheet",
+    "end_time": 206
+   },
+   {
+    "start_time": 206,
+    "title": "Step 3: Claude builds it",
+    "end_time": 333
+   },
+   {
+    "start_time": 333,
+    "title": "How long did it take? (and the cost)",
+    "end_time": 432
+   },
+   {
+    "start_time": 432,
+    "title": "The skill",
+    "end_time": 471
+   },
+   {
+    "start_time": 471,
+    "title": "How to actually profit",
+    "end_time": 599
+   }
+  ],
+  "tags": [],
+  "categories": [
+   "People & Blogs"
+  ],
+  "heatmap": null,
+  "upload_date": "20261015",
+  "duration": 599,
+  "channel": "Jad M.H  | AI Automation",
+  "channel_id": "UCkbjWQ7kLFNRY_RiJbqVWRg",
+  "channel_follower_count": 8570,
+  "thumbnail": "https://i.ytimg.com/vi/E8Qz5fXZIaw/maxresdefault.jpg",
+  "view_count": 10463,
+  "like_count": 236,
+  "comment_count": 14
+ }
+}

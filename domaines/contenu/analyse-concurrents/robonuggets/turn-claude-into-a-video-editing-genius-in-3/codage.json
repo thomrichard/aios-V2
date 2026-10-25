@@ -1,0 +1,532 @@
+{
+  "video_id": "uaVYHiF8f7k",
+  "chaine": "robonuggets",
+  "titre": {
+    "attente_au_clic": "Apprendre en 3 étapes simples à faire monter mes vidéos par Claude (Sonnet 5.5), sans y toucher.",
+    "schema": "Turn <Outil> Into a <Métier> GENIUS (in <N> simple steps)",
+    "promesse": "Claude devient un monteur vidéo de génie",
+    "audace": "audacieux",
+    "registre": "douleur-reve",
+    "briques": [
+      "resultat",
+      "vitesse"
+    ],
+    "marqueurs": [
+      "chiffre",
+      "majuscules"
+    ],
+    "nom_outil": true
+  },
+  "codeur": "agent robonuggets",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "tuto",
+    "format_secondaire": "actu",
+    "sujet": "Faire couper et animer ses vidéos par Sonnet 5.5 avec une skill /animate : transcrire et couper, un design system, puis diriger par commentaires",
+    "outils": [
+      "Sonnet 5.5",
+      "skill /animate",
+      "AssemblyAI",
+      "Whisper",
+      "ElevenLabs",
+      "Rubric Editor",
+      "FFmpeg",
+      "skillery.dev"
+    ],
+    "niveau": "intermediaire",
+    "objectif_probable": "communaute"
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "neutre (petit visage de Jay dans l'écran du logiciel) ; mascotte pouce levé",
+    "regard": "camera",
+    "texte": "SONNET 5.5 HANDS OFF Video is Solved",
+    "texte_mots": 7,
+    "repete_titre": "partiel",
+    "elements": [
+      "mascotte Claude orange assise sur un tabouret, pouce levé",
+      "écran avec un logiciel de montage : la vidéo de Jay et une timeline colorée",
+      "étiquettes « SONNET 5.5 » et « HANDS OFF » avec flèches",
+      "texte « Video is Solved » en serif noir"
+    ],
+    "nb_elements": 4,
+    "fond": "clair, blanc cassé, bureau en bois",
+    "couleurs": [
+      "blanc cassé",
+      "orange Claude",
+      "noir",
+      "bois clair"
+    ],
+    "curiosity_gap": "resultat",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Sonnet 5.5 got released early this week, and [...] it's quite incredible [...] video editing",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Une page « Sonnet STYLES » (grille de styles d'animation) sur fond noir, Jay en vignette ; puis des animations Sonnet en 3D et en collage",
+    "premier_plan_reprend_miniature": "non",
+    "ouverture": [
+      "actu-annonce",
+      "demo-d-abord",
+      "pont"
+    ],
+    "preuve": {
+      "type": "resultat-montre",
+      "seconde": 14,
+      "description": "Le rush de Jay à gauche, la version montée et animée par Sonnet 5.5 à droite ; 0:50 « all done by Sonnet 5.5 »"
+    },
+    "annonce_plan": {
+      "presente": true,
+      "nb_points": 3,
+      "a_l_ecran": false
+    },
+    "boucle_vers_la_fin": {
+      "presente": true,
+      "citation": "Later in the video, I'll also show you how I was able to codify these design systems",
+      "seconde_resolution": 653,
+      "tenue": "oui"
+    },
+    "seconde_premier_point": 99,
+    "attente_tenue": "partiel",
+    "attente_note": "Le résultat est montré, mais la 1re étape n'arrive qu'à 4:44 et les étapes passent vite. Un commentaire dit « I never learned how to do it » ; trois disent que le guide n78 est introuvable."
+  },
+  "structure": {
+    "modele": "pas-a-pas",
+    "segments": [
+      {
+        "debut": 0,
+        "fin": 99,
+        "titre": "Intro : Sonnet 5.5, rush contre version animée, les styles, 3 étapes promises",
+        "role": "intro",
+        "pull": true,
+        "paint": true,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": false,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 99,
+        "fin": 284,
+        "titre": "Context : moitié prix d'Opus, tout en code, un design system réutilisable",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": false,
+        "payoff": true,
+        "relance_sortie": true
+      },
+      {
+        "debut": 284,
+        "fin": 342,
+        "titre": "Étape 1 : transcrire et couper (AssemblyAI)",
+        "role": "point",
+        "pull": true,
+        "paint": false,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": false,
+        "consignes": true,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 342,
+        "fin": 356,
+        "titre": "Guide PDF gratuit",
+        "role": "cta",
+        "pull": false,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 356,
+        "fin": 491,
+        "titre": "Étape 1 suite : Whisper, ElevenLabs, la prise ratée coupée, Rubric Editor",
+        "role": "demo",
+        "pull": false,
+        "paint": true,
+        "point": true,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 491,
+        "fin": 524,
+        "titre": "La communauté RoboNuggets",
+        "role": "cta",
+        "pull": true,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 524,
+        "fin": 748,
+        "titre": "Étape 2 : animer avec un vrai design system",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": true,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": true
+      },
+      {
+        "debut": 748,
+        "fin": 916,
+        "titre": "Étape 3 : diriger par commentaires, puis tout ranger dans /animate",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": true,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 916,
+        "fin": 946,
+        "titre": "Wrap up",
+        "role": "fin",
+        "pull": false,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      }
+    ],
+    "relances": [
+      {
+        "seconde": 272,
+        "type": "boucle-ouverte",
+        "citation": "Later in the video, I'll also show you how I was able to codify these design systems"
+      },
+      {
+        "seconde": 285,
+        "type": "question-spectateur",
+        "citation": "So what are now the three steps so that you can fully utilize this capability"
+      },
+      {
+        "seconde": 529,
+        "type": "rupture",
+        "citation": "using a generic prompt, you probably would be disappointed"
+      },
+      {
+        "seconde": 652,
+        "type": "question-spectateur",
+        "citation": "So, what can you do?"
+      },
+      {
+        "seconde": 749,
+        "type": "annonce-suite",
+        "citation": "for you to actually polish it, you need to get to step three"
+      }
+    ],
+    "histoires": [
+      {
+        "seconde": 116,
+        "acte": "anecdote",
+        "resume": "Après une vidéo sur le montage avec Opus 5.5, Jay se demande si Sonnet, deux fois moins cher, fait aussi bien."
+      },
+      {
+        "seconde": 258,
+        "acte": "client-autre",
+        "resume": "Vincent Wei a créé ces thèmes d'animation avec Opus 5.5 ; Jay les refait avec Sonnet."
+      },
+      {
+        "seconde": 653,
+        "acte": "vision-build",
+        "resume": "Les prompts de Vincent Wei n'étant pas publiés, Jay donne le post X à Claude, qui prend des captures avec FFmpeg et recrée le design system."
+      },
+      {
+        "seconde": 762,
+        "acte": "vision-build",
+        "resume": "Un clip sur Claude Design : la 1re version en dessins au trait, un commentaire, la 2e version avec la vraie interface."
+      }
+    ],
+    "payoffs": [
+      {
+        "seconde": 14,
+        "resume": "Le rush et sa version animée par Sonnet 5.5, côte à côte"
+      },
+      {
+        "seconde": 420,
+        "resume": "Claude repère la prise ratée et garde la dernière"
+      },
+      {
+        "seconde": 684,
+        "resume": "La planche de captures FFmpeg, puis le design system recréé"
+      },
+      {
+        "seconde": 845,
+        "resume": "La 2e version du clip, avec l'interface de Claude Design"
+      },
+      {
+        "seconde": 887,
+        "resume": "Tout ranger dans la skill /animate pour la fois suivante"
+      }
+    ],
+    "premier_payoff_seconde": 14,
+    "jargon": 2,
+    "repetitions": 1,
+    "test_du_tweet": "Sonnet 5.5 monte et anime tes vidéos pour moitié moins cher qu'Opus. 3 étapes : transcrire et couper les prises ratées, animer avec ton propre design system (pas les réglages par défaut), puis diriger par commentaires et tout ranger dans une skill /animate."
+  },
+  "habillage": {
+    "face_camera": {
+      "presente": true,
+      "cadrage": "vignette en carré arrondi en bas à gauche presque tout le temps ; Jay aussi dans les rushs montrés",
+      "decor": "bureau, étagère, fleurs, micro Rode ; casquette blanche"
+    },
+    "parts": {
+      "face": 5,
+      "ecran": 75,
+      "motion": 20,
+      "broll": 0
+    },
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": [
+      "split-screen",
+      "etiquettes",
+      "chiffres-animes",
+      "plan-a-l-ecran",
+      "curseur-surligne"
+    ],
+    "charte": "Captures sombres avec accent orange ; démos dans tous les styles de Sonnet (3D, collage, isométrique, verre) ; les 3 étapes en schéma dessiné au trait. La miniature claire en pâte à modeler ne reprend que l'orange et le logiciel de montage.",
+    "rythme": "contraste",
+    "notes": "Rush et version animée côte à côte, étiquetés. Le Rubric Editor, outil fait pour la communauté, occupe une bonne part de l'écran ; on entend deux raccords abrupts (3:26 et 13:10)."
+  },
+  "fin": {
+    "ctas": [
+      {
+        "seconde": 342,
+        "type": "lead-magnet",
+        "cible": "guide PDF de 8 pages (communauté Skool gratuite)",
+        "amene_par": "pendant-demo",
+        "citation": "all of these starter prompts and resources [...] I just put together this guide"
+      },
+      {
+        "seconde": 446,
+        "type": "produit",
+        "cible": "Rubric Editor, outil en cours de développement pour la communauté",
+        "amene_par": "pendant-demo",
+        "citation": "this Rubric editor, it is a tool that we're developing for our community"
+      },
+      {
+        "seconde": 491,
+        "type": "communaute-payante",
+        "cible": "RoboNuggets (Claude Living Masterclass, cours Agents as a Service)",
+        "amene_par": "apres-valeur",
+        "citation": "if you want to learn how to build and sell AI systems that businesses actually pay for"
+      },
+      {
+        "seconde": 520,
+        "type": "communaute-payante",
+        "cible": "lien dans le commentaire épinglé",
+        "amene_par": "apres-valeur",
+        "citation": "check that just in the pin comment below"
+      },
+      {
+        "seconde": 807,
+        "type": "produit",
+        "cible": "Rubric Editor",
+        "amene_par": "pendant-demo",
+        "citation": "this Rubric Editor, which is the toolkit that we're making for our community"
+      },
+      {
+        "seconde": 926,
+        "type": "abonnement",
+        "cible": "s'abonner",
+        "amene_par": "fin",
+        "citation": "consider tapping subscribe below if you haven't yet"
+      }
+    ],
+    "sponsor": {
+      "present": false,
+      "nom": null,
+      "debut": null,
+      "duree": null,
+      "forme": null
+    },
+    "liens_description": {
+      "lead-magnet": 1,
+      "communaute-payante": 1,
+      "produit": 1,
+      "service": 1,
+      "affiliation": 5,
+      "abonnement": 1,
+      "reseaux": 4
+    },
+    "commentaire_epingle": {
+      "texte": "Le guide de montage avec Sonnet 5.5 gratuit (Skool gratuit, « search for n78 ») et la communauté payante",
+      "type": "lead-magnet"
+    },
+    "recap_final": false,
+    "derniere_phrase": "consider tapping subscribe below if you haven't yet [...] I'll see you all next time. Cheers.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": [
+      "l'effet « waouh » du résultat",
+      "Sonnet Max contre les autres réglages",
+      "l'envie de récupérer la skill /animate et le Rubric Editor"
+    ],
+    "demandes": [
+      "partager la skill /animate (au moins 2)",
+      "savoir comment obtenir le Rubric Editor",
+      "un pas-à-pas « over the shoulder »",
+      "le coût d'un montage de 10 minutes"
+    ],
+    "critiques": [
+      "« glossed over a lot [...] I never learned how to do it »",
+      "le guide n78 introuvable (3 commentaires)",
+      "« Or....just learn the skill and video edit »"
+    ],
+    "reprises": [
+      "« /animate »",
+      "« Rubric editor »"
+    ],
+    "signal_promesse": "mixte"
+  },
+  "techniques": {
+    "ap_alignement_5s": {
+      "note": 1,
+      "preuve": "1re phrase sur Sonnet 5.5 et le montage, proche du titre ; 1er plan une grille de styles, sans le logiciel de montage de la miniature"
+    },
+    "ap_boucle_curiosite": {
+      "note": 1,
+      "preuve": "4:32 « Later in the video, I'll also show you how I was able to codify these design systems », résolue à 10:53, mais ouverte après l'intro"
+    },
+    "ap_effort_montre": {
+      "note": 1,
+      "preuve": "1:48 « our own internal testing and in our community », après l'intro"
+    },
+    "ap_setup_progress_payoff": {
+      "note": 2,
+      "preuve": "Le rush (0:14), puis couper (4:44), animer (8:44), diriger (12:28), jusqu'à la 2e version du clip (14:05)"
+    },
+    "ap_contraste_rythme": {
+      "note": 2,
+      "preuve": "26 changements de plan à la 2e minute, 1 à la 8e et à la 14e : passages nettement plus rapides et plus lents"
+    },
+    "ap_montrer_sans_son": {
+      "note": 1,
+      "preuve": "Rush et version animée côte à côte se comprennent sans le son, mais l'extrait montré parle d'autre chose (« Ask for the SVG format »)"
+    },
+    "ali_douleur_histoire": {
+      "note": 0,
+      "preuve": "Aucune douleur ni histoire vécue dans l'intro"
+    },
+    "ali_coeur_unique": {
+      "note": 1,
+      "preuve": "15:16 « how you can rely on Sonnet 5.5 to create quality animations », mais le message se partage entre le prix, les styles et les 3 étapes"
+    },
+    "alx_pont": {
+      "note": 1,
+      "preuve": "Contexte, preuve, annonce des 3 étapes et crédits, mais ouvert par la démo"
+    },
+    "alx_pull_paint_point": {
+      "note": 2,
+      "preuve": "Chaque étape : pourquoi (8:49 le défaut donne du « slop »), un exemple montré, l'action"
+    },
+    "alx_nom_idee": {
+      "note": 2,
+      "preuve": "Les étapes ont des noms courts à l'écran : « cut », « animate », « direct » ; plus « design system » et « /animate »"
+    },
+    "alx_phrase_finale": {
+      "note": 1,
+      "preuve": "12:07 « if you're just going to prompt Claude generically, then you'll probably be disappointed » ; 14:23 « that's really the secret »"
+    },
+    "alx_douleur_reve": {
+      "note": 2,
+      "preuve": "« Turn Claude Into a Video Editing GENIUS » : le titre parle du désir"
+    },
+    "alx_cta_tot": {
+      "note": 1,
+      "preuve": "Guide PDF lié au sujet, mais à 5:42"
+    },
+    "ed_intro_courte": {
+      "note": 0,
+      "preuve": "Premier point à 1:39, première étape à 4:44"
+    },
+    "ed_hook": {
+      "note": 1,
+      "preuve": "« it turns out it's quite incredible when it comes to video editing » avec la démo : une affirmation, aucun des trois types purs"
+    },
+    "ed_probleme_preuve_consignes": {
+      "note": 2,
+      "preuve": "Chaque étape : le problème (8:49), la preuve montrée (8:55 l'animation par défaut), puis la consigne (9:25 le design system)"
+    },
+    "ed_tension_relancee": {
+      "note": 2,
+      "preuve": "4:45 « what are now the three steps » ; 10:52 « So, what can you do? » ; 12:18 « even with a design system [...] you won't get the final result »"
+    },
+    "ed_histoire_vecue": {
+      "note": 2,
+      "preuve": "10:53 il recrée le design system d'un post X avec FFmpeg ; 12:42 le clip Claude Design, version 1 puis 2 : des histoires de construction"
+    },
+    "ed_sans_surexplication": {
+      "note": 1,
+      "preuve": "« much easier to have an interface like this » redit à 7:18 et 13:22 ; « 80% there » redit"
+    },
+    "ed_niveau_simple": {
+      "note": 1,
+      "preuve": "SVG et FFmpeg expliqués ; « design system », « API key », « JavaScript and HTML » non expliqués"
+    },
+    "tous_video_suivante": {
+      "note": 0,
+      "preuve": "« I'll see you all next time », sans vidéo précise"
+    }
+  },
+  "a_retenir": {
+    "titre_miniature": "Titre d'origine « Claude Sonnet 5.5 is a BEAST for Video Editing (2x Cheaper) », changé environ 6 h 30 après la sortie (relevé VidIQ), miniature changée deux fois. Le titre retenu parle du désir ; la miniature promet « Video is Solved », « HANDS OFF ».",
+    "intro_structure": "La démo d'abord (rush contre version animée), puis un contexte long : la 1re étape arrive à 4:44. Trois étapes nommées (couper, animer, diriger) qui suivent problème, preuve, consigne, mais trop vite pour certains (« I never learned how to do it »).",
+    "habillage": "Rush et version animée côte à côte, catalogue de styles, et le Rubric Editor de la communauté longuement à l'écran : les commentaires demandent comment l'avoir.",
+    "idee_pour_nous": "Montrer son propre outil de production comme preuve et le réserver au Club, mais donner des étapes vraiment faisables, avec un lead magnet qui marche.",
+    "objectif": "club"
+  }
+}

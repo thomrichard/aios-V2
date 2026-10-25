@@ -1,0 +1,156 @@
+{
+  "video_id": "MgvwZaDPCs4",
+  "chaine": "nate-herk",
+  "titre": "Grok Bot Just Got 2 Massive Upgrades. Do These Things Now.",
+  "codeur": "agent nate-herk",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "actu",
+    "format_secondaire": "tuto",
+    "sujet": "Deux nouveautés de Grok Bot (routage automatique des modèles, recherche X native), puis l'astuce : Claude Code installé dans un Grok Bot",
+    "outils": ["Grok Bot", "X", "Claude Code", "Codex", "Opus 5.5"],
+    "niveau": "intermediaire",
+    "objectif_probable": "vues"
+  },
+  "titre": {
+    "attente_au_clic": "Les deux nouveautés de Grok Bot et ce qu'il faut régler tout de suite, avec Claude (Opus) qui tourne dans Grok Bot.",
+    "schema": "<Outil> Just Got <N> Massive Upgrades. Do These Things Now.",
+    "promesse": "Savoir quoi faire tout de suite des deux nouveautés",
+    "audace": "timide",
+    "registre": "jargon",
+    "briques": ["vitesse"],
+    "marqueurs": ["nouveaute", "chiffre"],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "sourire",
+    "regard": "camera",
+    "texte": "Opus Bot.",
+    "texte_mots": 2,
+    "repete_titre": "non",
+    "elements": ["texte « Opus Bot. »", "mascotte Grok Bot dans un tourbillon bleu", "logo Claude dans un tourbillon orange", "Nate derrière un ordinateur portable"],
+    "nb_elements": 4,
+    "fond": "sombre, lumières bleue et orange",
+    "couleurs": ["noir", "blanc", "bleu", "orange Claude"],
+    "curiosity_gap": "nouveaute",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "So, Grockbot just dropped two major upgrades, and today I'm going to talk about what those are, why they matter, and what you should do about it.",
+    "premiere_phrase_reprend_titre": "oui",
+    "premier_plan": "Nate face caméra plein cadre, néon AIS et étagères derrière",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": ["actu-annonce", "boucle-curiosite"],
+    "preuve": {
+      "type": "aucune",
+      "seconde": null,
+      "description": "Aucune preuve dans les 14 secondes d'intro ; les tweets d'Elon Musk arrivent à 0:14"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 3, "a_l_ecran": false},
+    "boucle_vers_la_fin": {
+      "presente": true,
+      "citation": "I'm also going to tell you guys my number one favorite Grockbot hack",
+      "seconde_resolution": 399,
+      "tenue": "oui"
+    },
+    "seconde_premier_point": 14,
+    "attente_tenue": "oui",
+    "attente_note": "Les deux nouveautés et les gestes à faire sont donnés ; l'« Opus Bot » de la miniature correspond au routage vers Opus et à l'astuce Claude Code, livrée à 6:39."
+  },
+  "structure": {
+    "modele": "mixte",
+    "segments": [
+      {"debut": 0, "fin": 14, "titre": "Two Major Grok Bot Upgrades", "role": "intro", "pull": true, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 14, "fin": 120, "titre": "Automatic Model Routing", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 120, "fin": 248, "titre": "Native X Search", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 248, "fin": 275, "titre": "Free AI OS Kit", "role": "cta", "pull": false, "paint": false, "point": false, "nom": true, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 275, "fin": 399, "titre": "Rethinking Your Skills", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 399, "fin": 539, "titre": "Running Claude Code Inside Grok Bot", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 539, "fin": 551, "titre": "Final Thoughts", "role": "fin", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 5, "type": "boucle-ouverte", "citation": "I'm also going to tell you guys my number one favorite Grockbot hack"},
+      {"seconde": 41, "type": "question-spectateur", "citation": "can we see it? Can we control it? [...] How does this affect our weekly usage?"},
+      {"seconde": 97, "type": "rappel-promesse", "citation": "that's a little bit of foreshadowing to the hack I'm going to show you guys in the end"},
+      {"seconde": 120, "type": "annonce-suite", "citation": "later that day we also saw this which is Grockbot can now search, read and monitor X"},
+      {"seconde": 275, "type": "annonce-suite", "citation": "before I talk about this last hack, there is one thing that I think is really interesting"},
+      {"seconde": 399, "type": "rappel-promesse", "citation": "now, let me talk about one of my favorite hacks with Grockbot"}
+    ],
+    "histoires": [
+      {"seconde": 136, "acte": "anecdote", "resume": "Son bot X fait passer tous ses bots de l'API X payante (environ 5 $ par semaine) à la recherche native"},
+      {"seconde": 180, "acte": "anecdote", "resume": "Il demande à son bot Minor les tweets sur Claude Motion : coût zéro, 995 lectures gratuites restantes"}
+    ],
+    "payoffs": [
+      {"seconde": 31, "resume": "Le routage expliqué : Grok Bot choisit le modèle, Opus 5.5 par défaut pour l'instant"},
+      {"seconde": 211, "resume": "La recherche X passe en natif : la même recherche coûte zéro"},
+      {"seconde": 318, "resume": "Découper les gros skills pour que chaque morceau aille au bon modèle"},
+      {"seconde": 446, "resume": "Son bot Klouse fait tourner Claude Code avec son propre abonnement, toujours allumé"}
+    ],
+    "premier_payoff_seconde": 31,
+    "jargon": 2,
+    "repetitions": 1,
+    "test_du_tweet": "Grok Bot choisit maintenant son modèle tout seul (Opus 5.5 compris) et lit X gratuitement. Nate passe ses bots à la recherche X native, conseille de découper les gros skills par modèle, et montre son astuce : Claude Code installé dans un Grok Bot, toujours allumé, dans la poche."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine ; en vignette à gauche sur les captures", "decor": "bureau, étagères, néon AIS, micro sur bras"},
+    "parts": {"face": 27, "ecran": 73, "motion": 0, "broll": 0},
+    "textes_ecran": "aucun",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["curseur-surligne"],
+    "charte": "Captures (X en sombre, Grok Bot en sombre et violet) sur le fond bleu-vert avec vignette ; aucune carte ni titre. La miniature, lumineuse en bleu et orange, n'a pas d'équivalent dans la vidéo.",
+    "rythme": "regulier",
+    "notes": "Habillage minimal : tweets et conversations de bots lus à l'écran, vignette du visage, retour face caméra pour les réflexions. Aucun graphisme ajouté."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 248, "type": "lead-magnet", "cible": "kit AI OS gratuit (Herk Loop, six skills)", "amene_par": "apres-valeur", "citation": "I've got this completely free kit that I want to give to you all"},
+      {"seconde": 543, "type": "like-commentaire", "cible": "liker la vidéo", "amene_par": "fin", "citation": "And if you did, please give it a like."}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"lead-magnet": 1, "communaute-payante": 1, "communaute-gratuite": 1, "affiliation": 2, "reseaux": 3},
+    "commentaire_epingle": {"texte": "Modèle AI OS gratuit et Glaido offert un mois", "type": "lead-magnet"},
+    "recap_final": false,
+    "derniere_phrase": "And I will see you all on the next one. Thanks everyone.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["une vague de commentaires robots sur « Claudixum » (les 7 premiers, 36 à 44 likes chacun)", "Claude Code dans un Grok Bot, salué", "le refus des produits d'Elon Musk", "le routage automatique vu comme l'avenir"],
+    "demandes": ["une vidéo complète sur Claude Code dans Grok Bot", "la sécurité des données personnelles avec les agents", "acheter Grok Bot via Cursor ou via X", "Grok Bot ou Muse pour une entreprise"],
+    "critiques": ["« This is one of your weaker videos »", "« Muskbot? Pass. »", "l'astuce brûle les tokens Grok et Claude à la fois"],
+    "reprises": ["« nice hack »", "Claude Code dans le terminal d'un bot, « a life changer »"],
+    "signal_promesse": "tenue"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "1re phrase = titre ; 1er plan = Nate face caméra, sans « Opus Bot », mascotte ni logo de la miniature"},
+    "ap_boucle_curiosite": {"note": 2, "preuve": "0:05 l'astuce promise, rappelée à 1:37 (« foreshadowing »), livrée à 6:39"},
+    "ap_effort_montre": {"note": 0, "preuve": "Aucun effort montré dans l'intro"},
+    "ap_setup_progress_payoff": {"note": 1, "preuve": "Recherche X et astuce Claude Code ont but, étapes, résultat ; le routage n'aboutit à rien de concret"},
+    "ap_contraste_rythme": {"note": 1, "preuve": "De 0 à 10 changements de plan par minute, sans passage nettement plus vif"},
+    "ap_montrer_sans_son": {"note": 0, "preuve": "14 secondes face caméra puis des tweets : rien de lisible ne dit la promesse"},
+    "ali_douleur_histoire": {"note": 0, "preuve": "Aucune douleur ni histoire dans l'intro"},
+    "ali_coeur_unique": {"note": 1, "preuve": "1:26 « Grockbot is the harness that we could control with any model » relie le routage et l'astuce, mais deux sujets restent"},
+    "alx_pont": {"note": 1, "preuve": "Titre repris et plan annoncé, avec l'astuce gardée pour la fin en guise d'accroche"},
+    "alx_pull_paint_point": {"note": 1, "preuve": "Complet sur la recherche X et sur les skills (le skill YouTube en sept morceaux) ; pas sur le routage"},
+    "alx_nom_idee": {"note": 0, "preuve": "Aucune idée nommée ni affichée ; seul le kit porte un nom (Herk Loop)"},
+    "alx_phrase_finale": {"note": 1, "preuve": "6:21 « a skill won't perform the same way for different models and that's just the truth »"},
+    "alx_douleur_reve": {"note": 0, "preuve": "Le nom de l'outil porte le titre"},
+    "alx_cta_tot": {"note": 1, "preuve": "Kit AI OS à 4:08, juste après 4 minutes, lié à l'AIOS plus qu'à Grok Bot"},
+    "ed_intro_courte": {"note": 2, "preuve": "14 secondes : promesse, astuce gardée pour la fin, puis le 1er point"},
+    "ed_hook": {"note": 1, "preuve": "0:05 une astuce qui « will truly change the way you work » : de la curiosité, pas un des trois types"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "Recherche X : API payante, coût zéro, consigne de basculer ; le routage et l'astuce vont sans problème posé"},
+    "ed_tension_relancee": {"note": 1, "preuve": "0:41 « can we see it? Can we control it? » ; ailleurs des annonces"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "2:21 le passage de ses bots de l'API payante à la recherche native : une anecdote"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "« visibility » redit à 0:51, 1:49, 6:07 et 6:25 ; « grain of salt » deux fois"},
+    "ed_niveau_simple": {"note": 1, "preuve": "Midjourney et Suno expliqués en trois mots ; harness, effort level et cache ne le sont pas"},
+    "tous_video_suivante": {"note": 0, "preuve": "« I will see you all on the next one », sans vidéo précise"}
+  },
+  "a_retenir": {
+    "titre_miniature": "« <Outil> Just Got <N> Massive Upgrades. Do These Things Now. » : nouveauté et urgence. La miniature ne parle pas des mises à jour mais de l'astuce finale : « Opus Bot. », mascotte Grok Bot et logo Claude.",
+    "intro_structure": "Intro en 14 secondes : la promesse en une phrase, puis l'astuce gardée pour la fin, rappelée à 1:37 et livrée à 6:39.",
+    "habillage": "Habillage minimal : tweets et bots à l'écran avec vignette, face caméra pour les réflexions, aucun graphisme ; environ 4 changements de plan par minute.",
+    "idee_pour_nous": "Sur une actu d'outil, promettre dès la 1re phrase « ce que c'est, pourquoi ça compte, quoi faire », et garder une astuce perso pour la fin, rappelée en cours de route.",
+    "objectif": "vues"
+  }
+}

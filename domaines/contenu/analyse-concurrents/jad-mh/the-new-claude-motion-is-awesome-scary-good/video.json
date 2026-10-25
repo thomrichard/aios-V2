@@ -1,0 +1,138 @@
+{
+ "id": "lUqjRmtN7bE",
+ "url": "https://www.youtube.com/watch?v=lUqjRmtN7bE",
+ "chaine": "jad-mh",
+ "titre": "The New Claude Motion Is Awesome (Scary Good)",
+ "titre_ytdlp": "The New Claude Motion Is Awesome (Scary Good)",
+ "publie": "2026-10-17T15:26:05Z",
+ "duree_s": 517,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "VDuZboKjThS6Kqjeleor8dwaOXg",
+  "id": "lUqjRmtN7bE",
+  "snippet": {
+   "publishedAt": "2026-10-17T15:26:05Z",
+   "channelId": "UCkbjWQ7kLFNRY_RiJbqVWRg",
+   "title": "The New Claude Motion Is Awesome (Scary Good)",
+   "description": "⚡ The Higgsfield offer I mentioned (no subscription needed, you can also use their API and pay as you go): https://higgsfield.ai/s/katana-inside-claude-yt-jadm-h-xUOkwW\n\nClaude Motion is Anthropic's new animation feature: type /motion in Claude, describe the video, and Claude writes it as code and exports an MP4. No video model, no After Effects. It's in beta on Team and Enterprise only, so I break down what it is, what it can and can't do, and how I make the same kind of motion graphics on the $20 Claude plan with Claude Code, HyperFrames and my free skill 👇\n\n\n🎁 The motion graphics skill is free in my Skool, in the post for this video: https://www.skool.com/nextphase-5790\nStuck installing it? We run free weekly calls in the Skool to help you set it up.\n\n🎬 What Claude Motion is (checked Oct 17, 2026)\n• Released Oct 8, 2026, in beta. Type /motion in the message box, describe what you want, and Claude builds the animation. Change it in the editor or ask Claude, then download an MP4.\n• Who has it: Team and Enterprise only. On Enterprise it's off by default, so an admin has to turn it on. Free, Pro and Max don't have it yet, and Anthropic hasn't said when.\n• Open it after in: Adobe, Descript, HeyGen, Higgsfield, invideo, Luma AI and Runway. Canva and Captions are coming soon.\n• What it can't do: no generated footage and no AI-generated people. It animates text, shapes, charts and your own images.\n\n🧪 The 4-part prompt I use for every motion video\n1. Who it's for, where it's going and how long (e.g. a 20-second Instagram promo for a barbershop)\n2. The look: colors with hex codes, fonts, mood\n3. Scene by scene, with the seconds\n4. The rules: what it should never do (e.g. never more than 6 words on screen, prices always in the brand color)\nPlan it with Claude in a normal chat first, then send the full prompt.\n\n⚙️ My setup (no Team or Enterprise needed)\n• Claude Code + HyperFrames (free, open source, made by HeyGen) + my skill, on a base MacBook Air. Music made locally with ACE-Step 1.5, also free.\n• The FADE HOUSE barbershop promo and the VOIDWEAR sneaker spot in this video were made this way, not with Claude Motion. The sneaker images come from Higgsfield; every move, word and transition on top is Claude, in code.\n• Every word, price and color sits in one block at the top of the file, so \"$25 → $30\" or \"make the pole gold\" is a one-line change and everything else stays identical.\n• Heads-up: motion graphics are heavy code, so on the $20 plan (Claude Pro) you'll hit your usage limit faster. Plan your prompt first, and use a cheaper model like Haiku 5.5 where you can.\n\n✏️ To be precise\n• 0:42 \"give you access to this in your $20 a month plan\": the skill doesn't unlock Claude Motion. It makes the same kind of code-based motion graphics with Claude Code, on the plan you already pay for.\n• 6:24 \"I'm sure Higgsfield will have kind of the same thing\": they already do. Higgsfield Katana is powered by Claude Motion (link below).\n• 7:05 \"literally $0\": $0 on top of your Claude plan. HyperFrames and ACE-Step 1.5 are free and run on your computer.\n\n⏱️ Chapters\n0:00 Every frame is code\n1:12 What Claude Motion is\n1:57 Who can use it\n2:50 How it actually works\n3:37 What it can't do\n3:56 The 4-part prompt\n4:47 The skill\n7:09 Real images\n8:01 Which one to use\n\n🙏 We just passed 6,300 subscribers and 5,700 people in the Skool. Thank you for every comment and every sub. I'll keep giving these skills away.\n\n💬 Do you have Claude Motion on your plan yet, or are you going the skill route? Tell me in the comments.\n\n🔔 Subscribe, I drop free skills every week. See you in the next one.\n\n#ClaudeMotion #Claude #MotionGraphics #ClaudeCode #Anthropic #ClaudeAI #AIAnimation #AIVideo #MotionDesign #HyperFrames #Higgsfield #AITools #AfterEffects #ContentCreation #FreeAITools\n\nclaude motion, claude /motion, anthropic claude motion, claude motion tutorial, claude motion free, claude animation, claude code, claude code motion graphics, hyperframes, heygen hyperframes, ace-step 1.5, motion graphics, ai motion graphics, motion graphics ai free, ai animation, claude pro, claude $20 plan, claude team plan, higgsfield, higgsfield katana, haiku 5.5, claude skill, after effects alternative, claud motion, cloud motion, claude motoin",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/lUqjRmtN7bE/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/lUqjRmtN7bE/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/lUqjRmtN7bE/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/lUqjRmtN7bE/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/lUqjRmtN7bE/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    }
+   },
+   "channelTitle": "Jad M.H  | AI Automation",
+   "categoryId": "22",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "en",
+   "localized": {
+    "title": "The New Claude Motion Is Awesome (Scary Good)",
+    "description": "⚡ The Higgsfield offer I mentioned (no subscription needed, you can also use their API and pay as you go): https://higgsfield.ai/s/katana-inside-claude-yt-jadm-h-xUOkwW\n\nClaude Motion is Anthropic's new animation feature: type /motion in Claude, describe the video, and Claude writes it as code and exports an MP4. No video model, no After Effects. It's in beta on Team and Enterprise only, so I break down what it is, what it can and can't do, and how I make the same kind of motion graphics on the $20 Claude plan with Claude Code, HyperFrames and my free skill 👇\n\n\n🎁 The motion graphics skill is free in my Skool, in the post for this video: https://www.skool.com/nextphase-5790\nStuck installing it? We run free weekly calls in the Skool to help you set it up.\n\n🎬 What Claude Motion is (checked Oct 17, 2026)\n• Released Oct 8, 2026, in beta. Type /motion in the message box, describe what you want, and Claude builds the animation. Change it in the editor or ask Claude, then download an MP4.\n• Who has it: Team and Enterprise only. On Enterprise it's off by default, so an admin has to turn it on. Free, Pro and Max don't have it yet, and Anthropic hasn't said when.\n• Open it after in: Adobe, Descript, HeyGen, Higgsfield, invideo, Luma AI and Runway. Canva and Captions are coming soon.\n• What it can't do: no generated footage and no AI-generated people. It animates text, shapes, charts and your own images.\n\n🧪 The 4-part prompt I use for every motion video\n1. Who it's for, where it's going and how long (e.g. a 20-second Instagram promo for a barbershop)\n2. The look: colors with hex codes, fonts, mood\n3. Scene by scene, with the seconds\n4. The rules: what it should never do (e.g. never more than 6 words on screen, prices always in the brand color)\nPlan it with Claude in a normal chat first, then send the full prompt.\n\n⚙️ My setup (no Team or Enterprise needed)\n• Claude Code + HyperFrames (free, open source, made by HeyGen) + my skill, on a base MacBook Air. Music made locally with ACE-Step 1.5, also free.\n• The FADE HOUSE barbershop promo and the VOIDWEAR sneaker spot in this video were made this way, not with Claude Motion. The sneaker images come from Higgsfield; every move, word and transition on top is Claude, in code.\n• Every word, price and color sits in one block at the top of the file, so \"$25 → $30\" or \"make the pole gold\" is a one-line change and everything else stays identical.\n• Heads-up: motion graphics are heavy code, so on the $20 plan (Claude Pro) you'll hit your usage limit faster. Plan your prompt first, and use a cheaper model like Haiku 5.5 where you can.\n\n✏️ To be precise\n• 0:42 \"give you access to this in your $20 a month plan\": the skill doesn't unlock Claude Motion. It makes the same kind of code-based motion graphics with Claude Code, on the plan you already pay for.\n• 6:24 \"I'm sure Higgsfield will have kind of the same thing\": they already do. Higgsfield Katana is powered by Claude Motion (link below).\n• 7:05 \"literally $0\": $0 on top of your Claude plan. HyperFrames and ACE-Step 1.5 are free and run on your computer.\n\n⏱️ Chapters\n0:00 Every frame is code\n1:12 What Claude Motion is\n1:57 Who can use it\n2:50 How it actually works\n3:37 What it can't do\n3:56 The 4-part prompt\n4:47 The skill\n7:09 Real images\n8:01 Which one to use\n\n🙏 We just passed 6,300 subscribers and 5,700 people in the Skool. Thank you for every comment and every sub. I'll keep giving these skills away.\n\n💬 Do you have Claude Motion on your plan yet, or are you going the skill route? Tell me in the comments.\n\n🔔 Subscribe, I drop free skills every week. See you in the next one.\n\n#ClaudeMotion #Claude #MotionGraphics #ClaudeCode #Anthropic #ClaudeAI #AIAnimation #AIVideo #MotionDesign #HyperFrames #Higgsfield #AITools #AfterEffects #ContentCreation #FreeAITools\n\nclaude motion, claude /motion, anthropic claude motion, claude motion tutorial, claude motion free, claude animation, claude code, claude code motion graphics, hyperframes, heygen hyperframes, ace-step 1.5, motion graphics, ai motion graphics, motion graphics ai free, ai animation, claude pro, claude $20 plan, claude team plan, higgsfield, higgsfield katana, haiku 5.5, claude skill, after effects alternative, claud motion, cloud motion, claude motoin"
+   },
+   "defaultAudioLanguage": "en"
+  },
+  "contentDetails": {
+   "duration": "PT8M37S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": false,
+   "contentRating": {},
+   "projection": "rectangular"
+  },
+  "statistics": {
+   "viewCount": "8077",
+   "likeCount": "123",
+   "favoriteCount": "0",
+   "commentCount": "25"
+  }
+ },
+ "ytdlp": {
+  "id": "lUqjRmtN7bE",
+  "title": "The New Claude Motion Is Awesome (Scary Good)",
+  "description": "⚡ The Higgsfield offer I mentioned (no subscription needed, you can also use their API and pay as you go): https://higgsfield.ai/s/katana-inside-claude-yt-jadm-h-xUOkwW\n\nClaude Motion is Anthropic's new animation feature: type /motion in Claude, describe the video, and Claude writes it as code and exports an MP4. No video model, no After Effects. It's in beta on Team and Enterprise only, so I break down what it is, what it can and can't do, and how I make the same kind of motion graphics on the $20 Claude plan with Claude Code, HyperFrames and my free skill 👇\n\n\n🎁 The motion graphics skill is free in my Skool, in the post for this video: https://www.skool.com/nextphase-5790\nStuck installing it? We run free weekly calls in the Skool to help you set it up.\n\n🎬 What Claude Motion is (checked Oct 17, 2026)\n• Released Oct 8, 2026, in beta. Type /motion in the message box, describe what you want, and Claude builds the animation. Change it in the editor or ask Claude, then download an MP4.\n• Who has it: Team and Enterprise only. On Enterprise it's off by default, so an admin has to turn it on. Free, Pro and Max don't have it yet, and Anthropic hasn't said when.\n• Open it after in: Adobe, Descript, HeyGen, Higgsfield, invideo, Luma AI and Runway. Canva and Captions are coming soon.\n• What it can't do: no generated footage and no AI-generated people. It animates text, shapes, charts and your own images.\n\n🧪 The 4-part prompt I use for every motion video\n1. Who it's for, where it's going and how long (e.g. a 20-second Instagram promo for a barbershop)\n2. The look: colors with hex codes, fonts, mood\n3. Scene by scene, with the seconds\n4. The rules: what it should never do (e.g. never more than 6 words on screen, prices always in the brand color)\nPlan it with Claude in a normal chat first, then send the full prompt.\n\n⚙️ My setup (no Team or Enterprise needed)\n• Claude Code + HyperFrames (free, open source, made by HeyGen) + my skill, on a base MacBook Air. Music made locally with ACE-Step 1.5, also free.\n• The FADE HOUSE barbershop promo and the VOIDWEAR sneaker spot in this video were made this way, not with Claude Motion. The sneaker images come from Higgsfield; every move, word and transition on top is Claude, in code.\n• Every word, price and color sits in one block at the top of the file, so \"$25 → $30\" or \"make the pole gold\" is a one-line change and everything else stays identical.\n• Heads-up: motion graphics are heavy code, so on the $20 plan (Claude Pro) you'll hit your usage limit faster. Plan your prompt first, and use a cheaper model like Haiku 5.5 where you can.\n\n✏️ To be precise\n• 0:42 \"give you access to this in your $20 a month plan\": the skill doesn't unlock Claude Motion. It makes the same kind of code-based motion graphics with Claude Code, on the plan you already pay for.\n• 6:24 \"I'm sure Higgsfield will have kind of the same thing\": they already do. Higgsfield Katana is powered by Claude Motion (link below).\n• 7:05 \"literally $0\": $0 on top of your Claude plan. HyperFrames and ACE-Step 1.5 are free and run on your computer.\n\n⏱️ Chapters\n0:00 Every frame is code\n1:12 What Claude Motion is\n1:57 Who can use it\n2:50 How it actually works\n3:37 What it can't do\n3:56 The 4-part prompt\n4:47 The skill\n7:09 Real images\n8:01 Which one to use\n\n🙏 We just passed 6,300 subscribers and 5,700 people in the Skool. Thank you for every comment and every sub. I'll keep giving these skills away.\n\n💬 Do you have Claude Motion on your plan yet, or are you going the skill route? Tell me in the comments.\n\n🔔 Subscribe, I drop free skills every week. See you in the next one.\n\n#ClaudeMotion #Claude #MotionGraphics #ClaudeCode #Anthropic #ClaudeAI #AIAnimation #AIVideo #MotionDesign #HyperFrames #Higgsfield #AITools #AfterEffects #ContentCreation #FreeAITools\n\nclaude motion, claude /motion, anthropic claude motion, claude motion tutorial, claude motion free, claude animation, claude code, claude code motion graphics, hyperframes, heygen hyperframes, ace-step 1.5, motion graphics, ai motion graphics, motion graphics ai free, ai animation, claude pro, claude $20 plan, claude team plan, higgsfield, higgsfield katana, haiku 5.5, claude skill, after effects alternative, claud motion, cloud motion, claude motoin",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "Every frame is code",
+    "end_time": 72
+   },
+   {
+    "start_time": 72,
+    "title": "What Claude Motion is",
+    "end_time": 117
+   },
+   {
+    "start_time": 117,
+    "title": "Who can use it",
+    "end_time": 170
+   },
+   {
+    "start_time": 170,
+    "title": "How it actually works",
+    "end_time": 217
+   },
+   {
+    "start_time": 217,
+    "title": "What it can't do",
+    "end_time": 236
+   },
+   {
+    "start_time": 236,
+    "title": "The 4-part prompt",
+    "end_time": 287
+   },
+   {
+    "start_time": 287,
+    "title": "The skill",
+    "end_time": 429
+   },
+   {
+    "start_time": 429,
+    "title": "Real images",
+    "end_time": 481
+   },
+   {
+    "start_time": 481,
+    "title": "Which one to use",
+    "end_time": 517
+   }
+  ],
+  "tags": [],
+  "categories": [
+   "People & Blogs"
+  ],
+  "heatmap": null,
+  "upload_date": "20261017",
+  "duration": 517,
+  "channel": "Jad M.H  | AI Automation",
+  "channel_id": "UCkbjWQ7kLFNRY_RiJbqVWRg",
+  "channel_follower_count": 8570,
+  "thumbnail": "https://i.ytimg.com/vi_webp/lUqjRmtN7bE/maxresdefault.webp",
+  "view_count": 8077,
+  "like_count": 123,
+  "comment_count": 12
+ }
+}

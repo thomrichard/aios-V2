@@ -1,0 +1,191 @@
+{
+  "video_id": "Te0SztndsQE",
+  "chaine": "thom-richard",
+  "titre_video": "J'ai passé les cours gratuits de Claude : ce qu'il faut savoir",
+  "codeur": "agent thom-richard",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "liste",
+    "format_secondaire": "actu",
+    "sujet": "Son avis sur les 22 cours gratuits de la Claude Academy, trois parcours par profil, attestations et certifications",
+    "outils": ["Claude Academy", "Claude", "Claude Code", "Claude Cowork"],
+    "niveau": "debutant",
+    "objectif_probable": "communaute"
+  },
+  "titre": {
+    "attente_au_clic": "Savoir ce que valent les cours gratuits de la Claude Academy et lesquels suivre, par quelqu'un qui les a passés.",
+    "schema": "J'ai passé <ressource> de <Outil> : ce qu'il faut savoir",
+    "promesse": "Savoir quels cours gratuits de Claude valent ton temps",
+    "audace": "timide",
+    "registre": "mixte",
+    "briques": ["preuve"],
+    "marqueurs": ["test"],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "pensif, sceptique, main au menton",
+    "regard": "camera",
+    "texte": "CLAUDE ACADEMY / LE TEST",
+    "texte_mots": 4,
+    "repete_titre": "partiel",
+    "elements": ["logo Claude et « CLAUDE ACADEMY » en capitales à empattements", "tampon rouge « LE TEST »", "visage à droite, main au menton"],
+    "nb_elements": 3,
+    "fond": "clair, intérieur flou",
+    "couleurs": ["blanc cassé", "noir", "rouge", "orange Claude"],
+    "curiosity_gap": "resultat",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Ces attestations [...] je les ai obtenus en suivant les cours gratuits et officiels de [Claude]",
+    "premiere_phrase_reprend_titre": "oui",
+    "premier_plan": "Capture de son profil LinkedIn qui défile, avec les attestations Anthropic",
+    "premier_plan_reprend_miniature": "non",
+    "ouverture": ["histoire-perso", "actu-annonce", "pont", "boucle-curiosite"],
+    "preuve": {
+      "type": "effort",
+      "seconde": 0,
+      "description": "Ses attestations à l'écran, et « une vingtaine d'heures » pour les passer presque toutes"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 3, "a_l_ecran": false},
+    "boucle_vers_la_fin": {
+      "presente": true,
+      "citation": "à la fin de la vidéo, on verra comment associer ces cours avec les tutoriels",
+      "seconde_resolution": 1084,
+      "tenue": "partiel"
+    },
+    "seconde_premier_point": 69,
+    "attente_tenue": "oui",
+    "attente_note": "Chaque cours a un avis net (à faire, en option, à sauter) dans un des trois parcours. L'association cours et tutoriels promise pour la fin renvoie surtout au document en description."
+  },
+  "structure": {
+    "modele": "liste-numerotee",
+    "segments": [
+      {"debut": 0, "fin": 45, "titre": "Introduction", "role": "intro", "pull": true, "paint": true, "point": false, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 45, "fin": 69, "titre": "Ce qui change avec Claude Academy", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 69, "fin": 139, "titre": "Les trois profils : débutant, builder, développeur", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 139, "fin": 160, "titre": "Attestation ou certification ?", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 160, "fin": 338, "titre": "Parcours 1 — le débutant", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 338, "fin": 616, "titre": "Parcours 2 — le builder", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 616, "fin": 870, "titre": "Parcours 3 — le développeur", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 870, "fin": 935, "titre": "Les trois cours que je n'ai pas faits", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": false},
+      {"debut": 935, "fin": 1050, "titre": "Ce que vaut une attestation, ce que vaut une certification", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 1050, "fin": 1084, "titre": "La condition qui bloque presque tout le monde", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 1084, "fin": 1152, "titre": "Tutoriels et cas d'usage : la vraie nouveauté", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 1152, "fin": 1226, "titre": "Ce que les cours ne te donneront jamais", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": true, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 1226, "fin": 1265, "titre": "L'étape d'après : ton AIOS", "role": "cta", "pull": false, "paint": false, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 1265, "fin": 1286, "titre": "Conclusion", "role": "fin", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 38, "type": "boucle-ouverte", "citation": "à la fin de la vidéo, on verra comment associer ces cours avec les tutoriels"},
+      {"seconde": 151, "type": "boucle-ouverte", "citation": "il y a un petit piège dont je te parlerai à la fin"},
+      {"seconde": 339, "type": "annonce-suite", "citation": "Maintenant, on va prendre le parcours du Builder."},
+      {"seconde": 617, "type": "annonce-suite", "citation": "Donc le dernier [...] parcours, c'est celui du développeur."},
+      {"seconde": 871, "type": "annonce-suite", "citation": "Il y a ensuite trois cours supplémentaires que [...] moi je n'ai pas fait."},
+      {"seconde": 1050, "type": "rappel-promesse", "citation": "je vais te parler de la condition qui est un peu pénible"},
+      {"seconde": 1084, "type": "annonce-suite", "citation": "on va regarder vite fait sur la plateforme"}
+    ],
+    "histoires": [
+      {"seconde": 0, "acte": "perso-passe", "resume": "Il a passé presque tous les cours en une vingtaine d'heures ; son regret : le manque de concret."},
+      {"seconde": 345, "acte": "anecdote", "resume": "Il se dit builder : sa veille récupère des articles chaque matin et les transforme en matière pour ses contenus."},
+      {"seconde": 721, "acte": "perso-passe", "resume": "Il appelait les LLM par l'API dans Make ; ce cours lui aurait évité de tâtonner au début."},
+      {"seconde": 975, "acte": "anecdote", "resume": "Il a raté une seule attestation, AI Fluency, passée en anglais, sur une question de vocabulaire."},
+      {"seconde": 1065, "acte": "anecdote", "resume": "Il a demandé le statut de partenaire avec sa société pour passer la certification, sans grand espoir."}
+    ],
+    "payoffs": [
+      {"seconde": 69, "resume": "Les trois profils et leurs parcours"},
+      {"seconde": 207, "resume": "AI Fluency et ses 4D, conseillé à tous"},
+      {"seconde": 300, "resume": "Introduction to Claude Cowork, conseillé aux débutants"},
+      {"seconde": 508, "resume": "Introduction to skills : surtout pour déboguer une skill"},
+      {"seconde": 640, "resume": "Claude Code in Action et Platform 101 pour le développeur"},
+      {"seconde": 955, "resume": "Attestation gratuite et facile, certification payante et exigeante"},
+      {"seconde": 1050, "resume": "Le piège : il faut une entreprise partenaire d'Anthropic"},
+      {"seconde": 1088, "resume": "Les tutoriels et cas d'usage de la plateforme, à relier aux cours"}
+    ],
+    "premier_payoff_seconde": 69,
+    "jargon": 2,
+    "repetitions": 2,
+    "test_du_tweet": "Les 22 cours gratuits de la Claude Academy, passés et notés. Trois parcours (débutant, builder, développeur), chacun vers une certification. L'attestation est facile ; la certification pèse sur un CV mais exige une entreprise partenaire. Le concret est dans les tutoriels."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine plein cadre les 2 premières minutes, puis vignette arrondie à droite de l'interface", "decor": "étagère ronde avec figurines et livres, fauteuil blanc, lampe ; chemise vert d'eau"},
+    "parts": {"face": 13, "ecran": 7, "motion": 80, "broll": 0},
+    "textes_ecran": "constants",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["plan-a-l-ecran", "etiquettes", "curseur-surligne", "chiffres-animes"],
+    "charte": "Interface sombre bleu nuit faite pour la vidéo : l'arbre des 22 cours, chemins surlignés en orange selon le profil, une fiche par cours ; cartes de fin noires avec sur-titres orange en petites capitales. La miniature, claire avec un tampon rouge, n'en reprend rien.",
+    "rythme": "contraste",
+    "notes": "Après 2 minutes 30 face caméra, la vidéo devient la visite de son interface : l'arbre des cours s'allume par profil pendant qu'il parle en vignette. Le détecteur ne voit presque aucun changement de plan de la minute 4 à la minute 18, tout bouge dans l'interface."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 475, "type": "lead-magnet", "cible": "le document des 22 cours fichés", "amene_par": "apres-valeur", "citation": "Justement par rapport à tout ça je t'ai préparé un document."},
+      {"seconde": 553, "type": "lead-magnet", "cible": "le même document, qui relie cours et exercices", "amene_par": "apres-valeur", "citation": "le document dont je te parlais tout à l'heure va également lister tous les cours"},
+      {"seconde": 1205, "type": "communaute-payante", "cible": "sa communauté, 180 membres", "amene_par": "apres-valeur", "citation": "Et ça c'est ce que c'est ce qu'on fait moi dans ma communauté."},
+      {"seconde": 1266, "type": "video-suivante", "cible": "la masterclass AIOS", "amene_par": "fin", "citation": "j'ai fait une masterclass là-dessus, je te la mets ici en vidéo"},
+      {"seconde": 1275, "type": "like-commentaire", "cible": "dire en commentaire quel parcours il va suivre", "amene_par": "fin", "citation": "dis-moi en commentaire quel parcours tu comptes faire"}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"lead-magnet": 1, "communaute-payante": 2, "affiliation": 2, "video-suivante": 4, "autre": 2},
+    "commentaire_epingle": {"texte": "Je crée une formation Claude et je préfère la construire avec vous : une minute de questions (formulaire Tally)", "type": "formation"},
+    "recap_final": false,
+    "derniere_phrase": "Donc, mets-le en commentaire et je te dis à bientôt pour la prochaine vidéo.",
+    "video_suivante_precise": true
+  },
+  "commentaires": {
+    "themes": ["la condition de certification jugée délirante, plus commerciale que pédagogique", "se former sur des cas réels plutôt qu'avec des cours", "l'échange entre humains pour progresser", "les limites d'usage de Cowork", "chercher une communauté pour apprendre"],
+    "demandes": ["une vidéo sur l'AIOS", "l'outil utilisé pour présenter la Claude Academy", "où est le lien des cours", "où est la version française"],
+    "critiques": ["la certification fermée aux personnes sans entreprise partenaire (milieu hospitalier)", "le lien des cours introuvable pour un spectateur"],
+    "reprises": ["« le parcours développeur »", "le conseil sur l'échange entre humains"],
+    "signal_promesse": "tenue"
+  },
+  "retention": {
+    "a_30s": 0.715,
+    "a_la_moitie": 0.222,
+    "pertes": [
+      {"seconde": 30, "chute": 10.2, "passage": "« on va dégager trois parcours qui s'adressent à des profils différents » (annonce du plan)", "segment": "Introduction"},
+      {"seconde": 913, "chute": 2.7, "passage": "« on a Amazon Bedrock et on a [...] l'autre, je ne sais plus laquelle c'est »", "segment": "Les trois cours que je n'ai pas faits"},
+      {"seconde": 77, "chute": 2.6, "passage": "« Le deuxième profil, c'est le builder. » (profils décrits face caméra, sans image)", "segment": "Les trois profils : débutant, builder, développeur"},
+      {"seconde": 167, "chute": 1.8, "passage": "« L'idée c'est de [...] te poser le framework des 4D. »", "segment": "Parcours 1 — le débutant"},
+      {"seconde": 205, "chute": 1.2, "passage": "« ce cours-là t'explique comment fonctionne une intelligence artificielle générative » (glissement de 13 points de 1:42 à 4:55)", "segment": "Parcours 1 — le débutant"}
+    ],
+    "remontees": [
+      {"seconde": 900, "chute": -1.5, "passage": "« les deux autres [...] cours sont sur comment installer [Claude] » (carte « Faire tourner Claude chez un hébergeur »)", "segment": "Les trois cours que je n'ai pas faits"},
+      {"seconde": 1042, "chute": -0.8, "passage": "« je vais te parler de la condition qui est un peu pénible » (le piège promis à 2:31)", "segment": "La condition qui bloque presque tout le monde"},
+      {"seconde": 334, "chute": -0.7, "passage": "« Maintenant, on va prendre le parcours du Builder. » (début de chapitre)", "segment": "Parcours 2 — le builder"},
+      {"seconde": 862, "chute": -0.7, "passage": "« Il y a ensuite trois cours supplémentaires » (début de chapitre)", "segment": "Les trois cours que je n'ai pas faits"}
+    ]
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "1re phrase = titre (les cours gratuits et officiels) ; 1er plan = son profil LinkedIn, rien de la miniature"},
+    "ap_boucle_curiosite": {"note": 2, "preuve": "2:31 « il y a un petit piège dont je te parlerai à la fin », résolu à 17:30"},
+    "ap_effort_montre": {"note": 2, "preuve": "0:00 ses attestations à l'écran, 0:05 « pour à peu près une vingtaine d'heures »"},
+    "ap_setup_progress_payoff": {"note": 1, "preuve": "Chaque parcours pose un profil, avance cours par cours et finit sur une certification, sans tension ni résultat montré"},
+    "ap_contraste_rythme": {"note": 1, "preuve": "12 à 15 changements de plan les trois premières minutes, puis 0 à 3 pendant 15 minutes : un seul contraste, entre l'intro et le reste"},
+    "ap_montrer_sans_son": {"note": 1, "preuve": "Les attestations LinkedIn se comprennent seules, puis 2 minutes face caméra sans texte"},
+    "ali_douleur_histoire": {"note": 1, "preuve": "Histoire vécue dès 0:00 (cours passés, manque de concret), mais aucune douleur du spectateur décrite"},
+    "ali_coeur_unique": {"note": 1, "preuve": "0:45 « un cours seul ne suffit pas », repris à 18:57 ; la vidéo reste une revue de cours"},
+    "alx_pont": {"note": 2, "preuve": "Titre repris, preuve (attestations, 20 heures), contexte (lancement de l'Academy), annonce des 22 cours et des 3 parcours, sans accroche forcée"},
+    "alx_pull_paint_point": {"note": 1, "preuve": "Un avis net pour chaque cours (point), son usage parfois (paint, 5:45 et 12:01) ; pourquoi ça compte rarement dit avant"},
+    "alx_nom_idee": {"note": 1, "preuve": "Profils nommés (débutant, builder, développeur), 4D, codes carré, triangle et sens interdit ; le reste porte le nom des cours"},
+    "alx_phrase_finale": {"note": 1, "preuve": "0:50 « rien ne vaut le cas concret » ; 20:05 « c'est l'échange qui te fait progresser » ; rare par cours"},
+    "alx_douleur_reve": {"note": 1, "preuve": "« cours gratuits » parle du désir de se former sans payer, mais « Claude » et « ce qu'il faut savoir » restent neutres"},
+    "alx_cta_tot": {"note": 0, "preuve": "Le document gratuit n'arrive qu'à 7:55"},
+    "ed_intro_courte": {"note": 0, "preuve": "1er point à 1:09, après preuve, annonce, plan, boucle et deux mentions « pas sponsorisée »"},
+    "ed_hook": {"note": 1, "preuve": "0:00 « Ces attestations que tu vois sur mon profil » : une preuve qui intrigue, pas un hook des trois types"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "Avis puis consigne (à faire, à sauter) appuyés sur son expérience ; le problème du spectateur est rarement posé"},
+    "ed_tension_relancee": {"note": 1, "preuve": "Une boucle à 2:31 ; les parties s'enchaînent par annonces (« Maintenant, on va prendre le parcours du Builder »)"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "12:01 les appels API dans Make, 16:15 l'attestation ratée : des anecdotes vécues, pas racontées"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "« pas sponsorisée » dit deux fois en 40 secondes (1:05, 1:43), « valable 12 mois » deux fois"},
+    "ed_niveau_simple": {"note": 1, "preuve": "Les 4D et l'attestation expliqués simplement ; API, SDK, MCP et sous-agents passent sans explication"},
+    "tous_video_suivante": {"note": 2, "preuve": "21:06 la masterclass AIOS, présentée comme l'étape d'après les cours"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Titre test « J'ai passé <ressource> : ce qu'il faut savoir » et miniature à tampon « LE TEST » : la preuve par l'effort porte le paquet.",
+    "intro_structure": "L'intro la plus proche du pont d'Alexander : preuve (attestations, 20 heures), actu, plan. La courbe perd quand même 10 points sur l'annonce du plan, puis glisse sans à-coup.",
+    "habillage": "Une interface faite pour la vidéo (l'arbre des cours qui s'allume par profil) remplace le face caméra pendant 18 minutes.",
+    "idee_pour_nous": "Sur une nouvelle ressource gratuite, la passer soi-même et montrer la preuve dans la 1re seconde : c'est la vidéo la plus vue à 7 jours de la sélection (22 631).",
+    "objectif": "vues"
+  }
+}

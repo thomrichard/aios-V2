@@ -1,0 +1,162 @@
+{
+  "video_id": "e7TY56-yIvM",
+  "chaine": "simon-scrapes",
+  "titre": "Everything You Know About Skills IS OUTDATED",
+  "codeur": "agent simon-scrapes",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "liste",
+    "format_secondaire": "actu",
+    "sujet": "Sept règles du guide des skills d'Anthropic : sommaire en tête, degrés de liberté, test sur chaque modèle, références à un seul niveau, checklists, boucles d'autocorrection, dépendances",
+    "outils": ["Claude Code", "Cowork", "Claude Skills", "Haiku", "Sonnet", "Opus", "Fable"],
+    "niveau": "intermediaire",
+    "objectif_probable": "communaute"
+  },
+  "titre": {
+    "attente_au_clic": "Apprendre ce qui a changé dans la façon d'écrire des skills Claude, pour ne pas garder des méthodes périmées.",
+    "schema": "Everything You Know About <Sujet> IS OUTDATED",
+    "promesse": "Remettre ses skills à jour selon les nouvelles règles",
+    "audace": "audacieux",
+    "registre": "mixte",
+    "briques": ["audace"],
+    "marqueurs": ["majuscules"],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "sérieux, en pleine explication",
+    "regard": "ailleurs",
+    "texte": "The Rules Have Changed Skill.md",
+    "texte_mots": 5,
+    "repete_titre": "partiel",
+    "elements": ["« The Rules Have Changed » en blanc", "flèche vers un dossier jaune Skill.md avec le logo Claude", "le visage d'un homme à lunettes en veste qui n'est pas Simon, main en mouvement"],
+    "nb_elements": 3,
+    "fond": "noir avec halo orange",
+    "couleurs": ["noir", "orange", "jaune", "blanc"],
+    "curiosity_gap": "nouveaute",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "So, when Claude opens a long reference file inside one of your skills, it doesn't always read the whole thing.",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Face caméra en plan large au bureau, sans texte ; à 0:06 la doc d'Anthropic avec « head -100 » surligné",
+    "premier_plan_reprend_miniature": "non",
+    "ouverture": ["hook-fait", "hook-dissonance"],
+    "preuve": {
+      "type": "autorite",
+      "seconde": 41,
+      "description": "Anthropic a mis à jour son guide des bonnes pratiques avec six règles de plus ; la phrase de la doc sur « head -100 » s'affiche surlignée dès 0:06"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 7, "a_l_ecran": false},
+    "boucle_vers_la_fin": {"presente": false, "citation": "", "seconde_resolution": null, "tenue": null},
+    "seconde_premier_point": 53,
+    "attente_tenue": "oui",
+    "attente_note": "0:32 « the rules have now completely changed » reprend mot pour mot la miniature, et les sept règles suivent. Des commentaires contestent que ces règles soient nouvelles (présentes dès mars)."
+  },
+  "structure": {
+    "modele": "liste-numerotee",
+    "segments": [
+      {"debut": 0, "fin": 53, "titre": "Intro: Why Your Skills Are Failing", "role": "intro", "pull": true, "paint": false, "point": false, "nom": false, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 53, "fin": 98, "titre": "1: Content Lists", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 98, "fin": 249, "titre": "2: Degrees of Freedom", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 249, "fin": 265, "titre": "Merci pour les 100 000 abonnés", "role": "transition", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 265, "fin": 380, "titre": "3: Test on Every Model First", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 380, "fin": 518, "titre": "4: Nested References", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 518, "fin": 589, "titre": "5: Using Checklists", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 589, "fin": 651, "titre": "6: Self-Correction Loops", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 651, "fin": 711, "titre": "7: Dependencies", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 711, "fin": 750, "titre": "Récapitulatif des sept règles", "role": "fin", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 750, "fin": 769, "titre": "Prompt d'audit gratuit et vidéo suivante", "role": "cta", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 32, "type": "rupture", "citation": "But, the rules have now completely changed."},
+      {"seconde": 99, "type": "annonce-suite", "citation": "this totally changed the way I think about skills"},
+      {"seconde": 249, "type": "annonce-suite", "citation": "the third rule change [...] is about different models for different skills"},
+      {"seconde": 255, "type": "rupture", "citation": "thank you so much for helping me hit 100K subs"},
+      {"seconde": 266, "type": "annonce-suite", "citation": "number three seems so obvious, but actually nobody is doing it"},
+      {"seconde": 380, "type": "annonce-suite", "citation": "how the skill is actually laid out and how it checks its own work"},
+      {"seconde": 477, "type": "rappel-promesse", "citation": "the head-100 problem from the start actually comes in"},
+      {"seconde": 539, "type": "question-spectateur", "citation": "this does sound like the opposite advice [...] but it actually isn't"},
+      {"seconde": 655, "type": "question-spectateur", "citation": "what happens when your teammate installs the skill that you use every day?"}
+    ],
+    "histoires": [
+      {"seconde": 102, "acte": "perso-passe", "resume": "Avant, il donnait à toutes ses skills le même niveau de détail ; la règle des degrés de liberté a changé sa façon de voir."},
+      {"seconde": 279, "acte": "perso-passe", "resume": "Il avoue tester ses skills sur un seul modèle, le plus récent du mois."}
+    ],
+    "payoffs": [
+      {"seconde": 54, "resume": "Un sommaire en tête de tout fichier de plus de 100 lignes"},
+      {"seconde": 213, "resume": "Trois degrés de liberté, mélangés dans une même skill selon le risque de chaque étape"},
+      {"seconde": 347, "resume": "Faire tourner sa skill sur Haiku, Sonnet et Opus et ajuster le détail"},
+      {"seconde": 497, "resume": "Toutes les références à un seul niveau depuis skill.md : la fin du problème head -100"},
+      {"seconde": 534, "resume": "Une checklist qui renvoie à l'étape 3 si la vérification échoue"},
+      {"seconde": 631, "resume": "Une skill qui propose une nouvelle règle après chaque échec"},
+      {"seconde": 696, "resume": "La ligne d'installation à côté de chaque script"},
+      {"seconde": 711, "resume": "Le récapitulatif des sept règles"}
+    ],
+    "premier_payoff_seconde": 54,
+    "jargon": 2,
+    "repetitions": 1,
+    "test_du_tweet": "Claude ne lit souvent que les 100 premières lignes d'un fichier de référence. Les règles des skills ont changé : sommaire en tête, liberté selon le risque, test sur chaque modèle, références à un niveau, checklists, autocorrection, dépendances écrites. La qualité vient de la structure, plus des mots."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "taille, plan large au bureau ; vignette à droite sur les docs", "decor": "bureau, mur à lattes de bois, micro RØDE, affiche, fauteuil vert, lampe"},
+    "parts": {"face": 35, "ecran": 55, "motion": 10, "broll": 0},
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["cartes-chapitre", "curseur-surligne", "split-screen", "zooms-ecran"],
+    "charte": "Pages de la doc d'Anthropic (fond crème, encadrés bleus et jaunes) surlignées en orange ; bandeau rouge numéroté en bas à gauche pour chaque règle (« 2 Match Strictness to Every Task ») ; gros chiffre 3D rouge à ombre violette. La miniature, noire et orange, ne reprend pas cette charte.",
+    "rythme": "regulier",
+    "notes": "La vidéo lit la doc d'Anthropic à l'écran, passage surligné après passage surligné, avec sa vignette à droite. Les longs passages face caméra servent aux exemples pour les non-codeurs."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 750, "type": "lead-magnet", "cible": "le prompt d'audit des skills, gratuit dans la communauté (skool.com/scrapesai)", "amene_par": "fin", "citation": "I've put an audit prompt in the description for free"},
+      {"seconde": 758, "type": "video-suivante", "cible": "la vidéo sur les mises à jour du prompting d'Anthropic", "amene_par": "fin", "citation": "if you stay on to the next video, I'm going to talk about Anthropic's prompting updates"}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"formation": 1, "produit": 1, "lead-magnet": 1, "autre": 1},
+    "commentaire_epingle": null,
+    "recap_final": true,
+    "derniere_phrase": "See you in the next one.",
+    "video_suivante_precise": true
+  },
+  "commentaires": {
+    "themes": ["appliquer les règles à ses propres skills", "écrire une skill par modèle", "l'installation de dépendances par une skill jugée dangereuse", "la nouveauté des règles mise en doute"],
+    "demandes": ["un lien vers les nouvelles recommandations", "savoir si le skill creator d'Anthropic est à jour", "comment vérifier qu'une skill marche vraiment", "une version de la vidéo avec des pauses"],
+    "critiques": ["« head -100 » présenté comme systématique alors que la doc dit « may » (7 likes)", "des règles déjà là en mars, pas nouvelles", "« pip install » dans une skill : « pure evil »", "un débit sans aucune pause"],
+    "reprises": ["les 100 premières lignes (head -100)", "degrees of freedom", "/doctor"],
+    "signal_promesse": "mixte"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "1re phrase sur les skills de Claude, en partie le titre ; 1er plan en face caméra, rien de la miniature (dossier Skill.md, visage d'un tiers)"},
+    "ap_boucle_curiosite": {"note": 1, "preuve": "Le problème « head -100 » est posé à 0:00 et ne se règle tout à fait qu'à 7:57 ; mais il n'est pas posé comme une question"},
+    "ap_effort_montre": {"note": 0, "preuve": "Aucun effort ni test montré dans l'intro"},
+    "ap_setup_progress_payoff": {"note": 1, "preuve": "Le récap de 11:51 relie les sept règles à une idée, mais chaque règle reste un bloc de même poids"},
+    "ap_contraste_rythme": {"note": 1, "preuve": "De 4 à 13 plans par minute, débit de 187 à 260 mots/min, sans rupture nette"},
+    "ap_montrer_sans_son": {"note": 1, "preuve": "La doc surlignée (« partially read files [...] head -100 ») dit le problème, mais il faut lire un paragraphe en petits caractères"},
+    "ali_douleur_histoire": {"note": 1, "preuve": "0:15 « they actually don't exist » (douleur), puis 0:22 « we all learned how to build them » : un passé commun, pas une histoire vécue"},
+    "ali_coeur_unique": {"note": 2, "preuve": "12:13 « most of these fixes weren't about the words inside the skill » : la qualité vient de la structure et des checks"},
+    "alx_pont": {"note": 1, "preuve": "Contexte (0:22), titre repris (0:32), preuve (Anthropic) et promesse comme un pont, mais ouvert par un fait-choc"},
+    "alx_pull_paint_point": {"note": 2, "preuve": "La plupart des règles ont le pourquoi, un exemple métier (appel de vente, factures, coéquipier) et l'action"},
+    "alx_nom_idee": {"note": 2, "preuve": "« degrees of freedom » haut, moyen, bas ; bandeaux à l'écran « 1 Add a Contents List », « 2 Match Strictness to Every Task »"},
+    "alx_phrase_finale": {"note": 2, "preuve": "4:01 « low freedom usually means a script and not more plain text » ; 5:59 « a script [...] runs the same on every single model »"},
+    "alx_douleur_reve": {"note": 1, "preuve": "« IS OUTDATED » touche la peur d'être dépassé, mais « Skills » reste du jargon"},
+    "alx_cta_tot": {"note": 0, "preuve": "Le prompt d'audit gratuit n'arrive qu'à 12:30"},
+    "ed_intro_courte": {"note": 1, "preuve": "1er point à 0:53 après neuf phrases, mais l'intro livre déjà un fait utile"},
+    "ed_hook": {"note": 2, "preuve": "0:15 « if your important rules sit after line 100 [...] they actually don't exist »"},
+    "ed_probleme_preuve_consignes": {"note": 2, "preuve": "Presque chaque règle : le problème, la règle d'Anthropic en preuve, puis quoi faire dans son dossier de skills"},
+    "ed_tension_relancee": {"note": 2, "preuve": "4:26 « nobody is doing it » ; 9:00 « this does sound like the opposite advice » ; 10:55 « what happens when your teammate installs the skill »"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "1:42 il donnait le même détail à toutes ses skills ; 4:39 « I know I'm guilty » : des aveux courts"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "Le rôle des scripts dans la liberté basse est redit trois fois"},
+    "ed_niveau_simple": {"note": 2, "preuve": "2:27 « if you're not a coder, you're a business owner » et ses exemples ; 6:11 le front matter YAML expliqué en une phrase"},
+    "tous_video_suivante": {"note": 2, "preuve": "12:38 la vidéo sur le prompting d'Anthropic, « you're going to need to update all of your skill prompts »"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Un titre qui dit au public que son savoir est périmé, en capitales ; une miniature qui reprend l'idée (« The Rules Have Changed ») avec le dossier Skill.md et le visage d'un tiers. La vidéo la plus vue de la période à 7 jours (270 000).",
+    "intro_structure": "Le hook est un fait technique qu'on peut vérifier tout de suite (Claude ne lit que 100 lignes), puis la phrase de la miniature à 0:32. Sept règles d'Anthropic, chacune traduite en exemple métier, un récap et une seule offre : un prompt gratuit.",
+    "habillage": "La doc officielle à l'écran, surlignée, avec un bandeau numéroté par règle : la preuve est la source elle-même.",
+    "idee_pour_nous": "Lire un guide officiel mis à jour (Anthropic, OpenAI) et en tirer « ce qui a changé pour toi », avec un exemple de métier non-codeur à chaque règle et un audit gratuit au Club en fin de vidéo.",
+    "objectif": "club"
+  }
+}

@@ -4,7 +4,7 @@ resume: on IA te repropose une option que tu avais déjà écartée ? Elle ne co
 statut: publie
 domaine: contenu
 cree: 2026-10-20
-maj: 2026-10-22
+maj: 2026-10-25
 liens: []
 ---
 # J’ai appris à mon IA à ne plus oublier mes décisions (en 5 minutes)
@@ -18,17 +18,17 @@ liens: []
 
 ## Stats
 
-YouTube Analytics, données jusqu'au 2026-10-20. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
+YouTube Analytics, données jusqu'au 2026-10-22. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
 
 | | 7 premiers jours | 30 premiers jours | Depuis la sortie |
 |---|---|---|---|
-| Vues | en cours | en cours | 247 |
-| Vues engagées | en cours | en cours | 94 |
-| Heures regardées | en cours | en cours | 5,9 |
+| Vues | en cours | en cours | 359 |
+| Vues engagées | en cours | en cours | 130 |
+| Heures regardées | en cours | en cours | 8,7 |
 | Abonnés gagnés | en cours | en cours | 0 |
-| Revenus estimés | en cours | en cours | 0,93 $ |
-| Durée moyenne regardée | | | 3 min 43 s (35,0 %) |
-| J'aime · commentaires | | | 5 · 0 |
+| Revenus estimés | en cours | en cours | 1,12 $ |
+| Durée moyenne regardée | | | 3 min 56 s (37,0 %) |
+| J'aime · commentaires | | | 7 · 0 |
 
 ## Liens
 

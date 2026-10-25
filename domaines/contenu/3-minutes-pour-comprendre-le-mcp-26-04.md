@@ -4,7 +4,7 @@ resume: Donne moi 3 minutes, et je t'explique ce qu'est le MCP, à quoi ca sert,
 statut: publie
 domaine: contenu
 cree: 2026-04-01
-maj: 2026-10-22
+maj: 2026-10-25
 liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md]
 ---
 # 3 minutes pour comprendre le MCP
@@ -18,24 +18,24 @@ liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, claude-tutoriel-co
 
 ## Stats
 
-YouTube Analytics, données jusqu'au 2026-10-20. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
+YouTube Analytics, données jusqu'au 2026-10-22. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
 
 | | 7 premiers jours | 30 premiers jours | Depuis la sortie |
 |---|---|---|---|
-| Vues | 578 | 682 | 1 911 |
-| Vues engagées | 578 | 682 | 1 726 |
-| Heures regardées | 14,2 | 17,3 | 55,5 |
-| Abonnés gagnés | 9 | 17 | 35 |
-| Revenus estimés | 0,00 $ | 0,00 $ | 2,57 $ |
-| Durée moyenne regardée | | | 1 min 55 s (59,3 %) |
+| Vues | 578 | 682 | 1 956 |
+| Vues engagées | 578 | 682 | 1 749 |
+| Heures regardées | 14,2 | 17,3 | 56,2 |
+| Abonnés gagnés | 9 | 17 | 36 |
+| Revenus estimés | 0,00 $ | 0,00 $ | 2,69 $ |
+| Durée moyenne regardée | | | 1 min 55 s (59,2 %) |
 | J'aime · commentaires | | | 28 · 1 |
 
 ## Liens
 
-- Cite : [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
-- Cite : [2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
-- Citée par : [2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
-- Citée par : [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
+- Cite : [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
+- Cite : [claude-tutoriel-complet-pour-passer-de-debutant-a-26-05](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
+- Citée par : [claude-tutoriel-complet-pour-passer-de-debutant-a-26-05](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
+- Citée par : [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
 - Description : https://clubsmart.s.gy/masterclass-aios-catalogue
 - Description : https://clubsmart.s.gy/tuto-claude-catalogue
 - Description : https://www.skool.com/club-smartMaîtrise

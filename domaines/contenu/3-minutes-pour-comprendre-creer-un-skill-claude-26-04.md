@@ -4,7 +4,7 @@ resume: et construis ton second système AI personnel
 statut: publie
 domaine: contenu
 cree: 2026-04-14
-maj: 2026-10-22
+maj: 2026-10-25
 liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md, 3minutes-pour-comprendre-les-claude-skills-26-04.md]
 ---
 # 3 minutes pour comprendre : créer un skill Claude
@@ -18,24 +18,24 @@ liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, claude-tutoriel-co
 
 ## Stats
 
-YouTube Analytics, données jusqu'au 2026-10-20. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
+YouTube Analytics, données jusqu'au 2026-10-22. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
 
 | | 7 premiers jours | 30 premiers jours | Depuis la sortie |
 |---|---|---|---|
-| Vues | 730 | 1 742 | 11 056 |
-| Vues engagées | 730 | 1 742 | 9 720 |
-| Heures regardées | 21,3 | 55,1 | 325,1 |
-| Abonnés gagnés | 16 | 46 | 169 |
-| Revenus estimés | 0,00 $ | 0,00 $ | 21,68 $ |
-| Durée moyenne regardée | | | 2 min 0 s (57,8 %) |
+| Vues | 730 | 1 742 | 11 218 |
+| Vues engagées | 730 | 1 742 | 9 800 |
+| Heures regardées | 21,3 | 55,1 | 327,6 |
+| Abonnés gagnés | 16 | 46 | 170 |
+| Revenus estimés | 0,00 $ | 0,00 $ | 22,00 $ |
+| Durée moyenne regardée | | | 2 min 0 s (57,7 %) |
 | J'aime · commentaires | | | 126 · 4 |
 
 ## Liens
 
-- Cite : [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
-- Cite : [2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
-- Cite : [2026-04-05-3minutes-pour-comprendre-les-claude-skills](3minutes-pour-comprendre-les-claude-skills-26-04.md)
-- Citée par : [2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
+- Cite : [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
+- Cite : [claude-tutoriel-complet-pour-passer-de-debutant-a-26-05](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
+- Cite : [3minutes-pour-comprendre-les-claude-skills-26-04](3minutes-pour-comprendre-les-claude-skills-26-04.md)
+- Citée par : [claude-tutoriel-complet-pour-passer-de-debutant-a-26-05](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
 - Description : https://clubsmart.s.gy/masterclass-aios-catalogue
 - Description : https://clubsmart.s.gy/tuto-claude-catalogue
 - Description : https://www.skool.com/club-smart

@@ -1,0 +1,353 @@
+[
+ {
+  "texte": "Hi Simon, thanks for covering skill-placebo, it's a genuinely interesting study. But I would push back on \"some of the most popular skills ... are now basically useless\". Having dug into the published logs and re-run part of it myself, I think that's a shortcut:\r\n\r\nFirst, the benchmark runs short tasks with a fully autonomous agent: no human in the loop, no grilling, no specs, no planning, no back-and-forth with the user. That interaction is exactly where plugins like mattpocock/skills shine, and 14 of its 25 skills are user-only by design (disable-model-invocation: true). That includes implement, the skill that drives Matt's whole implementation workflow: TDD at pre-agreed seams, then a code-review pass. And TDD itself requires confirming the seams with the user before writing any test, which is impossible in an unattended run. In the published logs, the agent never invoked a single mattpocock skill: 0 of 30 runs.\r\n\r\nSecond, the benchmark only checks whether hidden tests pass. Some skills target code quality and maintainability, like Karpathy's simplicity and surgical changes, or ponytail's \"write less code\". The benchmark doesn't measure that: a clean fix and a messy one score the same. Even so, ponytail was the one pack with a clear measurable effect: about 12% lower cost than the placebo.\r\n\r\nThird, skills like caveman or i-have-adhd mainly shape the style of the replies. Some people simply prefer short, structured answers, and that's a matter of taste, not of passing tests.\r\n\r\nFinally, I re-ran the benchmark locally with mattpocock/skills (90 trials). The success rate came out at 97% with the skills, against 83% with the placebo and 87% with no skill. The study found the opposite (83% vs 87% placebo). And again, the skills were never invoked (0 of 30)! Same benchmark, same model, opposite result: the pass-rate numbers are quite noisy.\r\n\r\nSo, \"basically useless\" doesn't seem a fair reading of the study. Would be curious to hear your take.",
+  "likes": 21,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ferko5573",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "at this point a new feature's life cycle is about 12 hours",
+  "likes": 17,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@benzeltser9851",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "I can't keep up with all that stuff, and world events, and my job. I'm burned out.",
+  "likes": 5,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@rhizin",
+  "date": 1792368000,
+  "parent": "root"
+ },
+ {
+  "texte": "Ive been looking for this video for the past week, so thanks for making it :)",
+  "likes": 3,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@dagreco",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "Skills is also a way to ensure that an agent is not constantly doing things differently because this is necessary in large interconnected systems and companies or is there a better way e.g instruction",
+  "likes": 3,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ReasonRationality112",
+  "date": 1792368000,
+  "parent": "root"
+ },
+ {
+  "texte": "Extensive but comprehensive and clear breakdown. Well done.",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@richarddeananderson82",
+  "date": 1792627200,
+  "parent": "root"
+ },
+ {
+  "texte": "Thank you for providing good information in an engaging way without overselling or giving backward cap bro vibes :)",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@SaraEFoster",
+  "date": 1792368000,
+  "parent": "root"
+ },
+ {
+  "texte": "Thanks Simon, great breakdown.\n\nWould love a video on the cloud sessions, struggling to understand how they work properly with all my files on my local PC. I have all my skills and workflows in GitHub, but all the private and sensitive info on my local PC.",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@keiranhoare",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "Hi Simon, Thanks for this very informative video. I have a question - currently I have a bunch of rails setup that define a bunch of sub agents of various specs and roles for my primary agents - for example it offloads git actions to haiku, it defaults to sonnet for research, and I have a verifier agent of opus high for independent verification of any code/work etc. I also limit the max number of sub-agents to 3 so stop them spiralling out of control. Would you say it's now not worth doing this because the models now are smart enough to look after delegating this sort of stuff themselves?",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@b0nsta-uk",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "this was super helpful. Thank you.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@john-draftanimal",
+  "date": 1792627200,
+  "parent": "root"
+ },
+ {
+  "texte": "This sounds exhausting.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ryanmcadam8823",
+  "date": 1792800000,
+  "parent": "root"
+ },
+ {
+  "texte": "fantastic. you got a new subscriber",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@jcolby298",
+  "date": 1792454400,
+  "parent": "root"
+ },
+ {
+  "texte": "You can actually ask claude to fix your skill based on its current logic, removed redundancy etc. But you need some sort of instruction compiler for other models to catch up. Esp when orchestrating below models.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@FRELAN-AI",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "Thanks Simon, very helpful",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@barsenovic",
+  "date": 1792368000,
+  "parent": "root"
+ },
+ {
+  "texte": "I will send this to Claude, thanks!",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Vladstattoo",
+  "date": 1792368000,
+  "parent": "root"
+ },
+ {
+  "texte": "Hi Simon. Thanks for the video, this helps me start easier as I don't need to watch 100 video's on skills or all the other changes.\n\nI'm trying to figure out if I need to setup harness engineering. I want opus to write system software, it's a platform of software features, each one being a product in it's own right and greenfield, so no code base. Do you have a video, did have a look, on creating complex software, planning it properly and I assume keeping context size down under the 250-260k size?",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@affieuk",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "I don't think I've switched off of opus since I got it for that reason",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@StenyGaming",
+  "date": 1792454400,
+  "parent": "root"
+ },
+ {
+  "texte": "And remember you cant in complex systems give it all instructions every tume",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ReasonRationality112",
+  "date": 1792368000,
+  "parent": "root"
+ },
+ {
+  "texte": "Hey, based on this, did the AOS skill building skill get updated in 1.1.6 of your amazing AOS?",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@RobCooper",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "Honestly by March 2026 Opus 7.5 or 8 will change everything. Haiku 7.5 or 8 run Agentic team over night while you sleep thank you 20 agents for cheap.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@justinewert2166",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "Does switching the effort reset the cache?",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Zorba-the-buddha-wc3os",
+  "date": 1792540800,
+  "parent": "root"
+ },
+ {
+  "texte": "USA here, Hate to tell you this it is very hard to understand you, maybe slow down.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@walterski8377",
+  "date": 1792713600,
+  "parent": "root"
+ },
+ {
+  "texte": "Why have you speeded up your voice on a subject that is quite technical? This is super annoying, and so many of the AI content providers do this, and I actually have a Python script which looks up videos and whenever I come across content that is deliberately speeded up, I put them on no revisit list because I find a disrespectful. If you’re trying to teach people something, teach people something.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@keithbertschin1213",
+  "date": 1792800000,
+  "parent": "root"
+ },
+ {
+  "texte": "stopped and thumbed down at 7 minutes....",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@larrymiller2137",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "Is it just me, or is everyone else making things simpler while Anthropic is making Claude more difficult and confusing to use? \nI mean it almost seems like they're doing it on purpose so that you'll waste more money. But that would be crazy talk.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@citizenq01",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "It is a little odd for the company that charges the most for overpriced models to be suggesting people don't change models as needed. Nobody without a trust fund is running their top models constantly.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Tony-dp1rl",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "No more Fable? No more Methos? ...Opus sucks",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@kangdanlin",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "The main thing people get wrong about skill files is that skill files are not for the model, they're for the user to prompt the model. \nSomething about agents is every time you spawn one, you give it your context - clear your context first, then prompt what you need agents to do, never let a model with a long running context spawn an agent. Same thing for swapping models.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@74Gee",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "I see a deterioration in quality with new version. More mistakes with full confidence. It's becoming a habit to verify before handover. A technique that costs more tokens to verify the miscalculation done the first time due to shallow inferences",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@afzalhussain605",
+  "date": 1792713600,
+  "parent": "root"
+ },
+ {
+  "texte": "Ask claude whatever. Check it. Ask something else. Check it. Fast feedback.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@HughDoherty-w7i",
+  "date": 1792368000,
+  "parent": "root"
+ },
+ {
+  "texte": "That advisor setup is unnecessary. I'm using a workflow with an opus 5.5/high orchestrator, and a variety of permanent subagent. The workflow was based on extensive benchmarking of Sonnet 5.5 for coding - on low, medium, and high effort. It used a developed set of subagents, specialized for specific tasks like reviewing all code, testing (and developing tests for) the code, sending rework back to the writing agent, and cycling all that until either refutation and final acceptance agents have no objections, or a fixed number of turns was reached, at which point it took the best result up to that point. All these managing agents were automatically assigned a model and effort level by the orchestrator. Some are Opus, usually high or medium effort, some are Sonnet, usually low or medium effot.\n\nAnd finally - similar to your advisor case - in those examples when the rework cycles run out, and it has the best effort, it then gives a Fable agent a crack on solving it. All I had to do to set that up was tell the orchestrator to do just that. And it worked, with Fable taking an incredibly tough, real world code design problem from that huge legacy codebase project that had run out of solutions without a completely satisfactory one, and in about 2 minutes understanding the entire design intent, solving the problem with real code. But the framework still ran it through refutation, code check, live testing, and everything that failed the prior attempts, and the solution was a pass. Two minutes, on a problem that stumped a team of well trained, cooperating agents, which had been performing flawlessly on project tasks up to that time. In fact, it was having the team hit that wall that resulted in me adding the \"Master Coding Agent\" into the workflow, invoked only on those tasks where it runs out of any acceptable solutions.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@stickplayer2",
+  "date": 1792627200,
+  "parent": "root"
+ },
+ {
+  "texte": "Where is the skill eval plugin? I cannot find it",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@mph-321",
+  "date": 1792454400,
+  "parent": "root"
+ },
+ {
+  "texte": "So Claude becomes more efficient and hence less profitable for anthropic",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@gmnboss",
+  "date": 1792857600,
+  "parent": "root"
+ },
+ {
+  "texte": "How this affects AgenticOS?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@frosti7",
+  "date": 1792368000,
+  "parent": "root"
+ },
+ {
+  "texte": "Yeah, when ever I try to add a skill to Claud now he says: I can already do the better then the skill dumbass 😂",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@niolss",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "Simon doesn’t test his advice, he just dispenses advice confidently so that it sounds correct.  Very hit and miss.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@brahmdorst5154",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "Haiku is way more cost effective than Opus -- it's wild how wrong you say something like that with a smile. The key is to stick to one model.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@noahwald907",
+  "date": 1792627200,
+  "parent": "root"
+ },
+ {
+  "texte": "ive always know IT dudes have a fetish for complicating things",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@effinyess9536",
+  "date": 1792368000,
+  "parent": "root"
+ },
+ {
+  "texte": "I unsubscribed. This is why a lot will also unsubscribe, mark my words. You had no ideas so you took the concepts, as old as >1 year old and presented them as something \"surprising\" and \"new\" even though you YOURSELF covered the same topics almost verbatim previously. Tired of this sort of clickbait, just wastes time. You don't really expect that people will continue watching once they see it's a clickbait, do you?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@alexb4ss",
+  "date": 1792368000,
+  "parent": "root"
+ }
+]

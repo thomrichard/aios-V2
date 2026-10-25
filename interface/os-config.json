@@ -20,8 +20,8 @@
     { "label": "LONDRES", "tz": "Europe/London" }
   ],
   "readers": { "claudeCode": "auto" },
-  "email": { "enabled": false, "command": "gws" },
-  "partnerHints": "sponsor|collab|partner|brand|affiliate|deal|invoice|pitch|opportunit",
-  "leadHints": "join|member|sign\\s?up|subscri|pricing|enroll|course|coaching|access|billing|refund",
+  "email": { "enabled": true, "command": "gws" },
+  "partnerHints": "sponsor|collab|partenariat|partner|brand|affili|opportunit",
+  "leadHints": "devis|accompagnement|coaching|consulting|formation|tarif|prestation|club smart|inscri|abonnement",
   "personalFrom": "@(gmail|googlemail|yahoo|outlook|hotmail|icloud|proton)\\."
 }

@@ -1,0 +1,163 @@
+{
+  "video_id": "_SVU3oC4JX8",
+  "chaine": "robonuggets",
+  "titre": "25 Tricks to Level Up Claude Design in 13 Mins",
+  "codeur": "agent robonuggets",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "liste",
+    "format_secondaire": null,
+    "sujet": "25 astuces et ressources pour mieux designer avec Claude Design et Claude Code",
+    "outils": ["Claude Design", "Claude Code", "galerie de design systems", "FontShare", "Font Joy", "kie.ai", "Rubric References", "Impeccable", "21st.dev", "React Bits", "Canvas UI", "Iconify", "Lordicon", "Creator's Toolbox", "Apple HIG", "GSAP", "/design", "Whisper", "HyperFrames"],
+    "niveau": "debutant",
+    "objectif_probable": "vues"
+  },
+  "titre": {
+    "attente_au_clic": "Apprendre 25 astuces pour faire de plus beaux designs avec Claude Design, comme les pages de la miniature, en 13 minutes.",
+    "schema": "<N> Tricks to Level Up <Outil> in <N> Mins",
+    "promesse": "Progresser en design avec Claude en 13 minutes",
+    "audace": "timide",
+    "registre": "mixte",
+    "briques": ["vitesse", "resultat"],
+    "marqueurs": ["chiffre", "duree"],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": false,
+    "emotion": "mascotte bras levés, joie",
+    "regard": null,
+    "texte": "Claude Design 25 Hacks",
+    "texte_mots": 4,
+    "repete_titre": "partiel",
+    "elements": ["mascotte Claude orange en pâte à modeler, bras levés, au centre", "pages produit très soignées en éventail (voiture, basket, montre, citronnade, sérum, canette, enceinte)", "texte « Claude Design » noir et « 25 Hacks » en italique orange"],
+    "nb_elements": 3,
+    "fond": "blanc lumineux avec feuilles qui volent",
+    "couleurs": ["blanc", "orange Claude", "noir", "couleurs vives des produits"],
+    "curiosity_gap": "resultat",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "These are the Claude design tricks that can take you from a complete beginner [...]",
+    "premiere_phrase_reprend_titre": "oui",
+    "premier_plan": "Jay dans un grand cadre arrondi à droite sur fond crème vide, puis à 0:02 la carte « Claude Design tricks from a complete beginner »",
+    "premier_plan_reprend_miniature": "non",
+    "ouverture": ["demo-d-abord", "boucle-curiosite", "pont"],
+    "preuve": {
+      "type": "resultat-montre",
+      "seconde": 4,
+      "description": "Des sites faits avec Claude Design défilent (« BUILDING TOMORROW FOR TODAY », la page RUBRIC), puis « Like the ones you're seeing in this video »"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 25, "a_l_ecran": true},
+    "boucle_vers_la_fin": {
+      "presente": true,
+      "citation": "including some bonus ones that I haven't heard anyone else talk about",
+      "seconde_resolution": 749,
+      "tenue": "partiel"
+    },
+    "seconde_premier_point": 33,
+    "attente_tenue": "oui",
+    "attente_note": "Les 25 astuces sont données, vite. Les « bonus » promis ne sont pas signalés comme tels, sauf un « bonus tip » à 12:29. Les pics de revisionnage (heatmap) tombent sur la galerie de 2 000 design systems (1:13) et sur Impeccable (6:38)."
+  },
+  "structure": {
+    "modele": "liste-numerotee",
+    "segments": [
+      {"debut": 0, "fin": 33, "titre": "Intro : des débutants aux designs soignés, 25 astuces, Jay", "role": "intro", "pull": true, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 33, "fin": 193, "titre": "Faciles 1 à 5 : design system, galerie de styles, présélection, skill de design, polices", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 193, "fin": 207, "titre": "Guide PDF gratuit", "role": "cta", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 207, "fin": 263, "titre": "Faciles 6 et 7 : les textes, mélanger des design systems", "role": "point", "pull": true, "paint": false, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 263, "fin": 309, "titre": "Bilan des faciles, puis la communauté RoboNuggets", "role": "cta", "pull": true, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 309, "fin": 605, "titre": "Intermédiaires 8 à 19 : images, projet de référence, bibliothèque, Impeccable, ton, composants, icônes, SVG, Lottie, Creator's Toolbox", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 605, "fin": 787, "titre": "Avancées 20 à 25 : Apple HIG, GSAP, /design, /tweak, transcription vers motion design, son propre OS de design", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 787, "fin": 812, "titre": "Wrap up : des animations toutes faites par l'IA, votre avis ?", "role": "fin", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 10, "type": "boucle-ouverte", "citation": "including some bonus ones that I haven't heard anyone else talk about"},
+      {"seconde": 263, "type": "annonce-suite", "citation": "if you only did those, you'd already be ahead of most people"},
+      {"seconde": 270, "type": "annonce-suite", "citation": "the next ones are some intermediate tips"},
+      {"seconde": 582, "type": "rupture", "citation": "if you only bookmark one thing from this video, make it creatorstoolbox.com"},
+      {"seconde": 605, "type": "annonce-suite", "citation": "Now, let's go to some advanced tips."},
+      {"seconde": 725, "type": "annonce-suite", "citation": "this one's a crowd favorite, and it's also how I make the animations"}
+    ],
+    "histoires": [
+      {"seconde": 381, "acte": "anecdote", "resume": "Jay a construit une extension Chrome, Rubric References, qui enregistre en un clic une page et sa capture dans sa bibliothèque."},
+      {"seconde": 725, "acte": "anecdote", "resume": "La transcription vers motion design est la façon dont il anime ses propres vidéos."},
+      {"seconde": 776, "acte": "anecdote", "resume": "Son équipe a une bibliothèque d'éléments (3D, animations, icônes SVG) réutilisés dans ses designs."}
+    ],
+    "payoffs": [
+      {"seconde": 41, "resume": "Créer un design system dans Claude Design, ou en tirer un d'une capture"},
+      {"seconde": 73, "resume": "Une galerie de plus de 2 000 design systems lisibles par Claude"},
+      {"seconde": 98, "resume": "Faire présélectionner par Claude les 3 styles les plus proches de son activité"},
+      {"seconde": 397, "resume": "Impeccable, la skill qui audite et corrige un design"},
+      {"seconde": 725, "resume": "La transcription horodatée devient du motion design calé sur la parole"},
+      {"seconde": 760, "resume": "Son propre OS de design, où tout se retrouve"}
+    ],
+    "premier_payoff_seconde": 41,
+    "jargon": 2,
+    "repetitions": 0,
+    "test_du_tweet": "25 astuces pour designer avec Claude, du débutant à l'avancé : partir d'un design system (ou d'une galerie de 2 000), changer de police et de ton, piocher des composants et icônes tout faits, GSAP, /design dans Claude Code, et la transcription qui devient motion design."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine dans un grand carré arrondi à droite, graphisme à gauche ; plans plein cadre sur les cartes d'astuce", "decor": "bureau, étagère, fleurs, micro Rode ; casquette blanche"},
+    "parts": {"face": 40, "ecran": 25, "motion": 35, "broll": 0},
+    "textes_ecran": "constants",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["plan-a-l-ecran", "cartes-chapitre", "etiquettes", "chiffres-animes", "logo-chaine"],
+    "charte": "Fond crème à grille discrète, titres en serif noir avec sous-titre gris, accent orange, cartes numérotées (« 11 Impeccable ») ; fenêtres Claude sombres posées dessus. C'est la charte claire de la miniature.",
+    "rythme": "regulier",
+    "notes": "La seule des dix en charte claire, alignée sur la miniature. 186 changements de plan, un toutes les 4 secondes environ, sans creux ; toutes les animations sont faites par l'IA (dit à 13:14)."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 193, "type": "lead-magnet", "cible": "guide PDF des 25 astuces (communauté Skool gratuite)", "amene_par": "apres-valeur", "citation": "I've put every one of these tips into a detailed PDF guide"},
+      {"seconde": 276, "type": "communaute-payante", "cible": "RoboNuggets (Claude Living Masterclass, cours Agents as a Service)", "amene_par": "transition", "citation": "if you want to learn how to build and sell AI systems that businesses actually pay for"},
+      {"seconde": 305, "type": "communaute-payante", "cible": "lien dans le commentaire épinglé", "amene_par": "transition", "citation": "check that just in the pinned comment below"},
+      {"seconde": 607, "type": "lead-magnet", "cible": "guide PDF", "amene_par": "transition", "citation": "you can grab that PDF guide in the description"},
+      {"seconde": 791, "type": "like-commentaire", "cible": "donner son avis sur ce type de vidéo", "amene_par": "fin", "citation": "let me know if that was useful and what you think about this type of video"}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"lead-magnet": 1, "communaute-payante": 1, "produit": 1, "service": 1, "affiliation": 5, "abonnement": 1, "reseaux": 4},
+    "commentaire_epingle": {"texte": "Le guide des 25 astuces Claude Design gratuit (Skool gratuit, « search for n76 ») et la communauté payante", "type": "lead-magnet"},
+    "recap_final": false,
+    "derniere_phrase": "So, I'm also interested to know what you think about them. I'll see you all next time.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["« Best Claude Design tips and tricks I've seen by far »", "le format qui évite de regarder 50 vidéos", "le PDF qui accompagne la vidéo", "la seule chaîne avec la cloche activée pour un abonné"],
+    "demandes": ["un pas-à-pas sur la façon de faire les animations de la vidéo (7 likes)", "comment construire la bibliothèque de références et l'extension Chrome", "où trouver le PDF (en espagnol, en italien)", "un doublage arabe"],
+    "critiques": ["« This video is way too fast »", "« Sooo boring » et « Waste of time » (isolés)", "le lien ne marche pas", "« chree », « tree » pour « three »"],
+    "reprises": ["« Gold content »", "« notifications ON »"],
+    "signal_promesse": "tenue"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "1re phrase = titre ; 1er plan Jay sur fond crème vide, sans la mascotte ni les pages produit de la miniature"},
+    "ap_boucle_curiosite": {"note": 1, "preuve": "0:10 des bonus « I haven't heard anyone else talk about », mais seul un « bonus tip » est signalé, à 12:29"},
+    "ap_effort_montre": {"note": 0, "preuve": "Aucun effort ni test dit dans l'intro"},
+    "ap_setup_progress_payoff": {"note": 1, "preuve": "Une liste qui monte jusqu'à l'astuce 25 « where all of it comes together », sans projet suivi"},
+    "ap_contraste_rythme": {"note": 0, "preuve": "De 9 à 16 changements de plan par minute, très régulier ; seule la dernière minute ralentit"},
+    "ap_montrer_sans_son": {"note": 2, "preuve": "Planche intro : « Claude Design tricks from a complete beginner », des sites montrés, « Like the ones you're seeing in this video », « 25 Tricks » en trois niveaux"},
+    "ali_douleur_histoire": {"note": 0, "preuve": "Aucune douleur ni histoire vécue dans l'intro"},
+    "ali_coeur_unique": {"note": 1, "preuve": "0:35 le design system « is where everything starts », repris à l'astuce 25, mais 25 astuces indépendantes"},
+    "alx_pont": {"note": 1, "preuve": "Titre repris, preuve montrée, plan et crédits comme un pont, avec une petite accroche (les bonus)"},
+    "alx_pull_paint_point": {"note": 1, "preuve": "Complet sur quelques astuces (2:45 les polices, 3:29 les textes) ; la plupart sont une ressource et une action"},
+    "alx_nom_idee": {"note": 2, "preuve": "Une carte numérotée par astuce : « Design systems », « Copy », « Impeccable », « Tone of voice », « Creators Toolbox »"},
+    "alx_phrase_finale": {"note": 1, "preuve": "3:48 « you start from best practice instead of AI speak » ; 4:16 « a blend that looks like yours » ; pas sur la plupart"},
+    "alx_douleur_reve": {"note": 1, "preuve": "« Level Up » parle du désir, mais Claude Design porte le titre"},
+    "alx_cta_tot": {"note": 2, "preuve": "3:13 le PDF des 25 astuces, lié au sujet, avant 4 minutes"},
+    "ed_intro_courte": {"note": 1, "preuve": "Premier point à 0:33, après la promesse, l'accroche et les crédits"},
+    "ed_hook": {"note": 1, "preuve": "« like the ones you're seeing in this video » avec les sites montrés : un résultat, aucun des trois types purs"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "Certaines astuces posent un problème (2:45 la police par défaut, 8:27 Claude dessine mal les icônes), puis la consigne ; la preuve manque souvent"},
+    "ed_tension_relancee": {"note": 1, "preuve": "Les niveaux sont annoncés (4:30, 10:05), sans question du spectateur"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "6:21 l'extension Rubric References ; 12:05 sa façon d'animer : des anecdotes"},
+    "ed_sans_surexplication": {"note": 2, "preuve": "Chaque astuce est dite une fois, en 20 à 30 secondes ; un commentaire trouve même la vidéo trop rapide"},
+    "ed_niveau_simple": {"note": 1, "preuve": "SVG, Lottie, GSAP et HIG expliqués ; « front end », « components », « empty states » non expliqués"},
+    "tous_video_suivante": {"note": 0, "preuve": "« I'll see you all next time », sans vidéo précise"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Aucun changement relevé par VidIQ. Titre court (46 caractères) et miniature de résultat : la mascotte au milieu de pages produit très soignées. Meilleur ratio likes sur vues des dix (environ 2,3 %).",
+    "intro_structure": "Intro de 33 secondes, puis 25 astuces en trois niveaux, une carte par astuce. Les pics de revisionnage tombent sur la galerie de 2 000 design systems (1:13) et sur la skill Impeccable (6:38) : des ressources concrètes à noter.",
+    "habillage": "La seule des dix en charte claire, alignée sur la miniature ; un changement de plan toutes les 4 secondes environ, sans creux.",
+    "idee_pour_nous": "Une liste-ressource dense sur un outil (25 astuces et liens) avec un PDF qui la reprend : les commentaires disent qu'elle évite de regarder 50 vidéos.",
+    "objectif": "vues"
+  }
+}

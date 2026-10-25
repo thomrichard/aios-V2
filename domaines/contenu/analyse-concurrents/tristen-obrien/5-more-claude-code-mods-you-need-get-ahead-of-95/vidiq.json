@@ -1,0 +1,107 @@
+{
+ "recupere_le": "2026-10-25",
+ "breakout": 1.3955249307895934,
+ "vph": 28.93548387096774,
+ "stats_jour": [
+  {
+   "timestamp": "2026-10-12T14:52:50.323Z",
+   "views": 0,
+   "likes": 0,
+   "comments": 0,
+   "vph": null
+  },
+  {
+   "timestamp": "2026-10-13T00:34:37.765Z",
+   "views": 21010,
+   "likes": 485,
+   "comments": 43,
+   "vph": 1882
+  },
+  {
+   "timestamp": "2026-10-14T00:36:35.853Z",
+   "views": 59156,
+   "likes": 1059,
+   "comments": 74,
+   "vph": 1280
+  },
+  {
+   "timestamp": "2026-10-15T00:33:49.689Z",
+   "views": 71402,
+   "likes": 1252,
+   "comments": 80,
+   "vph": 275
+  },
+  {
+   "timestamp": "2026-10-16T00:05:05.408Z",
+   "views": 76804,
+   "likes": 1363,
+   "comments": 85,
+   "vph": 273.44262295081967
+  },
+  {
+   "timestamp": "2026-10-17T00:34:12.272Z",
+   "views": 80758,
+   "likes": 1429,
+   "comments": 86,
+   "vph": 158.70967741935482
+  },
+  {
+   "timestamp": "2026-10-18T00:35:35.300Z",
+   "views": 83688,
+   "likes": 1471,
+   "comments": 87,
+   "vph": 104.26229508196722
+  },
+  {
+   "timestamp": "2026-10-19T00:03:44.441Z",
+   "views": 86028,
+   "likes": 1507,
+   "comments": 89,
+   "vph": 101.31147540983608
+  },
+  {
+   "timestamp": "2026-10-20T00:43:43.787Z",
+   "views": 88005,
+   "likes": 1544,
+   "comments": 91,
+   "vph": 64.6875
+  },
+  {
+   "timestamp": "2026-10-21T00:34:00.337Z",
+   "views": 89266,
+   "likes": 1558,
+   "comments": 96,
+   "vph": 63.9344262295082
+  },
+  {
+   "timestamp": "2026-10-22T00:40:03.160Z",
+   "views": 90224,
+   "likes": 1571,
+   "comments": 98,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-23T00:36:14.905Z",
+   "views": 90971,
+   "likes": 1583,
+   "comments": 97,
+   "vph": 46.4516129032258
+  },
+  {
+   "timestamp": "2026-10-24T00:00:23.603Z",
+   "views": 91620,
+   "likes": 1592,
+   "comments": 97,
+   "vph": 8
+  },
+  {
+   "timestamp": "2026-10-25T00:40:29.715Z",
+   "views": 92258,
+   "likes": 1601,
+   "comments": 102,
+   "vph": 0
+  }
+ ],
+ "changements": [],
+ "ab_tests": []
+}

@@ -1,0 +1,174 @@
+[00:00] Jev is the new AI model that everyone's building with right now and for good reason because it can be up to 200 times faster and 400 times cheaper than other models.
+[00:09] And so if you know exactly where to use it and how to use it, then it can definitely make your setup cheaper, make your systems faster, and ultimately transform your workflows.
+[00:18] So today, I'll give you 19 use cases you can do with Jev along with the prompts to get you started with your builds so that by the end of this, you'll for sure have an idea of how to
+[00:27] best use it.
+[00:28] We'll start with the easy ones you can try today to some more advanced ones that can truly change how you build.
+[00:33] And by the way, if you need a quick primer on what Jeb is, I'll link a previous lesson I did somewhere in this video that goes through it in just a few minutes.
+[00:40] And if you're new, my name is Jay.
+[00:41] I spent over a decade working with brands you probably know, have been in AI since my masters in data science.
+[00:46] And now I'm leading our AI business in one of the largest AI communities globally.
+[00:50] But for now, let's dive into it.
+[00:52] Starting with the easy ones.
+[00:53] Number one is to put Jev in Google Sheets.
+[00:56] One of the best ways to feel how fast Jev is is inside a spreadsheet.
+[00:59] Jev is a decision model, which means it can't write a sentence, but it can pick true or false, a choice from a menu, or a score, and it does that in a fraction of a second for almost nothing.
+[01:11] So, if you have data in a sheet that needs categorizing, like a bank export, you can have Claude build you a plugin where you type a new column name, say category, and Jev fills in every row while you
+[01:21] watch.
+[01:22] It does this really quickly and because Jev can only pick from your list, it never invents a category that you didn't ask for.
+[01:28] Here's a prompt to get you started.
+[01:30] Number two is to triage customer inquiries.
+[01:32] If you get a lot of customer questions, the first job is deciding what to do with each one.
+[01:37] Specifically, which one can an automation handle and which one needs a real person?
+[01:41] So, what you can do is to build an automation workflow where Jev is the decision layer.
+[01:45] Instead of paying for a big language model to read every single message, Jev tags each inquiry.
+[01:51] Let's say if it's for billing or if it's a bug or if it's a question and it also tells you how sure it is.
+[01:56] So that confidence score that is the useful part because if you set a rule for that confidence score like for example if Jev is less than 60% sure let's say you can just have a rule where Jev sends
+[02:06] that straight to a person then you can just adjust that confidence number threshold as you learn what works best for your business.
+[02:13] In one independent test, 217 customer call transcripts were sorted into categories by Jev in 13 seconds for only 7 cents, which is really cheap and can really speed up your customer handling workflows.
+[02:25] And by the way, I've put every use case in this video into this free PDF guide, which you can just send it straight to your agent and start building.
+[02:31] The link for that is in the description below if you need it.
+[02:34] Number three is to analyze your competitor's ads.
+[02:37] The meta ad library shows every ad your competitors are running, but nobody reads hundreds of them by hand.
+[02:43] So, you can have Claude build you a plug-in or a Chrome extension that does it.
+[02:47] It saves each ad for you.
+[02:48] And Jev reads a text very quickly on every ad and tags it.
+[02:52] What's the format?
+[02:53] What's the call to action?
+[02:54] What is the funnel stage?
+[02:55] Then everything can land in a database.
+[02:57] So, you end up with a swipe file of what's working in your market.
+[03:00] When I tried it, Jev tagged 54 ads from three different brands in about a second and a half for less than a cent.
+[03:07] Number four is on clipping.
+[03:09] If you make long videos or podcasts, finding the moments worth turning into shorts can take hours if you do it manually.
+[03:15] So, what you can do is to build a clip finder where when I tried it out, it scored 411 possible clips from a 70minute interview in 6 and 1/2 seconds.
+[03:24] Then, it also picked the top 10 that is worth posting.
+[03:27] So you can just record once and Dev would then hand you a short list of the best moments within that long- form video.
+[03:34] Number five is to score and profile your customer base.
+[03:37] If you run a software as a service platform, you already have a database of your customers, how long they've been with you, whether they're on an animal plan, whether they've started to cancel, Jev can read all of that
+[03:47] and put each customer in a group, like which ones are healthy, which ones need attention or at risk of churn.
+[03:53] So instead of finding out when someone cancels once it's late, you already know who to reach out to this week.
+[03:58] Number six is to build back links inside your website or your second brain system.
+[04:02] This one is for anyone with a huge website or a big workspace where your agents are working in.
+[04:07] If you have a site, you want your pages linking to each other because it helps people find their way around and it also helps a bit with your SEO.
+[04:13] And if you have a second brain system, which is basically a huge folder of notes, the same links would help your agents find their way around it.
+[04:20] When I tried it on 60 test blog posts, it took only two and a half seconds to link those pages together.
+[04:26] And the exact same trick would also link up your notes so your second brain system would connect itself instead of assigning that to a big language model to do that for you.
+[04:34] Number seven is to find buyers in your comments.
+[04:37] If you sell on social, your buyers are already in your comments, but it's just buried between everything else.
+[04:42] Take a seller account on Tik Tok for example.
+[04:45] Every video they have brings hundreds of comments.
+[04:47] And what you can do is to pull those comments through a scraping tool like Appify for example.
+[04:51] Then have Jev automatically tag each one.
+[04:54] Which ones are ready to buy?
+[04:55] Which one is a question?
+[04:56] Which one is a complaint?
+[04:57] So instead of manually scrolling through your comments, you would then get a priority list with the people ready for you to buy right at the top.
+[05:04] Number eight is about verification of Jev's results.
+[05:07] Before we go to the rest of the use cases, one of the things you should learn is how to verify if Jev's categorization is correct for you.
+[05:13] One way to do that is through what's called a validation set, which is just a few dozen or hundred examples depending on your use case where you already know the right answer or where a person already did the
+[05:23] sorting by hand.
+[05:24] So what you essentially do is you run jev on that set without showing it the answers first, then count how often it matches.
+[05:31] You then look at where Jev got things incorrectly because that is where you can calibrate the model to be more correct next time.
+[05:37] So, those are the easy ones and you can see the pattern there is basically you point Jev at a pile of stuff you already have and you just have Jev categorize those at lightning speed.
+[05:45] Now, let's get to some of the more intermediate use cases.
+[05:48] And by the way, if you want to learn how to build and sell AI systems that businesses actually pay for, then that's pretty much all we do over at the Robberonuggets community, where not only do you get access
+[05:57] to the Clawed Living Master Class, which we update every week and takes you from zero to mastery with the latest on AI, but you also get access to our agents as a service course, which walks you through how
+[06:07] to actually get paid for all these AI skills that you are learning.
+[06:10] You also get to be part of a genuinely great community of AI builders.
+[06:13] In fact, you can see just some of the recent wins our members are getting from the program right here.
+[06:18] So, if you want to start earning from AI, then check that just in the pin comment below.
+[06:21] Now, back to the video.
+[06:22] Number nine is letting Jev pick the right skill.
+[06:25] If you use Claude Code or another agentic platform, you probably have dozens of skills and Claude sometimes takes a lot of time to load the right one.
+[06:32] So, what you can do is let Jev pick it.
+[06:34] Once your prompt goes in, your skills basically becomes the menu of options and Jev would pick the right one at really fast speeds.
+[06:41] In my own workspace, I have something like 145 skills.
+[06:45] And across 14 tests, Jev found the right skills in about 5 seconds in total, while Opus 5 took around 30.
+[06:51] The company behind Jev, TypeSafe, also tested this with 182 skills, and it cut the wrong picks by more than half.
+[06:58] Number 10 is to let Jev pick the right model.
+[07:01] So, this is the same idea, but for model routing.
+[07:04] So, what you can do is to make a /jv command in Claude.
+[07:07] And when this is on, Jev would read every message that you send and pick the model for it in about a third of a second.
+[07:13] So for example, when I ask it to find a file path, Jev handed that to a haiku helper, which is the cheapest model in Claude instead of Opus.
+[07:20] And when the job is hard, it goes to the bigger model.
+[07:23] So you only pay for the big model when the job actually needs it.
+[07:26] And this same model routing idea works even if you are not using Claude.
+[07:30] That also works in Codeex or other agentic platforms.
+[07:33] Number 11 is to put Jev in front of your AI agents.
+[07:36] if you have an AI agent answering your emails like these, you're paying a big model to read every single one, which includes even spam.
+[07:43] So, what you can do is put Jev in front of it.
+[07:45] In one test, Jev sorted 1,700 emails for 18 cents, where Jev tagged what needs a reply, what's a brand deal, and even what's a scam or a spam.
+[07:55] Then only the ones that actually need writing or replying go to Claude, so your agent reads less, and your bill for tokens also drops.
+[08:02] Number 12 is to build Chrome extensions.
+[08:05] You can also build Chrome extensions using Jev.
+[08:07] And one fun example I saw is about cleaning up your X feed.
+[08:11] Someone built one that checks every post as it loads and Jev answers one question if this is AI slop or not.
+[08:18] If it is, the post gets folded away.
+[08:19] So what's left is the stuff that is worth reading.
+[08:22] The same trick works anywhere, by the way, where there's a feed like for example LinkedIn or any page.
+[08:27] Or let's say if you want to build an extension where you want to hide the ads and cookie banners in a page like this Chrome extension called Unclutter.
+[08:34] So you can launch plugins like these that reshape what you see in the web using Jev.
+[08:38] Number 13 is search by meaning features.
+[08:41] Now when you do Ctrl+F that only finds usually the exact words that you type.
+[08:46] But with Jev you can actually build a find feature where you type roughly what you're looking for and it would highlight the right part of the page even when the words don't match.
+[08:55] It would split the page into paragraphs, asks Jeff which one matches best and scrolls straight to it.
+[09:01] It's fast enough to feel real time.
+[09:02] So, if your app or your website has a search box, this is one of the easiest upgrades that you can give it.
+[09:08] Number 14 is a related one, which is searching your images by what is in them.
+[09:12] In my workspace, I generate a lot of images and videos, and searching them by file name barely works.
+[09:18] So, what I built is a search powered by Jev, where typing keyword, let's say Claude, would find the images that are actually about Claude, not just the ones with Claude in the file name.
+[09:28] The one thing you need though is some written words about each image which we call metadata.
+[09:32] In my case, I log the prompt for every image that I generate.
+[09:36] And so that is my metadata.
+[09:38] But if you don't have that, a really small cheap model can write a short caption for each one.
+[09:42] What you can try out is Gemini Flash Light because captioning a,000 images costs about only 50.
+[09:49] So those are the intermediate ones and they already make your setup faster and cheaper.
+[09:53] Now let's go to some of the advanced ones.
+[09:56] Number 15, a live checker for what people say.
+[09:59] Because Jev answers in a fraction of a second, it can check what people say while they are still saying it.
+[10:05] Someone actually built a live BS meter called Jev meter, which scores every sentence of a debate as it's spoken.
+[10:12] You can also build a plug-in, let's say, for your meetings where every sentence gets sorted as it is said into decisions, which ones are action items, which ones are risks, and which ones are questions.
+[10:22] So, if you're on a sales call, you'll get easy notes to recap as you go.
+[10:26] And it works for interviews and even podcast conversations as well.
+[10:31] Number 16 is a chatbot with zero LLM calls.
+[10:34] This one sounds implausible.
+[10:36] A chatbot that never really calls a language model, but here's how it can work.
+[10:40] In this demo app, you can ask which of our lesson teaches a certain topic.
+[10:43] Let's say the person is curious about Jev as a topic.
+[10:46] In the back end, Jev the model then quickly answers that in real time because it has access to a list of my videos that are already pre-transcribed, informing Jev of what each video is about.
+[10:57] So, if you need a narrow chatbot that can answer things quickly from a given data set, like video transcripts in my case, or even company documents in most corporations, then Jev is a potential tool for that.
+[11:09] Number 17 are smarter designs for apps.
+[11:12] Here's a simple example for apps that rely heavily on visuals like icons.
+[11:16] When a user types something, Jev can pick from a given set of icons.
+[11:21] So, let's say in a habit tracker, you type drink more water and it picks the water icon for you.
+[11:25] In a mood app, you write how your day went and it picks a custom mood icon.
+[11:30] A designer actually showed this off where as he's typing, Jev is pulling up the icons relevant to that text.
+[11:35] And the thing is before Jev to do this effectively you need either an LLM which can be costly or at least much costlier than Jev or to build out something like a reject based matching system which is sometimes
+[11:47] not as effective versus a language model.
+[11:49] But with a decision model like Jev this can be done for so much faster and for so much cheaper.
+[11:55] Number 18 are web pages that build themselves.
+[11:58] Now Jev can't write code but it can pick parts.
+[12:01] Someone actually built a demo where Jev would get a library of readymade pieces like forms, buttons, signin boxes, and fonts, and it decides what each visitor needs and puts the page together on the fly.
+[12:12] And the page shows up about as fast as a normal page load because Jev is only choosing parts and not actually building them.
+[12:19] So, every visitor could get a page that's built for them in real time.
+[12:23] Number 19 is about finding your own Jev use cases.
+[12:27] This last one is a bit of a meta use case because you can actually use jev to find your own use cases.
+[12:32] There's a site called shipwithjv.com which lists Jev use cases by category.
+[12:38] So what you can do is to open claude, paste in that site along with a file about yourself and your business and just ask based on everything you know about me which of these use cases would help me
+[12:47] the most.
+[12:48] You can then ask Claude to use Jev in order to categorize which of those use case are most useful.
+[12:53] So you get a starting point.
+[12:55] Another option is to ask Claude to look back over your past sessions and actually point out the steps where a quick Jev call would have done the job.
+[13:03] That way you would find use cases in the work that you are already doing.
+[13:07] So there you go.
+[13:08] That is all of them.
+[13:09] And as a final note, OpenAI in their dev day a few days ago actually just launched their decisions API where you give it a question and a list of allowed answers and it picks one in about 150 milliseconds.
+[13:21] And the reason why that's familiar is because that's basically their answer to Jev.
+[13:24] And the point I'm making is even if you don't end up using Jev itself for any of these use cases, getting good at this way of building makes sense now because for sure the other big labs starting with
+[13:34] OpenAI, probably Entropic 2 in the future will be copying something like this too.
+[13:38] As usual, thanks for watching till the end.
+[13:40] Again, that free PDF guide with every prompt and resource from this video to get you started is just linked in the description.
+[13:46] And uh I'm curious like which of these would you build first?
+[13:48] And do you have other use cases in your company that I haven't covered yet?
+[13:52] Let me know down below and I'll see you all next time.
+[13:54] Cheers.

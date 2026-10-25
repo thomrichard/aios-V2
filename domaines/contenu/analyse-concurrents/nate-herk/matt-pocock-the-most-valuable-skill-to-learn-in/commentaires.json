@@ -1,0 +1,902 @@
+[
+ {
+  "texte": "The sad part is not everyone is there.\n\nTo get ahead, stay ahead of yourself. Learn something new and apply it every day. Stay ahead by understanding what actually works. And importantly, for yourself.",
+  "likes": 37,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@relative_vie",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "The idea of telling agents what you care about instead of micromanaging every line is a huge shift. I’ve been learning insane stuff through AI Shortcuts for the Lazy Mind, and it’s becoming clear that the environment, context, and feedback loop matter just as much as the model. The trust ladder is probably the smartest way to start without getting overwhelmed.",
+  "likes": 34,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@hannah_1998",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "When you said JDD, It remind when one guy who JDD means for him 'Jesus Driven Development' 😂Praying to have code working",
+  "likes": 33,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@غريبجدا-ر7ز",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "thats not new guys XD\n1. Most Important Skill: Clear communication and precise thinking - explain exactly to the AI what you want and what’s important.\n2. Create a Good Environment: Clean codebases and tests are crucial (“garbage in, garbage out”); specifications that focus solely on theory without considering code often fail.\n3. Uncover Unknown Gaps: Be aware of “unknown unknowns - by having the AI interview you before it builds anything.\n4. Trust Ladder: Don’t trust blindl - start small, monitor closely, and only gradually grant more autonomy.\n5. Delegate routine tasks: Use AI primarily for boring, repetitive tasks so you can focus on what matters most.",
+  "likes": 13,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@hansgluck5228",
+  "date": 1792540800,
+  "parent": "root"
+ },
+ {
+  "texte": "Matt is an impressively clear communicator. Thanks for this interview!",
+  "likes": 13,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@davdfranzen",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "Dude, the notes appearing on screen are so cool. Kudos",
+  "likes": 12,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@orwelldocet",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "Matt is spot on when he say that provisioning information (context) to coding agents in a systematic and reproducible manner is critically important (and extremely hard to get right). I've spent so much time designing different systems to do this, but they all seem to fail some way or another. 1) Must be easy to add data. Matt uses an inbox for docs to digest. That is super convenient, but goes against seperation of concerns. You need complete trust in the system, to not place docs inside the projects they concern. 2) The file digestion is inherently a lossy process and some docs cannot be safely reduced as they could hold agent outputs that are 'key findings' or other destillations that should go in exactly as they are. 3). Finding the right balance between a minimal index/wiki (to avoid bloating the context window) and yet provide enough information in the wiki for an agent know where to go for deeper dives when needed. 4) Find out when and how an agent goes to the raw file for ultimate information when needed. In practice the digest becomes the ground truth which is risky. 5) How to avoid the coding agent anchoring heavily on random shit you dumped in the brain at some point. It must be very easy for the agent to assess the quality of a doc. This makes it risky to dump loose ideas and abandoned projects as your coding agent will often think that those constitute something to model after. And metadata is not even truly enforcable with an LLM, so you never know when it just ignores metadata warnings. Just mentioning other projects in the wiki will see your agent rummage around old crappy projects trying to find some random stuff to model after. I constantly had to turn off the wiki when needing the model to think unanchored (which I very often do).\n\nMy latest approach (to be implemented) is using nested brains. Small local brains are much easier to get right for a single project. No need to have 'names', 'colleagues', 'topics' and stuff like that in a single app repo. These small brains can become linked to parent brains which work the same but at a higher level. Wish me luck 🙂",
+  "likes": 7,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@regularSenseAppeal",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "Hostinger VPS: http://hostinger.com/nateherkvps\nFREE MONTH voice to text: https://get.glaido.com/nate\nFREE AI OS Template: https://app.aiautomationsociety.ai/optin/ai-os/?utm_source=youtube&utm_medium=organic&utm_content=matt-pocock-pod&sl=yt_matt-pocock-pod",
+  "likes": 6,
+  "epingle": true,
+  "createur": true,
+  "auteur": "@nateherk",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "unknown unknowns is a classic among seniors in software engineering, we have various practices such as requirements elicitation techniques to flesh out functional requirements (...for vibe coders: PRD content)",
+  "likes": 5,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@kogitatr",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "you know, if you tell claude \"Interview me for any unanswered questions\" it basically does the same thing grill me does. the skill is in itself a crutch for older models and is already borderline not needed anymore if you know the magic words",
+  "likes": 4,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ircluzar",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "Double dose of genius 😎 Matt x Nate 👌💙",
+  "likes": 4,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Haytch500",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "It makes me sad that everyone feels they have to try to get ahead, and society now is just a massive race to see who can survive, who can stay ahead and keep a job.\n\nInstead, we should be thinking about how we can all win together, as a society. Forget the race. It's not a race. There's no real victory if everyone else is suffering.",
+  "likes": 3,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@anoni-mouse-on-nix",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "\"To be the guy or girl to get the job done\" was unexpected but truly appreciated ❤",
+  "likes": 3,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@myriampch14789",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "\"The clarity of their thinking ends up in the product they create\". Best line of the episode. The /grill-me part at and the trust ladder at are worth the whole watch. Thanks Matt and Nate.",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@SKPrasadIyer",
+  "date": 1792540800,
+  "parent": "root"
+ },
+ {
+  "texte": "One thing I'd add to \"what to learn\": learn to judge the output, not just build the workflow. I assess people's AI skills for a living, and the ones who plateau can run a pipeline but can't explain why an answer is wrong. If you had to prove someone really has the skills you two cover, what would you test first?",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@AISA-AI",
+  "date": 1792368000,
+  "parent": "root"
+ },
+ {
+  "texte": "Bro ypu are a gem, thank you for the free knowledfe G!!",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Animelover-mr4qr",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "Very cool content, I do agree on the concept Creativity in Creativity out with AI. There is definitely a way of getting working together to get where you wanna go and learn along the way big time. Agree with Matt Pocock's take on that.",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@PetraB0S",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "the most valuable skill for ai is knowing how to read and write which every 6yo does",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@SwtLouRazz",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "A small percentage of humans are using AI. And those who do, 99,9 % using AI the wrong way. 🤷🏻‍♀️",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@GrundelKing",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "matt you seem to be on the side of the school of thought that humans still need to read and review code.. based on your videos and skills which are still very Human in the Loop. but this way you can never ship 1000 prs per month or get true automation. what is your thought on the other school of thought that believes we never need to actually review the code agents produced?",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@stasstack2100",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "Where do we find Matt's skills?",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@enzoshow",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "Nate, I've been watching your videos for a while. While I enjoy them in general, some naturally interest me more than others. Credit where credit is due: you're a tremendous host. I absolutely loved the questions you posed, and I can tell you put real thought and care into them. Congratulations on a terrific podcast episode!",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@johnbaseline",
+  "date": 1792540800,
+  "parent": "root"
+ },
+ {
+  "texte": "The point about having to tell the agent what you care about again and again every time is the one most teams feel first. On a codebase that has had years of care, the fix is to write that intent down once, next to the code, so every session starts from it instead of from zero. The garbage in, garbage out point cuts the other way too: a well understood codebase makes an average model look very good.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@CoreStoryInc",
+  "date": 1792454400,
+  "parent": "root"
+ },
+ {
+  "texte": "totally agreed. software development practices are more important than ever because these agent colleagues are dumb. many problems were silently shoved under the rug or get fixed unnoticed because human colleagues are smart. the communication process, testing suit, and verification tools are just unnegotiable now, which unfortunately exposed a lot of skill issues that wasn't obvious before the AI era. This is absolutely inline with my journey the last 6 months. great podcast!",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@huaweiwang6931",
+  "date": 1792454400,
+  "parent": "root"
+ },
+ {
+  "texte": "Really like this format Nate, you have time to share value in a very clear way. Your speed of talking is perfect!",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@perhokfelt",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "great collaboration between Nate and Matt! Love all the discussions between you two. Thanks for making this video",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@psy901",
+  "date": 1792368000,
+  "parent": "root"
+ },
+ {
+  "texte": "It’s interesting that everyone is suddenly against specs and inspect driven development, but they absolutely love REA which is literally that.\n\nIt breaks down any product into its basic components, write a spec, and then the agents build on that spec.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@DaveVoyles",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "I've noticed this is a common problem (28minutes) amongst coders. They don't believe the code, so they mess with it in tiny details, which causes the code base to become worse. Only recently have they let their model loose and forced themselves to trust the details, and focus on the direction. That's true of managing people. You can't be there all the time, so you have to create systems for expectation. Nothing new for agents, pretty similar to people who are managed.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@DavidGreen-e2x4f",
+  "date": 1792627200,
+  "parent": "root"
+ },
+ {
+  "texte": "This is very helpful for me In my agentic journey",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@nareshdewasi4098",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "Real quick guys, i have just realised communication is a thing again... wild",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@alexanderjames819",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "Is Ai automation or building Ai Agents still worth. Or we should learn something else? \nI mean I have heard many guys talking about very automation in 2027 is not worth",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@aadil_maqbool",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "Too many ads 😢",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@theandrewharry",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "Please please please show how to setup a long running task like you're talking about? Please! \n\nI've never had an agent run more than an hour.  What are the doing? What are they building? \n\nDo they start with a huge spec? \n\nHow was the spec written so that it keeps working without you?",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@dankelly",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "Sooo do I need to sell a course or something to make millions from AI automations?",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Rockstarcrazy411",
+  "date": 1792454400,
+  "parent": "root"
+ },
+ {
+  "texte": "Are you guys getting clients as ai automation developer?",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@nextphaseofficial_13",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "@mattpocockuk I started coding in September 2025. Back then I didn't even know what SQL was. Landed my first job as a developer this year, and a huge part of that is thanks to your skills and videos like this one. Thank you for making this stuff so clear and approachable. You genuinely changed my career!",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Tomblom",
+  "date": 1792368000,
+  "parent": "root"
+ },
+ {
+  "texte": "In leadership meetings at work we talk about these tools in the hands of SME’s, that are curious, provide the very best outputs. Not just dev but in every domain. The knowing how to communicate to the agent cannot be overstated as the difference between those who are becoming more valuable using these tools versus those who will be left behind!\n\nI do work with a SME who is curious but struggles with the communication piece and it is hard to unravel the layers of AI slop to get to the core of what he is trying to accomplish. Like ADD unchained!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@mlastname2802",
+  "date": 1792864800,
+  "parent": "root"
+ },
+ {
+  "texte": "I have learned to verify the information provided as we know AI answers confidently whether information is correct or not.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@jefferyoostmeyer2246",
+  "date": 1792864800,
+  "parent": "root"
+ },
+ {
+  "texte": "All your videos send me into lightspeed as someone who never programmed. Getting ready to release an app/site thanks to you!!!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@OHHnoYOUdidntMAN",
+  "date": 1792627200,
+  "parent": "root"
+ },
+ {
+  "texte": "you guys are both so great. thanks a lot!!😊",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@admindeno2982",
+  "date": 1792800000,
+  "parent": "root"
+ },
+ {
+  "texte": "Man that was good, some incredible insights from Matt",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ramaimacdonald6430",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "great interview!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@rizkiwijanarko6287",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "So informative.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@AI_MI_guy",
+  "date": 1792713600,
+  "parent": "root"
+ },
+ {
+  "texte": "I kind of caught wind of the idea of optimizing your environment that the agent works in a couple weeks ago. There's this other guy on YouTube (I can't remember his name) but I believe he's somewhat involved in academia or AI research and machine learning research. He was really big on, similar to what Matt talks about, the environment (basically the folder system) that you have your agent work in is paramount.\n\nIt's kind of been an idea that's been bouncing around in my head with the different harnesses like Codex and Claude Code. It kind of comes down to this: having the ability for skills in those harnesses is good but you could just basically do the same thing without skills in those harnesses. You could essentially just have read-me files or text documents linked if you have your folder structure set up the right way.\n\nIt really is kind of seeing that everything's shifting towards environment for agents and that's how you get a different type of agent rather than creating these custom agents. You could just use one model, open it up in a folder system, and if you have that folder system set up in a manner that agents know what you like and what's important to you (like Matt says), everything kind of goes a lot more smoothly and you don't really need that much effort.\n\nAlso since the Claude 5 models, I've been trimming down a lot of my context that agents have access to. It seems to be working pretty well. This was an interesting conversation between you two. I enjoyed it. Really got some gears going in my head.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@DLuke2",
+  "date": 1792368000,
+  "parent": "root"
+ },
+ {
+  "texte": "Really worth to listen. Got a lot of good inspiration 😊",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@frankstephan537",
+  "date": 1792713600,
+  "parent": "root"
+ },
+ {
+  "texte": "Great interview, thank you both.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@amugnolo",
+  "date": 1792627200,
+  "parent": "root"
+ },
+ {
+  "texte": "I like his answer and fully agree. You should always be skeptical of things that anybody tells you (human or AI), even so-called experts.  \nDoesn't mean to be dismissive of experts. Just that you should never accept anything that you read or hear from anybody as some kind of absolute truth, always hold it with some degree of confidence rating and skepticism.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@existentialnuance-wp7lt",
+  "date": 1792368000,
+  "parent": "root"
+ },
+ {
+  "texte": "Love it Nate cheers",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@hiharleyyy",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "Need to go read the pragmatic programmer!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@runs.long_notfast",
+  "date": 1792368000,
+  "parent": "root"
+ },
+ {
+  "texte": "\"It takes a really good project manager and a really good engineer to make a great product.\"\n\nI'd also add a good UX person to those requirements.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@abigwreck",
+  "date": 1792454400,
+  "parent": "root"
+ },
+ {
+  "texte": "Excellent content, as usual. I've leaned toward most of these practices already, but my main takeaways are that I'll likely start using Opus 5.5 on medium for my orchestrators and I'll reconsider the push for spec-driven development which I never saw benefits from.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@jasonshere",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "Excellent podcast.  I enjoyed the sharing.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@kenchang3456",
+  "date": 1792540800,
+  "parent": "root"
+ },
+ {
+  "texte": "This is gold",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@danielmolinatech",
+  "date": 1792368000,
+  "parent": "root"
+ },
+ {
+  "texte": "We are supposed to use SDD at our work. What do you guys think about doing SDD with skills?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@44amiruddin77",
+  "date": 1792540800,
+  "parent": "root"
+ },
+ {
+  "texte": "Gold 👏",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Kungenavdanmark",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "Interesting @mattpocockuk I had the same issue but only with Claude Work with seeing Black screens when it captured the screen and not being able to utilize applications or browsers properly but not so much with Codex or even Hermes with Codex. Back to the Powrer of the Harness.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@DocReo",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "Goated host 🔥 more engineeeers!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@gregh6550",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "Context Minimization Principle might be your missing piece of the puzzle, telling agent what to optimize for future modifications",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@LChang-j2q",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "Plat twist... Matt is actually Moby!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@stoehner27",
+  "date": 1792368000,
+  "parent": "root"
+ },
+ {
+  "texte": "At least for now, having an engineers mind / being a software architect will stay a skill that cannot be replaced by AI. But these minds can be supercharged by AI. If not: garbage in garbage out. Interesting times we live in...",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@didoview",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "I have been in my role as an AI analyst for almost 8 months now. I came from a zero technical background (graduated in marketing), and im starting to become more technical day by day. However, I still find it hard, as I'm basically an AI generalist, and I have a lot of surface knowledge just from working on projects, but I don't know where to focus deeper on developer foundations or, like, what do I really even learn? Yes, I'm using languages, RAG, and Vector DBs, harness engineering,  automation with Claude, n8n, etc. But I don't know what fundamentals I really need to start better understanding my work.  Where do I even start?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@patrickschaefer-l3y",
+  "date": 1792713600,
+  "parent": "root"
+ },
+ {
+  "texte": "Such obvious stuff, ridiculously not obvious for so much people",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@___ko___",
+  "date": 1792368000,
+  "parent": "root"
+ },
+ {
+  "texte": "sonnet 5.5 is unbelievably good for the price",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@stercorarius",
+  "date": 1792627200,
+  "parent": "root"
+ },
+ {
+  "texte": "39:30 Gee I wonder why people who are directly monetarily interested and invested in these technologies say to people to use these technologies. What a tough question.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@FieryHammer",
+  "date": 1792868400,
+  "parent": "root"
+ },
+ {
+  "texte": "Wish you prosperity with AI :)",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@MainstreamPRO",
+  "date": 1792540800,
+  "parent": "root"
+ },
+ {
+  "texte": "Have I missed any link to Matt's work?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@simon.stjohn",
+  "date": 1792800000,
+  "parent": "root"
+ },
+ {
+  "texte": "Matt how did you fix the browser use issue ?\n\nLove this podcast 🎉🎉",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@subzero1s",
+  "date": 1792368000,
+  "parent": "root"
+ },
+ {
+  "texte": "As a non coder, knowledge worker, this itw is just goooooooold ! \nSo much value to transpose to my perso and professional Life ! OMG, love how humble and thoughtful these guys are ! \n\nThanks so much !",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@XTase123",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "Loved the content! Two of the few AI-fluencers I follow in one room. Doesnt get much better than that, does it 😊 Learned a lot from you gents, thanks!\n\nOne thing I would love to hear about from you guys, and I thought you were going to touch that when you started about the trust, is: How can you convince or reassure your stakeholder at C-level that AI dev/ecosystem is the way to go and not to be too wary of \"AI\" (doing my spooky voice now)? That's a huge challenge in my experience. That it's nice, exciting and fun and all, but when things get serious to actually automate entire work processes with AI and scale, it seems a bridge too far. Wonder what you guys think.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@crazypaddy",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "in my case im getting isaca aaism",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@diegoval-x5d",
+  "date": 1792893600,
+  "parent": "root"
+ },
+ {
+  "texte": "I would 100% agree that helping businesses use ai will be a valued skill for a long time...i would suggest anyone learn some Business analysis skills as well as the structured code design and build that Matt expouses. This area will be saturated with many people trying to make a buck...so it will be noisy and not always the easiest thing to do. If you really want to do something unique look to novel system designs....going against current systems paradigms...this will be where big $ can be made....rather than just building existing paradigm things faster...or automating existing processes that are were badly designed from ther beginning. Novel system design uses a different skillset, as AI can fight against it, but once you have design and development processes locked in (similar to how Matt does it but for your new approach or frameworks). Cross domain ideation is the way to go...to use techiniques from different industries and study domains and see how they can solve existing problems (or in some cases new \"problems\" you create)",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@robertwlittlejohn",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "What did he mean when he said that he uses lots of agents?\n\n\nAs I understand he uses Claude Code. So what are the others?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@johnconnor9787",
+  "date": 1792713600,
+  "parent": "root"
+ },
+ {
+  "texte": "the most valuable skill in the end is how to turn 100€ per month subscription in as much money as possible.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@popeyen7550",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "First❤",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@yacoubBusness",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "Which books is he referring to?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@fit.joaquin",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "Is the podcast available with a feed outside YouTube? (Podcast app)",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@bashfulrobot",
+  "date": 1792454400,
+  "parent": "root"
+ },
+ {
+  "texte": "Hardware integration and testing.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@biggrobinson",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "I tell I care about SOLID and DDD, with md patterns what to do, and what no... still building SLOP",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@MrEnsiferum77",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "First!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@seraphre",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "what's with this trend of youtubers never giving credit to their guests? like there's no link anywhere in the description or comments to go to his links..",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@AIVerse-Filmmaking",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "5:23 if you digitise a shit process, you get a digital shit process",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@kojote",
+  "date": 1792627200,
+  "parent": "root"
+ },
+ {
+  "texte": "If his AI skills are so good, making him an incredible productive \"AI Hero\", why is there no evidence for such productivity in the form of public repos in his Github account? I would have expected dozens of public repos but there is only a course-video-manager...",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@chrispi100",
+  "date": 1792368000,
+  "parent": "root"
+ },
+ {
+  "texte": "IMPORTANT.\nI'm a complete non-technical, 35 years old from Pakistan. \nI wanna learn and execute these AI skills BUT it's too overwhelming. \nNo idea where to begin; \n* Claude code? \n* TTS tools?\n* Video generation tools ?\n* Editing skills/ tools ?\n* Prompting? \nEtc etc.\nThere are millions of people with this same problem, it'll be good for you if you'd address it.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@vendettakhan",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "Seems that \"make it secure\" or \"no mistake\" is not that stupid after all 😄",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@tomaszuspienski4833",
+  "date": 1792454400,
+  "parent": "root"
+ },
+ {
+  "texte": "Too many ads",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@TiberiusGracchi",
+  "date": 1792800000,
+  "parent": "root"
+ },
+ {
+  "texte": "Amazing video loved it ❤",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@reeback1253",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "So even Matt Pocock can't make AI work by specs and implement a dark factory.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@vladimir0rus",
+  "date": 1792627200,
+  "parent": "root"
+ },
+ {
+  "texte": "Regarding the kind of behavior you want from agents for the future: I'd assume you tried this already but my agents-that-code have strict instructions to do things like \"modular > monolithic, principled > pragmatic/fast/cheap, take your time to get it right > quick fixes, keep individual files below x lines of code...\"",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@scotter",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "Second",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@theabhirajjamwal",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "Valuable insights , I love this one",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@arleyndaribike8333",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "The impostor syndrome is much more real with AI in my opinion. What does one have to offer? I mean one can just ask the AI.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@AlexKucera",
+  "date": 1792368000,
+  "parent": "root"
+ },
+ {
+  "texte": "One of Matt’s first points is so important. Agents will produce better code if you enforce constraints such as linting rules or standard patterns on them.\n\nWithout guardrails, agents will product just about anything",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@infernoz585",
+  "date": 1792368000,
+  "parent": "root"
+ },
+ {
+  "texte": "It would be cool if you turned all your lessons learned into an ai skill",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@OHHnoYOUdidntMAN",
+  "date": 1792627200,
+  "parent": "root"
+ },
+ {
+  "texte": "this dude did not clarify communication between human and AI",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Geloandall",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "Not sure. Multiple projects in the same environment could also work really well, trying to learn from each other. Software engineers simply find it difficult to accept that orderly arrangement may not be that  important. Entropy is the way to go. Do not forget how complex our brain is. Let AI agents struggle and learn and creat patterns. Perhaps, one should also invite people without Software engineering background and learn from their experience as well, who may be perhaps getting better efficiency and accuracy out of AI agents. There is no rule that is right at this moment in the World. I am not sure if all Software engineers could really go deep into a domain to test the limits of AI. Sorry for being harsh.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@grover.sandeep",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "I disagree that we can build things so quick.  So all you said afterwards is irrelevant.\n\nJust had another day where AI did slow me down because while doing the same thing as normal really fucked up hitting the code quality this time. Terrible review and reprompting with a prompt for 30min to change 5 lines because i did not know where to do it myself and learning the whole code base would stop me from writing PR and look lazy in the eyes of my group manager.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@llothar68",
+  "date": 1792800000,
+  "parent": "root"
+ },
+ {
+  "texte": "Hehe creatives rise",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@TakingLeaps",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "🌟🌟🌟🌟🌟",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@RockySurf",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "JDD🤣😂😂",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Davit.Vardanyan",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "Is the skill communicating? Is it unknown unknowns? Totally incoherent.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@zzyxzzy",
+  "date": 1792281600,
+  "parent": "root"
+ }
+]

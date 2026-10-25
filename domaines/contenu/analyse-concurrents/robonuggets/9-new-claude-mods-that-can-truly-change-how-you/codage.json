@@ -1,0 +1,641 @@
+{
+  "video_id": "lDrAZ1wAyVs",
+  "chaine": "robonuggets",
+  "titre": {
+    "attente_au_clic": "Découvrir 9 nouveaux mods qui font passer Claude Code d'une fenêtre vide à un outil riche, et changent ma façon de travailler.",
+    "schema": "<N> NEW <Outil> <Fonction> that can truly change how you work",
+    "promesse": "Changer sa façon de travailler avec Claude",
+    "audace": "audacieux",
+    "registre": "mixte",
+    "briques": [
+      "resultat"
+    ],
+    "marqueurs": [
+      "chiffre",
+      "nouveaute",
+      "majuscules"
+    ],
+    "nom_outil": true
+  },
+  "codeur": "agent robonuggets",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "liste",
+    "format_secondaire": "actu",
+    "sujet": "Les mods de Claude Code : ce que c'est, 9 mods à installer, et comment créer le sien",
+    "outils": [
+      "Claude Code",
+      "Savvy Progress",
+      "Claude Skins",
+      "You Should Know",
+      "Filetree",
+      "Cache Tax",
+      "Blast Radius",
+      "Reflect",
+      "Terminal Browser",
+      "Replay Theater",
+      "skill plugin-authoring"
+    ],
+    "niveau": "intermediaire",
+    "objectif_probable": "vues"
+  },
+  "miniature": {
+    "visage": false,
+    "emotion": "mascotte abattue à gauche, mascotte qui saute de joie à droite",
+    "regard": null,
+    "texte": "NO MODS MODDED 9 GREAT MODS",
+    "texte_mots": 6,
+    "repete_titre": "partiel",
+    "elements": [
+      "fenêtre Claude Code vide avec croix rouge (« NO MODS »)",
+      "fenêtre Claude Code remplie : code, agents, alerte, coche verte (« MODDED »)",
+      "deux mascottes Claude orange en pâte à modeler",
+      "flèches",
+      "texte « 9 GREAT MODS » en très gros"
+    ],
+    "nb_elements": 4,
+    "fond": "clair, blanc cassé",
+    "couleurs": [
+      "blanc cassé",
+      "noir",
+      "orange Claude",
+      "rouge",
+      "vert"
+    ],
+    "curiosity_gap": "transformation",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "So, Entropic just shipped one of the biggest Cloud Code updates we've ever had",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Jay face caméra plein cadre dans son bureau, puis à 0:02 le titre « Mods » avec le logo Claude dans un faisceau de lumière",
+    "premier_plan_reprend_miniature": "non",
+    "ouverture": [
+      "actu-annonce",
+      "pont"
+    ],
+    "preuve": {
+      "type": "resultat-montre",
+      "seconde": 6,
+      "description": "Une session Claude Code avec la barre de progression et le panneau d'agents (le mod Savvy Progress) pendant qu'il explique l'idée ; crédits de Jay à 0:27"
+    },
+    "annonce_plan": {
+      "presente": true,
+      "nb_points": 9,
+      "a_l_ecran": true
+    },
+    "boucle_vers_la_fin": {
+      "presente": false,
+      "citation": "",
+      "seconde_resolution": null,
+      "tenue": null
+    },
+    "seconde_premier_point": 39,
+    "attente_tenue": "oui",
+    "attente_note": "Les 9 mods sont montrés et la fabrication d'un mod est expliquée. Mais les démos tournent sur une interface soignée : plusieurs commentaires disent que les mods installés ne ressemblent pas à ça."
+  },
+  "structure": {
+    "modele": "liste-numerotee",
+    "segments": [
+      {
+        "debut": 0,
+        "fin": 39,
+        "titre": "Intro : la mise à jour mods, 9 mods promis, Jay",
+        "role": "intro",
+        "pull": true,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": true
+      },
+      {
+        "debut": 39,
+        "fin": 103,
+        "titre": "What mods are : où ça marche, la différence avec skills et MCP",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": true,
+        "payoff": false,
+        "relance_sortie": true
+      },
+      {
+        "debut": 103,
+        "fin": 122,
+        "titre": "Guide PDF gratuit",
+        "role": "cta",
+        "pull": false,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": true
+      },
+      {
+        "debut": 122,
+        "fin": 182,
+        "titre": "Mod 1 : Savvy Progress",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": false,
+        "payoff": true,
+        "relance_sortie": true
+      },
+      {
+        "debut": 182,
+        "fin": 237,
+        "titre": "How a mod works : observer, changer, gérer un événement",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 237,
+        "fin": 274,
+        "titre": "Mod 2 : Claude Skins",
+        "role": "point",
+        "pull": true,
+        "paint": false,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 274,
+        "fin": 331,
+        "titre": "Mod 3 : You Should Know",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": true,
+        "consignes": false,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 331,
+        "fin": 364,
+        "titre": "La communauté RoboNuggets",
+        "role": "cta",
+        "pull": true,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 364,
+        "fin": 424,
+        "titre": "Mod 4 : Filetree",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": true,
+        "consignes": false,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 424,
+        "fin": 495,
+        "titre": "Mod 5 : Cache Tax",
+        "role": "point",
+        "pull": true,
+        "paint": false,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": true,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 495,
+        "fin": 544,
+        "titre": "Mod 6 : Blast Radius",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": true,
+        "consignes": false,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 544,
+        "fin": 579,
+        "titre": "Mod 7 : Reflect",
+        "role": "point",
+        "pull": false,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 579,
+        "fin": 609,
+        "titre": "Mod 8 : Terminal Browser",
+        "role": "point",
+        "pull": true,
+        "paint": false,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": true,
+        "preuve": true,
+        "consignes": false,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 609,
+        "fin": 643,
+        "titre": "Mod 9 : Replay Theater",
+        "role": "point",
+        "pull": false,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": false,
+        "payoff": true,
+        "relance_sortie": true
+      },
+      {
+        "debut": 643,
+        "fin": 716,
+        "titre": "Build your own mod",
+        "role": "point",
+        "pull": false,
+        "paint": false,
+        "point": true,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 716,
+        "fin": 767,
+        "titre": "Wrap up : vers des logiciels malléables",
+        "role": "fin",
+        "pull": false,
+        "paint": false,
+        "point": true,
+        "nom": false,
+        "phrase_finale": true,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      }
+    ],
+    "relances": [
+      {
+        "seconde": 64,
+        "type": "question-spectateur",
+        "citation": "if you already have skills and you already have MCP connectors, then how are mods different?"
+      },
+      {
+        "seconde": 97,
+        "type": "annonce-suite",
+        "citation": "I'll show you a few examples so that by the end of this video"
+      },
+      {
+        "seconde": 117,
+        "type": "annonce-suite",
+        "citation": "here are the ones I've tried, have liked, and think will be useful"
+      },
+      {
+        "seconde": 182,
+        "type": "question-spectateur",
+        "citation": "you might be curious, how does a mod actually change what's on your screen?"
+      },
+      {
+        "seconde": 525,
+        "type": "rupture",
+        "citation": "There are some real horror stories out there."
+      }
+    ],
+    "histoires": [
+      {
+        "seconde": 292,
+        "acte": "anecdote",
+        "resume": "En test, Jay demande une vidéo avec Kling ; le mod You Should Know lui signale le coût chez kie.ai, qu'il aurait raté dans un mur de texte."
+      },
+      {
+        "seconde": 515,
+        "acte": "anecdote",
+        "resume": "Jay dit avoir vu beaucoup de cas où un modèle de pointe a effacé tout un projet."
+      }
+    ],
+    "payoffs": [
+      {
+        "seconde": 129,
+        "resume": "Savvy Progress : la barre de progression et le panneau des sous-agents avec modèle et coût"
+      },
+      {
+        "seconde": 292,
+        "resume": "You Should Know fait ressortir le coût caché d'une génération vidéo"
+      },
+      {
+        "seconde": 385,
+        "resume": "Filetree : le fichier touché scintille puis passe au vert"
+      },
+      {
+        "seconde": 460,
+        "resume": "Cache Tax affiche le coût avant d'envoyer un message sur un cache froid"
+      },
+      {
+        "seconde": 507,
+        "resume": "Blast Radius liste les fichiers à effacer avec un bouton Proceed et Cancel"
+      },
+      {
+        "seconde": 663,
+        "resume": "Créer son mod : décrire ce qu'on veut, la skill plugin-authoring fait le reste"
+      }
+    ],
+    "premier_payoff_seconde": 129,
+    "jargon": 2,
+    "repetitions": 1,
+    "test_du_tweet": "Claude Code a maintenant des mods : décris une fonction, Claude se la construit. 9 à essayer : progression des sous-agents, thèmes, alertes, arbre de fichiers, coût du cache froid, garde-fou de suppression, règles apprises, navigateur, rejeu des modifs. Et comment créer le tien."
+  },
+  "habillage": {
+    "face_camera": {
+      "presente": true,
+      "cadrage": "poitrine dans un grand carré arrondi à droite, graphisme à gauche ; vignette ronde sur les démos ; quelques plans plein cadre",
+      "decor": "bureau, étagère, fleurs, lumière chaude ; casquette blanche"
+    },
+    "parts": {
+      "face": 40,
+      "ecran": 40,
+      "motion": 20,
+      "broll": 0
+    },
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": [
+      "plan-a-l-ecran",
+      "cartes-chapitre",
+      "etiquettes",
+      "curseur-surligne",
+      "logo-chaine"
+    ],
+    "charte": "Fond noir à grille discrète, titres en serif blanc avec sous-titre gris, icônes orange au trait, cartes numérotées « 04 Filetree » ; interface Claude Code recréée en sombre. La miniature claire reprend l'orange, la mascotte et la fenêtre Claude Code.",
+    "rythme": "contraste",
+    "notes": "Chaque mod a sa carte, puis une démo sur une interface très soignée. Plusieurs commentaires disent que les mods installés ne ressemblent pas à la démo (« I feel misled lol »)."
+  },
+  "fin": {
+    "ctas": [
+      {
+        "seconde": 103,
+        "type": "lead-magnet",
+        "cible": "guide PDF des 9 mods (communauté Skool gratuite)",
+        "amene_par": "intro",
+        "citation": "every one of these, by the way, I put into this PDF guide"
+      },
+      {
+        "seconde": 331,
+        "type": "communaute-payante",
+        "cible": "RoboNuggets (Claude Living Masterclass, cours Agents as a Service)",
+        "amene_par": "apres-valeur",
+        "citation": "if you want to learn how to build and sell AI systems that businesses actually pay for"
+      },
+      {
+        "seconde": 360,
+        "type": "communaute-payante",
+        "cible": "lien dans le commentaire épinglé",
+        "amene_par": "apres-valeur",
+        "citation": "check that just in the pin comment below"
+      },
+      {
+        "seconde": 741,
+        "type": "lead-magnet",
+        "cible": "guide PDF",
+        "amene_par": "fin",
+        "citation": "the PDF guide is just down below if you need it"
+      },
+      {
+        "seconde": 750,
+        "type": "abonnement",
+        "cible": "s'abonner",
+        "amene_par": "fin",
+        "citation": "consider tapping subscribe down below because it helps me a lot"
+      }
+    ],
+    "sponsor": {
+      "present": false,
+      "nom": null,
+      "debut": null,
+      "duree": null,
+      "forme": null
+    },
+    "liens_description": {
+      "lead-magnet": 1,
+      "communaute-payante": 1,
+      "produit": 1,
+      "service": 1,
+      "affiliation": 5,
+      "abonnement": 1,
+      "reseaux": 4,
+      "autre": 8
+    },
+    "commentaire_epingle": {
+      "texte": "Le PDF des 9 mods gratuit (Skool gratuit, « search for n81 »), la communauté payante, et les liens des dépôts dans la description",
+      "type": "lead-magnet"
+    },
+    "recap_final": false,
+    "derniere_phrase": "consider tapping subscribe down below [...] I'll see you all next time. Cheers.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": [
+      "l'emballement : « this is so nuts » (105 likes)",
+      "la comparaison avec le harness de DeepSeek (47 et 32 likes)",
+      "enfin une liste de mods utiles (36 likes)",
+      "la mention de VS Code (32 likes)",
+      "l'écart entre la démo et le mod installé"
+    ],
+    "demandes": [
+      "où trouver le mod Filetree",
+      "comment installer depuis l'appli de bureau",
+      "comment obtenir la même interface que dans la vidéo",
+      "quelle skill fait ce montage et ce design",
+      "de l'intérêt pour le cours et la communauté"
+    ],
+    "critiques": [
+      "les mods installés ne ressemblent pas à la démo (« I feel misled lol »)",
+      "Blast Radius n'est pas un système de permissions",
+      "Savvy Progress ne fait qu'observer les événements",
+      "le risque d'enfermement chez un seul éditeur"
+    ],
+    "reprises": [
+      "la liste des 9 mods recopiée en commentaire",
+      "« Entropic », repris des sous-titres",
+      "« Like RLHF, on a micro scale »"
+    ],
+    "signal_promesse": "tenue"
+  },
+  "techniques": {
+    "ap_alignement_5s": {
+      "note": 1,
+      "preuve": "1re phrase sur la mise à jour mods, sans le chiffre 9 ; 1er plan face caméra, puis « Mods » à 0:02 et une interface modée à 0:06 : partiel"
+    },
+    "ap_boucle_curiosite": {
+      "note": 0,
+      "preuve": "La question de 3:02 est résolue tout de suite ; rien n'est gardé pour plus tard"
+    },
+    "ap_effort_montre": {
+      "note": 1,
+      "preuve": "1:57 « the ones I've tried, have liked », sans chiffre, juste après l'intro"
+    },
+    "ap_setup_progress_payoff": {
+      "note": 1,
+      "preuve": "Une liste de mods montrés un par un ; seul « Build your own mod » pose un but et le livre"
+    },
+    "ap_contraste_rythme": {
+      "note": 2,
+      "preuve": "2 changements de plan à la 4e minute (explication face caméra), 15 à la 10e, 17 à la 1re"
+    },
+    "ap_montrer_sans_son": {
+      "note": 2,
+      "preuve": "Planche intro : « Mods », interface modée, « 9 Mods genuinely worth installing and tweaking », « Master Claude Mods by the end of this video »"
+    },
+    "ali_douleur_histoire": {
+      "note": 0,
+      "preuve": "Aucune douleur ni histoire vécue dans l'intro"
+    },
+    "ali_coeur_unique": {
+      "note": 2,
+      "preuve": "0:06 « If you can describe a feature [...] it can now build that feature into itself »"
+    },
+    "alx_pont": {
+      "note": 2,
+      "preuve": "Nouveauté (0:00), idée (0:06), annonce des 9 mods (0:15), crédits (0:27), sans accroche"
+    },
+    "alx_pull_paint_point": {
+      "note": 2,
+      "preuve": "La plupart des mods : pourquoi ça compte (8:17 « it might just save your entire project »), un exemple (6:41 la déclaration d'impôts), ce qu'il fait"
+    },
+    "alx_nom_idee": {
+      "note": 2,
+      "preuve": "Une carte numérotée par mod (« 04 Filetree »), plus « Watch, change, handle » et « Like RLHF, on a micro scale » à l'écran"
+    },
+    "alx_phrase_finale": {
+      "note": 1,
+      "preuve": "10:01 « Everything now stays in one place. » ; 7:51 « you know exactly how much you'll spend » ; pas sur la plupart"
+    },
+    "alx_douleur_reve": {
+      "note": 1,
+      "preuve": "« can truly change how you work » parle du désir, mais Claude et les mods portent le titre"
+    },
+    "alx_cta_tot": {
+      "note": 2,
+      "preuve": "1:43 le PDF des 9 mods, lié au sujet, avant 4 minutes"
+    },
+    "ed_intro_courte": {
+      "note": 1,
+      "preuve": "Premier point à 0:39, après six phrases et les crédits"
+    },
+    "ed_hook": {
+      "note": 1,
+      "preuve": "0:06 Claude Code se construit ses propres fonctions : un fait qui étonne, aucun des trois types purs"
+    },
+    "ed_probleme_preuve_consignes": {
+      "note": 1,
+      "preuve": "Problème posé pour certains mods (4:44 le mur de texte, 7:25 le cache froid), preuve par la démo, consignes légères"
+    },
+    "ed_tension_relancee": {
+      "note": 2,
+      "preuve": "1:04 « how are mods different? » ; 3:02 « how does a mod actually change what's on your screen? »"
+    },
+    "ed_histoire_vecue": {
+      "note": 1,
+      "preuve": "4:52 « In my testing » : une anecdote d'usage, pas une histoire"
+    },
+    "ed_sans_surexplication": {
+      "note": 1,
+      "preuve": "8:51 Blast Radius réexpliqué juste après sa démo"
+    },
+    "ed_niveau_simple": {
+      "note": 1,
+      "preuve": "Sous-agents, cache et événements expliqués ; « deterministic code », « pull requests » non expliqués"
+    },
+    "tous_video_suivante": {
+      "note": 0,
+      "preuve": "« I'll see you all next time », sans vidéo précise"
+    }
+  },
+  "a_retenir": {
+    "titre_miniature": "Aucun changement de titre ni de miniature relevé par VidIQ. Miniature avant-après : Claude Code vide et mascotte abattue (NO MODS) contre interface riche et mascotte qui saute (MODDED), « 9 GREAT MODS » en très gros. La plus vue des 10.",
+    "intro_structure": "Intro en pont de 39 secondes : la nouveauté, l'idée en une phrase, 9 mods promis, crédits. Puis la question que se pose le spectateur (« en quoi c'est différent des skills ? »), et une carte par mod.",
+    "habillage": "Démos sur une interface recréée et soignée ; le décalage avec le vrai rendu revient dans les commentaires. Jay dans un grand cadre arrondi à droite, graphisme à gauche.",
+    "idee_pour_nous": "Sur une nouveauté qui touche l'outil de tous les jours du public, une liste d'extensions testées avec un avant-après en miniature ; montrer le vrai rendu, pas une maquette.",
+    "objectif": "vues"
+  }
+}

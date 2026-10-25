@@ -1,0 +1,214 @@
+{
+ "recupere_le": "2026-10-25",
+ "breakout": 1.4864722764021858,
+ "vph": 8.208791208791208,
+ "stats_jour": [
+  {
+   "timestamp": "2026-09-30T13:03:21.816Z",
+   "views": 2,
+   "likes": 1,
+   "comments": 0,
+   "vph": 60
+  },
+  {
+   "timestamp": "2026-10-01T00:36:42.882Z",
+   "views": 11931,
+   "likes": 253,
+   "comments": 17,
+   "vph": 1509
+  },
+  {
+   "timestamp": "2026-10-02T00:59:50.617Z",
+   "views": 22388,
+   "likes": 398,
+   "comments": 27,
+   "vph": 165.7142857142857
+  },
+  {
+   "timestamp": "2026-10-03T00:14:26.465Z",
+   "views": 29761,
+   "likes": 538,
+   "comments": 30,
+   "vph": 257
+  },
+  {
+   "timestamp": "2026-10-04T00:26:45.517Z",
+   "views": 37951,
+   "likes": 679,
+   "comments": 31,
+   "vph": 263
+  },
+  {
+   "timestamp": "2026-10-05T00:39:45.187Z",
+   "views": 43695,
+   "likes": 751,
+   "comments": 42,
+   "vph": 195
+  },
+  {
+   "timestamp": "2026-10-06T00:43:24.810Z",
+   "views": 48171,
+   "likes": 811,
+   "comments": 44,
+   "vph": 198.68852459016395
+  },
+  {
+   "timestamp": "2026-10-07T00:35:26.485Z",
+   "views": 51451,
+   "likes": 868,
+   "comments": 44,
+   "vph": 122.85714285714285
+  },
+  {
+   "timestamp": "2026-10-08T00:36:06.168Z",
+   "views": 54066,
+   "likes": 912,
+   "comments": 48,
+   "vph": 87
+  },
+  {
+   "timestamp": "2026-10-09T00:30:41.080Z",
+   "views": 55651,
+   "likes": 934,
+   "comments": 54,
+   "vph": 60.00000000000001
+  },
+  {
+   "timestamp": "2026-10-10T00:32:59.986Z",
+   "views": 56911,
+   "likes": 953,
+   "comments": 54,
+   "vph": 63.05084745762712
+  },
+  {
+   "timestamp": "2026-10-11T00:19:47.600Z",
+   "views": 57725,
+   "likes": 974,
+   "comments": 54,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-12T00:20:20.677Z",
+   "views": 58450,
+   "likes": 977,
+   "comments": 54,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-13T01:04:38.990Z",
+   "views": 59182,
+   "likes": 985,
+   "comments": 54,
+   "vph": 23.47826086956522
+  },
+  {
+   "timestamp": "2026-10-14T00:35:20.344Z",
+   "views": 59862,
+   "likes": 994,
+   "comments": 54,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-15T00:35:31.745Z",
+   "views": 60665,
+   "likes": 1004,
+   "comments": 54,
+   "vph": 53.2258064516129
+  },
+  {
+   "timestamp": "2026-10-16T00:40:03.915Z",
+   "views": 61578,
+   "likes": 1031,
+   "comments": 54,
+   "vph": 60.8955223880597
+  },
+  {
+   "timestamp": "2026-10-17T00:35:44.301Z",
+   "views": 62182,
+   "likes": 1042,
+   "comments": 55,
+   "vph": 9.523809523809524
+  },
+  {
+   "timestamp": "2026-10-18T00:34:50.668Z",
+   "views": 62593,
+   "likes": 1054,
+   "comments": 55,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-19T00:04:43.527Z",
+   "views": 62936,
+   "likes": 1061,
+   "comments": 55,
+   "vph": 50.32258064516129
+  },
+  {
+   "timestamp": "2026-10-20T00:43:43.787Z",
+   "views": 63147,
+   "likes": 1065,
+   "comments": 55,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-21T01:12:43.587Z",
+   "views": 63345,
+   "likes": 1068,
+   "comments": 55,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-22T00:30:16.152Z",
+   "views": 63570,
+   "likes": 1074,
+   "comments": 55,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-23T00:36:14.236Z",
+   "views": 63805,
+   "likes": 1078,
+   "comments": 55,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-24T01:19:32.548Z",
+   "views": 63994,
+   "likes": 1082,
+   "comments": 55,
+   "vph": 16.53061224489796
+  },
+  {
+   "timestamp": "2026-10-25T00:33:07.383Z",
+   "views": 64172,
+   "likes": 1084,
+   "comments": 56,
+   "vph": 20
+  }
+ ],
+ "changements": [
+  {
+   "createdAt": "2026-09-30T16:05:49Z",
+   "title": null,
+   "thumbnails": [
+    {
+     "id": "2ff4ec74-fe27-45d0-bafc-0e23acbedb5a",
+     "ytUrl": "https://i.ytimg.com/vi/Zu-hJAHKJug/maxresdefault.jpg",
+     "snapshotUrl": "https://vidiq-video-thumbnails.s3.us-east-1.amazonaws.com/Zu-hJAHKJug/2ff4ec74-fe27-45d0-bafc-0e23acbedb5a.jpg"
+    }
+   ]
+  },
+  {
+   "createdAt": "2026-10-02T04:52:13Z",
+   "title": null,
+   "thumbnails": [
+    {
+     "id": "b7f549f9-6d37-4877-b82b-ceaf5f58e156",
+     "ytUrl": "https://i.ytimg.com/vi/Zu-hJAHKJug/maxresdefault.jpg",
+     "snapshotUrl": "https://vidiq-video-thumbnails.s3.us-east-1.amazonaws.com/Zu-hJAHKJug/b7f549f9-6d37-4877-b82b-ceaf5f58e156.jpg"
+    }
+   ]
+  }
+ ],
+ "ab_tests": []
+}

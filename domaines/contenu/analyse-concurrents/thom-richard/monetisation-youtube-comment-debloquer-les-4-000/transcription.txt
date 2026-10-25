@@ -1,0 +1,602 @@
+[00:00] Ça c'est mon studio YouTube il y a 15 jours.
+[00:02] 3998 heures de visionnage sur 4000.
+[00:05] Concrètement, ça veut dire que si le lendemain j'ai 2 heures de visionnage sur mes vidéos, je suis monétisé.
+[00:11] Spoiler, c'était le cas.
+[00:12] Il y a 6 mois, cette chaîne était à l'abandon.
+[00:14] Il y avait 40 heures de visionnage par mois et je me suis longtemps posé la question : est-ce que je repars de zéro ou est-ce que je la reprends ?
+[00:20] Et je l'ai gardé pour une raison simple.
+[00:22] Elle avait déjà passé le cap des 1000 abonnés.
+[00:24] Elle en avait à peu près 1500.
+[00:26] Et je te le dis tout de suite là-dessus, je me suis complètement trompé.
+[00:28] ses abonnés aujourd'hui, ça représente à peu près 7 % de mes vues.
+[00:31] Donc 93 % des vues que j'ai viennent d'ailleurs.
+[00:35] Mais le plus fou, c'est qu'au final, ces 93 %, je dois une grande partie à l'ancienneté de ma chaîne, mais pas du tout pour la raison que je croyais.
+[00:42] Dans cette vidéo, je vais te montrer comment je suis arrivé à atteindre la monétisation en moins de 7 mois et je vais tout te partager, notamment mes vraies données.
+[00:49] Je m'appelle Thomas, j'ai 47 ans, j'ai un travail à pleinttemps, je suis marié, j'ai trois enfants et cette chaîne c'est mon site project, mon projet du soir et du weekend.
+[00:57] J'ai peu de temps à y consacrer, donc pas de temps à perdre.
+[00:59] Et en fait, c'est exactement le sujet de cette chaîne, comment bien travailler efficacement avec l'IA.
+[01:04] Donc si toi aussi tu as une famille, un travail et l'envie de construire quelque chose à côté, cette vidéo est faite pour toi.
+[01:09] Tout ce que je vais te montrer sort de mon de mon studio YouTube et de mon vide IQ.
+[01:14] Et reste bien jusqu'au bout parce que je vais te montrer toutes les étapes qui m'ont permis de créer une bascule qui fait qu'au cours des deux derniers mois, j'ai cumulé plus d'heures de vue qu'au cours des 18 précédents.
+[01:23] Allez, on y va.
+[01:26] Alors, avant de rentrer dans les chiffres, il faut que je t'explique pourquoi je fais ça.
+[01:30] Le but, c'est pas forcément de te raconter ma vie, mais simplement ça va expliquer tous les choix que tu vas voir derrière dans cette vidéo.
+[01:35] Alors, d'abord, moi YouTube, je le vois vraiment comme un moyen d'apprendre.
+[01:37] L'une des meilleures façons d'apprendre, c'est d'enseigner.
+[01:40] Ça t'oblige à te renseigner, à expérimenter, à rassembler des informations et à les reformuler selon tes propres termes.
+[01:46] Et globalement, moi j'ai démarré YouTube comme ça pour monter en puissance sur le sujet du NO code.
+[01:51] Ensuite, j'ai créé une seconde chaîne sur l'IA générative, sur les images, les vidéos et cetera.
+[01:55] Et dernièrement, donc il y a 6 mois, j'ai dû recréer une chaîne autour de Lia pour attraper le retard que j'avais et pour maîtriser ce sujet qui est passionnant.
+[02:04] Ensuite, faire des vidéos YouTube, c'est vraiment sortir de sa zone de confort.
+[02:07] En tout cas, pour moi, moi je suis quelqu'un qui est pas très à l'aise à l'oral.
+[02:10] J'aime pas trop parler en public.
+[02:12] J'aime pas trop me montrer globalement.
+[02:13] Je suis plutôt un travailleur de l'ombre et là ça me force à au contraire travailler mon éloution, travailler ma façon de parler et me décomplexer devant la caméra.
+[02:20] Et en plus ça me permet ça me permet de développer des compétences que j'aime bien et que je ne fais pas dans mon métier au quotidien.
+[02:25] Le montage vidéo, les la rédaction de script et cetera, toute la veille.
+[02:29] Enfin bref, ça me ça me nourrit vraiment intellectuellement.
+[02:31] Et récemment avec l'âge, j'ai 47 ans, je me dis "Bah écoute, pourquoi pas te créer un revenu récurrent avec ta passion, avec ce que tu aimes faire avec YouTube.
+[02:40] C'est presque une façon aussi de préparer ma retraite.
+[02:42] Pourquoi pas faire de la vidéo YouTube jusqu'à ma retraite et bénéficier des revenus que je vais avoir avec ça." Donc ça pour le coup, c'est vraiment plus un objectif secondaire, mais c'est aussi petit light motif que j'ai dans
+[02:51] la tête qui me permet de d'être régulier, de voir plus loin et me fixer un objectif euh pour la suite.
+[02:58] Et à l'heure où je tourne cette vidéo, aujourd'hui, je n'ai touché aucun centime de YouTube.
+[03:01] J'ai atteint le seuil de monétisation.
+[03:03] Maintenant, il faut que j'atteigne un certain niveau de revenu pour pouvoir être payé.
+[03:07] J'ai j'ai aussi des des petites démarches administratives à faire.
+[03:10] Et pourtant, cette chaîne, elle m'a déjà apporté beaucoup.
+[03:12] Et ce bilan, je le fais à la fin de la vidéo.
+[03:14] Je vais t'expliquer tout ce que j'ai gagné grâce à ce que je fais sur YouTube.
+[03:17] Donc, mon objectif c'était d'être monétisé.
+[03:20] Au début, je savais pas bien sur quel sujet j'allais enchaîner.
+[03:23] Et grosse question, est-ce que je devais démarrer de zéro ou est-ce que je devais reprendre cette chaîne qui avait déjà qui était qui était morte concrètement, je te l'ai déjà dit et mais qui avait le qui avait les
+[03:35] 1500 abonnés.
+[03:36] Donc la grande décision c'était ça.
+[03:37] C'était est-ce que je pars de zéro ?
+[03:40] Est-ce que j'utilise une chaîne qui existe déjà ?
+[03:41] Et c'est très compliqué d'avoir une réponse claire.
+[03:44] J'ai regardé énormément de vidéos, j'ai interrogé des IA, j'ai lu les doc Google et cetera.
+[03:50] C'est très compliqué de se faire une idée précise là-dessus.
+[03:52] Moi, j'ai choisi de garder cette chaîne pour les abonnés.
+[03:56] Donc, je pensais que j'allais pouvoir bénéficier d'un élan avec ses abonnés et que bah en republiant, ils allaient être recevoir des petites alertes.
+[04:02] Il alors sans forcément refaire le lien avec Thomas et cetera du se dire tiens, il y a une vidéo intéressante sur Lia, euh sur d'autres sujets, je vais aller voir ce qui se passe.
+[04:09] Et je te l'ai dit en intro, je me suis complètement trompé.
+[04:12] Et concrètement, c'est pire que il s'est rien passé, c'est que ça a envoyé un signal négatif à YouTube.
+[04:20] Tu regarde si tes abonnés vont voir tes vidéos, ça s'appelle le taux de réaction.
+[04:23] Le mon taux de réaction était catastrophique.
+[04:25] Beaucoup d'abonnés, très très peu d'engagement sur les vidéos.
+[04:28] Alors au début, j'avais repris une série de vidéos que j'avais faite sur justement démarrer un business sur YouTube et cetera.
+[04:34] J'avais quasiment le même nombre de vues que si j'avais créé la chaîne From Scratch, c'est-à-dire 50 vues quand ça marchait bien.
+[04:40] Et pourtant maintenant avec le recul, c'était le bon move à faire parce que l'ancienneté de la chaîne m'a quand même servi.
+[04:46] Mais pas forcément sur le nombre de vues ailleurs.
+[04:49] Je vais détailler tout ça et et ça je m'en suis rendu compte plus tard.
+[04:53] faut que je refraine.
+[04:55] Donc l'ancienneté de la chaîne m'a pas servi sur le watch time.
+[04:58] Elle m'a pas servi sur des abonnés qui regardent immédiatement ma chaîne.
+[05:01] Par contre, elle m'a servi plus tard.
+[05:04] Je m'en suis rendu compte avec une stade qui m'a vraiment surprise.
+[05:07] On en parle tout à l'heure.
+[05:08] Là, on va rentrer dans le vif du sujet.
+[05:10] Donc l'histoire, c'est je garde l'ancienne chaîne et je démarre mon activité en janvier.
+[05:15] Donc pour te redonner du contexte, si jamais tu ne sais pas, pour atteindre la monétisation sur YouTube, il faut atteindre deux paliers.
+[05:22] Il faut avoir 1000 abonnés et il faut avoir 4000 heures de vidéos et le tout sur 1 an roulant.
+[05:27] Donc les abonnés, c'est pas un souci puisque en général ça descend pas.
+[05:30] Mais pour les 4000 he ça veut dire que que tu calcules ce qu'ils appellent le watchime, donc le le le temps de visionnage par journée sur les 300 les 365 derniers jours.
+[05:41] Et comme tu vois sur janvier à nouveau au niveau des abonnés, c'était bon pour moi.
+[05:45] Mais pour le watcht time, j'en suis très loin puisque je suis à peu près à 40 50 he de vues par mois.
+[05:51] Par contre, j'ai un j'ai quasiment 1000 he de watchime cumulé.
+[05:56] C'est à peu près mon record et concrètement, je méficiie d'anciennes vidéos qui ont cartonné quasiment un an avant.
+[06:01] Et donc, je démarre avec une série de vidéos que j'avais créé auparavant.
+[06:05] J'avais même lancé une chaîne pour voir un peu comment ça démarrait.
+[06:08] Euh, c'était sur comment démarrer un business alimenté par YouTube et je décrivais tous les à côtés qui permettaient de construire enfin de gagner de l'argent avec YouTube, tous les business model et cetera.
+[06:18] Et concrètement, ben j'ai pas vu la différence forcément avec euh avec ce que la chaîne que j'avais faite, le ce que ça m'a apporté par contre.
+[06:26] Euh enfin donc juste pour bien que tu comprennes, j'avais euh publié je sais plus 6 se vidéos euh sur une nouvelle chaîne.
+[06:33] J'ai fermé la chaîne et j'ai repris les vidéos que j'ai programmé pendant tout le mois de janvier.
+[06:38] Et l'avantage que j'en avais, c'était que je m'étais fixé comme objectif de faire deux publications par semaine et ça me permettait d'avoir du volume nécessaire pour me concentrer sur du nouveau contenu.
+[06:47] Donc concrètement, je mettais une vidéo tous les mardis et le but c'était de le vendredi de publier une nouvelle vidéo et si j'y arrivais pas, j'avais pioché dans la série de de 10 vidéos que j'avais pour pour compléter.
+[06:57] Mon ressenti sur cette période là et même après d'ailleurs pendant un bon moment, c'était que il y avait un effet de cannibalisme entre les vidéos.
+[07:05] C'est-à-dire que si j'ai une vidéo qui marche bien et si je sortais un short ou une nouvelle vidéo, c'était au détriment de celle qui marchait déjà.
+[07:12] YouTube testait la nouvelle, potentiellement la rabaissait et refisait partir l'autre ou laisser celle qui marchait déjà plus bas et augmenter celle-ci.
+[07:21] Mais pas vraiment de traction, seulement une seule vidéo un peu moteur sur toutes les vidéos que j'avais.
+[07:27] Un peu moteur avec le recul, on s'entend, c'était vraiment pas grand-chose mais qui était plus avant enfin qui avait un un nombre de vues plus important que les autres.
+[07:34] C'était vraiment comme un effet de cannibalisme entre les vidéos.
+[07:37] Si je sors une vidéo, c'est au détriment de celle qu'il y a avant.
+[07:41] Est-ce que c'était la fréquence qui était trop élevée ?
+[07:42] Peut-être.
+[07:43] Euh en tout cas, cette notionl, elle a vraiment continué assez longtemps.
+[07:47] Mais cela dit, tout le monde a un peu près le même retour.
+[07:50] c'est que tes 10 premières vidéos dans tous les cas n'auras pas de visite.
+[07:54] Ça va pas forcément marcher.
+[07:55] À moins vraiment de tomber sur la pépite et d'avoir que toutes les planètes s'alignent parfaitement.
+[07:59] Tes premières vidéos, c'est pour rentrer dans le bain.
+[08:02] YouTube va apprendre un peu à te connaître et cetera, mais tu as beau faire ce que tu veux, faire des boucles de visionnage, des choses comme ça.
+[08:07] On voit plein de choses sur les sur les vidéos tutoriels des experts.
+[08:11] J'avais très peu de visites, mais ça reste quand même une phase d'apprentissage qui t'apporte énormément.
+[08:16] Et donc si on regarde les le bilan de janvier, c'est 10 vidéos, 2269 vues et 101 heure de visionnage sur cette période.
+[08:25] Donc je calcule, il me faut 40 mois comme celui-là pour arriver aux 4000.
+[08:28] Mais retiens bien le rapport 10 vidéos publié et 101 heure de visionnage.
+[08:32] Et là mi-janvier, il se passe un truc que j'ai pas vraiment anticipé.
+[08:35] Donc comme je te le disais, le fait de d'être libéré un peu de la pression de sortir des vidéos régulièrement et toutes les deux semaines, ça m'a permis de me pencher sur d'autres façons, de travailler, de tester des
+[08:45] nouveaux outils, d'aller piocher des sujets un peu un peu différents et là je suis tombé sur notebook LM qui m'a permis de rassembler des infos, de les retravailler et j'ai trouvé ça, j'ai trouvé l'outil génial.
+[08:55] Je suis dit bah faut que je fasse une vidéo tutoriel là-dessus.
+[09:00] Alors les vidéos tutoriel, j'en avais fait déjà pas mal sur le no code donc j'étais assez assez rodé là-dessus.
+[09:05] C'est assez relativement facile et rapide à faire.
+[09:07] Je me suis dit "Allez go, je pars là-dessus et je fais une vidéo qui sort un peu du cadre habituel de gagner sa vie sur YouTube" et le sujet va tout changer.
+[09:16] Clairement, il y avait un attrait beaucoup plus important.
+[09:19] C'était un peu nouveau, donc j'étais au bon moment et ça intéressait les gens.
+[09:22] Et en même temps, j'avais aussi plus de de légitimité à parler de notebook LM que de parler de gagner sa vie avec YouTube alors que j'avais même pas 2000 abonnés.
+[09:32] Et la vidéo a bien marché.
+[09:34] Alors attention, bien marché pour le moment.
+[09:36] Aujourd'hui, c'est loin d'être l'une des de mes vidéos les plus performantes.
+[09:41] Mais à ce moment-là, j'ai fait un petit bru et ça a été suffisant pour pour en fait me recadrer sur le sujet de la chaîne.
+[09:47] Quand tu fais une chaîne YouTube, quand tu pilotes une chaîne YouTube, il faut que le sujet te parle, il faut que le sujet t'anime, il faut qu'il te passionne parce que tu vas en parler tout le temps.
+[09:56] Il faut se répéter, il faut reparler des mêmes sujets.
+[09:58] Et clairement LIA me convenait beaucoup plus parce que en plus l'actualité de LIA fait que il y a toujours des nouvelles choses dont il faut parler et c'était plus dans ma logique finalement de chaîne de sur le no
+[10:10] code sur la productivité sur l'automatisation ça se complétait bien.
+[10:13] Donc avec le recul j'avais fait une erreur.
+[10:15] C'est bien de commencer large de pas se fermer de sur les sujets mais assez rapidement il faut aussi quand même définir une cible définir ton sujet principal et à qui tu t'adresses et surtout continuer sur le sujet.
+[10:26] Euh, on parle toujours de constance, c'est sur plus sur le sujet, le fond et potentiellement la forme que tu tu dois avoir cette continuité.
+[10:34] C'est pas forcément être dans le rythme et sortir des vidéos toutes les x.
+[10:39] Et là, je peux sortir la phrase choisir, c'est renoncer.
+[10:41] C'est exactement ça.
+[10:42] Il faut petit à petit abandonner des idées.
+[10:44] Tu peux t'aider de d'un d'outil comme Vid qui te donne les bonnes tendances.
+[10:49] Il y a une IA qui est intégrée, ils ont énormément de data et en parlant avec l'IA, tu peux découvrir les sujets qui sont dans ta sphère mais qui sont plus porteur que les autres.
+[10:57] Donc ils vont te donner les sujets demandés, l'angle d'approche en en partant des des mots clés, tu vas savoir si un mot clé est plus pertinent qu'un autre.
+[11:05] Aujourd'hui, YouTube incorpore des ce ce genre d'outil là avec Gemini.
+[11:11] Tu peux commencer à avoir du feedback sur ta vidéo et cetera.
+[11:13] C'est assez intéressant mais ça va pas aussi loin que vide IQ.
+[11:16] en tout cas pas aujourd'hui.
+[11:18] Ça va pas aussi loin que Vid IQ sur vraiment le la dimension presque dire SEO mais la dimension mot clé, la dimension angle d'attaque.
+[11:25] Et d'ailleurs, c'est assez puissant parce que tu as toutes tes stats.
+[11:28] Moi, j'ai beaucoup discuté avec Lia de Vida IQ pour préparer cette vidéo et pour identifier différents paliers pour retracer tout l'historique de ma chaîne et avoir vraiment des insights de qualité.
+[11:38] C'est l'un des rares outils que je paye pour créer cette chaîne, mais franchement, je pense que c'est l'un des premiers à payer et ça vaut le coup.
+[11:43] Je fais une petite parenthèse.
+[11:44] Euh dans la description, tu vas trouver le lien vers tous les outils que j'utilise.
+[11:47] Euh comme ça si je te parle de quelque chose, tu as pas bien compris, tu veux en savoir plus, euh tu tu as des liens dans la description.
+[11:53] Donc au final, fin janvier, changement de cible, changement de positionnement, je me focalise sur l'IA dans une dimension de productivité pour les personnes qui travaillent seules comme moi, donc les indépendants, mais les petites équipes également.
+[12:04] Et donc à ce moment-là, j'ai trouvé mon vrai sujet, mais le vrai déclic avec l'algo, il est venu d'autre chose.
+[12:10] Il est venu de mes tests de format.
+[12:14] Alors, mon format historique que j'utilisais avec le no code, c'est des vidéos à peu près de 15 minutes, parfois un peu plus, 20 minutes, vraiment en mode tutoriel et cetera et ça marchait plutôt bien à l'époque.
+[12:25] J'ai eu des vidéos qui restaient persistantes malgré l'abandon de la chaîne.
+[12:28] Mais sur les nouveaux formats que j'ai pu tester après Notebook LM et même un peu avant, ça prenait pas le format 15 minutes, c'était pas bon.
+[12:39] et j'entendais parler de format en dessous de 10 minutes, de formats long et cetera.
+[12:43] Je savais pas très bien où j'en étais.
+[12:44] Enfin, je savais pas très bien sur quoi partir et en même temps, j'avais toujours ces difficultés parfois à sortir des vidéos.
+[12:52] Donc faut savoir que pour une vidéo de 15 minutes, je mettais parfois une demi-journée pour tourner tout ça.
+[12:57] Donc faut trouver la demi-journée dans la semaine.
+[12:58] C'est pas forcément évident.
+[13:00] Comme je m'étais fixé deux vidéos par semaine, parfois c'est vraiment très dur.
+[13:05] Et je me suis dit, ben je vais tenter quelque chose.
+[13:07] Je vais tenter un format ultra court, un format snack.
+[13:11] J'aime pas les shorts, j'en ai parlé avant, ça marchait pas.
+[13:13] J'avais vraiment l'impression que ça cannibalisait mon mes vues.
+[13:18] Mais je me dis que bah des fois dans le métro, dans les transports en commun, entre deux et cetera, tu regardes YouTube et tu as peut-être envie de de partir sur quelque chose qui est assez court.
+[13:28] Et j'ai fait le pari d'un nouveau format que j'ai appelé 3 minutes pour comprendre.
+[13:33] Donc je travaille pas spécialement le titre.
+[13:35] Mon titre à chaque fois, c'est 3 minutes pour comprendre les API, le MCP, les agents IA, les machins.
+[13:41] Donc voilà, en me disant j'ai mon j'ai mon process, j'ai mon plan type, je vais une recette que j'applique à chaque fois et ça me prend moins de temps et j'apporte du compte.
+[13:50] Et là encore pour en mesurer le la performance, j'ai regardé la data et parce que clairement ça a marché, c'est des sujets qui ont marché et voilà ce que la data m'a apprise.
+[14:00] Tu as les vues, tu as le watchtime, mais tu as également plein d'autres critères et l'un de ces critères est le pourcentage de visionnement de ta vidéo.
+[14:08] Ça veut dire si tu es à 50, ça veut dire que la moitié des gens vont regarder toute ta vidéo tout simplement où les gens regardent en moyenne 50 % de ta vidéo.
+[14:15] Et cette métrique, je l'ai explosé avec les formats 3 minutes.
+[14:20] J'étais à peu près entre 57 et 62 % de rétention, donc visionnage de la vidéo.
+[14:27] Et là-dedans, il y a une un sous-indice qui est très souvent regardé.
+[14:31] Les premières 30 secondes, j'arrivais à des 70 entre 70 80 %.
+[14:36] Donc des chiffres qui sont élevés.
+[14:37] Et ça, tout ça, c'est des signaux très forts pour YouTube.
+[14:41] Donc YouTube va proposer davantage tes vidéos parce que il sent que il y a une appétence du public que les gens vont regarder l'intégralité de la vidéo.
+[14:49] Donc par exemple, 3 minutes pour comprendre les projets d'encloud depuis la création, c'est 6959 vues.
+[14:57] Sur créer un skill, c'est 6136.
+[14:59] Juste pour bien comprendre l'échelle, ça peut paraître peu, mais chacune de ces vidéos a fait plus de vues que toutes mes vidéos pendant 1 mois.
+[15:07] de février complet.
+[15:08] On peut continuer avec les stats.
+[15:09] En avril, j'ai fait quatre vidéos, que des formats 3 minutes et j'ai eu mon record d'abonnés à l'époque, plus 168 abonnés, 75 % de plus que j'en ai récupéré en mars.
+[15:21] Et un peu plus tôt, je t'ai parlé de de palier où j'avais une vidéo qui performait puis j'étais à peu près au même nombre de vues par jour et cetera.
+[15:27] Là, avec ces vidéos là, j'ai eu l'impression d'avoir un second palier et on verra, je vais te montrer après les données.
+[15:33] C'est confirmé par VIQ.
+[15:34] Donc j'ai augmenté la moyenne à peu près du nombre de vues sur tuas un écran sur tes stades de sur 48 he combien tu as de vues par vidéo et cetera et autant avant j'étais à peu près à
+[15:45] 100 vues.
+[15:45] Là je suis passé j'ai basculé et je suis monté à 200 300 vues pendant un bon moment mais là j'étais à deux trois vidéos qui étaient un peu en mode moteur là où avant j'étais à une seule vidéo.
+[15:53] Je te montre ici mes mes datas de mars et d'avril.
+[15:56] Donc en mars j'ai 357 he en avril j'en ai 366.
+[16:01] Donc ça veut dire que je suis à peu près à deux fois et demi ce que je faisais avant.
+[16:04] Donc j'ai vraiment passé un cap grâce à ces formes.
+[16:07] Donc là tu sens que l'algorithme commence à me connaître, commence à comprendre mon sujet et commence à choisir davantage mes vidéos pour les proposer à une requête d'un d'un utilisateur.
+[16:16] Et c'est juste après cette période là que j'ai sorti la vidéo qui a tout changé.
+[16:22] Le 20 mai, j'ai publié un tutoriel complet sur Cloud.
+[16:26] Le tutoriel dure 1h16.
+[16:28] J'ai passé un temps fou.
+[16:29] J'ai passé de tr jours à le faire.
+[16:32] Depuis, ça m'a rapporté 446 abonnés, 2260 he de watchime et donc une seule vidéo m'a permis de faire plus de la moitié du watchtime nécessaire en une année et ça sur une période de 2 mois.
+[16:45] En terme d'abonnés, ça m'a rapporté presque autant que les quers mois qui étaient mes mois records.
+[16:50] Et en fait, il y a un chiffre qui change tout, c'est assez simple.
+[16:53] Et si tu regardes ce tableau, une vue moyenne, c'est quasiment 13 minutes.
+[16:57] Donc une personne qui vient voir la vidéo en moyenne plus 13 minutes à mon watch.
+[17:00] Là, tu vois la courbe qui est à peu près stable.
+[17:02] Là, ça fait ça fait, tu vois, ça fait quasi ça fait 2 mois.
+[17:07] Euh, c'est resté tout le temps au même niveau à peu près.
+[17:10] Et ce que tu vois ici ou j'espère que tu vois en gris clair, c'est la moyenne normale.
+[17:16] Donc perf ici, G, je prends bah 4, je prends un creux.
+[17:19] 9 minutes 20 pour le tutoriel de 1h15.
+[17:24] Performance habituelle pour cette période entre 1 minute 39 et 2 minutes.
+[17:29] Donc la vidéo, une visite sur cette vidéo fait cinq fois plus de watch time que une visite sur une vidéo classique.
+[17:38] Alors ça s'explique aussi par mes formats 3 minutes ou mais si j'avais pas les formats à 3 minutes, je serai à 3 4 minutes de watch time.
+[17:45] Et ça c'est constant sur les deux derniers mois.
+[17:47] Et c'est là où pour moi il y a pas mal d'experts qui enfin il y a pas mal d'experts YouTube quand tu vois quand tu regardes les vidéos qui te parlent du nombre de vues du CPM par vue
+[17:56] et cetera.
+[17:57] En vrai, ça veut pas forcément dire grand-chose.
+[17:59] YouTube, ce qui intéresse, c'est que le spectateur reste longtemps sur la chaîne et plus il reste longtemps sur c sur une vidéo, plus tu peux lui mettre de pubs.
+[18:09] C'est-à-dire que sur une un format 3 minutes, tu vas pas mettre de pubs.
+[18:12] Sur un format qui fait 1h15, tu peux en mettre 3 4.
+[18:15] Donc oui, le le KPI qui est montré au final, c'est le CPM, mais le CPM se calcule en fonction aussi du watch time que tu vas avoir.
+[18:25] Et ce que veut faire YouTube, c'est gagner de l'argent.
+[18:28] Donc si tu lui fais de la gagner de l'argent, il propose plus ta vidéo.
+[18:31] Et là, je te montre la couverture.
+[18:33] Tu vois, c'est très stable.
+[18:35] Il y a une petite accélération ici.
+[18:37] J'étais fou de joie quand je quand je l'avais.
+[18:39] Ça c'est un peu ralenti malheureusement, mais tu vois que des impressions, j'en suis à 20000 sur combien ?
+[18:45] Sur 67 jours.
+[18:48] Donc il me il me il propose à peu près 300 fois la vidéo par jour.
+[18:52] Et comme j'ai un taux de clic élevé parce que ça plaît parce que la miniature est très claire et cetera et le titre est très basique, on en parle juste après, j'ai un bon taux de clic.
+[19:01] Ça veut dire que les gens vont voient la miniature, ils vont regarder la vidéo.
+[19:04] Donc tout ça c'est des signaux très importants.
+[19:06] Ben on l'a ici en fait.
+[19:07] Second intérêt de ces vidéos, c'est de ce type de vidéo, c'est c'est ce qu'on appelle du contenu Evergreen.
+[19:13] Evergreen, ça veut dire que c'est un contenu qui est cherché tout le temps.
+[19:16] C'est pas du buzz, c'est pas la sortie du dernier modèle de d'anthropique qui va durer le temps de la sortie du modèle d'après.
+[19:24] Là, c'est quelque chose, tu vois, c'est stable.
+[19:26] La courbe, elle est droite comme ça.
+[19:27] C'est par un grand pic comme ça, puis après un enfin un grand pic et après un trait comme ça.
+[19:32] Euh là, c'est vraiment du contenu plus stable.
+[19:35] Donc, j'ai sorti une autre vidéo euh long format, ma 2è, une une autre masterclass sur les iOS, donc comment te construire un système personnel qui est connecté à tes outils, qui travaille avec l'IA, enfin bref, qui t'a qui
+[19:46] te permet de mettre LIA au cœur de ton travail, de ta vie, de ce que tu veux.
+[19:50] Euh c'est aussi le sujet de ma communauté, je t'en je t'en parle un peu après.
+[19:54] Et bah, regarde ce qui s'est passé.
+[19:57] Ça c'est mon graphique de vue et tu vois mes vues depuis le début de l'année sur les six meilleures vidéos.
+[20:04] Donc là, je te parlais de la vidéo Notebook LM en vert foncé.
+[20:08] Tu vois qu'elle est ça y est, elle démarre.
+[20:10] Ça c'est ma première victoire.
+[20:11] Ensuite, deuxième victoire, c'est ici.
+[20:14] C'est quoi ?
+[20:14] C'est Cloud dans Power Point qui avait bien marché aussi.
+[20:19] Ici, 3 minutes pour comprendre.
+[20:21] Tu vois, un gros pic ici et derrière pareil qui prend les qui tros les premières places.
+[20:27] Ici envers le tutoriel complet de Cloud.
+[20:30] Donc, tu vois qu'il est bien au-dessus des autres.
+[20:32] Et ça le pic là, le truc énorme, c'est ma masterclass sur les iOS.
+[20:37] Malheureusement, tu peux le voir aussi.
+[20:39] Alors, elle m'a rapporté elle m'a rapporté plus de 300 heures sur ses premiers jours, un truc de dingue.
+[20:44] Je me suis dit "Ça y est, c'est parti." Et tu malheureusement, tu peux le voir derrière, ça a chuté.
+[20:49] Et avec le recul, j'ai compris pourquoi.
+[20:51] Je l'ai vu aussi dans les commentaires, c'est que dès mon introduction, j'ai parlé de mon club smart.
+[20:56] Donc là où je j'accompagne, je discute avec des passionnés des iOS pour mettre en place, améliorer son iOS, tout ça.
+[21:04] Et ça c'est une communauté que j'ai créé qui est payante, dont j'ai fait la promotion en début de vidéo.
+[21:09] J'ai aussi passé du temps à expliquer un peu mon parcours tout ça et ça c'est une grosse erreur.
+[21:13] Grosse erreur.
+[21:14] C'est pas là que je dois je dois pas en parler.
+[21:15] Là je devais parler de l'AOS et clairement ma dont on a parlé plutôt a chuté dès le départ.
+[21:21] J'ai le l'intérêt pour les personnes était très bas.
+[21:24] Donc maintenant, j'ai moins de visite.
+[21:26] Ça m'apportenait beaucoup de contenu qualifiés vers ma communauté.
+[21:29] On en parle juste après.
+[21:30] Ça m'a permis de gagner de l'argent par ailleurs.
+[21:32] Mais j'ai fait cette erreur stratégique de trop la promotion ça.
+[21:36] Et d'ailleurs, bah là, c'est la prochaine grosse vidéo que je suis en train de faire.
+[21:40] Je vois bien que dans l'intro, ben j'ai pas du tout parlé de moi ou très peu rapidement et je t'ai pas du tout parlé de ma communauté euh de la rejoindre et tout ça.
+[21:49] Je t'en parlerai un petit peu derrière parce que ça a quand même du sens par rapport à l'utilisation de YouTube.
+[21:54] Mais voilà, je je suis très light maintenant sur la la promotion.
+[21:57] Donc je pense que si je devais refaire une chaîne, je partirai vraiment sur ces deux formats.
+[22:01] Un format très court, format snack que les gens consomment jusqu'au bout.
+[22:04] Ça ça va te permettre de montrer à YouTube qu'il y a de l'intérêt sur tes vidéos et ensuite des très longs formats qui vont te permettre de faire du watcht time.
+[22:12] Et ça YouTube aime bien parce que ça lui permet de placer plus de pubs.
+[22:16] Et l' le cumul des deux, c'est vraiment pour moi ce qui va propulser une chaîne YouTube aujourd'hui.
+[22:21] Et aujourd'hui, le rythme que je vise, c'est une vidéo 3 minutes pour comprendre chaque semaine et deux formats très longs par mois.
+[22:30] Donc là, je te remets les grosses vidéos qui ont permis d'accéder à la monétisation.
+[22:33] Et ça m'amène une autre pensée, c'est que je faisais une erreur.
+[22:36] J'ai énormément trop regarder euh mes stats YouTube.
+[22:40] En fait, j'avais fait un calcul.
+[22:41] Si euh tu dois faire 4000 he sur 1 an, ça veut dire que chaque jour, tu dois faire à peu près 13h 14h de vidéo, enfin de vues euh de tes vidéos.
+[22:49] Et donc des fois, je me disais "Ah bah je suis à 12, c'est pas mal tout ça, mais ah punaise, là je suis à 15.
+[22:53] Euh des fois j'étais à 18 et là tu dis wou !
+[22:56] 8 mois, je suis monétisé.
+[22:57] Ça y est, ça va ça va être un peu long.
+[22:59] On va essayer d'accélérer.
+[23:00] En fait, ça marche pas comme ça.
+[23:02] Ça marche pas par une accumulation de petite vidéo.
+[23:05] Ça marche par d'un seul coup deux trois vidéos qui t'apportent un gros paquet.
+[23:09] Et tant mieux parce que si j'avais continué à te compter sur des petites vidéos en fait ta courbe est droite comme ça mais quand tu arrives à la monétisation tu gagn tu gagnes pas grand-chose tu gagnes vraiment rien.
+[23:19] Et si tu arrives à la monétisation parce que chaque jour tu fais 15 he de de watchime, donc tu as passé 1 an à atteindre cette monétisation et ben tu tu vas rien gagner concrètement dans un an après
+[23:34] et ben tu auras gagné je sais pas 100 dollars ou enfin vraiment pas grand-chose.
+[23:39] Donc ce n'est pas le modèle.
+[23:40] Ta courbe elle doit être exponentielle.
+[23:42] Donc quand tu regardes une chaîne YouTube avec IQ, tu vois euh des informations en plus.
+[23:47] Donc tu vois que là il a euh 78000 abonnés.
+[23:50] il culmine il culmine à 5400 5400000 vues et tu vois qu'au début bah au début ça monte tout doucement et au fur et à mesure ça s'accélère.
+[23:59] Donc la courbe elle est elle est exponentielle est pas linéaire.
+[24:02] Et ben c'est exactement pareil avec ta monétisation.
+[24:06] Il faut que ton d'un moment c'est certaines vidéos là c'est les cinq vidéos que je te montre à l'écran qui vont permettre d'atteindre cette monétisation et qui demain ce sera 10 vidéos qui vont te ramener de l'argent alors
+[24:17] que les autres te rapportent pas grand-chose.
+[24:19] En mai, je suis à 10000 vues à peu près 287 abonnés et 772 heures pour le mois.
+[24:25] Donc je te rappelle, c'est à peu près ce que j'avais quand j'ai repris la chaîne sur une année.
+[24:30] En juin, j'ai mis que de deux vidéos, mais ça a été porté vraiment par le tutoriel Cloud qui avait été posté en mai.
+[24:36] 15000 14000 vues, 450 abonnés et 1612 he de watchime.
+[24:43] Et en juillet, tu peux voir avec la masterclass, je suis déjà à 1000 he en quelques jours.
+[24:47] J'ai été monétisé le 13 juillet.
+[24:48] J'ai pas encore pris les stats d'après, mais tu vois que voilà, j'ai franchi le seuil des 4000 he mais si tu fais bien le calcul, j'ai également franchi ou sur le point de franchir le nombre d'abonnés.
+[24:59] Donc au final le fait de partir avec 1500 abonnés n'a pas été un gain pour moi parce que dans le le le timing pendant lequel j'ai fait ces 4000 he et j'ai également fait les 1000 abonnés nécessaires pour
+[25:13] la monétisation.
+[25:14] Mais encore une fois, si je devais recommencer et que j'avais cette opportunité de prendre une chaîne qui a de l'historique, je le referai.
+[25:21] Pourquoi ?
+[25:23] En fait, je vais te parler d'un moteur silencieux de cette chaîne.
+[25:25] Un truc qui m'a vraiment aidé.
+[25:29] Parce que tu te souviens au début, il y a un chiffre que je t'ai donné, c'est que 7 % seulement de mes abonnés regardent mes vidéos.
+[25:34] Ça veut dire que 93 % de mes vues ne viennent pas de mes abonnés.
+[25:39] Alors du coup, je me suis posé la question mais d'où ça vient ?
+[25:42] Creant tout ça, en faisant un peu mon bilan des 6 mois, j'ai vu une statistique qui était assez parlante, c'est que si tu regardes à l'écran, je te la mets ici, 40 % de mon trafic, de mes vues
+[25:54] proviennent de sources externes.
+[25:57] Qu'est-ce que ça veut dire ?
+[25:57] Ça veut dire que YouTube te pousse tes vidéos.
+[26:01] Enfin, quand tu vas voir une vidéo YouTube, tu as plusieurs façons d'y accéder.
+[26:04] Tu peux avoir l'avoir sur l'écran d'accueil.
+[26:06] Tu peux faire une recherche dans YouTube et avoir une proposition de vidéo.
+[26:10] Tu peux avoir des propositions de vidéos à la fin des vidéos ou pendant que tu regardes une vidéo, tu as des listes sur les côtés et cetera.
+[26:16] Tout ça c'est des fonctionnalités du trafic qui est intégré à YouTube.
+[26:20] Et tu as du trafic externe, ce sont les liens vers des vidéos.
+[26:23] En fait, ça porte très bien son nom.
+[26:25] C'est tout ce qui vient de d'autres choses que YouTube.
+[26:27] Et 40 % c'est énorme.
+[26:30] C'est la plus grosse source de trafic.
+[26:31] Alors, sauf si tu cumules YouTube puisque au final toutes ces parties là, c'est YouTube en elle-même.
+[26:37] Mais ici, l'externe, tu vois sur euh toutes les vues que j'ai eu depuis le début de l'année, c'est 49000 vues, c'est 43 % de mes vues.
+[26:49] Et là, j'ai cherché à faire le décompte, à me dire "OK, j'ai beaucoup de trafic de l'extérieur.
+[26:54] Alors, je t'en ai déjà parlé, je publie pas mal sur d'autres réseaux sociaux.
+[26:57] J'ai un compte LinkedIn où j'ai pas mal de de followers et enfin d'abonnés et je parle régulièrement de mes vidéos.
+[27:02] J'ai ma communauté où donc je j'ai des passionnés de Lia mais en général le trafic dans ma tête le trafic il est plus de de YouTube vers la communauté et ça s'avère être le cas.
+[27:12] Et ce que j'ai découvert c'est que 92 % de ce trafic externe provient de Google.
+[27:19] Donc l'un de mes gros avantages c'est que je suis référencé chez Google sur certains mots clés.
+[27:24] Il va pousser mes vidéos.
+[27:25] Et alors, je me mets en navigation privée.
+[27:26] Ça permet de pas être influencé par mon historique, par le fait que mon navigateur connaisse déjà ma chaîne.
+[27:32] Et je vais taper par exemple tutoriel complet débutant.
+[27:40] Paf !
+[27:40] Voilà, le premier lien c'est ma chaîne et ça c'est ça qui va pousser la la croissance de ma chaîne.
+[27:48] Alors, comment je l'explique ?
+[27:49] J'ai fait du SEO, ça fait 20 ans que je bosse dans le digital, plutôt sur du e-commerce, mais le principe du SEO, ça reste le même.
+[27:55] Et parmi les critères, il a l'ancienneté de la chaîne.
+[27:58] C'est là où le choix que j'ai fait de partir sur une chaîne qui avait 4 5 ans d'existance a été vraiment payant, je en tout cas, je pense.
+[28:06] Et deuxièmement, je prends vraiment le contrepied de ce que te disent les experts.
+[28:11] Les experts vont te dire "Oui, Claude a tué Lia et c'est le meilleur" et il te propose des des titres catchi, des trucs un peu qui vont attirer l'œil, qui vont te permettre de cliquer.
+[28:23] Moi sur ce genre de tutoriel, je pars sur quelque chose de vraiment très stable, très basique.
+[28:30] Cloud, mot clé principal.
+[28:32] Deuxième mot clé, tutoriel.
+[28:34] Donc tu vois mon titre, cloud tutoriel complet pour passer de débutant à utilisateur avancé.
+[28:40] Donc là par exemple, on peut faire tuto complet.
+[28:45] Je vais enlever débutant.
+[28:46] On va voir si je sors encore ou pas.
+[28:48] Je sors encore.
+[28:51] Tutoriel ici.
+[28:52] On va enlever complet.
+[28:53] On va faire tutoriel cloud.
+[28:56] Je sors encore ce travail.
+[28:58] Ce enfin cette façon de faire en utilisant les tags, en utilisant ta description pour reprendre les mots clés et cetera.
+[29:05] Les experts vont te dire que ça date de 2010 et que ça va pas bouger.
+[29:10] Ça va pas bouger.
+[29:11] Mais ça sert encore à Google.
+[29:13] Et Google quand tu es une jeune chaîne YouTube comme moi je le suis, ça va t'apporter des vues en continu et ça booste la croissance de ta chaîne.
+[29:21] Alors demain faud certainement que je rééquilibre et que j'arrive à être propulsé par YouTube.
+[29:25] C'est ce qui est arrivé d'ailleurs sur la masterclass et iOS.
+[29:28] Elle a été boostée par YouTube et maintenant elle continue les vues qu'elle continue à faire c'est principalement du du Google.
+[29:36] D'ailleurs, on peut on peut essayer.
+[29:37] On va faire euh A iOS masterclass ou tuto.
+[29:43] Tuto, je suis pas sûr mais et ben si je sors aussi là.
+[29:47] Bah c'est marrant.
+[29:47] Alors je sors de trois fois et je vais te montrer autre chose qui est un peu dans l'air du temps aussi.
+[29:52] Là c'est donc ma vidéo et tu vas voir ici voilà un commentaire de Florent.
+[30:00] Super vidéo.
+[30:01] J'avais demandé à Claude de m'orienter vers une vidéo tuto qui explique les choses de façon accessible et il m'a envoyé vers ta vidéo.
+[30:07] Donc je une vidéo sur Claud Claude la référence comme étant une vidéo bien faite et accessible à tout le monde.
+[30:14] Et donc là il dit qu'il est satisfait qu'en plus il adoré.
+[30:17] Donc parfait.
+[30:19] Euh de plus en plus le trafic va quitter les moteurs de recherche.
+[30:23] Faut pas l'abandonner.
+[30:24] C'est pas mort, c'est pas vrai.
+[30:26] Mais il va y avoir un nouvel axe qui va être directement proposé par les agents.
+[30:31] I Claude, Jemini, euh chat GPT, Mistral et cetera et cetera.
+[30:36] Donc la fonction basique de SEO de marteler ce que tu fais, d'être très clair, de pas partir dans des explications marketing uniquement, ça marche très bien.
+[30:46] Je pense qu'une grosse c'est une grosse partie du cadeau que je me suis fait en choisissant de reprendre une vieille chaîne à l'abandon.
+[30:52] YouTube me connaissait, Google me connaissait et si j'ai pas été servi par les abonnés, j'ai été servi par mon ancienneté et mon positionnement sur les moteurs de recherche.
+[30:59] Mais à nouveau, pour moi, faut pas se dépendre seulement d'une seule source.
+[31:03] J'ai le SEO qui arrive très bien.
+[31:05] Maintenant, il faut que j'arrive à capitaliser sur euh YouTube qu'on me propose comme ça a été le cas sur la masterclass.
+[31:10] D'ailleurs, je t'ai montré le trafic n'avait rien à voir.
+[31:14] C'était pas comparable et c'était un truc de dingue.
+[31:16] Faut que j'arrive à capitaliser là-dessus et à équilibrer les différentes sources.
+[31:20] Et dans ce qui arrive également, je vais te parler rapidement de TikTok.
+[31:24] Autant j'ai abandonné les shorts sur YouTube, même si j'y reviens petit à petit.
+[31:28] Euh c'est aussi l'un de mes chantiers pour les mois qui qui arrivent.
+[31:31] Autant j'ai utilisé un une solution qui s'appelle Opus Clip qui te permet en quelques clics de générer des miniatures au format vertical de tes vidéos et ça vient scorer.
+[31:40] Alors je montrer rapidement.
+[31:41] Donc là, là par exemple, ça prend ma masterclass et tu vois ça me propose 42 clips, enfin ce qu'ils appellent des clips mais en gros c'est des shorts.
+[31:48] 42 shorts, des extraits de mes vidéos et ça va les scorer en fonction de d'un potentiel de viralité.
+[31:56] Alors, c'est pas toujours ultra précis et des fois tu dis "Non, ça va pas marcher." Mais j'ai utilisé ce système là pour alimenter un compte TikTok et j'ai eu une vidéo qui a fait 120000 vues et maintenant j'ai
+[32:09] commencé ça en mars et aujourd'hui je suis à quasiment 6000 abonnés sur TikTok.
+[32:15] Je te montre.
+[32:16] Donc tu vois, j'ai 5800 followers sans rien faire, quasiment juste 4 clics à chaque vidéo pour programmer des sorties.
+[32:25] Et tu vois que j'arrive un un résultat assez euh enfin tout à fait correct.
+[32:28] 10000 j'aes, 5800 followers.
+[32:31] Là pour le coup, le la monétisation commence à 10000 followers, je crois.
+[32:35] J'avoue que j'ai pas creusé plus que ça mais clairement c'est comme une petite graine que j'ai que j'ai semé comme ça.
+[32:41] Je vais revenir dans pas longtemps et il y aura quelque chose de bien qui va arriver de ça.
+[32:44] Et al en parlant de de petites graines, alors attention, je vais pas partir dans des trucs bizarres mais je vais te parler de de choses importantes si tu veux faire de ta chaîne YouTube un business.
+[32:54] Si tu fais juste ça par passion, il y a pas de souci et tant mieux pour toi et euh tu auras pas forcément besoin de de ce que je vais te dire après.
+[33:00] Mais l'un des gros enjeux quand tu créer ta chaîne, c'est que YouTube te fournit une audience mais cette audience, elle ne t'appartient pas.
+[33:07] Si du jour au lendemain, tu te fais euh bannir de YouTube, si tu es censuré, euh si pour raison XY euh YouTube ne te propose plus, tu perds tout, tu as plus de vue, tu as plus rien.
+[33:18] Donc l'important quand tu commences à avoir un tout petit peu de volume mais vraiment dès le départ, c'est de capter ton audience.
+[33:24] Et pour ça, moi j'ai utilisé deux choses.
+[33:26] J'ai créé une newsletter et j'ai créé une communauté.
+[33:29] Alors la newsletter c'est vraiment mon actif.
+[33:30] C'est une liste de gens qui accepte de recevoir des messages de ma part.
+[33:34] Aujourd'hui, je suis à 637 abonnés.
+[33:37] J'ai un taux d'ouverture qui est à peu près à 65 %.
+[33:39] Ça veut dire que j'envoie 100 messages, il y en a 65 qui l'ouvrent.
+[33:43] C'est énorme.
+[33:44] Donc sur ma dernière newsletter, j'ai touché 400 personnes comme ça et en terme de croissance, je grossis d'environ 160 personnes par mois.
+[33:51] Pour ça, en fait, à chaque fois que je fais une vidéo un peu poussée, je fournis du contenu de qualité que je mets à disposition en échange d'un email.
+[33:58] Donc c'est ce qu'on appelle le principe de ligne magnet.
+[34:00] C'est vieux comme internet et ça marche bien.
+[34:03] Mon but moi vraiment c'est de proposer de la valeur.
+[34:05] Je mettre de l'IA pour ça et ça marche bien.
+[34:08] Les gens sont contents, les gens reviennent et ça se traduit typiquement par mon taux d'ouverture.
+[34:11] Et l'intérêt de ça, je te l'ai dit, je peux contacter des gens, les gens les gens me lisent, les gens me connaissent et si demain je veux lancer une formation sur Cloud payante, et ben je peux leur proposer
+[34:22] directement.
+[34:23] Alors aujourd'hui ce que je fais c'est que j'envoie à peu près deux newsletters par mois.
+[34:27] Je fais plus un condensé de de ma veille, de ce qui se passe sur mon club Smart, j'en parle juste après.
+[34:32] Et et également de ce sur quoi je travaille actuellement.
+[34:35] Donc moi, j'utilise Kit à nouveau.
+[34:37] Tu peux regarder le lien.
+[34:37] Franchement, c'est très bien fait.
+[34:38] Euh ça se connecte facilement à ton IA, ce qui est plutôt avantageux et c'est un système qui est prouvé.
+[34:43] La deuxième chose à faire, c'est créer une communauté.
+[34:46] YouTube l'a bien compris et d'ailleurs quand tu parles de monétisation, tout le monde parle des 4000 he mais en fait il y a un palier avant qui honnêtement sert à rien mais dans lequel euh YouTube va te proposer
+[34:55] de créer une communauté.
+[34:57] Ça veut dire que tu peux proposer un abonnement à tes spectateurs pour leur fournir des vidéos supplémentaires et cetera.
+[35:02] Ils sont aussi en train de développer un système de poste.
+[35:05] Le poste, c'est c'est intéressant, ça peut être intéressant mais pour l'instant j'avoue que moi je je suis trop petit pour pour que ça marche pour moi et surtout pour la communauté.
+[35:12] J'ai vraiment un autre modèle qui marche très bien lui pour le coup et globalement, j'utilise une plateforme qui s'appelle School.
+[35:18] Dans dans son ADN, il y a de la simplicité d'utilisation.
+[35:21] C'est comme une sorte de forum et tu peux créer en plus des espèces de classroom, des cours dans lesquels tu partages des connaissances.
+[35:27] Et cette communauté, je l'ai lancé il y a 6 mois en même temps que j'ai relancé ma chaîne et au début, je me suis un peu cherché sur le positionnement, tout ça et là je suis parti à fond
+[35:34] sur les iOS mais globalement sur l'IA au service de ta productivité.
+[35:40] Et tu vois, j'ai 176 membres, donc des gens qui sont inscrits.
+[35:42] Au départ, c'est gratuit.
+[35:44] Depuis quelques temps, c'est devenu payant.
+[35:46] Et ça va me permettre de générer par exemple sur le mois de juillet, je vais générer plus de 300 dollars de alors encore à nouveau, c'est peu par rapport à ce que à ce que j'ai passé et cetera,
+[35:56] mais ça va se construire, ça va grandir et au fur et à mesure je vais gagner de plus en plus d'argent.
+[36:00] Et l'intérêt de la plateforme, c'est qu'elle est vraiment très simple.
+[36:03] Tu vois, tu crées un post, tu mets un titre du contenu, tu peux mettre des images, des vidéos, ce que tu veux.
+[36:09] et euh tu as un espèce de voilà de de forum comme ça où chacun peut euh peut venir commenter échanger tout ça.
+[36:20] Je ferai certainement des vidéos là-dessus plus tard.
+[36:22] Je voulais simplement te montrer que tu n'es pas obligé d'attendre la monétisation pour gagner de l'argent, mais tu as quand même un espèce de palier.
+[36:28] À partir du moment où tu tu commences à monétiser, tout s'aligne et tu commences à avoir de la crédibilité, tu commences à avoir de l'expérience et ça te permet vraiment de grandir chacun de ces ces ces assets.
+[36:41] Donc chacun de ces expériences, tu apportes de la valeur et tu commences à en obtenir.
+[36:46] au-delà de l'argent.
+[36:47] Cette chaîne YouTube, elle m'a apporté énormément et j'ai atteint mon objectif de monter en puissance sur l' d'apprendre, de rester toujours à la pointe et au point que en travaillant sur ce système, en travaillant sur les iOS et
+[37:00] cetera, j'ai décroché un job de responsable de l'IA et de l'automatisation dans une très sérieuse à Montréal.
+[37:08] Je enfin sans cette chaîne YouTube, je pense que je n'aurais pas eu l'emploi et je n'aurais pas pu faire ce ce carrière ce virage dans ma carrière.
+[37:14] Ensuite, ça m'a apporté les compétences dont j'ai parlé, mais également une certaine forme d'humilité et humilité et à la fois aussi de décomplex.
+[37:26] En gros, ça m'a décomplexé par rapport au fait de passer devant la caméra parce que faire tu fais une vidéo YouTube quand tu dérushes, c'est horrible.
+[37:33] Tu te vois bégayer, tu te vois, tu vois tout éthique de langage, tu entends ta voix tout le temps, c'est pas très agréable.
+[37:39] Et ben quand tu fais au bout d'un moment, ça devient beaucoup plus facile et clairement ça débloque pas mal de choses.
+[37:45] Donc voilà, ça m'apporte sur le plan financier, ça va commencer, ça m'a apporté de l'expérience de la crédité, un boulot que j'aime et et vraiment une nouvelle, c'est même pas un boulot, c'est une direction dans ma carrière parce
+[37:57] qu'avant ça m'avait déjà porté du boulot dans le sens où ça m'a porté des clients.
+[38:00] C'est vraiment je bascule sur un truc qui me passionne et aussi ça m'apporte sur mon côté humain tout ça et voilà vraiment je le conseil à tu es jamais trop vieux pour démarrer une chaîne YouTube.
+[38:11] Tu as 40 ans, tu as plein de choses à raconter, tu as de l'expérience, tu peux te former et tu as toute la légitimité qu'il faut pour te lancer.
+[38:17] Donc vas-y, si tu as un vie, fonce.
+[38:22] Et maintenant, on arrive à l'une des dernières questions, c'est euh "Mais comment il fait Euh il a d'une famille, trois gosses, euh une femme euh un job de 40 heures par semaine.
+[38:33] Comment je trouve le temps pour euh faire tout ça ?
+[38:37] En fait, je me passionne pour l'IA et justement c'est grâce à l'IA que je peux améliorer tout ça.
+[38:42] Et la méthode que j'ai appliqué en gros, c'est d'identifier toutes les différentes étapes que tu peux avoir dans la création d'une chaîne YouTube.
+[38:49] Donc, tu vas avoir l'idéation, tu vas avoir l'écriture du script, tu vas avoir le moment où tu te filmes, tu vas voir le moment où tu montes la vidéo, tu vas avoir la publication et toute la partie un
+[38:59] peu marketing, comment générer du bruit autour de ta vidéo.
+[39:03] Et en fait ce qu'il faut c'est pas forcément tout bosser à la fois, c'est vraiment se dire "OK, j'ai cette chaîne, je vais d'abord me concentrer sur tel élément, je vais essayer d'y aller à fond.
+[39:13] Je me concentrer là-dessus sur pendant trois qu vidéos et ça te permet de tester, ça te permet de prendre de l'expérience, d'aller loin sur cette matière là précisément et avec l'IA, de mettre de l'IA là où il faut.
+[39:25] Donc pour gagner du temps, donc tu vas pas viser la perfection partout, tu vas vraiment te dire "OK, je bosse là-dessus, hop, tac, tac tac".
+[39:31] Et une fois que tu as bien compris, je le rends le plus automatique possible.
+[39:35] Piloter ALIA qui me connaît.
+[39:36] Tout ça, c'est ce que je fais dans mon A iOS.
+[39:39] C'est pas le sujet de la vidéo.
+[39:40] Si ça t'intéresse, va voir la masterclass.
+[39:43] Mais concrètement, Lia, elle me connaît.
+[39:44] Elle connaît de quoi je parle, elle connaît mes éléments de veille, elle sait me conseiller sur les sujets.
+[39:50] Je vais en plus m'appuyer sur Vidaq qui est très bon pour valider tes idées, pour dire "Oui, ça ça a un intérêt pour quelqu'un.
+[39:56] tu peux lancer la vidéo.
+[39:57] Et j'ai poussé ça un peu à l'extrême récemment puisque ma dernière vidéo de 3 minutes pour comprendre, elle est intégralement faite par Lia.
+[40:05] C'est-à-dire que moi, j'ai donné le sujet, j'ai donné la direction en disant je veux parler de tel truc, je veux avoir tel angle, euh tel argument et cetera.
+[40:15] J'ai validé le script et à partir de là, il y a généré un clone, mon clone donc qui me ressemble avec ma voix et pour une fois, ça fait un moment que j'essae et pour une fois la voix
+[40:24] me ressemble réellement.
+[40:26] C'est pas parfait.
+[40:27] La voix n'est pas parfaite, mais là-dessus, il faut faire vraiment abstraction euh dans le sens où les gens ne connaissent pas forcément ta voix.
+[40:34] Donc c'est pas grave si toi ou si ta femme a l'impression que c'est pas ta voix.
+[40:38] Euh c'est pas grave.
+[40:38] La personne qui te regarde qui ne te connaît pas va pas se dire "Ess voix, elle est bizarre quand même.
+[40:43] C'est pas celle de d'habitude." Non, il ça marche, il y a pas de souci.
+[40:48] Et globalement, j'ai fait ça et la seule chose que j'ai eu à faire, c'est justement valider les propositions de voix.
+[40:54] Elia, fais le montage à ma place.
+[40:55] Donc tout tous les éléments de montage que tu as vu auparavant dans la vidéo, les chiffres tout ça, tout ça c'est fait à Lia.
+[41:00] Avant je le faisais à la main, je je suis passé à Lia à l'automatisation et je gagne un temps fou.
+[41:05] Après, j'aime bien quand même te parler de mes erreurs.
+[41:07] J'ai passé pas mal de temps et j'ai mis d'ailleurs même un peu d'argent dans du matos, dans le studio.
+[41:12] Euh j'avais acheté une étagère au fond pour avoir un bureau sympa et cetera.
+[41:16] Des petites lumières, j'ai essayé avec des couleurs et tout.
+[41:19] Faut laisser tomber ça.
+[41:20] Euh, j'ai pas 20 ans, j'ai pas 30 ans, c'est pas mon c'est pas mon ADN, c'est pas ma cible.
+[41:26] Moi, je fais des vidéos qui apporte de la valeur.
+[41:28] Je m'adresse à des gens qui ont envie de d'avoir cette valeur, qui ont pas forcément avoir envie envie d'un mec qui parle vite, qui euh qui fait des expressions, des machins, d'un de l'archétype du youtubeur.
+[41:39] Non, tu j'ai je m'adresse à des gens qui veulent apprendre euh sur des vidéos.
+[41:43] Donc euh tu as pas besoin de te de te mettre dans le moule.
+[41:49] du youtubeur qu'on a en tête.
+[41:51] Donc tout ce système là dia de production, ça mérite une vidéo dédiée et un très long format.
+[41:57] C'est sûrement le prochain.
+[41:58] Donc n'hésite pas à t'abonner si ça t'intéresse.
+[42:00] Et euh si tu veux en savoir plus sur la façon dont je mets en place tout ça via Lia, bah cette fois je te fais un peu la promo de mon club Smart.
+[42:07] C'est là-dedans que tu vas je vais pouvoir t'accompagner.
+[42:09] tu en quelques clics, tu peux créer ton iOS, tu peux le faire évoluer.
+[42:13] On a beaucoup d'échanges avec les membres pour se dire "Moi, je fais comme ça, j'ai testé cette façon, ça marche.
+[42:18] Moi, je te conseille de faire comme ça." Il y a des vrais échanges.
+[42:21] La valeur, elle vient vraiment de l'intelligence collective.
+[42:24] Euh voilà.
+[42:25] Donc si ça t'intéresse, n'hésite pas à nous rejoindre.
+[42:27] Et enfin, pour finir, après je te laisse tranquille, je vais juste parler de la boussole.
+[42:32] Vraiment une question de mindset.
+[42:34] Aujourd'hui, je me sens un poil perdu.
+[42:36] Pourquoi ?
+[42:36] parce que les 4000 heures de visionnage et les 1000 abonnés, ça a toujours été ma boussole.
+[42:42] Ça fait donc 4 ans que je fais du YouTube et c'est un objectif, c'est de dire cette monétisation, je le fais pas tant pour l'argent, je le fais vraiment pour se dire "OK, euh au niveau stat, il y
+[42:52] a 10 % des chaînes qui arrivent.
+[42:54] 10 % des chaînes YouTube arrivent à la monétisation.
+[42:57] C'est très peu.
+[42:58] Et moi, j'ai envie d'y arriver.
+[42:59] J'ai un chiffre précis, je peux regarder tous les jours mon avancement dans les stats YouTube.
+[43:03] On y va, on y va." Et là aujourd'hui maintenant que je l'ai atteint et ben tu as plus c tu as plus ce chiffre affiché dans YouTube.
+[43:10] Alors il y a IQ qui prend un peu le relais.
+[43:11] Donc tu vois aujourd'hui je suis à 3000 abonnés.
+[43:13] Euh il me donne un objectif de 3500 et il me propose également 125000 vues.
+[43:19] Il me récompense aussi avec des cartes comme celle-ci.
+[43:22] Euh bravo 3000 abonnés achevé le 20 juillet et cetera.
+[43:25] Très bien.
+[43:26] Euh c'est grisant mais est-ce que c'est le bon est-ce que c'est la bonne boussole ?
+[43:30] Est-ce que c'est le bon objectif à prendre ?
+[43:32] Est-ce que ça doit être le mes revenus ?
+[43:34] Aujourd'hui là, je en 7 jours, j'ai gagné à peu près 50 dollars.
+[43:37] Euh dans dans un mois, je te fais une vidéo sur ce que j'ai gagné concrètement avec YouTube, avec les trucs à côté au bout d'un mois de monétisation.
+[43:47] Est-ce que ça doit être l'argent et me dire "Bah aujourd'hui, je suis à autant, mon objectif c'est d'atteindre autant dans x mois." Je sais pas, je l'ai pas encore choisi.
+[43:56] Est-ce que c'est les 100000 abonnés ?
+[43:57] Est-ce que euh est-ce que c'est les 20000 heures ?
+[44:00] Est-ce que voilà, plein de questions, mais il faut cette boussole, il faut ce cap que tu regardes à chaque fois et tu te dis "OK, je je démarre une chaîne YouTube, c'est là que je vais, c'est là que
+[44:09] je vais et tout ce que je fais, c'est pour l'atteindre." Et donc si on conclut tout ça et qu'on fait un recap, ce qui m'a permis d'atteindre les 4000 he c'est le switch dans le sujet.
+[44:17] C'est partir sur le bon sujet, celui qui me plaît et qui est validé par la data, donc par les stats.
+[44:22] J'ai sorti une vidéo, ça a marché beaucoup plus que les autres.
+[44:25] En plus, c'est un sujet qui me passionne.
+[44:26] Go !
+[44:27] et surtout ne pas changer de sujet tous les x temps, même si au début c'est dur, c'est très dur de pas faire la girouette et de pas partir dans tous les sens.
+[44:33] Ensuite, c'est le bon format.
+[44:34] Je pense que le mix entre les vidéos très courtes en presque en remplacement des shorts et les vidéos très longues plus d'une heure, je pense que c'est la bonne tactique à avoir pour atteindre le plus vite possible les
+[44:47] 4000 he est-ce que tu envoies deux signaux différents mais vraiment complémentaires à YouTube ?
+[44:51] Et ensuite, moi j'ai eu la chance d'avoir j'ai eu la chance ou la bonne façon de faire avec le CEO et je suis propulsé par Google.
+[44:58] Donc ce que je veux dire par là, c'est que si tu as des moyens d'apporter du trafic à ta vidéo, tant mieux et c'est ça aussi qui va soutenir la croissance de ta chaîne.
+[45:07] Donc voilà le tableau recap de tous les mois que j'ai pendant lesquels j'ai fait ces ces vidéos YouTube depuis que j'ai repris ma chaîne.
+[45:14] Et là ce que tu peux constater qu'en janvier, j'ai fait 10 vidéos pour 101 he de watchime.
+[45:19] En juin, j'en ai fait deux pour 1600 he donc si tu regardes le total, au final j'ai publié 35 vidéos sur cette période euh de temps.
+[45:27] J'ai fait plus de 50000 vues, plus de 1500 abonnés et plus de 4000 heures de visionnage rien que sur 2026.
+[45:33] Et donc si tu si on se reprend la question de départ, est-ce que je repars de zéro ou pas ?
+[45:37] C'est que même en partant de zéro, j'aurais atteint les objectifs dans sur cette période de temps.
+[45:42] Mais c'est pas forcément le volume avec lequel je partais qui m'a aidé à ça.
+[45:46] C'est vraiment d'avoir trouvé le bon format, le bon sujet et d'avoir su travailler également mon SE classique.
+[45:51] Et donc maintenant la question que tout le monde se pose et moi le premier, c'est combien je vais gagner ?
+[45:57] Maintenant que j'ai atteint la monétisation.
+[45:59] Concrètement, ça rapporte combien une chaîne YouTube qui est monétisée ?
+[46:02] Et bien dans d'ici un mois, j'aurais fini mon premier mois en tant que YouTubeur monétisé et je te ferai un récap global de tout ce que je gagne avec ma chaîne YouTube.
+[46:11] C'est la prochaine vidéo de cette série.
+[46:14] N'hésite pas à liker, n'hésite pas à t'abonner et même à partager les vidéos autour de toi.
+[46:18] et je te dis à bientôt.

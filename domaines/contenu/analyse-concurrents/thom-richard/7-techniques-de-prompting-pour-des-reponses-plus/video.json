@@ -1,0 +1,165 @@
+{
+ "id": "2HhuPhmdayk",
+ "url": "https://www.youtube.com/watch?v=2HhuPhmdayk",
+ "chaine": "thom-richard",
+ "titre": "7 techniques de prompting pour des réponses plus précises (et quand les utiliser)",
+ "titre_ytdlp": "7 techniques de prompting pour des réponses plus précises (et quand les utiliser)",
+ "publie": "2026-09-15T05:45:39Z",
+ "duree_s": 1038,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "8VyRgIA7xpTk3YJBgDrb3fbf7zQ",
+  "id": "2HhuPhmdayk",
+  "snippet": {
+   "publishedAt": "2026-09-15T05:45:39Z",
+   "channelId": "UCXd_huFLtKC7Ln0mH9pJKzw",
+   "title": "7 techniques de prompting pour des réponses plus précises (et quand les utiliser)",
+   "description": "Obtiens des réponses plus précises avec l’IA : je te montre 7 techniques de prompting et quand utiliser chacune.\n\n👉 REJOINS LE CLUB SMART — la communauté pour maîtriser l’IA :\nhttps://www.skool.com/club-smart/about\n\n📬 REÇOIS MA NEWSLETTER — mes ressources IA et les coulisses de la chaîne :\nhttps://clubsmart.s.gy/hub-newsletter\n\n✅ Ce que tu vas apprendre :\n• Choisir la bonne méthode selon ce qui manque à ta demande : contexte, critères, structure ou exemples.\n• Faire préciser et corriger le travail de l’IA sans réécrire ton prompt à chaque essai.\n• Combiner déballage vocal, questions et boucles de correction sur un cas concret.\n\nDans ce tutoriel en français, je pars d’un cas concret : préparer la page de vente d’un atelier. Je te montre sept façons de travailler avec l’IA : le contexte déjà documenté dans un AIOS, les boucles de correction, le questionnement, le plan, les exemples, le déballage vocal et le cadre CRAFT — Contexte, Rôle, Action, Format, Ton.\n\nL’idée, c’est de comprendre ce qui manque à l’IA pour obtenir le résultat que tu attends. Parfois, elle a besoin d’un exemple. Parfois, tu dois clarifier tes critères ou lui faire proposer un plan avant de commencer. Tu verras comment choisir et combiner ces techniques de prompting dans tes échanges avec Claude ou ChatGPT, et garder la main sur le résultat.\n\n🎓 LA MASTERCLASS QUI A TOUT DÉBLOQUÉ — regarde-la en entier :\nhttps://www.youtube.com/watch?v=FwnIB-RbC-E\n\n⏱️ CHAPITRES\n0:00 Choisir la méthode selon ton besoin\n0:38 AIOS : donner le contexte à l’IA\n2:50 Les boucles de correction\n5:52 Le questionnement : clarifier tes critères\n8:07 Le plan et les exemples : guider le résultat\n11:04 Le déballage vocal : poser tes idées\n13:00 CRAFT et comment combiner les méthodes\n\n🔗 LES OUTILS QUE J’UTILISE DANS MA PRODUCTION\n• Claude — l’IA utilisée pour les démonstrations : https://claude.ai\n• vidIQ* — analyser et évaluer les titres YouTube : https://clubsmart.s.gy/vidiq\n• Tella* — enregistrer l’écran et la caméra : https://clubsmart.s.gy/tella\n\n* Les liens marqués d’un astérisque sont affiliés : je peux recevoir une commission si tu passes par eux. Merci de soutenir la chaîne !\n\n📺 POUR ALLER PLUS LOIN\n→ Tu n’as plus besoin de prompter : voici la méthode qui remplace tout\nhttps://www.youtube.com/watch?v=Yn_1jmRK6TU\n→ 3 min pour comprendre : l’AIOS, le système IA qui travaille pour toi\nhttps://www.youtube.com/watch?v=mgGQFJRYIpo\n\nPour essayer, reprends une conversation dont le résultat t’avait déçu et change de méthode. Dis-moi en commentaire ce que ça a changé.\n\n👉 Et si tu veux avancer accompagné, le Club SMART est fait pour ça :\nhttps://www.skool.com/club-smart/about\n\n#Prompting #ClaudeAI #ChatGPT #IntelligenceArtificielle #AIOS #ClubSMART",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/2HhuPhmdayk/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/2HhuPhmdayk/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/2HhuPhmdayk/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/2HhuPhmdayk/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/2HhuPhmdayk/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    }
+   },
+   "channelTitle": "ThomRichard ",
+   "tags": [
+    "club smart",
+    "automatisation",
+    "claude code",
+    "claude ai tutorial",
+    "ai tools",
+    "prompts",
+    "apprendre a prompter",
+    "claude",
+    "prompt engineering",
+    "claude cowork",
+    "how to use claude ai",
+    "claude skills",
+    "ai automation",
+    "artificial intelligence",
+    "intelligence artificielle",
+    "ai prompts"
+   ],
+   "categoryId": "28",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "fr",
+   "localized": {
+    "title": "7 techniques de prompting pour des réponses plus précises (et quand les utiliser)",
+    "description": "Obtiens des réponses plus précises avec l’IA : je te montre 7 techniques de prompting et quand utiliser chacune.\n\n👉 REJOINS LE CLUB SMART — la communauté pour maîtriser l’IA :\nhttps://www.skool.com/club-smart/about\n\n📬 REÇOIS MA NEWSLETTER — mes ressources IA et les coulisses de la chaîne :\nhttps://clubsmart.s.gy/hub-newsletter\n\n✅ Ce que tu vas apprendre :\n• Choisir la bonne méthode selon ce qui manque à ta demande : contexte, critères, structure ou exemples.\n• Faire préciser et corriger le travail de l’IA sans réécrire ton prompt à chaque essai.\n• Combiner déballage vocal, questions et boucles de correction sur un cas concret.\n\nDans ce tutoriel en français, je pars d’un cas concret : préparer la page de vente d’un atelier. Je te montre sept façons de travailler avec l’IA : le contexte déjà documenté dans un AIOS, les boucles de correction, le questionnement, le plan, les exemples, le déballage vocal et le cadre CRAFT — Contexte, Rôle, Action, Format, Ton.\n\nL’idée, c’est de comprendre ce qui manque à l’IA pour obtenir le résultat que tu attends. Parfois, elle a besoin d’un exemple. Parfois, tu dois clarifier tes critères ou lui faire proposer un plan avant de commencer. Tu verras comment choisir et combiner ces techniques de prompting dans tes échanges avec Claude ou ChatGPT, et garder la main sur le résultat.\n\n🎓 LA MASTERCLASS QUI A TOUT DÉBLOQUÉ — regarde-la en entier :\nhttps://www.youtube.com/watch?v=FwnIB-RbC-E\n\n⏱️ CHAPITRES\n0:00 Choisir la méthode selon ton besoin\n0:38 AIOS : donner le contexte à l’IA\n2:50 Les boucles de correction\n5:52 Le questionnement : clarifier tes critères\n8:07 Le plan et les exemples : guider le résultat\n11:04 Le déballage vocal : poser tes idées\n13:00 CRAFT et comment combiner les méthodes\n\n🔗 LES OUTILS QUE J’UTILISE DANS MA PRODUCTION\n• Claude — l’IA utilisée pour les démonstrations : https://claude.ai\n• vidIQ* — analyser et évaluer les titres YouTube : https://clubsmart.s.gy/vidiq\n• Tella* — enregistrer l’écran et la caméra : https://clubsmart.s.gy/tella\n\n* Les liens marqués d’un astérisque sont affiliés : je peux recevoir une commission si tu passes par eux. Merci de soutenir la chaîne !\n\n📺 POUR ALLER PLUS LOIN\n→ Tu n’as plus besoin de prompter : voici la méthode qui remplace tout\nhttps://www.youtube.com/watch?v=Yn_1jmRK6TU\n→ 3 min pour comprendre : l’AIOS, le système IA qui travaille pour toi\nhttps://www.youtube.com/watch?v=mgGQFJRYIpo\n\nPour essayer, reprends une conversation dont le résultat t’avait déçu et change de méthode. Dis-moi en commentaire ce que ça a changé.\n\n👉 Et si tu veux avancer accompagné, le Club SMART est fait pour ça :\nhttps://www.skool.com/club-smart/about\n\n#Prompting #ClaudeAI #ChatGPT #IntelligenceArtificielle #AIOS #ClubSMART"
+   },
+   "defaultAudioLanguage": "fr"
+  },
+  "contentDetails": {
+   "duration": "PT17M18S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": true,
+   "contentRating": {},
+   "projection": "rectangular",
+   "hasCustomThumbnail": true
+  },
+  "statistics": {
+   "viewCount": "596",
+   "likeCount": "19",
+   "dislikeCount": "0",
+   "favoriteCount": "0",
+   "commentCount": "0"
+  }
+ },
+ "ytdlp": {
+  "id": "2HhuPhmdayk",
+  "title": "7 techniques de prompting pour des réponses plus précises (et quand les utiliser)",
+  "description": "Obtiens des réponses plus précises avec l’IA : je te montre 7 techniques de prompting et quand utiliser chacune.\n\n👉 REJOINS LE CLUB SMART — la communauté pour maîtriser l’IA :\nhttps://www.skool.com/club-smart/about\n\n📬 REÇOIS MA NEWSLETTER — mes ressources IA et les coulisses de la chaîne :\nhttps://clubsmart.s.gy/hub-newsletter\n\n✅ Ce que tu vas apprendre :\n• Choisir la bonne méthode selon ce qui manque à ta demande : contexte, critères, structure ou exemples.\n• Faire préciser et corriger le travail de l’IA sans réécrire ton prompt à chaque essai.\n• Combiner déballage vocal, questions et boucles de correction sur un cas concret.\n\nDans ce tutoriel en français, je pars d’un cas concret : préparer la page de vente d’un atelier. Je te montre sept façons de travailler avec l’IA : le contexte déjà documenté dans un AIOS, les boucles de correction, le questionnement, le plan, les exemples, le déballage vocal et le cadre CRAFT — Contexte, Rôle, Action, Format, Ton.\n\nL’idée, c’est de comprendre ce qui manque à l’IA pour obtenir le résultat que tu attends. Parfois, elle a besoin d’un exemple. Parfois, tu dois clarifier tes critères ou lui faire proposer un plan avant de commencer. Tu verras comment choisir et combiner ces techniques de prompting dans tes échanges avec Claude ou ChatGPT, et garder la main sur le résultat.\n\n🎓 LA MASTERCLASS QUI A TOUT DÉBLOQUÉ — regarde-la en entier :\nhttps://www.youtube.com/watch?v=FwnIB-RbC-E\n\n⏱️ CHAPITRES\n0:00 Choisir la méthode selon ton besoin\n0:38 AIOS : donner le contexte à l’IA\n2:50 Les boucles de correction\n5:52 Le questionnement : clarifier tes critères\n8:07 Le plan et les exemples : guider le résultat\n11:04 Le déballage vocal : poser tes idées\n13:00 CRAFT et comment combiner les méthodes\n\n🔗 LES OUTILS QUE J’UTILISE DANS MA PRODUCTION\n• Claude — l’IA utilisée pour les démonstrations : https://claude.ai\n• vidIQ* — analyser et évaluer les titres YouTube : https://clubsmart.s.gy/vidiq\n• Tella* — enregistrer l’écran et la caméra : https://clubsmart.s.gy/tella\n\n* Les liens marqués d’un astérisque sont affiliés : je peux recevoir une commission si tu passes par eux. Merci de soutenir la chaîne !\n\n📺 POUR ALLER PLUS LOIN\n→ Tu n’as plus besoin de prompter : voici la méthode qui remplace tout\nhttps://www.youtube.com/watch?v=Yn_1jmRK6TU\n→ 3 min pour comprendre : l’AIOS, le système IA qui travaille pour toi\nhttps://www.youtube.com/watch?v=mgGQFJRYIpo\n\nPour essayer, reprends une conversation dont le résultat t’avait déçu et change de méthode. Dis-moi en commentaire ce que ça a changé.\n\n👉 Et si tu veux avancer accompagné, le Club SMART est fait pour ça :\nhttps://www.skool.com/club-smart/about\n\n#Prompting #ClaudeAI #ChatGPT #IntelligenceArtificielle #AIOS #ClubSMART",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "Choosing the method for your need",
+    "end_time": 38
+   },
+   {
+    "start_time": 38,
+    "title": "AIOS: giving the AI context",
+    "end_time": 170
+   },
+   {
+    "start_time": 170,
+    "title": "Correction loops",
+    "end_time": 352
+   },
+   {
+    "start_time": 352,
+    "title": "Questioning: clarifying your criteria",
+    "end_time": 487
+   },
+   {
+    "start_time": 487,
+    "title": "Plans and examples: guiding the result",
+    "end_time": 664
+   },
+   {
+    "start_time": 664,
+    "title": "The voice brain dump: getting your ideas out",
+    "end_time": 780
+   },
+   {
+    "start_time": 780,
+    "title": "CRAFT and how to combine the methods",
+    "end_time": 1038
+   }
+  ],
+  "tags": [
+   "club smart",
+   "automatisation",
+   "claude code",
+   "claude ai tutorial",
+   "ai tools",
+   "prompts",
+   "apprendre a prompter",
+   "claude",
+   "prompt engineering",
+   "claude cowork",
+   "how to use claude ai",
+   "claude skills",
+   "ai automation",
+   "artificial intelligence",
+   "intelligence artificielle",
+   "ai prompts"
+  ],
+  "categories": [
+   "Science & Technology"
+  ],
+  "heatmap": null,
+  "upload_date": "20260915",
+  "duration": 1038,
+  "channel": "Thom RICHARD - AI and Automation",
+  "channel_id": "UCXd_huFLtKC7Ln0mH9pJKzw",
+  "channel_follower_count": 5620,
+  "thumbnail": "https://i.ytimg.com/vi/2HhuPhmdayk/maxresdefault.jpg",
+  "view_count": 596,
+  "like_count": 19,
+  "comment_count": 0
+ }
+}

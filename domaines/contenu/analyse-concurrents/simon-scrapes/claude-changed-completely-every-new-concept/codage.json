@@ -1,0 +1,171 @@
+{
+  "video_id": "YAuWBqZ_gjs",
+  "chaine": "simon-scrapes",
+  "titre": "Claude Changed Completely - Every NEW Concept Explained",
+  "codeur": "agent simon-scrapes",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "liste",
+    "format_secondaire": "actu",
+    "sujet": "15 changements de Claude des 10 derniers mois : skills, choix du modèle, plan mode, /goal, Projects, hooks, routines, sessions cloud",
+    "outils": ["Claude Code", "Claude desktop", "skill eval plugin", "/advisor", "/goal", "Projects", "hooks", "routines", "Claude Code cloud", "Codex", "ChatGPT"],
+    "niveau": "intermediaire",
+    "objectif_probable": "vente"
+  },
+  "titre": {
+    "attente_au_clic": "Un tour complet de ce qui a changé dans Claude, en 15 concepts nouveaux expliqués, pour se remettre à jour.",
+    "schema": "<Outil> Changed Completely - Every NEW <Concept> Explained",
+    "promesse": "Comprendre tout ce qui est nouveau dans Claude",
+    "audace": "audacieux",
+    "registre": "jargon",
+    "briques": ["audace"],
+    "marqueurs": ["nouveaute", "majuscules"],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": false,
+    "emotion": null,
+    "regard": null,
+    "texte": "Claude /Advisor Projects Skill Eval Forks 15 CONCEPTS",
+    "texte_mots": 8,
+    "repete_titre": "partiel",
+    "elements": ["logo et mot Claude", "quatre tuiles d'icônes 3D orange (/Advisor, Projects, Skill Eval, Forks)", "15 CONCEPTS en très grosses capitales blanches"],
+    "nb_elements": 3,
+    "fond": "dégradé orange lumineux avec halo",
+    "couleurs": ["orange", "blanc", "noir"],
+    "curiosity_gap": "nouveaute",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Some of the most popular skills that you've been starring on GitHub are now basically useless.",
+    "premiere_phrase_reprend_titre": "non",
+    "premier_plan": "Face caméra en plan large au bureau (micro RØDE, affiche, fauteuil vert), sans texte à l'écran",
+    "premier_plan_reprend_miniature": "non",
+    "ouverture": ["hook-dissonance", "hook-fait"],
+    "preuve": {
+      "type": "chiffres",
+      "seconde": 4,
+      "description": "Neuf packs de skills testés contre un fichier factice : sept ne font pas mieux ; la page GitHub du test et son graphique s'affichent"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 15, "a_l_ecran": true},
+    "boucle_vers_la_fin": {"presente": false, "citation": "", "seconde_resolution": null, "tenue": null},
+    "seconde_premier_point": 27,
+    "attente_tenue": "oui",
+    "attente_note": "Le titre reste général ; l'intro annonce les 15 nouveautés dès 0:15 et les 15 chapitres les livrent. Le premier changement (les skills) sert d'accroche."
+  },
+  "structure": {
+    "modele": "liste-numerotee",
+    "segments": [
+      {"debut": 0, "fin": 27, "titre": "Claude Changed Completely", "role": "intro", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 27, "fin": 142, "titre": "1. Your favourite skills just got exposed", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 142, "fin": 237, "titre": "2. The cheap model trap", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 237, "fin": 297, "titre": "3. /Advisor - Opus brains on a Sonnet budget", "role": "point", "pull": true, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 297, "fin": 406, "titre": "4. Is plan mode dead?", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 406, "fin": 456, "titre": "Le cours de 15 heures de l'Agentic Academy", "role": "cta", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 456, "fin": 508, "titre": "5. Why /goal stops before it's done", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 508, "fin": 550, "titre": "6. The million-token context trap", "role": "point", "pull": true, "paint": false, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 550, "fin": 625, "titre": "7. Projects quietly changed", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": true},
+      {"debut": 625, "fin": 663, "titre": "8. Skills that write themselves", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 663, "fin": 729, "titre": "9. Switch up these settings", "role": "point", "pull": true, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 729, "fin": 809, "titre": "10. Forks vs subagents", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": true},
+      {"debut": 809, "fin": 886, "titre": "11. When Claude builds its own team", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": false},
+      {"debut": 886, "fin": 974, "titre": "12. Hooks that actually check the work", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 974, "fin": 1060, "titre": "13. Routines that start themselves", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": false, "relance_sortie": true},
+      {"debut": 1060, "fin": 1107, "titre": "14. Run Claude on someone else's computer", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": true},
+      {"debut": 1107, "fin": 1138, "titre": "15. Limit continuation", "role": "point", "pull": true, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 1138, "fin": 1155, "titre": "Fin et Agentic Academy", "role": "fin", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 15, "type": "annonce-suite", "citation": "that's just one of 15 new things from the last 10 months"},
+      {"seconde": 142, "type": "annonce-suite", "citation": "we've basically got the same trap with models now"},
+      {"seconde": 237, "type": "annonce-suite", "citation": "hardly anyone has turned this advisor setting on"},
+      {"seconde": 406, "type": "boucle-ouverte", "citation": "why /goal can tell you it's done when it actually isn't done"},
+      {"seconde": 506, "type": "question-spectateur", "citation": "But what about when we introduce saved context?"},
+      {"seconde": 661, "type": "annonce-suite", "citation": "most of the time that's proven to actually make it worse"},
+      {"seconde": 809, "type": "annonce-suite", "citation": "some jobs like proper research need dozens of workers"},
+      {"seconde": 1057, "type": "question-spectateur", "citation": "not every job fits a schedule or a trigger, right?"},
+      {"seconde": 1101, "type": "annonce-suite", "citation": "there's one thing that used to catch you out, but no longer will"}
+    ],
+    "histoires": [
+      {"seconde": 53, "acte": "perso-passe", "resume": "Il a lui-même écrit des skills de centaines de lignes (copywriting, humaniser) en suivant le guide officiel ; elles ne servent plus."},
+      {"seconde": 301, "acte": "anecdote", "resume": "Sa vidéo précédente disait d'abandonner le plan mode ; les commentaires ont protesté ; Boris Cherny et Tarik (équipe Claude Code) lui donnent en partie raison."},
+      {"seconde": 638, "acte": "anecdote", "resume": "Il a enregistré une skill sur une automatisation de DM : elle n'a gardé que les corrections, et elle est sortie toute petite."}
+    ],
+    "payoffs": [
+      {"seconde": 122, "resume": "Le skill eval plugin : faire tourner le travail avec et sans la skill, garder seulement celles qui gagnent"},
+      {"seconde": 226, "resume": "Choisir le modèle au début et baisser l'effort plutôt que changer de modèle"},
+      {"seconde": 278, "resume": "/advisor Opus sur une session Sonnet"},
+      {"seconde": 378, "resume": "Quand garder le plan mode et quand s'en passer"},
+      {"seconde": 485, "resume": "Une condition /goal qui exige une preuve dans la conversation"},
+      {"seconde": 540, "resume": "Ranger le contexte dans des dossiers et pointer vers eux depuis Claude.md"},
+      {"seconde": 716, "resume": "Laisser les réglages par défaut"},
+      {"seconde": 950, "resume": "Un stop hook qui relit le travail contre le guide de voix"}
+    ],
+    "premier_payoff_seconde": 122,
+    "jargon": 2,
+    "repetitions": 1,
+    "test_du_tweet": "Claude a changé en 10 mois : la plupart des skills ne servent plus (teste-les avec et sans), ne change pas de modèle en cours de route, garde les réglages par défaut, mets des preuves dans /goal, des hooks qui relisent le travail, et laisse les routines et le cloud tourner sans toi."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "taille, plan large au bureau ; vignette à droite quand une capture ou un schéma s'affiche", "decor": "bureau, mur à lattes de bois, micro RØDE, affiche, fauteuil vert, plante"},
+    "parts": {"face": 55, "ecran": 23, "motion": 22, "broll": 0},
+    "textes_ecran": "rares",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["cartes-chapitre", "plan-a-l-ecran", "split-screen", "zooms-ecran"],
+    "charte": "Schémas au trait noir sur papier beige quadrillé, blocs rouge brique façon Claude ; chaque concept s'ouvre sur une icône blanche posée sur une frise grise. La miniature, orange vif et 3D, ne reprend que la couleur.",
+    "rythme": "regulier",
+    "notes": "Plus de la moitié du temps en face caméra, plan large, sans texte. Le reste : captures (GitHub, tweets, docs) et schémas animés sur papier beige, toujours avec sa vignette à droite."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 412, "type": "formation", "cible": "le cours de 15 heures de l'Agentic Academy (Skool)", "amene_par": "transition", "citation": "this video follows the same order as my new 15-hour course"},
+      {"seconde": 879, "type": "like-commentaire", "cible": "dire en commentaire à quoi on a servi ultra code", "amene_par": "apres-valeur", "citation": "let me know down below in the comments"},
+      {"seconde": 1145, "type": "formation", "cible": "le cours complet dans l'Agentic Academy", "amene_par": "fin", "citation": "our full course is available inside the Agentic Academy"}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"formation": 1, "abonnement": 1, "produit": 1},
+    "commentaire_epingle": null,
+    "recap_final": true,
+    "derniere_phrase": "See you in the next one. Thanks for watching.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["la fatigue de suivre un rythme de nouveautés trop rapide", "le test des packs de skills, discuté en détail", "des questions pratiques sur le cache, l'effort et les sous-agents", "le débit de parole jugé trop rapide"],
+    "demandes": ["une vidéo sur les sessions cloud avec des fichiers restés en local", "où trouver le skill eval plugin", "savoir si changer l'effort casse le cache", "une vidéo sur le harness engineering"],
+    "critiques": ["« basically useless » jugé trop rapide pour un test fait sans humain (21 likes)", "la voix accélérée, difficile à suivre", "des concepts anciens présentés comme nouveaux", "des conseils donnés sans les tester"],
+    "reprises": ["skill-placebo", "le skill eval plugin", "rester sur un seul modèle"],
+    "signal_promesse": "mixte"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 0, "preuve": "1re phrase sur les skills, pas sur le titre ; 1er plan en face caméra large, rien de la miniature (icônes orange, 15 CONCEPTS)"},
+    "ap_boucle_curiosite": {"note": 0, "preuve": "Aucune question ouverte dans l'intro ; la seule boucle (/goal à 6:46) arrive après l'intro et se résout 50 s plus tard"},
+    "ap_effort_montre": {"note": 1, "preuve": "0:04 neuf packs testés contre un fichier factice : l'effort d'un autre, pas le sien"},
+    "ap_setup_progress_payoff": {"note": 1, "preuve": "Chaque concept pose un piège puis donne l'action, mais sans montée vers un résultat ; liste de 15 points de même poids"},
+    "ap_contraste_rythme": {"note": 1, "preuve": "De 7 à 17 plans par minute et débit constant autour de 245 mots/min : des variations, pas de vraie rupture"},
+    "ap_montrer_sans_son": {"note": 0, "preuve": "Planche intro : face caméra, une page GitHub, un graphique illisible et une frise d'icônes ; la promesse ne se lit pas sans le son"},
+    "ali_douleur_histoire": {"note": 1, "preuve": "Douleur légère (tes skills ne servent plus), puis 0:53 il a lui-même écrit ces longues skills ; mais l'histoire arrive dans le 1er point"},
+    "ali_coeur_unique": {"note": 1, "preuve": "Un fil (les modèles font plus seuls, donc moins de réglages) mais 15 points disparates ; 19:01 « from a single chat all the way to Claude running jobs »"},
+    "alx_pont": {"note": 1, "preuve": "Contexte, preuve (le test) et annonce des 15 points comme un pont, mais ouvert par un hook net"},
+    "alx_pull_paint_point": {"note": 1, "preuve": "Complet sur le piège du modèle pas cher (2:22) et /goal ; beaucoup de points vont droit à la consigne"},
+    "alx_nom_idee": {"note": 1, "preuve": "« cheap model trap », « million-token context trap » dans les chapitres ; peu repris à l'oral ou à l'écran"},
+    "alx_phrase_finale": {"note": 1, "preuve": "9:01 « a bigger window of context is just more room to lose the details in » ; 12:02 « they know a lot more than us » ; rare ailleurs"},
+    "alx_douleur_reve": {"note": 0, "preuve": "Le titre parle de Claude et de concepts, ni d'un problème ni d'un désir"},
+    "alx_cta_tot": {"note": 0, "preuve": "Le cours de l'Agentic Academy arrive à 6:52, après 4 minutes, même s'il suit le même ordre que la vidéo"},
+    "ed_intro_courte": {"note": 1, "preuve": "1er point à 0:27, après cinq phrases : courte, mais plus de trois lignes"},
+    "ed_hook": {"note": 2, "preuve": "0:00 « popular skills [...] are now basically useless », appuyé par le test de 9 packs : dissonance et fait"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "Complet sur les skills, le modèle pas cher, le contexte et les réglages ; Projects, forks, routines et cloud vont droit aux consignes"},
+    "ed_tension_relancee": {"note": 2, "preuve": "3:57 « hardly anyone has turned this advisor setting on » ; 8:26 « But what about when we introduce saved context? » ; 17:37 « not every job fits a schedule »"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "0:53 ses anciennes skills ; 10:38 la skill enregistrée sur une automatisation de DM : des anecdotes, pas une histoire"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "Le cache et le côté « déterministe » des hooks sont redits ; « basically » et « actually » reviennent sans cesse"},
+    "ed_niveau_simple": {"note": 1, "preuve": "Hooks et forks expliqués avec un exemple, mais cache, effort, stop event, MCP events passent vite à 245 mots/min"},
+    "tous_video_suivante": {"note": 0, "preuve": "« See you in the next one », sans vidéo précise"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Un titre de mise à jour totale (« Changed Completely », « Every NEW Concept ») et une miniature sans visage : logo Claude, quatre tuiles d'icônes et « 15 CONCEPTS » en énorme. La promesse est l'exhaustivité.",
+    "intro_structure": "Le hook n'est pas le titre : il prend le changement le plus contre-intuitif (tes skills ne servent plus, test à l'appui), puis annonce 15 points en 27 secondes. Chaque point finit sur une relance vers le suivant.",
+    "habillage": "Face caméra large la moitié du temps, schémas sur papier beige et captures avec vignette, une icône sur une frise à chaque chapitre ; rythme régulier.",
+    "idee_pour_nous": "Ouvrir une liste de nouveautés par le point qui contredit une habitude du public, preuve chiffrée à l'appui, plutôt que par le titre.",
+    "objectif": "vues"
+  }
+}

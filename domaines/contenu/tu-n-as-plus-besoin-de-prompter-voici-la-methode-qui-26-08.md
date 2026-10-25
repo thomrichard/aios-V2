@@ -4,7 +4,7 @@ resume: Le prompt parfait, c'est fini. Je te montre ce qui le remplace : cinq mi
 statut: publie
 domaine: contenu
 cree: 2026-08-11
-maj: 2026-10-22
+maj: 2026-10-25
 liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, 3-minutes-pour-comprendre-les-3-leviers-pour-de-meilleurs-26-06.md, l-aios-c-est-quoi-explication-en-3-minutes-26-07.md, j-ai-passe-les-cours-gratuits-de-claude-ce-qu-il-faut-savoir-26-08.md, 7-techniques-de-prompting-pour-des-reponses-plus-precises-26-09.md]
 ---
 # Tu n'as plus besoin de prompter : voici la méthode qui remplace tout
@@ -17,25 +17,25 @@ liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, 3-minutes-pour-com
 
 ## Stats
 
-YouTube Analytics, données jusqu'au 2026-10-20. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
+YouTube Analytics, données jusqu'au 2026-10-22. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
 
 | | 7 premiers jours | 30 premiers jours | Depuis la sortie |
 |---|---|---|---|
-| Vues | 17 385 | 28 455 | 30 181 |
-| Vues engagées | 17 385 | 26 833 | 27 929 |
-| Heures regardées | 1 095,2 | 1 696,5 | 1 764,9 |
+| Vues | 17 385 | 28 455 | 30 246 |
+| Vues engagées | 17 385 | 26 833 | 27 962 |
+| Heures regardées | 1 095,2 | 1 696,5 | 1 767,1 |
 | Abonnés gagnés | 613 | 908 | 925 |
-| Revenus estimés | 52,45 $ | 86,84 $ | 92,62 $ |
+| Revenus estimés | 52,45 $ | 86,84 $ | 92,73 $ |
 | Durée moyenne regardée | | | 3 min 47 s (33,1 %) |
-| J'aime · commentaires | | | 842 · 55 |
+| J'aime · commentaires | | | 843 · 55 |
 
 ## Liens
 
-- Cite : [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
-- Cite : [2026-06-07-3-minutes-pour-comprendre-les-3-leviers-pour-de-meilleurs](3-minutes-pour-comprendre-les-3-leviers-pour-de-meilleurs-26-06.md)
-- Cite : [2026-07-18-l-aios-c-est-quoi-explication-en-3-minutes](l-aios-c-est-quoi-explication-en-3-minutes-26-07.md)
-- Citée par : [2026-08-25-j-ai-passe-les-cours-gratuits-de-claude-ce-qu-il-faut-savoir](j-ai-passe-les-cours-gratuits-de-claude-ce-qu-il-faut-savoir-26-08.md)
-- Citée par : [2026-09-15-7-techniques-de-prompting-pour-des-reponses-plus-precises](7-techniques-de-prompting-pour-des-reponses-plus-precises-26-09.md)
+- Cite : [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
+- Cite : [3-minutes-pour-comprendre-les-3-leviers-pour-de-meilleurs-26-06](3-minutes-pour-comprendre-les-3-leviers-pour-de-meilleurs-26-06.md)
+- Cite : [l-aios-c-est-quoi-explication-en-3-minutes-26-07](l-aios-c-est-quoi-explication-en-3-minutes-26-07.md)
+- Citée par : [j-ai-passe-les-cours-gratuits-de-claude-ce-qu-il-faut-savoir-26-08](j-ai-passe-les-cours-gratuits-de-claude-ce-qu-il-faut-savoir-26-08.md)
+- Citée par : [7-techniques-de-prompting-pour-des-reponses-plus-precises-26-09](7-techniques-de-prompting-pour-des-reponses-plus-precises-26-09.md)
 - Description : https://clubsmart.s.gy/hub-newsletter
 - Description : https://claude.ai
 - Description : https://clubsmart.s.gy/wispr

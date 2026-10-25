@@ -1,0 +1,41 @@
+[00:00] Pendant que tu regardes cette vidéo, mon intelligence artificielle trie mes emails, range mes notes et prépare ma veille de demain.
+[00:07] Et le mieux, c'est qu'elle fait ça sans aucune intervention de ma part.
+[00:10] Ça s'appelle un AIOS et en 3 minutes, tu vas comprendre ce que c'est.
+[00:15] Alors, AIOS en français, c'est un système d'exploitation dopé à l'intelligence artificielle.
+[00:22] C'est ton système à toi.
+[00:23] Pour faire une analogie, regarde ton téléphone.
+[00:26] Sur ton téléphone, il y a des applications, mais ce qui rend le téléphone vraiment intelligent, c'est le système en dessous.
+[00:31] C'est lui qui connaît tes contacts, ton agenda, tes photos et c'est lui qui permet aux applications de travailler ensemble.
+[00:37] Et bien avec l'IA, c'est exactement pareil.
+[00:40] ChatGPT, Claude, Gemini, ce sont des applications.
+[00:43] Quand tu poses une question, tu reçois une réponse, mais si tu fermes la fenêtre, tu perds une bonne partie du contexte que tu viens de créer.
+[00:50] L'AIOS, c'est le système en dessous, celui qui connaît ton travail, tes outils et tes projets, ainsi que tes préférences.
+[00:56] Il fait travailler l'IA pour toi en continu et retient tout ce qu'il produit.
+[01:00] Et alors, qu'est-ce qu'il y a ?
+[01:02] Quatre briques.
+[01:03] Je te montre avec le mien.
+[01:05] Première brique, une mémoire qui dure.
+[01:07] Mon système connaît mes projets, mes clients et ma façon de travailler.
+[01:11] Je n'ai rien à réexpliquer, il sait déjà.
+[01:13] Deuxième brique, mes données, mes notes, mes emails et mes statistiques YouTube sont branchées directement dessus.
+[01:20] Zéro copier-coller.
+[01:21] Troisième brique, des outils.
+[01:23] Il ne fait pas que répondre, il lit mes fichiers, écrit des documents, envoie des rapports et publie du contenu.
+[01:29] Et quatrième brique, celle qui change tout, il tourne sans moi.
+[01:32] Chaque matin, mes emails sont déjà triés par priorité avant même que j'ouvre ma boîte.
+[01:35] Chaque semaine, ma veille arrive toute seule, déjà résumée.
+[01:39] Je dors, il travaille.
+[01:41] En fait, la plupart des gens n'utilisent que des applications.
+[01:44] Ils posent des questions à un chatbot et le lendemain, ils recommencent à zéro.
+[01:48] Le jour où tu passes de l'application au système, ton usage de l'IA change de niveau.
+[01:52] Tu arrêtes de prompter et tu commences à bâtir.
+[01:55] Et d'ailleurs, je vais te dire quelque chose.
+[01:58] Cette vidéo, c'est mon AIOS qui l'a fabriquée.
+[02:01] Le script est sorti de mes notes.
+[02:03] La voix que tu écoutes et le visage que tu regardes ont été générés par mon système.
+[02:07] Moi, j'ai choisi le message, j'ai corrigé et j'ai validé.
+[02:11] Lui a fait tout le reste.
+[02:13] Voilà, un AIOS, c'est exactement ça.
+[02:16] Toi au volant, le système au travail.
+[02:18] Alors, si tu veux voir comment on construit un AIOS de A à Z, brique par brique, je viens de publier une masterclass complète qui t'accompagne pas à pas.
+[02:27] Elle est juste là et je te dis à bientôt.

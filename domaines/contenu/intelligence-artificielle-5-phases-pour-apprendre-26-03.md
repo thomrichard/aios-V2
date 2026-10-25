@@ -4,7 +4,7 @@ resume: Dans cette vidéo, je te partage les 5 phases pour passer de zéro à vr
 statut: publie
 domaine: contenu
 cree: 2026-03-01
-maj: 2026-10-22
+maj: 2026-10-25
 liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md, 3-minutes-pour-comprendre-les-3-leviers-pour-de-meilleurs-26-06.md]
 ---
 # Intelligence artificielle : 5 phases pour apprendre
@@ -18,23 +18,23 @@ liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, claude-tutoriel-co
 
 ## Stats
 
-YouTube Analytics, données jusqu'au 2026-10-20. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
+YouTube Analytics, données jusqu'au 2026-10-22. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
 
 | | 7 premiers jours | 30 premiers jours | Depuis la sortie |
 |---|---|---|---|
-| Vues | 110 | 172 | 778 |
-| Vues engagées | 110 | 172 | 770 |
-| Heures regardées | 7,5 | 14,0 | 87,3 |
-| Abonnés gagnés | 2 | 4 | 12 |
-| Revenus estimés | 0,00 $ | 0,00 $ | 1,40 $ |
-| Durée moyenne regardée | | | 6 min 48 s (28,2 %) |
-| J'aime · commentaires | | | 13 · 0 |
+| Vues | 110 | 172 | 783 |
+| Vues engagées | 110 | 172 | 775 |
+| Heures regardées | 7,5 | 14,0 | 87,6 |
+| Abonnés gagnés | 2 | 4 | 13 |
+| Revenus estimés | 0,00 $ | 0,00 $ | 1,65 $ |
+| Durée moyenne regardée | | | 6 min 46 s (28,2 %) |
+| J'aime · commentaires | | | 14 · 0 |
 
 ## Liens
 
-- Cite : [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
-- Cite : [2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
-- Citée par : [2026-06-07-3-minutes-pour-comprendre-les-3-leviers-pour-de-meilleurs](3-minutes-pour-comprendre-les-3-leviers-pour-de-meilleurs-26-06.md)
+- Cite : [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
+- Cite : [claude-tutoriel-complet-pour-passer-de-debutant-a-26-05](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
+- Citée par : [3-minutes-pour-comprendre-les-3-leviers-pour-de-meilleurs-26-06](3-minutes-pour-comprendre-les-3-leviers-pour-de-meilleurs-26-06.md)
 - Description : https://clubsmart.s.gy/masterclass-aios-catalogue
 - Description : https://clubsmart.s.gy/tuto-claude-catalogue
 - Description : https://www.skool.com/club-smart

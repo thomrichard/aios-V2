@@ -1,0 +1,179 @@
+{
+ "recupere_le": "2026-10-25",
+ "breakout": 3.53,
+ "vph": 62.47,
+ "stats_jour": [
+  {
+   "timestamp": "2026-10-05T13:02:10.536Z",
+   "views": 2,
+   "likes": 1,
+   "comments": 0,
+   "vph": 120
+  },
+  {
+   "timestamp": "2026-10-06T00:33:47.007Z",
+   "views": 70384,
+   "likes": 894,
+   "comments": 93,
+   "vph": 4095.789473684211
+  },
+  {
+   "timestamp": "2026-10-07T00:39:47.831Z",
+   "views": 110444,
+   "likes": 1494,
+   "comments": 136,
+   "vph": 1235
+  },
+  {
+   "timestamp": "2026-10-08T00:36:05.372Z",
+   "views": 154238,
+   "likes": 2066,
+   "comments": 180,
+   "vph": 1633
+  },
+  {
+   "timestamp": "2026-10-09T00:38:50.968Z",
+   "views": 181850,
+   "likes": 2355,
+   "comments": 201,
+   "vph": 915
+  },
+  {
+   "timestamp": "2026-10-10T00:32:59.986Z",
+   "views": 198861,
+   "likes": 2479,
+   "comments": 207,
+   "vph": 373.22033898305085
+  },
+  {
+   "timestamp": "2026-10-11T00:53:32.406Z",
+   "views": 205454,
+   "likes": 2536,
+   "comments": 213,
+   "vph": 153.44262295081967
+  },
+  {
+   "timestamp": "2026-10-12T00:09:55.342Z",
+   "views": 208080,
+   "likes": 2560,
+   "comments": 213,
+   "vph": 150.49180327868854
+  },
+  {
+   "timestamp": "2026-10-13T00:49:00.629Z",
+   "views": 210872,
+   "likes": 2597,
+   "comments": 218,
+   "vph": 109.35483870967741
+  },
+  {
+   "timestamp": "2026-10-14T00:35:20.344Z",
+   "views": 213624,
+   "likes": 2640,
+   "comments": 218,
+   "vph": 84.76190476190476
+  },
+  {
+   "timestamp": "2026-10-15T00:35:31.745Z",
+   "views": 215627,
+   "likes": 2671,
+   "comments": 226,
+   "vph": 102.5806451612903
+  },
+  {
+   "timestamp": "2026-10-16T00:49:49.685Z",
+   "views": 217831,
+   "likes": 2703,
+   "comments": 231,
+   "vph": 57.14285714285714
+  },
+  {
+   "timestamp": "2026-10-17T00:33:46.646Z",
+   "views": 219191,
+   "likes": 2720,
+   "comments": 232,
+   "vph": 56.06557377049181
+  },
+  {
+   "timestamp": "2026-10-18T00:35:35.300Z",
+   "views": 220380,
+   "likes": 2737,
+   "comments": 232,
+   "vph": 94.42622950819673
+  },
+  {
+   "timestamp": "2026-10-19T00:24:40.884Z",
+   "views": 221346,
+   "likes": 2750,
+   "comments": 233,
+   "vph": 61.904761904761905
+  },
+  {
+   "timestamp": "2026-10-20T00:19:20.069Z",
+   "views": 222200,
+   "likes": 2758,
+   "comments": 234,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-21T01:01:49.183Z",
+   "views": 222980,
+   "likes": 2764,
+   "comments": 234,
+   "vph": 117.1875
+  },
+  {
+   "timestamp": "2026-10-22T00:14:40.064Z",
+   "views": 223528,
+   "likes": 2768,
+   "comments": 234,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-23T00:36:14.905Z",
+   "views": 223972,
+   "likes": 2771,
+   "comments": 234,
+   "vph": 4.838709677419354
+  },
+  {
+   "timestamp": "2026-10-24T01:03:29.634Z",
+   "views": 224348,
+   "likes": 2774,
+   "comments": 234,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-25T00:40:29.715Z",
+   "views": 224748,
+   "likes": 2775,
+   "comments": 235,
+   "vph": 4.545454545454545
+  }
+ ],
+ "changements": [
+  {
+   "createdAt": "2026-10-05T16:00:51Z",
+   "title": null,
+   "thumbnails": [
+    {
+     "id": "ad75ab35-f87a-4ea2-91f1-0ec3634adb17",
+     "ytUrl": "https://i.ytimg.com/vi/LDn7rQKIFro/maxresdefault.jpg",
+     "snapshotUrl": "https://vidiq-video-thumbnails.s3.us-east-1.amazonaws.com/LDn7rQKIFro/ad75ab35-f87a-4ea2-91f1-0ec3634adb17.jpg"
+    }
+   ]
+  },
+  {
+   "createdAt": "2026-10-06T03:58:26Z",
+   "title": null,
+   "thumbnails": [
+    {
+     "id": "40fd3a2f-a23c-4b73-84f7-7185b7a4eede",
+     "ytUrl": "https://i.ytimg.com/vi/LDn7rQKIFro/maxresdefault.jpg",
+     "snapshotUrl": "https://vidiq-video-thumbnails.s3.us-east-1.amazonaws.com/LDn7rQKIFro/40fd3a2f-a23c-4b73-84f7-7185b7a4eede.jpg"
+    }
+   ]
+  }
+ ],
+ "ab_tests": []
+}

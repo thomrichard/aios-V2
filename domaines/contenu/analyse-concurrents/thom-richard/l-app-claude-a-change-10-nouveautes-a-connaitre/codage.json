@@ -1,0 +1,189 @@
+{
+  "video_id": "Aeh7q8RA61U",
+  "chaine": "thom-richard",
+  "titre_video": "L'app Claude a changé : 10 nouveautés à connaître",
+  "codeur": "agent thom-richard",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "actu",
+    "format_secondaire": "liste",
+    "sujet": "Les 10 nouveautés de l'application Claude : formats de sortie, routines dans le cloud, Claude Code en atelier",
+    "outils": ["Claude", "Claude Cowork", "Claude Code", "Skool"],
+    "niveau": "intermediaire",
+    "objectif_probable": "vues"
+  },
+  "titre": {
+    "attente_au_clic": "Voir ce qui a changé dans l'app Claude, en 10 nouvelles fonctions concrètes comme générer des slides ou automatiser des tâches.",
+    "schema": "<Outil> a changé : <N> nouveautés à connaître",
+    "promesse": "Connaître les 10 nouveautés de l'app Claude qui comptent",
+    "audace": "timide",
+    "registre": "jargon",
+    "briques": [],
+    "marqueurs": ["nouveaute", "chiffre"],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "doute, sourcil levé",
+    "regard": "element",
+    "texte": "LE NOUVEAU CLAUDE ? / Générer des diapositives / Automatiser des tâches",
+    "texte_mots": 9,
+    "repete_titre": "partiel",
+    "elements": ["texte « LE NOUVEAU CLAUDE ? » en blanc et jaune orangé", "fenêtre d'app avec deux fonctions et barres de progression", "logo Claude orange en fond", "visage à droite qui pointe la fenêtre du doigt"],
+    "nb_elements": 4,
+    "fond": "sombre avec halo orange",
+    "couleurs": ["noir bleuté", "orange Claude", "jaune", "blanc", "bleu"],
+    "curiosity_gap": "nouveaute",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Claude, fais moi le bilan de ma chaîne YouTube sur les 6 derniers mois.",
+    "premiere_phrase_reprend_titre": "non",
+    "premier_plan": "Face caméra plein cadre qui dicte la demande, puis dès 0:02 l'app Claude avec le prompt et le format « Présentation »",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": ["demo-d-abord", "actu-annonce", "boucle-curiosite"],
+    "preuve": {
+      "type": "resultat-montre",
+      "seconde": 5,
+      "description": "La présentation « Bilan des 6 derniers mois » faite dans Claude sur ses vraies données (1 800 → 5 050 abonnés), puis retouchée ; « Et j'ai tout testé » à 0:21"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 10, "a_l_ecran": true},
+    "boucle_vers_la_fin": {
+      "presente": true,
+      "citation": "l'une d'elles a complètement transformé ma façon de travailler avec l'IA",
+      "seconde_resolution": 646,
+      "tenue": "partiel"
+    },
+    "seconde_premier_point": 81,
+    "attente_tenue": "oui",
+    "attente_note": "Les 10 nouveautés sont montrées sur son vrai travail, la génération de slides dès 0:05. La nouveauté qui a « transformé » sa façon de travailler n'est jamais désignée clairement : on la devine entre 10:46 et 11:50."
+  },
+  "structure": {
+    "modele": "liste-numerotee",
+    "segments": [
+      {"debut": 0, "fin": 81, "titre": "Le bilan de ma chaîne… en présentation", "role": "intro", "pull": false, "paint": true, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 81, "fin": 104, "titre": "Créer depuis le chat", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": true},
+      {"debut": 104, "fin": 173, "titre": "01 · Slides", "role": "demo", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 173, "fin": 208, "titre": "02 · Docs", "role": "demo", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 208, "fin": 266, "titre": "03 · Design", "role": "demo", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 266, "fin": 339, "titre": "04 · Artefacts", "role": "demo", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 339, "fin": 369, "titre": "05 · Chat + Cowork réunis", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 369, "fin": 492, "titre": "06 · Routines dans le cloud", "role": "demo", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 492, "fin": 511, "titre": "07 · Le terminal intégré", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 511, "fin": 560, "titre": "08 · Le navigateur intégré", "role": "demo", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 560, "fin": 646, "titre": "09 · Les fichiers", "role": "demo", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 646, "fin": 691, "titre": "10 · Continuer dans le cloud (et sur ton téléphone)", "role": "demo", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 691, "fin": 777, "titre": "Ce qu'il faut retenir", "role": "fin", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 27, "type": "boucle-ouverte", "citation": "l'une d'elles a complètement transformé ma façon de travailler avec l'IA"},
+      {"seconde": 96, "type": "annonce-suite", "citation": "je vais te montrer pourquoi c'est vraiment intéressant"},
+      {"seconde": 322, "type": "annonce-suite", "citation": "On va attaquer maintenant la deuxième partie."},
+      {"seconde": 453, "type": "rappel-promesse", "citation": "on y revient à la fin car moi c'est vraiment ça qui a changé"},
+      {"seconde": 456, "type": "annonce-suite", "citation": "La troisième partie, c'est Claude code qui se transforme en atelier."},
+      {"seconde": 491, "type": "question-spectateur", "citation": "Qu'est-ce que tu peux [faire] ?"},
+      {"seconde": 558, "type": "annonce-suite", "citation": "Il reste encore deux choses hyper intéressantes."}
+    ],
+    "histoires": [
+      {"seconde": 41, "acte": "anecdote", "resume": "Il utilise Claude chaque jour ; pendant des mois il l'a utilisé hors de l'app, dans son propre système, et il y revient depuis quelques semaines."},
+      {"seconde": 437, "acte": "anecdote", "resume": "Son tri des mails tourne matin, midi et soir : priorité et catégorie posées sur chaque mail."},
+      {"seconde": 702, "acte": "perso-passe", "resume": "Avant, il jonglait entre Obsidian, VS Code et Claude Code ; il rassemble tout dans l'app."}
+    ],
+    "payoffs": [
+      {"seconde": 5, "resume": "Le bilan de sa chaîne sort en présentation dans Claude"},
+      {"seconde": 126, "resume": "Un commentaire sur une slide est envoyé à Claude, qui modifie la phrase"},
+      {"seconde": 180, "resume": "Un script de vidéo en document retravaillé par commentaires, exporté en Word, PDF ou Notion"},
+      {"seconde": 225, "resume": "Les maquettes de l'app mobile du Club SMART en un seul prompt"},
+      {"seconde": 299, "resume": "Une page de vote dynamique pour le Club, à jour en direct"},
+      {"seconde": 425, "resume": "Les routines tournent dans le cloud, ordinateur fermé"},
+      {"seconde": 552, "resume": "Le navigateur intégré rédige seul un post dans le Club SMART sur Skool"},
+      {"seconde": 662, "resume": "La session reprise sur son iPhone, avec les fichiers de son ordinateur"}
+    ],
+    "premier_payoff_seconde": 5,
+    "jargon": 2,
+    "repetitions": 1,
+    "test_du_tweet": "L'app Claude a changé sans bruit. 10 nouveautés testées sur un vrai travail : slides, docs, design et artefacts retouchés par commentaires, Chat et Cowork réunis, routines dans le cloud, terminal, navigateur et fichiers dans Claude Code, et une session reprise sur téléphone."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine en plein cadre au début et à la fin ; vignette en bas à droite sur les captures", "decor": "étagère noire, lampe à ampoule orange, mur blanc"},
+    "parts": {"face": 8, "ecran": 70, "motion": 22, "broll": 0},
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["plan-a-l-ecran", "cartes-chapitre", "etiquettes", "zooms-ecran", "chiffres-animes", "bandeau-nom"],
+    "charte": "Cartes vert sapin à triangles en filigrane, titres blancs en sans-serif gras, accent jaune or, étiquettes en petites capitales à chasse fixe ; un compteur 01 à 10 suit la progression. La miniature, sombre et orange, ne reprend pas le vert.",
+    "rythme": "contraste",
+    "notes": "Presque toute la vidéo est une capture plein écran avec le visage en vignette et une étiquette jaune qui dit ce qu'on regarde. Des cartes vertes ouvrent chaque partie, avec un schéma Mac, cloud, téléphone pour les routines."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 71, "type": "lead-magnet", "cible": "le guide gratuit des 10 cas", "amene_par": "intro", "citation": "je t'ai préparé un petit guide gratuit et tu trouveras le lien dans la description"},
+      {"seconde": 737, "type": "lead-magnet", "cible": "les prompts et la documentation", "amene_par": "fin", "citation": "tu vas retrouver tous les prompts qui ont été utilisés"},
+      {"seconde": 746, "type": "abonnement", "cible": "s'abonner", "amene_par": "fin", "citation": "Si ça t'a plu, je t'invite également à t'abonner."},
+      {"seconde": 747, "type": "autre", "cible": "booster la vidéo depuis l'app YouTube", "amene_par": "fin", "citation": "Tu peux également booster la vidéo depuis l'application YouTube"},
+      {"seconde": 765, "type": "video-suivante", "cible": "la masterclass AIOS", "amene_par": "fin", "citation": "tu vas trouver ici une vidéo avec le lien vers une masterclass"}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"communaute-payante": 2, "lead-magnet": 1, "service": 1, "affiliation": 1, "video-suivante": 4, "autre": 2},
+    "commentaire_epingle": {"texte": "Merci pour l'accueil ; dans le Club SMART, on construit ton AIOS (lien Skool). Laquelle des 10 vas-tu tester ?", "type": "communaute-payante"},
+    "recap_final": true,
+    "derniere_phrase": "Je te dis à bientôt pour la prochaine vidéo. Bye.",
+    "video_suivante_precise": true
+  },
+  "commentaires": {
+    "themes": ["une vidéo jugée organisée et méthodique", "ranger ses skills entre plusieurs comptes, PC et modes", "les routines d'OpenAI, qui ont un navigateur dans le cloud", "les options de sortie absentes chez un utilisateur Mac"],
+    "demandes": ["où mettre skills et plugins entre Cowork, Code et deux PC", "comment brancher son Obsidian dans Claude, et le coût en tokens", "pourquoi les formats de sortie n'apparaissent pas sur Mac"],
+    "critiques": ["la musique de fond jugée insupportable, au point d'arrêter la vidéo", "les routines d'Anthropic n'ont pas de navigateur connecté"],
+    "reprises": ["« 11520 mails ?? », sur un chiffre vu à l'écran"],
+    "signal_promesse": "tenue"
+  },
+  "retention": {
+    "a_30s": 0.696,
+    "a_la_moitie": 0.387,
+    "pertes": [
+      {"seconde": 30, "chute": 6.6, "passage": "« tout le monde a parlé énormément des nouveaux modèles » (contexte, carte des modèles)", "segment": "Le bilan de ma chaîne… en présentation"},
+      {"seconde": 109, "chute": 2.6, "passage": "« on a ici une présentation qui est tout à fait correcte » (la présentation de l'intro, revue)", "segment": "01 · Slides"},
+      {"seconde": 699, "chute": 2.5, "passage": "« c'est ce qu'on appelle le harness » (début du bilan)", "segment": "Ce qu'il faut retenir"},
+      {"seconde": 754, "chute": 2.5, "passage": "« je t'ai montré mon travail » (appels à l'action de fin)", "segment": "Ce qu'il faut retenir"},
+      {"seconde": 67, "chute": 1.7, "passage": "« je t'ai préparé un petit guide gratuit » (fin du plan, ressource)", "segment": "Le bilan de ma chaîne… en présentation"}
+    ],
+    "remontees": [
+      {"seconde": 264, "chute": -2.2, "passage": "« La nouveauté qu'on va voir, c'est les artefacts. » (début de chapitre)", "segment": "04 · Artefacts"},
+      {"seconde": 643, "chute": -1.9, "passage": "« prendre la discussion et venir ici l'ouvrir dans le cloud » (début de chapitre)", "segment": "10 · Continuer dans le cloud (et sur ton téléphone)"},
+      {"seconde": 557, "chute": -1.8, "passage": "« Il reste encore deux choses hyper intéressantes. » (début de chapitre)", "segment": "09 · Les fichiers"},
+      {"seconde": 78, "chute": -1.7, "passage": "« Alors le premier changement, c'est le plus visible. » (début de chapitre)", "segment": "Créer depuis le chat"},
+      {"seconde": 488, "chute": -1.5, "passage": "« Ici tu as ton terminal. » (début de chapitre)", "segment": "07 · Le terminal intégré"}
+    ]
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "La 1re phrase est un prompt, pas le titre ; le 1er plan montre le visage puis l'app qui génère des slides, comme la fenêtre « Générer des diapositives » de la miniature"},
+    "ap_boucle_curiosite": {"note": 2, "preuve": "0:27 « l'une d'elles a complètement transformé ma façon de travailler », rappelée à 7:33, résolue entre 10:46 et 11:50 sans être nommée"},
+    "ap_effort_montre": {"note": 1, "preuve": "0:21 « Et j'ai tout testé », carte « 10 nouveautés testées une par une » ; aucun chiffre d'heures ou d'essais"},
+    "ap_setup_progress_payoff": {"note": 1, "preuve": "Chaque démo va de la demande au résultat (slides, maquettes, page de vote), mais en courtes séquences sans but qui progresse sur la vidéo"},
+    "ap_contraste_rythme": {"note": 1, "preuve": "17 et 11 changements de plan les deux premières minutes, puis 3 à 6 sur les démos, 11 à la minute 10 : contraste subi par les démos plus que voulu"},
+    "ap_montrer_sans_son": {"note": 2, "preuve": "Planche intro : le prompt tapé, la slide « Bilan des 6 derniers mois, 1 800 → 5 050 », puis « 10 nouveautés testées une par une »"},
+    "ali_douleur_histoire": {"note": 0, "preuve": "Aucune douleur décrite dans l'intro ; son usage de Claude (0:41) sert de crédit, pas d'histoire"},
+    "ali_coeur_unique": {"note": 1, "preuve": "12:04 deux messages : Claude crée des documents qu'on retravaille, et il travaille sans toi"},
+    "alx_pont": {"note": 1, "preuve": "Contexte (0:31), preuve par son métier (0:41) et plan en trois temps (0:59) comme un pont, mais ouverts par une démo et une boucle"},
+    "alx_pull_paint_point": {"note": 1, "preuve": "Paint et point presque partout (son vrai travail) ; le pull est rare, sauf pour le terminal (8:13) et le cloud (10:26)"},
+    "alx_nom_idee": {"note": 1, "preuve": "Les parties ont un nom (« Claude travaille pour toi », « Ton système te suit ») ; les points portent le nom des fonctions"},
+    "alx_phrase_finale": {"note": 1, "preuve": "5:17 « l'artefact, ça devient vraiment un vrai petit programme » ; rare ailleurs"},
+    "alx_douleur_reve": {"note": 0, "preuve": "Titre en jargon d'actu : le nom de l'app et « nouveautés », ni douleur ni désir"},
+    "alx_cta_tot": {"note": 2, "preuve": "1:11 le guide gratuit des 10 cas, avec le prompt exact, lien en description"},
+    "ed_intro_courte": {"note": 0, "preuve": "1er point à 1:21, après démo, contexte, parcours perso, plan et ressource"},
+    "ed_hook": {"note": 1, "preuve": "0:31 « tout le monde a parlé des nouveaux modèles », pendant que l'app changeait : un contraste, pas un hook net des trois types"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "La preuve par la démo est constante, les consignes parfois ; le problème n'est posé que pour Cowork, le terminal et le cloud"},
+    "ed_tension_relancee": {"note": 1, "preuve": "Transitions par annonce (« La troisième partie », « Il reste encore deux choses ») ; une seule question (8:11)"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "11:42 il jonglait entre Obsidian, VS Code et Claude Code : une anecdote courte"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "Le système de commentaires est réexpliqué pour les slides, les docs et le design (« exactement le même principe »)"},
+    "ed_niveau_simple": {"note": 2, "preuve": "4:27 artefact « une sorte de page HTML », 8:45 l'API expliquée, 11:39 le harness défini"},
+    "tous_video_suivante": {"note": 2, "preuve": "12:45 la masterclass AIOS, avec la raison : tu as vu mon arborescence et mon contexte"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Titre d'actu sobre « <Outil> a changé : <N> nouveautés », miniature en question « LE NOUVEAU CLAUDE ? » avec deux fonctions concrètes à l'écran.",
+    "intro_structure": "La démo ouvre la vidéo (un bilan de chaîne en slides), mais la courbe perd 7 points sur le contexte des nouveaux modèles et le parcours perso, avant le 1er point à 1:21.",
+    "habillage": "Captures plein écran, visage en vignette, étiquette jaune qui nomme ce qu'on voit ; un compteur 01 à 10 sert de plan.",
+    "idee_pour_nous": "Sur une actu, garder la démo d'abord et couper le contexte et le parcours perso pour arriver au 1er point avant 30 s.",
+    "objectif": "vues"
+  }
+}

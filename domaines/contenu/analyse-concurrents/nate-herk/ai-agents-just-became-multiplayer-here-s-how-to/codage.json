@@ -1,0 +1,163 @@
+{
+  "video_id": "KZiF2J83zaY",
+  "chaine": "nate-herk",
+  "titre": "AI Agents Just Became Multiplayer. Here's How to Build Them.",
+  "codeur": "agent nate-herk",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "actu",
+    "format_secondaire": "tuto",
+    "sujet": "Kylon, un espace façon Slack où humains et agents (dont ses abonnements Claude Code et Codex) travaillent ensemble ; vidéo sponsorisée",
+    "outils": ["Kylon", "Claude Code", "Codex", "ClickUp", "Gmail"],
+    "niveau": "intermediaire",
+    "objectif_probable": "vente"
+  },
+  "titre": {
+    "attente_au_clic": "Découvrir la nouvelle génération d'agents IA, partagés entre plusieurs personnes (avant-après), et savoir la mettre en place.",
+    "schema": "<Sujet> Just Became <Nouveauté>. Here's How to Build Them.",
+    "promesse": "Construire des agents IA qu'une équipe entière utilise ensemble",
+    "audace": "timide",
+    "registre": "jargon",
+    "briques": ["resultat"],
+    "marqueurs": ["nouveaute"],
+    "nom_outil": false
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "grand sourire",
+    "regard": "camera",
+    "texte": "AI Agents 2.0 / OLD / NEW",
+    "texte_mots": 5,
+    "repete_titre": "partiel",
+    "elements": ["texte « AI Agents » et « 2.0 » sur pastille cyan", "écran d'ordinateur avec schéma avant-après : OLD (une personne, Claude, Gmail, Slack, Drive) contre NEW (réseau d'humains et d'agents)", "visage de Nate à droite"],
+    "nb_elements": 3,
+    "fond": "mur gris foncé",
+    "couleurs": ["gris", "blanc", "cyan", "rouge", "vert", "orange Claude"],
+    "curiosity_gap": "transformation",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "So, right here you can see I have this sort of like Slack style interface",
+    "premiere_phrase_reprend_titre": "non",
+    "premier_plan": "Capture de Kylon (canal AIS Media, conversation avec l'agent Herk) sur fond bleu-vert, Nate en vignette à gauche",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": ["demo-d-abord", "pont"],
+    "preuve": {
+      "type": "resultat-montre",
+      "seconde": 3,
+      "description": "Nate, Cody et Aiden parlent au même agent dans un canal ; les agents se répondent entre eux (0:55) et ont construit un dashboard"
+    },
+    "annonce_plan": {"presente": false, "nb_points": null, "a_l_ecran": false},
+    "boucle_vers_la_fin": {
+      "presente": false,
+      "citation": "",
+      "seconde_resolution": null,
+      "tenue": null
+    },
+    "seconde_premier_point": 77,
+    "attente_tenue": "partiel",
+    "attente_note": "La démo d'ouverture montre bien humains et agents ensemble. Mais « how to build them » veut dire s'inscrire à Kylon : vidéo sponsorisée, dite à 3:01, et les commentaires les plus aimés le reprochent (« 22 minute infomercial »)."
+  },
+  "structure": {
+    "modele": "mixte",
+    "segments": [
+      {"debut": 0, "fin": 77, "titre": "Humans and Agents in One Workspace", "role": "intro", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 77, "fin": 180, "titre": "Single Player vs Multiplayer AI", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 180, "fin": 241, "titre": "Why I Tried Kylon", "role": "sponsor", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 241, "fin": 329, "titre": "Moving a Team to AI Native", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 329, "fin": 568, "titre": "AIS Instagram Room Example", "role": "demo", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 568, "fin": 775, "titre": "Fresh Workspace Setup", "role": "demo", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": true},
+      {"debut": 775, "fin": 990, "titre": "Bring Your Own Claude Code and Codex", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 990, "fin": 1257, "titre": "How to Get Started With Your Team", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 1257, "fin": 1344, "titre": "Final Thoughts", "role": "fin", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 77, "type": "annonce-suite", "citation": "today what I wanted to dive into was how you can actually create a team of agents and humans"},
+      {"seconde": 178, "type": "annonce-suite", "citation": "that's why today I'm going to show you guys this new tool called Kylon"},
+      {"seconde": 265, "type": "annonce-suite", "citation": "I'm going to open up a completely fresh account and just show you what the setup looks like"},
+      {"seconde": 568, "type": "annonce-suite", "citation": "let's talk a little bit more about some of the technical details"},
+      {"seconde": 775, "type": "annonce-suite", "citation": "what I think is the coolest part about all this is the fact that you can bring in your subscriptions"},
+      {"seconde": 990, "type": "question-spectateur", "citation": "So how do I actually imagine that you get started with all this kind of stuff?"},
+      {"seconde": 1004, "type": "question-spectateur", "citation": "Have you ever thought to yourself, \"Wow, my AIOS knows me so well."},
+      {"seconde": 1257, "type": "question-spectateur", "citation": "is it anything that we couldn't have done beforehand? No."}
+    ],
+    "histoires": [
+      {"seconde": 181, "acte": "anecdote", "resume": "Kylon l'a contacté ; il a hésité, surtout sur le prix, puis l'équipe a répondu à ses objections"},
+      {"seconde": 1074, "acte": "anecdote", "resume": "Dans ClickUp, les tâches finies ne sont pas cochées : son AIOS croit que Cody a fait 1 tâche sur 8 au lieu de 4. D'où le suivi des engagements dans Kylon"},
+      {"seconde": 1264, "acte": "perso-passe", "resume": "Il a déjà construit ce genre d'agents partagés dans ClickUp : ça marchait, mais avec beaucoup plus de bricolage"}
+    ],
+    "payoffs": [
+      {"seconde": 3, "resume": "Trois humains et plusieurs agents dans le même canal ; les agents collaborent sans lui"},
+      {"seconde": 463, "resume": "Une automatisation toutes les 6 heures publie des carrousels Instagram à la marque AIS"},
+      {"seconde": 941, "resume": "Son abonnement Claude Code est branché comme agent et ne consomme pas de crédits Kylon"},
+      {"seconde": 1074, "resume": "Le suivi des engagements de la semaine, avec un point quotidien de l'agent Herk"}
+    ],
+    "premier_payoff_seconde": 3,
+    "jargon": 2,
+    "repetitions": 1,
+    "test_du_tweet": "Kylon réunit humains et agents dans un espace façon Slack : on y branche ses abonnements Claude Code et Codex, avec apps et automatisations par canal. Démo de l'équipe de Nate, installation, crédits, et un conseil : commencer par une seule équipe. Vidéo sponsorisée."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine ; en vignette à gauche pendant les captures", "decor": "bureau, étagères avec trophées et plantes, néon AIS, micro sur bras"},
+    "parts": {"face": 40, "ecran": 52, "motion": 8, "broll": 0},
+    "textes_ecran": "rares",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["curseur-surligne"],
+    "charte": "Captures posées sur un fond bleu-vert dégradé, vignette du visage à gauche, curseur jaune ; schémas animés sur fond bleu nuit (Your personal AI OS, Team AI OS). La miniature, gris et cyan avec rouge et vert, ne reprend pas ce fond.",
+    "rythme": "regulier",
+    "notes": "Alternance simple : l'outil à l'écran avec la vignette, puis face caméra plein cadre pour expliquer. Trois schémas animés seulement, pour le passage du solo à l'équipe."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 181, "type": "sponsor", "cible": "Kylon, présenté comme sponsor", "amene_par": "transition", "citation": "full transparency, Kylon did approach me and wanted me to make a video"},
+      {"seconde": 1103, "type": "autre", "cible": "être invité dans l'émission Humanly Possible", "amene_par": "pendant-demo", "citation": "So if you want to be featured on the show, stay tuned."},
+      {"seconde": 1299, "type": "sponsor", "cible": "essayer Kylon (50 $ de réduction en description)", "amene_par": "fin", "citation": "get in here, test out Kylon, let me know what you think"},
+      {"seconde": 1336, "type": "like-commentaire", "cible": "liker la vidéo", "amene_par": "fin", "citation": "And if you did, please give it a like."}
+    ],
+    "sponsor": {"present": true, "nom": "Kylon", "debut": 0, "duree": 1344, "forme": "integre-a-la-demo"},
+    "liens_description": {"sponsor": 1, "communaute-payante": 1, "communaute-gratuite": 1, "affiliation": 2, "reseaux": 3},
+    "commentaire_epingle": {"texte": "50 $ de réduction sur Kylon, Glaido offert un mois, ressources gratuites sur Skool", "type": "sponsor"},
+    "recap_final": false,
+    "derniere_phrase": "And I'll see you on the next one. Thanks everyone.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["une pub pour un abonnement de plus", "Buzz ferait la même chose gratuitement", "réunir Claude Code et Codex dans un même espace plaît", "le prix des crédits"],
+    "demandes": ["que choisir entre Buzz, Paperclip et Kylon", "inviter GrokBot comme agent principal", "la même chose dans Microsoft Teams", "pourquoi pas Claude Tag"],
+    "critiques": ["« Youtube is now full of people advertising subscription slop » (40 likes)", "« 22 minute infomercial » (17 likes)", "l'outil le moins utile montré sur la chaîne", "90 crédits gratuits qui ne vont pas loin, plan à 50 $"],
+    "reprises": ["« multiplayer » repris (« The multiplayer shift is real »)", "« Nate make bank, Kylon drain my bank »"],
+    "signal_promesse": "mixte"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 0, "preuve": "1re phrase décrit l'interface, pas le titre ; 1er plan = capture de l'outil, la miniature montre un schéma avant-après"},
+    "ap_boucle_curiosite": {"note": 0, "preuve": "Aucune question ouverte dans l'intro et résolue plus tard"},
+    "ap_effort_montre": {"note": 0, "preuve": "Aucun temps ni test dit dans l'intro ; l'usage par l'équipe n'est raconté qu'à 5:03"},
+    "ap_setup_progress_payoff": {"note": 1, "preuve": "Salle Instagram : brief, accès, automatisation, carrousel publié (5:30 à 8:00) ; le reste montre sans construire"},
+    "ap_contraste_rythme": {"note": 1, "preuve": "De 0 à 10 changements de plan par minute, sans passage nettement plus vif ou plus lent"},
+    "ap_montrer_sans_son": {"note": 1, "preuve": "On lit une messagerie avec des agents dans la liste des membres (Aiden's Claude, Aiden's Codex) ; le multijoueur reste flou sans le son"},
+    "ali_douleur_histoire": {"note": 1, "preuve": "2:27 skills et comptes qui n'appartiennent qu'à soi, travail en double ; aucune histoire perso derrière"},
+    "ali_coeur_unique": {"note": 2, "preuve": "1:23 « the future is multiplayer AI where all of us can collaborate together »"},
+    "alx_pont": {"note": 2, "preuve": "Preuve d'abord (la démo), contexte solo contre multijoueur à 1:17, outil annoncé à 2:58 ; aucune accroche"},
+    "alx_pull_paint_point": {"note": 1, "preuve": "Complet sur solo contre multijoueur (1:37 « 20 arms and 30 desktops ») ; le reste est démo"},
+    "alx_nom_idee": {"note": 1, "preuve": "« single player » et « multiplayer AI », « Team AI OS » à l'écran ; pas d'autre idée nommée"},
+    "alx_phrase_finale": {"note": 0, "preuve": "Les parties finissent sur « that's pretty cool » ou une annonce, jamais sur une phrase citable"},
+    "alx_douleur_reve": {"note": 0, "preuve": "Le titre porte la technique (agents multijoueurs), sans douleur ni désir"},
+    "alx_cta_tot": {"note": 0, "preuve": "Aucune offre de la chaîne dans la vidéo ; Kylon (2:58) est le sponsor, pas l'offre de Nate"},
+    "ed_intro_courte": {"note": 0, "preuve": "77 secondes de démo avant de dire de quoi parle la vidéo (1:17)"},
+    "ed_hook": {"note": 0, "preuve": "Ouverture sur une description de l'interface, sans dissonance, question ni fait marquant"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "Problème posé à 2:27, preuve par la démo, consignes à l'installation ; pas point par point"},
+    "ed_tension_relancee": {"note": 1, "preuve": "16:30 « So how do I actually imagine that you get started » ; ailleurs des annonces simples"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "17:54 les tâches ClickUp non cochées : une anecdote, pas une histoire"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "« Slack + ClickUp + Claude Code » redit à 0:22 et 9:17 ; « pretty cool » et « like I said » reviennent"},
+    "ed_niveau_simple": {"note": 1, "preuve": "11:45 la clé API expliquée (« like your password ») ; harness, agentic loop, OAuth et VPS ne le sont pas"},
+    "tous_video_suivante": {"note": 0, "preuve": "« I'll see you on the next one », sans vidéo précise"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Le titre vend un changement d'époque et tait le sponsor : « <Sujet> Just Became <Nouveauté>. Here's How to Build Them. » La miniature le dit en avant-après (OLD/NEW, 2.0). Premier titre, « I Built a Team of AI Agents AND Humans That Work Together », changé au bout d'une heure.",
+    "intro_structure": "Démo d'abord : l'équipe et les agents dans le même canal dès 0:03, puis le concept solo contre multijoueur, puis le sponsor dit franchement à 3:01. Ensuite démo, installation et conseils de déploiement.",
+    "habillage": "Capture sur fond bleu-vert avec vignette du visage, face caméra plein cadre pour les idées, trois schémas animés pour le concept.",
+    "idee_pour_nous": "Montrer notre vrai usage d'agents partagés en équipe parle aux entreprises ; mais si l'outil est payant et a un équivalent gratuit, le dire et comparer, sinon les commentaires se retournent.",
+    "objectif": "consulting"
+  }
+}

@@ -4,7 +4,7 @@ resume: Ton AIOS oublie, se contredit ou travaille mal ? Voici comment identifie
 statut: publie
 domaine: contenu
 cree: 2026-09-22
-maj: 2026-10-22
+maj: 2026-10-25
 liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, l-aios-c-est-quoi-explication-en-3-minutes-26-07.md, 3minutes-pour-comprendre-les-claude-skills-26-04.md]
 ---
 # Pourquoi ton AIOS est malade (et comment le soigner)
@@ -17,23 +17,23 @@ liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, l-aios-c-est-quoi-
 
 ## Stats
 
-YouTube Analytics, données jusqu'au 2026-10-20. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
+YouTube Analytics, données jusqu'au 2026-10-22. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
 
 | | 7 premiers jours | 30 premiers jours | Depuis la sortie |
 |---|---|---|---|
-| Vues | 377 | en cours | 531 |
-| Vues engagées | 150 | en cours | 226 |
-| Heures regardées | 8,9 | en cours | 15,1 |
-| Abonnés gagnés | 2 | en cours | 3 |
-| Revenus estimés | 2,08 $ | en cours | 2,97 $ |
-| Durée moyenne regardée | | | 3 min 57 s (27,0 %) |
+| Vues | 377 | 511 | 529 |
+| Vues engagées | 150 | 219 | 226 |
+| Heures regardées | 8,9 | 14,2 | 15,2 |
+| Abonnés gagnés | 2 | 3 | 3 |
+| Revenus estimés | 2,08 $ | 2,96 $ | 2,97 $ |
+| Durée moyenne regardée | | | 3 min 59 s (27,2 %) |
 | J'aime · commentaires | | | 8 · 2 |
 
 ## Liens
 
-- Cite : [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
-- Cite : [2026-07-18-l-aios-c-est-quoi-explication-en-3-minutes](l-aios-c-est-quoi-explication-en-3-minutes-26-07.md)
-- Cite : [2026-04-05-3minutes-pour-comprendre-les-claude-skills](3minutes-pour-comprendre-les-claude-skills-26-04.md)
+- Cite : [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
+- Cite : [l-aios-c-est-quoi-explication-en-3-minutes-26-07](l-aios-c-est-quoi-explication-en-3-minutes-26-07.md)
+- Cite : [3minutes-pour-comprendre-les-claude-skills-26-04](3minutes-pour-comprendre-les-claude-skills-26-04.md)
 - Description : https://www.thomrichard.com/atelier-aios
 - Description : https://www.skool.com/club-smart/about
 - Description : https://clubsmart.s.gy/hub-newsletter

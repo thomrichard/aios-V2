@@ -1,0 +1,189 @@
+{
+ "id": "bvGptCLDhyo",
+ "url": "https://www.youtube.com/watch?v=bvGptCLDhyo",
+ "chaine": "nate-herk",
+ "titre": "I Built Another Andrej Karpathy Using Claude",
+ "titre_ytdlp": "I Built Another Andrej Karpathy Using Claude",
+ "publie": "2026-10-05T12:43:22Z",
+ "duree_s": 645,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "NzJg-L24A-MjkKIDbs_gvu3hZIk",
+  "id": "bvGptCLDhyo",
+  "snippet": {
+   "publishedAt": "2026-10-05T12:43:22Z",
+   "channelId": "UC2ojq-nuP8ceeHqiroeKhBA",
+   "title": "I Built Another Andrej Karpathy Using Claude",
+   "description": "FREE AI OS Template: https://app.aiautomationsociety.ai/optin/ai-os/?utm_source=youtube&utm_medium=organic&utm_content=claude-karpathy-agent&sl=yt_claude-karpathy-agent\nMy playbook for growing a $1M AI agency: https://app.aiautomationsociety.ai/opaa-ads-optin\nMy FREE resources: https://www.skool.com/ai-automation-society/about?el=I-built-another-andrej-karpathy\n\nMy Tools💻\nFREE MONTH voice to text: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www.hostinger.com/vps/claude-code-hosting\n\nAndrej Karpathy explains AI better than anyone alive, so I built another Andrej Karpathy using Claude. It's not a voice clone. \n\nIt's a Claude Code agent built from over 700,000 words of his lectures, blogs and posts, and it teaches the way he does. I'll show you the 4 steps to build your own, and once you've done it with Karpathy, you can do it with pretty much any expert you learn from.\n\nSponsorship Inquiries:\n📧 nate@smoothmedia.co\n\nConnect with me:\nhttps://www.linkedin.com/in/nateherkelman/\nhttps://x.com/nateherk\nhttps://www.instagram.com/nateherk/\n\nTimestamps:\n00:00 - Karpathy's brain\n00:18 - Who is he?\n01:07 - Why bother?\n02:47 - 700K words\n03:50 - His own wiki\n05:37 - 7 rules\n06:42 - Mini Karpathy\n07:38 - Run it first\n08:48 - Would it ship?",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/bvGptCLDhyo/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/bvGptCLDhyo/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/bvGptCLDhyo/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/bvGptCLDhyo/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/bvGptCLDhyo/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    }
+   },
+   "channelTitle": "Nate Herk | AI Automation",
+   "tags": [
+    "I Built Another Andrej Karpathy using Claude",
+    "Nate Herk",
+    "Karpathy agent",
+    "clone an expert",
+    "Andrej Karpathy",
+    "Claude Code",
+    "AI agents",
+    "LLM wiki",
+    "LLM knowledge base",
+    "subagents",
+    "Claude Code hooks",
+    "agent skills",
+    "how to build a custom AI agent",
+    "AI second brain",
+    "Obsidian second brain",
+    "turn an expert into an agent",
+    "learn machine learning",
+    "Karpathy teaching method",
+    "byte pair tokenizer",
+    "Eureka Labs",
+    "AIOS",
+    "verification loop",
+    "Claude Code tutorial 2026",
+    "automation workflows"
+   ],
+   "categoryId": "1",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "en",
+   "localized": {
+    "title": "I Built Another Andrej Karpathy Using Claude",
+    "description": "FREE AI OS Template: https://app.aiautomationsociety.ai/optin/ai-os/?utm_source=youtube&utm_medium=organic&utm_content=claude-karpathy-agent&sl=yt_claude-karpathy-agent\nMy playbook for growing a $1M AI agency: https://app.aiautomationsociety.ai/opaa-ads-optin\nMy FREE resources: https://www.skool.com/ai-automation-society/about?el=I-built-another-andrej-karpathy\n\nMy Tools💻\nFREE MONTH voice to text: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www.hostinger.com/vps/claude-code-hosting\n\nAndrej Karpathy explains AI better than anyone alive, so I built another Andrej Karpathy using Claude. It's not a voice clone. \n\nIt's a Claude Code agent built from over 700,000 words of his lectures, blogs and posts, and it teaches the way he does. I'll show you the 4 steps to build your own, and once you've done it with Karpathy, you can do it with pretty much any expert you learn from.\n\nSponsorship Inquiries:\n📧 nate@smoothmedia.co\n\nConnect with me:\nhttps://www.linkedin.com/in/nateherkelman/\nhttps://x.com/nateherk\nhttps://www.instagram.com/nateherk/\n\nTimestamps:\n00:00 - Karpathy's brain\n00:18 - Who is he?\n01:07 - Why bother?\n02:47 - 700K words\n03:50 - His own wiki\n05:37 - 7 rules\n06:42 - Mini Karpathy\n07:38 - Run it first\n08:48 - Would it ship?"
+   },
+   "defaultAudioLanguage": "en"
+  },
+  "contentDetails": {
+   "duration": "PT10M45S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": true,
+   "contentRating": {},
+   "projection": "rectangular"
+  },
+  "statistics": {
+   "viewCount": "75205",
+   "likeCount": "808",
+   "favoriteCount": "0",
+   "commentCount": "46"
+  }
+ },
+ "ytdlp": {
+  "id": "bvGptCLDhyo",
+  "title": "I Built Another Andrej Karpathy Using Claude",
+  "description": "FREE AI OS Template: https://app.aiautomationsociety.ai/optin/ai-os/?utm_source=youtube&utm_medium=organic&utm_content=claude-karpathy-agent&sl=yt_claude-karpathy-agent\nMy playbook for growing a $1M AI agency: https://app.aiautomationsociety.ai/opaa-ads-optin\nMy FREE resources: https://www.skool.com/ai-automation-society/about?el=I-built-another-andrej-karpathy\n\nMy Tools💻\nFREE MONTH voice to text: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www.hostinger.com/vps/claude-code-hosting\n\nAndrej Karpathy explains AI better than anyone alive, so I built another Andrej Karpathy using Claude. It's not a voice clone. \n\nIt's a Claude Code agent built from over 700,000 words of his lectures, blogs and posts, and it teaches the way he does. I'll show you the 4 steps to build your own, and once you've done it with Karpathy, you can do it with pretty much any expert you learn from.\n\nSponsorship Inquiries:\n📧 nate@smoothmedia.co\n\nConnect with me:\nhttps://www.linkedin.com/in/nateherkelman/\nhttps://x.com/nateherk\nhttps://www.instagram.com/nateherk/\n\nTimestamps:\n00:00 - Karpathy's brain\n00:18 - Who is he?\n01:07 - Why bother?\n02:47 - 700K words\n03:50 - His own wiki\n05:37 - 7 rules\n06:42 - Mini Karpathy\n07:38 - Run it first\n08:48 - Would it ship?",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "Karpathy's brain",
+    "end_time": 18
+   },
+   {
+    "start_time": 18,
+    "title": "Who is he?",
+    "end_time": 67
+   },
+   {
+    "start_time": 67,
+    "title": "Why bother?",
+    "end_time": 167
+   },
+   {
+    "start_time": 167,
+    "title": "700K words",
+    "end_time": 230
+   },
+   {
+    "start_time": 230,
+    "title": "His own wiki",
+    "end_time": 337
+   },
+   {
+    "start_time": 337,
+    "title": "7 rules",
+    "end_time": 402
+   },
+   {
+    "start_time": 402,
+    "title": "Mini Karpathy",
+    "end_time": 458
+   },
+   {
+    "start_time": 458,
+    "title": "Run it first",
+    "end_time": 528
+   },
+   {
+    "start_time": 528,
+    "title": "Would it ship?",
+    "end_time": 645
+   }
+  ],
+  "tags": [
+   "I Built Another Andrej Karpathy using Claude",
+   "Nate Herk",
+   "Karpathy agent",
+   "clone an expert",
+   "Andrej Karpathy",
+   "Claude Code",
+   "AI agents",
+   "LLM wiki",
+   "LLM knowledge base",
+   "subagents",
+   "Claude Code hooks",
+   "agent skills",
+   "how to build a custom AI agent",
+   "AI second brain",
+   "Obsidian second brain",
+   "turn an expert into an agent",
+   "learn machine learning",
+   "Karpathy teaching method",
+   "byte pair tokenizer",
+   "Eureka Labs",
+   "AIOS",
+   "verification loop",
+   "Claude Code tutorial 2026",
+   "automation workflows"
+  ],
+  "categories": [
+   "Film & Animation"
+  ],
+  "heatmap": null,
+  "upload_date": "20261005",
+  "duration": 645,
+  "channel": "Nate Herk | AI Automation",
+  "channel_id": "UC2ojq-nuP8ceeHqiroeKhBA",
+  "channel_follower_count": 1090000,
+  "thumbnail": "https://i.ytimg.com/vi/bvGptCLDhyo/maxresdefault.jpg",
+  "view_count": 75205,
+  "like_count": 808,
+  "comment_count": 31
+ }
+}

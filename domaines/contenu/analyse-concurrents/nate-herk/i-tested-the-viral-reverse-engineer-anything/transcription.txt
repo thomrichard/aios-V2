@@ -1,0 +1,189 @@
+[00:00] So, this GitHub repo right here, reverse-engineer-anything, has been absolutely blowing up.
+[00:03] Matthew Berman himself said software is done.
+[00:05] Now, he's kind of joking a little bit.
+[00:06] This narrative has been around for, you know, over a year since vibe coding has really taken off, but there is some truth to it.
+[00:12] Because the idea of reverse-engineer-anything is that you see a feature you like on some sort of app or software that already exists, and then you can have your agents, using the frameworks inside of here, understand how that functionality
+[00:22] works, and then actually just go ahead and recreate it.
+[00:24] So, today I wanted to quickly talk about how this actually works and why I don't think this is anything really that new.
+[00:29] And because of that, how you can use this and also the right mindset to be able to actually build things way better.
+[00:35] So, I've been playing around with this REA repo, and I've built games, I've built software, I've built different tools and apps, and just tested out a bunch of things, and it is very impressive.
+[00:44] But as I was going through and testing it out and using it, I realized that it's not anything new, and we have probably been doing this for a long time.
+[00:50] I definitely have been doing this for a long time.
+[00:52] The way that I think about it is that AI is not really that creative.
+[00:54] It can't really think outside the box.
+[00:56] But if you give it a very clear vision, it can execute on that for you really well.
+[01:00] And if we take a look at some examples that I've actually built a while before this GitHub repo existed, you'll see what I mean.
+[01:06] On the left, we have my human-edited Instagram Reels.
+[01:08] I'm going to mute this real quick so I can actually play it, but you can see the vibe, right?
+[01:12] You've got B-roll, you've got different font colors, you've got shimmers, you've got different types of animations.
+[01:16] And what I did in order to make a skill that now edits my Instagram Reels is I had it go watch like 30 of my best-performing Instagram Reels.
+[01:23] And now we get the style on the right, which looks pretty much identical, the same sorts of different colors and fonts and vibe and animations and all of this kind of stuff, and now this just lives inside of
+[01:32] a skill.
+[01:33] And the point is, what I had to do here was I couldn't say, "Hey, I want you to build me an Instagram editing, you know, skill that has this sort of vibe and does these sort of transitions." No,
+[01:42] what I did is I said, "Hey, look at these videos, analyze all of these frame by frame, and understand what's going on under the hood." And that's essentially me decompiling my human-edited Reel style.
+[01:51] Here's another example with a motion added.
+[01:53] On the left was one from Jordan Watkins, and you can see that it's really, really well done.
+[01:57] And he said, "I'd love to see AI try and recreate this." So, I was like, "Huh, let's see what I can do." So, I downloaded the video, gave it to Opus, and said, "Hey, analyze this frame by frame,
+[02:04] understand what's going on, and how it works, and why it works like this, and then build me a skill around it, and show me that you can edit a video similar to it." The one on the left is
+[02:11] still better with motion design and sound design.
+[02:13] It still is a little bit better.
+[02:14] But, the thing is, Opus could not have thought of this.
+[02:16] This is such a creative design that I don't think Claude or any AI could have created it.
+[02:22] But, because I'm showing it, "This is what I want, analyze it, now build it for me." It was able to do a much better job.
+[02:27] And when I've talked to you guys about how to build the best skills, this is exactly what I preach.
+[02:31] I preach reverse engineering the output.
+[02:33] If you want to build a Friday report, have it look at five examples of good Friday reports, because now it knows exactly what you want.
+[02:39] I've talked a lot about how communicating your intent has to be specific.
+[02:43] If you give an agent a generic goal, it's going to give you a generic result.
+[02:46] So, this whole idea of reverse engineering anything, and having it specifically look at an app that you want to recreate, and then copying the features from it, that is way more specific.
+[02:56] Essentially, what you've done is you've given the agent a very, very specific PRD.
+[02:59] But, instead of you having to type out the exact PRD with all the specs, you're just saying, "Look at the app, that's your PRD." I've done this with landing pages, you know, taking elements or animations or designs from
+[03:11] other landing pages.
+[03:11] Here is an example of one that I did with Glide.
+[03:13] I've done this with apps, right?
+[03:15] Like, you can see right here, I've got this thing right here, which is basically the Loom clone that I made from using this repo, right?
+[03:22] Like, I had it look at Loom, I had it understand how it can work with like the different bubbles.
+[03:26] You can see it does the recording countdown.
+[03:28] It might not work because my face cam is recording right right somewhere else, so I'll play a clip real quick.
+[03:33] All right, so I just wanted to test out how this actually works to make sure that this is like a decent software.
+[03:40] So, I'm going to see if I can pause this.
+[03:42] And now we can go ahead and keep on rolling.
+[03:44] I can move this thing around.
+[03:46] I can also make it smaller or larger while I'm recording.
+[03:48] That's very nice.
+[03:49] And let's go ahead and stop and see what happens.
+[03:51] But, the thing that's important to realize is that we didn't clone Loom.
+[03:54] This is a very different looking app.
+[03:55] We didn't clone like all of the exact UI and the design elements.
+[03:59] We cloned the functionality.
+[04:01] We understood how does the little bubble work?
+[04:03] How can you move it around?
+[04:04] How can you change the window that you're recording, right?
+[04:06] Like we talked about this sort of stuff and we had it analyze that sort of stuff.
+[04:10] Loom obviously records and stores your things in the cloud and Loom's cloud, but this one is just local.
+[04:15] So it's storing these files in my own folder inside of this app called Herc Recorder.
+[04:19] I also pointed this at Sandcastles and had it inspect the functionality and understand and research how it works and what it does and then it gave me basically my own version of Sandcastles and I just had to connect
+[04:29] my API key.
+[04:30] So it helps me analyze Instagram content and analyze my own content.
+[04:34] And you can also see this is true with something like our AI SE Eval Studio, which lets us actually eval our automations.
+[04:39] We took a lot of inspiration here from Langfuse and we understood how they work, how they show things, how they run the things and now we have our own version right here.
+[04:46] And it's not a carbon copy of course, but we had it look at and grab some of the best core features and how they work and why.
+[04:54] Real quick guys, I've got this completely free website design skill that I'm giving away.
+[04:57] I use this for every single website that I build including our AI Automation Society site, which I think is pretty slick and I absolutely love this website.
+[05:05] It's called Scrollcraft and it understands things like scroll driven animations and layering, but also it has things in there like taste, typography, spacing, depth.
+[05:13] It's just a really good website design skill in general and it's completely free.
+[05:17] So the link for this will be down in the description, but let's get back to the video.
+[05:20] So I guess the point I'm trying to make there is reverse engineering has been around for a long long time, but the reason why this repo is blowing up is because this repo gives your agents a very practical
+[05:29] and thought-through framework for decompiling and iterating in order to actually create what you want to create.
+[05:35] And if you haven't been using your agents in that way where you show them the end goal and then help them sort of work backwards to get there, to build the skills, to give you a better output, then
+[05:44] you definitely should start thinking about this not just when you're trying to build apps or software, but when you're just driving your day-to-day and you're building skills.
+[05:51] So, let me just break down real quick, real simply, what actually this is and how it works.
+[05:55] So, REA, reverse engineer anything.
+[05:58] It helps your AI agent study something and then help you build it.
+[06:01] So, let's take a look at like a recipe, a bakery example.
+[06:05] So, let's say the bakery has a cake that you love.
+[06:08] You order every week and you love it.
+[06:09] And you wanted to reverse engineer the cake to get the recipe because the recipe is locked away, it's the the bakery's IP and they don't give it away.
+[06:16] So, you buy a cake, the bakery ships the end result to you, and they use the recipe to make that, obviously.
+[06:21] Now, you inside of your kitchen, you can actually, you know, tear open the cake, you can taste it, you can try to look at it under microscope, and you're essentially trying to reverse engineer the recipe from that cake.
+[06:31] And this is the process of decompiling, which means you're actually tasting it, you're inspecting it, you're trying to break it down to figure out what are, you know, the different code blocks and what is the actual letters in
+[06:41] here that make the cake.
+[06:43] And there's where you get sort of like your own sort of trial and error, where you're building and you're comparing and you're trying to iterate on it until you hit the end result.
+[06:51] So, what happens is, if we take that example of Loom, you can ask your agent, "Hey, use reverse engineer anything and go figure out how Loom's camera bubble work so we can work that into our own, you know,
+[07:01] screen recording app." Your agent would then inspect the files and inspect the functionality of the app.
+[07:06] It would look through the evidence, it would build its own version, and then you iterate until it basically matches up in terms of functionality.
+[07:11] And like I said, it comes out so well because you're pointing it at an end result.
+[07:14] You're not saying, "Hey, make me a cake." You're saying, "Make me this very specific example of cake that tastes like this with this much density and it has, you know, this type of frosting and this many layers." It's
+[07:24] just way more specific of a request.
+[07:26] So, this whole doc that kind of walks through and explains some of this, I will link in my free school community for completely free if you guys want to grab it, as well as this doc, which just kind
+[07:34] of goes through like how to get the most out of it.
+[07:36] Because what I found after building a bunch of stuff is it's so hard to just say, "Hey, go reverse engineer Loom." It's easier to pick out features.
+[07:43] So, you use Loom for a little bit and maybe it's like, "Okay, I want to build this myself." What are the best features of Loom that I like?
+[07:49] Or, you know, I I want to rebuild my CRM.
+[07:51] What are the features of, you know, Salesforce or whatever I use that I really, really like?
+[07:54] Okay, now we use our agent to go pick out those specific features, investigate them, decompile them, and then bring them over to our own app.
+[08:01] And then what I did kind of for fun is I had Claude code with the reverse engineer anything framework, reverse engineer the reverse engineer anything repo.
+[08:09] To basically help me figure out how it works better so that I can use it better and point my agents at it better and instruct them better with it.
+[08:16] So, here is what we have.
+[08:18] Five main steps that I want you guys to think about when you're using this repo.
+[08:21] Pick a feature, route by build, summary first, seen inferred unknown, and then rebuild and test.
+[08:27] So, we already talked about this one a little bit, right?
+[08:29] Not just pointing at the whole app, but pointing at specific behavior and functionality.
+[08:33] Now, from there, thinking about routing by build, which means what the app is built with, kind of picking the tools for that.
+[08:39] So, once you understand what sort of app or software you're looking at and how it actually exists, then you might be able to change the way or alter the way that the agent thinks about analyzing it to use
+[08:50] the right tools.
+[08:50] And this isn't something that I know off the top of my head.
+[08:53] I would just make sure I'm giving the agent that context of you should be thinking about this sort of stuff when it comes to like the tech stack.
+[08:59] Now, number three is about summary first.
+[09:01] So, what happens is REA will basically analyze the whole app and give you a bit of a summary.
+[09:05] But, the whole analysis for Loom, for example, was over a gigabyte.
+[09:09] So, basically analysis is turned into a shorter summary for Claude to actually fully read through, and it's things like what it works, how this thing does what it does, and what it couldn't yet figure out.
+[09:19] And then what happens is it kind of breaks that down more granularly down to the modules into the traces, but you don't want to have to rerun that entire summary, which is something that you could easily get caught
+[09:27] in the loop of if you're not being careful about how you instruct it because this is already saved locally within this project or somewhere in your files.
+[09:35] Now, this fourth one's really important, which is once it starts to dig through and understand what's going on, Claude should be tagging these as seen, inferred, or unknown.
+[09:44] And these are basically three different categories, meaning seen are things that Claude actually found and were cited.
+[09:50] So, for Loom, 11 custom native add-ons, it found it and it understands how they work.
+[09:55] Inferred is things that, oh, the data and the code kind of points to this being the way that it works, but this is kind of more of a guess.
+[10:01] We don't actually know for a fact.
+[10:03] And the reason why this one's so important is because if you accept some of these guesses and assumptions that Claude might be bringing back, and then you build on top of them as if they're fact, you can get
+[10:13] into some pretty messy situations.
+[10:16] And then of course, we have things that are completely unknown.
+[10:18] REA couldn't see it inside of the native recorder or inside of the the app that you're actually using or looking at.
+[10:24] And so, it's these types of things that you're able to do with this reverse engineering anything framework and repo that if you just natively said, "Hey, Claude, go look at this app, research it, investigate it, and then build
+[10:34] it," that's where there's a big difference on like how professional and and I guess structured this process feels when you use this repo.
+[10:42] And then of course, this is the most important part of any build process is the rebuilding and the testing.
+[10:47] So, now you're taking all these findings that you had grabbed, and then you're building on top of them.
+[10:52] And you're not just building, but you're also going through and you're iterating and you're actually testing these things out.
+[10:56] You're having it run these test cases, you're having it actually process things.
+[11:01] So, it's not just built, but it's actually ran and tested and then iterated on, rather than just, you know, shipping something once because it seems like it's done.
+[11:09] And the last things I want to talk about here is that you should never be copying exact code or assets.
+[11:14] There are definitely some legal limits here when you are deeply inspecting what's going on.
+[11:18] But for the most part, you also have to remember that you're only looking at or Claude code or whatever AI you're using is only looking at things that actually exist already and that you can grab.
+[11:26] Meaning, you know, you're not going to be telling this thing to hack into like Loom's server or to some app and software's like private IP code base.
+[11:34] You probably couldn't even get in there, but you know, you're not going to tell your AI to go hack into it.
+[11:38] You're having it analyze what it can already see in your local files or if you have an API, whatever it may be, it's just inspecting how it already works and what already lives there.
+[11:47] And this whole process of decompiling is something that people are already doing because it's literally there, it's public, it's it's in your your hands.
+[11:53] But humans obviously go through it a lot slower than what an agent would do.
+[11:57] And also, most of the humans out there, I definitely couldn't read through code and read through all these traces and decompile it and then build my own app based on that.
+[12:04] The next thing is that some apps require different types of setup, you know, based on you know, we talked about a little bit earlier on where they actually live and thinking about the text stack and thinking about how
+[12:13] you need to set that up.
+[12:14] And then of course, at the end of the day, the results that you're going to get from this thing are based on the AI model that's actually writing the code and inspecting the code.
+[12:21] So, you can't just assume that oh, because you gave, you know, your AI model this repo, it's just going to build everything magically.
+[12:27] But what I do think is cool about that is let's say, you know, you have the software that you were building with Opus 5.5 and maybe you want to try with Sonnet 5.5 and it wasn't possible earlier.
+[12:37] But now if Sonnet 5.5 has all of this data that has been done based on this investigation, maybe Sonnet 5.5 could build this for you now and you could build this for a lot cheaper than if you were
+[12:46] running Opus the whole time.
+[12:47] So, those were a couple things that I wanted to talk about.
+[12:48] I will link all of this in my free school community and I will drop this repo in the description of this video if you want to check it out.
+[12:54] You could also just Google search for it or go on accident it will probably be the first thing you see.
+[12:57] So anyways, now what I think is interesting about this is a couple things.
+[13:00] When I gave two different coding agents the same prompt, except for one of them used the repo and one of them didn't, the one that didn't use the repo always finished first, but the one that used the repo
+[13:11] finished slower but was much better results.
+[13:14] Because like I said, they were able to use these frameworks inside of the REA repo that understand how to break things down a little bit better.
+[13:21] It's it's this whole REA investigation flow, which is what makes this so popular, I guess.
+[13:27] This thing really is trending quick.
+[13:28] It's got 192k stars.
+[13:30] If I refresh, we're going to go up to what?
+[13:32] 195?
+[13:32] 196k?
+[13:33] And this was probably 30 minutes ago that I last refreshed this.
+[13:36] Now, something else that I think is really interesting is coding agents are just going to get better at this.
+[13:40] Like, I think that this whole idea of reverse engineering, now that this framework has been blowing up on X, like, I wouldn't be shocked if the next version of Opus and Fable and Astra and Soul and the other
+[13:51] models have this baked in a little bit better.
+[13:53] But, anyways, really cool tool.
+[13:55] It definitely helps people that don't come from a formal programming or software engineering background build things that feel a bit more professionally built.
+[14:03] And remember, the concept of reverse engineering isn't anything new.
+[14:06] You've probably been doing it in your workflow without even realizing it.
+[14:09] We're able to just basically give our agents a much more specific PRD without having to go through that painful process of building a PRD because we already have a role model that we're looking at of like, this is
+[14:20] what we want.
+[14:21] Now, let's build it.
+[14:22] So, I hope that that all made sense.
+[14:23] I hope that you can now sort of think about reverse engineering in a different lens, which is it's not just about reverse engineering software apps, it's about reverse engineering processes and skills and things that are actually going on
+[14:35] in your day-to-day or in your business.
+[14:37] Go out there, find someone who's done something really well and proven that they can do it well, and then understand why that worked and how it it applies to your context, to your personal workflows.
+[14:47] So, that was the video for today.
+[14:49] I hope you guys enjoyed and learned something new.
+[14:50] I hope that all made sense.
+[14:51] If it did, please give it a like.
+[14:52] It helps me out a ton.
+[14:53] And as always, I appreciate you guys making it to the end of the video, and I'll see you on the next one.
+[14:57] Thanks, everyone.

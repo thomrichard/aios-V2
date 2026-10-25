@@ -1,0 +1,93 @@
+{
+ "recupere_le": "2026-10-25",
+ "breakout": 9.17,
+ "vph": 94.43,
+ "stats_jour": [
+  {
+   "timestamp": "2026-10-14T15:31:26.511Z",
+   "views": 0,
+   "likes": 0,
+   "comments": 0,
+   "vph": null
+  },
+  {
+   "timestamp": "2026-10-15T00:33:50.544Z",
+   "views": 82270,
+   "likes": 1645,
+   "comments": 70,
+   "vph": 10022
+  },
+  {
+   "timestamp": "2026-10-16T00:32:58.343Z",
+   "views": 417375,
+   "likes": 7198,
+   "comments": 190,
+   "vph": 5403
+  },
+  {
+   "timestamp": "2026-10-17T00:32:14.191Z",
+   "views": 511806,
+   "likes": 8768,
+   "comments": 216,
+   "vph": 2163
+  },
+  {
+   "timestamp": "2026-10-18T00:34:27.708Z",
+   "views": 539786,
+   "likes": 9206,
+   "comments": 231,
+   "vph": 1025
+  },
+  {
+   "timestamp": "2026-10-19T00:39:35.290Z",
+   "views": 553468,
+   "likes": 9453,
+   "comments": 237,
+   "vph": 518.360655737705
+  },
+  {
+   "timestamp": "2026-10-20T00:59:40.744Z",
+   "views": 561634,
+   "likes": 9579,
+   "comments": 241,
+   "vph": 209.5081967213115
+  },
+  {
+   "timestamp": "2026-10-21T00:22:15.742Z",
+   "views": 566722,
+   "likes": 9663,
+   "comments": 244,
+   "vph": 231
+  },
+  {
+   "timestamp": "2026-10-22T00:27:42.240Z",
+   "views": 571209,
+   "likes": 9736,
+   "comments": 244,
+   "vph": 112
+  },
+  {
+   "timestamp": "2026-10-23T00:34:14.129Z",
+   "views": 574144,
+   "likes": 9789,
+   "comments": 245,
+   "vph": 144
+  },
+  {
+   "timestamp": "2026-10-24T00:49:20.070Z",
+   "views": 576757,
+   "likes": 9822,
+   "comments": 246,
+   "vph": 118.06451612903224
+  },
+  {
+   "timestamp": "2026-10-25T00:15:33.269Z",
+   "views": 579131,
+   "likes": 9856,
+   "comments": 249,
+   "vph": 114.09836065573771
+  }
+ ],
+ "changements": [],
+ "ab_tests": []
+}

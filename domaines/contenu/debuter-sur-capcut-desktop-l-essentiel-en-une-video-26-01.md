@@ -4,7 +4,7 @@ resume: Tu débutes sur CapCut Desktop et tu veux réussir tes premiers montages
 statut: publie
 domaine: contenu
 cree: 2026-01-08
-maj: 2026-10-22
+maj: 2026-10-25
 liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md]
 ---
 # Débuter sur CapCut Desktop : l'essentiel en une vidéo
@@ -18,22 +18,22 @@ liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, claude-tutoriel-co
 
 ## Stats
 
-YouTube Analytics, données jusqu'au 2026-10-20. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
+YouTube Analytics, données jusqu'au 2026-10-22. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
 
 | | 7 premiers jours | 30 premiers jours | Depuis la sortie |
 |---|---|---|---|
-| Vues | 62 | 86 | 240 |
-| Vues engagées | 62 | 86 | 234 |
+| Vues | 62 | 86 | 241 |
+| Vues engagées | 62 | 86 | 235 |
 | Heures regardées | 2,8 | 4,5 | 17,0 |
 | Abonnés gagnés | 1 | 2 | 5 |
 | Revenus estimés | 0,00 $ | 0,00 $ | 0,61 $ |
-| Durée moyenne regardée | | | 4 min 21 s (11,6 %) |
+| Durée moyenne regardée | | | 4 min 20 s (11,6 %) |
 | J'aime · commentaires | | | 7 · 0 |
 
 ## Liens
 
-- Cite : [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
-- Cite : [2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
+- Cite : [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
+- Cite : [claude-tutoriel-complet-pour-passer-de-debutant-a-26-05](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
 - Description : https://clubsmart.s.gy/masterclass-aios-catalogue
 - Description : https://clubsmart.s.gy/tuto-claude-catalogue
 - Description : https://www.skool.com/club-smart

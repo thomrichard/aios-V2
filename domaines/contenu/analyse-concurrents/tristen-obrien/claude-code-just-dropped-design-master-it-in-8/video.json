@@ -1,0 +1,687 @@
+{
+ "id": "Fqlc0N1qyMo",
+ "url": "https://www.youtube.com/watch?v=Fqlc0N1qyMo",
+ "chaine": "tristen-obrien",
+ "titre": "Claude Code Just Dropped /Design. (Master it in 8 Minutes).",
+ "titre_ytdlp": "Claude Code Just Dropped /Design. (Master it in 8 Minutes).",
+ "publie": "2026-08-25T13:00:10Z",
+ "duree_s": 483,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "YZYnM-biN_l4xz7W0PCMrGa3ldw",
+  "id": "Fqlc0N1qyMo",
+  "snippet": {
+   "publishedAt": "2026-08-25T13:00:10Z",
+   "channelId": "UCruPFdKtGG8Oz5dvha6WWgA",
+   "title": "Claude Code Just Dropped /Design. (Master it in 8 Minutes).",
+   "description": "👇 FREE — Get my complete Prompt Library + my AI newsletter to stay up to date on everything AI: https://tristenobrien.ai\n\nMobbin — the design reference library I pull layout examples from. This link gets you 20% off: https://mobbin.com/tristen\n\nHiggsfield — the image / video / voice tool I use for real images (affiliate link): https://higgsfield.ai?fpr=tristen15\n\n📚 Buy my book, The Smartest Move 👉 https://tristenobrien.ai/smartest-move/\n\n_____________________\n\nClaude Code just released a new slash command called /design, and it changes the order everything happens in. Instead of building your page and letting you argue with it afterward, it designs first and hands you editable artboards to pick from, so nothing gets coded until you've chosen one. In this video I run it start to finish on a real landing page for a dog grooming shop, show you how to word the prompt so the options actually come back different, and build the one I picked. I also break down when you'd use /design inside Claude Code versus the Claude Design app, because they're good at different things.\n\n_____________________\n\nCHAPTERS\n\n0:00 The command that designs before it builds\n\n0:34 What /design actually is\n\n1:37 The problem it fixes\n\n2:26 How to run it\n\n2:42 Give it a site to look at\n\n3:20 The prompt that gets 3 real options\n\n3:52 Using your own colors and components\n\n4:12 Name the artboard and hit save\n\n4:45 The image problem nobody warns you about\n\n5:09 What Claude actually built\n\n5:49 Why not just use the Claude Design app\n\n6:53 It's still a research preview\n\n7:20 3 things to remember\n\n_____________________\n\nTHE PROMPT FROM THE VIDEO:\n \"/design three landing page directions for Happy Tails, a local dog grooming shop. The only job of this page is getting people to book an appointment. Sections: hero with a book now button, services with pricing, before and after photos, reviews, and a footer with hours, phone, and address. I've attached three screenshots of layouts I like. Use them as direction, not something to copy. Make all three clearly different from each other. No generic card grid, and don't center everything down the middle.\"\n\nPROMPT 2 — THE ONE I USED TO BUILD IT (this one is personal to my project, don't copy it word for word)\n\n\"Okay, I like the wallpapers and panels one. Let's go ahead and build out this whole website. I do want you to change the wallpaper to a better icon of a dog. And we need real images here, so use Higgsfield. I also want a hero that follows my mouse as I move, and you can use my dog Charlie.\"\n\nPROMPT 2 AS A TEMPLATE — SWAP THE BRACKETS FOR YOUR OWN\n\n\"Build out the whole site from the artboard called [artboard name]. Change [the one thing you want different]. Use [your image tool] for the real images. And add [any interaction you want, like a hero that follows the mouse].\"\n\n_____________________\n\nVIDEO NOTES /design is a research preview, so how it works can change. Update Claude Code if you don't see it in the slash menu.\n\nClaude Code can't generate images on its own. Either make them somewhere else and drop them in your project folder, or connect an image tool like Higgsfield or a Nano Banana / Gemini image API.\n\n#claude #claudecode #claudedesign #ai #design #vibecoding #design #claudeai",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/Fqlc0N1qyMo/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/Fqlc0N1qyMo/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/Fqlc0N1qyMo/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/Fqlc0N1qyMo/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/Fqlc0N1qyMo/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    },
+    "uhd": {
+     "url": "https://i.ytimg.com/vi/Fqlc0N1qyMo/uhddefault.jpg",
+     "width": 3840,
+     "height": 2160
+    }
+   },
+   "channelTitle": "Tristen O'Brien",
+   "tags": [
+    "claude code",
+    "claude code tutorial",
+    "claude ai",
+    "claude",
+    "claude design",
+    "claude design tutorial",
+    "claude design claude code",
+    "/design",
+    "claude design website",
+    "claude design agent"
+   ],
+   "categoryId": "28",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "en",
+   "localized": {
+    "title": "Claude Code Just Dropped /Design. (Master it in 8 Minutes).",
+    "description": "👇 FREE — Get my complete Prompt Library + my AI newsletter to stay up to date on everything AI: https://tristenobrien.ai\n\nMobbin — the design reference library I pull layout examples from. This link gets you 20% off: https://mobbin.com/tristen\n\nHiggsfield — the image / video / voice tool I use for real images (affiliate link): https://higgsfield.ai?fpr=tristen15\n\n📚 Buy my book, The Smartest Move 👉 https://tristenobrien.ai/smartest-move/\n\n_____________________\n\nClaude Code just released a new slash command called /design, and it changes the order everything happens in. Instead of building your page and letting you argue with it afterward, it designs first and hands you editable artboards to pick from, so nothing gets coded until you've chosen one. In this video I run it start to finish on a real landing page for a dog grooming shop, show you how to word the prompt so the options actually come back different, and build the one I picked. I also break down when you'd use /design inside Claude Code versus the Claude Design app, because they're good at different things.\n\n_____________________\n\nCHAPTERS\n\n0:00 The command that designs before it builds\n\n0:34 What /design actually is\n\n1:37 The problem it fixes\n\n2:26 How to run it\n\n2:42 Give it a site to look at\n\n3:20 The prompt that gets 3 real options\n\n3:52 Using your own colors and components\n\n4:12 Name the artboard and hit save\n\n4:45 The image problem nobody warns you about\n\n5:09 What Claude actually built\n\n5:49 Why not just use the Claude Design app\n\n6:53 It's still a research preview\n\n7:20 3 things to remember\n\n_____________________\n\nTHE PROMPT FROM THE VIDEO:\n \"/design three landing page directions for Happy Tails, a local dog grooming shop. The only job of this page is getting people to book an appointment. Sections: hero with a book now button, services with pricing, before and after photos, reviews, and a footer with hours, phone, and address. I've attached three screenshots of layouts I like. Use them as direction, not something to copy. Make all three clearly different from each other. No generic card grid, and don't center everything down the middle.\"\n\nPROMPT 2 — THE ONE I USED TO BUILD IT (this one is personal to my project, don't copy it word for word)\n\n\"Okay, I like the wallpapers and panels one. Let's go ahead and build out this whole website. I do want you to change the wallpaper to a better icon of a dog. And we need real images here, so use Higgsfield. I also want a hero that follows my mouse as I move, and you can use my dog Charlie.\"\n\nPROMPT 2 AS A TEMPLATE — SWAP THE BRACKETS FOR YOUR OWN\n\n\"Build out the whole site from the artboard called [artboard name]. Change [the one thing you want different]. Use [your image tool] for the real images. And add [any interaction you want, like a hero that follows the mouse].\"\n\n_____________________\n\nVIDEO NOTES /design is a research preview, so how it works can change. Update Claude Code if you don't see it in the slash menu.\n\nClaude Code can't generate images on its own. Either make them somewhere else and drop them in your project folder, or connect an image tool like Higgsfield or a Nano Banana / Gemini image API.\n\n#claude #claudecode #claudedesign #ai #design #vibecoding #design #claudeai"
+   },
+   "defaultAudioLanguage": "en-US"
+  },
+  "contentDetails": {
+   "duration": "PT8M3S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": true,
+   "contentRating": {},
+   "projection": "rectangular"
+  },
+  "statistics": {
+   "viewCount": "162792",
+   "likeCount": "2771",
+   "favoriteCount": "0",
+   "commentCount": "82"
+  }
+ },
+ "ytdlp": {
+  "id": "Fqlc0N1qyMo",
+  "title": "Claude Code Just Dropped /Design. (Master it in 8 Minutes).",
+  "description": "👇 FREE — Get my complete Prompt Library + my AI newsletter to stay up to date on everything AI: https://tristenobrien.ai\n\nMobbin — the design reference library I pull layout examples from. This link gets you 20% off: https://mobbin.com/tristen\n\nHiggsfield — the image / video / voice tool I use for real images (affiliate link): https://higgsfield.ai?fpr=tristen15\n\n📚 Buy my book, The Smartest Move 👉 https://tristenobrien.ai/smartest-move/\n\n_____________________\n\nClaude Code just released a new slash command called /design, and it changes the order everything happens in. Instead of building your page and letting you argue with it afterward, it designs first and hands you editable artboards to pick from, so nothing gets coded until you've chosen one. In this video I run it start to finish on a real landing page for a dog grooming shop, show you how to word the prompt so the options actually come back different, and build the one I picked. I also break down when you'd use /design inside Claude Code versus the Claude Design app, because they're good at different things.\n\n_____________________\n\nCHAPTERS\n\n0:00 The command that designs before it builds\n\n0:34 What /design actually is\n\n1:37 The problem it fixes\n\n2:26 How to run it\n\n2:42 Give it a site to look at\n\n3:20 The prompt that gets 3 real options\n\n3:52 Using your own colors and components\n\n4:12 Name the artboard and hit save\n\n4:45 The image problem nobody warns you about\n\n5:09 What Claude actually built\n\n5:49 Why not just use the Claude Design app\n\n6:53 It's still a research preview\n\n7:20 3 things to remember\n\n_____________________\n\nTHE PROMPT FROM THE VIDEO:\n \"/design three landing page directions for Happy Tails, a local dog grooming shop. The only job of this page is getting people to book an appointment. Sections: hero with a book now button, services with pricing, before and after photos, reviews, and a footer with hours, phone, and address. I've attached three screenshots of layouts I like. Use them as direction, not something to copy. Make all three clearly different from each other. No generic card grid, and don't center everything down the middle.\"\n\nPROMPT 2 — THE ONE I USED TO BUILD IT (this one is personal to my project, don't copy it word for word)\n\n\"Okay, I like the wallpapers and panels one. Let's go ahead and build out this whole website. I do want you to change the wallpaper to a better icon of a dog. And we need real images here, so use Higgsfield. I also want a hero that follows my mouse as I move, and you can use my dog Charlie.\"\n\nPROMPT 2 AS A TEMPLATE — SWAP THE BRACKETS FOR YOUR OWN\n\n\"Build out the whole site from the artboard called [artboard name]. Change [the one thing you want different]. Use [your image tool] for the real images. And add [any interaction you want, like a hero that follows the mouse].\"\n\n_____________________\n\nVIDEO NOTES /design is a research preview, so how it works can change. Update Claude Code if you don't see it in the slash menu.\n\nClaude Code can't generate images on its own. Either make them somewhere else and drop them in your project folder, or connect an image tool like Higgsfield or a Nano Banana / Gemini image API.\n\n#claude #claudecode #claudedesign #ai #design #vibecoding #design #claudeai",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "The command that designs before it builds",
+    "end_time": 34
+   },
+   {
+    "start_time": 34,
+    "title": "What /design actually is",
+    "end_time": 97
+   },
+   {
+    "start_time": 97,
+    "title": "The problem it fixes",
+    "end_time": 146
+   },
+   {
+    "start_time": 146,
+    "title": "How to run it",
+    "end_time": 162
+   },
+   {
+    "start_time": 162,
+    "title": "Give it a site to look",
+    "end_time": 200
+   },
+   {
+    "start_time": 200,
+    "title": "The prompt that gets 3 real options",
+    "end_time": 232
+   },
+   {
+    "start_time": 232,
+    "title": "Using your own colors and components",
+    "end_time": 252
+   },
+   {
+    "start_time": 252,
+    "title": "Name the artboard and hit save",
+    "end_time": 285
+   },
+   {
+    "start_time": 285,
+    "title": "The image problem nobody warns you about",
+    "end_time": 309
+   },
+   {
+    "start_time": 309,
+    "title": "What Claude actually built",
+    "end_time": 349
+   },
+   {
+    "start_time": 349,
+    "title": "Why not just use the Claude Design app",
+    "end_time": 413
+   },
+   {
+    "start_time": 413,
+    "title": "It's still a research preview",
+    "end_time": 440
+   },
+   {
+    "start_time": 440,
+    "title": "3 things to remember",
+    "end_time": 483
+   }
+  ],
+  "tags": [
+   "claude code",
+   "claude code tutorial",
+   "claude ai",
+   "claude",
+   "claude design",
+   "claude design tutorial",
+   "claude design claude code",
+   "/design",
+   "claude design website",
+   "claude design agent"
+  ],
+  "categories": [
+   "Science & Technology"
+  ],
+  "heatmap": [
+   {
+    "start_time": 0.0,
+    "end_time": 4.83,
+    "value": 0.09262211652537754
+   },
+   {
+    "start_time": 4.83,
+    "end_time": 9.66,
+    "value": 0.04733378535664707
+   },
+   {
+    "start_time": 9.66,
+    "end_time": 14.49,
+    "value": 0.038844021167636
+   },
+   {
+    "start_time": 14.49,
+    "end_time": 19.32,
+    "value": 0.0225844976079996
+   },
+   {
+    "start_time": 19.32,
+    "end_time": 24.15,
+    "value": 0.012917283479222098
+   },
+   {
+    "start_time": 24.15,
+    "end_time": 28.98,
+    "value": 0.0398485819285514
+   },
+   {
+    "start_time": 28.98,
+    "end_time": 33.81,
+    "value": 0.07029786568435123
+   },
+   {
+    "start_time": 33.81,
+    "end_time": 38.64,
+    "value": 0.19829166800573142
+   },
+   {
+    "start_time": 38.64,
+    "end_time": 43.47,
+    "value": 0.18322138377416095
+   },
+   {
+    "start_time": 43.47,
+    "end_time": 48.3,
+    "value": 0.2085936643771094
+   },
+   {
+    "start_time": 48.3,
+    "end_time": 53.13,
+    "value": 0.23320301517679137
+   },
+   {
+    "start_time": 53.13,
+    "end_time": 57.96,
+    "value": 0.2863638859591775
+   },
+   {
+    "start_time": 57.96,
+    "end_time": 62.79,
+    "value": 0.3313143982460237
+   },
+   {
+    "start_time": 62.79,
+    "end_time": 67.62,
+    "value": 0.36161752729763097
+   },
+   {
+    "start_time": 67.62,
+    "end_time": 72.45,
+    "value": 0.2593062003979513
+   },
+   {
+    "start_time": 72.45,
+    "end_time": 77.28,
+    "value": 0.1840146532264269
+   },
+   {
+    "start_time": 77.28,
+    "end_time": 82.11,
+    "value": 0.18966265981035546
+   },
+   {
+    "start_time": 82.11,
+    "end_time": 86.94,
+    "value": 0.15362507490334948
+   },
+   {
+    "start_time": 86.94,
+    "end_time": 91.77,
+    "value": 0.12230712204906648
+   },
+   {
+    "start_time": 91.77,
+    "end_time": 96.6,
+    "value": 0.10821236990189956
+   },
+   {
+    "start_time": 96.6,
+    "end_time": 101.43,
+    "value": 0.1995996814411768
+   },
+   {
+    "start_time": 101.43,
+    "end_time": 106.26,
+    "value": 0.13909603502738696
+   },
+   {
+    "start_time": 106.26,
+    "end_time": 111.09,
+    "value": 0.11860963651677157
+   },
+   {
+    "start_time": 111.09,
+    "end_time": 115.92,
+    "value": 0.08316227015187579
+   },
+   {
+    "start_time": 115.92,
+    "end_time": 120.75,
+    "value": 0.08486544815145014
+   },
+   {
+    "start_time": 120.75,
+    "end_time": 125.58,
+    "value": 0.0735110217951798
+   },
+   {
+    "start_time": 125.58,
+    "end_time": 130.41,
+    "value": 0.06297541012650584
+   },
+   {
+    "start_time": 130.41,
+    "end_time": 135.24,
+    "value": 0.0598558199949374
+   },
+   {
+    "start_time": 135.24,
+    "end_time": 140.07,
+    "value": 0.056202046031015813
+   },
+   {
+    "start_time": 140.07,
+    "end_time": 144.9,
+    "value": 0.06273465939324148
+   },
+   {
+    "start_time": 144.9,
+    "end_time": 149.73,
+    "value": 0.1953278963184072
+   },
+   {
+    "start_time": 149.73,
+    "end_time": 154.56,
+    "value": 0.15092834831175586
+   },
+   {
+    "start_time": 154.56,
+    "end_time": 159.39,
+    "value": 0.21024567699330932
+   },
+   {
+    "start_time": 159.39,
+    "end_time": 164.22,
+    "value": 0.42726106608732173
+   },
+   {
+    "start_time": 164.22,
+    "end_time": 169.05,
+    "value": 0.42834482831466847
+   },
+   {
+    "start_time": 169.05,
+    "end_time": 173.88,
+    "value": 0.3719425967847913
+   },
+   {
+    "start_time": 173.88,
+    "end_time": 178.71,
+    "value": 0.4481426478902445
+   },
+   {
+    "start_time": 178.71,
+    "end_time": 183.54,
+    "value": 0.7805151133028574
+   },
+   {
+    "start_time": 183.54,
+    "end_time": 188.37,
+    "value": 1.0
+   },
+   {
+    "start_time": 188.37,
+    "end_time": 193.2,
+    "value": 0.7726540727907361
+   },
+   {
+    "start_time": 193.2,
+    "end_time": 198.03,
+    "value": 0.45328038652563
+   },
+   {
+    "start_time": 198.03,
+    "end_time": 202.86,
+    "value": 0.3637376694609858
+   },
+   {
+    "start_time": 202.86,
+    "end_time": 207.69,
+    "value": 0.2651163555504215
+   },
+   {
+    "start_time": 207.69,
+    "end_time": 212.52,
+    "value": 0.3166118792535907
+   },
+   {
+    "start_time": 212.52,
+    "end_time": 217.35,
+    "value": 0.3954344371796592
+   },
+   {
+    "start_time": 217.35,
+    "end_time": 222.18,
+    "value": 0.44338617751061904
+   },
+   {
+    "start_time": 222.18,
+    "end_time": 227.01,
+    "value": 0.31473790026705634
+   },
+   {
+    "start_time": 227.01,
+    "end_time": 231.84,
+    "value": 0.31723406679622074
+   },
+   {
+    "start_time": 231.84,
+    "end_time": 236.67,
+    "value": 0.4182862608060653
+   },
+   {
+    "start_time": 236.67,
+    "end_time": 241.5,
+    "value": 0.3244658779706356
+   },
+   {
+    "start_time": 241.5,
+    "end_time": 246.33,
+    "value": 0.3332651627639765
+   },
+   {
+    "start_time": 246.33,
+    "end_time": 251.16,
+    "value": 0.36689078303188083
+   },
+   {
+    "start_time": 251.16,
+    "end_time": 255.99,
+    "value": 0.5577621594758327
+   },
+   {
+    "start_time": 255.99,
+    "end_time": 260.82,
+    "value": 0.47533334097443014
+   },
+   {
+    "start_time": 260.82,
+    "end_time": 265.65,
+    "value": 0.5367588070569874
+   },
+   {
+    "start_time": 265.65,
+    "end_time": 270.48,
+    "value": 0.460344393221628
+   },
+   {
+    "start_time": 270.48,
+    "end_time": 275.31,
+    "value": 0.23048960177824804
+   },
+   {
+    "start_time": 275.31,
+    "end_time": 280.14,
+    "value": 0.1687198181359035
+   },
+   {
+    "start_time": 280.14,
+    "end_time": 284.97,
+    "value": 0.16542832205484975
+   },
+   {
+    "start_time": 284.97,
+    "end_time": 289.8,
+    "value": 0.3793767471985829
+   },
+   {
+    "start_time": 289.8,
+    "end_time": 294.63,
+    "value": 0.32583745484355264
+   },
+   {
+    "start_time": 294.63,
+    "end_time": 299.46,
+    "value": 0.3175255896211132
+   },
+   {
+    "start_time": 299.46,
+    "end_time": 304.29,
+    "value": 0.3384014406014472
+   },
+   {
+    "start_time": 304.29,
+    "end_time": 309.12,
+    "value": 0.4783938624313416
+   },
+   {
+    "start_time": 309.12,
+    "end_time": 313.95,
+    "value": 0.5680238528073053
+   },
+   {
+    "start_time": 313.95,
+    "end_time": 318.78,
+    "value": 0.371072073596647
+   },
+   {
+    "start_time": 318.78,
+    "end_time": 323.61,
+    "value": 0.22041283048024518
+   },
+   {
+    "start_time": 323.61,
+    "end_time": 328.44,
+    "value": 0.17808149139826004
+   },
+   {
+    "start_time": 328.44,
+    "end_time": 333.27,
+    "value": 0.14590691166420167
+   },
+   {
+    "start_time": 333.27,
+    "end_time": 338.1,
+    "value": 0.1627379255875535
+   },
+   {
+    "start_time": 338.1,
+    "end_time": 342.93,
+    "value": 0.1687671067863502
+   },
+   {
+    "start_time": 342.93,
+    "end_time": 347.76,
+    "value": 0.19489332766693568
+   },
+   {
+    "start_time": 347.76,
+    "end_time": 352.59,
+    "value": 0.37256272422779785
+   },
+   {
+    "start_time": 352.59,
+    "end_time": 357.42,
+    "value": 0.26536150740560865
+   },
+   {
+    "start_time": 357.42,
+    "end_time": 362.25,
+    "value": 0.21662917659915606
+   },
+   {
+    "start_time": 362.25,
+    "end_time": 367.08,
+    "value": 0.22166982835774326
+   },
+   {
+    "start_time": 367.08,
+    "end_time": 371.91,
+    "value": 0.21306921208081372
+   },
+   {
+    "start_time": 371.91,
+    "end_time": 376.74,
+    "value": 0.24501480237763965
+   },
+   {
+    "start_time": 376.74,
+    "end_time": 381.57,
+    "value": 0.2732130714594622
+   },
+   {
+    "start_time": 381.57,
+    "end_time": 386.4,
+    "value": 0.22867757560584345
+   },
+   {
+    "start_time": 386.4,
+    "end_time": 391.23,
+    "value": 0.23987200713408754
+   },
+   {
+    "start_time": 391.23,
+    "end_time": 396.06,
+    "value": 0.2187668108811316
+   },
+   {
+    "start_time": 396.06,
+    "end_time": 400.89,
+    "value": 0.18898636656034304
+   },
+   {
+    "start_time": 400.89,
+    "end_time": 405.72,
+    "value": 0.20383359818723218
+   },
+   {
+    "start_time": 405.72,
+    "end_time": 410.55,
+    "value": 0.23908310134738756
+   },
+   {
+    "start_time": 410.55,
+    "end_time": 415.38,
+    "value": 0.3075935871421017
+   },
+   {
+    "start_time": 415.38,
+    "end_time": 420.21,
+    "value": 0.11786725152520412
+   },
+   {
+    "start_time": 420.21,
+    "end_time": 425.04,
+    "value": 0.036925544029235736
+   },
+   {
+    "start_time": 425.04,
+    "end_time": 429.87,
+    "value": 0.017548387432673136
+   },
+   {
+    "start_time": 429.87,
+    "end_time": 434.7,
+    "value": 0.017713672971095905
+   },
+   {
+    "start_time": 434.7,
+    "end_time": 439.53,
+    "value": 0.026578103732982923
+   },
+   {
+    "start_time": 439.53,
+    "end_time": 444.36,
+    "value": 0.13271942739118947
+   },
+   {
+    "start_time": 444.36,
+    "end_time": 449.19,
+    "value": 0.08164526897372354
+   },
+   {
+    "start_time": 449.19,
+    "end_time": 454.02,
+    "value": 0.07894502148459169
+   },
+   {
+    "start_time": 454.02,
+    "end_time": 458.85,
+    "value": 0.07380226369739638
+   },
+   {
+    "start_time": 458.85,
+    "end_time": 463.68,
+    "value": 0.08506321771529858
+   },
+   {
+    "start_time": 463.68,
+    "end_time": 468.51,
+    "value": 0.0670807017433462
+   },
+   {
+    "start_time": 468.51,
+    "end_time": 473.34,
+    "value": 0.04656793395755101
+   },
+   {
+    "start_time": 473.34,
+    "end_time": 478.17,
+    "value": 0.03115057912396923
+   },
+   {
+    "start_time": 478.17,
+    "end_time": 483.0,
+    "value": 0.0
+   }
+  ],
+  "upload_date": "20260825",
+  "duration": 483,
+  "channel": "Tristen O'Brien",
+  "channel_id": "UCruPFdKtGG8Oz5dvha6WWgA",
+  "channel_follower_count": 85900,
+  "thumbnail": "https://i.ytimg.com/vi/Fqlc0N1qyMo/maxresdefault.jpg",
+  "view_count": 162802,
+  "like_count": 2771,
+  "comment_count": 41
+ }
+}

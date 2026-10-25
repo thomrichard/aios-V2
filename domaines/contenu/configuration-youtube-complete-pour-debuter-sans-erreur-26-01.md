@@ -4,7 +4,7 @@ resume: Tu veux lancer ta chaîne YouTube mais tu ne sais pas comment bien la co
 statut: publie
 domaine: contenu
 cree: 2026-01-22
-maj: 2026-10-22
+maj: 2026-10-25
 liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md, comment-creer-une-banniere-qui-convertit-tes-visiteurs-en-26-01.md]
 ---
 # Configuration YouTube complète pour débuter sans erreur
@@ -18,12 +18,12 @@ liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, claude-tutoriel-co
 
 ## Stats
 
-YouTube Analytics, données jusqu'au 2026-10-20. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
+YouTube Analytics, données jusqu'au 2026-10-22. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
 
 | | 7 premiers jours | 30 premiers jours | Depuis la sortie |
 |---|---|---|---|
-| Vues | 62 | 98 | 331 |
-| Vues engagées | 62 | 98 | 327 |
+| Vues | 62 | 98 | 332 |
+| Vues engagées | 62 | 98 | 328 |
 | Heures regardées | 3,0 | 4,7 | 14,1 |
 | Abonnés gagnés | 2 | 2 | 6 |
 | Revenus estimés | 0,00 $ | 0,00 $ | 0,20 $ |
@@ -32,9 +32,9 @@ YouTube Analytics, données jusqu'au 2026-10-20. Revenus estimés en dollars US.
 
 ## Liens
 
-- Cite : [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
-- Cite : [2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
-- Cite : [2026-01-27-comment-creer-une-banniere-qui-convertit-tes-visiteurs-en](comment-creer-une-banniere-qui-convertit-tes-visiteurs-en-26-01.md)
+- Cite : [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
+- Cite : [claude-tutoriel-complet-pour-passer-de-debutant-a-26-05](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
+- Cite : [comment-creer-une-banniere-qui-convertit-tes-visiteurs-en-26-01](comment-creer-une-banniere-qui-convertit-tes-visiteurs-en-26-01.md)
 - Description : https://clubsmart.s.gy/masterclass-aios-catalogue
 - Description : https://clubsmart.s.gy/tuto-claude-catalogue
 - Description : https://www.skool.com/club-smart

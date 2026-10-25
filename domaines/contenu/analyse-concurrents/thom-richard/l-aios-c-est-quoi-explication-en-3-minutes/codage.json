@@ -1,0 +1,161 @@
+{
+  "video_id": "mgGQFJRYIpo",
+  "chaine": "thom-richard",
+  "titre_video": "L'AIOS, c'est quoi ? Explication en 3 minutes",
+  "codeur": "agent thom-richard",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "autre",
+    "format_secondaire": "liste",
+    "sujet": "Ce qu'est un AIOS (format « 3 minutes pour comprendre ») : l'analogie du téléphone et 4 briques ; la vidéo elle-même est faite par son AIOS, voix et visage générés",
+    "outils": ["AIOS (son système)", "Claude", "ElevenLabs", "HeyGen"],
+    "niveau": "debutant",
+    "objectif_probable": "communaute"
+  },
+  "titre": {
+    "attente_au_clic": "Comprendre en 3 minutes ce qu'est un AIOS.",
+    "schema": "<Concept>, c'est quoi ? Explication en <N> minutes",
+    "promesse": "Comprendre ce qu'est un AIOS en 3 minutes",
+    "audace": "timide",
+    "registre": "jargon",
+    "briques": ["vitesse"],
+    "marqueurs": ["question", "duree", "chiffre"],
+    "nom_outil": false
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "curieux, petit sourire, main au menton",
+    "regard": "camera",
+    "texte": "AIOS / EN 3 MINUTES",
+    "texte_mots": 4,
+    "repete_titre": "partiel",
+    "elements": ["« AI » en jaune et « OS » en blanc, capitales géantes", "chronomètre et « EN 3 MINUTES » en bleu canard", "visage à droite, main au menton"],
+    "nb_elements": 3,
+    "fond": "interface sombre floue",
+    "couleurs": ["bleu nuit", "jaune", "blanc", "bleu canard"],
+    "curiosity_gap": "aucun",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Pendant que tu regardes cette vidéo, mon intelligence artificielle trie mes emails, range mes notes",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Visage (avatar généré) plein cadre sur mur clair et fauteuil blanc ; l'encart « Mon système travaille » s'affiche à 0:02",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": ["hook-fait", "pont"],
+    "preuve": {
+      "type": "aucune",
+      "seconde": null,
+      "description": "Le tri des mails et la veille sont dits et listés à l'écran, pas montrés ; la vraie preuve (vidéo faite par l'AIOS) n'arrive qu'à 1:58"
+    },
+    "annonce_plan": {"presente": false, "nb_points": null, "a_l_ecran": false},
+    "boucle_vers_la_fin": {"presente": false, "citation": "", "seconde_resolution": null, "tenue": null},
+    "seconde_premier_point": 15,
+    "attente_tenue": "oui",
+    "attente_note": "La définition arrive à 0:15 et la vidéo dure 2:32 : la promesse des 3 minutes est tenue."
+  },
+  "structure": {
+    "modele": "liste-numerotee",
+    "segments": [
+      {"debut": 0, "fin": 16, "titre": "Introduction", "role": "intro", "pull": true, "paint": true, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 16, "fin": 61, "titre": "L'analogie du téléphone", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": false, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 61, "fin": 101, "titre": "Les 4 briques d'un AIOS", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 101, "fin": 115, "titre": "De l'application au système", "role": "point", "pull": true, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": true, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 115, "fin": 138, "titre": "La vidéo faite par mon AIOS", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 138, "fin": 152, "titre": "Appel à la masterclass", "role": "cta", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 10, "type": "annonce-suite", "citation": "en 3 minutes, tu vas comprendre ce que c'est"},
+      {"seconde": 60, "type": "question-spectateur", "citation": "Et alors, qu'est-ce qu'il y a ?"},
+      {"seconde": 89, "type": "annonce-suite", "citation": "quatrième brique, celle qui change tout"},
+      {"seconde": 115, "type": "rupture", "citation": "Et d'ailleurs, je vais te dire quelque chose."}
+    ],
+    "histoires": [
+      {"seconde": 92, "acte": "anecdote", "resume": "Chaque matin ses mails sont triés par priorité, chaque semaine sa veille arrive résumée."},
+      {"seconde": 118, "acte": "vision-build", "resume": "La vidéo a été faite par son AIOS : script tiré de ses notes, voix et visage générés ; lui a choisi, corrigé, validé."}
+    ],
+    "payoffs": [
+      {"seconde": 15, "resume": "AIOS : un système d'exploitation dopé à l'IA, ton système à toi"},
+      {"seconde": 50, "resume": "Les IA sont des applications ; l'AIOS est le système en dessous"},
+      {"seconde": 62, "resume": "Les 4 briques : mémoire, données, outils, autonomie"},
+      {"seconde": 118, "resume": "La révélation : cette vidéo a été fabriquée par son AIOS"}
+    ],
+    "premier_payoff_seconde": 15,
+    "jargon": 1,
+    "repetitions": 0,
+    "test_du_tweet": "ChatGPT, Claude et Gemini sont des applications ; un AIOS est le système en dessous, comme celui d'un téléphone. Quatre briques : une mémoire qui dure, tes données branchées, des outils, et il tourne sans toi. Preuve : cette vidéo, voix et visage compris, vient de son AIOS."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine plein cadre ; visage et voix générés (avatar HeyGen et voix ElevenLabs d'après la description)", "decor": "mur clair, fauteuil blanc ; polo vert"},
+    "parts": {"face": 45, "ecran": 0, "motion": 55, "broll": 0},
+    "textes_ecran": "constants",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["plan-a-l-ecran", "etiquettes", "cartes-chapitre"],
+    "charte": "Bleu ardoise et blanc, accents jaune moutarde et bleu canard ; lettres A-I-O-S en tuiles, encarts ardoise à liseré jaune posés sur l'image, téléphone animé. La miniature reprend le jaune et le bleu canard.",
+    "rythme": "regulier",
+    "notes": "Vidéo entièrement générée : avatar, voix clonée, montage piloté par Claude ; la révélation à 1:58 s'affiche avec un cadre « généré par mon AIOS ». Une carte animée par idée, environ toutes les 5 secondes."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 138, "type": "video-suivante", "cible": "la masterclass AIOS", "amene_par": "fin", "citation": "je viens de publier une masterclass complète qui t'accompagne pas à pas"}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"video-suivante": 4, "lead-magnet": 1, "communaute-payante": 2, "affiliation": 5},
+    "commentaire_epingle": {"texte": "Repars avec ton AIOS installé : atelier de 2 h en direct, 6 personnes max, 12 mois de Club SMART Premium inclus", "type": "service"},
+    "recap_final": true,
+    "derniere_phrase": "Elle est juste là et je te dis à bientôt.",
+    "video_suivante_precise": true
+  },
+  "commentaires": {
+    "themes": ["deux mondes : ceux qui savent utiliser l'IA et les autres", "la vidéo faite par l'AIOS, citée comme le meilleur exemple"],
+    "demandes": ["comment le construire"],
+    "critiques": [],
+    "reprises": ["« toute cette video a été conçue par cet IAOS »"],
+    "signal_promesse": "inconnu"
+  },
+  "retention": {
+    "a_30s": 0.707,
+    "a_la_moitie": 0.661,
+    "pertes": [
+      {"seconde": 137, "chute": 8.0, "passage": "« si tu veux voir comment on construit un AIOS de A à Z » (appel à la masterclass)", "segment": "Appel à la masterclass"},
+      {"seconde": 32, "chute": 4.7, "passage": "« C'est lui qui connaît tes contacts, ton agenda, tes photos » (l'analogie du téléphone)", "segment": "L'analogie du téléphone"},
+      {"seconde": 84, "chute": 4.0, "passage": "« il lit mes fichiers, écrit des documents, envoie des rapports »", "segment": "Les 4 briques d'un AIOS"},
+      {"seconde": 109, "chute": 1.2, "passage": "« Tu arrêtes de prompter et tu commences à bâtir. »", "segment": "De l'application au système"}
+    ],
+    "remontees": [
+      {"seconde": 57, "chute": -3.9, "passage": "« Et alors, qu'est-ce qu'il y a ? Quatre briques. » (début de chapitre)", "segment": "Les 4 briques d'un AIOS"},
+      {"seconde": 122, "chute": -1.0, "passage": "« La voix que tu écoutes et le visage que tu regardes ont été générés »", "segment": "La vidéo faite par mon AIOS"}
+    ]
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "La 1re phrase décrit ce que fait un AIOS sans le nommer (partiel) ; le 1er plan ne garde que le visage"},
+    "ap_boucle_curiosite": {"note": 0, "preuve": "Aucune question ouverte dans l'intro ; la révélation finale n'est annoncée que dans la description"},
+    "ap_effort_montre": {"note": 0, "preuve": "Aucun effort dit ou montré dans l'intro"},
+    "ap_setup_progress_payoff": {"note": 1, "preuve": "« Mon système travaille » (0:00), les briques, puis la révélation (1:58) : un fil court, sans progression montrée"},
+    "ap_contraste_rythme": {"note": 0, "preuve": "12, 11 puis 5 changements de plan par minute, une carte toutes les 5 secondes environ : rythme régulier"},
+    "ap_montrer_sans_son": {"note": 2, "preuve": "Encart « Mon système travaille : emails triés, notes rangées, veille préparée », tuiles A-I-O-S « ton système d'exploitation IA »"},
+    "ali_douleur_histoire": {"note": 0, "preuve": "Ni douleur ni histoire dans l'intro"},
+    "ali_coeur_unique": {"note": 2, "preuve": "0:50 « L'AIOS, c'est le système en dessous » ; 2:16 « Toi au volant, le système au travail. »"},
+    "alx_pont": {"note": 1, "preuve": "Titre repris et promesse (« en 3 minutes, tu vas comprendre ») après un hook factuel"},
+    "alx_pull_paint_point": {"note": 2, "preuve": "Pull (tu perds le contexte en fermant la fenêtre), paint (le téléphone, ses mails triés), point (le système en dessous, les 4 briques)"},
+    "alx_nom_idee": {"note": 2, "preuve": "« le système en dessous », les 4 briques nommées et numérotées à l'écran, « Je dors. Il travaille. »"},
+    "alx_phrase_finale": {"note": 2, "preuve": "1:39 « Je dors, il travaille. » ; 1:52 « Tu arrêtes de prompter et tu commences à bâtir. » ; 2:16 « Toi au volant »"},
+    "alx_douleur_reve": {"note": 0, "preuve": "« L'AIOS, c'est quoi ? » : un mot que le public ne connaît pas, ni douleur ni désir"},
+    "alx_cta_tot": {"note": 1, "preuve": "La masterclass est proposée à 2:18, avant 4 minutes mais à la toute fin d'une vidéo de 2:32"},
+    "ed_intro_courte": {"note": 2, "preuve": "Hook (0:00), promesse (0:10), 1er point à 0:15"},
+    "ed_hook": {"note": 2, "preuve": "0:00 fait : « Pendant que tu regardes cette vidéo, mon intelligence artificielle trie mes emails »"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "Problème (le contexte perdu) et preuve (son système, la vidéo générée), mais aucune consigne"},
+    "ed_tension_relancee": {"note": 1, "preuve": "1:00 « Et alors, qu'est-ce qu'il y a ? » lance les briques ; 1:55 « je vais te dire quelque chose » lance la révélation"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "1:58 la vidéo faite par son AIOS : une preuve vécue d'acte 3, sans récit"},
+    "ed_sans_surexplication": {"note": 2, "preuve": "Une idée par phrase, aucune redite en 2:32"},
+    "ed_niveau_simple": {"note": 2, "preuve": "0:23 l'analogie du téléphone, aucun jargon non expliqué"},
+    "tous_video_suivante": {"note": 2, "preuve": "2:18 la masterclass AIOS, pour construire un AIOS de A à Z, brique par brique"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Le gabarit « 3 minutes pour comprendre » appliqué à un mot que personne ne cherche encore : 85 vues à 7 jours, la plus faible des dix.",
+    "intro_structure": "La meilleure rétention de la sélection (66 % à la moitié, 62 % de vue moyenne) : hook factuel, 1er point à 0:15, une phrase forte par idée.",
+    "habillage": "Avatar et voix générés, une carte animée toutes les 5 secondes ; la révélation finale fait remonter la courbe.",
+    "idee_pour_nous": "Garder l'écriture de ce format (hook, point à 0:15, phrases courtes) mais sur un mot que les gens cherchent déjà.",
+    "objectif": "vues"
+  }
+}

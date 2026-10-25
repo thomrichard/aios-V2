@@ -1,0 +1,156 @@
+{
+  "video_id": "a4AqKRAp_DE",
+  "chaine": "jad-mh",
+  "titre": "Muse Wonder vs Opus 5.5",
+  "codeur": "agent jad-mh",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "actu",
+    "format_secondaire": "comparatif",
+    "sujet": "Meta sort Muse Wonder ; lecture critique des benchmarks de Meta face à Claude Opus 5.5 et aux scores indépendants",
+    "outils": ["Muse Wonder", "Claude Opus 5.5", "Artificial Analysis"],
+    "niveau": "intermediaire",
+    "objectif_probable": "vues"
+  },
+  "titre": {
+    "attente_au_clic": "Savoir si le nouveau modèle de Meta, Muse Wonder, bat Claude Opus 5.5.",
+    "schema": "<Modèle A> vs <Modèle B>",
+    "promesse": "Savoir lequel des deux modèles est le meilleur",
+    "audace": "timide",
+    "registre": "jargon",
+    "briques": [],
+    "marqueurs": [],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": false,
+    "emotion": null,
+    "regard": null,
+    "texte": "MUSE MUSE wonder VS Opus 5.5",
+    "texte_mots": 6,
+    "repete_titre": "oui",
+    "elements": ["« MUSE wonder » avec le logo Meta dans le o et une peluche mascotte", "rond « VS » au centre", "logo Claude orange et « Opus 5.5 » sur un ciel au coucher du soleil"],
+    "nb_elements": 3,
+    "fond": "coupé en deux : brun à gauche, ciel au coucher du soleil à droite",
+    "couleurs": ["brun", "blanc", "bleu Meta", "orange", "bleu ciel"],
+    "curiosity_gap": "resultat",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Okay, Meta's just dropped a frontier model officially today and it has surpassed ChatGPT for the first time.",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Face caméra en vignette à gauche, image du film de lancement de Meta à droite (« Meta · Muse Wonder »), sous-titre « Okay, Meta »",
+    "premier_plan_reprend_miniature": "non",
+    "ouverture": ["actu-annonce", "hook-fait", "boucle-curiosite", "pont"],
+    "preuve": {
+      "type": "chiffres",
+      "seconde": 8,
+      "description": "Le classement indépendant puis le tableau de Meta à l'écran dès 0:04"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 4, "a_l_ecran": true},
+    "boucle_vers_la_fin": {"presente": false, "citation": "", "seconde_resolution": null, "tenue": null},
+    "seconde_premier_point": 28,
+    "attente_tenue": "oui",
+    "attente_note": "Le duel est tranché avec des chiffres : sur le tableau de Meta, Opus garde la meilleure note sur 6 lignes, et il reste sur Claude."
+  },
+  "structure": {
+    "modele": "liste-numerotee",
+    "segments": [
+      {"debut": 0, "fin": 28, "titre": "Meta's first frontier model", "role": "intro", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 28, "fin": 78, "titre": "Muse Wonder vs Wonder Full, active memory and focus", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 78, "fin": 141, "titre": "Meta's demos", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 141, "fin": 160, "titre": "The price", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 160, "fin": 230, "titre": "Meta's benchmark chart and who actually wins each row", "role": "point", "pull": true, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 230, "fin": 254, "titre": "Meta's fine print", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 254, "fin": 296, "titre": "Independent scores and cost per task", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 296, "fin": 315, "titre": "The weakness Meta admits", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 315, "fin": 364, "titre": "My take", "role": "fin", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true}
+    ],
+    "relances": [
+      {"seconde": 14, "type": "boucle-ouverte", "citation": "But when I actually read the charts, something's off."},
+      {"seconde": 147, "type": "annonce-suite", "citation": "And here's kind of what's funny."},
+      {"seconde": 156, "type": "annonce-suite", "citation": "And this is where it gets super interesting."},
+      {"seconde": 188, "type": "rupture", "citation": "So far, so good, but look at who has the top score on each row."},
+      {"seconde": 207, "type": "annonce-suite", "citation": "And here's the part most people will miss."},
+      {"seconde": 245, "type": "annonce-suite", "citation": "now obviously we have to look at what independent people say."},
+      {"seconde": 287, "type": "annonce-suite", "citation": "One thing from the model card I found funny"},
+      {"seconde": 339, "type": "question-spectateur", "citation": "would I let Meta remember everything about my life?"}
+    ],
+    "histoires": [],
+    "payoffs": [
+      {"seconde": 172, "resume": "Les victoires de Muse Wonder : droit (10 contre 4,2), code long (78,8 contre 74,2)"},
+      {"seconde": 193, "resume": "Opus 5.5 a la meilleure note sur 6 lignes sur 14 du tableau de Meta"},
+      {"seconde": 210, "resume": "Le modèle qu'on peut acheter ne bat Opus que sur 5 lignes sur 14"},
+      {"seconde": 225, "resume": "Petites lignes : benchmarks internes, concurrents testés « best-effort »"},
+      {"seconde": 254, "resume": "Scores indépendants : Opus 58 (1er), Muse Wonder 52 (9e sur 219)"},
+      {"seconde": 270, "resume": "Muse Wonder moins cher par tâche (4,52 $ contre 5,98 $), Opus plus rapide"},
+      {"seconde": 327, "resume": "Le verdict : il reste sur Claude"}
+    ],
+    "premier_payoff_seconde": 193,
+    "jargon": 3,
+    "repetitions": 0,
+    "test_du_tweet": "Meta sort Muse Wonder, au prix d'Opus 5.5. Sur le tableau de Meta lui-même, Opus garde la meilleure note sur 6 lignes sur 14, et le modèle qu'on peut acheter ne le bat que sur 5. Scores indépendants : Opus 58, Wonder 52. Il reste sur Claude."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine ; souvent en vignette", "decor": "pièce sombre, bibliothèque, lumière violette ; casquette, maillot rayé « halftime »"},
+    "parts": {"face": 20, "ecran": 70, "motion": 10, "broll": 0},
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": true,
+    "sous_titres_style": "mot à mot, blanc gras sur une ligne, centré en bas",
+    "elements": ["plan-a-l-ecran", "etiquettes", "fleches-annotations", "chiffres-animes", "split-screen"],
+    "charte": "Fond crème à grille de points, captures en cadres arrondis, cases du tableau de Meta entourées en rouge et vert, « $4.52 » en vert et « $5.98 » en rouge. La miniature, sans visage, ne reprend pas cette charte.",
+    "rythme": "regulier",
+    "notes": "Tourné dans une autre pièce que les vidéos de skills (lumière violette). Chaque chiffre dit est entouré sur le tableau d'origine : la preuve est toujours à l'écran."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 24, "type": "abonnement", "cible": "s'abonner pour les skills de la semaine", "amene_par": "intro", "citation": "Be sure to subscribe because I drop skills every single week."},
+      {"seconde": 347, "type": "like-commentaire", "cible": "dire s'il ferait confiance à Meta", "amene_par": "fin", "citation": "Tell me in the comments, would you trust Meze with that?"},
+      {"seconde": 359, "type": "abonnement", "cible": "s'abonner pour ne pas rater le test suivant", "amene_par": "fin", "citation": "Subscribe if you don't want to miss that."}
+    ],
+    "sponsor": {"present": true, "nom": "Higgsfield", "debut": null, "duree": null, "forme": "lien-seul"},
+    "liens_description": {"sponsor": 1, "communaute-gratuite": 1, "video-suivante": 1, "autre": 4},
+    "commentaire_epingle": {"texte": "Get Acces to the promo (lien Higgsfield Katana)", "type": "sponsor"},
+    "recap_final": true,
+    "derniere_phrase": "Thanks for watching, and I'll see you on the next.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["un spectateur utilise déjà Muse"],
+    "demandes": ["une vidéo sur un montage de qualité pro avec Claude"],
+    "critiques": [],
+    "reprises": [],
+    "signal_promesse": "inconnu"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "La 1re phrase annonce le modèle de Meta, nommé à 0:06 ; le 1er plan (film de Meta et face en vignette) ne reprend pas la miniature"},
+    "ap_boucle_curiosite": {"note": 2, "preuve": "0:14 « something's off », résolue à 3:27 : le modèle en vente ne bat Opus que sur 5 lignes sur 14"},
+    "ap_effort_montre": {"note": 0, "preuve": "« when I actually read the charts » : une lecture, ni heures ni tests ; dans le doute, 0"},
+    "ap_setup_progress_payoff": {"note": 2, "preuve": "Ce que Meta affirme (0:08), le tableau lu ligne à ligne (2:40), puis la réponse avec les scores indépendants (4:14)"},
+    "ap_contraste_rythme": {"note": 0, "preuve": "De 9 à 18 changements de plan par minute, débit stable, aucun passage lent"},
+    "ap_montrer_sans_son": {"note": 2, "preuve": "Planche intro : film de Meta, classement, plan numéroté « What Muse Wonder is / What it costs / What Meta's own numbers say »"},
+    "ali_douleur_histoire": {"note": 0, "preuve": "Ni douleur ni histoire"},
+    "ali_coeur_unique": {"note": 2, "preuve": "3:30 « The model you can actually buy, Muse Wander beats Opus on only five out of 14. »"},
+    "alx_pont": {"note": 1, "preuve": "Annonce, contexte et plan comme un pont, mais avec un fait choc et une boucle en accroche"},
+    "alx_pull_paint_point": {"note": 1, "preuve": "Complet sur le tableau (2:38 « this is where it gets super interesting ») ; ailleurs, le point seul"},
+    "alx_nom_idee": {"note": 0, "preuve": "Aucune idée nommée"},
+    "alx_phrase_finale": {"note": 2, "preuve": "2:14 « Not a chatbot, an agent that does your boring stuff. » ; 2:33 « This one closed. Same as everyone else. »"},
+    "alx_douleur_reve": {"note": 0, "preuve": "Deux noms de modèles, aucun désir ni problème"},
+    "alx_cta_tot": {"note": 0, "preuve": "Aucune offre ni ressource dans la vidéo ; Skool seulement en description"},
+    "ed_intro_courte": {"note": 1, "preuve": "Premier point à 0:28, après cinq phrases et un plan en 4 points"},
+    "ed_hook": {"note": 2, "preuve": "0:00 « it has surpassed ChatGPT for the first time » puis 0:14 « something's off »"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "Problème (les graphiques trompent) puis preuves ligne à ligne ; la consigne se limite au verdict final"},
+    "ed_tension_relancee": {"note": 1, "preuve": "Les points s'enchaînent par des annonces (3:27 « here's the part most people will miss »), rarement par une question du spectateur"},
+    "ed_histoire_vecue": {"note": 0, "preuve": "Aucune histoire"},
+    "ed_sans_surexplication": {"note": 2, "preuve": "Aucune redite en 6 minutes"},
+    "ed_niveau_simple": {"note": 1, "preuve": "Les benchmarks sont traduits (droit, code long), mais API, tokens, open weights et DeepSWE ne sont pas expliqués"},
+    "tous_video_suivante": {"note": 1, "preuve": "5:51 il annonce le même test qu'il a fait sur Opus et Sol, à venir : une raison, pas encore une vidéo"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Titre nu « A vs B », sans le gabarit maison ni promesse. Miniature sans visage : deux logos face à face ; « MUSE » y est écrit deux fois.",
+    "intro_structure": "L'intro la plus courte de l'échantillon : annonce, « something's off », plan en 4 points affiché, premier point à 0:28. La boucle se résout à 3:27 avec les chiffres de Meta lui-même.",
+    "habillage": "Autre décor (pièce sombre, lumière violette). Les cases du tableau de Meta sont entourées en rouge et vert : chaque chiffre dit est à l'écran.",
+    "idee_pour_nous": "Pour une sortie de modèle, lire les graphiques de l'éditeur ligne à ligne et dire ce qu'ils cachent, en moins de 6 minutes.",
+    "objectif": "vues"
+  }
+}

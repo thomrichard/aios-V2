@@ -4,7 +4,7 @@ resume: 3 minutes pour comprendre : l'équation de valeur de l'IA
 statut: publie
 domaine: contenu
 cree: 2026-06-07
-maj: 2026-10-22
+maj: 2026-10-25
 liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md, intelligence-artificielle-5-phases-pour-apprendre-26-03.md, 3-minutes-pour-comprendre-les-agents-ia-26-06.md, l-aios-c-est-quoi-explication-en-3-minutes-26-07.md, tu-n-as-plus-besoin-de-prompter-voici-la-methode-qui-26-08.md]
 ---
 # 3 minutes pour comprendre : les 3 leviers pour de meilleurs résultats avec l'IA
@@ -18,26 +18,26 @@ liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, claude-tutoriel-co
 
 ## Stats
 
-YouTube Analytics, données jusqu'au 2026-10-20. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
+YouTube Analytics, données jusqu'au 2026-10-22. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
 
 | | 7 premiers jours | 30 premiers jours | Depuis la sortie |
 |---|---|---|---|
-| Vues | 65 | 99 | 229 |
-| Vues engagées | 65 | 99 | 214 |
+| Vues | 65 | 99 | 230 |
+| Vues engagées | 65 | 99 | 215 |
 | Heures regardées | 1,3 | 2,1 | 6,4 |
 | Abonnés gagnés | 0 | 0 | 1 |
 | Revenus estimés | 0,00 $ | 0,00 $ | 0,40 $ |
-| Durée moyenne regardée | | | 1 min 48 s (54,6 %) |
+| Durée moyenne regardée | | | 1 min 47 s (54,4 %) |
 | J'aime · commentaires | | | 7 · 0 |
 
 ## Liens
 
-- Cite : [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
-- Cite : [2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
-- Cite : [2026-03-01-intelligence-artificielle-5-phases-pour-apprendre](intelligence-artificielle-5-phases-pour-apprendre-26-03.md)
-- Citée par : [2026-06-11-3-minutes-pour-comprendre-les-agents-ia](3-minutes-pour-comprendre-les-agents-ia-26-06.md)
-- Citée par : [2026-07-18-l-aios-c-est-quoi-explication-en-3-minutes](l-aios-c-est-quoi-explication-en-3-minutes-26-07.md)
-- Citée par : [2026-08-11-tu-n-as-plus-besoin-de-prompter-voici-la-methode-qui](tu-n-as-plus-besoin-de-prompter-voici-la-methode-qui-26-08.md)
+- Cite : [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
+- Cite : [claude-tutoriel-complet-pour-passer-de-debutant-a-26-05](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
+- Cite : [intelligence-artificielle-5-phases-pour-apprendre-26-03](intelligence-artificielle-5-phases-pour-apprendre-26-03.md)
+- Citée par : [3-minutes-pour-comprendre-les-agents-ia-26-06](3-minutes-pour-comprendre-les-agents-ia-26-06.md)
+- Citée par : [l-aios-c-est-quoi-explication-en-3-minutes-26-07](l-aios-c-est-quoi-explication-en-3-minutes-26-07.md)
+- Citée par : [tu-n-as-plus-besoin-de-prompter-voici-la-methode-qui-26-08](tu-n-as-plus-besoin-de-prompter-voici-la-methode-qui-26-08.md)
 - Description : https://clubsmart.s.gy/masterclass-aios-catalogue
 - Description : https://clubsmart.s.gy/tuto-claude-catalogue
 - Description : https://skool.com/club-smart

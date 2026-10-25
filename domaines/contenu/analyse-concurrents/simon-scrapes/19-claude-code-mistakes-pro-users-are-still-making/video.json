@@ -1,0 +1,689 @@
+{
+ "id": "icM0ewXGvAw",
+ "url": "https://www.youtube.com/watch?v=icM0ewXGvAw",
+ "chaine": "simon-scrapes",
+ "titre": "19 Claude Code Mistakes \"Pro\" Users Are Still Making",
+ "titre_ytdlp": "19 Claude Code Mistakes \"Pro\" Users Are Still Making",
+ "publie": "2026-08-22T15:42:49Z",
+ "duree_s": 1212,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "T9Ex6-3WGXzDebuEtcV2f8a5pcQ",
+  "id": "icM0ewXGvAw",
+  "snippet": {
+   "publishedAt": "2026-08-22T15:42:49Z",
+   "channelId": "UCdCR4-uYOg5ju-IUuDnfnQA",
+   "title": "19 Claude Code Mistakes \"Pro\" Users Are Still Making",
+   "description": "🚀 Join the Agentic Academy: https://skool.com/scrapes\n👀 Be the brand AI recommends: https://dub.sh/rankspot-yt\nDon't miss the next build - https://www.youtube.com/@simonscrapes?sub_confirmation=1\n\nThe rules you learned for prompting Claude Code have been completely rewritten in the last six months. From using personas to managing your context window, most people are still running on old, inefficient advice. In this video, we're breaking down 19 rookie mistakes that even pro Claude Code users are still making, and showing you the modern, correct way to get the most out of the model.\n\n00:00 - Mistake 1\n02:05 - Mistake 2 - Do Not Do this\n02:21 - Mistake 3 - routines + tool access\n02:58 - Mistake 4 - overloading connectors\n03:32 - Mistake 5 - MCPs do not eat Context\n04:18 - Mistake 6 - skills don’t coexist\n05:26 - Mistake 7 - subagent management (7x cost)\n06:39 - Mistake 8 - be careful on fast mode\n07:53 - Mistake 9 - never edit your Claude.md\n08:51 - Mistake 10 - impact of a long Claude.md\n10:37 - Mistake 11 - subagents skip these files\n11:57 - Mistake 12 - stop compacting\n13:08 - Mistake 13 - large context windows are bad\n14:05 - Mistake 14 - compact only some of the session\n14:48 - Mistake 15 - hack to edit your plan\n15:42 - Mistake 16 - cheaper models are more expensive\n16:30 - Mistake 17 - stop acting as a verification loop\n17:56 - Mistake 18 - history deletes itself\n18:52 - Mistake 19 - commands you never knew\n\n#claudecode #claudecodetutorial #claudeai",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/icM0ewXGvAw/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/icM0ewXGvAw/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/icM0ewXGvAw/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/icM0ewXGvAw/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/icM0ewXGvAw/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    }
+   },
+   "channelTitle": "Simon Scrapes",
+   "categoryId": "28",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "en",
+   "localized": {
+    "title": "19 Claude Code Mistakes \"Pro\" Users Are Still Making",
+    "description": "🚀 Join the Agentic Academy: https://skool.com/scrapes\n👀 Be the brand AI recommends: https://dub.sh/rankspot-yt\nDon't miss the next build - https://www.youtube.com/@simonscrapes?sub_confirmation=1\n\nThe rules you learned for prompting Claude Code have been completely rewritten in the last six months. From using personas to managing your context window, most people are still running on old, inefficient advice. In this video, we're breaking down 19 rookie mistakes that even pro Claude Code users are still making, and showing you the modern, correct way to get the most out of the model.\n\n00:00 - Mistake 1\n02:05 - Mistake 2 - Do Not Do this\n02:21 - Mistake 3 - routines + tool access\n02:58 - Mistake 4 - overloading connectors\n03:32 - Mistake 5 - MCPs do not eat Context\n04:18 - Mistake 6 - skills don’t coexist\n05:26 - Mistake 7 - subagent management (7x cost)\n06:39 - Mistake 8 - be careful on fast mode\n07:53 - Mistake 9 - never edit your Claude.md\n08:51 - Mistake 10 - impact of a long Claude.md\n10:37 - Mistake 11 - subagents skip these files\n11:57 - Mistake 12 - stop compacting\n13:08 - Mistake 13 - large context windows are bad\n14:05 - Mistake 14 - compact only some of the session\n14:48 - Mistake 15 - hack to edit your plan\n15:42 - Mistake 16 - cheaper models are more expensive\n16:30 - Mistake 17 - stop acting as a verification loop\n17:56 - Mistake 18 - history deletes itself\n18:52 - Mistake 19 - commands you never knew\n\n#claudecode #claudecodetutorial #claudeai"
+   },
+   "defaultAudioLanguage": "en"
+  },
+  "contentDetails": {
+   "duration": "PT20M12S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": true,
+   "contentRating": {},
+   "projection": "rectangular"
+  },
+  "statistics": {
+   "viewCount": "128710",
+   "likeCount": "2328",
+   "favoriteCount": "0",
+   "commentCount": "92"
+  }
+ },
+ "ytdlp": {
+  "id": "icM0ewXGvAw",
+  "title": "19 Claude Code Mistakes \"Pro\" Users Are Still Making",
+  "description": "🚀 Join the Agentic Academy: https://skool.com/scrapes\n👀 Be the brand AI recommends: https://dub.sh/rankspot-yt\nDon't miss the next build - https://www.youtube.com/@simonscrapes?sub_confirmation=1\n\nThe rules you learned for prompting Claude Code have been completely rewritten in the last six months. From using personas to managing your context window, most people are still running on old, inefficient advice. In this video, we're breaking down 19 rookie mistakes that even pro Claude Code users are still making, and showing you the modern, correct way to get the most out of the model.\n\n00:00 - Mistake 1\n02:05 - Mistake 2 - Do Not Do this\n02:21 - Mistake 3 - routines + tool access\n02:58 - Mistake 4 - overloading connectors\n03:32 - Mistake 5 - MCPs do not eat Context\n04:18 - Mistake 6 - skills don’t coexist\n05:26 - Mistake 7 - subagent management (7x cost)\n06:39 - Mistake 8 - be careful on fast mode\n07:53 - Mistake 9 - never edit your Claude.md\n08:51 - Mistake 10 - impact of a long Claude.md\n10:37 - Mistake 11 - subagents skip these files\n11:57 - Mistake 12 - stop compacting\n13:08 - Mistake 13 - large context windows are bad\n14:05 - Mistake 14 - compact only some of the session\n14:48 - Mistake 15 - hack to edit your plan\n15:42 - Mistake 16 - cheaper models are more expensive\n16:30 - Mistake 17 - stop acting as a verification loop\n17:56 - Mistake 18 - history deletes itself\n18:52 - Mistake 19 - commands you never knew\n\n#claudecode #claudecodetutorial #claudeai",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "Mistake 1",
+    "end_time": 125
+   },
+   {
+    "start_time": 125,
+    "title": "Mistake 2 - Do Not Do this",
+    "end_time": 141
+   },
+   {
+    "start_time": 141,
+    "title": "Mistake 3 - routines + tool access",
+    "end_time": 178
+   },
+   {
+    "start_time": 178,
+    "title": "Mistake 4 - overloading connectors",
+    "end_time": 212
+   },
+   {
+    "start_time": 212,
+    "title": "Mistake 5 - MCPs do not eat Context",
+    "end_time": 258
+   },
+   {
+    "start_time": 258,
+    "title": "Mistake 6 - skills don’t coexist",
+    "end_time": 326
+   },
+   {
+    "start_time": 326,
+    "title": "Mistake 7 - subagent management (7x cost)",
+    "end_time": 399
+   },
+   {
+    "start_time": 399,
+    "title": "Mistake 8 - be careful on fast mode",
+    "end_time": 473
+   },
+   {
+    "start_time": 473,
+    "title": "Mistake 9 - never edit your Claude.md",
+    "end_time": 531
+   },
+   {
+    "start_time": 531,
+    "title": "Mistake 10 - impact of a long Claude.md",
+    "end_time": 637
+   },
+   {
+    "start_time": 637,
+    "title": "Mistake 11 - subagents skip these files",
+    "end_time": 717
+   },
+   {
+    "start_time": 717,
+    "title": "Mistake 12 - stop compacting",
+    "end_time": 788
+   },
+   {
+    "start_time": 788,
+    "title": "Mistake 13 - large context windows are bad",
+    "end_time": 845
+   },
+   {
+    "start_time": 845,
+    "title": "Mistake 14 - compact only some of the session",
+    "end_time": 888
+   },
+   {
+    "start_time": 888,
+    "title": "Mistake 15 - hack to edit your plan",
+    "end_time": 942
+   },
+   {
+    "start_time": 942,
+    "title": "Mistake 16 - cheaper models are more expensive",
+    "end_time": 990
+   },
+   {
+    "start_time": 990,
+    "title": "Mistake 17 - stop acting as a verification loop",
+    "end_time": 1076
+   },
+   {
+    "start_time": 1076,
+    "title": "Mistake 18 - history deletes itself",
+    "end_time": 1132
+   },
+   {
+    "start_time": 1132,
+    "title": "Mistake 19 - commands you never knew",
+    "end_time": 1212
+   }
+  ],
+  "tags": [],
+  "categories": [
+   "Science & Technology"
+  ],
+  "heatmap": [
+   {
+    "start_time": 0.0,
+    "end_time": 12.12,
+    "value": 0.14333331034090713
+   },
+   {
+    "start_time": 12.12,
+    "end_time": 24.24,
+    "value": 0.04881181880477599
+   },
+   {
+    "start_time": 24.24,
+    "end_time": 36.36,
+    "value": 0.13063782813859104
+   },
+   {
+    "start_time": 36.36,
+    "end_time": 48.48,
+    "value": 0.27440255567952965
+   },
+   {
+    "start_time": 48.48,
+    "end_time": 60.6,
+    "value": 0.20436217067214552
+   },
+   {
+    "start_time": 60.6,
+    "end_time": 72.72,
+    "value": 0.2238633317500273
+   },
+   {
+    "start_time": 72.72,
+    "end_time": 84.84,
+    "value": 0.20677513859081323
+   },
+   {
+    "start_time": 84.84,
+    "end_time": 96.96,
+    "value": 0.1500648743198305
+   },
+   {
+    "start_time": 96.96,
+    "end_time": 109.08,
+    "value": 0.19086003487396067
+   },
+   {
+    "start_time": 109.08,
+    "end_time": 121.2,
+    "value": 0.35789698267219405
+   },
+   {
+    "start_time": 121.2,
+    "end_time": 133.32,
+    "value": 0.648100282497634
+   },
+   {
+    "start_time": 133.32,
+    "end_time": 145.44,
+    "value": 0.8890617972196448
+   },
+   {
+    "start_time": 145.44,
+    "end_time": 157.56,
+    "value": 0.8466401048644917
+   },
+   {
+    "start_time": 157.56,
+    "end_time": 169.68,
+    "value": 0.6799937587455459
+   },
+   {
+    "start_time": 169.68,
+    "end_time": 181.8,
+    "value": 0.7314694562663836
+   },
+   {
+    "start_time": 181.8,
+    "end_time": 193.92,
+    "value": 0.6991017017646053
+   },
+   {
+    "start_time": 193.92,
+    "end_time": 206.04,
+    "value": 0.9465802849142172
+   },
+   {
+    "start_time": 206.04,
+    "end_time": 218.16,
+    "value": 0.9143374506425948
+   },
+   {
+    "start_time": 218.16,
+    "end_time": 230.28,
+    "value": 0.4086366688446044
+   },
+   {
+    "start_time": 230.28,
+    "end_time": 242.4,
+    "value": 0.329956665619322
+   },
+   {
+    "start_time": 242.4,
+    "end_time": 254.52,
+    "value": 0.46965710919079423
+   },
+   {
+    "start_time": 254.52,
+    "end_time": 266.64,
+    "value": 0.6432949922733555
+   },
+   {
+    "start_time": 266.64,
+    "end_time": 278.76,
+    "value": 0.39680996735947605
+   },
+   {
+    "start_time": 278.76,
+    "end_time": 290.88,
+    "value": 0.34988034820681674
+   },
+   {
+    "start_time": 290.88,
+    "end_time": 303.0,
+    "value": 0.3277265112743362
+   },
+   {
+    "start_time": 303.0,
+    "end_time": 315.12,
+    "value": 0.26844539247239063
+   },
+   {
+    "start_time": 315.12,
+    "end_time": 327.24,
+    "value": 0.603992500029137
+   },
+   {
+    "start_time": 327.24,
+    "end_time": 339.36,
+    "value": 0.9209400508957175
+   },
+   {
+    "start_time": 339.36,
+    "end_time": 351.48,
+    "value": 0.3017116592769802
+   },
+   {
+    "start_time": 351.48,
+    "end_time": 363.6,
+    "value": 0.2582331874424248
+   },
+   {
+    "start_time": 363.6,
+    "end_time": 375.72,
+    "value": 0.22327288624481273
+   },
+   {
+    "start_time": 375.72,
+    "end_time": 387.84,
+    "value": 0.2197014806091788
+   },
+   {
+    "start_time": 387.84,
+    "end_time": 399.96,
+    "value": 0.5278885840938872
+   },
+   {
+    "start_time": 399.96,
+    "end_time": 412.08,
+    "value": 0.41188259686610057
+   },
+   {
+    "start_time": 412.08,
+    "end_time": 424.2,
+    "value": 0.2157738667925066
+   },
+   {
+    "start_time": 424.2,
+    "end_time": 436.32,
+    "value": 0.1419497212723311
+   },
+   {
+    "start_time": 436.32,
+    "end_time": 448.44,
+    "value": 0.08514541004970408
+   },
+   {
+    "start_time": 448.44,
+    "end_time": 460.56,
+    "value": 0.06507644704221861
+   },
+   {
+    "start_time": 460.56,
+    "end_time": 472.68,
+    "value": 0.0
+   },
+   {
+    "start_time": 472.68,
+    "end_time": 484.8,
+    "value": 0.3288061721820344
+   },
+   {
+    "start_time": 484.8,
+    "end_time": 496.92,
+    "value": 0.3887054225417271
+   },
+   {
+    "start_time": 496.92,
+    "end_time": 509.04,
+    "value": 0.2242941305330778
+   },
+   {
+    "start_time": 509.04,
+    "end_time": 521.16,
+    "value": 0.14004328443161415
+   },
+   {
+    "start_time": 521.16,
+    "end_time": 533.28,
+    "value": 0.3089277767457614
+   },
+   {
+    "start_time": 533.28,
+    "end_time": 545.4,
+    "value": 0.23529928884425716
+   },
+   {
+    "start_time": 545.4,
+    "end_time": 557.52,
+    "value": 0.18477286138920715
+   },
+   {
+    "start_time": 557.52,
+    "end_time": 569.64,
+    "value": 0.32434691004387667
+   },
+   {
+    "start_time": 569.64,
+    "end_time": 581.76,
+    "value": 0.3943410564892991
+   },
+   {
+    "start_time": 581.76,
+    "end_time": 593.88,
+    "value": 0.25621586367996635
+   },
+   {
+    "start_time": 593.88,
+    "end_time": 606.0,
+    "value": 0.2992718140049088
+   },
+   {
+    "start_time": 606.0,
+    "end_time": 618.12,
+    "value": 0.47337408066964093
+   },
+   {
+    "start_time": 618.12,
+    "end_time": 630.24,
+    "value": 0.6604225738372036
+   },
+   {
+    "start_time": 630.24,
+    "end_time": 642.36,
+    "value": 0.6185813371744956
+   },
+   {
+    "start_time": 642.36,
+    "end_time": 654.48,
+    "value": 0.39128764643103237
+   },
+   {
+    "start_time": 654.48,
+    "end_time": 666.6,
+    "value": 0.2599917274836161
+   },
+   {
+    "start_time": 666.6,
+    "end_time": 678.72,
+    "value": 0.2382652166849853
+   },
+   {
+    "start_time": 678.72,
+    "end_time": 690.84,
+    "value": 0.44192091731217903
+   },
+   {
+    "start_time": 690.84,
+    "end_time": 702.96,
+    "value": 0.3228472964355634
+   },
+   {
+    "start_time": 702.96,
+    "end_time": 715.08,
+    "value": 0.27916617411339817
+   },
+   {
+    "start_time": 715.08,
+    "end_time": 727.2,
+    "value": 0.4109774722586467
+   },
+   {
+    "start_time": 727.2,
+    "end_time": 739.32,
+    "value": 0.18414845052057627
+   },
+   {
+    "start_time": 739.32,
+    "end_time": 751.44,
+    "value": 0.22433727701013467
+   },
+   {
+    "start_time": 751.44,
+    "end_time": 763.56,
+    "value": 0.17255679505875318
+   },
+   {
+    "start_time": 763.56,
+    "end_time": 775.68,
+    "value": 0.24984017488832222
+   },
+   {
+    "start_time": 775.68,
+    "end_time": 787.8,
+    "value": 0.31867103142200465
+   },
+   {
+    "start_time": 787.8,
+    "end_time": 799.92,
+    "value": 0.4774404101721982
+   },
+   {
+    "start_time": 799.92,
+    "end_time": 812.04,
+    "value": 0.31316093612156937
+   },
+   {
+    "start_time": 812.04,
+    "end_time": 824.16,
+    "value": 0.4216746113427664
+   },
+   {
+    "start_time": 824.16,
+    "end_time": 836.28,
+    "value": 0.3841886476243393
+   },
+   {
+    "start_time": 836.28,
+    "end_time": 848.4,
+    "value": 0.5815848742817741
+   },
+   {
+    "start_time": 848.4,
+    "end_time": 860.52,
+    "value": 0.48473754026548643
+   },
+   {
+    "start_time": 860.52,
+    "end_time": 872.64,
+    "value": 0.3434377276696169
+   },
+   {
+    "start_time": 872.64,
+    "end_time": 884.76,
+    "value": 0.31561581368333197
+   },
+   {
+    "start_time": 884.76,
+    "end_time": 896.88,
+    "value": 0.5155485013734803
+   },
+   {
+    "start_time": 896.88,
+    "end_time": 909.0,
+    "value": 0.3364214064562257
+   },
+   {
+    "start_time": 909.0,
+    "end_time": 921.12,
+    "value": 0.3872469574479168
+   },
+   {
+    "start_time": 921.12,
+    "end_time": 933.24,
+    "value": 0.5271060487602761
+   },
+   {
+    "start_time": 933.24,
+    "end_time": 945.36,
+    "value": 0.42485260863742996
+   },
+   {
+    "start_time": 945.36,
+    "end_time": 957.48,
+    "value": 0.18486329298003965
+   },
+   {
+    "start_time": 957.48,
+    "end_time": 969.6,
+    "value": 0.12218668438827739
+   },
+   {
+    "start_time": 969.6,
+    "end_time": 981.72,
+    "value": 0.216688362795749
+   },
+   {
+    "start_time": 981.72,
+    "end_time": 993.84,
+    "value": 0.5383382136740081
+   },
+   {
+    "start_time": 993.84,
+    "end_time": 1005.96,
+    "value": 0.45437802355359996
+   },
+   {
+    "start_time": 1005.96,
+    "end_time": 1018.08,
+    "value": 0.6877112221037451
+   },
+   {
+    "start_time": 1018.08,
+    "end_time": 1030.2,
+    "value": 1.0
+   },
+   {
+    "start_time": 1030.2,
+    "end_time": 1042.32,
+    "value": 0.8812582311894799
+   },
+   {
+    "start_time": 1042.32,
+    "end_time": 1054.44,
+    "value": 0.6543100452562304
+   },
+   {
+    "start_time": 1054.44,
+    "end_time": 1066.56,
+    "value": 0.5517431152945699
+   },
+   {
+    "start_time": 1066.56,
+    "end_time": 1078.68,
+    "value": 0.6807712516022352
+   },
+   {
+    "start_time": 1078.68,
+    "end_time": 1090.8,
+    "value": 0.39921684624940806
+   },
+   {
+    "start_time": 1090.8,
+    "end_time": 1102.92,
+    "value": 0.29387850437280266
+   },
+   {
+    "start_time": 1102.92,
+    "end_time": 1115.04,
+    "value": 0.5190611098253852
+   },
+   {
+    "start_time": 1115.04,
+    "end_time": 1127.16,
+    "value": 0.5899176149655007
+   },
+   {
+    "start_time": 1127.16,
+    "end_time": 1139.28,
+    "value": 0.6650781120110135
+   },
+   {
+    "start_time": 1139.28,
+    "end_time": 1151.4,
+    "value": 0.631271824470427
+   },
+   {
+    "start_time": 1151.4,
+    "end_time": 1163.52,
+    "value": 0.5496043439511564
+   },
+   {
+    "start_time": 1163.52,
+    "end_time": 1175.64,
+    "value": 0.4536265517806484
+   },
+   {
+    "start_time": 1175.64,
+    "end_time": 1187.76,
+    "value": 0.37522193439404533
+   },
+   {
+    "start_time": 1187.76,
+    "end_time": 1199.88,
+    "value": 0.22914166339421013
+   },
+   {
+    "start_time": 1199.88,
+    "end_time": 1212.0,
+    "value": 0.05505195535124539
+   }
+  ],
+  "upload_date": "20260822",
+  "duration": 1212,
+  "channel": "Simon Scrapes",
+  "channel_id": "UCdCR4-uYOg5ju-IUuDnfnQA",
+  "channel_follower_count": 106000,
+  "thumbnail": "https://i.ytimg.com/vi_webp/icM0ewXGvAw/maxresdefault.webp",
+  "view_count": 128708,
+  "like_count": 2328,
+  "comment_count": 54
+ }
+}

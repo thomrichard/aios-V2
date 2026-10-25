@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr" data-mode="nuit">
+<head>
+<meta charset="utf-8">
+<title>Gabarit · miniature YouTube</title>
+<!-- 1280 × 720. Champs : mode, surtitre, titre, photo, photo_x, photo_taille. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../jetons.css">
+<link rel="stylesheet" href="gabarits.css">
+<style>
+.cadre{width:1280px;height:720px}
+.halo{width:742px;right:26px;top:-26px}
+.vk{width:845px;right:-77px;top:-90px}
+.pilule{left:64px;top:64px;font-size:30px}
+.photo{left:80%}
+.titre{left:64px;top:50%;transform:translateY(-42%);width:640px;font-size:108px}
+</style>
+</head>
+<body>
+<div class="cadre">
+  <svg class="halo" viewBox="0 0 1240 1143.15"><use href="#valknut"/></svg>
+  <svg class="vk" viewBox="0 0 1240 1143.15"><use href="#valknut-lumiere"/></svg>
+  <img class="photo" data-photo="mains-sur-la-tete" alt="">
+  <span class="pilule" data-champ="surtitre">Claude</span>
+  <h1 class="titre" data-champ="titre">Arrête de<br>gaspiller<br><span class="fort">tes tokens</span></h1>
+  <span class="grain"></span>
+</div>
+<script src="commun.js"></script>
+</body>
+</html>

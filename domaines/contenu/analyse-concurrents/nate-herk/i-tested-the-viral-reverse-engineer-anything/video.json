@@ -1,0 +1,133 @@
+{
+ "id": "rL5tw6h78zo",
+ "url": "https://www.youtube.com/watch?v=rL5tw6h78zo",
+ "chaine": "nate-herk",
+ "titre": "I Tested the Viral Reverse Engineer Anything Skill. What You Need to Know.",
+ "titre_ytdlp": "I Tested the Viral Reverse Engineer Anything Skill. What You Need to Know.",
+ "publie": "2026-10-13T17:34:41Z",
+ "duree_s": 899,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "Ua8E6vKgOyauIaz8A5jephobtdo",
+  "id": "rL5tw6h78zo",
+  "snippet": {
+   "publishedAt": "2026-10-13T17:34:41Z",
+   "channelId": "UC2ojq-nuP8ceeHqiroeKhBA",
+   "title": "I Tested the Viral Reverse Engineer Anything Skill. What You Need to Know.",
+   "description": "FREE Scrollcraft Website Design Skill: https://app.aiautomationsociety.ai/optin/scrollcraft/?utm_source=youtube&utm_medium=organic&utm_content=reverse-engineer-anything&sl=yt_reverse-engineer-anything\nHow I built an AI agency from 0 to over $1 million per year: https://www.skool.com/ai-automation-society-plus/about?el=reverse-engineer-anything&hcategory=youtube-videos&utm_campaign=plus-group\nMy FREE resources: https://www.skool.com/ai-automation-society/about?el=reverse-engineer-anything&hcategory=youtube-videos&utm_campaign=free-group\n\nREA Repo: https://github.com/morluto/rea\n\nMy Tools💻\nFREE MONTH voice to text: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www.hostinger.com/vps/claude-code-hosting\n\nI tested Reverse Engineer Anything (REA) with Claude Code to see how it could help me rebuild features from existing apps, including my own Loom-inspired screen recorder. \n\nI break down how it works, a five-step process for using it, and the limitations I ran into. The same approach can help you build better AI skills and workflows by giving your agent clear examples of the output you want.\n\nSponsorship Inquiries:\n📧 nate@smoothmedia.co\n\nConnect with me:\nhttps://www.linkedin.com/in/nateherkelman/\nhttps://x.com/nateherk\nhttps://www.instagram.com/nateherk/\n\nTIMESTAMPS \n0:00 Reverse Engineer Anything\n0:52 Better AI Outputs With References\n3:14 Rebuilding App Features\n5:20 How REA Works\n7:36 A Five-Step REA Workflow\n11:09 Limits and Caveats\n12:57 Results and Final Takeaways",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/rL5tw6h78zo/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/rL5tw6h78zo/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/rL5tw6h78zo/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/rL5tw6h78zo/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/rL5tw6h78zo/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    },
+    "qhd": {
+     "url": "https://i.ytimg.com/vi/rL5tw6h78zo/qhddefault.jpg",
+     "width": 2560,
+     "height": 1440
+    }
+   },
+   "channelTitle": "Nate Herk | AI Automation",
+   "categoryId": "1",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "en",
+   "localized": {
+    "title": "I Tested the Viral Reverse Engineer Anything Skill. What You Need to Know.",
+    "description": "FREE Scrollcraft Website Design Skill: https://app.aiautomationsociety.ai/optin/scrollcraft/?utm_source=youtube&utm_medium=organic&utm_content=reverse-engineer-anything&sl=yt_reverse-engineer-anything\nHow I built an AI agency from 0 to over $1 million per year: https://www.skool.com/ai-automation-society-plus/about?el=reverse-engineer-anything&hcategory=youtube-videos&utm_campaign=plus-group\nMy FREE resources: https://www.skool.com/ai-automation-society/about?el=reverse-engineer-anything&hcategory=youtube-videos&utm_campaign=free-group\n\nREA Repo: https://github.com/morluto/rea\n\nMy Tools💻\nFREE MONTH voice to text: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www.hostinger.com/vps/claude-code-hosting\n\nI tested Reverse Engineer Anything (REA) with Claude Code to see how it could help me rebuild features from existing apps, including my own Loom-inspired screen recorder. \n\nI break down how it works, a five-step process for using it, and the limitations I ran into. The same approach can help you build better AI skills and workflows by giving your agent clear examples of the output you want.\n\nSponsorship Inquiries:\n📧 nate@smoothmedia.co\n\nConnect with me:\nhttps://www.linkedin.com/in/nateherkelman/\nhttps://x.com/nateherk\nhttps://www.instagram.com/nateherk/\n\nTIMESTAMPS \n0:00 Reverse Engineer Anything\n0:52 Better AI Outputs With References\n3:14 Rebuilding App Features\n5:20 How REA Works\n7:36 A Five-Step REA Workflow\n11:09 Limits and Caveats\n12:57 Results and Final Takeaways"
+   },
+   "defaultAudioLanguage": "en"
+  },
+  "contentDetails": {
+   "duration": "PT14M59S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": true,
+   "contentRating": {},
+   "projection": "rectangular"
+  },
+  "statistics": {
+   "viewCount": "223109",
+   "likeCount": "2537",
+   "favoriteCount": "0",
+   "commentCount": "77"
+  }
+ },
+ "ytdlp": {
+  "id": "rL5tw6h78zo",
+  "title": "I Tested the Viral Reverse Engineer Anything Skill. What You Need to Know.",
+  "description": "FREE Scrollcraft Website Design Skill: https://app.aiautomationsociety.ai/optin/scrollcraft/?utm_source=youtube&utm_medium=organic&utm_content=reverse-engineer-anything&sl=yt_reverse-engineer-anything\nHow I built an AI agency from 0 to over $1 million per year: https://www.skool.com/ai-automation-society-plus/about?el=reverse-engineer-anything&hcategory=youtube-videos&utm_campaign=plus-group\nMy FREE resources: https://www.skool.com/ai-automation-society/about?el=reverse-engineer-anything&hcategory=youtube-videos&utm_campaign=free-group\n\nREA Repo: https://github.com/morluto/rea\n\nMy Tools💻\nFREE MONTH voice to text: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www.hostinger.com/vps/claude-code-hosting\n\nI tested Reverse Engineer Anything (REA) with Claude Code to see how it could help me rebuild features from existing apps, including my own Loom-inspired screen recorder. \n\nI break down how it works, a five-step process for using it, and the limitations I ran into. The same approach can help you build better AI skills and workflows by giving your agent clear examples of the output you want.\n\nSponsorship Inquiries:\n📧 nate@smoothmedia.co\n\nConnect with me:\nhttps://www.linkedin.com/in/nateherkelman/\nhttps://x.com/nateherk\nhttps://www.instagram.com/nateherk/\n\nTIMESTAMPS \n0:00 Reverse Engineer Anything\n0:52 Better AI Outputs With References\n3:14 Rebuilding App Features\n5:20 How REA Works\n7:36 A Five-Step REA Workflow\n11:09 Limits and Caveats\n12:57 Results and Final Takeaways",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "Reverse Engineer Anything",
+    "end_time": 52
+   },
+   {
+    "start_time": 52,
+    "title": "Better AI Outputs With References",
+    "end_time": 194
+   },
+   {
+    "start_time": 194,
+    "title": "Rebuilding App Features",
+    "end_time": 320
+   },
+   {
+    "start_time": 320,
+    "title": "How REA Works",
+    "end_time": 456
+   },
+   {
+    "start_time": 456,
+    "title": "A Five-Step REA Workflow",
+    "end_time": 669
+   },
+   {
+    "start_time": 669,
+    "title": "Limits and Caveats",
+    "end_time": 777
+   },
+   {
+    "start_time": 777,
+    "title": "Results and Final Takeaways",
+    "end_time": 898
+   }
+  ],
+  "tags": [],
+  "categories": [
+   "Film & Animation"
+  ],
+  "heatmap": null,
+  "upload_date": "20261013",
+  "duration": 898,
+  "channel": "Nate Herk | AI Automation",
+  "channel_id": "UC2ojq-nuP8ceeHqiroeKhBA",
+  "channel_follower_count": 1090000,
+  "thumbnail": "https://i.ytimg.com/vi_webp/rL5tw6h78zo/maxresdefault.webp",
+  "view_count": 223109,
+  "like_count": 2537,
+  "comment_count": 55
+ }
+}

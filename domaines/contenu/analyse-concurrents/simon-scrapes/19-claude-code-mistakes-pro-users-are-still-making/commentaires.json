@@ -1,0 +1,488 @@
+[
+ {
+  "texte": "I really appreciate you stating previously good advice as outdated and being transparent about it. It adds a lot to your credibility. Thanks for consistently good content 🎉",
+  "likes": 23,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@herwigsyen804",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "I remember the good old days when I told Claude that it was a senior engineer at Google! It over engineered everything!",
+  "likes": 14,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@gimblito8172",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "One correction:\n\nUltracode consumes significantly more subscription usage and tokens. Because it combines maximum internal reasoning budgets with parallel background sub-agents, it burns through rate limits and context tokens far faster than standard modes.",
+  "likes": 10,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@DaveVoyles",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "This reminds me of the good old days, of ~6 months ago, when Claude actually followed instructions. Most of the engineers that I know rarely use Anthropic anymore. It was fun while it lasted!",
+  "likes": 8,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@JarodRosenthal",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Mistake 17 - I like the idea of an adversarial review agent and telling the building agent to use an independent code-reviewing sub-agent to check for code issues.  Assuming the builder runs the sub-agent to check for issues, the subagent raises these issues to the builder agent, and the builder agent then fixes them.  When the builder agent next calls for a sub-agent to review, is this a new instance of the sub-agent or will it be the same sub-agent which found the first set of issues?  I would prefer it if the sub-agent was the same as it would know exactly the issues to look for, but I’m guessing this isn’t the case and the sub-agent starts with no context of the previous issue?",
+  "likes": 5,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@NewGuestUser",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "/branch was good to know. Ive thought about that functionality a lot. I usually split terminals.  Speaking of split terminals, would love to know your thoughts on the wrap up process in split terminals",
+  "likes": 5,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@RobCooper",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Solid advice throughout. Learnt 7:34 the hard (expensive) way. Thank you for offering practical advice and real value amongst the growing hype content. Edit: I’d love a guide to a cloud-based Claude Code setup that works across multiple computers: keeping code, project context, and configuration in sync, while leaving documents and data in their proper cloud services, such as Google Workspace. Also, Git best practices, parallel agent sessions, and running Claude Code alongside Antigravity without conflicts.\nI realise that’s a lot, but I’d love to see any of it covered in your clear, practical style. Thank you for the great work. Looking forward to what’s next.",
+  "likes": 4,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Koekefant",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "The point about switching models made me wonder about OpusPlan. Using Opus for planning and Sonnet for implementation sounds like exactly the kind of model switch you're warning about. Does Claude Code handle the context and caching differently there, or does OpusPlan have the same tradeoff?",
+  "likes": 3,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Summera_ai",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "0:19 Thank you for confirming what I already suspected. I always felt like the AI is perfectly smart enough to pick out its own persona hat to wear based on the prompt I give it without me having to explicitly say it.",
+  "likes": 3,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ex0stasis72",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "The advertisements in this video were nuts, I've never seen so many.",
+  "likes": 3,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@dghighfill",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "My first project i did i totally winged it did the whole thing in a single chat mega thread can't believe i got away with it turned out great",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@dzaxy17",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Really useful breakdown. The tips on context management and avoiding unnecessary complexity were especially helpful.",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@OpenpassAI",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "If this claim is accurate, the interesting part isn't that “jalapeño chips beat Nvidia.” It's that the test may be measuring efficiency and latency rather than raw computing power.\r\n\r\nA chip can lose on total compute and still win on:\r\n\r\nAI work per watt more useful inference for the same electricity.\r\nResponse latency getting an AI answer back faster.\r\nCost per inference potentially doing the same workload more cheaply.\r\n\r\nThat's increasingly important because AI data centers are hitting a major constraint: power.\r\n\r\nNvidia's advantage has historically been much broader than having the fastest chip. Its ecosystem includes GPUs, networking, CUDA, libraries, software and a huge developer base.\r\n\r\nSo even if a new accelerator beats an Nvidia product on specific benchmarks, that doesn't mean it has surpassed Nvidia overall.\r\n\r\nThe bigger future trend\r\n\r\nThis is where semiconductor competition is heading:\r\n\r\nMore compute\r\n→ more efficient compute\r\n→ specialized AI accelerators\r\n→ lower cost per token\r\n→ less electricity per AI response\r\n\r\nThe future may not be dominated by one universal GPU.\r\n\r\nWe could see a heterogeneous AI infrastructure where:\r\n\r\nNvidia GPUs handle general workloads\r\nspecialized accelerators handle specific inference tasks\r\nCPUs manage orchestration\r\ncustom ASICs handle high-volume workloads\r\n\r\nAnd that's a serious threat to Nvidia's margins over the long term—even if Nvidia remains the dominant platform.\r\n\r\nThe real metric to watch isn't “who has the biggest chip?”\r\n\r\nIt's:\r\n\r\nHow much useful intelligence can you produce per dollar and per watt?\r\n\r\nThat's the metric that could reshape the AI hardware market.",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@1NISU",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Why did you stop using Vscode?",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@realstevenhou",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Sir, what a explanation!😮\nLearned a lot, updated myself … super thank you🎉",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@vmfrag",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "I’m not sure I agree with your points about subagents and them being more costly.  I run Opus or Sol as an orchestrator and have them spin up haiku and luna subagents for work.  I get much more done before hitting limits.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@charliemcdaddy5198",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Lots of great tips. Ty!",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@marygreen3163",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Like this",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@TimeWalkFilms",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "For subagent management: if someone's willing to spend, but want to parallelize their workflow, they're still good",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@omkarbhale442",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "sharing skills across modes: use a soft link to a \"shared-skills\" directory should work. Then you don't have to maintain duplicate skills.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@stefans.226",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "I have Claude change the MD filing there is a need for a change and that works very well.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@themistoklis6237",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Please can you link the anthropic docs you mention in the video? Thanks.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@cragusmaximus",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Tbh claude handles turning notes into specs, those seat fees were rough, teamorouter kept the workflow and cut costs 😅.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@BerenusNorthbourne",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "That was brilliant mate - Cheers!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@snowballeffects",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "my experience contradicts the examples not needed case. when i code with claude, i give him to read a representative list of example files, and it keeps the code principles from those examples. if i dont. it uses only files it touches as examples, often diverging from the principles i want it to follow.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@luk890",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Great stuff but it seems like 1/2 the problem is Claude or Anthropic just being too expensive?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@AlfredNutile",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "is there anything around automemory which we can be optimising?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@sonnsingh",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "By every new session do you mean every prompt?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@haidersyed6554",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Yeah I guess that persona thing is just Claude because I successfully use personas for testing every week.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@billwatson1448",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Thanks for watching my video :)\nSub if you enjoyed it: https://www.youtube.com/@simonscrapes?sub_confirmation=1\nNow make AI run without you: https://skool.com/scrapes",
+  "likes": 0,
+  "epingle": false,
+  "createur": true,
+  "auteur": "@simonscrapes",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Don't sub-agents get full parent cached context by default now?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@graydwarf22",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Long Context: you show Opus 4.6. Since then 3 new Opus models came out.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Manu-rd4pb",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Whenever people gave Claude a role, I always thought why stop at 20 years? Why not 100 years? Why not a thousand?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@nathanfife2890",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "It doesnt work this way. It keeps doubting my css build pipeline for example when pointed at fixing some styling. Explicit \"Do not ...\" solves it immediately.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ales.vaupotic",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "what is continually not clear is which model are you talking about, because presumably they have different capacities and are not just watered down versions of the same engine",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@catonup",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "With prompts be direct and demanding if you don’t want to waste your time with Claude",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@mikemm9827",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "give models appropriate context and directions, no fluff, be be very careful on word structures to not waste activation of unwanted tensor weights. Eg \"you and I have a relationship of creating value\" <- seen so many YTers actually have this waste fluff in their contracts and prompts. The later rehash of published updates is good though.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@LevyBytes",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "15:36 no it doesn't. Manually changing plans makes them prone to errors and inconsistencies that will now drive the session to make more errors you can't attribute to the real root cause.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@SiaarZH",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "I put the transcript into the fable to fact check and it said 11 of 19 claims were wroth while and th rest are fully out of date of fabricated. ... not super.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@theonlyalexoliveira",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Advice is premised on you only using Claude. Your framework should be LLM agnostic.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@michaelfinlan1538",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "The elephant in the room is that it's not the users that are the problem. It's Claude. Anthropic has become very stressful to use. Anyone who's professional using this knows how bad claude has gotten. If you honestly don't, go and use another model, and you'll be refreshed at how responsive and how they get things done. How many times have I had Anthropic refuse to do work or come back with gibberish or nonsense? They've ruined a really good model with their latest releases. \n\nI've honestly started using Grok and Kimmy a lot more.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@whatchannel3679",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Do you have proof that Claude can code? Do you have a project you can reference? It does not work and breaks my code. It will not complete my project in over 6 weeks now. It takes working code and breaks it.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@eyetryai",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "I'm 1000% convinced no one knows what they are doing and its fine because most jobs are completely useless",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@jamessullenriot",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Agent teams and subagents aren't the same thing.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Desmond-Dark",
+  "date": 1792540800,
+  "parent": "root"
+ },
+ {
+  "texte": "Never gave the agent a role before.  Seemed kinda cringe.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@nonzz3ro",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Wait you've been telling your LLMs to \"take a deep breath\"? Seems silly. What's the utility of telling a machine to breathe?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@triyuga",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "I'm just here to warn people that Claude Code only works about 10-20% of the time. I am even using Gemini to fact check and it still can't code accurately. I don't understand how all these videos exist telling people it works? This is my 4th project with the same results over a 5 week period.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@eyetryai",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Who is telling a large language model to take a deep breath? 😂😅",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@hitmusicworldwide",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "That’s what claud has been acting so incredibly stupid lately",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@moslimislam5714",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Hi Simon Scrapes, love your content! We’re interested in exploring potential collaboration opportunities with you. What’s the best way to get in touch or send over details? Thanks!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@JudyChen-d7s",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Thumbs down for the clickbait thumbnail, you didn't interview Boris or have him in the video at all. LAAAAAAAAAAME.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@CodyEngel",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "\"let claude check it's work\"\n\nCan't tell if it's an actual mistake or you're an epic troll. Kudos to you.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@KellyStuard",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "I dont think you know what you are talking about.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@brjohow",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "That’s a horribly small experiment. Especially concerning that this is probabilistic and that is not a persona. That is a one liner that is ill conceived. It doesn’t take into account for the different mathematical principles that govern language. It’s no wonder the experiment yields results that don’t push the needle.\n\nMaybe make an actual persona. There’s plenty of proof that personas do indeed alter the thinking and the output. Saying otherwise at this point is peculiar. This is the type of lazy prompting and thinking that would have argued against CoT saying it doesn’t work.\n\n0:28 All I can think is there’s no wisdom in this video and it’s just a waste of time to think otherwise. Take a persona writing class if this is what you think a persona is. That goes for all of the frontier, researchers, and developers, who also seem to not actually think about the clusters and associations.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Elle-et-Al",
+  "date": 1787616000,
+  "parent": "root"
+ }
+]

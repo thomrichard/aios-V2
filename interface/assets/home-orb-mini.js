@@ -1,2 +1,2 @@
 /* The homepage orb's coloured centre: your departments and layers, written by refresh/brain.mjs. */
-window.HOME_ORB_MINI={"U":7.5,"depts":[["operations","#00bcd4",463],["contenu","#e040fb",210],["communaute","#fdd835",715],["consulting","#43a047",12],["produits","#f44336",12],["perso","#ec407a",12]],"S":["#f2efe8",64],"R":["#d99a1f",42],"A":["#3f8fd4",40]};
+window.HOME_ORB_MINI={"U":7.5,"depts":[["operations","#00bcd4",429],["contenu","#e040fb",272],["communaute","#fdd835",686],["consulting","#43a047",12],["produits","#f44336",12],["perso","#ec407a",12]],"S":["#f2efe8",68],"R":["#d99a1f",42],"A":["#3f8fd4",40]};

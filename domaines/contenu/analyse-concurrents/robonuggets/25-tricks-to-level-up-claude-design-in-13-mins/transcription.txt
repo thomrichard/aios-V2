@@ -1,0 +1,152 @@
+[00:00] These are the Claude design tricks that can take you from a complete beginner to creating beautiful websites, user interfaces, and motion graphics like the ones you're seeing in this video.
+[00:10] So, today we're going from the easy stuff that anyone can do within minutes all the way to some advanced power user tricks including some bonus ones that I haven't heard anyone else talk about.
+[00:21] And if you're new, my name is Jay.
+[00:22] I spent over a decade working with brands you may know, have been in AI since my master's in data science.
+[00:26] Now, I'm running an AI business in one of the largest AI communities globally.
+[00:30] So, let's dive into it starting off with the easy ones.
+[00:33] Number one, design systems.
+[00:35] So, this is where everything starts when you use Claude or really any AI agent when it comes to design.
+[00:41] The simplest way to create one is to open Claude design at claude.ai/design, go to design systems and hit create.
+[00:49] Here, you can describe your business, add your fonts, logos, and assets.
+[00:53] And you don't even need to start from scratch because you can drop in a deck that you like, a website, or just a screenshot, turn that design system, and Claude pulls out the colors, the fonts, and the components
+[01:05] for you.
+[01:06] Number two, give Claude 2000+ design styles.
+[01:09] So, there's a site called styles.referral.design, and it's a gallery of over 2000 real design systems like the ones from Mercury, Linear, and Apple, and they're written in a way that Claude can actually read with the colors, the type,
+[01:22] and spacing all laid out.
+[01:24] And so, what you can do is open the one that you like, copy the design system, paste that into Claude, mention any tweaks that you want, and Claude creates a high-quality design system for you in one go.
+[01:35] Number three, let Claude shortlist the top three.
+[01:38] Now, here's a trick with that referral gallery and really any gallery of design systems that you find on the web.
+[01:44] It's that you do not need to browse it yourself because there are thousands of designs in that list, right?
+[01:49] Instead, what you can do is to give Claude the link and say to just go through this gallery and find me three design systems that is closest to my business and give me the links to those.
+[01:59] It then filters them down to your niche in one go, which is just much easier for you to find.
+[02:04] Number four is to build design systems directly in Claude Code.
+[02:07] Now, the Claude design web app that you may be used to, the web version at this URL, it is great, but it does have its limits.
+[02:14] A big one is that it's web base, so it can't really get to the files on your computer unless you upload them individually.
+[02:20] The good news is if you're already using Claude Code or even Claude Co-work, creating a design system is just a matter of making a custom skill that holds that design system.
+[02:30] For example, you can send this prompt to make a {slash} Duolingo skill, which creates material in that Duolingo style every time you invoke it.
+[02:38] In fact, most of the other tips in this video also work in Claude Code just because of how flexible that tool is.
+[02:44] Number five, fonts.
+[02:45] So, the fastest way to spot a vibe-coded design is the font because beginners just leave whatever default Claude gives them.
+[02:52] A good tip then is to go to sites like FontShare or Fontesk, which are both free.
+[02:57] Grab a font that actually fits your brand, and if you need a pairing of fonts, Font Joy will generate heading and body combos for you automatically.
+[03:05] Then you can name these fonts in the prompt or upload the font file to your design system, and it instantly would upgrade the look of your designs.
+[03:13] And by the way, I've put every one of these tips into a detailed PDF guide including all of the resources that I mentioned in this video.
+[03:20] You can just send that to your AI agent and ask it which ones apply to your setup.
+[03:25] And the link for that is just in the description below.
+[03:27] Number six is about copy.
+[03:29] So, if the words in your designs sound like AI wrote them, then you've already lost your audience even when the visuals look perfect.
+[03:36] And so, what you should do is send a prompt like this where you ask Claude to study the top five players in your niche, note the patterns in what they all do in their copy, and then bake that
+[03:47] into your design system.
+[03:48] That way you start from best practice instead of AI speak that your audience can spot straight away.
+[03:54] Number seven is to mix design systems.
+[03:57] One way to come up with an original professional design of your own is to mix and match design systems.
+[04:03] Just open the system that you are working on, add other design systems to that chat, and tell Claude which bits to take from each like the type from design number one and the color and motion from design number
+[04:14] two, and it can merge them.
+[04:16] So, what you actually end up with is a blend that looks like yours instead of a straight copy of a brand that you like.
+[04:23] Okay, so those are the basics, and if you only did those, you'd already be ahead of most people using Claude and AI agents for design.
+[04:30] But, the next ones are some intermediate tips to make your front-end designs and marketing materials even more professional.
+[04:36] And by the way, if you want to learn how to build and sell AI systems that businesses actually pay for, then that's pretty much all we do over at the Robo Nuggets community, where not only do you get
+[04:44] access to the Claude Living Masterclass, which we update every week and takes you from zero to mastery with the latest on AI, but you also get access to our agents as a service course, which walks you through how
+[04:54] to actually get paid for all these AI skills that you are learning.
+[04:57] You also get to be part of a genuinely great community of AI builders.
+[05:01] In fact, you can see just some of the recent wins our members are getting from the program right here.
+[05:05] So, if you want to start earning from AI, then check that just in the pinned comment below.
+[05:08] Now, back to the video.
+[05:09] Number eight are images and the videos.
+[05:12] So, Claude design can't make images or videos on its own, but what you can do is to link Claude to a generator.
+[05:18] Personally, I use Key AI, which gives you most of the big image and video models in one place, and you also only pay for what you generate.
+[05:26] Key AI is also one of the cheapest providers out there.
+[05:29] So, the easiest way to connect to it is to send a prompt like this to Claude code and let it set Key AI for you.
+[05:35] Number nine is to reference another project.
+[05:37] So, in Claude design, when you start something new, a good move is to grab the URL of a project that you already finished in Claude design, paste it into the new session, and just say to use this project's
+[05:48] design system and assets for what you're about to build.
+[05:51] And by the way, this also works in Cloud Code, so you just give it the name of a previous session, or even ask Claude to find it for you, so that any work you've already done in a previous
+[06:00] session can become your starting point.
+[06:03] Number 10 is to curate your own reference library.
+[06:06] In my view, your taste gets better the more great designs that you see.
+[06:10] So, to help with this, one of the best things that you can do is to build yourself a reference library from places like Dribbble, from Awards, and even X or Twitter.
+[06:19] Basically, anywhere that you see designs that you like.
+[06:21] For me personally, I built a simple Chrome extension called Rubric References, so that one click saves the page I'm on with a screenshot and a note to my own reference library, which I can then open for inspiration, or
+[06:33] even have Claude reference for future builds.
+[06:36] Number 11 is Impeccable.
+[06:37] So, Impeccable is a design skill with a whole set of commands that promise to deslop a website.
+[06:43] When you run it, it audits things like hierarchy, spacing, type, and accessibility, even empty states, and then it fixes them.
+[06:50] It's really good for polishing, and it turns a good draft into a professional one.
+[06:54] Number 12 a tone of voice skill.
+[06:57] AI writing is really easy to spot, especially if you don't refine it with your own tone of voice.
+[07:02] So, what you should do is to build a tone of voice skill with Claude with your list of banned words, the way you speak, and your own lines.
+[07:09] And here's a prompt that you can use to start that process.
+[07:12] You can even add ready-made rules like best practice guides that are already out there, like for example, the ASD-STE 100 Simplified Technical English Standard, even Google's developer documentation style guide, or even Apple's writing style.
+[07:26] Number 13 is 21st.dev.
+[07:28] So, this is a library of UI components.
+[07:31] A lot of them shared by the open-source community, and the best part is they're made to be handed straight to an agent.
+[07:37] So, you just copy one that you like, paste it into Claude, and tell it to use this component, and Claude would drop a proven section into your page instead of designing one from scratch, which also saves you tokens.
+[07:48] Number 14 is React Bits.
+[07:51] This is the same idea, but more specialized.
+[07:53] reactbits.dev is also a component library, but the ones here are a bit edgier.
+[07:58] So, animated texts, glass cards, cursor effects, the kind of thing that you would see on high-end sites.
+[08:04] A good tip is to find one you like, copy the code, and give it to Claude to add to your front end or save it as part of your design system.
+[08:11] Number 15 is Canvas UI.
+[08:13] So, canvasui.dev has 35 effects that are really unique.
+[08:17] So, if you want to stand out, it's a great free resource.
+[08:20] For example, it has liquid, glass, shatter, and particle reveal effects, all for free.
+[08:25] Number 16 are icons.
+[08:27] So, Claude can't draw good icons most of the time.
+[08:30] So, instead, what you can do is to go to Iconify or Flat Icon, download one whole pack as single style, and hand the folder to Claude to use across your design system.
+[08:40] And not only do you get made icons when you do this, but you've also given Claude good references for any future icons you wanted to make in that same style.
+[08:49] Number 17 is to ask for SVGs.
+[08:52] So, when you ask Claude for new icons, illustrations, or diagrams, one of the best things you can do is to ask for them in the SVG format.
+[09:00] That stands for scalable vector graphics, so that it scales to any size without going blurry.
+[09:06] You can open the file and change the color by hand, and you can even have Claude animate these icons.
+[09:11] So, with SVGs, every graphic that you get back from Claude is editable and animatable.
+[09:16] Number 18 is Lord Icon.
+[09:18] So, lordicon.com is a library of animated icons, and thousands of them are actually free.
+[09:24] So, what you can do is find one, download it as a Lottie file, which is basically a small animation written as code, and drop it into Claude to use it.
+[09:33] Lottie files are like an upgrade on normal SVG icons because the animation here is already baked in.
+[09:39] Number 19 is the Creator's Toolbox.
+[09:42] So, if you only bookmark one thing from this video, make it creatorstoolbox.com, specifically their resources section.
+[09:48] It's one directory of over 150 free design resources.
+[09:52] So, you have animated components, 3js effects, SVG icons, logo galleries, and even mock-up kits.
+[09:58] It even lists a couple of the ones I mentioned in this video like referral.styles.
+[10:02] So, overall, it's a great resource to bookmark.
+[10:05] All right.
+[10:05] Now, let's go to some advanced tips.
+[10:07] And remember, if any of these get too complex, you can grab that PDF guide in the description and just have Claude explain any of these in more detail.
+[10:15] Number 20 is to feed your agent Apple's human interface guidelines.
+[10:19] So, Apple publishes its human interface guidelines for free, which is basically their whole rulebook for layout, type sizes, tap targets, and color.
+[10:29] So, a good tip would be to turn that into a skill with a prompt like this so that when you design an app screen or a user interface screen, Claude can follow Apple's rules instead of guessing.
+[10:39] Number 21 is GSAP.
+[10:40] So, if you want the motion and interactivity on a site to feel world-class, what you should do is tell Claude to use GSAP, which stands for GreenSock Animation Platform.
+[10:50] It's a fast, reliable JavaScript library for smooth animations on web pages, and it's the animation library that a lot of top agencies use.
+[10:59] So, you have scroll-driven sections, text that reveals as you view the page.
+[11:03] GSAP handles all of that.
+[11:05] Number 22 is /design in Claude Code.
+[11:08] So, this one's for Claude Code users specifically because there's now an official /design command for us.
+[11:14] If you just type /design, give it an idea or a screenshot, and it opens a canvas with editable artboards a bit like what you would be used to in something like Figma.
+[11:23] But, the difference is that here, because it's Claude Code, it would know your whole workspace, your rules, as well as your memory.
+[11:29] So, when you iterate on a design, it already knows what you want and what you don't.
+[11:34] Number 23 is {slash} tweak.
+[11:36] So, Claude design has this built in, which is the tweaks panel, where your design gets controls for things like type, spacing, and color.
+[11:44] So, you can adjust it by hand through a slider.
+[11:47] But, if you're in Claude code, a good tip is to just build your own tweak skill, which is a skill that drops a slider panel onto any HTML page or front end that you make.
+[11:55] That lets you polish your work and also hide the parts that you don't want.
+[11:59] Then, it bakes the values back into the design when you're done.
+[12:03] Number 24 is transcript to motion graphics.
+[12:05] So, this one's a crowd favorite, and it's also how I make the animations in videos like this one.
+[12:10] But, if you get the transcript of a video you just recorded with word-level timestamps, which you can do for free with a tool called Whisper, then ask Claude to find the moments where an animation would help.
+[12:21] It can then build the graphics for those exact moments.
+[12:24] It does this through a tool called Hyperframes, and it comes back with clips timed to what you said.
+[12:29] And as a bonus tip, if you already have a strong system, then use it so that the final animations don't look like vibe-coded AI designs.
+[12:37] And number 25 is to build your own design operating system.
+[12:40] So, this is the last one, and it's where all of it comes together.
+[12:43] Because what you can do is to have Claude build you a small micro app where every design that you finish shows up, where every image and video you generate is indexed so that you can easily find visual styles
+[12:54] and references that Claude can reach as well.
+[12:56] This differs per person, but for our own work, for example, built this element library where we reuse the 3D assets, motion animations, and SVG icons that fit our brand.
+[13:07] So, that is all of them.
+[13:09] As usual, thanks for watching till the end.
+[13:11] And let me know if that was useful and what you think about this type of video.
+[13:14] This is the second video where all of these animations that you saw were created by AI.
+[13:18] So, I'm also interested to know what you think about them.
+[13:20] I'll see you all next time.
+[13:21] >> >> Cheers.
+[13:31] >> Mhm.

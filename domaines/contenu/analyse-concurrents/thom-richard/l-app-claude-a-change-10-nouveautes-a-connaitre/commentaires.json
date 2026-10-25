@@ -1,0 +1,74 @@
+[
+ {
+  "texte": "Merci pour l'accueil sur cette vidéo, je ne m'attendais pas à autant de monde.\nSi tu veux aller plus loin que les 10 nouveautés : dans le Club SMART, on les utilise pour construire un vrai système IA autour de ton activité, ton AIOS. Je partage ce que je construis au fur et à mesure, et ce sont les membres qui votent sur la suite.\n C'est ici : https://www.skool.com/club-smart/about\n\n Et toi, laquelle des 10 vas-tu tester en premier ?",
+  "likes": 1,
+  "epingle": true,
+  "createur": true,
+  "auteur": "@thomasrichard1978",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Vraiment superbe vidéo tu es très organisé et méthodique c'est très plaisant pour les gens comlètement TDAH HGHDO mdr comme moi merci",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@1993etienne",
+  "date": 1792108800,
+  "parent": "root"
+ },
+ {
+  "texte": "Top cette vidéo encore. Merci Thomas\n\nJ'ai 2 comptes claude (1 fourni par une entreprise avec laquelle je travaille de temps en temps et qui me laisse l'accès, et l'autre perso)\nJ'ai aussi 2 PC : le 1er à mon bureau chez moi. Le 2nd un PC portable quand je voyage...\nEt c'est là que le drame arrive !!\nQuand je telecharge des skills ou plugins, je ne sais jamais ou le mettre? ni sur quoi (cowork ou code?) (PC ou Portable)\nDu coup je cherche certains skills mais ne sait plus où ils se trouvent, et çà c'est mon enfer !!\n2 comptes + 2 PC + 2 mode (cowork ou code) = 8 possibités !!\nQu me conseilles tu?",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@william_bmr",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "Bonjour Thomas, merci pour la vidéo.\n\nPar rapport aux routines, j'utilise celle d'OpenAI car les schedulers ont accès à un navigateur dans le cloud, dans lequel je peux me connecter et laisser des cookies de session, pour que l'agent ait ensuite accès à certains sites de manière authentifiée.\n\nJe ne crois pas que ce soit le cas avec Anthropic. Même si l'automatisation tourne dans le cloud, elle n'a pas accès à un navigateur. Ce qui est un peu contraignant",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Jon-ty7hy",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "C’est bizarre je suis sur Mac et je n’ai pas les options de output(doc, présentation) faut il installer un plugins particulier?",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ChristianDelmotte",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Bonjour et merci pour cette vidéo. Je n'ai pas compris comment vous faites pour mettre votre Obsidian dans Claude ? Y a-t-il assez de mémoire dans l'application Claude pour absorber tous les fichiers d'un Vault ? Est-ce que c'est pas consommateur de tokens ? Merci",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@nicolaswilliet943",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "11520 mails ??",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ChristopheJACOTIN",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "La musique de fond est juste insupportable ! Impossible de finir cette vidéo....",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@jeanaimar9434",
+  "date": 1791676800,
+  "parent": "root"
+ }
+]

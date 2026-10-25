@@ -1,0 +1,118 @@
+{
+ "id": "zac3kEUwIlg",
+ "url": "https://www.youtube.com/watch?v=zac3kEUwIlg",
+ "chaine": "simon-scrapes",
+ "titre": "You Should Be Using Jev’s Browser Agent, Here’s Why",
+ "titre_ytdlp": "You Should Be Using Jev’s Browser Agent, Here’s Why",
+ "publie": "2026-10-08T15:30:22Z",
+ "duree_s": 723,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "hNZCFTEHB7Iqgo-SRCKpBomwqGo",
+  "id": "zac3kEUwIlg",
+  "snippet": {
+   "publishedAt": "2026-10-08T15:30:22Z",
+   "channelId": "UCdCR4-uYOg5ju-IUuDnfnQA",
+   "title": "You Should Be Using Jev’s Browser Agent, Here’s Why",
+   "description": "🚀Join the Agentic Academy: https://skool.com/scrapes\nGrab the Jev Browser doc here: https://skool.com/scrapesai\n👀 Get Customers from ChatGPT: https://dub.sh/rankspot-yt\nDon't miss the next build - https://www.youtube.com/@simonscrapes?sub_confirmation=1\n\nTraditional browser agents are slow, often taking 10-20 minutes for a simple task. In this video, I'll show you how to use Jev's Browser Agent to make decisions in a fraction of a second. We'll cover how it works by combining Jev's fast classification with Claude's reasoning, and I'll walk you through building your own with a single prompt.\n\n00:00 - The Problem With Browser Agents\n02:06 - The Trick To Making It Fast\n07:28 - Building Your Own Agent\n09:08 - Where This Approach Fails\n11:47 - Recap\n\n#jevbrowser #claudecodetutorial #jev",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/zac3kEUwIlg/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/zac3kEUwIlg/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/zac3kEUwIlg/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/zac3kEUwIlg/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/zac3kEUwIlg/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    }
+   },
+   "channelTitle": "Simon Scrapes",
+   "categoryId": "28",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "en",
+   "localized": {
+    "title": "You Should Be Using Jev’s Browser Agent, Here’s Why",
+    "description": "🚀Join the Agentic Academy: https://skool.com/scrapes\nGrab the Jev Browser doc here: https://skool.com/scrapesai\n👀 Get Customers from ChatGPT: https://dub.sh/rankspot-yt\nDon't miss the next build - https://www.youtube.com/@simonscrapes?sub_confirmation=1\n\nTraditional browser agents are slow, often taking 10-20 minutes for a simple task. In this video, I'll show you how to use Jev's Browser Agent to make decisions in a fraction of a second. We'll cover how it works by combining Jev's fast classification with Claude's reasoning, and I'll walk you through building your own with a single prompt.\n\n00:00 - The Problem With Browser Agents\n02:06 - The Trick To Making It Fast\n07:28 - Building Your Own Agent\n09:08 - Where This Approach Fails\n11:47 - Recap\n\n#jevbrowser #claudecodetutorial #jev"
+   },
+   "defaultAudioLanguage": "en"
+  },
+  "contentDetails": {
+   "duration": "PT12M3S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": true,
+   "contentRating": {},
+   "projection": "rectangular"
+  },
+  "statistics": {
+   "viewCount": "53443",
+   "likeCount": "519",
+   "favoriteCount": "0",
+   "commentCount": "24"
+  }
+ },
+ "ytdlp": {
+  "id": "zac3kEUwIlg",
+  "title": "You Should Be Using Jev’s Browser Agent, Here’s Why",
+  "description": "🚀Join the Agentic Academy: https://skool.com/scrapes\nGrab the Jev Browser doc here: https://skool.com/scrapesai\n👀 Get Customers from ChatGPT: https://dub.sh/rankspot-yt\nDon't miss the next build - https://www.youtube.com/@simonscrapes?sub_confirmation=1\n\nTraditional browser agents are slow, often taking 10-20 minutes for a simple task. In this video, I'll show you how to use Jev's Browser Agent to make decisions in a fraction of a second. We'll cover how it works by combining Jev's fast classification with Claude's reasoning, and I'll walk you through building your own with a single prompt.\n\n00:00 - The Problem With Browser Agents\n02:06 - The Trick To Making It Fast\n07:28 - Building Your Own Agent\n09:08 - Where This Approach Fails\n11:47 - Recap\n\n#jevbrowser #claudecodetutorial #jev",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "The Problem With Browser Agents",
+    "end_time": 126
+   },
+   {
+    "start_time": 126,
+    "title": "The Trick To Making It Fast",
+    "end_time": 448
+   },
+   {
+    "start_time": 448,
+    "title": "Building Your Own Agent",
+    "end_time": 548
+   },
+   {
+    "start_time": 548,
+    "title": "Where This Approach Fails",
+    "end_time": 707
+   },
+   {
+    "start_time": 707,
+    "title": "Recap",
+    "end_time": 722
+   }
+  ],
+  "tags": [],
+  "categories": [
+   "Science & Technology"
+  ],
+  "heatmap": null,
+  "upload_date": "20261008",
+  "duration": 722,
+  "channel": "Simon Scrapes",
+  "channel_id": "UCdCR4-uYOg5ju-IUuDnfnQA",
+  "channel_follower_count": 106000,
+  "thumbnail": "https://i.ytimg.com/vi/zac3kEUwIlg/maxresdefault.jpg",
+  "view_count": 53460,
+  "like_count": 519,
+  "comment_count": 11
+ }
+}

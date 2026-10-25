@@ -1,0 +1,497 @@
+[
+ {
+  "texte": "REA uses actual decompilers to read code instructions, that's why it takes longer but also produces better results, if you vibe it the model is just guessing, using REA it reads actual instructions, passes it to a tester and compares, if the results are not the same it decompiles again until it gets it exact, so you can recreate features faithfully with enough time. it's most impactful in things like device emulation, where exactness is a must, if you're just copying a feature then yeah, it doesn't have to be exact byte for byte like you would get from REA",
+  "likes": 33,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Zuranthus",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "I actually agree on this. There's nothing that this does that we weren't able to do before with good prompting, good vision, and proper planning. Still it's nice to have it in a skill, although this will probably make me a little bit more lazy. 😂",
+  "likes": 12,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@andycted-to-dance",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "It’s not new but the speed of doing so is new.",
+  "likes": 10,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Ic37r011",
+  "date": 1792108800,
+  "parent": "root"
+ },
+ {
+  "texte": "Future Nate! You reverse engineered the reverse engineering tool!! ... you are beyond next level!",
+  "likes": 9,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@cashisconversationcorner",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Really appreciated that you tested REA on rebuilding your own Loom-style screen recorder and gave the limits and caveats their own section, Nate, that kind of honesty is rare in viral-tool videos! Giving the agent clear examples of the output you want is such a practical takeaway for anyone building skills. Have you found certain kinds of features where reverse engineering from a reference still doesn't work well?",
+  "likes": 7,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@NeverBored-Alice",
+  "date": 1792108800,
+  "parent": "root"
+ },
+ {
+  "texte": "Reverse engineering will work for a lot of people who are not willing to pay for the software and probably don’t have a professional need to use it, but I can guarantee you enterprise companies are not reverse engineering software for their benefit, especially from Adobe, but it is interesting and certainly doable for some features, but there’s a big difference from actual algorithm coding and just prompting",
+  "likes": 6,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@CelluloidPoisoning",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "FREE Scrollcraft Website Design Skill: https://app.aiautomationsociety.ai/optin/scrollcraft/?utm_source=youtube&utm_medium=organic&utm_content=reverse-engineer-anything&sl=yt_reverse-engineer-anything\nFREE MONTH voice to text: https://get.glaido.com/nate",
+  "likes": 5,
+  "epingle": true,
+  "createur": true,
+  "auteur": "@nateherk",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "This is bonkers! Talk about leveling the playing field!",
+  "likes": 5,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@LoneBagels",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Your explanations are insane bro keep going",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@alirafid01",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "Great video, appreciate the context on how reverse engineering with AI is nothing new, this is just a refinement of that model.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@tylerfluegel3382",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Quick question for anyone who's been using these tools. Does it make more sense to use the standalone desktop apps for AI coding like Claude Code or Codex, or just run everything bundled inside VS Code? I've worked with both but honestly can't decide. I'd like to settle on one setup I can stick with long term, so either the standalone apps or VS Code. Anyone come across a recent comparison?",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@coldvertex36",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "First comment 🎉",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@firebladegaming5368",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "What do you think about an AI agency in Law firms?",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@TioluwanimiAdeniji",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Tip: make the agent write its full plan to a markdown file before it touches anything, then run a second pass whose whole job is to poke holes in the plan. First drafts are always wrong. That file also doubles as the agent's memory, so after its context compacts it can re-read the file and recover everything. A skill that reverse-engineers in one shot is a great ingredient, but the loop is what makes it a recipe.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@EntelechyWorkshop",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "oh that was you who recreated that guys motions graphic. lool i thought that was hillarious",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ibzillaire1208",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "The examples you shared for reverse engineering are interesting. Thanks for sharing them.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@tarunmadan6109",
+  "date": 1792108800,
+  "parent": "root"
+ },
+ {
+  "texte": "I actually do that very often by benchmarks & studying competitors",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@eshkitlyrics2335",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Woah this is lit, thanks Nate",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@TioluwanimiAdeniji",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "I love your work bro!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@observer3359",
+  "date": 1792108800,
+  "parent": "root"
+ },
+ {
+  "texte": "i am just thinking about the time and effort you will spend to learn how to engineer anything manually; this is really insane how stuff is evolving with AI, particularly if you don't have any technical background. Thanks for sharing.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@engalimj",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "After watching the video, yes you can go on rea I don’t use Claude personally I use antigravity. I instructed it to simple reverse engineer, Meta tune. A 52 mgb file from a free trial. Then told it to remove every pay wall and test it until it works without it. Then made a new version call (REA State Of delay) 😂 from the extracted source material without the properties that locks me out behind a paywall. Now I have an exact looking and working meta tune that installs like a free plugin. UNDER 4 hours btw! I had it running! It’s 2:22am while typing this 😂",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@LaughterCentralize",
+  "date": 1792108800,
+  "parent": "root"
+ },
+ {
+  "texte": "tried to put it to the test and got this:\n\"Opus 5.5 (1M context)'s safeguards flagged this session. You may be seeing this for the first time: Opus 5.5 (1M context) is more capable and has stronger safeguards as a result, which can sometimes flag\"",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@zik-2025",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "Your explanations of your project",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@anwar.shamim",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "Very useful! And very fitting timing given the recent news of someone vibe coding Adobe out of spite because they got charged a cancellation fee😅QQ - how would you ‘point’ your agent at the site of interest? Would this be through the inbuilt browser feature of Claude code, via Chrome extension so it can interact with all the features available, or some other pointer? Thanks!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@bennicholl4665",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "Could something like this be used to recreate a driver that had stopped working for an older device as their newer driver doesnt work?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@BiggidyBong",
+  "date": 1792368000,
+  "parent": "root"
+ },
+ {
+  "texte": "What do you use for frame by frame analysis of a video ?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@samin6797",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "Give Ideas, how we can apply AIDLC in real world",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@niroshasegar3387",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "How did you created those videos ? Is it using rea? Can some one explain me in detail",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@noxingoat",
+  "date": 1792825200,
+  "parent": "root"
+ },
+ {
+  "texte": "Can you post your hank recorder on github",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@zestiny_",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Did Ai also edit this video cos it hard to tell\nAnd pls do tell how you were able to edit a 30mins long video with Ai doing all the heavy lifting",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ncmaxmillian-cg3qr",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "The seen/inferred/unknown tagging at 9:40 is worth stealing for regular research too. One way to stop guesses from sneaking into the build is to have the agent turn every \"inferred\" item into a test case during the rebuild step, so each one gets confirmed or dropped before anything sits on top of it. Did you end up trying the cheaper Sonnet 5.5 rebuild from the saved Opus analysis?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@workflowsmith",
+  "date": 1792454400,
+  "parent": "root"
+ },
+ {
+  "texte": "Not exactly new, to be fair. I've already done LLM-based binary analysis with headless Ghidra decompilation, and REA would basically drive the same Ghidra, just through a more generic layer.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@SanchoMuzax",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "I don't know anything about agents. What AI do I need to use REA so I can make a clone of the functionality of Lychee Slicer. I'm pissed they moved their best support setting like support painting, inline supports, and support projection.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@mrkabonster",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "Companies using AI to replace Engineers ❌\r\nEngineers using AI to replace Companies ✅",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ayushbaunthiyal1366",
+  "date": 1792627200,
+  "parent": "root"
+ },
+ {
+  "texte": "Hiii Nat \nI am a cement manufacturing industry professional need to automate my production report please help where to start as a complete beginner",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@shaiknadeem9060",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "wow 🔥",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@iammuhammadreyaan",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "i made my own meta tune because 200$ when i only needed one plug in that libary was stupid and robbery",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@LaughterCentralize",
+  "date": 1792108800,
+  "parent": "root"
+ },
+ {
+  "texte": "How to run phone",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@GRANDMASTERID-j3c",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "LMAO Just got it like 18 hours ago. Goodness man. You don't miss a thing.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@DocReo",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Great",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@UnchainedHumanity",
+  "date": 1792108800,
+  "parent": "root"
+ },
+ {
+  "texte": "Does anyone actually show you how to use it and how it works?🤔 step by step like a real walk-through tutorial.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@MoorLifes",
+  "date": 1792540800,
+  "parent": "root"
+ },
+ {
+  "texte": "Argon here Nate",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@AI_Viral_Uz",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Hello uncle",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@GVBartholomew",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "If I want the specific color grading control that lightroom has I can point it there and I'll get the exact math. I did reverse engineering manually before and it's tedious to say the least, I'd normally much rather wing the color math than clone it. Winging something can take some experimentation iterations and doesn't guarantee a good result either.\n\nThat said, REA is quite poorly designed and I hope someone with a bit more agentic experience will create something proper. And I will not install and use gigantic 1:1 clones made by random people over the weekend, offering no support and holding no responsibility. Not defending adobe here cause they're evil, but I have standards. Cool party trick though.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@dmon1088",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "La traduction française 😭😭",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@alexandreguillaume9066",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Rea",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@onlinemn",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "do you sleep ? :D",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@agonaliu92",
+  "date": 1792713600,
+  "parent": "root"
+ },
+ {
+  "texte": "Matthew B. isn't really the sharpest tool in the shed.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@tylerkemp5467",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Yall boys gone get sued, tread carefully!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@810Jones",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "Reverse Engineering paid software is usually illegal based on the end user license agreement you signed in order to purchase and download the software.\n\nThe EULA is a binding contract.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@SolutionsJoe",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Is it me or does he pronounce it ‘anal-eyes’…..",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@iTomHD4K",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "this guy just too much talk no proper execution",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Jan-so5hm",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "Just yapping get lost",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@abdulrahmanfaisal288",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "Troll",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@GoodViiibe",
+  "date": 1792108800,
+  "parent": "root"
+ },
+ {
+  "texte": "This  is an useful video of all the people 👏🫡",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@USAAIPILoTTfficial",
+  "date": 1792800000,
+  "parent": "root"
+ }
+]

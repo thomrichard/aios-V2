@@ -1,0 +1,212 @@
+[00:00] Quand tu ouvres une pour travailler, tu peux commencer par lui dire "Fais-moi ceci, écris ce texte, prépare cette présentation." Mais parfois, tu gagnerais tout simplement à lui poser des questions pour clarifier ta pensée.
+[00:08] Parfois, tu gagnerais à lui montrer des exemples de ce que tu as en tête ou parfois, tu lui donnes simplement un objectif et tu la laisses tourner jusqu'à ce soit satisfaisant.
+[00:16] En fait, la méthode que tu dois utiliser, elle dépend de ce que tu veux faire.
+[00:18] Et dans cette vidéo, je vais te montrer sep façons de travailler avec Lia et quand utiliser chacune de ces méthodes pour arriver à tes fin.
+[00:24] Pour explorer toutes ces méthodes, prendre un cas assez concret qui celui que j'ai en tête actuellement moi et qui est de créer une page de vente pour un atelier.
+[00:30] Je sais le sujet qui va revenir assez souvent quand je vais te parler des différents promptes et je vais commencer directement par celui qui a le plus de valeur pour moi, celui que j'utilise à peu près 80 %
+[00:38] de mon temps.
+[00:38] Cette façon, c'est de travailler avec mon E iOS et de lui dire tout simplement prépare une page de vente pour l'atelier construire son iOS.
+[00:45] Et voilà.
+[00:45] Donc dans quelques minutes, je te montre le résultat.
+[00:48] En fait, j'ai tout simplement à lui dire cette phrase très courte.
+[00:51] Pourquoi ?
+[00:52] parce qu'il connaît déjà tout ce qu'il doit mettre dedans.
+[00:55] J'ai construit l'offre avec, j'ai déjà construit des pages de vente avec également.
+[00:59] Il connaît mon design système.
+[01:00] Bref, il est branché à tout mon écosystème et il sait exactement ce que j'ai en tête tout le temps.
+[01:04] Il est même capable d'aller identifier les clients qui ont déjà fait cet atelier.
+[01:07] Donc mon iOS, le voici.
+[01:09] En fait, chaque chacun des points que tu vois ici, c'est l'une des idées, l'un des sujets que j'ai travaillé avec lui.
+[01:14] Donc, il y a mes vidéos, il y a ici mes projets et cetera.
+[01:16] Je vais pas te faire le détail maintenant, mais il connaît tout ce que j'ai en tête.
+[01:19] Il connaît ici tous mes processus.
+[01:21] Donc ici, il connaît toutes les étapes de chacun des travaux que je fais avec lui.
+[01:26] Quand est-ce que je l'utilise ?
+[01:26] Moi, je l'utilise tout le temps.
+[01:28] C'est simple, mon A iOS, je l'utilise pour tous les sujets que j'ai en cours.
+[01:30] Le gain, c'est que je suis dans la continuité.
+[01:32] Je travaille en continu avec lui.
+[01:34] Il sait toujours ce que j'ai en tête.
+[01:35] Moi, je le fais à la voix.
+[01:36] J'ai vraiment l'impression de discuter avec un collègue quand je travaille avec Lia.
+[01:39] Il serait même capable, dans ce que je lui ai dit, d'aller prendre le code et de le mettre directement sur mon site web.
+[01:44] et pourquoi pas créer le poste qui va l'annoncer à mes membres, rédiger le newsletter pour annoncer euh cet atelier et cetera et bref, il saurait tout faire.
+[01:52] J'ai juste à lui demander.
+[01:53] Alors, pendant qu'on parle, il a créé un brouillon de la page.
+[01:55] Voilà.
+[01:56] Euh bon, la base est un peu basique mais bon, c'est propre.
+[02:00] Voilà, ici on a une petite vidéo.
+[02:01] Ah, ça c'est assez sympa.
+[02:02] J'ai déjà fait ailleurs.
+[02:03] Euh, globalement, c'est un petit ticket qui va accompagner la le descriptif et qui va indiquer à chaque fois qu'il va venir ajouter tout ce qui inclut.
+[02:10] Donc voilà.
+[02:11] Donc dont le club Smart ici a 209 dollars.
+[02:14] Ça, j'aime bien les couleurs, ça reste dans mon machte graphique tout ça.
+[02:17] Bon voilà, c'est pas parfait clairement, je vais repasser dessus mais je trouve que pour un premier essai et vu l'effort que j'ai ai mis, c'est hyper intéressant.
+[02:27] Alors si créer un iOS t'intéresse, tu peux retrouver la vidéo ici qui t'explique comment faire toute la masterclass et le prompt qui te permet d'installer ton A iOS.
+[02:34] Mais si tu n'as pas encore créé ton AOS, il y a plein d'autres techniques qui peuvent t'aider.
+[02:38] D'ailleurs, elles vont même me servir à moi dans le casre de mon iOS quand je vais initier des nouveaux projets.
+[02:42] On va commencer par celles qui sont les plus nouvelles, les plus récentes pour finir sur les plus classiques mais tout le temps aussi efficac.
+[02:48] Alors le prompt loop ou loop engineering, tu vas l'utiliser surtout sur des sujets que tu connais bien, des sujets sur lesquels tu es capable de de fixer la cible.
+[02:58] Idéalement une cible quantifiable.
+[03:00] Et ce que tu vas faire, c'est demander à Lia de te livrer ton objectif une fois qu'elle aura atteint cette cible.
+[03:06] Et en fait, si tu réfléchis bien, ça, tu le fais déjà naturellement avec.
+[03:11] Tu vas commencer par lui prompter quelque chose.
+[03:13] Lia, elle va récupérer ton prompte, elle va produire, elle va te le soumettre.
+[03:18] Et une fois que toi tu l'as soumis, tu vas dire "Ah, ça ça va pas, ça ça va pas, faut changer." Tu reformules un prompte qui repartia et ainsi de suite.
+[03:25] Tu es déjà dans une loupe, finalement dans une boucle.
+[03:28] Et ce système de prompe, ça permet de sortir l'humain de la de la boucle en déléguant les tâches de vérification.
+[03:36] et de correction à lire.
+[03:38] Et alors pour ça, tu identifies les critères clés comme je te l'ai dit.
+[03:42] Donc par exemple sur la page de vente, on va lister tous les éléments et potentiellement pourrait lui dire de l'améliorer jusqu'à ce que le taux de conversion de cette page soit de x %.
+[03:51] J'ai un meilleur exemple qui est celui des titres de vidéos YouTube.
+[03:54] Moi par exemple, je travaille avec un outil qui s'appelle vide IQ et qui va te donner un score de sur ton titre de vidéo.
+[04:01] Plus le score va être élevé, plus la vidéo a de chances d'être virale ou en tout cas d'être vue.
+[04:05] Et globalement, je donne toutes mes idées à Lia.
+[04:08] Je lui dis "Tu construis ton titre de telle manière, je vais avoir tel sujet dedans et cetera.
+[04:12] Trouve-moi la meilleure formule et ne t'arrête pas tant que tu n'as pas un titre qui passe au-dessus de 90 %." Et en faisant ça, il y a travaille, elle boucle, elle teste, elle fait elle fait corriger et à
+[04:23] la fin, elle me livre une liste de titres les plus pertinent.
+[04:26] Le but dans tout ça, c'est de faire attention aussi au nombre d'itération qu'elle peut faire.
+[04:29] Tu peux la limiter pour éviter qu'elle tourne en boucle et qu'elle n'arrive jamais au résultat en lui disant bah si au bout de 10 essais tu as pas réussi, tu t'arrêtes.
+[04:36] Alors pour récapituler, ce système là, tu l'utilises quand tu connais exactement des critères de succès, des critères de réussite de ce que tu veux produire.
+[04:45] Le gain, il est énorme, c'est que tu n'as plus être dans la boucle des essais et des itérations.
+[04:50] Donc au final, tu donnes le travail à Lia et tu peux aller faire complètement autre chose, boire ton café si tu veux, travailler sur un autre sujet et tu reviens voir quand Lia a terminé et tu as livré
+[05:00] la matière qui correspond à ce que tu lui as demandé.
+[05:03] Bien sûr.
+[05:04] Après, il faut relier quand même une dernière fois et faire évoluer si jamais ça ne correspond pas à 100 % à tes besoins.
+[05:10] Et tu verras, tu gagnes un temps fou avec ça.
+[05:12] Alors maintenant, qu'est-ce qui se passe si tu ne connais pas ces critères là ?
+[05:15] Si tu es incapable de dire que le succès de réussite d'une page de vente va dépendre de tel élément de du nombre de pixels, tu sais pas.
+[05:25] Puis je sais pas si c'est un nombre de pixels qui doit être présent, tu sais pas si c'est la couleur, tu sais pas.
+[05:28] Bref, si tu es complètement perdu sur ce que tu vas produire là, tu vas faire exactement la même chose mais tu vas passer par une phase d'interrogation de l'IA.
+[05:36] Alors quand est-ce que tu utilises ?
+[05:37] Finalement, tu l'utilises quand tu ne connais pas le sujet sur lequel tu t'embarques.
+[05:40] C'est pas ton domaine.
+[05:41] Tu es obligé de le faire ou tu as envie de le faire et tu vas Mais ça peut aussi être sur un sujet que tu maîtrises qu'à moitié.
+[05:47] tu es capable de donner quelques critères mais tu sens tu sens qu'il y autre chose.
+[05:51] Tu sens que qu'il y a sûrement des angles morts.
+[05:54] Et bien le but c'est de de travailler finalement avec un premier temps pour identifier les critères de succès de ce que tu veux produire.
+[06:04] Donc tu vas lui dire "OK, moi je sais que pour ma page de vente, je dois avoir un HO qui rappelle mon offre qui est assez court et cetera.
+[06:12] Je sais que je dois avoir un certain nombre de de témoignages de personnes qui ont déjà utilisé l'offre.
+[06:17] Je sais que je dois faire une FAQ et cetera.
+[06:20] Et toi, dis-moi, renseigne-toi, va voir sur le web quelles sont les meilleures pages de vente et donne-moi tous les éléments, tous les ingrédients que je n'ai pas vu, que je ne connais pas qui vont me permettre d'améliorer.
+[06:32] Ou alors, tu pars complètement à zéro et tu vas lui dire, je sais pas moi, tu veux produire un script de vidéo YouTube, c'est ta première fois.
+[06:38] Tu parles pas de ton projet.
+[06:39] et puis dire explique-moi, raconte-moi, enseigne-moi ce qu'est un bon script pour vidéo YouTube.
+[06:45] Et là, Lia va aller chercher à droite à gauche, elle va te le dire.
+[06:49] Tu peux échanger avec elle.
+[06:50] Tu peux donner ton avis pour modifier un peu son résultat.
+[06:53] Une fois qu'elle a défini tout ça, tu lui dis "OK, maintenant qu'on sait ce que c'est un bon script YouTube, fais-mois-en un autour de tel sujet." Donc ce système là, il faut l'utiliser quand ce que tu veux faire,
+[07:04] c'est encore un peu flou.
+[07:05] tu connais pas exactement tous les contours de ce que tu vas euh de ce que tu vas travailler.
+[07:09] Et en fait, moi je vois plein de gains à ça, c'est que tu vas apprendre tout simplement ce que c'est un bon script YouTube, une bonne page de vente, donc tu fais d'une pierre de coup et ensuite une
+[07:19] fois que finalement tu as fait la partie la plus intéressante donc de de travailler ce sujet là et de de vraiment définir ce qui est le plus intéressant, on va parler maintenant de la méthode suivante et des fois
+[07:29] tu vas avoir envie d'avoir plus de contrôle sur les process que que tu vas donner à Lia.
+[07:35] Peut-être que tu as absolument besoin qu'il aille vérifier une source précise et particulière.
+[07:40] Peut-être qu'à un moment, tu dois veux donner ton avis au milieu de ce processus avant d'avancer sur la suite.
+[07:47] Et donc là, tu vas utiliser le mode plan.
+[07:49] Donc tu demandes d'abord à Lia de travailler avec toi le plan d'action de ton processus.
+[07:54] Donc là, tu lui donnes les étapes exactes dans lesquelles tu vas travailler.
+[07:57] En fait, dans ce dans ce mode plan, l'objectif, c'est de lancer de t'assurer que l'IA va partir dans la bonne direction.
+[08:04] Si tu as un process qui prend du temps, quand tu montes une direction à LIA, tu n'as pas envie qu'elle décale de quelques parce qu'à la fin, elle va se retrouver complètement autre part que là où tu l'attendais
+[08:14] et ça va te coûter des tokens pour rien.
+[08:16] Là, l'idée c'est vraiment de marquer étape par étape et ensuite de la laisser travailler ou de de venir t'interpeller au bon moment.
+[08:22] Donc finalement, cette méthode-là, on utilise quand il y a plusieurs étapes euh où que tu veux mettre euh des éléments très précis dans euh dans le résultat.
+[08:33] Et le gain, c'est que c'est plus facile à contrôler.
+[08:35] Tu sais exactement où ça va euh et tu n'es tu n'arrives pas au final à quelque chose qu'elle te livre sans que ça corresponde du tout à ce que tu attendais.
+[08:43] Mais alors, parfois tu vas te dire que Lia ne comprend rien ce que tu dis.
+[08:48] Oui, pourtant tu lui as dit "Fais-moi une belle page de vente professionnelle mais accessible quand même." Le truc c'est que si on parle tous les deux de l'aspect professionnel, de ce qui est une page professionnelle, on va pas
+[09:00] avoir la même réponse.
+[09:01] Elia, c'est pareil, elle n'est pas dans ta tête, elle ne sait pas exactement ce que tu entends par professionnel.
+[09:06] Il y a des choses comme ça qui sont difficiles à expliquer.
+[09:09] Cependant, tu peux lui montrer et justement dès que c'est des questions de style visuel ou de style d'écriture, tu peux lui montrer des exemples.
+[09:16] Tu dis, tu peux lui dire "Moi, je veux une page professionnelle et je t'ai mis c exemple de pages de vente que je trouve professionnel et accessible.
+[09:23] Et j'aimerais que tu ailles dans ces directions là." En fait, tu verras que une collection en fait, elle va analyser de façon complètement différente de toi.
+[09:30] Donc toi, tu vas lui montrer quelque chose qui te plaît, qui t'attire et elle va savoir mettre le point sur les schémas, les patterns qu'il existent entre ces différents exemples.
+[09:40] Donc, elle va savoir te dire "Ah bah en fait, tu aimes bien toutes ces pages là parce que finalement l'offre est annoncée directement près du bouton d'appel à l'action".
+[09:48] Je te dis, je te dis n'importe quoi, mais tu aimes ces offresl parce que euh les avis des clients, tu vois la photo des différents clients et cetera.
+[09:57] Bref, il est capable d'identifier ce qui t'a plu et du coup de le reproduire.
+[10:02] Donc quand est-ce que tu utilises ça ?
+[10:03] Finalement, c'est principalement quand une fois quand tu mets du design, du texte, des choses comme ça, des choses qui sont difficilement explicable, quantifiable quand on est plutôt sur le côté quali là tu lui montres des exemples et ton
+[10:18] gain, ça va être que tu vas rendre tes attentes visibles et ce sera plus facile pour toi de lui dire quoi garder et quoi effacer.
+[10:25] Une autre méthode que je trouve vraiment super, c'est quand ton idée elle est naissante.
+[10:30] Tu sais, tu sais que tu veux faire un truc, tu as plein plein plein de trucs en tête mais tu as pas encore eu le temps de bien réfléchir, de bien structurer tout ça.
+[10:37] Ben justement, ne le fais pas, Lia va le faire à ta place.
+[10:40] Celle-là, je l'appelle la le prompte déballage.
+[10:43] Je te conseille de prendre ton micro, tu verras, tu vas parler beaucoup plus vite que tu ne vas écrire et surtout tu vas pas t'arrêter en parlant.
+[10:51] Tu vas réfléchir, ton tes idées vont rebondir et cetera.
+[10:54] Tu vas lui en dire beaucoup plus que tu ne le ferais si jamais tu le faisais en tapant.
+[10:59] Et ce que va faire Lia, c'est qu'elle va venir restructurer toutes tes informations.
+[11:03] Donc tu vas lui parler de ton offre.
+[11:05] Donc tu vas lui dire "Moi ma page de vente, je donc je veux faire un atelier où j'aide les gens à installer leur iOS.
+[11:13] Je veux des groupes de 5 6 afin qu'on puisse se focaliser sur les besoins de chacun.
+[11:18] Je veux en plus que ça colle à mes couleurs et mes couleurs là, j'ai définis que mes couleurs c'était plutôt un verre sombre avec une couleur or pour me mettre en avant et cetera.
+[11:27] Euh je vais utiliser euh une photo de moi euh en avant pour que les gens puissent me reconnaître dans YouTube et cetera.
+[11:33] Tu parles pendant 5 minutes et lui il va te dire "OK, la structure de la page, ça va être ça, ça, ça tac tac tac".
+[11:41] Il va te structurer tout ça et tu n'auras plus dire "OK, vas-y, fonce." Il va identifier les toutes les hésitations que tu as sur le sujet.
+[11:49] il va voir tes contradictions, il va pouvoir t'alerter sur si tu pars comme ça, attention, il y a tel sujet, tel sujet, tel sujet.
+[11:57] Si tu pars là, tu peux l'éviter.
+[11:59] Bref, ça va vraiment être devenir ce que j'appelle un un sparing pattern, donc un partenaire de brainstorm.
+[12:05] Et alors ce truclà, tu l'utilises quand ?
+[12:07] Tu utilises quand tu as plein d'idées sur un sujet, quand la formulation, elle est pas forcément évidente.
+[12:12] Et ce que le gain que tu vas en retirer, c'est de passer du domaine des idées au domaine du brief.
+[12:18] Bien sûr, toujours relire et valider avant de produire.
+[12:21] On est sur la dernière, la 7è qui est le framework.
+[12:25] Donc celle-là, tu la connais certainement.
+[12:27] Le framework, on en parle depuis 2 3 ans, depuis que Lia est arrivé avec Chat GPT et cetera.
+[12:33] Euh c'est pour éviter de lui dire "Fais-moi une page de vente." Il y a besoin de beaucoup plus de ça, de plus de contexte.
+[12:40] Alors, on a créé des espèces de framework qui ne sont pas forcément des des formules magiques, pas une recette à suivre à 100 %.
+[12:48] Le tout c'est plus d'avoir un pense bête pour savoir quoi lui dire.
+[12:52] Et là ce qu'on celle qu'on va utiliser ici ça va être le framework craft.
+[12:57] Donc craft c'est C pour contexte, R pour rôle, A pour action, F pour format et T pour le ton.
+[13:07] Alors tu n'es pas obligé de tous les dire.
+[13:09] C'est je te dis c'est vraiment un pense bête.
+[13:11] c'est de dire quand tu écris quelque chose, quand tu fais une demande relativement courte, pense à ces éléments pour lui donner l'information.
+[13:18] Donc par exemple la page de vente.
+[13:20] Donc on va prendre le C, c'est le contexte.
+[13:21] Je prépare un atelier euh pour les personnes qui veulent installer un IA mais qui ne savent pas comment faire et qui ont envie d'être accompagné dans la démarche.
+[13:30] Le R, de quelle aide ai-je besoin ?
+[13:33] Aide-moi en tant que rédacteur qui sera expliquer simplement cette offre de formation à des gens qui ne connaissent pas forcément bien l'IA.
+[13:40] le A pour l'action.
+[13:41] Donc qu'est-ce que je lui demande concrètement de faire ?
+[13:44] C'est quoi l'output ?
+[13:45] Donc le le résultat attendu rédige la page de vente de mon atelier.
+[13:51] Le format sous quel format j'ai envie d'avoir cette page de vente.
+[13:55] Tu vas faire une accroche, trois sections pour présenter l'atelier et faire un appel à l'action pour acheter sa place pour l'atelier.
+[14:04] Le ton, comment tu veux que ça sonne ?
+[14:06] Moi, je veux un ton direct, accessible et sans jargon.
+[14:09] On peut faire exactement le même travail pour un courriel d'invitation.
+[14:14] Contexte : Je veux inviter mes contacts à découvrir cet atelier d'initiation.
+[14:18] Rôle, aide-moi en tant que rédacteur de courriel.
+[14:21] Action : rédige une invitation.
+[14:25] Rédige une invitation à partir de ma fiche avec un lien vers la prise d'intérêt, donc vers la page de vente.
+[14:32] F.
+[14:34] Propose un objet et un courriel cours de 120 mots maximum.
+[14:38] tu es ton, tu fais quelque chose de chaleureux, sobre et sans pression commerciale.
+[14:43] Donc le principe de ce framework, c'est que c'est facile à retenir et ça c'est vra encore une fois, c'est vraiment un pense bête en te disant "Ah, j'ai pas parlé assez du contexte, j'ai pas parlé assez du format
+[14:53] attendu, j'ai pas parlé du ton." Donc si on résume avant la prochaine fois avant de commencer à à travailler et lui dire fais-moi ceci, pose-toi la question.
+[15:03] Est-ce que tu veux travailler avec une A qui connaît ton contexte, qui sait exactement ce que tu fais en ce moment et tu as pas besoin de lui expliquer ?
+[15:11] Installe-toi un iOS.
+[15:12] Si tu sais exactement ce que tu veux, quel est le résultat et cetera, tu fais du loop engineering.
+[15:17] Si tu sais pas exactement tout ça, passe d'abord par une phase de questionnement à lia, une phase de définition des objectifs.
+[15:24] Si tu veux maîtriser davantage toutes les étapes qu'elle va faire pour arriver à la destination finale, tu passes en mode plan et tu peux le faire directement via l'application Cloud ou Chat GPT ou tu peux carrément lui demander
+[15:36] fais-moi d'abord le plan.
+[15:37] Ensuite, si tu sais exactement ce que tu as ce que tu as en tête visuellement et c mais que tu arrives pas à le décrire, montre-lui des images, montre-lui des exemples, montre-lui des textes qui ressemblent à ce que
+[15:47] tu veux.
+[15:47] si tes idées sont encore floues et que voilà tu as par contre tu en as plein, tu sais tu sais quoi dire, tu sais quoi faire, tu as pas envie de le structurer et bah tu tu vas comme
+[15:57] ça, tu déballes, tu lui parles, tu lui parles, tu lui parles, prends un micro, tu gagneras un temps fou et tu verras que lui sera capable de structurer, de t'amener même de l'ordre dans tes idées et de réaliser
+[16:07] ce que tu veux.
+[16:08] Et si tu veux simplement avoir un pense bête pour avoir bien tous les éléments clés dans ce que tu vas demander à Lia, tu utilises un framework comme craft par exemple.
+[16:17] Mais il y en a plein d'autres.
+[16:18] Au final, quand tu vois ça, tu te rends compte que Alas c'est un peu comme une personne.
+[16:21] Il y a pas une seule façon de travailler avec.
+[16:23] Tu pourrais très bien donc en combinant, tu pourrais très bien par exemple commencer par déballer tout ce que tu as en tête.
+[16:29] Ensuite, tu lui poses des questions, tu vas le faire creuser pour aller déterminer tes zones d'ombre et les éclaircir.
+[16:35] Et ensuite, tu pars sur un format loupe où tu dis "OK, on a bien cadré, on a vu ce qui était le succès de cette entreprise là.
+[16:42] Vas-y, propose-moi quelque chose qui répond à tous ces critères." Ce que tu peux faire tout de suite si tu veux mettre en valeur tout ça, c'est de reprendre une discussion qui était pas du tout à ton goût.
+[16:52] Tu avais pas réussi à accéder au résultats voulus.
+[16:55] Et ben, tu recommences et tu vas chercher l'une de ces méthodes pour les appliquer.
+[16:58] Tu verras, ça va changer complètement l'output de euh de ce que tu avais.
+[17:04] Alors, si cette vidéo t'a plu, n'hésite pas à t'abonner, à mettre un petit like, ça m'aide beaucoup.
+[17:08] Tu peux même booster la vidéo si tu es sur mobile et ça, ça marche vraiment pour faire connaître mon travail.
+[17:14] Je te remercie d'avance.

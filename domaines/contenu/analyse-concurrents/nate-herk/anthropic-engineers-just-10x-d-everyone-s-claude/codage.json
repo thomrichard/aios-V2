@@ -1,0 +1,159 @@
+{
+  "video_id": "oz2CwrPV2Rg",
+  "chaine": "nate-herk",
+  "titre": "Anthropic Engineers Just 10x'd Everyone's Claude Code",
+  "codeur": "agent nate-herk",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "actu",
+    "format_secondaire": "tuto",
+    "sujet": "Les nouvelles règles de context engineering d'Anthropic (80 % du prompt système retiré) et l'audit de son installation avec /doctor",
+    "outils": ["Claude Code", "/doctor", "CLAUDE.md", "skills", "Hyperagent (sponsor)"],
+    "niveau": "intermediaire",
+    "objectif_probable": "vues"
+  },
+  "titre": {
+    "attente_au_clic": "Une nouveauté des ingénieurs d'Anthropic, la commande /doctor, qui rend Claude Code bien meilleur et qu'il suffit de copier.",
+    "schema": "<Autorité> Just 10x'd Everyone's <Outil>",
+    "promesse": "Un Claude Code dix fois meilleur grâce à la méthode d'Anthropic",
+    "audace": "audacieux",
+    "registre": "mixte",
+    "briques": ["preuve", "resultat"],
+    "marqueurs": ["nouveaute", "chiffre"],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "sérieux, un peu inquiet",
+    "regard": "ailleurs",
+    "texte": "COPY THIS /doctor",
+    "texte_mots": 3,
+    "repete_titre": "non",
+    "elements": ["visage d'un homme qui n'est pas Nate (non nommé)", "texte « COPY THIS » avec le logo Claude à la place du O", "bouton bleu « /doctor » avec flèche"],
+    "nb_elements": 3,
+    "fond": "bleu nuit avec du code flou",
+    "couleurs": ["bleu", "blanc", "orange Claude"],
+    "curiosity_gap": "nouveaute",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "So, Anthropic engineers just 10x Claude code by deleting over 80% of its system prompt",
+    "premiere_phrase_reprend_titre": "oui",
+    "premier_plan": "Motion : l'icône de Claude Code en pixels verts au centre de cercles, puis « 10 x » et « 80 % System prompt »",
+    "premier_plan_reprend_miniature": "non",
+    "ouverture": ["actu-annonce", "hook-dissonance"],
+    "preuve": {
+      "type": "chiffres",
+      "seconde": 0,
+      "description": "80 % du prompt système retiré, puis à 0:32 l'article d'un ingénieur d'Anthropic : aucune perte mesurable"
+    },
+    "annonce_plan": {"presente": false, "nb_points": null, "a_l_ecran": false},
+    "boucle_vers_la_fin": {
+      "presente": true,
+      "citation": "I'll show you guys that demo of me actually doing this later in the video",
+      "seconde_resolution": 583,
+      "tenue": "oui"
+    },
+    "seconde_premier_point": 24,
+    "attente_tenue": "partiel",
+    "attente_note": "/doctor arrive à 7:04 et la méthode est tenue. Mais le « 10x » n'est appuyé par aucun chiffre (Anthropic parle de « no measurable loss »), et l'article présenté comme neuf est jugé ancien ; le commentaire le plus aimé (64 likes) se moque des « 10x »."
+  },
+  "structure": {
+    "modele": "mixte",
+    "segments": [
+      {"debut": 0, "fin": 24, "titre": "Intro : plus de contexte ralentit Claude", "role": "intro", "pull": true, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 24, "fin": 210, "titre": "Anthropic's New Context Rules", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 210, "fin": 253, "titre": "Hyperagent (Sponsor)", "role": "sponsor", "pull": true, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 253, "fin": 361, "titre": "Testing Claude With Fewer Instructions", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 361, "fin": 424, "titre": "What Context To Keep", "role": "point", "pull": false, "paint": false, "point": true, "nom": true, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": false},
+      {"debut": 424, "fin": 568, "titre": "Auditing My Setup With /doctor", "role": "demo", "pull": false, "paint": false, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 568, "fin": 583, "titre": "Communauté gratuite", "role": "cta", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 583, "fin": 651, "titre": "Fixing My YouTube Workflow", "role": "demo", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 651, "fin": 731, "titre": "Scheduling AIOS Audits", "role": "point", "pull": true, "paint": false, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": false},
+      {"debut": 731, "fin": 743, "titre": "Final Thoughts", "role": "fin", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 127, "type": "boucle-ouverte", "citation": "So I'll show you guys that demo of me actually doing this later in the video."},
+      {"seconde": 208, "type": "annonce-suite", "citation": "So I'm also going to show you guys that in just a sec."},
+      {"seconde": 651, "type": "annonce-suite", "citation": "I would make this something that you're doing regularly"},
+      {"seconde": 696, "type": "question-spectateur", "citation": "a big pain point with those is on the humans, right?"}
+    ],
+    "histoires": [
+      {"seconde": 264, "acte": "anecdote", "resume": "Un guide pour élèves tiré d'une interview de Boris Cherny : son AIOS complet fait plus joli, une session vierge structure mieux"},
+      {"seconde": 583, "acte": "vision-build", "resume": "L'audit de son chemin idée YouTube vers script : 25 dossiers avec script, 3 seulement avec un fichier de sources"}
+    ],
+    "payoffs": [
+      {"seconde": 32, "resume": "Anthropic retire plus de 80 % du prompt système sans perte mesurable"},
+      {"seconde": 176, "resume": "Charger les outils MCP au besoin : 85 % de tokens en moins, scores de 49 à 74 %"},
+      {"seconde": 280, "resume": "La session vierge rend un guide mieux structuré que son AIOS chargé de règles"},
+      {"seconde": 446, "resume": "Le rapport /doctor : 18 skills jamais utilisés, des doublons, 563 tokens à gagner, 2 skills cassés"},
+      {"seconde": 620, "resume": "Trois retouches à deux skills pour faire passer les sources du plan au script"}
+    ],
+    "premier_payoff_seconde": 32,
+    "jargon": 2,
+    "repetitions": 1,
+    "test_du_tweet": "Anthropic a retiré 80 % du prompt système de Claude Code sans perte mesurable : trop d'instructions freinent le modèle. Nate teste une version allégée de son AIOS, garde voix, objectifs et public, audite son installation avec /doctor et conseille un audit à chaque nouveau modèle."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine, plein cadre ; vignette sur certaines captures", "decor": "bureau, étagères, néon AIS, micro sur bras"},
+    "parts": {"face": 42, "ecran": 25, "motion": 28, "broll": 5},
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": true,
+    "sous_titres_style": "Phrases clés par moments en bas de l'image, blanc avec la fin en vert (« Why you're asking for something? The intent behind it. »)",
+    "elements": ["etiquettes", "bandeau-nom", "chiffres-animes", "curseur-surligne"],
+    "charte": "Fond noir et vert sapin, cadres vert d'eau, texte blanc, accents rouges ; l'article mis en scène avec surlignage jaune. La miniature (bleu, orange Claude, visage d'un inconnu) ne la reprend pas.",
+    "rythme": "regulier",
+    "notes": "Montage dense façon explainer : icônes animées, chiffres, images d'archives de gens au bureau, article surligné, étiquettes sur le face caméra. Un commentaire y voit « a complete AI video » (33 likes)."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 210, "type": "sponsor", "cible": "Hyperagent, espaces séparés pour les clients d'agence", "amene_par": "transition", "citation": "Real quick, guys, a message from today's sponsor, HyperAgent."},
+      {"seconde": 568, "type": "communaute-gratuite", "cible": "sa communauté gratuite (lien dit en description, absent de la description)", "amene_par": "pendant-demo", "citation": "I've got a free community with a bunch of resources and skills and courses"},
+      {"seconde": 733, "type": "like-commentaire", "cible": "liker la vidéo", "amene_par": "fin", "citation": "please give it a like, it helps me out a ton."}
+    ],
+    "sponsor": {"present": true, "nom": "Hyperagent", "debut": 210, "duree": 43, "forme": "segment-dedie"},
+    "liens_description": {"sponsor": 2, "lead-magnet": 1, "affiliation": 2, "reseaux": 3},
+    "commentaire_epingle": {"texte": "Liens Hyperagent (offre et programme agences) et Glaido", "type": "sponsor"},
+    "recap_final": false,
+    "derniere_phrase": "and I'll see you on the next one. Thanks, everyone.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["la lassitude des « 10x » (64 likes)", "une vidéo qui semble faite par IA (33 likes)", "une info jugée ancienne, présentée comme neuve", "le nettoyage de sa propre installation : moins de tokens, meilleure qualité"],
+    "demandes": ["où trouver /doctor et la commande /audit", "les liens vers les articles cités", "les skills d'animation de ses vidéos", "un autre podcast"],
+    "critiques": ["« Old news posted as if it were breaking news » (13 likes)", "« So much talk so little information »", "« Hype bro has to hype »", "la musique stressante"],
+    "reprises": ["« 10x » tourné en dérision", "/doctor"],
+    "signal_promesse": "decue"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "1re phrase = titre ; 1er plan = icône animée, sans le visage ni « COPY THIS /doctor » de la miniature"},
+    "ap_boucle_curiosite": {"note": 2, "preuve": "2:07 la démo promise « later in the video », livrée à 9:43 ; 3:28 /doctor « in just a sec », montré à 7:04"},
+    "ap_effort_montre": {"note": 0, "preuve": "Aucun effort dans l'intro ; ses essais n'arrivent qu'à 4:13"},
+    "ap_setup_progress_payoff": {"note": 1, "preuve": "L'audit /doctor et celui du workflow YouTube ont but, étapes, résultat ; la partie sur l'article explique sans construire"},
+    "ap_contraste_rythme": {"note": 1, "preuve": "De 6 à 18 changements de plan par minute, vif partout, sans passage nettement plus lent"},
+    "ap_montrer_sans_son": {"note": 2, "preuve": "« 10 x », « 80 % System prompt », des fichiers qui s'empilent et une jauge « Thinking speed » qui baisse : la promesse se lit sans le son"},
+    "ali_douleur_histoire": {"note": 1, "preuve": "0:13 « almost all of your information is actually slowing Claude down » ; pas d'histoire derrière"},
+    "ali_coeur_unique": {"note": 2, "preuve": "2:10 « the best context is the smallest amount of context that gets you the highest quality result »"},
+    "alx_pont": {"note": 1, "preuve": "Promesse et contexte, mais ouverts par une dissonance qui accroche"},
+    "alx_pull_paint_point": {"note": 1, "preuve": "Complet sur les règles (le livre de règles, les commentaires de code) et le test (designer contre enfant) ; pas sur /doctor"},
+    "alx_nom_idee": {"note": 1, "preuve": "Sa formule sur le plus petit contexte, les « four C's », /doctor ; étiquettes Instructions, Context, System prompt à l'écran"},
+    "alx_phrase_finale": {"note": 1, "preuve": "2:10 la formule du contexte ; 6:44 « this is all about getting out of the model's way » ; pas partout"},
+    "alx_douleur_reve": {"note": 1, "preuve": "« 10x'd » parle du désir, mais Claude Code porte le titre"},
+    "alx_cta_tot": {"note": 0, "preuve": "Aucune offre avant 9:28 (communauté gratuite) ; le kit AI OS de la description n'est pas dit"},
+    "ed_intro_courte": {"note": 2, "preuve": "24 secondes : fait, dissonance, promesse « fix your projects », puis l'article"},
+    "ed_hook": {"note": 2, "preuve": "0:07 « we were told [...] give it as much information and context as possible. But with this change [...] slowing Claude down »"},
+    "ed_probleme_preuve_consignes": {"note": 2, "preuve": "Règles qui s'accumulent, puis chiffres (80 %, étude de 2025, MCP 49 à 74 %), puis consignes : garder voix et objectifs, /doctor, audit mensuel"},
+    "ed_tension_relancee": {"note": 1, "preuve": "11:36 « a big pain point with those is on the humans, right? » ; ailleurs des annonces"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "4:24 le guide pour élèves fait deux fois : une expérience racontée, pas une histoire"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "« stuff you probably don't even think about » redit à 7:04 et 8:45 ; quelques redites"},
+    "ed_niveau_simple": {"note": 2, "preuve": "0:41 le prompt système, « the rulebook » ; 9:08 le front matter, « the little description block at the top » ; 5:35 designer contre enfant"},
+    "tous_video_suivante": {"note": 0, "preuve": "La vidéo sur Fable 5.1 est citée à 1:42, pas proposée ; « I'll see you on the next one »"}
+  },
+  "a_retenir": {
+    "titre_miniature": "« <Autorité> Just 10x'd Everyone's <Outil> » : l'autorité d'Anthropic et un chiffre choc. La miniature montre un visage inconnu et « COPY THIS /doctor ». Le « 10x » n'est appuyé par rien : le commentaire le plus aimé (64 likes) s'en moque. Miniature changée deux fois en 18 heures.",
+    "intro_structure": "Intro de 24 secondes en dissonance (le « plus de contexte » ne marche plus), puis l'article chiffré, puis /doctor et un vrai audit de son workflow YouTube, promis à 2:07 et montré à 9:43.",
+    "habillage": "Montage dense façon explainer (un plan toutes les 4,6 secondes) : icônes, chiffres animés, images d'archives, article surligné ; des commentaires y voient une vidéo faite par IA.",
+    "idee_pour_nous": "Auditer l'AIOS de Thomas en direct (skills jamais utilisés, doublons, tokens gagnés) et montrer les chiffres : une preuve concrète qui donne envie de rejoindre le Club.",
+    "objectif": "club"
+  }
+}

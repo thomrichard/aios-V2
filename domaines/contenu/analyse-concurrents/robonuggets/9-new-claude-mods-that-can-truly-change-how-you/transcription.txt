@@ -1,0 +1,160 @@
+[00:00] So, Entropic just shipped one of the biggest Cloud Code updates we've ever had, and they're calling it mods.
+[00:05] The idea is simple.
+[00:06] If you can describe a feature that you wish Claude Code had, it can now build that feature into itself.
+[00:12] So, Cloud Code can become almost any tool that you need.
+[00:15] And in this video, I'll walk you through the nine mods that are genuinely worth installing and tweaking so that by the end of this, you can master Claude mods and make full use of them to make your systems
+[00:25] smarter and faster.
+[00:27] And if you're new, my name is Jay.
+[00:28] I spent over a decade working with brands you probably know have been in AI since my masters in data science and now I'm leading our AI business and one of the largest AI communities globally.
+[00:37] But first, what are mods?
+[00:39] So, a mod is just a small add-on that basically changes how cloud code looks and how it works.
+[00:44] It came out on the 1st of October and if you've updated Claude Code to the latest version, then it's already switched on for you and ready to use.
+[00:51] It works in the Cloud Code terminal and in the code tab of the desktop app, but at the time I'm recording this, it doesn't seem to be available yet in the VS Code extension.
+[01:00] So, make sure you're using it inside Cloud Code in the terminal or the desktop app.
+[01:04] Now, you might be thinking, if you already have skills and you already have MCP connectors, then how are mods different?
+[01:10] Well, a skill basically just tells Claude how to do a job.
+[01:13] It's like a handbook for certain tasks, right?
+[01:15] And a connector just plugs Claude into another application.
+[01:18] But a mod runs inside Cloud Code and actually changes it.
+[01:22] So it can change exactly what you see on screen.
+[01:25] So if you want Cloud Code to have extra buttons, a side panel, or even a miniame to play while Claude is working, that's all entirely within the realm of possibilities.
+[01:34] And making a mod is really easy because all you need to do is to ask Claude.
+[01:37] I'll show you a few examples so that by the end of this video, you'll have a clear idea of what mods to use or tweak for your setup.
+[01:43] And every one of these, by the way, I put into this PDF guide, which you can just send that straight to Claude, and you can have your agent grab these or customize them to your liking.
+[01:51] And it's just a matter of asking your agent to set them up for you.
+[01:54] So, the link for that is just in the description below if you need it.
+[01:57] But for now, here are the ones I've tried, have liked, and think will be useful for you as well.
+[02:02] Number one is Savvy Progress.
+[02:04] Now, I really like this one because it's the right mix of being useful while also being quite fun and delightful.
+[02:09] Now, what it does is it puts a progress bar above your prompt.
+[02:12] So, you can see how close Claude is to finishing your task.
+[02:15] But for heavier, longer tasks where a team of sub agents is doing the work, it also shows you a live panel of every sub aent.
+[02:23] If that's new to you, sub agents are basically these helper claws that your main agent can spawn.
+[02:28] And each one of them basically takes a piece of the larger job.
+[02:32] And for each helper, you can see its model, how far along it is, and roughly what it's costing you in API credits.
+[02:39] Now, that's already useful by itself, but the even better part is that you can actually customize how these little pixel cla.
+[02:45] So, if you want one that looks like a designer, you can do that.
+[02:48] If you want one that looks like a developer, you can do that too, just by asking Claude to customize their looks.
+[02:53] So, apart from giving you more information about your work, especially long running tasks that are done better with helper agents, it just makes using sub agents a much nicer experience with this view.
+[03:02] Now, you might be curious, how does a mod actually change what's on your screen?
+[03:06] Well, every time Claude does something like running a command, for example, Claude Code actually sends out a little signal called an event.
+[03:12] And a mod is just a small piece of code that listens for those events so that when one comes through, the mod can do one of three things.
+[03:19] It can watch that event, it can change it, or it can handle it itself.
+[03:22] Savvy Progress actually uses all three.
+[03:24] So, it watches every time Claude starts a helper.
+[03:27] And every time that helper asks the model to do something, it notes the model, the tokens, and roughly what it costs.
+[03:32] and it changes your view so that it draws the area above your prompt.
+[03:36] It adds its progress bar and also shows you that side panel if you're using sub agent.
+[03:40] And when you open the agents panel, it draws that whole panel by itself, including all your custom claw mascot crabs.
+[03:46] And the good news is you don't need to know any of this to make one mod.
+[03:50] Cloud code actually comes with a built-in skill now for building them.
+[03:54] So you just describe what you want and Claude builds it out for you.
+[03:57] Number two is Claude skins.
+[03:59] Now, this one is really simple, but it's probably one of the very first mods that you can try without really changing your workflow because what it does is reskin how cloud code shows it work.
+[04:08] So, your tool calls gets their own icons.
+[04:10] Your edits can show up in a specific color if you want.
+[04:13] Right now, this open source repo comes with seven themes like Noah and Tokyo.
+[04:18] But because this is Cloud Code, you can give it pretty much any design system or color palette that you want and you can just have it build it out.
+[04:24] So, if you're looking for a great first mod that is quite safe to start with, then this is a good candidate because it only changes the display and you can customize it to fit your setup.
+[04:33] Number three is you should know.
+[04:35] This mod is actually built by Entropic themselves and it runs a second agent on the side that reads what Claude writes and flags anything important that you might miss.
+[04:44] Now, that's pretty crucial, especially when Claude gives you a wall of text as an output, which more often than we'd like to admit, we don't actually read in full.
+[04:52] In my testing, I asked Claudeco to generate a video with a model like Cling, and it flagged that I should probably know how much that would cost if I ran it through key AI, which is the provider that
+[05:01] I use.
+[05:02] If that was buried in a wall of text, I might not have seen it.
+[05:05] But with this little pop-up, it lifted the important point right out.
+[05:08] And you can steer what it looks out for, by the way.
+[05:10] So, if you're more worried about costs, customer issues, or anything your automations might miss, you can tweak this mod to surface that.
+[05:17] Do note that this particular mod, it does run a second age.
+[05:20] So, it can increase your token usage, but for a lot of mods that I'll mention here, most of those are actually run using deterministic code.
+[05:27] So, they don't really require you to use an LLM in order to run them.
+[05:31] And by the way, if you want to learn how to build and sell AI systems that businesses actually pay for, then that's pretty much all we do over at the Robbernuggets community, where not only do you get access
+[05:40] to the Cloud Living Masterass, which we update every week and takes you from zero to mastery with the latest on AI, but you also get access to our agents as a service course, which walks you through how to
+[05:49] actually get paid for all these AI skills that you are learning.
+[05:52] You also get to be part of a genuinely great community of AI builders.
+[05:56] In fact, you can see just some of the recent wins our members are getting from the program right here.
+[06:00] So, if you want to start earning from AI, then check that just in the pin comment below.
+[06:03] Now, back to the video.
+[06:04] Number four is File Tree.
+[06:06] So, this is one example where it doesn't really cost any tokens to run because what it does is just give Claude code a really nice file panel on the right that shows exactly which files Claude is working on,
+[06:16] which matters most, especially when you're working on real software.
+[06:19] Because when you're working in production code, it's important to know exactly what Claude is reading, editing, or changing.
+[06:25] With this mod, a file shimmers in the tree when Claude is touching it.
+[06:29] And when the change is committed, meaning it's saved, it turns green.
+[06:33] So, at a glance, you always know exactly which files Claude is working on.
+[06:36] And if you're not a developer, it's still useful whenever you're working across lots of files.
+[06:41] To give one instance, let's say you're preparing a tax filing with multiple documents.
+[06:45] With this mod, you can see exactly which ones COD has opened and which ones it has changed.
+[06:51] and it gives you a much nicer UI instead of relying on a chat reply that you always need to read every time in order to get the gist of what your agent just did.
+[07:00] It's much more interactive and in my view much easier on the eye.
+[07:03] Number five is cash tax.
+[07:05] Now, this is a mod that can actually save you money because if you don't know what the prompt cache is, it's basically this short-term memory that Claude keeps during your conversation.
+[07:15] and it keeps that shorter memory so that it doesn't have to reread the whole conversation that you have with it every time that you send the prompt.
+[07:22] So, it's there to stop your tokens from being burnt.
+[07:25] But after a while, usually about an hour on a normal Claude subscription, it goes cold.
+[07:30] And once that prompt cash is cold, the next prompt that you send actually makes Claude reread your entire conversation, which can really eat into your usage limits.
+[07:40] So, what cash tax does is stop you before a message that would cost you to reload your entire conversation and show you an estimate of what that would cost in tokens and API credits.
+[07:51] So, you know exactly how much you'll spend before you hit send.
+[07:54] That really matters in long sessions because the bigger or longer your conversation is, the more that that one message would cost.
+[08:01] And if you're stepping away, you can actually type /keepwarm as part of this mod.
+[08:05] Or you can just have the mod turn it on for you by default.
+[08:08] And what it does is it will ping the session with a tiny message right before the cash goes cold so it's still warm when you get back.
+[08:15] Number six is blast radius.
+[08:17] Now this one again Antropic made themselves and it might just save your entire project because when Claude is about to run something risky like deleting a whole folder.
+[08:26] It stops first.
+[08:27] It shows you exactly which files would get deleted.
+[08:30] It shows you even a proceed button and a cancel button that you have to press yourself.
+[08:35] Now, you might not think that your agent would ever delete your files, but I've seen so many edge cases already where even a smart Frontier model like even Opus or Fable would wipe out someone's entire project.
+[08:45] There are some real horror stories out there.
+[08:47] And if you don't want to become one of them, then you can try out this mod or something like it.
+[08:51] So, with Blast Rages, this kinds of commands get stopped automatically and an actual human has to be in the loop to press proceed before any of the files get deleted.
+[08:59] And with Blast Rages, it actually shows you which of those files would be gone the moment that you do that.
+[09:04] Number seven is reflect.
+[09:05] Now, this mod is a bit like reinforcement learning from human feedback, but on a more micro scale and personalized to you.
+[09:12] Because when you give Claude a piece of feedback with trigger words like no or this doesn't look good or I wish we'd done it this way, what happens with this mod is that a small band would pop up
+[09:21] above your prompt asking if you want to save that as a permanent rule in your claw.md file or your skill file.
+[09:27] And what you do is just click save and claude writes that rule in for you.
+[09:30] It's a more granular way to choose what Claude reflects on and to make sure the things you've already corrected on are fixed or done better the next time that you use it.
+[09:38] Number eight is the terminal browser.
+[09:40] Now, this one is for people who use Cloud Code in the terminal because what it does is it opens a real web browser right beside your chat.
+[09:46] So, if Claude builds you a web page, you can look at it and review it without ever leaving the terminal.
+[09:51] Of course, it can also open GitHub pull requests the same way.
+[09:54] So, you save the time and the headsp space of jumping between Claude and a browser to check every change to your code or to your design.
+[10:01] Everything now stays in one place.
+[10:03] So, if that's a feature you've been missing because you work mainly in the terminal, then this mod may be for you.
+[10:09] Number nine is Replay Theater.
+[10:11] Now, this last one is another of Entropic's own sample mods, and it's called Replay Theater.
+[10:16] And what it does is after Claude finishes a turn, a replay button actually shows up.
+[10:20] And when you press it, it steps through every file edit that Claude just made.
+[10:24] So you get a rundown of what it did and can understand the changes to your workspace.
+[10:28] And again, even though this was originally created by Entropic for Code, it's actually not limited to just that use case.
+[10:34] If you're writing an article, for example, it can let you replay exactly what Claude changed in your draft.
+[10:39] So if it made major changes, you can pinpoint exactly where they are in that article.
+[10:44] And the great thing about this is that mods are entirely modifiable to your liking.
+[10:48] And the way you do that is really easy.
+[10:50] First, you just need to make sure that cloud code is up to date because mods need this version 2.1.287 or newer.
+[10:57] In the terminal, you can just type cloud update or in the desktop app, there will be a popup that shows you if you're on the latest version.
+[11:03] Then just open cloud code, describe the modification that you want.
+[11:06] And Claude Code comes with a built-in skill for this.
+[11:09] It's called plug-in authoring.
+[11:10] So Claude already knows how mods are put together.
+[11:13] It'll start building it.
+[11:14] And then it'll ask if you want to turn on hot reloading for this session.
+[11:18] What that means is it will just allow that session to sort of reload or restart itself so that when you turn that on, your mod would show up in that session as soon as Claude finishes building it.
+[11:27] And if you don't like something or you want to tweak a feature, just tell it what to change the way you talk to a normal person.
+[11:32] One thing to know is that a mod that Claude builds for you is temporary by default.
+[11:36] So when you find one that you like, ask Claude to save it as a plugin and install it and it will be there every time that you open CL code.
+[11:43] Now, by default, mods don't really cost anything extra, but you of course do need a paid plan because that includes cloud code.
+[11:50] And also, any mod that needs to call on a model in the background uses your cloud usage like everything else.
+[11:55] So, there you go.
+[11:56] That's all nine of them.
+[11:57] As usual, I hope that was useful.
+[11:58] I think mods are a really good move by Entropic and I hope OpenAI follows suit because I think the era of more malleable software is definitely coming soon.
+[12:06] And the fact that Entropic, one of the biggest and most influential companies right now, is opening up their own application to modification is a good step towards software that can be hyper customized to our needs.
+[12:18] I hope that gave you an idea of the mods you could build for your own workspace.
+[12:21] And again, the PDF guide is just down below if you need it.
+[12:24] Send that to your cloud code to pick out the ones that are useful for your setup or to customize.
+[12:28] As usual, thanks for watching till the end.
+[12:30] And if it was useful, then consider tapping subscribe down below because it helps me a lot to put out more educational stuff like this.
+[12:35] I'll see you all next time.
+[12:36] Cheers.

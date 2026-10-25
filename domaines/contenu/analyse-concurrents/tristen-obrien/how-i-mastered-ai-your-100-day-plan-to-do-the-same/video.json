@@ -1,0 +1,154 @@
+{
+ "id": "IHV7eWibqzo",
+ "url": "https://www.youtube.com/watch?v=IHV7eWibqzo",
+ "chaine": "tristen-obrien",
+ "titre": "How I Mastered AI (Your 100-Day PLAN to Do the Same)",
+ "titre_ytdlp": "How I Mastered AI (Your 100-Day PLAN to Do the Same)",
+ "publie": "2026-09-24T13:00:37Z",
+ "duree_s": 355,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "hQjDMb_Efo7BHt_9w9sTco4CsgI",
+  "id": "IHV7eWibqzo",
+  "snippet": {
+   "publishedAt": "2026-09-24T13:00:37Z",
+   "channelId": "UCruPFdKtGG8Oz5dvha6WWgA",
+   "title": "How I Mastered AI (Your 100-Day PLAN to Do the Same)",
+   "description": "👇 FREE: Get my complete Prompt Library + my AI newsletter to stay up to date on everything AI: https://tristenobrien.ai\n\n📚 Buy my book, The Smartest Move 👉 https://tristenobrien.ai/smartest-move/\n\nIn just the last two months we got Claude Opus 5, Claude Fable 5.1, OpenAI's GPT-6 Astra, and then Claude Opus 5.5 and two more GPT-6 models, GPT-6 Sol and GPT-6 Luna, all on the same day. Add new AI tools like Jev AI on top of that, and it's no wonder people keep jumping from ChatGPT to Claude to Gemini every time a new model drops.\n\nBut if you keep switching, you never get good at any of them. With 100 days left in 2026, this is the plan I'd follow to get ahead of 99% of people using AI: master one platform, build AI agents that help run your personal life, give them skills, connect them to your real tools with MCP, and stay a generalist on everything else. It works whether your home base is Claude, ChatGPT, or Gemini.\n\n⏱️ CHAPTERS\n\n0:00 The 100-Day AI Plan\n0:19 Master One AI Platform\n2:17 Build an AI Employee\n3:08 Learn AI Skills\n3:58 Connect Your Tools With MCP\n4:41 Stay a Generalist on Purpose\n5:24 Join the 100-Day AI Challenge\n\nTHE 5 THINGS, IN ONE PLACE\n\nMaster one platform. Pick the one that fits the way you already work and stick with it until the end of the year. Every time you switch, your attention and your projects get split, and you never learn the technology underneath.\n\nBuild an AI employee. An AI agent is AI you give a job to, and it keeps going until the job is done. Build one every week for the rest of the year to help run your personal life.\n\nMaster skills. A skill is a saved set of instructions that teaches your agent to do the job exactly the way you want. Build a new one every week alongside your agents.\n\nPlug it into your real tools. MCP (Model Context Protocol) connects your AI to your email, calendar, files, and the apps you already use. Connect one new tool every week.\n\nStay a generalist on purpose. Block off one hour a week to test new models like GPT-6 Astra or Opus 5.5 with the same prompts you use every day. Your home base stays the same.\n\n🎁 FREE STARTER PROMPTS\n\nPROMPT 1: BUILD YOUR FIRST AI EMPLOYEE\n\n\"I want to build an AI agent that helps with one job in my personal life. Before you build anything, ask me at least five questions about the job, how often it happens, what tools it needs to touch, and what a great result looks like. Then write out the agent's instructions step by step, and tell me exactly how to set it up on the platform I'm using.\"\n\nPROMPT 2: TURN WHAT YOU KEEP EXPLAINING INTO A SKILL\n\n\"Here's something I keep explaining to you over and over: [describe how you like it done]. Turn this into a reusable skill. Write clear instructions, include my preferences as specific rules, add an example of a perfect result, and tell me how to save it so you use it automatically next time.\"\n\nMore prompts in the free Prompt Library: https://tristenobrien.ai\n\n#AI #Claude #ChatGPT #Opus55 #GPT6 #GPT6Astra #AIAgents #MCP #ClaudeSkills #JevAI",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/IHV7eWibqzo/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/IHV7eWibqzo/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/IHV7eWibqzo/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/IHV7eWibqzo/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/IHV7eWibqzo/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    },
+    "uhd": {
+     "url": "https://i.ytimg.com/vi/IHV7eWibqzo/uhddefault.jpg",
+     "width": 3840,
+     "height": 2160
+    }
+   },
+   "channelTitle": "Tristen O'Brien",
+   "tags": [
+    "ai",
+    "Jev",
+    "Jev AI",
+    "Claude",
+    "Claude Code",
+    "Opus 5.5",
+    "Astra",
+    "GPT 6 Astra",
+    "MCP"
+   ],
+   "categoryId": "28",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "en",
+   "localized": {
+    "title": "How I Mastered AI (Your 100-Day PLAN to Do the Same)",
+    "description": "👇 FREE: Get my complete Prompt Library + my AI newsletter to stay up to date on everything AI: https://tristenobrien.ai\n\n📚 Buy my book, The Smartest Move 👉 https://tristenobrien.ai/smartest-move/\n\nIn just the last two months we got Claude Opus 5, Claude Fable 5.1, OpenAI's GPT-6 Astra, and then Claude Opus 5.5 and two more GPT-6 models, GPT-6 Sol and GPT-6 Luna, all on the same day. Add new AI tools like Jev AI on top of that, and it's no wonder people keep jumping from ChatGPT to Claude to Gemini every time a new model drops.\n\nBut if you keep switching, you never get good at any of them. With 100 days left in 2026, this is the plan I'd follow to get ahead of 99% of people using AI: master one platform, build AI agents that help run your personal life, give them skills, connect them to your real tools with MCP, and stay a generalist on everything else. It works whether your home base is Claude, ChatGPT, or Gemini.\n\n⏱️ CHAPTERS\n\n0:00 The 100-Day AI Plan\n0:19 Master One AI Platform\n2:17 Build an AI Employee\n3:08 Learn AI Skills\n3:58 Connect Your Tools With MCP\n4:41 Stay a Generalist on Purpose\n5:24 Join the 100-Day AI Challenge\n\nTHE 5 THINGS, IN ONE PLACE\n\nMaster one platform. Pick the one that fits the way you already work and stick with it until the end of the year. Every time you switch, your attention and your projects get split, and you never learn the technology underneath.\n\nBuild an AI employee. An AI agent is AI you give a job to, and it keeps going until the job is done. Build one every week for the rest of the year to help run your personal life.\n\nMaster skills. A skill is a saved set of instructions that teaches your agent to do the job exactly the way you want. Build a new one every week alongside your agents.\n\nPlug it into your real tools. MCP (Model Context Protocol) connects your AI to your email, calendar, files, and the apps you already use. Connect one new tool every week.\n\nStay a generalist on purpose. Block off one hour a week to test new models like GPT-6 Astra or Opus 5.5 with the same prompts you use every day. Your home base stays the same.\n\n🎁 FREE STARTER PROMPTS\n\nPROMPT 1: BUILD YOUR FIRST AI EMPLOYEE\n\n\"I want to build an AI agent that helps with one job in my personal life. Before you build anything, ask me at least five questions about the job, how often it happens, what tools it needs to touch, and what a great result looks like. Then write out the agent's instructions step by step, and tell me exactly how to set it up on the platform I'm using.\"\n\nPROMPT 2: TURN WHAT YOU KEEP EXPLAINING INTO A SKILL\n\n\"Here's something I keep explaining to you over and over: [describe how you like it done]. Turn this into a reusable skill. Write clear instructions, include my preferences as specific rules, add an example of a perfect result, and tell me how to save it so you use it automatically next time.\"\n\nMore prompts in the free Prompt Library: https://tristenobrien.ai\n\n#AI #Claude #ChatGPT #Opus55 #GPT6 #GPT6Astra #AIAgents #MCP #ClaudeSkills #JevAI"
+   },
+   "defaultAudioLanguage": "en-US"
+  },
+  "contentDetails": {
+   "duration": "PT5M55S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": true,
+   "contentRating": {},
+   "projection": "rectangular"
+  },
+  "statistics": {
+   "viewCount": "7324",
+   "likeCount": "151",
+   "favoriteCount": "0",
+   "commentCount": "20"
+  }
+ },
+ "ytdlp": {
+  "id": "IHV7eWibqzo",
+  "title": "How I Mastered AI (Your 100-Day PLAN to Do the Same)",
+  "description": "👇 FREE: Get my complete Prompt Library + my AI newsletter to stay up to date on everything AI: https://tristenobrien.ai\n\n📚 Buy my book, The Smartest Move 👉 https://tristenobrien.ai/smartest-move/\n\nIn just the last two months we got Claude Opus 5, Claude Fable 5.1, OpenAI's GPT-6 Astra, and then Claude Opus 5.5 and two more GPT-6 models, GPT-6 Sol and GPT-6 Luna, all on the same day. Add new AI tools like Jev AI on top of that, and it's no wonder people keep jumping from ChatGPT to Claude to Gemini every time a new model drops.\n\nBut if you keep switching, you never get good at any of them. With 100 days left in 2026, this is the plan I'd follow to get ahead of 99% of people using AI: master one platform, build AI agents that help run your personal life, give them skills, connect them to your real tools with MCP, and stay a generalist on everything else. It works whether your home base is Claude, ChatGPT, or Gemini.\n\n⏱️ CHAPTERS\n\n0:00 The 100-Day AI Plan\n0:19 Master One AI Platform\n2:17 Build an AI Employee\n3:08 Learn AI Skills\n3:58 Connect Your Tools With MCP\n4:41 Stay a Generalist on Purpose\n5:24 Join the 100-Day AI Challenge\n\nTHE 5 THINGS, IN ONE PLACE\n\nMaster one platform. Pick the one that fits the way you already work and stick with it until the end of the year. Every time you switch, your attention and your projects get split, and you never learn the technology underneath.\n\nBuild an AI employee. An AI agent is AI you give a job to, and it keeps going until the job is done. Build one every week for the rest of the year to help run your personal life.\n\nMaster skills. A skill is a saved set of instructions that teaches your agent to do the job exactly the way you want. Build a new one every week alongside your agents.\n\nPlug it into your real tools. MCP (Model Context Protocol) connects your AI to your email, calendar, files, and the apps you already use. Connect one new tool every week.\n\nStay a generalist on purpose. Block off one hour a week to test new models like GPT-6 Astra or Opus 5.5 with the same prompts you use every day. Your home base stays the same.\n\n🎁 FREE STARTER PROMPTS\n\nPROMPT 1: BUILD YOUR FIRST AI EMPLOYEE\n\n\"I want to build an AI agent that helps with one job in my personal life. Before you build anything, ask me at least five questions about the job, how often it happens, what tools it needs to touch, and what a great result looks like. Then write out the agent's instructions step by step, and tell me exactly how to set it up on the platform I'm using.\"\n\nPROMPT 2: TURN WHAT YOU KEEP EXPLAINING INTO A SKILL\n\n\"Here's something I keep explaining to you over and over: [describe how you like it done]. Turn this into a reusable skill. Write clear instructions, include my preferences as specific rules, add an example of a perfect result, and tell me how to save it so you use it automatically next time.\"\n\nMore prompts in the free Prompt Library: https://tristenobrien.ai\n\n#AI #Claude #ChatGPT #Opus55 #GPT6 #GPT6Astra #AIAgents #MCP #ClaudeSkills #JevAI",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "The 100-Day AI Plan",
+    "end_time": 19
+   },
+   {
+    "start_time": 19,
+    "title": "Master One AI Platform",
+    "end_time": 137
+   },
+   {
+    "start_time": 137,
+    "title": "Build an AI Employee",
+    "end_time": 188
+   },
+   {
+    "start_time": 188,
+    "title": "Learn AI Skills",
+    "end_time": 238
+   },
+   {
+    "start_time": 238,
+    "title": "Connect Your Tools With MCP",
+    "end_time": 281
+   },
+   {
+    "start_time": 281,
+    "title": "Stay a Generalist on Purpose",
+    "end_time": 324
+   },
+   {
+    "start_time": 324,
+    "title": "Join the 100-Day AI Challenge",
+    "end_time": 355
+   }
+  ],
+  "tags": [
+   "ai",
+   "Jev",
+   "Jev AI",
+   "Claude",
+   "Claude Code",
+   "Opus 5.5",
+   "Astra",
+   "GPT 6 Astra",
+   "MCP"
+  ],
+  "categories": [
+   "Science & Technology"
+  ],
+  "heatmap": null,
+  "upload_date": "20260924",
+  "duration": 355,
+  "channel": "Tristen O'Brien",
+  "channel_id": "UCruPFdKtGG8Oz5dvha6WWgA",
+  "channel_follower_count": 85900,
+  "thumbnail": "https://i.ytimg.com/vi_webp/IHV7eWibqzo/maxresdefault.webp",
+  "view_count": 7324,
+  "like_count": 151,
+  "comment_count": 10
+ }
+}

@@ -1,0 +1,157 @@
+{
+  "video_id": "afVpjeoQF2I",
+  "chaine": "simon-scrapes",
+  "titre": "Anthropic Just Built It’s Own Agentic OS",
+  "codeur": "agent simon-scrapes",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "actu",
+    "format_secondaire": "talk",
+    "sujet": "Les nouveaux Projects de Claude Code (une conversation qui délègue à des threads, contexte injecté, recherche RAG, permissions d'équipe) et ce que ça change pour un Agentic OS fait maison",
+    "outils": ["Claude Code", "Claude Projects", "Cowork", "Grok Bot"],
+    "niveau": "intermediaire",
+    "objectif_probable": "vente"
+  },
+  "titre": {
+    "attente_au_clic": "Découvrir le système d'exploitation agentique qu'Anthropic vient de sortir dans Claude.",
+    "schema": "<Entreprise> Just Built It's Own <Concept>",
+    "promesse": "Savoir ce qu'Anthropic vient de lancer et ce que ça change",
+    "audace": "audacieux",
+    "registre": "jargon",
+    "briques": ["audace"],
+    "marqueurs": ["nouveaute"],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": false,
+    "emotion": null,
+    "regard": null,
+    "texte": "IT'S HERE.",
+    "texte_mots": 2,
+    "repete_titre": "non",
+    "elements": ["IT'S HERE. en énorme, HERE en orange", "ordinateur portable avec le logo Claude qui rayonne", "une interface imaginée (Agents, Workflows, Knowledge, Tools, PLAN > EXECUTE > LEARN) en petit"],
+    "nb_elements": 3,
+    "fond": "noir avec halo orange",
+    "couleurs": ["noir", "orange", "blanc"],
+    "curiosity_gap": "nouveaute",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "If you spent the last 6 months building an agentic OS with memory, a brand context layer, and team permissions set up on top of Claude, Anthropic have just built their own.",
+    "premiere_phrase_reprend_titre": "oui",
+    "premier_plan": "Face caméra en plan large au bureau ; dès 0:02 trois hexagones dessinés (Memory, Brand context, Team permissions), puis la carte « Code, September 17, 2026 »",
+    "premier_plan_reprend_miniature": "non",
+    "ouverture": ["hook-dissonance", "actu-annonce"],
+    "preuve": {
+      "type": "aucune",
+      "seconde": null,
+      "description": "Aucune preuve dans l'intro ; la vidéo d'Anthropic n'est citée qu'à 1:12, et il dit à 2:26 ne pas avoir encore accès à l'outil"
+    },
+    "annonce_plan": {"presente": false, "nb_points": null, "a_l_ecran": false},
+    "boucle_vers_la_fin": {"presente": false, "citation": "", "seconde_resolution": null, "tenue": null},
+    "seconde_premier_point": 17,
+    "attente_tenue": "partiel",
+    "attente_note": "La nouveauté est expliquée, mais ce n'est pas un OS : une mise à jour de Projects, réservée à Claude Code, pas encore testée. Le commentaire le plus aimé (99 likes) : « Ended the video: No they didn't »."
+  },
+  "structure": {
+    "modele": "mixte",
+    "segments": [
+      {"debut": 0, "fin": 17, "titre": "Anthropic a construit son propre OS agentique", "role": "intro", "pull": true, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 17, "fin": 72, "titre": "Les anciens Projects et leur limite", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 72, "fin": 152, "titre": "Une conversation qui délègue à des threads", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 152, "fin": 235, "titre": "Chaque thread reçoit le contexte du projet", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": true, "preuve": false, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 235, "fin": 241, "titre": "Abonnez-vous pour les 100 000", "role": "cta", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 241, "fin": 322, "titre": "La recherche dans la base du projet (RAG)", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 322, "fin": 403, "titre": "Les permissions d'équipe : un team OS", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 403, "fin": 492, "titre": "L'Agentic OS est-il fini ? Pas encore", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": true, "preuve": false, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 492, "fin": 504, "titre": "La communauté et l'appel à commenter", "role": "cta", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 69, "type": "annonce-suite", "citation": "that is exactly the bit that Anthropic have focused on changing"},
+      {"seconde": 152, "type": "annonce-suite", "citation": "I'll tell you why I'm so excited about this"},
+      {"seconde": 223, "type": "annonce-suite", "citation": "there's also two more things that are actually so much better"},
+      {"seconde": 235, "type": "rupture", "citation": "if you're still watching, hit subscribe below"},
+      {"seconde": 322, "type": "annonce-suite", "citation": "onto the one that I think matters most for this update"},
+      {"seconde": 336, "type": "question-spectateur", "citation": "how do we communicate that when we're both working in these isolated environments"},
+      {"seconde": 407, "type": "question-spectateur", "citation": "is an Agenda OS completely finished?"}
+    ],
+    "histoires": [
+      {"seconde": 23, "acte": "anecdote", "resume": "Son projet de copywriting dans Claude, avec ses guides d'accroches YouTube et LinkedIn."},
+      {"seconde": 138, "acte": "vision-build", "resume": "Ce que Projects fait, il le construit à la main depuis des mois dans son Agentic OS (skills d'orchestration, routage de sous-agents)."},
+      {"seconde": 402, "acte": "client-autre", "resume": "67 % des membres de sa communauté ont demandé un OS d'équipe."}
+    ],
+    "payoffs": [
+      {"seconde": 75, "resume": "Un projet devient une conversation qui délègue à des threads dans le cloud"},
+      {"seconde": 166, "resume": "Chaque thread reçoit dépôts, fichiers, instructions et un memory.md partagé"},
+      {"seconde": 276, "resume": "Une recherche dans la base du projet, sans réglage"},
+      {"seconde": 348, "resume": "Des droits de lecture ou d'édition par personne"},
+      {"seconde": 420, "resume": "Deux raisons pour lesquelles un Agentic OS garde sa place"}
+    ],
+    "premier_payoff_seconde": 75,
+    "jargon": 2,
+    "repetitions": 1,
+    "test_du_tweet": "Les nouveaux Projects de Claude Code : une conversation qui délègue à des threads, le contexte du projet injecté partout, une recherche RAG intégrée, des droits d'équipe. C'est le début d'un OS agentique maison chez Anthropic, encore limité. Ton propre système garde sa valeur pour l'instant."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "taille, plan large au bureau ; vignette à droite sur les captures", "decor": "bureau, mur à lattes de bois, micro RØDE, affiche, fauteuil vert, lampe"},
+    "parts": {"face": 40, "ecran": 45, "motion": 15, "broll": 0},
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["curseur-surligne", "split-screen", "fleches-annotations", "zooms-ecran"],
+    "charte": "Icônes au trait sur fond blanc (hexagones Memory, Brand context, Team permissions), carte orange Claude Code, docs d'Anthropic surlignées, liste manuscrite sur parchemin pour la conclusion. La miniature noire et orange n'en reprend que la couleur.",
+    "rythme": "regulier",
+    "notes": "Pas de chapitres ni de cartes de section. Une capture d'écran de son projet de copywriting reste près d'une minute ; la conclusion se coche sur une liste manuscrite façon parchemin."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 235, "type": "abonnement", "cible": "s'abonner pour atteindre 100 000", "amene_par": "transition", "citation": "if you're still watching, hit subscribe below and help me reach the 100k"},
+      {"seconde": 492, "type": "formation", "cible": "la couche mémoire, le système de skills et le team OS dans la communauté (Agentic Academy)", "amene_par": "fin", "citation": "the team operating system is inside the community in the link in description"},
+      {"seconde": 499, "type": "like-commentaire", "cible": "donner son avis sur la mise à jour", "amene_par": "fin", "citation": "I'd love to hear your thoughts on this upgrade"}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"formation": 1, "produit": 1, "abonnement": 1},
+    "commentaire_epingle": null,
+    "recap_final": false,
+    "derniere_phrase": "I'd love to hear your thoughts on this upgrade and the direction that Anthropic are heading and see you in the next video.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["le titre jugé trompeur : ce n'est pas un OS", "la dépendance à un seul fournisseur", "ceux qui ont déjà construit leur propre système (Hermes, harness maison)", "l'interface claire et le son jugés pénibles"],
+    "demandes": ["la compatibilité avec son AgenticOS", "ce que deviennent les projets existants", "l'intérêt pour un développeur dans Claude Code", "une invitation à la communauté Skool"],
+    "critiques": ["« Ended the video: No they didn't » (99 likes)", "le verrouillage chez Anthropic n'est pas cité (17 likes)", "« Stupid clickbait title - not an OS »", "un sujet non testé, du remplissage"],
+    "reprises": ["Agentic OS", "team OS", "8:10 « the whole point was [...] the outcome », contesté"],
+    "signal_promesse": "decue"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "1re phrase = titre (« Anthropic have just built their own ») ; 1er plan en face caméra, sans l'ordinateur ni « IT'S HERE. »"},
+    "ap_boucle_curiosite": {"note": 1, "preuve": "La 1re phrase fait craindre que l'Agentic OS soit dépassé ; la réponse vient à 7:05, sans question posée dans l'intro"},
+    "ap_effort_montre": {"note": 0, "preuve": "Aucun effort : 2:26 « I don't even have access myself yet to test this »"},
+    "ap_setup_progress_payoff": {"note": 1, "preuve": "Limite des anciens Projects, trois nouveautés, puis la réponse sur l'Agentic OS : un arc clair, mais rien n'est montré en marche"},
+    "ap_contraste_rythme": {"note": 0, "preuve": "De 3 à 10 plans par minute, débit stable autour de 240 mots/min, aucun passage marqué"},
+    "ap_montrer_sans_son": {"note": 1, "preuve": "Les hexagones Memory, Brand context, Team permissions puis la carte Claude Code datée disent « Claude sort ça » ; l'enjeu reste à entendre"},
+    "ali_douleur_histoire": {"note": 1, "preuve": "0:00 la crainte d'avoir construit pour rien, puis 0:23 son projet de copywriting : un exemple, pas une histoire"},
+    "ali_coeur_unique": {"note": 2, "preuve": "8:05 « the whole point was never setting up a complex folder structure. It was the outcome »"},
+    "alx_pont": {"note": 1, "preuve": "Titre repris et contexte (Claude Code seulement, encore brut), sans preuve ni annonce, et ouvert par une dissonance"},
+    "alx_pull_paint_point": {"note": 2, "preuve": "Chaque nouveauté part d'un problème vécu (contexte qui déborde, coéquipier isolé), d'une image (le chef d'équipe) et de ce qu'elle change"},
+    "alx_nom_idee": {"note": 1, "preuve": "« threads do the work, Claude directs the work », « team operating system » ; peu affiché"},
+    "alx_phrase_finale": {"note": 2, "preuve": "1:50 « threads do the work, whereas Claude now directs the work » ; 3:37 « delegating a conversation to a team » ; 8:05 « It was the outcome »"},
+    "alx_douleur_reve": {"note": 0, "preuve": "Titre de nouveauté portée par le nom de l'entreprise et le jargon « Agentic OS »"},
+    "alx_cta_tot": {"note": 0, "preuve": "La communauté n'arrive qu'à 8:12 ; 6:42 elle est citée comme preuve, sans offre"},
+    "ed_intro_courte": {"note": 2, "preuve": "Trois phrases (hook, réserve, direction) puis le 1er point à 0:17"},
+    "ed_hook": {"note": 2, "preuve": "0:00 « If you spent the last 6 months building an agentic OS [...] Anthropic have just built their own »"},
+    "ed_probleme_preuve_consignes": {"note": 0, "preuve": "Des problèmes et la doc d'Anthropic, mais aucune consigne : l'outil n'est pas encore accessible"},
+    "ed_tension_relancee": {"note": 2, "preuve": "2:32 « I'll tell you why I'm so excited » ; 5:22 « the one that I think matters most » ; 6:47 « is an Agenda OS completely finished? »"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "2:18 ce qu'il construit à la main dans son Agentic OS ; 6:42 les 67 % de sa communauté : des mentions, pas une histoire"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "Les threads sont expliqués deux fois (1:15 puis « in plain English » à 1:55)"},
+    "ed_niveau_simple": {"note": 2, "preuve": "1:55 « in plain English » et le chef d'équipe ; le RAG traduit en « pull only in the bits it needs »"},
+    "tous_video_suivante": {"note": 0, "preuve": "« see you in the next video », sans vidéo précise"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Une mise à jour de Projects rebaptisée « Agentic OS », le nom du produit qu'il vend, avec « IT'S HERE. » en miniature. Le cadrage a tiré les vues (breakout 7,6) mais a déçu : 99 likes sur « No they didn't ».",
+    "intro_structure": "Une phrase qui parle directement à son public (« si tu as passé 6 mois à construire... »), puis le contenu dès 0:17. La vidéo se ferme sur « ton système garde sa valeur » et renvoie à sa communauté.",
+    "habillage": "Sobre : docs surlignées, icônes au trait, une liste manuscrite pour conclure ; pas de chapitres.",
+    "idee_pour_nous": "Quand un éditeur sort une fonction proche de ce qu'on enseigne au Club, en faire une vidéo courte « ce que ça change pour toi », sans gonfler le nom de la nouveauté dans le titre.",
+    "objectif": "club"
+  }
+}

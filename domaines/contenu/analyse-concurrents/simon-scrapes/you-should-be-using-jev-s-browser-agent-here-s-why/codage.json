@@ -1,0 +1,155 @@
+{
+  "video_id": "zac3kEUwIlg",
+  "chaine": "simon-scrapes",
+  "titre": "You Should Be Using Jev’s Browser Agent, Here’s Why",
+  "codeur": "agent simon-scrapes",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "tuto",
+    "format_secondaire": "actu",
+    "sujet": "Jev, un modèle de jugement rapide, combiné à Claude pour faire un agent navigateur : fonctionnement, démo, construction en un prompt, limites",
+    "outils": ["Jev (Typesafe)", "Claude Code", "Playwright", "browser-use", "Jev ultraast (nom incertain dans la transcription)"],
+    "niveau": "avance",
+    "objectif_probable": "communaute"
+  },
+  "titre": {
+    "attente_au_clic": "Découvrir un agent navigateur rapide (Jev) et pourquoi l'installer tout de suite.",
+    "schema": "You Should Be Using <Outil>, Here's Why",
+    "promesse": "Un agent navigateur qui marche enfin vite",
+    "audace": "timide",
+    "registre": "jargon",
+    "briques": [],
+    "marqueurs": [],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "grand sourire, main au menton",
+    "regard": "camera",
+    "texte": "INSTALL NOW Jev",
+    "texte_mots": 3,
+    "repete_titre": "partiel",
+    "elements": ["INSTALL NOW en capitales blanches soulignées d'orange", "fenêtre de navigateur avec l'onglet Jev et un curseur qui file (traînée orange)", "visage de Simon, main au menton"],
+    "nb_elements": 3,
+    "fond": "noir avec halo orange autour du navigateur",
+    "couleurs": ["noir", "orange", "blanc"],
+    "curiosity_gap": "nouveaute",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Browser agents have always been terrible.",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Face caméra en plan large au bureau, puis à 0:02 un chrono animé (02:00, 15:57, 20:00)",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": ["douleur", "hook-fait"],
+    "preuve": {
+      "type": "social",
+      "seconde": 15,
+      "description": "Exemples repris de Twitter, puis browser-use qui a refait son agent dessus : « Zürich → London. In 7.1 seconds. » à l'écran"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 2, "a_l_ecran": false},
+    "boucle_vers_la_fin": {"presente": false, "citation": "", "seconde_resolution": null, "tenue": null},
+    "seconde_premier_point": 37,
+    "attente_tenue": "partiel",
+    "attente_note": "Le « pourquoi » est tenu (vitesse, coût, démo). Mais « INSTALL NOW » promet un outil à installer : il faut en fait le construire avec une clé, une skill et un prompt, et le doc promis est introuvable selon un commentaire."
+  },
+  "structure": {
+    "modele": "probleme-solution",
+    "segments": [
+      {"debut": 0, "fin": 37, "titre": "The Problem With Browser Agents", "role": "intro", "pull": true, "paint": true, "point": false, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 37, "fin": 126, "titre": "Comment marche Jev", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 126, "fin": 369, "titre": "The Trick To Making It Fast", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 369, "fin": 448, "titre": "Démo de son outil « Grab any flow from the web »", "role": "demo", "pull": false, "paint": true, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 448, "fin": 548, "titre": "Building Your Own Agent", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 548, "fin": 707, "titre": "Where This Approach Fails", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": false, "relance_sortie": false},
+      {"debut": 707, "fin": 723, "titre": "Recap", "role": "fin", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 8, "type": "rupture", "citation": "But with Jev, when you set it up correctly, it's totally different."},
+      {"seconde": 37, "type": "question-spectateur", "citation": "So firstly then, how do they actually work?"},
+      {"seconde": 137, "type": "question-spectateur", "citation": "How is this navigating a browser?"},
+      {"seconde": 369, "type": "annonce-suite", "citation": "I actually went ahead and built out my own little tool here"},
+      {"seconde": 449, "type": "question-spectateur", "citation": "Now, how do you actually build something like this yourself?"},
+      {"seconde": 552, "type": "rupture", "citation": "this looks like a perfect demo of everything working incredibly smoothly"}
+    ],
+    "histoires": [
+      {"seconde": 126, "acte": "perso-passe", "resume": "Il a d'abord eu du mal à comprendre comment un classifieur pouvait piloter un navigateur."},
+      {"seconde": 494, "acte": "anecdote", "resume": "Il a vu la démo d'Omar sur Twitter, sans le code, et l'a reconstruite en 20 minutes avec Claude Code."},
+      {"seconde": 628, "acte": "anecdote", "resume": "Un test sur les blogs de concurrents de son autre entreprise, Rankspot : l'agent dit « fini » alors qu'il a presque tout raté."}
+    ],
+    "payoffs": [
+      {"seconde": 65, "resume": "Pourquoi Jev est rapide et presque gratuit : une réponse parmi des options, avec une confiance"},
+      {"seconde": 180, "resume": "L'astuce : les éléments de la page passés en liste numérotée, sans capture ni réflexion"},
+      {"seconde": 238, "resume": "Deux questions par page et un seuil de confiance à 0,7"},
+      {"seconde": 421, "resume": "Son outil parcourt cinq sites en parallèle à toute vitesse"},
+      {"seconde": 431, "resume": "browser-use : 1 092 appels ramenés à 101 sur Google Flights"},
+      {"seconde": 529, "resume": "Un agent navigateur qui marche à partir d'un seul prompt"}
+    ],
+    "premier_payoff_seconde": 65,
+    "jargon": 3,
+    "repetitions": 1,
+    "test_du_tweet": "Les agents navigateur sont lents parce qu'ils regardent des captures et réfléchissent. Avec Jev, la page devient une liste numérotée et un classifieur choisit l'action en un tiers de seconde ; Claude n'intervient que s'il doute, pour écrire ou vérifier. Prompt gratuit, et quatre pièges à connaître."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "taille, plan large au bureau ; vignette à droite sur les captures", "decor": "bureau, mur à lattes de bois, micro RØDE, affiche, fauteuil vert, lampe"},
+    "parts": {"face": 30, "ecran": 50, "motion": 20, "broll": 0},
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["cartes-chapitre", "chiffres-animes", "split-screen", "etiquettes", "zooms-ecran"],
+    "charte": "Cartes blanches à gros titre noir avec un mot en orange (« How does it work? », « Where it breaks ») ; schémas sur fond sombre quadrillé avec étiquettes rose et orange néon ; chrono animé. La miniature reprend le noir et l'orange.",
+    "rythme": "contraste",
+    "notes": "La première minute va vite (17 plans) avec chrono, exemples et carte du fondateur. Le milieu est une longue démo de son outil maison, écran fixe et vignette, autour de 6 à 8 plans par minute."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 476, "type": "lead-magnet", "cible": "le prompt et le plan de construction, gratuits dans la description (communauté gratuite skool.com/scrapesai)", "amene_par": "pendant-demo", "citation": "you can grab this down below in the description for free"},
+      {"seconde": 535, "type": "communaute-gratuite", "cible": "la communauté Skool où les builds et les prompts sont partagés", "amene_par": "apres-valeur", "citation": "all of this was built as part of the feedback inside our school community"},
+      {"seconde": 638, "type": "produit", "cible": "Rankspot.ai, son autre entreprise", "amene_par": "pendant-demo", "citation": "my other business, Rankspot.ai, which helps you effectively get recommended on Chat GPT"}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"formation": 1, "lead-magnet": 1, "produit": 1, "abonnement": 1},
+    "commentaire_epingle": null,
+    "recap_final": false,
+    "derniere_phrase": "This is a massive step in the right direction. Thanks for watching.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["un web à deux couches, l'une pour les humains, l'autre pour les agents", "la justesse technique contestée", "Jev comparé à Claude sur la précision"],
+    "demandes": ["le doc Jev, introuvable au lien donné", "le même montage avec le framework Hermes", "savoir si d'autres agents peuvent utiliser Jev"],
+    "critiques": ["« Pure code, no AI » est faux : Jev reste un modèle (5 likes)", "aller plus vite au but et montrer le problème en direct", "apprendre à l'agent à accepter les cookies plutôt qu'à les refuser", "un prompt unique ne gère pas les pop-ups imprévues"],
+    "reprises": ["« Pure code, no AI, very deterministic », cité pour être contredit", "Jev"],
+    "signal_promesse": "mixte"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "1re phrase sur les agents navigateur sans Jev ; 1er plan en face caméra large, sans le navigateur de la miniature"},
+    "ap_boucle_curiosite": {"note": 0, "preuve": "0:32 « this video will show you how they work and how to build your own » : une annonce, pas une question ouverte"},
+    "ap_effort_montre": {"note": 0, "preuve": "Aucun effort dans l'intro ; les essais ratés n'arrivent qu'à 9:28"},
+    "ap_setup_progress_payoff": {"note": 2, "preuve": "2:17 « How is this navigating a browser? », 3:00 l'astuce expliquée, 7:05 la démo qui file à l'écran"},
+    "ap_contraste_rythme": {"note": 1, "preuve": "17 plans dans la 1re minute, puis 6 à 14 ; le milieu en démo fixe est plus lent, sans rupture nette"},
+    "ap_montrer_sans_son": {"note": 1, "preuve": "Le chrono (02:00 puis 20:00) et « Zürich → London. In 7.1 seconds. » disent lent puis rapide, mais Jev n'apparaît qu'à 0:58"},
+    "ali_douleur_histoire": {"note": 1, "preuve": "0:02 douleur nette (« you may as well do the task yourself ») ; aucune histoire vécue ne suit dans l'intro"},
+    "ali_coeur_unique": {"note": 2, "preuve": "1:51 « Jev makes thousands of small calls [...] and Claude thinks, writes, and validates »"},
+    "alx_pont": {"note": 1, "preuve": "Contexte, preuve et annonce comme un pont, mais ouvert par une douleur et un fait"},
+    "alx_pull_paint_point": {"note": 2, "preuve": "Chaque partie part d'une question, s'appuie sur un exemple (bouton d'essai gratuit, bannière cookies, test Rankspot) puis donne l'action"},
+    "alx_nom_idee": {"note": 1, "preuve": "« the trick », « false done », cartes NULL/CHOICE à l'écran ; noms peu repris"},
+    "alx_phrase_finale": {"note": 1, "preuve": "4:34 « It's pure code, no AI » ; 11:48 « a massive step forward » ; rare ailleurs"},
+    "alx_douleur_reve": {"note": 0, "preuve": "Titre centré sur l'outil ; ni problème ni désir"},
+    "alx_cta_tot": {"note": 0, "preuve": "Le prompt gratuit arrive à 7:56"},
+    "ed_intro_courte": {"note": 1, "preuve": "1er point à 0:37, après sept phrases"},
+    "ed_hook": {"note": 2, "preuve": "0:00 « Browser agents have always been terrible » et « A 2-minute job [...] takes 10 to 20 minutes »"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "Les limites suivent problème, preuve (le test raté) et correctif ; l'astuce et la construction vont droit aux consignes"},
+    "ed_tension_relancee": {"note": 2, "preuve": "2:17 « How is this navigating a browser? » ; 7:29 « how do you actually build something like this yourself? »"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "8:14 la démo d'Omar refaite en 20 minutes ; 10:28 le test Rankspot raté : des anecdotes"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "La boucle (lire la page, deux questions, agir) est expliquée deux fois (3:14 puis 4:37)"},
+    "ed_niveau_simple": {"note": 1, "preuve": "Exemples concrets (lien de prix, bouton d'essai), mais état, seuil de confiance, Playwright et iframes passent vite"},
+    "tous_video_suivante": {"note": 0, "preuve": "« Thanks for watching. », sans vidéo proposée"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Titre centré sur l'outil, sans enjeu pour le spectateur ; la miniature ajoute l'injonction (« INSTALL NOW ») et la vitesse en image. Breakout 2, 46 000 vues à 7 jours : en dessous de la médiane de la chaîne.",
+    "intro_structure": "Douleur chiffrée (2 minutes contre 20) et preuve par les autres, puis un tuto technique. La partie « où ça casse » est honnête et utile, mais arrive après 9 minutes.",
+    "habillage": "Cartes titres blanches à mot orange, chrono animé, puis une longue démo écran : plus d'écran que de visage.",
+    "idee_pour_nous": "Quand on montre un outil de niche, poser le gain pour le spectateur dans le titre plutôt que le nom de l'outil ; garder la partie « où ça casse », elle rassure.",
+    "objectif": "vues"
+  }
+}

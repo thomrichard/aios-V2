@@ -1,0 +1,143 @@
+[00:00] You're prompting wrong, and I mean that in the most nicest way possible because the fix only takes about 30 seconds to do.
+[00:06] And I promise that you'll be able to use this fix on your very next prompt.
+[00:10] Take a look at these two prompts.
+[00:11] Which one do you think gets a better result?
+[00:13] Well, I'm telling you right now, it's the one that looks like a prompt engineer wrote it.
+[00:16] So, in this video, we're going to go over three different things that make it easy for you to create a prompt like this, starting with a hard rule that you need to follow from here on out.
+[00:25] Second, we're going to need to make sure that you are using the right AI tool, and I'll show you the one that I use every day.
+[00:32] And then third, I'm going to give you a Claude skill that you can copy and you could start using right away.
+[00:37] So, let's get started and jump into the first one, which is the 30-second rule.
+[00:41] So, the rule is this.
+[00:42] Before you can start any project with Claude, you have to take at least 30 seconds to talk to it first.
+[00:48] And when I say talk, I mean that you are going to dump everything that's in your brain about the project into Claude.
+[00:54] That's every thought you have about what you want in there.
+[00:56] It doesn't matter the order that you're talking about.
+[00:58] It doesn't even have to be organized.
+[01:00] Matter of fact, you don't even have to finish your sentences.
+[01:02] As you'll see here in just a couple minutes, the right tool is going to clean up all of this before it even gets to Claude.
+[01:07] And then the rest of that is Claude's job.
+[01:09] Your job is just to get everything out.
+[01:12] It's important to mention that these 30 seconds are not your prompt.
+[01:15] Everything that you're saying is just raw materials for Claude because Claude is the one that's going to become this prompt engineer and hands you over something that is extremely powerful and makes your output significantly better.
+[01:27] Now, 30 seconds probably doesn't sound like a lot of time at all.
+[01:30] And if you're typing out every single word letter by letter, it's not a lot of time.
+[01:34] A fast typist may be able to get 20 words within 30 seconds.
+[01:38] That's only a sentence and a half.
+[01:40] And I'm telling you right now, a 20-word prompt is not going to give you that prompt engineering results that we're looking for.
+[01:46] So, to take this to the next level, you need to talk to Claude with your voice because that same 30 seconds, when you talk, is closer to 70 words instead of 20 when you were typing it.
+[01:57] To get the right results, you need the right tool, and I feel like I have used them all.
+[02:01] WhisperFlow is the one that I use.
+[02:04] Now, they're a new partner to this channel, and they're also sponsoring this video today.
+[02:08] WhisperFlow is a voice-to-text tool for your computer and your phone.
+[02:12] And I just want to say really quick, if you're serious about using AI and getting to the next level, this has to be one of your primary tools.
+[02:19] Take a look at how I use it.
+[02:20] I have 140,000 words that I put through WhisperFlow, and 70% of my usage comes from AI prompts.
+[02:28] So, here's how it works.
+[02:29] On your computer, you're just going to hold a button, and you're going to talk.
+[02:32] And in this example, this is when you would start the brain dump.
+[02:35] And when you're done, just let go of the button, and the text is going to land right where your cursor is.
+[02:40] In this case, it's in my prompt box right here.
+[02:42] So, a minute ago, I said you don't have to complete a sentence or worry about messing up.
+[02:46] And that's because with WhisperFlow, you can talk like a normal person.
+[02:50] Like I say, um, a lot.
+[02:52] I lose my train of thought sometimes.
+[02:53] I change my mind in the middle of a sentence.
+[02:55] WhisperFlow will fix all of that in real time.
+[02:58] For example, if I said, "I need to get pricing research done for O'Brien's Irish pizza, and I need that before Thursday.
+[03:05] Actually, I need that before Wednesday, because, um, I want a full day to, uh, uh, go through the go through it before I get to the call.
+[03:16] In that example, I said, "Um," twice.
+[03:18] Neither one of those "ums" are in there.
+[03:20] I said Thursday, then I changed it to Wednesday, and WhisperFlow just wrote Wednesday.
+[03:25] So, it didn't have to type out my correction, it just made the correction.
+[03:28] Which brings me to a feature that I absolutely love, and it's called snippets.
+[03:32] And snippets is basically a shortcut.
+[03:35] So, you would save something that you would otherwise type out over and over again, and then you give it a trigger phrase.
+[03:41] And then anytime that you say that phrase, that whole thing just drops in for you.
+[03:45] So, not only does this work on your computer, it also works on your phone quite well.
+[03:49] Now, I'm a terrible typer, and I hate using the swipe feature.
+[03:52] I'm always messing up when I type something with my thumbs.
+[03:55] The autocorrect corrects it to something that it shouldn't be, and at this point, I just kind of leave it because I'm tired of going back and changing my text all the time.
+[04:03] So, for me, one of the best features is having this on my phone because all of the same rules apply as they do on your computer.
+[04:10] For demo purposes, it would sound something like this.
+[04:12] Hey, I'm running about 10 minutes behind.
+[04:14] Actually, I'm running about 15 minutes behind.
+[04:18] So, um yeah, I still have to go grab before I head on over.
+[04:23] And it works perfectly just like it does on the computer.
+[04:25] And notice that I didn't have to say period or comma or anything like that.
+[04:29] All the punctuation gets put in exactly where it's supposed to go.
+[04:32] Okay, so we've already covered two of the three things that are needed to create these awesome prompts.
+[04:37] We talked about the rule where you talk to Claude for at least 30 seconds, and then you use the right tool, which is WhisperFlow.
+[04:42] But there's one more rule.
+[04:44] After you're done with your brain dump, your 30-second brain dump, we are going to have Claude ask you at least five questions so it fully understands the prompt that it actually needs to make.
+[04:54] And of course, when you answer these questions, you're going to use WhisperFlow.
+[04:57] So, that's the third thing.
+[04:59] I've all of this set up as a skill inside of Claude, which means when I'm talking to Claude and I mention that I'm doing this brain dump, it's going to automatically trigger that skill for me.
+[05:07] And to me, this looks pretty damn good.
+[05:09] But if you take a look at the first line, I never told Claude what I wanted it to be.
+[05:13] It just picked the rule itself based off of the discussion that we had, and that is part of the skill that I created for you.
+[05:20] So, even with all of that that we just talked about, there actually is a ceiling here.
+[05:24] I want you to think about a call or a meeting that you had recently.
+[05:27] Do you remember everything that was said in it?
+[05:29] Because we're about to go through an entire prompt exercise here.
+[05:32] It's based off of a fictional customer who wants to open up a food truck business inside of New York City.
+[05:38] And they are called O'Brien's Irish Pizza.
+[05:41] It sounds delicious.
+[05:42] Now, I had a conference call with them, and to To honest, there was a lot of things that were said on that call, but I just can't remember everything.
+[05:49] I'm a busy guy.
+[05:50] So, as I'm going through the brain dumping exercise for 30 seconds with Claude, I only can give it what I remember.
+[05:56] And a lot of the note takers that are out there today, they actually make that worse because they hand you a transcript.
+[06:01] Sometimes it has a name on it, sometimes it doesn't.
+[06:03] Sometimes it says caller one or caller two, and sometimes it just gives you wrong information.
+[06:08] Which is where WhisperFlow note taker comes in.
+[06:10] I use it as the second part of my brain.
+[06:12] Note taker does a lot of really cool things.
+[06:14] The first thing I want to show you is this.
+[06:16] If you're about to meet with somebody, it can give you a quick brief on who you're about to meet with.
+[06:20] And then when we start the call, you're going to notice that there's not an AI bot that's present on there.
+[06:25] You probably have seen those before, but note taker runs on your own device.
+[06:28] So, nothing has to join the call.
+[06:30] Now, during the meeting, you can also see live transcription happening just as you're doing right now as I'm saying words out of my mouth.
+[06:37] Now, if I'm talking to my client, O'Brien's Irish Pizza, well, that's going to pop up right here with the apostrophe and everything.
+[06:44] And the reason why it's doing that is because I added O'Brien to my dictionary with an apostrophe.
+[06:50] And the same thing happens with unique names like Savon as an example.
+[06:53] Savon is my customer on this call, and that's a name that most transcriptions can completely get wrong.
+[06:59] But every time I say it, you can see it right there, Savon, it shows up correctly because I added it in my dictionary.
+[07:05] And then after the call in the same meeting that we just had, the real names are showing up instead of speaker one or speaker two in the transcription.
+[07:12] And of course, they're spelled the correct way because they were able to grab that out of my Google calendar.
+[07:17] Okay, now we're going back over to Claude, and this is where it gets really cool.
+[07:21] Note taker can connect to Claude through my MCP, which means that Claude can read my meetings without me having to copy and paste anything over.
+[07:28] What I want to do here is I want to kick things off, and I want to ask what I committed to on the call.
+[07:32] And as you can see, it's going to give me the four action items that I committed to, and then it's going to cite the exact moments in the meeting when each one of those came up.
+[07:40] So, what we can do is we can run this whole prompt process over.
+[07:44] That means that we're going to do the 30-second rule.
+[07:47] We're going to use WhisperFlow.
+[07:48] We're going to trigger the skill, and then we're going to let it write the prompt for us.
+[07:52] Only this time, Claude already has our meeting information.
+[07:55] And we don't need to tell it much, but what I did tell it is that we need competitive research done for our client.
+[08:00] We need to find pricing.
+[08:02] We need to find out what it actually takes to get a food truck licensed in New York City.
+[08:07] And then, we need to take all of that and lay it out in a very easy to read PDF that I would feel comfortable putting in front of my customer.
+[08:14] And then, I want all of that dropped into my Google Drive.
+[08:17] And then, out of that same prompt, I'm also going to tell it that I want it to create a flyer for O'Brien's Irish Pizza.
+[08:23] But of course, none of this has been sent yet to the customer because if I look at my email, you can see that there's a draft sitting there with both of my files attached just like I asked for.
+[08:33] But the only thing that's missing there is what I actually wanted to say to the customer.
+[08:37] So, I can use my voice with WhisperFlow.
+[08:39] Now, say something like this.
+[08:41] "Hey Savon, it was great chatting with you the other day.
+[08:43] I look forward to working on this project together.
+[08:45] I was able to grab those four things that you were looking for, which were your competitive analysis, your research into what it takes to open up a restaurant, I mean, a food truck.
+[08:57] Um I wanted to put all of that together and put it in a PDF for you, which I did.
+[09:02] And I've also created O'Brien's Irish Pizza flyer like you asked.
+[09:07] Please let me know if you need anything else.
+[09:09] And you can see your two documents are attached.
+[09:12] Thanks a lot, Tristan O'Brien." So, WhisperFlow Note Taker is free on Macs with Windows on the way.
+[09:19] And WhisperFlow is free to use as well.
+[09:21] If you do want a subscription, one subscription's going to cover them both, which is the part that I really like.
+[09:25] And if you want to learn more, you can go to WhisperFlow yourself.
+[09:28] In fact, I have a link in the description.
+[09:30] I also have a promo code down there, too, if you want to use that as well.
+[09:33] So, I use this pretty much every day.
+[09:35] This is the process that I do to make sure that I have the best prompts.
+[09:38] This is the tool that I use.
+[09:39] This is the skill that I use and I wanted to show it off for you.
+[09:42] And if you like this video, please subscribe, hit like, leave a comment, and I will see you in the next one.

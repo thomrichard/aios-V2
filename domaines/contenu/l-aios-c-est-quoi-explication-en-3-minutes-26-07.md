@@ -4,7 +4,7 @@ resume: ChatGPT, Claude et Gemini ne sont que des applications. L'AIOS, c'est le
 statut: publie
 domaine: contenu
 cree: 2026-07-18
-maj: 2026-10-22
+maj: 2026-10-25
 liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md, 3-minutes-pour-comprendre-les-agents-ia-26-06.md, 3-minutes-pour-comprendre-les-3-leviers-pour-de-meilleurs-26-06.md, tu-n-as-plus-besoin-de-prompter-voici-la-methode-qui-26-08.md, j-ai-passe-les-cours-gratuits-de-claude-ce-qu-il-faut-savoir-26-08.md, 7-techniques-de-prompting-pour-des-reponses-plus-precises-26-09.md, pourquoi-ton-aios-est-malade-et-comment-le-soigner-26-09.md, l-app-claude-a-change-10-nouveautes-a-connaitre-26-10.md]
 ---
 # L'AIOS, c'est quoi ? Explication en 3 minutes
@@ -17,29 +17,29 @@ liens: [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md, claude-tutoriel-co
 
 ## Stats
 
-YouTube Analytics, données jusqu'au 2026-10-20. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
+YouTube Analytics, données jusqu'au 2026-10-22. Revenus estimés en dollars US. Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, regarder les vues engagées.
 
 | | 7 premiers jours | 30 premiers jours | Depuis la sortie |
 |---|---|---|---|
-| Vues | 85 | 224 | 712 |
-| Vues engagées | 85 | 224 | 549 |
-| Heures regardées | 1,6 | 5,4 | 14,5 |
-| Abonnés gagnés | 0 | 2 | 5 |
-| Revenus estimés | 0,33 $ | 0,79 $ | 1,69 $ |
-| Durée moyenne regardée | | | 1 min 34 s (62,1 %) |
+| Vues | 85 | 224 | 727 |
+| Vues engagées | 85 | 224 | 559 |
+| Heures regardées | 1,6 | 5,4 | 14,7 |
+| Abonnés gagnés | 0 | 2 | 6 |
+| Revenus estimés | 0,33 $ | 0,79 $ | 1,71 $ |
+| Durée moyenne regardée | | | 1 min 34 s (61,9 %) |
 | J'aime · commentaires | | | 16 · 4 |
 
 ## Liens
 
-- Cite : [2026-07-07-comment-j-ai-automatise-ma-vie-avec-un-aios](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
-- Cite : [2026-05-20-claude-tutoriel-complet-pour-passer-de-debutant-a](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
-- Cite : [2026-06-11-3-minutes-pour-comprendre-les-agents-ia](3-minutes-pour-comprendre-les-agents-ia-26-06.md)
-- Cite : [2026-06-07-3-minutes-pour-comprendre-les-3-leviers-pour-de-meilleurs](3-minutes-pour-comprendre-les-3-leviers-pour-de-meilleurs-26-06.md)
-- Citée par : [2026-08-11-tu-n-as-plus-besoin-de-prompter-voici-la-methode-qui](tu-n-as-plus-besoin-de-prompter-voici-la-methode-qui-26-08.md)
-- Citée par : [2026-08-25-j-ai-passe-les-cours-gratuits-de-claude-ce-qu-il-faut-savoir](j-ai-passe-les-cours-gratuits-de-claude-ce-qu-il-faut-savoir-26-08.md)
-- Citée par : [2026-09-15-7-techniques-de-prompting-pour-des-reponses-plus-precises](7-techniques-de-prompting-pour-des-reponses-plus-precises-26-09.md)
-- Citée par : [2026-09-22-pourquoi-ton-aios-est-malade-et-comment-le-soigner](pourquoi-ton-aios-est-malade-et-comment-le-soigner-26-09.md)
-- Citée par : [2026-10-06-l-app-claude-a-change-10-nouveautes-a-connaitre](l-app-claude-a-change-10-nouveautes-a-connaitre-26-10.md)
+- Cite : [comment-j-ai-automatise-ma-vie-avec-un-aios-26-07](comment-j-ai-automatise-ma-vie-avec-un-aios-26-07.md)
+- Cite : [claude-tutoriel-complet-pour-passer-de-debutant-a-26-05](claude-tutoriel-complet-pour-passer-de-debutant-a-26-05.md)
+- Cite : [3-minutes-pour-comprendre-les-agents-ia-26-06](3-minutes-pour-comprendre-les-agents-ia-26-06.md)
+- Cite : [3-minutes-pour-comprendre-les-3-leviers-pour-de-meilleurs-26-06](3-minutes-pour-comprendre-les-3-leviers-pour-de-meilleurs-26-06.md)
+- Citée par : [tu-n-as-plus-besoin-de-prompter-voici-la-methode-qui-26-08](tu-n-as-plus-besoin-de-prompter-voici-la-methode-qui-26-08.md)
+- Citée par : [j-ai-passe-les-cours-gratuits-de-claude-ce-qu-il-faut-savoir-26-08](j-ai-passe-les-cours-gratuits-de-claude-ce-qu-il-faut-savoir-26-08.md)
+- Citée par : [7-techniques-de-prompting-pour-des-reponses-plus-precises-26-09](7-techniques-de-prompting-pour-des-reponses-plus-precises-26-09.md)
+- Citée par : [pourquoi-ton-aios-est-malade-et-comment-le-soigner-26-09](pourquoi-ton-aios-est-malade-et-comment-le-soigner-26-09.md)
+- Citée par : [l-app-claude-a-change-10-nouveautes-a-connaitre-26-10](l-app-claude-a-change-10-nouveautes-a-connaitre-26-10.md)
 - Description : https://clubsmart.s.gy/3min-aios
 - Description : https://www.skool.com/club-smart/about
 - Description : https://clubsmart.s.gy/elevenlabs

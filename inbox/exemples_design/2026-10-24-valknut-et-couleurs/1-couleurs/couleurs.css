@@ -1,0 +1,134 @@
+:root{
+  /* ── Base ramps ─────────────────────────────────────────────
+     Pine  : couleur signature, tirée du fond du portrait. Calme, crédible.
+     Brique: chaleur du chandail rouge. Action, urgence bienveillante.
+     Ambre : lumière chaude qui va avec un teint chaud. Signal, surlignage.
+     Ardoise: neutres verdis, jamais gris froid.
+     Papier: fond crème, confort de lecture longue.                       */
+  --pine-50:#EFF6F2; --pine-100:#DCEBE3; --pine-200:#B7D7C7; --pine-300:#83BBA4;
+  --pine-400:#4F9B7E; --pine-500:#327A60; --pine-600:#26604C; --pine-700:#1C4B3C;
+  --pine-800:#163526; --pine-900:#10241C; --pine-950:#0C1A15;
+
+  --brique-50:#FDF1ED; --brique-100:#FBE5DF; --brique-200:#F5C9BD; --brique-300:#EBA391;
+  --brique-400:#DC7C64; --brique-500:#C85B41; --brique-600:#B4472F; --brique-700:#94331F;
+  --brique-800:#7A2718; --brique-900:#4A160D;
+
+  --ambre-100:#FDF4E4; --ambre-200:#F9E8C8; --ambre-300:#F3D69C; --ambre-400:#E8BE6E;
+  --ambre-500:#D9A441; --ambre-600:#B07C1E; --ambre-700:#8A5F14;
+
+  --teal-100:#DDEDF1; --teal-300:#8FC2CE; --teal-500:#3A8798; --teal-600:#2A6B7C; --teal-700:#1E5261;
+
+  --ardoise-50:#F5F7F5; --ardoise-100:#EDF0EE; --ardoise-150:#E3E7E4; --ardoise-200:#D3D8D4;
+  --ardoise-300:#B3BAB5; --ardoise-400:#8B948E; --ardoise-500:#667069; --ardoise-600:#4C554F;
+  --ardoise-700:#363F3A; --ardoise-800:#232B27; --ardoise-900:#161D1A; --ardoise-950:#0E1512;
+
+  --papier-50:#FAF8F3; --papier-100:#F2EEE5; --papier-200:#E7E1D3;
+
+  --rouge-600:#8C1D18; --rouge-100:#F7E4E1;
+
+  /* ── Rôles sémantiques — thème clair (défaut) ───────────── */
+  --surface-page:var(--papier-50);
+  --surface-card:#FFFFFF;
+  --surface-sunken:var(--papier-100);
+  --surface-raised:#FFFFFF;
+  --surface-soft:var(--pine-50);
+  --surface-inverse:var(--pine-950);
+  --surface-accent:var(--brique-600);
+  --surface-highlight:var(--ambre-200);
+  --surface-overlay:rgba(12,26,21,.62);
+
+  --text-strong:var(--pine-950);
+  --text-body:var(--ardoise-800);
+  --text-muted:var(--ardoise-600);
+  --text-subtle:var(--ardoise-500);
+  --text-inverse:var(--papier-50);
+  --text-inverse-muted:var(--pine-200);
+  --text-brand:var(--pine-700);
+  --text-accent:var(--brique-700);
+  --text-link:var(--pine-700);
+  --text-link-hover:var(--brique-700);
+
+  --border-hairline:#DDE2DE;
+  --border-default:var(--ardoise-200);
+  --border-strong:var(--ardoise-300);
+  --border-inverse:rgba(245,247,245,.18);
+  --border-brand:var(--pine-600);
+
+  --action-primary-bg:var(--pine-700);
+  --action-primary-bg-hover:var(--pine-800);
+  --action-primary-bg-active:var(--pine-900);
+  --action-primary-fg:#F7FBF8;
+  --action-accent-bg:var(--brique-600);
+  --action-accent-bg-hover:var(--brique-700);
+  --action-accent-fg:#FFF6F2;
+  --action-quiet-bg:transparent;
+  --action-quiet-bg-hover:var(--pine-50);
+  --action-quiet-fg:var(--pine-700);
+  --action-disabled-bg:var(--ardoise-150);
+  --action-disabled-fg:var(--ardoise-400);
+
+  --feedback-success-fg:var(--pine-700); --feedback-success-bg:var(--pine-100);
+  --feedback-warning-fg:var(--ambre-700); --feedback-warning-bg:var(--ambre-100);
+  --feedback-danger-fg:var(--rouge-600);  --feedback-danger-bg:var(--rouge-100);
+  --feedback-info-fg:var(--teal-700);     --feedback-info-bg:var(--teal-100);
+
+  --focus-ring-color:var(--ambre-500);
+
+  /* Surfaces éditoriales : miniatures, cartes-titres, carrousels */
+  --editorial-bg:var(--pine-950);
+  --editorial-fg:var(--papier-50);
+  --editorial-accent:var(--ambre-500);
+  --editorial-hot:var(--brique-500);
+  --editorial-rule:var(--ambre-500);
+}
+
+/* ── Thème sombre ─────────────────────────────────────────── */
+[data-theme="dark"]{
+  --surface-page:var(--ardoise-950);
+  --surface-card:var(--ardoise-900);
+  --surface-sunken:#0A0F0D;
+  --surface-raised:#1C2420;
+  --surface-soft:var(--pine-900);
+  --surface-inverse:var(--papier-50);
+  --surface-accent:var(--brique-500);
+  --surface-highlight:rgba(217,164,65,.22);
+  --surface-overlay:rgba(6,12,10,.72);
+
+  --text-strong:var(--papier-50);
+  --text-body:var(--ardoise-200);
+  --text-muted:var(--ardoise-400);
+  --text-subtle:var(--ardoise-500);
+  --text-inverse:var(--pine-950);
+  --text-inverse-muted:var(--pine-800);
+  --text-brand:var(--pine-300);
+  --text-accent:var(--brique-300);
+  --text-link:var(--pine-300);
+  --text-link-hover:var(--ambre-400);
+
+  --border-hairline:#2B342F;
+  --border-default:#333C37;
+  --border-strong:#4A544E;
+  --border-inverse:rgba(14,21,18,.18);
+  --border-brand:var(--pine-400);
+
+  --action-primary-bg:var(--pine-300);
+  --action-primary-bg-hover:var(--pine-200);
+  --action-primary-bg-active:var(--pine-400);
+  --action-primary-fg:var(--pine-950);
+  --action-accent-bg:var(--brique-500);
+  --action-accent-bg-hover:var(--brique-400);
+  --action-accent-fg:#1A0B07;
+  --action-quiet-bg-hover:rgba(131,187,164,.12);
+  --action-quiet-fg:var(--pine-300);
+  --action-disabled-bg:#242C28;
+  --action-disabled-fg:var(--ardoise-600);
+
+  --feedback-success-fg:var(--pine-300); --feedback-success-bg:rgba(50,122,96,.20);
+  --feedback-warning-fg:var(--ambre-400); --feedback-warning-bg:rgba(217,164,65,.18);
+  --feedback-danger-fg:#F0A79C;           --feedback-danger-bg:rgba(140,29,24,.28);
+  --feedback-info-fg:var(--teal-300);     --feedback-info-bg:rgba(42,107,124,.24);
+}
+
+/* ── Variantes d'accent (mêmes rôles, autre température) ──── */
+[data-accent="ambre"]{ --action-accent-bg:var(--ambre-500); --action-accent-bg-hover:var(--ambre-600); --action-accent-fg:var(--pine-950); --text-accent:var(--ambre-700); --editorial-hot:var(--ambre-500); }
+[data-accent="teal"]{ --action-accent-bg:var(--teal-600); --action-accent-bg-hover:var(--teal-700); --action-accent-fg:#F2FAFC; --text-accent:var(--teal-700); --editorial-hot:var(--teal-500); }

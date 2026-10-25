@@ -170,15 +170,16 @@ const PARTNER_HINTS = new RegExp(CFG.partnerHints || 'sponsor|collab|partner|bra
 const LEAD_HINTS = new RegExp(CFG.leadHints || 'join|member|sign\\s?up|subscri|pricing|enroll|course|coaching|access|billing|refund', 'i');
 const PERSONAL_FROM = new RegExp(CFG.personalFrom || '@(gmail|googlemail|yahoo|outlook|hotmail|icloud|proton)\\.', 'i');
 const jsonFrom = out => { const i = out.indexOf('{'); if (i < 0) throw new Error('pas de JSON renvoyé par la commande e-mail'); return JSON.parse(out.slice(i)); };
+const gwsParams = o => process.platform === 'win32' ? '"' + JSON.stringify(o).replace(/"/g, '\\"') + '"' : JSON.stringify(o);
 async function getEmail() {
   if (!EMAIL.enabled) return { needsSetup: true };
   const cli = /^[A-Za-z0-9._-]+$/.test(EMAIL.command || 'gws') ? (EMAIL.command || 'gws') : 'gws';
-  const list = jsonFrom(await run(cli, ['gmail', 'users', 'messages', 'list', '--params', '"{\\"userId\\":\\"me\\",\\"q\\":\\"newer_than:1d -category:promotions\\",\\"maxResults\\":40}"']));
+  const list = jsonFrom(await run(cli, ['gmail', 'users', 'messages', 'list', '--params', gwsParams({ userId: 'me', q: 'newer_than:1d -category:promotions', maxResults: 40 })]));
   const ids = (list.messages || []).slice(0, 18).map(m => m.id).filter(id => /^[A-Za-z0-9]+$/.test(id));
   const rows = [];
   for (const id of ids) {
     try {
-      const m = jsonFrom(await run(cli, ['gmail', 'users', 'messages', 'get', '--params', `"{\\"userId\\":\\"me\\",\\"id\\":\\"${id}\\",\\"format\\":\\"metadata\\"}"`], 25000));
+      const m = jsonFrom(await run(cli, ['gmail', 'users', 'messages', 'get', '--params', gwsParams({ userId: 'me', id, format: 'metadata' })], 25000));
       const h = {}; (m.payload?.headers || []).forEach(x => h[x.name.toLowerCase()] = x.value);
       const subject = h.subject || '(sans objet)', rawFrom = h.from || '';
       const kind = PARTNER_HINTS.test(subject) ? 'partnerships' : LEAD_HINTS.test(subject) ? 'leads' : PERSONAL_FROM.test(rawFrom) ? 'personal' : 'other';

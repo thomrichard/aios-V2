@@ -1,0 +1,237 @@
+[00:00] This is a $0 carousel.
+[00:02] And I would say 90% of people are posting this.
+[00:05] This is a $100 carousel.
+[00:06] Maybe half of people get here.
+[00:08] And this is a $1,000 carousel.
+[00:11] Motion graphics.
+[00:12] Every single slide moves.
+[00:13] Only 1% of people are making these.
+[00:16] And here's the crazy part.
+[00:17] The $100 one, it cost me $0.
+[00:20] No APIs, no credits, not a single dime.
+[00:22] And the $1,000 one isn't really a carousel.
+[00:25] It's a system.
+[00:26] And it's one that businesses actually pay for.
+[00:28] And if you're wondering why carousels, because carousels are one of the best performing posts on social media right now.
+[00:35] Buffer, a company, compared every format on Instagram.
+[00:38] Carousels got an engagement of a rate of 6.9%.
+[00:42] Reals got 3.3%.
+[00:44] That's more than double.
+[00:46] Reals still get a bit more reach.
+[00:48] Carousels are what people actually stop and interact with.
+[00:52] And here's the part that most people don't know.
+[00:54] If someone scrolls past your carousel, Instagram can show it again later on starting slide two.
+[01:00] So your post gets a second chance and a real doesn't get that.
+[01:04] So today I'll show you all three how each one is made and what it really costs and which one you should be making.
+[01:10] And as you know me, I'm not geeking any of this.
+[01:12] I keep dropping skills and I give them away for free every single week.
+[01:17] Everything you need for the $100 one is already actually in my school community.
+[01:21] the skill, the styles sheet, and the exact prom I used.
+[01:24] Links in description.
+[01:25] And honestly, I'm making this video to say thank you.
+[01:28] Not even two weeks ago, I had around 400 subscribers.
+[01:32] Today, we're at 5,600.
+[01:35] I really can't thank you enough, and for all the love you've been giving me in the comments, it means a lot to you.
+[01:41] So, I'm going to keep doing my best and keep putting skills away.
+[01:44] And one more thing, just to thank you more, just added something new in school.
+[01:49] If you have a problem with this skill or you don't know how to install it, we now have weekly calls in school to help you set it up.
+[01:56] And if you have any questions about the system, we're here to help.
+[01:59] You can grab the link right now, but I would rather you stay all the way to the end to understand how it works.
+[02:04] And it also helps my channel.
+[02:06] I'm not asking for money.
+[02:07] What I am asking is way more important than money.
+[02:10] It's your attention.
+[02:12] And I'll try to give you as much value as possible.
+[02:14] And if it feels too long, speed it up.
+[02:16] put it at 1.1 or 2x speed, whatever feels right to you.
+[02:20] And I put timestamps actually on the video so you can jump straight to the part that you actually want.
+[02:25] If you're new here, leave a follow because I drop scales every day as I mentioned multiple times.
+[02:30] Let's get straight into it.
+[02:31] Quick thing first, the price tag is not what you pay for, it's what it looks like.
+[02:36] The $0 one looks free.
+[02:38] The $100 one looks like a paid designer.
+[02:42] And the $1,000 one is the kind of agencies would charge for, not her one carousel for never having to think about Instagram again.
+[02:50] Okay, so now let's start at the bottom.
+[02:51] The $0 carousel Canva.
+[02:53] I'm sure you know this one.
+[02:54] Pick a template, change the color, type your text, export, done in 10 minutes.
+[02:59] I'm not hitting on Canva.
+[03:00] Canva is actually great tool.
+[03:02] It's fast.
+[03:02] It's free.
+[03:03] And for a quick post, it's fine.
+[03:05] But here's the problem.
+[03:06] The template made every decision for you.
+[03:07] The layout, the fonts, the spacing.
+[03:09] So your post looks like 50 other posts using the same template.
+[03:14] So here, let's try to run a little test.
+[03:16] Cover the username.
+[03:17] Can you tell who made it?
+[03:18] With most Canva carousels, you actually can't.
+[03:21] And that's why 90% of people are here.
+[03:24] It's easy.
+[03:25] But easy means everyone's doing it.
+[03:26] And when everybody's doing it, it doesn't really stand out.
+[03:29] So then people try AI.
+[03:32] They open chbt and type make me a carousel.
+[03:34] Make it modern.
+[03:35] and they type a purple gradient, a glowing brain, and a different font on every slide.
+[03:40] And honestly, that's not really a level up.
+[03:42] I would say it's kind of like worse than Canva because AI was never the problem.
+[03:47] Nobody told it what good looks like.
+[03:50] So now, let's kind of tell it.
+[03:53] The $100 carousel.
+[03:55] And this one I'm most excited about because it costs $0.
+[03:59] And when I say 0, I actually mean it.
+[04:02] I made it in two ways.
+[04:03] And this is the first time that I'm going to be talking about it in this channel and and I haven't seen a single video online about this way.
+[04:09] Number one, Muse Meta's app.
+[04:11] It has a free tier.
+[04:13] You can either drag in your two images or you paste the prompts.
+[04:16] That's it.
+[04:16] And here's the cool part.
+[04:18] You can tell it to make this a daily thing.
+[04:21] Every day a new carousel.
+[04:22] You pick the topic, you pick the style, you picked everything, and it's really good at it.
+[04:26] Completely free.
+[04:27] And Meta just dropped a new model, Muse Wonder.
+[04:31] They say it's their strongest model ever, so they're clearly investing a lot into this.
+[04:36] There is a caveat.
+[04:37] Muse isn't available in every country yet.
+[04:40] If it's in yours, perfect.
+[04:41] If it's not, just use some VPN.
+[04:43] Or you can go the second way.
+[04:46] Way number two, a local Chinese model.
+[04:49] Rent 3.5 from Alibabang 9 billion parameters.
+[04:53] I run it with Olama right here on my Mac.
+[04:56] Just the base one, 16 GB of memory.
+[04:59] The download is 7 GB and it can see images so you can drag the stylesheet straight in.
+[05:05] No API, no credits, nobody counting your tokens.
+[05:08] It lives on your laptop.
+[05:10] So if you can't use Muse, this is the way.
+[05:13] Same idea, no limits.
+[05:14] Now, how does it perform good carousels?
+[05:17] We have a stylesheet reference that we create in Hicksfield.
+[05:20] With that stylesheet, AI will understand the guardrails and what it's supposed to look like.
+[05:26] So it already has the fonts, the colors, the pallets.
+[05:29] It will respect every single guardrail there is there and that's how it will perform consistently good carousels.
+[05:36] Now I know what you're thinking Jad a free billion parameter model I can't make that.
+[05:41] And you're right on its own it can't.
+[05:44] The model is not the secret.
+[05:45] The secret is what you give it.
+[05:47] So let's let me make it more clear in a way.
+[05:50] I give it three things for muse and the Chinese AIW.
+[05:56] Number one, a style sheet.
+[05:58] This is one image with all the design rules on it.
+[06:01] This one that you can see here pop up.
+[06:03] The exact colors with the hex codes, the fonts, and the rules are what makes it look expensive.
+[06:09] Like teal is lights, never paints.
+[06:11] It only glows.
+[06:12] The colors stay as they're supposed to be, and it will stay consistent for every slide.
+[06:18] And honestly, that's what you're paying a designer for who you pay $100 a brand guide rules.
+[06:24] Somebody deciding so every slide looks like the same post.
+[06:28] Number two, an example, a finished carousel made with a stylesheet.
+[06:32] So, it doesn't just read the rules, it sees what the results is supposed to look like.
+[06:36] Number three, the prompts.
+[06:38] And this is where most people kind of like mess up.
+[06:40] They write one line.
+[06:41] Mine is a full page.
+[06:43] So, you kind of give it like one single prompt.
+[06:45] your researches first for the official sources.
+[06:47] Every number needs a link.
+[06:49] Don't invent it.
+[06:51] Don't round around it.
+[06:52] Show them the plan before you build anything.
+[06:55] And then a checklist at the end.
+[06:58] Is there exactly one highlighted word per slide?
+[07:01] Is any text in the wrong color?
+[07:03] Is the top black?
+[07:04] So, it checks its own work before it hands it over.
+[07:07] And it doesn't draw the text inside an image.
+[07:10] It writes the whole carousel as a web page.
+[07:12] So the text is real, always sharp, always spelled right.
+[07:16] You open it on your browser and you screenshot each slide.
+[07:20] So test number one, I gave it the stylesheet, the example, and the topic.
+[07:24] I said Claude HighQ 5.5 in three slides.
+[07:27] And if you look at the image, it came consistently to the stylesheet reference.
+[07:32] So this model is not able to create images.
+[07:35] But the way I prompt it in the zip is it takes screenshots online and it puts them in the carousel and then it adds the color fonts and the guardrails that it's supposed to do.
+[07:46] The second test I gave it my actual picture.
+[07:49] It had to build the carousel around me, my photo edited into the style.
+[07:53] And this one is the one that matters for most of you because if you have a business, you already have pictures, your products, your shop, your face.
+[08:01] You don't need AI images.
+[08:03] You need a layout that makes your pictures look premium basically.
+[08:06] Now, I'll be honest about the limits because I'm not going to pretend it's perfect.
+[08:10] The local model, I can go on the internet so it can grab sometimes a real screenshot.
+[08:16] And in the prompts, I say if you can't do this, just let me know and never fake a screenshot.
+[08:21] So, if you're using a Chinese model, it's better to give it images than you let it screenshot.
+[08:27] But Muse is completely free.
+[08:28] And I do want to mention a 9 billion parameter model is not opus level.
+[08:34] It's slower and sometimes you have to ask it twice.
+[08:37] That's the reason why it cost $0.
+[08:39] But if you have a little bit of a budget or you want to sell this, this one is definitely for you.
+[08:46] The $1,000 carousel motion graphics.
+[08:50] Every slide moves, sync the music, and when someone swipes, the whole pose feels alive.
+[08:57] It's interactive with the first slide to the second slide all the way to the end.
+[09:01] Almost nobody is doing this yet.
+[09:03] And I gave the skill away for free.
+[09:05] And I'm giving this skill again for free.
+[09:08] And this one is different because the thou $1,000 carousel is not just for your page.
+[09:12] It's for agencies, people who want to sell this as a business because a business doesn't want one carousel.
+[09:18] A business wants post going out every week on brand and they don't want to touch anything.
+[09:24] So, you're not selling carousel, you're selling an automation.
+[09:27] Here's how it works.
+[09:29] The brain is cla 5.5 and it runs the whole thing.
+[09:33] Step one, it finds the niche.
+[09:35] You tell it who the business is.
+[09:37] A dentist in Austin, a coffee, a brand, a gym, and it figures out the whole thing for you.
+[09:43] That's the way I put it into the zip.
+[09:45] Step two, it finds the ideas.
+[09:47] It goes online what's working in that niche right now and comes up with the topics for the week, not random topics and it will not take from you.
+[09:56] It will say here's what I believe are going to perform better in content.
+[10:00] So it has a step ahead.
+[10:02] Step three, it writes the carousel, the hook, every slide, the call to action, the CTA.
+[10:08] Same rules as before.
+[10:09] One idea per slide, one action at the end.
+[10:13] Step four, the images.
+[10:14] Hicksfield is connected right inside Claude.
+[10:17] So it makes the images itself GBT image 2.5 player the product the scene or the avatar like me that you can see here my character same face in every post because I have created a stylesheet reference if you
+[10:30] want to up your level.
+[10:32] I was able to get an offer from Hickfield.
+[10:34] There's a link down in the description with a promo code.
+[10:37] just click it, look at the offer, and if it looks interesting, go for it because honestly, this is what's going to level up everything for the motion graphics or if you want also to have an avatar.
+[10:48] Step five, bring it to life.
+[10:50] This is the motion graphic sport and it's not an AI video.
+[10:54] It's real motion design written in code.
+[10:57] Every slide animated and synced to the music.
+[11:00] The music also is made by code.
+[11:02] Step six is blow.
+[11:04] I'm not sure if you know this, but this is what posts every week and every day.
+[11:09] It will not affect your Instagram or your Tik Tok.
+[11:12] And you don't have to maintain the automation anymore because Blow will just post for you in your account with the description, the hashtags, and the slides.
+[11:22] That's the difference.
+[11:23] The $100 carousel is something you make.
+[11:26] The $1,000 carousel is something that makes itself.
+[11:29] Now, this one does cost some money.
+[11:31] You need Claude plan to run Opus Hicksfield, credits for the images, and a blow t plan for posting.
+[11:38] But think about it from the business side.
+[11:40] They're not paying for the tools.
+[11:42] They're paying for the results.
+[11:43] Fresh carousels every single week that looks like a designer made them with motion and they don't have to log in to check or to post themselves.
+[11:53] And that's why only 1% of people are here.
+[11:56] It's not that it's hard to make, it's that most people never think of it as a business.
+[12:00] And most of the pieces are already in my school.
+[12:03] The motion carousel skill, the avatar part, the stylesheet prompt, and it will be running itself.
+[12:08] And now we'll be making this as a skill also.
+[12:12] So, which one would you actually make?
+[12:14] If you're a creator, you have a business, and you want your page to actually look like you, I would definitely just go for the $1,000 carousel.
+[12:22] And it does not cost $1,000.
+[12:24] It's what you could potentially sell it for or more.
+[12:26] Everything is in the link in the description.
+[12:29] And I want to thank you again.
+[12:31] That's why I'm making this skill.
+[12:32] I hope I give some value.
+[12:34] Thanks for staying all the way.
+[12:35] Subscribe if you want more skills like these.
+[12:38] I drop skills every week.
+[12:40] and I'll see you in the next
