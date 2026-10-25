@@ -1,0 +1,101 @@
+[
+ {
+  "texte": "Once the internet is written in a way that agents can read pages like data, it’ll be insane with models like Jev. We need two layers to websites, the human UI and the agent UI, or lack there of lol.",
+  "likes": 6,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Visher",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "4:35 \"Pure code, no AI, very deterministic\" — seriously? Jev is a trained ML model (a classifier/cross-encoder) that computes logits and outputs probabilities with a confidence score. Pure deterministic code doesn't fail based on probabilities. Jev is a neural network classifier, which means it’s still AI — just discriminative rather than generative. Just because a model doesn't stream text token-by-token like Claude doesn't magically turn it into \"deterministic code.\" Classifiers were AI long before ChatGPT came along. You throw the term \"AI\" around trying to sound like an advanced tech enthusiast, but in reality, you clearly don't even grasp the basics of what it means.",
+  "likes": 5,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ПетрФомин-щ9ж",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Vídeo excepcional, didática maravilhosa! Obrigado por compartilhar seu conhcimento.",
+  "likes": 3,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@marceloamaral7007",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "I'm not seeing the Jev Browser doc at the link you have in the notes",
+  "likes": 3,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@brichie77",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "If it is not a fixed webpage environment, selection accuracy drops too low, and if the input increases, the selection model becomes as slow as LLM.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@bangsfactory3010",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "I’m really curious if you can do the same with the Hermes windows ui framework",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@joseguzman6988",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Please get straight to the point and show the problem you're solving in real time.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@teban-lopez",
+  "date": 1791763200,
+  "parent": "root"
+ },
+ {
+  "texte": "Hey can muse and grokbot use Jev on their browser?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@KumR",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Building your own with a single prompt skips error handling for unexpected modal popups that block the main content area.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Vexaloom-labs",
+  "date": 1792800000,
+  "parent": "root"
+ },
+ {
+  "texte": "3:10 you really think that if you have an automated system to click that cookie banner stuff for you... the right answer to teach it is accept rather than the option that protects your privacy with the same effort?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@jurgor8661",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "I tried Jev thoroughly in making decisions, and I tried Claude, its opposite. I find Claude more accurate than Jev at getting the right decision. The only thing is that Jev is very cheap and fast.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Alex-hr2df",
+  "date": 1791676800,
+  "parent": "root"
+ }
+]

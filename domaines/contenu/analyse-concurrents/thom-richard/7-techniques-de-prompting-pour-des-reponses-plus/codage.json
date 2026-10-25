@@ -1,0 +1,180 @@
+{
+  "video_id": "2HhuPhmdayk",
+  "chaine": "thom-richard",
+  "titre_video": "7 techniques de prompting pour des réponses plus précises (et quand les utiliser)",
+  "codeur": "agent thom-richard",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "liste",
+    "format_secondaire": null,
+    "sujet": "Sept façons de travailler avec l'IA (contexte d'un AIOS, boucle, questionnement, plan, exemples, déballage vocal, CRAFT) et quand utiliser chacune, sur le cas d'une page de vente",
+    "outils": ["Claude", "ChatGPT", "Codex", "vidIQ"],
+    "niveau": "debutant",
+    "objectif_probable": "vues"
+  },
+  "titre": {
+    "attente_au_clic": "Apprendre 7 méthodes pour mieux parler à l'IA et savoir laquelle choisir selon ce que je veux.",
+    "schema": "<N> techniques de <sujet> pour <résultat> (et quand les utiliser)",
+    "promesse": "Des réponses de l'IA plus précises, en choisissant la bonne technique",
+    "audace": "timide",
+    "registre": "mixte",
+    "briques": ["resultat"],
+    "marqueurs": ["chiffre"],
+    "nom_outil": false
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "léger sourire",
+    "regard": "camera",
+    "texte": "MAÎTRISE L'IA / 7 MÉTHODES",
+    "texte_mots": 4,
+    "repete_titre": "partiel",
+    "elements": ["« MAÎTRISE L'IA » en capitales blanches", "« 7 MÉTHODES » en noir sur un bandeau jaune", "visage à droite avec un halo vert"],
+    "nb_elements": 3,
+    "fond": "vert sapin à grands triangles, la charte de la chaîne",
+    "couleurs": ["vert sapin", "blanc", "jaune", "noir"],
+    "curiosity_gap": "aucun",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Quand tu ouvres une [IA] pour travailler, tu peux commencer par lui dire Fais-moi ceci",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Face caméra plein cadre, mur blanc, étagère et lampe ; aucun texte",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": ["hook-dissonance", "pont"],
+    "preuve": {
+      "type": "aucune",
+      "seconde": null,
+      "description": "Aucune preuve avant le 1er point ; la page de vente faite par son AIOS arrive à 1:53"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 7, "a_l_ecran": false},
+    "boucle_vers_la_fin": {"presente": false, "citation": "", "seconde_resolution": null, "tenue": null},
+    "seconde_premier_point": 38,
+    "attente_tenue": "oui",
+    "attente_note": "Les 7 méthodes arrivent chacune avec « quand l'utiliser » et « le gain », puis un récapitulatif. La première (travailler avec son AIOS) n'est pas une technique de prompt au sens du titre."
+  },
+  "structure": {
+    "modele": "liste-numerotee",
+    "segments": [
+      {"debut": 0, "fin": 38, "titre": "Choisir la méthode selon ton besoin", "role": "intro", "pull": true, "paint": true, "point": false, "nom": false, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 38, "fin": 170, "titre": "AIOS : donner le contexte à l'IA", "role": "demo", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 170, "fin": 352, "titre": "Les boucles de correction", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 352, "fin": 487, "titre": "Le questionnement : clarifier tes critères", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 487, "fin": 664, "titre": "Le plan et les exemples : guider le résultat", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 664, "fin": 780, "titre": "Le déballage vocal : poser tes idées", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 780, "fin": 893, "titre": "CRAFT", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 893, "fin": 1038, "titre": "Comment choisir et combiner les méthodes", "role": "fin", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 45, "type": "boucle-ouverte", "citation": "Donc dans quelques minutes, je te montre le résultat."},
+      {"seconde": 51, "type": "question-spectateur", "citation": "Pourquoi ?"},
+      {"seconde": 86, "type": "question-spectateur", "citation": "Quand est-ce que je l'utilise ?"},
+      {"seconde": 162, "type": "annonce-suite", "citation": "On va commencer par celles qui sont les plus nouvelles"},
+      {"seconde": 312, "type": "question-spectateur", "citation": "qu'est-ce qui se passe si tu ne connais pas ces critères là ?"},
+      {"seconde": 336, "type": "question-spectateur", "citation": "Alors quand est-ce que tu utilises ?"},
+      {"seconde": 523, "type": "annonce-suite", "citation": "parfois tu vas te dire que [l'IA] ne comprend rien ce que tu dis"},
+      {"seconde": 625, "type": "annonce-suite", "citation": "Une autre méthode que je trouve vraiment super"},
+      {"seconde": 725, "type": "question-spectateur", "citation": "Et alors ce truc-là, tu l'utilises quand ?"},
+      {"seconde": 741, "type": "annonce-suite", "citation": "On est sur la dernière, la 7e"}
+    ],
+    "histoires": [
+      {"seconde": 24, "acte": "anecdote", "resume": "Le fil de la vidéo est son projet du moment : la page de vente de son atelier « Construire son AIOS »."},
+      {"seconde": 231, "acte": "anecdote", "resume": "Il fait boucler l'IA sur ses titres YouTube jusqu'à un score vidIQ de plus de 90 %."}
+    ],
+    "payoffs": [
+      {"seconde": 113, "resume": "La page de vente de l'atelier, faite par son AIOS à partir d'une phrase"},
+      {"seconde": 276, "resume": "La boucle : quand on connaît les critères de réussite, et une limite d'essais"},
+      {"seconde": 337, "resume": "Le questionnement : faire définir les critères par l'IA quand le sujet est flou"},
+      {"seconde": 502, "resume": "Le mode plan pour garder la main sur les étapes"},
+      {"seconde": 602, "resume": "Les exemples pour le style, que l'IA analyse"},
+      {"seconde": 727, "resume": "Le déballage vocal : passer des idées au brief"},
+      {"seconde": 797, "resume": "CRAFT appliqué à la page de vente puis au courriel d'invitation"},
+      {"seconde": 893, "resume": "Le guide de choix : une méthode par situation, puis comment les combiner"}
+    ],
+    "premier_payoff_seconde": 113,
+    "jargon": 1,
+    "repetitions": 1,
+    "test_du_tweet": "Bien prompter dépend de ce qui manque à l'IA. Contexte : un AIOS. Critères clairs : une boucle. Critères flous : fais-toi questionner. Étapes à contrôler : un plan. Style : des exemples. Idées en vrac : déballe à la voix. Pense-bête : CRAFT."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine, plein cadre la plupart du temps ; à droite des cartes", "decor": "mur blanc, étagère noire avec classeurs, figurines et lettres MARVEL, lampe à ampoule"},
+    "parts": {"face": 70, "ecran": 8, "motion": 22, "broll": 0},
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["split-screen", "cartes-chapitre", "etiquettes"],
+    "charte": "Cartes crème avec schémas dessinés à la main (bonhomme, robot, flèches orange) et titres noirs ; cartes de fin vert sapin à triangles ; étiquettes numérotées vert foncé en bas à gauche. La miniature reprend le vert sapin à triangles.",
+    "rythme": "contraste",
+    "notes": "Les 38 premières secondes sont un seul plan face caméra, sans aucun texte. Les visuels arrivent avec la démo de l'AIOS, puis en cartes crème dessinées à la main, de plus en plus nombreuses vers la fin."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 147, "type": "video-suivante", "cible": "la masterclass AIOS et le prompt d'installation", "amene_par": "apres-valeur", "citation": "si créer un [AIOS] t'intéresse, tu peux retrouver la vidéo ici"},
+      {"seconde": 1004, "type": "autre", "cible": "refaire une conversation ratée avec une des méthodes", "amene_par": "fin", "citation": "reprendre une discussion qui était pas du tout à ton goût"},
+      {"seconde": 1024, "type": "abonnement", "cible": "s'abonner et liker", "amene_par": "fin", "citation": "si cette vidéo t'a plu, n'hésite pas à t'abonner, à mettre un petit like"},
+      {"seconde": 1028, "type": "autre", "cible": "booster la vidéo sur mobile", "amene_par": "fin", "citation": "Tu peux même booster la vidéo si tu es sur mobile"}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"communaute-payante": 2, "newsletter": 1, "video-suivante": 3, "affiliation": 2, "autre": 1},
+    "commentaire_epingle": null,
+    "recap_final": true,
+    "derniere_phrase": "Je te remercie d'avance.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": [],
+    "demandes": [],
+    "critiques": [],
+    "reprises": [],
+    "signal_promesse": "inconnu"
+  },
+  "retention": {
+    "a_30s": 0.674,
+    "a_la_moitie": 0.248,
+    "pertes": [
+      {"seconde": 42, "chute": 5.0, "passage": "« Donc dans quelques minutes, je te montre le résultat. » (prompt lancé, retour face caméra)", "segment": "AIOS : donner le contexte à l'IA"},
+      {"seconde": 93, "chute": 3.7, "passage": "« J'ai vraiment l'impression de discuter avec un collègue » (face caméra, sans image)", "segment": "AIOS : donner le contexte à l'IA"},
+      {"seconde": 124, "chute": 3.6, "passage": "« c'est un petit ticket qui va accompagner [...] le descriptif » (page de vente jugée « un peu basique »)", "segment": "AIOS : donner le contexte à l'IA"},
+      {"seconde": 218, "chute": 2.9, "passage": "« tu identifies les critères clés comme je te l'ai dit »", "segment": "Les boucles de correction"},
+      {"seconde": 189, "chute": 2.5, "passage": "« Tu vas commencer par lui prompter quelque chose. » (schéma de la boucle)", "segment": "Les boucles de correction"}
+    ],
+    "remontees": [
+      {"seconde": 861, "chute": -4.4, "passage": "« Rédige une invitation à partir de ma fiche » (carte CRAFT du courriel)", "segment": "CRAFT"},
+      {"seconde": 654, "chute": -1.7, "passage": "« Et ce que va faire [l'IA], c'est qu'elle va venir restructurer » (début de chapitre)", "segment": "Le déballage vocal : poser tes idées"},
+      {"seconde": 31, "chute": -1.5, "passage": "« je vais commencer directement par celui qui a le plus de valeur pour moi »", "segment": "Choisir la méthode selon ton besoin"},
+      {"seconde": 436, "chute": -1.3, "passage": "« Peut-être que tu as absolument besoin qu'il aille vérifier une source précise »", "segment": "Le questionnement : clarifier tes critères"},
+      {"seconde": 176, "chute": -1.2, "passage": "« Idéalement une cible quantifiable. » (début de chapitre)", "segment": "Les boucles de correction"}
+    ]
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "La 1re phrase parle des façons de travailler avec l'IA (partiel) ; le 1er plan ne garde que le visage, sans le texte ni le fond vert de la miniature"},
+    "ap_boucle_curiosite": {"note": 1, "preuve": "0:45 « dans quelques minutes, je te montre le résultat », résolue à 1:53 : une boucle courte"},
+    "ap_effort_montre": {"note": 0, "preuve": "Aucun effort chiffré ; « 80 % de mon temps » parle de l'usage, pas du travail fourni"},
+    "ap_setup_progress_payoff": {"note": 1, "preuve": "La page de vente sert de fil, mais son résultat n'est montré qu'une fois (1:53) ; les autres méthodes restent racontées"},
+    "ap_contraste_rythme": {"note": 1, "preuve": "21 changements de plan à la minute 3, 3 aux minutes 6 et 7, 11 à la minute 13 : le rythme suit l'arrivée des cartes"},
+    "ap_montrer_sans_son": {"note": 0, "preuve": "Intro de 38 s en un seul plan face caméra, sans aucun texte à l'écran"},
+    "ali_douleur_histoire": {"note": 0, "preuve": "Aucune douleur décrite ni histoire vécue dans l'intro"},
+    "ali_coeur_unique": {"note": 2, "preuve": "0:16 « la méthode que tu dois utiliser, elle dépend de ce que tu veux faire »"},
+    "alx_pont": {"note": 1, "preuve": "Thème, cas concret et annonce des 7 façons comme un pont, sans preuve, après une légère dissonance"},
+    "alx_pull_paint_point": {"note": 2, "preuve": "Chaque méthode : la situation où elle sert, un exemple (page de vente, titres YouTube, script), puis quand l'utiliser et le gain"},
+    "alx_nom_idee": {"note": 2, "preuve": "« loop engineering », « prompt déballage », « mode plan », « CRAFT », étiquettes numérotées à l'écran"},
+    "alx_phrase_finale": {"note": 1, "preuve": "12:12 « passer du domaine des idées au domaine du brief » ; ailleurs « le gain, c'est... », plus résumé que citable"},
+    "alx_douleur_reve": {"note": 1, "preuve": "« réponses plus précises » dit le désir, mais « techniques de prompting » porte le titre"},
+    "alx_cta_tot": {"note": 1, "preuve": "2:27 la masterclass AIOS gratuite, liée au sujet ; une vidéo, pas un lead magnet ni une offre"},
+    "ed_intro_courte": {"note": 1, "preuve": "1er point à 0:38, après le constat, la promesse et le cas concret : un peu plus long que trois lignes"},
+    "ed_hook": {"note": 1, "preuve": "0:00 « tu peux commencer par lui dire Fais-moi ceci [...] Mais parfois » : une dissonance douce"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "Chaque méthode part d'une situation puis donne des consignes ; la preuve manque, sauf la page de vente (1:53)"},
+    "ed_tension_relancee": {"note": 2, "preuve": "5:12 « qu'est-ce qui se passe si tu ne connais pas ces critères là ? » ; 8:43 « parfois tu vas te dire que [l'IA] ne comprend rien »"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "Sa page de vente d'atelier et ses titres vidIQ à plus de 90 % : des usages vécus, sans récit"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "« pense-bête » répété quatre fois sur CRAFT ; quelques redites"},
+    "ed_niveau_simple": {"note": 2, "preuve": "Vocabulaire simple, la boucle et chaque lettre de CRAFT expliquées"},
+    "tous_video_suivante": {"note": 1, "preuve": "La masterclass AIOS est proposée à 2:27 ; la fin ne propose aucune vidéo"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Titre liste plus résultat (« <N> techniques [...] pour des réponses plus précises »), miniature texte seul sur la charte verte, sans curiosité.",
+    "intro_structure": "Intro face caméra sans image ; la courbe perd 5 points quand il lance le prompt et revient face caméra, puis 8 de plus sur la démo de l'AIOS.",
+    "habillage": "Cartes crème dessinées à la main, une par méthode, et une carte de choix « Pose-toi la question » à la fin.",
+    "idee_pour_nous": "Montrer le résultat avant d'expliquer la méthode : ici la page de vente arrive à 1:53, après 1 min 15 de parole.",
+    "objectif": "vues"
+  }
+}

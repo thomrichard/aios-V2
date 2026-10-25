@@ -1,0 +1,650 @@
+[
+ {
+  "texte": "I recommend structuring your rules so they are something you can programmatically extract, rather than embed into the content. Reason being is because a pattern has emerged for a rules shadow agent, which will use a rules corpus to gate commits. You probably haven't seen it yet, but a few months from now and everyone will be talking about it. The rules section of your document sets you up for generating the rules corpus that the shadow agent can load into context and view your diff and compare against the corpus. Also Skills are just context files. You don't really need to make skills when context is retrievable using standard bash/read tools.. Skills should be reserved for something that enables a capability, not for simply loading context.",
+  "likes": 32,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Satorisails77",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "The self-correction loops and nested references are exactly the kind of details I keep missing. I’ve been going through Trent Calloway’s stuff and his operator playbook lately, and it’s making me realize how much there is to learn about actually building reliable AI workflows. Unreal stuff...",
+  "likes": 22,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@user-be4pt6nq8z",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "Almost all of my skills are written for a specific model, since each needs a different level of instruction and has different strengths and weaknesses. Glad to hear the experts agree with that approach. Every once in a while, I get it right.😂\n\nGreat video!",
+  "likes": 8,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@vibinginthecorner",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "All you need is /doctor and run it on each codebase individually and at least monthly, depending on change frequency... done 😊 Funny to see over and over again those recommendation... just ask claude and he will tell you and always using latest and optimal harness settings...",
+  "likes": 8,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@gerihifi",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "Solid breakdown of Anthropic's skill authoring guide. The seven points are all real, and the structural ones (references one level deep, a TOC in any file over 100 lines, scripts for anything that can't vary) are worth applying to every skill people already have.\nOne correction for anyone watching, though: the head -100 part is framed as what Claude always does with reference files, but the doc actually says Claude may partially read a file when it's referenced from another referenced file, and might use something like head -100 to preview it in that case. So it's a nested-references problem, not default behavior. And \"everything you know is outdated\" is doing a lot of work in that title — these read as additions to the existing best practices, not a rewrite. Still a useful summary.",
+  "likes": 7,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@jsneij",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "Simon, thank you very much for covering this.  I extend a middle finger to anthropic for making maintaining this crap for our organization extra work, regardless of how \"easy\" it is... once you get to a couple dozen published skills in a private marketplace, this becomes a pain in the ass, especially the \"variations based on model\" and no awareness harness for mapping instance of skill adjusted to model being used.",
+  "likes": 6,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@agrajagco3222",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "ahh man. I hate it when they change things, but I love it when I find a new YouTuber to learn from. Thanks for the information, man. Means a lot. Saves me a large number of headaches.",
+  "likes": 5,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@MadebyaMexican",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "why don't you just use the latest model to update your skills for you when a new model releases?",
+  "likes": 4,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@hnnngbrah",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "Good to know.  I was already updating my skills from opus 5 to opus 5.5.  Looks like I need to go back and refresh them again. Thanks for this.",
+  "likes": 3,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@jeffersonbeadle4430",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "i can turn any file into one line",
+  "likes": 3,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@weeb3277",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "Can you add a link to the new skills recommendations?",
+  "likes": 3,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@cleghornp",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "I absolutely love how this video is structured, that you start with a banger from almost first second and do not postpone interesting information.",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@adamskrodzki6152",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Just use a folder structure for your project with all dependencies like a docker system",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@jonasnoen",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "Gratitude",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@MDCB1",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Can anyone suggest , only from the personal experiences not from AI suggestion, what's the best way to check the validity and efficiency of the skills created. As we cannot say for sure in the first 2 or 3 runs if the skill is working correctly or not. Anyone?",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ShivamShukla-nn6uf",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "I’ve been experiencing problems and now I can see why that could be the case.  \n\nIf so, many precautions , even testing for each model is needed - why even have it?? It Add so  much time to just ensure that the same thing that could’ve been done easier with code will work almost the same and hopefully reliably.  Which organization would imagine testing its end to end operations with each different model and writing rules for each different model and ensuring it keeps track of what happens for those skills to then keep tweaking them and testing it again?? \n\nThe code is cheaper then and more reliable   !\n\nFurthermore, if we have to go to all these lengths of separating content in the skill then why shouldn’t the model be smart enough to do that??? \n\nI shouldn’t be worried about whether my skill is 100 lines or more, and I shouldn’t be worried and keep track of which skill has which index, and which skill has which references to which other skill file because if the model itself cannot organize it this way or inform me about doing so then it’s not worth it at all!",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ikalen",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "I like how you pointed out clearly and without any waste of words the most importants things",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@carlosantovito185",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "This channel is outstanding I really appreciate the effort.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@AzeezC-k1q",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "Have the AI you use most write the skill for you. Or have Opus 5.5 write the skill for a specific AI. Then all the advice in this video will be followed.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@tubege",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "I might be in the minority with this opinion but when I use Claude, I don’t want to have to think about which model it’s best for the 100 things I need it to do for me on a daily basis. I need Claude to condense all these models into one that just works effectively for everything",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@DavidStella",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "Thank you for everything you do!",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@TommyWalker1",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "Really love your channel and I’ve been recommending it to colleagues. You are always very effective and efficient in terms of the tips that you provide they’re always highly relevant and timely and your video presence and approach is outstanding",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Fred_IgniteMindShift",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "Can you release two versions of your vids plesse - one with natural pauses between each sentence? Your content is great but I find it very difficult to follow as all the gaps seem to have been removed.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@linjaman",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "Thank you for the insight!.. Compiler for diff str of the models helps,  been using it for 4 months since constant release of diff lm models.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@FRELAN-AI",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "Long story short - level of abstraction is nowadays higher, but learning curve is again - steep :D",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Trackman2007",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "Excellent thank you Simon! I setup a claude code skill to check for the latest anthropic claude code skills best practices and provide citations 😊",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@RedCloudServices",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "The \"pip install\" inside the skill is pure evil. Pls just put the requirements and let the user decide how to provide it.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Araes6",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "100 001st!",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@profniz",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "I was nodding approvingly to all the Anthropic advice until they suggest the skill should run `pip install pypdf`. Get your **goddamned hands off of my system**: I am absolutely not about to run a skill that thinks it knows what to do with my system. It's good for skills to be explicit about their needs (an early-out sentence that exits the skill if binaries are unavailable), but don't install things directly. Have some respect.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@JonLauridsen",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "I like this creator! But for fun, I fact-check a lot of creators on their claims. And either this is new info to Simon or someone didn't know how things worked. I'm not going to bust Simon's balls for this, but c'mon man, you're better than this. Or...overall, you're just pushing content for something...golf clap! \n\nI panicked when I saw the title and checked my system and calibrations. I keep all my skills at 120 lines because every .md file below 90k characters in my field accuracy = life, and I don't get any drift or hallucinations if you're calibrated every day, and that's on start-up every boot. One thing that's not improving is how memory works; still in the models, they can say 200 or 500, but that's unstable and can lead to bigger problems. Also, some of the people who have the best practices don't have repos or they are all private.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Anthonie.Bishop",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "The idea of testing a skill across models is huge. We're moving from “does this prompt work?” to “does this system behave reliably across different AI environments?”",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@BuildWithGoSwift",
+  "date": 1792108800,
+  "parent": "root"
+ },
+ {
+  "texte": "Not \"actually needs\", but enough to show some progress, but always being not there and not hitting the target",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@jekamas",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Had no idea Claude only reads the first 100 lines of a reference file, that explains so much. Is anyone else splitting their skills into smaller files now?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@a1.republic",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "I used Opus 5 to cross reference blueprints, my workbook in excel, and the various other files like scope sheets, and it works so damn well. I use Sonnet to just bounce ideas around and work through quick estimates. I use them both to take all of that information and build Proposals and charts from the data in blazing fast time. Then I just read over whatever it pumps out, make any edits as necessary, and send it out. I have to say it does quite a lot of checking on itself. I noticed that 2 times it said a file saved to a folder it did not actually update the file in the folder. I told Claude both times that this happened and now it runs a check just make sure what it saved is in fact in the file I told it to save to. I think this was a conflict with my cloud reverting the file back to what was on the cloud. I was impressed that it did that without me having to tell it to.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@devilinthebelfry7292",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "This sounds exhausting.  I just started with Claude, and I told it it’s in charge of all of this.  I explain to it how I want to work and what I need it to do, then it’s responsible for updating its directives.\n\nI’m amazed at how intelligently it has done this.  We’ve even had a few sessions where we’ve proposed ideas back and forth on how to restructure it for efficiency.  I point out when something doesn’t work quite right, and it makes whatever corrections it needs to perform better moving forward.\n\nI think I much prefer my approach, especially because I can focus more on the tasks, and a lot less on tedious written directives.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@SeanSchwartz-uf3yk",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "ive noticed personally that prescribing the tought process for low degree of freedom kinda works well. Running skills with low effort in this case is a must. \nThe idea is that you provide instructions with a thinking bloc already pre generated in the skill next to each relevant section.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@tigoes",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "Having the dependency install lines in the skill is a context-sledgehammer. Just ship your skill with an install script, that deterministically installs all the dependencies.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@zebramatt",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "pro-tip: use uv and PEP-723 scripts instead of clobbered installation-instructions contaminating the exec environment",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@kottalovag",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "I solved this months ago with skill routing and chunking reference material to max lines per file and max characters per line. Want to try my harness that does this?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@LevyBytes",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "Unless you you fire in an automated way tests wihout the skill, with the skill, modified skill, etc it still stays a hypothesis. And hypotheses needs to be checked. And those principles applies to everything and everywhere - api calls, function calls from libraries during plans writing stages - everywhere. You better do this at planning stage, or will pay for this at writing stage or will pay with runtime errors at execution stage. Using scratchpads and veryfying everything albeit costing tokens is a must.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Dede_Stepas",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "I use Claude for major work. I've never created a skill. I always told people, Skills are to help people feel better about using Claude, and feel more in control. Skills was outdated from the start",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Un_Debunkable",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "i checked the wayback machine those rules (at least the first 2) were there at least from the begining of the year.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@em-pointer",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "Scripts do use context,it just depends on the script. If your agent needs to read the output of the script, that uses context, for example.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@itisthedoc",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "The problem with number 3 is that you have 3 different models to choose from at any one time… and it might be the agent picking the model for the sub agent… so what… write the skill three times for each available model?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@br3nto",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "One easy thing all of these skills are missing: markdown link syntax when referencing other files",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@srinitude",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "Wait. Why is a video in October alerting me about a change that Anthropic made to the skill-building guidelines way way way back in early March? The video seemed to suggest that an update occurred quite recently but March 2026 is ancient history in October 2026.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@BillStrathearn",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "The practices you list match Anthropic’s current skill best-practices page. What shows they were added recently? The link you provided has no update date, and Anthropic hasn’t announced a docs change. \nCould you please provide a link to the old version, or a diff, would make the “new rules” claim checkable.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ramkdm",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "Good presentation but static data in md files don't do the magic.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@davidfotter7006",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Did they also update the skill creator skill?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@hukkfuz",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "I don't know how you guys keep up being disappointed weekly :))",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@bucureștioara",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "3:25 I would argue that controlled API exposure with agentic tool calling via MCP as a better model for low freedom or high-risk actions.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@smithdoesstuff",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "Just use the /doctor command.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@nedJamez",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "i hope someone have made a skill to make skills so i can make my skills faster",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@6Zub",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "\"hey claude analyze and read anthropic latest documentation and best pratice and update my skill\"",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@enrayyt9176",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Why the hell are skills md files instead of schema based files?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@freitastutu",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "I never use Haiku anyway, should I?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@deltrex",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "Young geniuses need more freedom than restrictions to develop well",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@proventure307",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "Did Anthropic update their skill-creator skill with all of these sorts of new methods?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@isleofgreg",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "Just tell the model to write the skill",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@WhatsYourWater",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "Use anthropic skill creator and done",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@hgedek",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "Outdated? These recommendations from Antropic were released a year ago.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@VladimirKphoto",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "this is default...but I don't use Claude",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@XalisVixil",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "Nothing new here folks.  The head -100 and table-of-contents sentences read word for word the same in October 2025 as they do today.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@JohnLovell-FTW",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "Maintaining structured code? Nah, maintain unstructured markdown.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@francisco-barros-codes",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "These changes are going against the whole reason one might want to use AI in the first place...",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@karasko_1",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "You know we had this great tool for doing things that needed to be repeatable, and you define your dependencies etc....it was called a programming language..sigh",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ungrim97",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "This feels like a leaky abstraction wrapped in cargo cult advice. Anthropic should handle indexing, partial reads and model-specific formatting rather than make users accommodate those quirks. And framing every update as “the rules have changed, go fix all your skills” breeds unnecessary FOMO. Focus on clear intent, meaningful constraints and what success looks like; use the current guidance where it solves an actual problem, rather than continually rebuilding around implementation quirks that will change again in 1–6 months. Skills should capture durable knowledge, not become a maintenance treadmill chasing the prompting advice of the week.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@AdsCoulter",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "so many rules, and they keep changing without notice. At some point it will be easier to programm without an agent, 'by hand'...",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@michaelmoser4537",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "I mean, come on man that’s why I don’t really watch AI YouTube anymore. You’re a clickbaity title made me have a panic attack that Anthropic again released something new then after watching it lo and behold, literally nothing is outdated about my skills workflow.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@substance90",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Delete all of your skills completely and navigate what you need. Skills making a mess.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@MrBulgaristan",
+  "date": 1791072000,
+  "parent": "root"
+ },
+ {
+  "texte": "These are the exect structural things a highschool book have so a student can learn the book on their own even if teacher not good.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@divyangverma9880",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "And your Brian is outdated Fing ai hyper",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ZlatkoTestDerkoskiTest",
+  "date": 1791072000,
+  "parent": "root"
+ }
+]

@@ -1,0 +1,112 @@
+{
+ "recupere_le": "2026-10-25",
+ "breakout": 1.27,
+ "vph": 185.08,
+ "stats_jour": [
+  {
+   "timestamp": "2026-10-16T04:06:58.637Z",
+   "views": 394,
+   "likes": 24,
+   "comments": 3,
+   "vph": 875.5555555555555
+  },
+  {
+   "timestamp": "2026-10-17T00:34:16.432Z",
+   "views": 70544,
+   "likes": 1070,
+   "comments": 57,
+   "vph": 1280
+  },
+  {
+   "timestamp": "2026-10-18T00:37:06.001Z",
+   "views": 103254,
+   "likes": 1456,
+   "comments": 71,
+   "vph": 1087
+  },
+  {
+   "timestamp": "2026-10-19T00:34:34.844Z",
+   "views": 124371,
+   "likes": 1699,
+   "comments": 79,
+   "vph": 894
+  },
+  {
+   "timestamp": "2026-10-20T00:32:04.741Z",
+   "views": 140687,
+   "likes": 1924,
+   "comments": 81,
+   "vph": 734.2372881355933
+  },
+  {
+   "timestamp": "2026-10-21T00:32:23.879Z",
+   "views": 153968,
+   "likes": 2092,
+   "comments": 87,
+   "vph": 603.3962264150944
+  },
+  {
+   "timestamp": "2026-10-22T00:32:16.364Z",
+   "views": 165772,
+   "likes": 2256,
+   "comments": 92,
+   "vph": 442.37288135593224
+  },
+  {
+   "timestamp": "2026-10-23T00:37:38.028Z",
+   "views": 175486,
+   "likes": 2406,
+   "comments": 94,
+   "vph": 394
+  },
+  {
+   "timestamp": "2026-10-24T00:22:51.721Z",
+   "views": 181992,
+   "likes": 2498,
+   "comments": 96,
+   "vph": 293.11475409836066
+  },
+  {
+   "timestamp": "2026-10-25T00:53:18.817Z",
+   "views": 187388,
+   "likes": 2584,
+   "comments": 96,
+   "vph": 324
+  }
+ ],
+ "changements": [
+  {
+   "createdAt": "2026-10-16T04:06:58Z",
+   "title": "How to use Claude MOTION better than 99% of people (in 3 simple steps)",
+   "thumbnails": null
+  },
+  {
+   "createdAt": "2026-10-16T05:49:53Z",
+   "title": null,
+   "thumbnails": [
+    {
+     "id": "5c6ec332-f7b4-4a06-8bf6-0cb786746c1e",
+     "ytUrl": "https://i.ytimg.com/vi/Eg08Lr3zqdw/maxresdefault.jpg",
+     "snapshotUrl": "https://vidiq-video-thumbnails.s3.us-east-1.amazonaws.com/Eg08Lr3zqdw/5c6ec332-f7b4-4a06-8bf6-0cb786746c1e.jpg"
+    }
+   ]
+  },
+  {
+   "createdAt": "2026-10-16T07:32:49Z",
+   "title": "Claude MOTION is Unreal for Video. Master it in 12 minutes.",
+   "thumbnails": null
+  },
+  {
+   "createdAt": "2026-10-16T07:50:11Z",
+   "title": null,
+   "thumbnails": [
+    {
+     "id": "8d445012-0502-44f1-af36-e011d495023e",
+     "ytUrl": "https://i.ytimg.com/vi/Eg08Lr3zqdw/maxresdefault.jpg",
+     "snapshotUrl": "https://vidiq-video-thumbnails.s3.us-east-1.amazonaws.com/Eg08Lr3zqdw/8d445012-0502-44f1-af36-e011d495023e.jpg"
+    }
+   ]
+  }
+ ],
+ "ab_tests": []
+}

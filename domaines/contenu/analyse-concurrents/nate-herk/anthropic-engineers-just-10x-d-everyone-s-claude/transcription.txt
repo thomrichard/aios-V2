@@ -1,0 +1,148 @@
+[00:00] So, Anthropic engineers just 10x Claude code by deleting over 80% of its system prompt, but they also changed everything that we know about prompting.
+[00:07] Because a lot of us were told the best way to get Claude to behave the way we want it to was to give it as much information and context as possible.
+[00:13] But with this change, almost all of your information is actually slowing Claude down and slowing down its thinking speed.
+[00:19] So, today I'm going to show you how to fix your projects using the engineering approach from Anthropic.
+[00:24] So, let's get into it.
+[00:24] All right, so Thoric, one of the engineers at Anthropic, recently published an article called The New Rules of Context Engineering for Claude 5 generation models.
+[00:32] His team removed over 80% of Claude code system prompt for models like Opus 5 and Fable 5 and 5.1 and future models, and they reported no measurable loss on their evaluations of these models.
+[00:41] The system prompt is basically the rulebook that comes with Claude code.
+[00:44] So, your own instructions and whatever context gets loaded for the task sit right alongside of the system prompt.
+[00:49] So, they're saying that they could cut most of that rulebook and keep the performance that they had measured.
+[00:53] And in my own setup, I used their guidance to review the instructions that I'd accumulated and clean up how my skills work together.
+[00:59] And this goes right alongside with Boris Cherny, the creator of Claude code said himself, which was basically like every 6 months you should delete all of your skills.
+[01:06] And we've been told that skills are what makes Claude code much smarter and much more consistent.
+[01:09] Now, Anthropic describes that rules they needed for older models became too restrictive as Claude actually just got better and better.
+[01:15] One example was comments in code because they used to put a hard limit on how much Claude could write even though some projects needed more explanation.
+[01:21] The replacement now tells it to follow the style of the surrounding code.
+[01:24] I think it's pretty easy to end up with the same problem in your own setup.
+[01:27] You know, Claude makes a mistake, you add a rule, and then a few months later you've got that rule in your Claude.md file or in a skill, maybe a slightly different version of it somewhere else, and you don't
+[01:36] actually need that rule because you keep upgrading the model, but the instructions still stay in there.
+[01:40] And the model might not need all of that extra context now.
+[01:42] I recently did a video about prompting Fable 5.1.
+[01:45] I talked about the idea of defining to the model what done looks like.
+[01:49] You basically need to give it the outcome that you're after, why you're doing it, and the constraints that it needs to respect.
+[01:53] And then you just have to get out of its way.
+[01:55] Leave it some room to actually do the work.
+[01:57] So, for this video, I asked Claude to look at how I get from a YouTube idea to a script that I could film or an outline that I could film about, and I wanted it to find a small
+[02:03] improvement and point me to the file so that I could check the recommendation for myself.
+[02:07] So I'll show you guys that demo of me actually doing this later in the video.
+[02:10] Now, Anthropic's applied AI team recommends using the smallest amount of context that gets the result you want, and I turn that into sort of my own saying, which is the best context is the smallest amount of context that
+[02:20] gets you the highest quality result at the cheapest cost.
+[02:23] They also explicitly say that minimal doesn't necessarily mean short.
+[02:26] If the model needs a detail to do the job, then obviously you need to keep that detail in there.
+[02:30] And there's research looking at what happens when you add more input.
+[02:33] A paper published in 2025 tested five models on math, question answering, and coding, and performance dropped as the input got longer, even when the models could retrieve the relevant information.
+[02:43] The reported drops ranged from 13.9% to 85% depending on the model and the task.
+[02:48] Now, those were obviously different models, and that was, you know, over a year and a half ago, and these were controlled experiments, so those percentages don't tell us what will happen when you trim your own Claude 3 MD,
+[02:56] for example.
+[02:56] But Anthropic also tested loading MCP tool definitions only when needed.
+[03:00] They reported an 85% reduction in token usage in their example, and their MCP evaluation scores improved from 49% to 74% for Opus 4, and from 79.5 to 88.1% for Opus 4.5.
+[03:13] So there are measured results behind this exact idea.
+[03:15] And in that case, Claude still had access to the tools.
+[03:18] It just didn't have to load all of those instructions up front.
+[03:21] Now, in your own setup, you can use a slash doctor, and when I recently did this, the doctor report gave me this workflow audit with specific instructions and handoffs that I need to clean up.
+[03:28] So I'm also going to show you guys that in just a sec.
+[03:30] Real quick, guys, a message from today's sponsor, HyperAgent.
+[03:33] If you're building agents for clients, most of the work lands around the agent.
+[03:37] Because each client's data has to stay separate, their staff needs to use it without breaking it, and somebody has to be obviously paying for those runs.
+[03:44] So what HyperAgent does is they give every client their own workspace.
+[03:47] So the agents, the skills, the memories, and the documents all live inside one perimeter, so nothing from one client shows up in the, you know, the context of another agent.
+[03:56] And your builders work in there with full edit access, and the client's own staff can get a role that runs the agents, but can't touch the system prompts or swap the models or accidentally delete a skill or anything
+[04:05] like that.
+[04:06] So, if that sounds useful for your agency, then check out Hyper Agent through the link in the description.
+[04:10] Huge thanks to Hyper Agent for sponsoring this part of the video.
+[04:12] Now, let's get back to it.
+[04:13] Now, I have tried some pretty extreme versions of this, just experimenting with my own AI operating system.
+[04:17] You know, I've duplicated it before, I've removed the Claude 3 MD I've removed my skills, and I've tried off, you know, a bunch of different prompts to see them do the same job.
+[04:24] So, one example that I recently did was I took this interview with Boris Cherney, and I wanted to turn it into a student resource guide.
+[04:29] Now, my full AIOS setup that I was used to running every day, it made the prettier document because it had my branding, it had a proper heading, it had links that I normally include, and it had just like
+[04:38] more specific context about me, all that kind of stuff.
+[04:40] And the fresh version looked a little bit messier, it wasn't as pretty, but its structure was much better.
+[04:44] It had better details, it organized the interview into ideas, and it added timestamps, and it just felt more professional, and it felt like a better guide to actually give to a student.
+[04:52] So, what I had was a polished guide from one version and a content structure that I preferred from the other version.
+[04:57] Now, obviously, I still want my branding, so what I would do is I would build a new skill out of this, and I would say, "Hey, you know, you should be using this as the header and this as
+[05:04] the font and this as the footer and add these logos and things like that.
+[05:07] But, I'm going to leave it up to you to actually structure the content in the way that you see fit because I've gave you the basically the intent of turn this into a student resource guide." Because in the
+[05:15] pretty version that had my skill already, I had so many guardrails and so many instructions that I was basically just like confining the model, and I wasn't letting it truly be creative and give me the output that it
+[05:24] thought was best because it was reading my skill, and it had to follow my instructions.
+[05:28] And those instructions were helpful back when we had like Opus 4, but now that we have Fable 5.1, it's able to just do a better job on its own.
+[05:35] It's kind of like giving an experienced designer the checklist that you would give to a kid making their first presentation because the designer still needs to know who it's for and what you're trying to accomplish.
+[05:42] But, if you dictate the placement of every box and every sentence before they've even seen the material, you might prevent them from coming up with something that they might add that you would actually like more.
+[05:51] And that's how I think about reviewing these instructions.
+[05:54] I want to keep the details that help Claude understand the job and what makes it specific to me, and then test it whether it still needs the procedure that I've written around it.
+[06:01] So, when I talk about the context part of my four C's of an AI OS, this is the kind of information I mean.
+[06:06] I mean my voice, I mean my goals, I mean my audience, and the way that my business works.
+[06:10] Claude can't just infer all of that or look it up online, so that's what I have to supplement to it.
+[06:15] Now, it's also important to explain why you're asking for something, the intent behind it.
+[06:19] So, if I'm making a resource guide for students, that helps Claude make decisions about using, you know, analogies and simple explanations and using examples.
+[06:26] And I'd keep that context when I clean up the skill.
+[06:29] But, a long folder listing is something it can probably look up.
+[06:32] So, if the same instruction is repeated in multiple different places, I'd check whether I need all of those copies or if I could just clean them up.
+[06:38] And if a detailed procedure only applies to when I'm editing a video, I'd rather load it in when I'm actually editing a video.
+[06:44] And this is all about getting out of the model's way, which still means you have to be clear about what it's allowed to do.
+[06:49] So, I'd keep the Claude on MD useful as a starting point.
+[06:52] Obviously, telling Claude things like what the project is for, giving it any of the gotchas and the landmines to watch out for, and point it toward the deeper instructions.
+[06:59] So, now my whole video editing process doesn't need to be there when I'm asking for help with a script.
+[07:04] So, inside Claude code, you can run {slash} doctor to look through a lot of the stuff happening locally that you probably don't spend much time thinking about, settings, config files, tedious stuff like that.
+[07:13] So, I ran {slash} doctor in a new session, and it checked my skills, my memory, my plugins, my settings, and my installation.
+[07:19] And you can see in this table right here, it lists each skill, where it's installed, and how many recorded uses it has since installation, and an estimate of the tokens that it's listing takes up.
+[07:28] That basically just means like the YAML front matter.
+[07:30] It uses that YAML front matter to find the skill, which is different from loading in the full instruction when it actually decides to run it and read the whole thing.
+[07:38] For example, Agent Builder is estimated at 111 tokens, and Prove it is 103 tokens.
+[07:44] And both show zero recorded uses here.
+[07:46] The report flagged 18 older skills with no recorded use, but kept the ones that I'd only created a few days ago.
+[07:51] So, it's taking their age into account as well.
+[07:53] It also checks 50 recent sessions from this project and says that it also looked at lifetime counters across 252 startups and skill and plug-in dispatches across 223 transcripts.
+[08:03] So, I'd still review that list before I decide to turn anything off or clean anything up or delete anything, especially if I do use a skill through a different tool for example.
+[08:10] But, these are the usage records available to Claude code in this audit.
+[08:13] And then it also checks for things like duplication.
+[08:15] So, in mine, the project map was repeating things already covered by the routing map.
+[08:19] There were also repeated sections for templates, references, and archiving files, and it identified about 2,250 characters of cuts with an estimated saving of 563 tokens.
+[08:29] And you can see it breaks out different places that memory is actually coming from.
+[08:32] You know, I've got my project level Claude MD, my user-wide instructions, the auto memory index, and my Claude local MD for instructions specific to this checkout on my machine.
+[08:42] The local file was just an empty template, estimated at about 35 tokens.
+[08:45] Now, that's obviously not a ton, but the point I'm trying to make here is that it will look through a lot of the stuff that you probably don't even think about ever.
+[08:51] It also found the Claude MD from the separate video project in my desktop folder that loads into Herc too, which is it roughly another 2,000 tokens just by its estimate here.
+[08:59] So, even if you've cleaned up the file inside your project, there can be instructions coming from somewhere else that you don't even know you're technically paying for.
+[09:05] So, the setup checks caught two broken skills as well.
+[09:08] One had the wrong file name, the other had a formatting problem in its front matter, the little description block at the top like we talked about.
+[09:13] So, Claude wasn't actually properly seeing its description.
+[09:16] And those files have been corrected because at the end of the doctor audit, it says, "Hey, do you want me to just fix all of this?" It also looks at things like your installation, it looks at things like
+[09:23] your automatic updates, and it checked the settings behind auto mode, permissions, and my hooks.
+[09:28] And real quick guys, if you're learning how to build with AI, I've got a free community with a bunch of resources and skills and courses on building AI systems and agents, and you can also ask questions and work
+[09:36] through the stuff with other people who are also, you know, behind you or in front of you.
+[09:39] So, if you want to join, the link is in the description.
+[09:41] Let's get back to the video.
+[09:42] All right.
+[09:43] So, after running /doctor, I asked Claude Code to actually look at my YouTube workflow.
+[09:47] And this is the prompt that I used.
+[09:48] I said, "Audit this repo and show me the smallest change that would make the path from a raw YouTube idea to a filming-ready script faster.
+[09:56] Use the systems already here.
+[09:57] Cite the exact files you would reuse and do not edit anything yet." You can see that it mapped the steps from finding an idea through research, to an outline, to a script, and the teleprompter file that I can
+[10:06] actually plug in and read while filming.
+[10:08] Then it looked at how the work gets passed from one step to the next.
+[10:11] The main recommendations about research, my outline skill could gather facts, but it didn't require saving the evidence in a file that script skill knew how to check.
+[10:19] And my script skill had a hard rule telling it to verify the facts again.
+[10:23] Now, obviously I put that there because I wanted verification.
+[10:25] I wanted to make sure that it wasn't making up facts or information.
+[10:28] But if we've already found the primary source and checked what it says, I'd like the next step to have that work in front of can see the audit counted 25 video folders with a script, but only three with
+[10:37] a file specifically called sources.md.
+[10:39] Now, this doesn't mean that all the other videos had no research, but it does show that this particular way of handing over the evidence wasn't consistent.
+[10:46] So, it suggested three edits across the two existing skills, and I was able to once again just say, "Yep, that sounds good.
+[10:51] Let's go ahead and make those changes." So, now that you understand how you can use Claude to audit your own setup, I would make this something that you're doing regularly.
+[10:58] Maybe once a month, you know, if you're adding a bunch of skills and you're changing your workflow all the time, or maybe once a quarter if the setup stays pretty stable.
+[11:04] And honestly, what I would recommend is every time a new model drops and you switch into it, you should probably just run this sort of audit anyways, because every model is going to interpret your settings and your skills
+[11:12] and your instruction files just a little bit differently.
+[11:14] What's really cool is once you've done this a few times and you start to have more trust in the doctor or in like your audit prompts, you can start putting these checks on a schedule.
+[11:21] So, for this kind of local setup check, you could use a local scheduled task that can see the same files and settings inside of the Claude desktop app, and you can just leave it open, and then, you know,
+[11:29] once once it'll run that doctor, and it will run these different audits, and then you can wake up to recommendations that you can basically just approve or deny.
+[11:36] We've talked a lot about AIOS's or AI second brains, and a big pain point with those is on the humans, right?
+[11:42] Human consistency is the issue.
+[11:44] Sometimes we forget to update things, or we, you know, put duplicate entries in there, or we forget to delete things, stuff like that.
+[11:49] So, if you can actually have your AIOS work with you on that cadence of automating the stuff and cleaning the stuff, then you're creating this really powerful, sort of like, self-improving, self-cleaning AI operating system, which is obviously something
+[12:00] that there's a lot of value in, because once you have your own personal AIOS figured out, then you can start to figure out how do you have your team stay synced up, and how do you have everyone working
+[12:07] together, rather than everyone duplicating work and building their own AIOS's.
+[12:11] So, anyways, that is going to do it for this one.
+[12:13] I hope that you guys enjoyed or you learned something new, and if you did, please give it a like, it helps me out a ton.
+[12:17] And as always, I appreciate you guys making it to the end of the video, and I'll see you on the next one.
+[12:21] Thanks, everyone.

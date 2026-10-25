@@ -1,0 +1,174 @@
+{
+  "video_id": "Yn_1jmRK6TU",
+  "chaine": "thom-richard",
+  "titre_video": "Tu n'as plus besoin de prompter : voici la méthode qui remplace tout",
+  "codeur": "agent thom-richard",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "tuto",
+    "format_secondaire": "cas",
+    "sujet": "La méthode du déballage oral d'Andrej Karpathy à la place du prompt, appliquée en direct à la refonte de son site",
+    "outils": ["Claude Code", "VS Code", "Wispr Flow", "ChatGPT", "Gemini"],
+    "niveau": "debutant",
+    "objectif_probable": "vues"
+  },
+  "titre": {
+    "attente_au_clic": "Découvrir une méthode qui évite d'écrire des prompts et donne de meilleurs résultats avec Claude.",
+    "schema": "Tu n'as plus besoin de <pratique> : voici la méthode qui remplace tout",
+    "promesse": "Ne plus avoir à soigner ses prompts, grâce à une méthode qui les remplace",
+    "audace": "audacieux",
+    "registre": "douleur-reve",
+    "briques": ["audace", "resultat"],
+    "marqueurs": ["superlatif"],
+    "nom_outil": false
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "léger sourire confiant",
+    "regard": "camera",
+    "texte": "ZÉRO PROMPT",
+    "texte_mots": 2,
+    "repete_titre": "partiel",
+    "elements": ["« ZÉRO PROMPT » en capitales blanches géantes", "logo Claude orange à la place du O", "visage à droite"],
+    "nb_elements": 3,
+    "fond": "interface sombre floue, bleu nuit",
+    "couleurs": ["bleu nuit", "blanc", "orange Claude"],
+    "curiosity_gap": "resultat",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Apprends à prompter, c'est ce qu'on te dit depuis des mois, voire des années",
+    "premiere_phrase_reprend_titre": "oui",
+    "premier_plan": "Face caméra plein cadre sur mur blanc, « APPRENDS » incrusté en grandes capitales blanches",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": ["hook-dissonance", "pont"],
+    "preuve": {
+      "type": "autorite",
+      "seconde": 21,
+      "description": "Andrej Karpathy présenté (OpenAI, Tesla, Anthropic) avec son portrait détouré, puis son message affiché et traduit"
+    },
+    "annonce_plan": {"presente": false, "nb_points": null, "a_l_ecran": false},
+    "boucle_vers_la_fin": {"presente": false, "citation": "", "seconde_resolution": null, "tenue": null},
+    "seconde_premier_point": 56,
+    "attente_tenue": "oui",
+    "attente_note": "La méthode qui remplace le prompt arrive à 0:53 et elle est montrée en direct. Mais il nuance dès 0:16 (« je dis pas que ça sert à rien ») et finit sur un PRD : des commentaires parlent de titre racoleur."
+  },
+  "structure": {
+    "modele": "mixte",
+    "segments": [
+      {"debut": 0, "fin": 56, "titre": "Pourquoi le prompt engineering est dépassé", "role": "intro", "pull": true, "paint": true, "point": false, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 56, "fin": 162, "titre": "La méthode du déballage oral", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 162, "fin": 273, "titre": "Les six axes pour structurer tes idées", "role": "point", "pull": true, "paint": false, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 273, "fin": 360, "titre": "Mise en pratique : le déballage en direct", "role": "demo", "pull": false, "paint": true, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": false, "relance_sortie": true},
+      {"debut": 360, "fin": 506, "titre": "Mise en pratique : le site et les retouches", "role": "demo", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 506, "fin": 594, "titre": "Mise en pratique : avec un AIOS", "role": "demo", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 594, "fin": 686, "titre": "Synthèse : passer au niveau supérieur", "role": "fin", "pull": false, "paint": false, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": true}
+    ],
+    "relances": [
+      {"seconde": 21, "type": "annonce-suite", "citation": "En fait, c'est pas moi qui le dit, c'est Andrej Karpathy."},
+      {"seconde": 79, "type": "question-spectateur", "citation": "Alors, concrètement, ça veut dire [quoi] ?"},
+      {"seconde": 138, "type": "question-spectateur", "citation": "si tu te demandes pourquoi ça va aider davantage l'IA"},
+      {"seconde": 162, "type": "annonce-suite", "citation": "le but, c'est pas de parler au hasard non plus"},
+      {"seconde": 179, "type": "annonce-suite", "citation": "je vais te montrer ça sur un vrai truc"},
+      {"seconde": 383, "type": "rupture", "citation": "je vais faire un petit tour, je vais boire un quelque chose"},
+      {"seconde": 491, "type": "annonce-suite", "citation": "la deuxième chose dont je voulais te parler"},
+      {"seconde": 669, "type": "boucle-ouverte", "citation": "comment on écrit un bon [PRD] ? Ça, c'est le sujet de la prochaine vidéo."}
+    ],
+    "histoires": [
+      {"seconde": 185, "acte": "anecdote", "resume": "Son site parlait de consulting, une activité qu'il a arrêtée ; il veut le recentrer sur ses contenus et le Club SMART."},
+      {"seconde": 269, "acte": "anecdote", "resume": "Il ne tape presque plus au clavier : avec Wispr Flow il va trois fois plus vite, mesuré par l'application."},
+      {"seconde": 390, "acte": "anecdote", "resume": "Pendant que Claude construit le site, il lit 14 pages de L'effet cumulé."}
+    ],
+    "payoffs": [
+      {"seconde": 53, "resume": "Le message de Karpathy : se caler dans son fauteuil et déballer 10 minutes à la voix"},
+      {"seconde": 153, "resume": "10 minutes de parole, c'est 10 minutes de contexte qu'on n'aurait jamais tapées"},
+      {"seconde": 201, "resume": "Les six axes à couvrir pendant le déballage"},
+      {"seconde": 403, "resume": "Le site généré, découvert en direct"},
+      {"seconde": 429, "resume": "L'IA livre 80 % ; il corrige ensuite de façon « chirurgicale »"},
+      {"seconde": 557, "resume": "Le héros du site réécrit après une retouche dictée, chiffres YouTube tirés de son AIOS"},
+      {"seconde": 594, "resume": "Les trois paliers : déballer, un AIOS qui te connaît, un PRD pour cadrer"}
+    ],
+    "premier_payoff_seconde": 53,
+    "jargon": 2,
+    "repetitions": 1,
+    "test_du_tweet": "Le prompt parfait compte moins. Méthode Karpathy : parle 5 à 10 minutes en vrac, l'IA range ton désordre et reçoit bien plus de contexte. Six axes à couvrir, démo en direct sur la refonte de son site, encore mieux avec un AIOS qui te connaît, puis un PRD pour cadrer."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine, plein cadre ; en demi-écran à droite de Claude Code, puis en médaillon rond sur le site", "decor": "mur blanc nu, fauteuil blanc ; t-shirt sombre"},
+    "parts": {"face": 40, "ecran": 35, "motion": 25, "broll": 0},
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["split-screen", "etiquettes", "chiffres-animes"],
+    "charte": "Fonds noirs, titres blancs en sans-serif gras, mots clés en jaune orangé (« IL SUFFIT DE DEMANDER », « C'EST LUI. ») ; listes sur cartes gris-bleu avec accent vert d'eau ; portrait détouré de Karpathy. La miniature, sombre avec le logo orange, va dans le même sens.",
+    "rythme": "contraste",
+    "notes": "Le déballage de 5 minutes passe en accéléré (×5 à ×19) avec un compteur de temps écoulé : on voit l'effort sans le subir. L'intro mêle mots incrustés en capitales, cartes noires et le message de Karpathy à l'écran."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 252, "type": "affiliation", "cible": "Wispr Flow (lien affilié en description)", "amene_par": "pendant-demo", "citation": "Moi ce que j'utilise [...] c'est un un outil qui s'appelle WhisperFlow."},
+      {"seconde": 672, "type": "abonnement", "cible": "s'abonner", "amene_par": "fin", "citation": "Donc je t'invite à t'abonner."},
+      {"seconde": 673, "type": "like-commentaire", "cible": "dire s'il a essayé le déballage", "amene_par": "fin", "citation": "N'hésite pas à me laisser un commentaire"},
+      {"seconde": 679, "type": "video-suivante", "cible": "la vidéo sur le PRD", "amene_par": "fin", "citation": "tu retrouves la vidéo PRD juste ici"}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"newsletter": 1, "affiliation": 1, "video-suivante": 3, "communaute-payante": 1, "autre": 1},
+    "commentaire_epingle": {"texte": "Cette méthode, tu peux l'avoir installée chez toi : atelier AIOS, 2 h en direct, 6 personnes max, 12 mois de Club SMART Premium inclus", "type": "service"},
+    "recap_final": true,
+    "derniere_phrase": "Allez, à plus.",
+    "video_suivante_precise": true
+  },
+  "commentaires": {
+    "themes": ["des spectateurs qui déballaient déjà à l'oral et s'y retrouvent", "le coût en tokens d'un long déballage", "la qualité du son", "les limites de la méthode pour des projets complexes", "les six axes, recopiés par un spectateur"],
+    "demandes": ["le Club SMART convient-il à un usage perso, sans visée business ?", "le site est-il réel, et ça marche avec WordPress ?", "comment limiter les accès de l'IA aux fichiers", "le mode d'emploi complet de Claude en PDF", "de l'aide pour un livre de famille à partir d'archives"],
+    "critiques": ["le son, avec plusieurs « achète un micro »", "un titre jugé racoleur : « Si ça ce n'est pas un prompt... »", "PRD mal défini (c'est un Product Requirements Document)", "une méthode jugée dangereuse comme règle générale (data scientist)", "le site jugé laid, « marque de l'IA »"],
+    "reprises": ["« rambling », « déballage »", "les 6 axes, recopiés avec le minutage 3:22", "« Request Ingeneering ? »"],
+    "signal_promesse": "mixte"
+  },
+  "retention": {
+    "a_30s": 0.684,
+    "a_la_moitie": 0.304,
+    "pertes": [
+      {"seconde": 38, "chute": 5.8, "passage": "« quand ce mec-là te parle d'IA, tu l'écoutes » (fin de la présentation de Karpathy)", "segment": "Pourquoi le prompt engineering est dépassé"},
+      {"seconde": 227, "chute": 3.3, "passage": "« toutes ces boîtes ont un modèle qui est suffisamment intelligent » (son installation dans VS Code)", "segment": "Les six axes pour structurer tes idées"},
+      {"seconde": 357, "chute": 3.1, "passage": "« Donc là, j'ai terminé. Je colle ici. » (fin du déballage)", "segment": "Mise en pratique : le déballage en direct"},
+      {"seconde": 326, "chute": 2.5, "passage": "« moi j'attends un site qui soit optimisé pour le web » (déballage en accéléré)", "segment": "Mise en pratique : le déballage en direct"},
+      {"seconde": 63, "chute": 1.9, "passage": "« je me cale dans mon fauteuil, je passe en dictée » (le message de Karpathy lu en français)", "segment": "La méthode du déballage oral"}
+    ],
+    "remontees": [
+      {"seconde": 347, "chute": -2.3, "passage": "« tu crées un dossier dans dev » (fin du déballage accéléré : ceux qui l'ont sauté reviennent)", "segment": "Mise en pratique : le déballage en direct"},
+      {"seconde": 213, "chute": -1.7, "passage": "« tu lui dis où elle a le droit d'aller chercher des informations » (la carte des six axes)", "segment": "Les six axes pour structurer tes idées"}
+    ]
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "1re phrase = titre (prompter) ; 1er plan proche de la miniature (visage, mot géant en capitales blanches) sans le logo ni « ZÉRO PROMPT ». Doute entre 1 et 2"},
+    "ap_boucle_curiosite": {"note": 1, "preuve": "2:59 « je vais te montrer ça sur un vrai truc », résolue à 6:43 ; ouverte après l'intro"},
+    "ap_effort_montre": {"note": 1, "preuve": "Les 5 minutes de déballage montrées en accéléré avec un compteur (5:00) ; rien dans l'intro"},
+    "ap_setup_progress_payoff": {"note": 2, "preuve": "Le site : but posé (2:59, quitter le consulting), déballage et construction (4:33 à 6:30), résultat découvert puis retouché (6:43 à 9:20)"},
+    "ap_contraste_rythme": {"note": 2, "preuve": "Le déballage passe en accéléré (×5 à ×19) entre des passages lents face caméra ; 0 à 11 changements de plan par minute"},
+    "ap_montrer_sans_son": {"note": 2, "preuve": "Planche intro : « APPRENDS À », « PROMPT ENGINEERING », « IL SUFFIT DE DEMANDER », « C'EST LUI. » et le message de Karpathy se lisent sans le son"},
+    "ali_douleur_histoire": {"note": 0, "preuve": "L'intro oppose le discours ambiant à la nouvelle méthode ; ni douleur décrite ni histoire vécue"},
+    "ali_coeur_unique": {"note": 2, "preuve": "2:33 « 10 minutes à parler, c'est 10 minutes de contexte que tu n'aurais jamais tapé »"},
+    "alx_pont": {"note": 1, "preuve": "Titre repris, contexte et preuve par Karpathy, mais ouverts par une dissonance et sans annonce du plan"},
+    "alx_pull_paint_point": {"note": 1, "preuve": "Complet pour la méthode (flemme de taper, fauteuil, parle) et l'AIOS ; les six axes et les paliers sont des listes sans image"},
+    "alx_nom_idee": {"note": 2, "preuve": "« déballage », « six axes », « trois paliers », affichés à l'écran (« Il y a six choses à couvrir », « Trois paliers »)"},
+    "alx_phrase_finale": {"note": 1, "preuve": "2:33 « 10 minutes de contexte que tu n'aurais jamais tapé » ; 7:09 « c'est 80 % de ce qu'il doit faire » ; pas ailleurs"},
+    "alx_douleur_reve": {"note": 2, "preuve": "« Tu n'as plus besoin de prompter » parle du désir, sans nom d'outil"},
+    "alx_cta_tot": {"note": 0, "preuve": "Aucune offre ni ressource avant 4 minutes ; Wispr Flow (affilié) cité à 4:12"},
+    "ed_intro_courte": {"note": 1, "preuve": "Hook à 0:00, preuve par Karpathy de 0:21 à 0:43, méthode à 0:53 : plus long que trois lignes"},
+    "ed_hook": {"note": 2, "preuve": "0:00 dissonance : « Apprends à prompter, c'est ce qu'on te dit [...] ça a beaucoup moins de valeur »"},
+    "ed_probleme_preuve_consignes": {"note": 2, "preuve": "La flemme de taper (1:37), la preuve (Karpathy, puis la démo), les consignes (six axes, micro) ; même ordre pour l'AIOS (8:21)"},
+    "ed_tension_relancee": {"note": 2, "preuve": "1:19 « concrètement, ça veut dire [quoi] ? » ; 2:18 « si tu te demandes pourquoi » ; 2:42 l'objection « pas de parler au hasard »"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "La refonte de son vrai site, en direct, et son usage de Wispr Flow : du vécu montré, pas raconté"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "« personne ne va taper 10 minutes au clavier » redit trois fois (1:37, 1:45, 2:36)"},
+    "ed_niveau_simple": {"note": 1, "preuve": "La méthode est dite simplement, mais VS Code, local host, mode acceptation auto et PRD passent vite"},
+    "tous_video_suivante": {"note": 2, "preuve": "11:09 « comment on écrit un bon [PRD] ? Ça, c'est le sujet de la prochaine vidéo », lien en fin d'écran"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Titre audacieux qui promet la fin d'une corvée (« Tu n'as plus besoin de prompter ») et miniature à deux mots (« ZÉRO PROMPT ») : 925 abonnés gagnés, le record de la sélection.",
+    "intro_structure": "Dissonance en une phrase, preuve par une autorité (Karpathy) avec images, sans annonce de plan ; puis une vraie démo setup, progress, payoff sur son site.",
+    "habillage": "L'effort passe en accéléré avec un compteur : on voit 5 minutes de parole en 30 secondes.",
+    "idee_pour_nous": "Prendre une idée d'une autorité de l'IA, la tester en direct sur un vrai projet à soi et montrer l'effort en accéléré.",
+    "objectif": "vues"
+  }
+}

@@ -1,0 +1,123 @@
+{
+ "id": "wBWumXBbDbA",
+ "url": "https://www.youtube.com/watch?v=wBWumXBbDbA",
+ "chaine": "jad-mh",
+ "titre": "Gemini Argon 4 VS Opus 5.5 (No Hype)",
+ "titre_ytdlp": "Gemini Argon 4 VS Opus 5.5 (No Hype)",
+ "publie": "2026-10-13T19:01:09Z",
+ "duree_s": 419,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "iyxcMOCRr3ZFjNULmLWF_EkA2IQ",
+  "id": "wBWumXBbDbA",
+  "snippet": {
+   "publishedAt": "2026-10-13T19:01:09Z",
+   "channelId": "UCkbjWQ7kLFNRY_RiJbqVWRg",
+   "title": "Gemini Argon 4 VS Opus 5.5 (No Hype)",
+   "description": "✅Higgsfield: https://higgsfield.ai/s/katana-inside-claude-yt-jadm-h-xUOkwW\n\nGemini 4 Argon is officially out, and X is calling it the Opus killer. So I skipped Google's own charts, went straight to the independent benchmarks, and gave Argon and Claude Opus 5.5 the exact same app prompt to see which one builds the better app 👇\n\n🐦 What people on X are saying\n• The hype: someone who says they work at Google DeepMind: \"I don't reach for Opus anymore\"\n• The other side: \"Opus 5.5 is still the best model in the world\"\n• The skeptic: Google's launch charts for Gemini 3.1 Pro also \"destroyed\" Claude\n\n🛠️ What people are building with it\n• Alan Wake 2 converted to run natively on a Mac (Max Weinbach)\n• A 3D museum of Apple computers, built without a single image given (Justine Moore)\n\n⚔️ Side-by-side tests (read the label, not just the caption)\n• Argon vs \"Opus 5.5 Medium\": Opus wasn't on its top setting\n• \"Argon: 3 min, 50 cents\" comes from a company that sells access to Argon\n• Another test found the opposite: Argon cost $5.29 vs about $1.50 for Opus\n• Devin says Argon is the best Gemini on their leaderboard, but Opus 5.5 is above it on their own chart\n\n📊 Independent benchmarks (Oct 13, 2026)\n• Arena, blind human votes, text: Argon #1, Opus 5.5 #2\n• WebDev Arena: Opus 5.5 #1, Argon #9\n• Artificial Analysis Intelligence Index: Opus 5.5 58, Argon 53\n• Hallucination rate (AA-Omniscience): Argon 15%, Opus 5.5 59%\n• Vals Index: Argon #1 · Vals Terminal-Bench 4.0: Opus 5.5 #1, Argon #6\n\n🧪 My test: Argon vs Opus 5.5\nSame prompt, word for word: a phone app for a painting and flooring contractor. Scan the room, build it in 3D, change the paint and floor live, and price it into a quote the customer signs with their finger. One HTML file, no server. The sample room has exactly 1 correct price: $3,104.68.\n✅ Both got the price right: $3,104.68\n✅ Both built a working 3D room that updates the paint and floor live\n💭 In my opinion, Opus 5.5 built the better app (its 3D room is more detailed). Judge for yourself.\nTo be fair: Opus 5.5 built its app in Claude Code, where it can run and check its own code. Argon built its app in a single API reply (high reasoning, about 7 minutes, $0.58). The camera scan wasn't tested on a real phone here.\n\n💵 Price and who can use it\n$2 per million input tokens, $10 output, until November 30, 2026. After that, $4 / $20, the same as Opus 5.5.\nGoogle AI Pro and Ultra (Gemini app, AI Mode in Search), Ultra in Antigravity, and the paid Gemini API. Not on the free plan yet.\n\n💭 My take\nArgon is the real deal. For research, writing, legal or finance, I'd 100% try it, especially at half price. For coding and building skills, my choice comes down to tests like this one.\n\n⏱️ Chapters\n0:00 What X is saying about Argon\n1:24 What people are building with it\n2:03 Side-by-side tests\n3:11 Independent benchmarks\n4:16 My test: Argon vs Opus 5.5\n5:54 Price and my take\n\n🔗 Sources\nGoogle's announcement: https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/\nArena (text): https://arena.ai/leaderboard/text\nArena (WebDev): https://arena.ai/leaderboard/webdev\nArtificial Analysis: https://artificialanalysis.ai/models/comparisons/gemini-4-argon-vs-claude-opus-5-5\nVals Index: https://www.vals.ai/benchmarks/vals_index\nAlan Wake 2 on Mac: https://x.com/mweinbach/status/2110040970750247320\nApple computer museum: https://x.com/venturetwins/status/2110041613179527253\nThe \"slow and expensive\" test: https://x.com/cheatyyyy/status/2110040817490641216\nDevin's chart: https://x.com/cognition/status/2110043605528408110\n\n🎁 I drop free skills every week in my Skool: https://www.skool.com/nextphase-5790\n\n💬 Have you tried Argon yet? And what should I make them build next? Tell me in the comments.\n\n🔔 Subscribe, I'll keep testing every new model so you don't have to. See you in the next one.\n\n#gemini #claude #opus",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/wBWumXBbDbA/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/wBWumXBbDbA/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/wBWumXBbDbA/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/wBWumXBbDbA/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/wBWumXBbDbA/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    }
+   },
+   "channelTitle": "Jad M.H  | AI Automation",
+   "categoryId": "22",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "en",
+   "localized": {
+    "title": "Gemini Argon 4 VS Opus 5.5 (No Hype)",
+    "description": "✅Higgsfield: https://higgsfield.ai/s/katana-inside-claude-yt-jadm-h-xUOkwW\n\nGemini 4 Argon is officially out, and X is calling it the Opus killer. So I skipped Google's own charts, went straight to the independent benchmarks, and gave Argon and Claude Opus 5.5 the exact same app prompt to see which one builds the better app 👇\n\n🐦 What people on X are saying\n• The hype: someone who says they work at Google DeepMind: \"I don't reach for Opus anymore\"\n• The other side: \"Opus 5.5 is still the best model in the world\"\n• The skeptic: Google's launch charts for Gemini 3.1 Pro also \"destroyed\" Claude\n\n🛠️ What people are building with it\n• Alan Wake 2 converted to run natively on a Mac (Max Weinbach)\n• A 3D museum of Apple computers, built without a single image given (Justine Moore)\n\n⚔️ Side-by-side tests (read the label, not just the caption)\n• Argon vs \"Opus 5.5 Medium\": Opus wasn't on its top setting\n• \"Argon: 3 min, 50 cents\" comes from a company that sells access to Argon\n• Another test found the opposite: Argon cost $5.29 vs about $1.50 for Opus\n• Devin says Argon is the best Gemini on their leaderboard, but Opus 5.5 is above it on their own chart\n\n📊 Independent benchmarks (Oct 13, 2026)\n• Arena, blind human votes, text: Argon #1, Opus 5.5 #2\n• WebDev Arena: Opus 5.5 #1, Argon #9\n• Artificial Analysis Intelligence Index: Opus 5.5 58, Argon 53\n• Hallucination rate (AA-Omniscience): Argon 15%, Opus 5.5 59%\n• Vals Index: Argon #1 · Vals Terminal-Bench 4.0: Opus 5.5 #1, Argon #6\n\n🧪 My test: Argon vs Opus 5.5\nSame prompt, word for word: a phone app for a painting and flooring contractor. Scan the room, build it in 3D, change the paint and floor live, and price it into a quote the customer signs with their finger. One HTML file, no server. The sample room has exactly 1 correct price: $3,104.68.\n✅ Both got the price right: $3,104.68\n✅ Both built a working 3D room that updates the paint and floor live\n💭 In my opinion, Opus 5.5 built the better app (its 3D room is more detailed). Judge for yourself.\nTo be fair: Opus 5.5 built its app in Claude Code, where it can run and check its own code. Argon built its app in a single API reply (high reasoning, about 7 minutes, $0.58). The camera scan wasn't tested on a real phone here.\n\n💵 Price and who can use it\n$2 per million input tokens, $10 output, until November 30, 2026. After that, $4 / $20, the same as Opus 5.5.\nGoogle AI Pro and Ultra (Gemini app, AI Mode in Search), Ultra in Antigravity, and the paid Gemini API. Not on the free plan yet.\n\n💭 My take\nArgon is the real deal. For research, writing, legal or finance, I'd 100% try it, especially at half price. For coding and building skills, my choice comes down to tests like this one.\n\n⏱️ Chapters\n0:00 What X is saying about Argon\n1:24 What people are building with it\n2:03 Side-by-side tests\n3:11 Independent benchmarks\n4:16 My test: Argon vs Opus 5.5\n5:54 Price and my take\n\n🔗 Sources\nGoogle's announcement: https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/\nArena (text): https://arena.ai/leaderboard/text\nArena (WebDev): https://arena.ai/leaderboard/webdev\nArtificial Analysis: https://artificialanalysis.ai/models/comparisons/gemini-4-argon-vs-claude-opus-5-5\nVals Index: https://www.vals.ai/benchmarks/vals_index\nAlan Wake 2 on Mac: https://x.com/mweinbach/status/2110040970750247320\nApple computer museum: https://x.com/venturetwins/status/2110041613179527253\nThe \"slow and expensive\" test: https://x.com/cheatyyyy/status/2110040817490641216\nDevin's chart: https://x.com/cognition/status/2110043605528408110\n\n🎁 I drop free skills every week in my Skool: https://www.skool.com/nextphase-5790\n\n💬 Have you tried Argon yet? And what should I make them build next? Tell me in the comments.\n\n🔔 Subscribe, I'll keep testing every new model so you don't have to. See you in the next one.\n\n#gemini #claude #opus"
+   },
+   "defaultAudioLanguage": "en"
+  },
+  "contentDetails": {
+   "duration": "PT6M59S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": false,
+   "contentRating": {},
+   "projection": "rectangular"
+  },
+  "statistics": {
+   "viewCount": "25589",
+   "likeCount": "272",
+   "favoriteCount": "0",
+   "commentCount": "58"
+  }
+ },
+ "ytdlp": {
+  "id": "wBWumXBbDbA",
+  "title": "Gemini Argon 4 VS Opus 5.5 (No Hype)",
+  "description": "✅Higgsfield: https://higgsfield.ai/s/katana-inside-claude-yt-jadm-h-xUOkwW\n\nGemini 4 Argon is officially out, and X is calling it the Opus killer. So I skipped Google's own charts, went straight to the independent benchmarks, and gave Argon and Claude Opus 5.5 the exact same app prompt to see which one builds the better app 👇\n\n🐦 What people on X are saying\n• The hype: someone who says they work at Google DeepMind: \"I don't reach for Opus anymore\"\n• The other side: \"Opus 5.5 is still the best model in the world\"\n• The skeptic: Google's launch charts for Gemini 3.1 Pro also \"destroyed\" Claude\n\n🛠️ What people are building with it\n• Alan Wake 2 converted to run natively on a Mac (Max Weinbach)\n• A 3D museum of Apple computers, built without a single image given (Justine Moore)\n\n⚔️ Side-by-side tests (read the label, not just the caption)\n• Argon vs \"Opus 5.5 Medium\": Opus wasn't on its top setting\n• \"Argon: 3 min, 50 cents\" comes from a company that sells access to Argon\n• Another test found the opposite: Argon cost $5.29 vs about $1.50 for Opus\n• Devin says Argon is the best Gemini on their leaderboard, but Opus 5.5 is above it on their own chart\n\n📊 Independent benchmarks (Oct 13, 2026)\n• Arena, blind human votes, text: Argon #1, Opus 5.5 #2\n• WebDev Arena: Opus 5.5 #1, Argon #9\n• Artificial Analysis Intelligence Index: Opus 5.5 58, Argon 53\n• Hallucination rate (AA-Omniscience): Argon 15%, Opus 5.5 59%\n• Vals Index: Argon #1 · Vals Terminal-Bench 4.0: Opus 5.5 #1, Argon #6\n\n🧪 My test: Argon vs Opus 5.5\nSame prompt, word for word: a phone app for a painting and flooring contractor. Scan the room, build it in 3D, change the paint and floor live, and price it into a quote the customer signs with their finger. One HTML file, no server. The sample room has exactly 1 correct price: $3,104.68.\n✅ Both got the price right: $3,104.68\n✅ Both built a working 3D room that updates the paint and floor live\n💭 In my opinion, Opus 5.5 built the better app (its 3D room is more detailed). Judge for yourself.\nTo be fair: Opus 5.5 built its app in Claude Code, where it can run and check its own code. Argon built its app in a single API reply (high reasoning, about 7 minutes, $0.58). The camera scan wasn't tested on a real phone here.\n\n💵 Price and who can use it\n$2 per million input tokens, $10 output, until November 30, 2026. After that, $4 / $20, the same as Opus 5.5.\nGoogle AI Pro and Ultra (Gemini app, AI Mode in Search), Ultra in Antigravity, and the paid Gemini API. Not on the free plan yet.\n\n💭 My take\nArgon is the real deal. For research, writing, legal or finance, I'd 100% try it, especially at half price. For coding and building skills, my choice comes down to tests like this one.\n\n⏱️ Chapters\n0:00 What X is saying about Argon\n1:24 What people are building with it\n2:03 Side-by-side tests\n3:11 Independent benchmarks\n4:16 My test: Argon vs Opus 5.5\n5:54 Price and my take\n\n🔗 Sources\nGoogle's announcement: https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/\nArena (text): https://arena.ai/leaderboard/text\nArena (WebDev): https://arena.ai/leaderboard/webdev\nArtificial Analysis: https://artificialanalysis.ai/models/comparisons/gemini-4-argon-vs-claude-opus-5-5\nVals Index: https://www.vals.ai/benchmarks/vals_index\nAlan Wake 2 on Mac: https://x.com/mweinbach/status/2110040970750247320\nApple computer museum: https://x.com/venturetwins/status/2110041613179527253\nThe \"slow and expensive\" test: https://x.com/cheatyyyy/status/2110040817490641216\nDevin's chart: https://x.com/cognition/status/2110043605528408110\n\n🎁 I drop free skills every week in my Skool: https://www.skool.com/nextphase-5790\n\n💬 Have you tried Argon yet? And what should I make them build next? Tell me in the comments.\n\n🔔 Subscribe, I'll keep testing every new model so you don't have to. See you in the next one.\n\n#gemini #claude #opus",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "What X is saying about Argon",
+    "end_time": 84
+   },
+   {
+    "start_time": 84,
+    "title": "What people are building with it",
+    "end_time": 123
+   },
+   {
+    "start_time": 123,
+    "title": "Side-by-side tests",
+    "end_time": 191
+   },
+   {
+    "start_time": 191,
+    "title": "Independent benchmarks",
+    "end_time": 256
+   },
+   {
+    "start_time": 256,
+    "title": "My test: Argon vs Opus 5.5",
+    "end_time": 354
+   },
+   {
+    "start_time": 354,
+    "title": "Price and my take",
+    "end_time": 418
+   }
+  ],
+  "tags": [],
+  "categories": [
+   "People & Blogs"
+  ],
+  "heatmap": null,
+  "upload_date": "20261013",
+  "duration": 418,
+  "channel": "Jad M.H  | AI Automation",
+  "channel_id": "UCkbjWQ7kLFNRY_RiJbqVWRg",
+  "channel_follower_count": 8570,
+  "thumbnail": "https://i.ytimg.com/vi_webp/wBWumXBbDbA/maxresdefault.webp",
+  "view_count": 25593,
+  "like_count": 272,
+  "comment_count": 23
+ }
+}

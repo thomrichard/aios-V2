@@ -1,0 +1,525 @@
+[00:00] Today I'm going over the 18 core Codeex concepts that you actually need to know in order to start using it right away and getting value from it.
+[00:06] It doesn't matter if you're not technical at all or you've never used Codex before.
+[00:08] By the end of this video, you'll understand exactly how this thing actually works so that you can start using it right away.
+[00:13] So, let's not waste any time and just get straight into this one.
+[00:15] All right, so I've split these 18 core concepts into four different parts and they get cooler as we continue to go on.
+[00:20] So, part one, we're going to start off here is foundations.
+[00:23] So, we're going to kick off with concept number one, which is projects.
+[00:26] Now, a lot of you guys, I'm assuming, have used chatgbt or claude in the web before where you can talk to an LLM and it can, you know, give you an answer.
+[00:32] But the problem you face is that every time you're talking to it or you start a new chat, you have to kind of familiarize it with you and your business and what you're working on that week or that
+[00:40] quarter.
+[00:40] So, with projects, you can basically keep everything organized into one project so that as you keep working inside of it, it only gets smarter about knowing who you are.
+[00:48] So, right here on the lefth hand side, you can see that I've got a few projects going on.
+[00:51] I've got Herk 2, I've got Hyperframes, I've got Trading Challenge, I've got AIS demo, and I typically am always just working inside of my Herk 2 project.
+[00:57] My Herk 2 project is basically what I call my AI operating system.
+[01:01] And what a project is is actually very simple.
+[01:03] It is just a collection of folders and files.
+[01:05] So right here, this is inside of my file explorer on my computer and it's called Herk 2.
+[01:09] And this is exactly the project that I have open in Codeex.
+[01:12] When I say right here, I'm inside of Codex, right?
+[01:14] This is the file path that I'm working in, which is if I open this up, my Herk 2 project.
+[01:19] So what that means is this project has rules about me.
+[01:22] It has, you know, credentials.
+[01:23] It has all my projects.
+[01:25] It has all my YouTube videos.
+[01:26] This thing has so much knowledge about me.
+[01:28] So now when I come into the chat and I say, "Hey, can you just give me a rundown of what we've been working on this past month?" This thing basically gets familiarized with my project and then it looks
+[01:37] at everything that we've been working on together.
+[01:39] It even looks through all of my previous chats that I've had with Codeex.
+[01:43] So here you can see that it looked back from the past month and it said, "Here's what we've worked on.
+[01:46] We've been improving your Herk 2 and your AISOS.
+[01:49] We've been working on YouTube content and strategy, AI model testing and demos, apps and product experiments, websites, branding, business operations.
+[01:57] So, this is no longer just an AI chatbot.
+[01:59] This is now a co-founder.
+[02:01] This is a personal assistant, which brings us on really nicely into concept number two, which is something called an agents.md.
+[02:08] And don't let that MD intimidate you here.
+[02:10] If I go over to the right hand side and I open up my files, you'll notice if I scroll down, I have something right here called an agents.mmd.
+[02:17] And when I open this up, it's literally just a markdown file.
+[02:20] That's what the MD means.
+[02:21] And it's just rules.
+[02:22] Like this is a very simple thing that you all can read and it's not technical at all.
+[02:26] So this is basically like the rules for your project.
+[02:29] So you remember inside of my Herk 2 project, I have this agents onMD.
+[02:32] Well, if I was inside of my Hyperframes editor project, there would be a different agents.m MD.
+[02:36] So this thing basically just sets the ground rules for the project that you're working in.
+[02:39] So right here you can see that this one says, "Hey, you are Nate Herk's AI operating system.
+[02:42] Your job is to help him spend less time on operations so he can focus on making YouTube videos." And then I give it things like core operating rules for how to work with me.
+[02:49] I give it some stuff about how to be safe on my desktop.
+[02:52] And then the real bulk of my agent MD is what I call routing.
+[02:55] So this is a routing map.
+[02:56] It basically means, okay, so yeah, Nate's project is huge.
+[02:59] There are hundreds, probably thousands of files and folders inside of this project.
+[03:04] So let me just explain to you how this actually works.
+[03:06] If you need business stuff, you go to the wiki.
+[03:08] If you need corporate structure, you go to the corporate structure section inside the wiki.
+[03:12] If you need his voice, you go here.
+[03:13] If you need course knowledge, you go here.
+[03:14] If you want active projects, you go here.
+[03:16] So everything that I'm doing, we're routing it back somewhere so that my agents.mmd file tells this project where everything is so that every time I open up a new chat, like I said, I don't have to reexplain things.
+[03:27] And basically the way that this works, if we picture this being a chat thread, you know, you come over here and you say, "Hey, you say, "Hey, Codex, I need you to help me do this." And before Codex
+[03:35] actually even like reads this message, what it does is it first reads the agents.mmd.
+[03:41] So I'm just going to put a here and that stands for agents.mmd.
+[03:43] But codeex will basically read this and then it will read your message and then it will respond with something like, you know, hey, how can I help you today?
+[03:49] So the kind of stuff that you want to put inside your agents.mmd is the type of stuff that you want codeex to know about you every single time you're talking to it in that project.
+[03:58] And now moving on to concept number three, we have something called the agent loop.
+[04:02] So you'll hear about something like codecs or claude code or Hermes agent.
+[04:06] These are all called agent harnesses.
+[04:08] And these harnesses have their own agent loops.
+[04:11] And real quick, if you're wondering about codecs versus like work, chatbt work, I always use codecs.
+[04:16] The majority of my work is not building products or building software, but I only use codecs because it's just the most powerful.
+[04:22] And once you get through this video, you'll realize how easy it is to use.
+[04:25] But anyways, the reason why this is called a harness is because they have this thing called the agentic loop, which at the highest level basically just means when you ask the agent a question, it has a bunch of
+[04:34] tools at its disposal and it basically thinks and it reasons and it uses tools and then it responds to you and then it thinks and then it reasons and it takes action.
+[04:42] It uses tools, responds to you and that's basically the agent loop.
+[04:45] And what's really awesome about that is you can see it in action.
+[04:48] So right here you can see that this said worked for 25 seconds.
+[04:50] And if I open this up, we can basically see what it did, right?
+[04:54] So like it hid this response and it gave us our output, but it had a reasoning loop inside.
+[04:58] It first said, "Okay, I'll check our recent tasks and project nodes, then I'll pull together the main themes from the past month." And when it did that, it ran all these commands.
+[05:06] It ran this, which you don't have to know what this means, but basically what this did is it looked inside something right here called a memory.md.
+[05:12] So very similar to the agents.md, but this is about memories rather than just like rules.
+[05:17] It then looked at other chats.
+[05:19] And so we can basically watch it do things.
+[05:21] So, to show you guys a real example of this, hey, could you just check my most recent YouTube video that I uploaded and give me three comments that you thought were funny from that video.
+[05:31] Now, as I shoot this off, what I want you guys to pay attention to is what we're watching.
+[05:34] So, first it said thinking.
+[05:36] Now, it says, "I'll find your latest upload, read through the comments, and pick three that made me laugh." And now we can see what it's doing.
+[05:41] So, it's looking through the memory.
+[05:42] It's looking at these things.
+[05:44] It's running these commands.
+[05:45] And these commands are basically right here.
+[05:47] It's reading, you know, files to get established and to get oriented with what it needs to do.
+[05:52] And so, you can actually learn a lot about how codeex works and how to best work with it by when you ask it a question, you just kind of watch what it does.
+[05:59] So, you can see what it had to do was it had to run a command in order to actually go talk to YouTube, look at the data, and pull it back.
+[06:07] And now we can see three comments.
+[06:09] We have this one, never seen anyone so excited to lose money.
+[06:11] Trading with AI is very easy.
+[06:12] I just prompt Claude only take profitable trades.
+[06:15] And if I want to lose money, I can do it myself faster and better.
+[06:18] And what you'll notice is how quick that all happened.
+[06:20] Now, I do have my Astra on fast mode, but I will talk about that later because that is a core concept that's coming up.
+[06:25] All right, and moving on to the last concept of part one.
+[06:29] It's a slashgoal.
+[06:31] And this is honestly one of my favorite things about AI ever.
+[06:34] It's the ability to do something called a slash goal.
+[06:36] And right here, you can see that that says set a goal to keep pursuing.
+[06:40] Now, AI agents are super goal oriented, which is super cool.
+[06:43] So, let's say you have Mr.
+[06:44] AI agent right here and you basically say, "Hey, here is your goal.
+[06:47] You know, this is what you need to do." And you give it this objective goal.
+[06:51] What happens is it will basically just keep working and keep working and keep working until it actually hits that goal.
+[06:57] And it's cool because even if you kind of like give them a roadblock, they are going to be so goal-oriented that they're going to keep retrying different things and they're going to just basically keep going until they're able
+[07:08] to succeed and hit that goal for you.
+[07:10] Now, obviously, the more objective a goal, the easier it is to prove that.
+[07:13] So, if you say, "Hey, can you, you know, work on this until you've pulled in 257 sources and then write the report." That's an objective goal, right?
+[07:21] 257 sources and written report.
+[07:23] But you can also set goals that are a little bit more emotional.
+[07:26] Like your goal could maybe be more like, you know, until you're fully satisfied or until you've, you know, verified this over and over and you feel good about it.
+[07:34] And in that case, you're still going to, you know, get there and it will still decide when it's done.
+[07:40] But as you get more objective with your goal, the goal prompts are just more effective.
+[07:44] But let me show you one goal that I actually did that you guys have already been witnessing in this specific example is I went to my hyperframes project.
+[07:51] And hyperframes basically lets your coding agents build HTML and then render it as video.
+[07:55] So essentially it creates video.
+[07:57] But what I did here is I shot it off a/goal prompt.
+[07:59] You can see this one says sent as goal.
+[08:01] So basically what I did is I said I need you to help me create some motion graphics for a YouTube video.
+[08:05] So all the motion graphics you've seen so far were from this exact prompt right here.
+[08:09] I'm going over 18 different Codex concepts.
+[08:11] I want, you know, an intro.
+[08:12] I want transition cards.
+[08:13] I want all this.
+[08:14] So, I basically defined that I wanted one intro scene and that I wanted 18 cards.
+[08:18] And then you can see that it said I finished and I visually checked, meaning it actually took screenshots to make sure everything looked good before it decided to be done.
+[08:24] And now we have all these animations.
+[08:26] But what's cool about the goal prompts is that models nowadays are getting so good, the AI models are getting so good that it's actually better to give them a goal and then step out of their way.
+[08:35] If you really just try to like micromanage them, you're kind of just like muzzling their capabilities.
+[08:40] So, if the situation isn't super super risky, give them a goal and you can get out of the way.
+[08:44] Now, there's one quick thing that I felt the need to address, which is basically the question, "But Nate, what if we've been using cloud code for a long time?" Well, I'm really glad that you asked.
+[08:52] It's actually really simple.
+[08:53] Really, the main difference is the agents.mmd, thecodex, and the aagents.
+[08:58] Because in cloud code, you basically have like your claw.md and you have yourclaw.
+[09:02] So when I first started switching over from cla code to codeex.
+[09:04] All I did was I said, "Hey codeex, take a look at this herku project, I've been building this up using claude code for the past couple months.
+[09:11] I need you to help me get this codeex ready." And basically what that means is I made a copy of my claw.md and called it agents.mmd.d.
+[09:17] So I have two of those now.
+[09:18] One one agents.mmd one claude, but they're basically the same file.
+[09:21] And then I made a copy of all my claude skills and put them in the agents folder.
+[09:24] And I made a copy of all of my like claude settings files and I put them in my agents.
+[09:29] And the cool thing is you don't have to do any of that manually.
+[09:31] You'd literally just say, "Hey, Codeex, look at the documentation, analyze my project, and make this codeex accessible.
+[09:37] Make it codec ready." So, anyways, if you were feeling a little bit of doubt about all that kind of stuff, that's the way I did it.
+[09:42] And now you have a bunch of local files and folders that you can use on any agent harness whenever.
+[09:47] It's very flexible.
+[09:48] It's very tool agnostic, and that's what you want to be building at the end of the day.
+[09:51] So, anyways, had to address that real quick.
+[09:53] Let's get back to the video.
+[09:54] All right.
+[09:54] Awesome.
+[09:54] So, let's move on to part two of these core concepts, which is environments.
+[09:58] So the first piece of environments is number five, which is local versus cloud.
+[10:03] So there's a couple things to talk about here.
+[10:05] The first thing is if someone says, "Oh, is this running locally or are these local files?" All that means is does that exist only on the machine that you're currently using?
+[10:13] Whether you're on a MacBook right now or you're on a desktop PC like I am right now.
+[10:16] When you say local, it just means it's only accessible by you.
+[10:19] So right here, if I open up my files, these are basically local files.
+[10:23] Now, they're syncing with one drive when I want them to.
+[10:25] So that would kind of push them into the cloud, but otherwise it's completely local.
+[10:28] So like if you're working on a Word doc on your computer and you forgot to save it and then email it to yourself on so you could work on it on a different laptop, that was a problem because
+[10:37] it was locally on that other machine.
+[10:39] But something like Google Drive is always in the cloud obviously.
+[10:42] But this also goes beyond just files.
+[10:43] This goes to like things that are produced.
+[10:46] So right here you can see that it actually created me this little site for all these motion graphics.
+[10:50] So if I open up this site, you can see that I can view all of these videos.
+[10:53] I can click into the different ones and it threw this together for me really nice and it served this to me on a local host.
+[10:59] So right here you can see that this URL is 127.0.0.1 and the port of this local host is 8008.
+[11:06] Now realistically that's not super important.
+[11:08] You don't really need to understand what exactly this means.
+[11:11] But this is just a local host.
+[11:13] But this is a little confusing because it looks like this is a web address that if I, you know, emailed to you, you could open this up and have the site.
+[11:19] But what would happen is this would show on your screen or it would show on your computer as nothing actually lives here.
+[11:24] So like if I copied this and I pasted this into a new browser but I changed the number to 7.
+[11:30] I don't think I have anything running on port 8087 on my local machine even though you might.
+[11:36] So nothing actually loads up.
+[11:37] And it's quite funny.
+[11:38] I remember seeing these these tweets where I think it was a joke but it was like uh someone was pretending they were a beginner and they were like wow cloud code and codeex it's so cool.
+[11:46] Look what I built in one day.
+[11:47] and then they, you know, attached a bunch of local host addresses and obviously no one else could open that up because they're not on that local device.
+[11:54] So anyways, that is the difference between local and cloud.
+[11:56] Now, the other piece here is that when you're spinning up these new chats, you can kind of have these be either local, meaning right here, you know, I'm working in my local files and folders.
+[12:05] And that's great because codeex can actually like edit these files, right?
+[12:09] It can delete things, it can make new ones, it can edit them, it can move them around, it can go to my downloads, it can go to my desktop, it can do anything on my computer really.
+[12:16] or you could actually have these work in the cloud.
+[12:18] And what you'll notice here is when you choose cloud, you no longer have the ability down here to actually choose the model you were using and the permissions because this sets up sort of like a cloud sandbox environment.
+[12:28] Now, I'll be honest, I hardly ever do this because when I'm working locally, as long as I keep my machine on, as long as I keep my PC on, it feels pretty cloudlike.
+[12:38] And here's what I mean by that.
+[12:38] Right here, you can see that I'm mirroring my phone and I'm in the Chat GBT app.
+[12:42] And if I go over here and I click on this right here, which says remote, this lets me see all of my actual codeex chats that are right here.
+[12:50] So if I go to Herk 2 and I go to summarize past month, this is exactly what we were just looking at right here.
+[12:56] You can see this is literally the same conversation.
+[12:58] It has those three chats and I could come in here and I could say hi.
+[13:01] And this gets sent in my actual codeex right here on my laptop or sorry on my desktop as well as my phone.
+[13:06] So, as long as my machine's on, even though this is running locally and I'm out on a walk, I'm out at dinner, I could even be in a different state and I could control my desktop from my phone
+[13:16] right here.
+[13:16] So, let's say for some reason I left a file locally on my computer, I could just say, "Hey, can you email that file to me?" And then I could use it on my laptop.
+[13:23] So, anyways, just wanted to show off that remote capability.
+[13:25] And that's going to bring us into concept number six, which is work trees.
+[13:29] Now, honestly, this is something where if you're not really building software or, you know, production apps, this isn't going to matter to you too much.
+[13:36] Like I don't hardly ever use work trees, but it is good to know about since you will see these in the interface.
+[13:41] So right here you can see that if I was to go to um the local setting, it says that you can work in a new local work tree which says create a copy of Herk 2 to work in
+[13:51] parallel.
+[13:52] So basically because I'm working in Herk 2, if I was going to do something like risky or if I wanted to try and experiment with something or for example, if I was building software and I wanted to try
+[14:00] to change the way that the onboarding flow worked, but I wanted to like not interrupt the main branch, especially if other people on my team are working on that main branch, I could use a work tree to basically
+[14:09] create a copy and I could test in there.
+[14:11] And then what you can do later is you can merge it back into the main.
+[14:14] So it's basically just a duplicate that lets you test.
+[14:16] But like I said, there's hardly any times for knowledge work that I ever use work trees.
+[14:20] And if I ever am building software and stuff, a lot of times Codex will say, "Hey, by the way, you might want to use this.
+[14:25] You might want to do this in a new work tree." So, I wanted to call it out because it's important because you might see things like this master branch and you might see other work trees that might have
+[14:31] been spun up automatically.
+[14:32] But, I will say it's not something that I'm actively thinking about or think that you need to be actively thinking about in order to get the most out of codeex.
+[14:38] So, wanted to bring that up.
+[14:39] But, let's move on to number seven, which iscodeex.
+[14:43] Now, this is really interesting.
+[14:44] We talked about how when you're inside of your project, you have things like an agents.mmd.
+[14:49] Now, if I go to my files, there's also something in here called a codeex.
+[14:53] So, if I open this up, what you'll see in here is I have some agents and I have some workflows, but I also have a config.
+[14:59] ML file, which is basically like some local settings.
+[15:03] And there are basically going to be two different places where a codex file lives.
+[15:07] And that's either going to be inside of your project.
+[15:09] So like in this example, this is my codeex inside of my Herk 2.
+[15:13] But there's also going to be one which is user or global, which means this lives under your actual user.
+[15:18] And these are settings that hold things like memories and sessions and automations.
+[15:23] These are things that will apply to your global codeex.
+[15:26] So whenever you're in codeex, regardless of what your project you're actually in, the docex will have personal settings and app data and stuff like that.
+[15:33] Now once again, I think this is something it's important to understand where that lives and what it does.
+[15:37] But this isn't a folder that I'm actively thinking about and actively having to like maintain.
+[15:41] But I did want to call that out because sometimes if you need to have a certain setting applied or something like that, that is where it lives.
+[15:48] Now, the cool thing about this is if you're ever confused, you say, "Hey Codeex, what did you do there?" Or, "Do we need to add this to mycodex or do we need to move this to a different folder?"
+[15:56] You can just ask it questions because it can search through its own documentation and understand how to do things like correctly.
+[16:02] But I do think that understanding the difference between project scope things and user scope things that's definitely important especially as we get into the agents which is going to come up later.
+[16:10] And that is a great segue into part three of the core concepts which is control and customization.
+[16:15] So number eight here is about different AI models.
+[16:19] So when you are starting a new chat you can choose the model you want to use.
+[16:23] You can also change the model in between messages.
+[16:26] So, I could shoot off a message on Astra and then I could, you know, change this to something else and then I could shoot off another message and I can keep changing if I want.
+[16:32] Now, if you're watching this video way later, maybe the model names look different, but essentially the theory is the same.
+[16:37] You have different models to choose from and they all have different prices and strengths.
+[16:41] So, like right now, GBD6 Astra is just the absolute strongest, but it's going to cost the most.
+[16:46] It's going to eat the most of your weekly limit.
+[16:48] Right here, you can see that I'm at 100% because it just got reset.
+[16:50] But as you chat with Astra, it will drain your weekly usage faster than you know 5.6 Soul would, which would drain your usage limit faster than 5.6 Tarot would.
+[17:00] Now, right here, I just want you to look at the API pricing so I can explain to you how these models are actually billing you.
+[17:06] So, they build by tokens, and they usually build by 1 million tokens.
+[17:10] Meaning, on Astra, for every 1 million input tokens, it will cost you $10.
+[17:14] And for every 1 million output tokens, it will cost you 50 bucks.
+[17:17] And here you can see the different pricing for these different models.
+[17:20] And you can see how it gets cheaper as you go down.
+[17:22] Now, this is API pricing, which means if you were building an automation that was programmatically using these models, that's how much it would cost you.
+[17:30] But this usage inside of Codex, that's not programmatic.
+[17:32] This is usage limit or subscription limit.
+[17:35] So, when you pay 20 or 100 or 200 bucks a month for Codeex, this is what you're actually your usage limit is eating up is that subscription.
+[17:42] And you're getting way more inference.
+[17:43] Like, this is a $200 a month subscription.
+[17:45] And if I use all of my weekly usage every single week, I'm getting about $14,000 worth of inference every month and I'm only paying 200 bucks for that.
+[17:55] So the subscriptions are much cheaper than if you were using the API pricing.
+[17:58] But if you ever do go over your weekly limit, you'd have to buy extra codeex credits.
+[18:02] I don't exactly know why they price it like this, but you know, you can see they just give you codeex credits instead.
+[18:07] So let's say I went over my weekly limit.
+[18:09] I could go here and I could click on buy credits.
+[18:12] This would bring up this screen which lets you buy credits by like the thousands or something like that.
+[18:16] And that is what I wanted to show you guys.
+[18:18] So like 2500 credits, 5,000 credits, 25,000 credits.
+[18:22] And this is how it would charge you based on those tokens.
+[18:24] Now, if you've never heard of tokens before, I know that might be a little confusing.
+[18:28] Think about it as roughly four characters or roughly 3/4s of a word.
+[18:32] And there's an OpenAI tokenizer right here where if I paste in some text, it will show you how many tokens this would be.
+[18:38] So this paragraph for example was about 240 characters or sorry 274 characters and about 56 tokens.
+[18:44] And it's interesting because sometimes punctuation is a token, right?
+[18:46] Like this period is a token, this comma is a token, this word's a token, um this word's a token.
+[18:52] And this is basically just kind of breaking down what it might look like for these tokens.
+[18:56] But anyways, you can see this was 56.
+[18:57] And what else you might notice is that I earlier said input tokens or output tokens.
+[19:02] Input tokens are whatever you're feeding in.
+[19:04] So your prompts or if it's reading like a PDF or a word doc those are input because they're going into the model and output tokens are anything that it outputs.
+[19:11] So even its reasoning here is output tokens.
+[19:14] This entire thread is output tokens and that's why the output tokens are more expensive.
+[19:18] Okay.
+[19:19] So let's move on to number nine which is about effort.
+[19:21] So within each model not only do you choose the model but you can also choose the effort level.
+[19:25] So right here I can move Astra down to medium or I can move it down to low or I can move it up to extra high or if I go like ultra I have to allow full access because
+[19:34] that can get you know pretty autonomous.
+[19:37] But anyways the point being as you move up on these effort levels you get more quality like you get more intelligence but you also get more cost.
+[19:46] It's more expensive to run it at higher effort levels.
+[19:48] And that's why when you see these benchmarks, when there are new models released, you'll see the model, like for example, Cloud Fable 5, you can see this mark was on low and this one was on medium and this
+[19:58] one was on high.
+[19:59] So, it shows how one model can behave differently and also cost a different amount based on the effort level that it was being used and tested at.
+[20:06] Now, it actually is pretty nice to play with these because sometimes Astra High is just so much more powerful than what you need to do.
+[20:12] Like if you were using GBD6 Astra High to help you write an email, that's overkill and you're paying way more than you should realistically to write an email.
+[20:19] I could probably come down here and use 56 Terra and be just fine with that and it's a lot cheaper.
+[20:23] So definitely try to play with the model and play with the effort based on your task.
+[20:26] But a lot of times if you're just doing a lot of knowledge work, I would just chuck it on sole and I'd maybe just go to medium and just call it a day there.
+[20:32] Now the other thing about effort is you can do something called fast mode.
+[20:35] This obviously makes the model respond quicker and do things quicker.
+[20:37] And it it's 1.5 speed, but it costs you more usage, so it will eat your weekly subscription faster as well.
+[20:43] All right, and moving on to number 10, we have permissions.
+[20:46] Basically, right down here, you can see that this is orange and it says full access.
+[20:49] This is basically Codeex's yolo mode, which means that it's not going to stop and ask you a bunch of permissions and questions.
+[20:55] Can I do this?
+[20:56] Can I do this?
+[20:56] If you go on ask for approval, it's going to always ask to edit external files and always ask to use the internet.
+[21:02] So that's if you want to sit here and really sort of like manage it and you're wanting to make sure everything's safe, you know, maybe start off like this so you can just understand, oh, okay, it's asking me
+[21:09] if it can run this command or it's asking me if it can open up my browser and then you just get familiar with what it looks like for Codeex to actually run that agentic loop.
+[21:16] You could also go on approveof for me.
+[21:18] So it's only going to ask you if actions are detected as unsafe like maybe deletes or maybe certain sorts of like API calls or things like that.
+[21:25] So that's how these permissions work.
+[21:26] And if you really want to get granular about, oh, I want to like make sure these certain actions never happen, you can ask Codex about that and it can work things into those config files like we talked about
+[21:35] earlier with the codeex that it can certainly like block things out.
+[21:38] But now let's move on to number 11, which I think is my favorite one, which is skills.
+[21:42] Skills are so so important.
+[21:44] They're basically reusable workflows.
+[21:46] They're recipes that let you do something once and then teach Codex how to do it the same way every single time.
+[21:52] So now you can just run all these skills.
+[21:53] So like I said, a skill is basically just a recipe.
+[21:56] So, let's say you come in here and you make, you know, a chocolate chip pancake and you followed a recipe to make that pancake.
+[22:02] You would basically say, "Okay, if I ever want to make chocolate chip pancakes again, I'm going to use this recipe because I know that I'm going to get a good result." But let's say that you burnt these pancakes
+[22:10] and you said, "Okay, well, what I need to do is make a quick update in this recipe to say, hey, you know, cook it up 30 seconds less on each side." And the next time you run the skill,
+[22:18] you basically see, okay, are these better?
+[22:20] Are these good?
+[22:20] Do I need to make any more feedback in here?
+[22:22] Or now, is this skill just the way I like it?
+[22:24] And then your agents are able to use these skills.
+[22:27] So here's an example where I basically gave it a YouTube video.
+[22:29] So you can see that this is literally just a local file path of a YouTube video.
+[22:32] And I said that I needed a video description, timestamps, and a LinkedIn post.
+[22:36] It went ahead and it ran its agentic loop and it gave me a description, timestamps, and a LinkedIn post.
+[22:41] And then I said, "Okay, now I need you to turn this into an X article." And put the draft into my X as a draft.
+[22:45] And it knew exactly how to do this with a thumbnail, with a title.
+[22:48] It also put screenshots from my actual video and it sprinkled them throughout my whole X article.
+[22:53] And this is because it used a bunch of skills to be able to know how to do this.
+[22:56] So right here, if I asked it, what skills did you use?
+[22:58] It used my YouTube description skill, my timestamp skill, my LinkedIn post skill, my ex article skill, my ex article from video skill, my format X article skill.
+[23:06] It used all of these skills because I've taught it how to do something good once.
+[23:09] And then every time I run these skills, I just give feedback.
+[23:12] Hey, that was good.
+[23:13] You know, I liked this, but I didn't like this.
+[23:14] Update the skill.
+[23:15] And now what's cool is you can just invoke these either with natural language.
+[23:18] It will be smart enough to do it with natural language, or you can do it as a slash command.
+[23:21] So, I have one in here that I can call like the audit.
+[23:24] And you can see this will run my audit or I have one in here called the 3D brain.
+[23:28] And this runs the 3D brain.
+[23:29] Man, I think I planned this out so good.
+[23:31] This is going to bring us on to number 12, which is agents.
+[23:35] So, we talked about codecs and agents is basically the exact same.
+[23:38] It just holds different things.
+[23:40] So, right here, you can see that the agents holds your skills and these once again can either be project level skills or they can be user scope skills.
+[23:47] So, they can be global skills.
+[23:48] So if I come into this chat right here which is inside of my um you know Herk 2 project and I go to open up the files and I go to my agents folder which is right here we
+[23:59] have a folder called skills and this is a bunch of skills as you can see.
+[24:03] Now if I open up an actual skill so for example let me go to my YouTube description skill.
+[24:08] This is an actual skill.md.
+[24:10] So once again MD just means markdown file.
+[24:12] So what we have here is some metadata and this is what codeex will read to understand okay do I need to invoke the skill or not.
+[24:17] So, it has the name and it has basically when to use the skill.
+[24:20] And then all the skill is is just instructions.
+[24:22] It's, hey, for Nate's YouTube descriptions, keep them short, two to four sentences, paragraph form, no bullet points, no m dashes.
+[24:29] Here's the process.
+[24:30] You read the video outline.
+[24:31] You identify the core topic.
+[24:32] You write a short paragraph.
+[24:33] And that's the skill.
+[24:34] It's a very, very simple prompt.
+[24:36] But if I go to my ex article one, they can also be way more in-depth.
+[24:38] So, this one is way longer.
+[24:40] There's a lot of other rules and a lot of other criteria.
+[24:42] There's way more steps.
+[24:43] There's way more things to do.
+[24:45] And also what's cool is skills can reference other things.
+[24:48] Skills can reference other skills.
+[24:49] They can reference other agents.
+[24:51] They can reference Python files or context files.
+[24:54] So in this example, this skill references my voice guidelines like my LinkedIn style guide as well as my X article style guide.
+[24:59] But that is where your skills live inside of the agents folder.
+[25:03] And then moving on to number 13.
+[25:04] Here we have plugins.
+[25:06] And this is where a lot of the magic actually happens because you can super easily come over here in the Codex desktop app.
+[25:11] You can go to plugins and you can connect a bunch of things.
+[25:14] You can see all the stuff that I have installed like Alpaca, Gmail, ClickUp, Clay, Google Drive, GitHub, Canva, and the list goes on and on.
+[25:22] You can also search for different plugins.
+[25:23] So, let's say you were really interested in connecting something like, I don't know, let's see, do they have a LinkedIn plugin?
+[25:28] They have a LinkedIn plugin where we can find the right profession.
+[25:30] We can grow our business with ads.
+[25:32] We have all these other sorts of plugins, too.
+[25:34] So, if you want to try to connect your different apps, just come in here and see if you can connect them using these plugins.
+[25:39] Maybe they have Composio, they don't have Composeio, and if they don't have a plugin here, you can still connect it using AENV, using an API key.
+[25:46] But plugins are so much easier because you can just basically sign in once.
+[25:49] They've got ones for creativity, for developer tools, for business and operations, for data analytics, communication, and they're basically always growing this plug-in library.
+[25:58] All right, so that now brings us on to part four, which is tools and scale.
+[26:02] Okay, we've got five left here.
+[26:04] Number 14, we have the browser.
+[26:06] Now, this is definitely one of my favorite things about Codeex.
+[26:09] If I open up the tab over here, we can open up a browser, which is really cool because I can basically just control this.
+[26:15] So, like I could go to school.com.
+[26:16] And what you'll notice is when I log into school.com over here, I'm just going to zoom out a little bit.
+[26:21] You can see right here that I'm already logged into my school account.
+[26:23] So, I could manage my different communities, which also means that Codeex can help me manage my communities from here.
+[26:28] Because when you save these login inside of the Codeex browser, it then saves them.
+[26:32] So, if you say, "Hey, could you go to that account and pull the report for me?" or hey could you go into school and could you make this post for me it can do it through the browser if
+[26:39] there's not a plugin or if there's not like an API or MCP server and the browser use of codeex and specifically with GBT6 Astra is the best that I've ever used ever I'll play a clip right here where
+[26:50] I asked it to basically open up Canva and paint me and draw me using the tools in there and I gave it just a picture of me and it was able to replicate it in a way that I
+[26:58] thought was really really good.
+[26:59] So silly example, but it definitely demonstrates the vision and the browser use capability of this agent.
+[27:05] All right, so number 15 we have sites.
+[27:06] So if you go over here to explore and you click on sites, this is very very cool because it basically lets you put things out there onto the cloud.
+[27:14] Remember earlier we talked about local versus cloud.
+[27:16] Codex can build something for you and it can be a local host but then you say, "Hey, can you just put that on a site real quick so that you could have your team log in or so that
+[27:23] you could share it with, you know, other people and make it publicly accessible." Like right here, you can see this London and Paris one is everyone whoever has this URL could go ahead and open this up.
+[27:31] Whereas this one is just me.
+[27:33] So it would literally have to be logged into my account in order to be able to open up this site.
+[27:37] And what else is amazing about that is you can open up the analytics for the site.
+[27:41] So you can basically host things.
+[27:43] You can connect your own domain and this is basically going to replace something like a Verscell or like a I don't know a Squarespace, wherever you wanted to host your sites normally.
+[27:51] You can now just do it right here from the Codex desktop app which is pretty cool.
+[27:54] You can also even connect a database.
+[27:55] So on the back end if you had to store like user login data or you know permissions or settings or you know a database of customer records whatever it is you could actually store that here too and it's
+[28:06] really cool.
+[28:06] All you need to do to actually use a site is you just basically have to do either say hey can you turn that into a site or you could do slash site and then it will basically know that
+[28:14] you can you know host a site or build a site.
+[28:16] So great touch here from codeex.
+[28:18] All right so number 16 we have sub aents.
+[28:21] So, sub agents are really cool because it lets you delegate work out to a bunch of different CEX agents.
+[28:26] So, right here in this main chat, you can see that I'm talking to GBT6 Astra, which is a really, really smart and intelligent, but also expensive model.
+[28:34] So, let's say I wanted to do a bunch of research, but I didn't want to waste Astra's brain on that.
+[28:37] Or let's say I wanted to do like a bunch of different testing and just do a lot of stuff at once.
+[28:41] Astra here that I'm talking to can delegate workout to tons of sub aents.
+[28:45] Hey, I need you to search through X and search through YouTube and also dig through my own comments.
+[28:49] So, just find, you know, what are people talking about right now in the AI space?
+[28:53] Is there any big news or drama?
+[28:54] I don't want you to do this research though.
+[28:56] I want you to basically just delegate a bunch of sub agents out to do the work.
+[28:59] And I want all of these sub aents to be using 5.6 Terra as the model.
+[29:04] So, shoot off those agents and let me know what they find.
+[29:06] So, this is really cool because I can specify that I want those sub aents, those little like researchers and workers to use different models.
+[29:13] So right here it's using its agentic loop and it's going to spin up these agents.
+[29:17] And whenever you see these little colorful things, these are different agents that it's spun up.
+[29:21] So right here, this one's called X.
+[29:22] And when I open up X, it is actually this sub agent working right here.
+[29:27] I can watch this sub agent go through its agentic loop and I can watch it like pull in data and everything like that.
+[29:32] So this is the same thing as over here, but this one is just a different model and it's not the main session that you're currently talking to.
+[29:38] You can see we have two others that started working.
+[29:40] We have this one called YouTube Pulse.
+[29:41] And once again, it's going through the same exact aentic loop.
+[29:44] We have this one called X drama.
+[29:46] We have this one called audience comments.
+[29:47] And we can basically watch all of these work, but we don't have to manage them because once these agents are done, the main session here will say, "Okay, cool.
+[29:55] All five are done.
+[29:55] They reported back to me.
+[29:56] Here's what they found." And this is really good for gathering different perspectives or researching out a bunch of things in parallel.
+[30:03] And these intelligent models are really, really good at delegation.
+[30:06] So sub agents are definitely something that you need to be using.
+[30:09] So, while these sub aents are fanned out and they're working, let's move on to number 17, which is scheduled tasks.
+[30:15] Scheduled tasks are awesome because this basically lets you have your codecs working autonomously for you.
+[30:20] So, on the lefth hand side, if you click on scheduled, you can basically ask codecs to schedule things for you, reminders, updates, or run full sessions because all a task basically is is it injects a prompt into a
+[30:31] codec session like this.
+[30:33] So it uses your same local files, it uses your same skills, it uses your model, it uses everything, the agentic loop, it just does it automatically for you.
+[30:41] So in here, you see that I could create one and I could set it up manually.
+[30:44] I could have it run locally or I have could have it run on the cloud.
+[30:47] I could also choose what project to work in.
+[30:49] So Herk 2 or, you know, Hyperframes editor.
+[30:51] I can also choose what chat.
+[30:53] So every one of these routines could be a new chat or it could be a new chat for this task or it could be even in an existing thread that we already have going.
+[31:00] And then you can basically choose when to schedule it.
+[31:03] So it could be daily, it could be hourly, it could be, you know, weekly, or you could get it really, really custom in here.
+[31:08] And the cool thing is you can describe everything in here manually, or you could basically just ask Codex to make one for you.
+[31:14] So, for example, I have these like seven or eight different ones that are running for um trading.
+[31:20] They're literally trading $10,000 of my real money.
+[31:23] And I have this set up as scheduled task so that they can basically all work together, talk to each other, check the market, make trades, things like that.
+[31:29] And of course, you guessed it, these run in a different project right here called trading challenge.
+[31:34] And they all run inside of this challenge thread.
+[31:36] You can tell that this has scheduled tasks in it because there's a little clock icon next to that thread.
+[31:41] And moving on to the very last concept we have for today, number 18, this is voice mode.
+[31:46] Now, everything that you've learned so far, skills, sub aents, projects, agents, all of this can be controlled by using your voice to have a real conversation with codecs.
+[31:55] With your voice, you can manage different codeex threads.
+[31:58] You can delegate different agents, you can run skills, you can set up schedule tasks, you can build sites, you can do anything here with your voice.
+[32:04] And all you have to do is come down to the bottom left and click on start new voice chat.
+[32:08] So, forgive me here as I'm awkwardly like hunching down because my headphones don't reach far enough.
+[32:12] But watch this.
+[32:13] Hey, Codex.
+[32:14] So, I need you to help me out real quick inside of my Herk 2 project.
+[32:17] Can you start a new thread to make a thumbnail?
+[32:19] I'm making this YouTube video about 18 CEX concepts.
+[32:22] So, if you could make me a thumbnail for my YouTube channel where you see me sitting at a desk working on a laptop and I'm pointing to the right and there's like 18 different little AI agents.
+[32:32] Um, yeah, just start start with that.
+[32:34] And then once you have finished that thumbnail, could you send it to the thread that is currently working inside of my HERK 2 as well and it is doing research on YouTube and X and um looking at my
+[32:45] channel and stuff like that.
+[32:46] Could you just send that thumbnail to that thread?
+[32:48] >> All right, let me check on that.
+[32:49] Okay, I've got your thumbnail brief queued up with you with the laptop pointing toward the 18 ages using your existing photos for reference.
+[32:57] And now found your research thread.
+[32:58] So I'll send the finished thumbnail there.
+[33:00] Now, do you guys see how this is all coming together?
+[33:02] It started a work tree chat.
+[33:04] It was doing the agentic loop.
+[33:05] It also created a goal down here.
+[33:07] It literally created its own goal because it knew that we had this, you know, task for it and it started working.
+[33:13] And you know, the voice chat's still going.
+[33:14] So, I don't know what it's going to think of this, but I just wanted to call that out because all of what we just talked about is all coming together because even you can see over here, it started
+[33:22] making that actual prompt.
+[33:24] Like, it shot off this prompt right here and it started off this new thread.
+[33:27] And now, this is working in a work tree and it's going to create that thumbnail for us and then it's going to send it over into this actual chat and we'll see that actually happen.
+[33:36] But as you keep navigating, like you can go to the web and you can go to, you know, other things and you can keep this voice working.
+[33:42] So as you're just working on your laptop, it'll show you what's going on and you can keep talking to it.
+[33:47] And you can also do all this on your phone as well because of the whole remote thing, you can use voice mode when you're on your phone, too.
+[33:53] Okay, so that finished up and you can see what happens is it actually can send tasks or messages to each other, right?
+[33:59] So, what happened was this was the original thread that it created to make the image and it made this and then it sent it to this thread and said, "Hey, Nate wanted me to send this to you.
+[34:07] Here it is." So, with just your voice, I know that was a very simple example, but you're able to coordinate a bunch of different codec threads, manage them, multitask while you're on the go, while you're flipping between different
+[34:17] apps.
+[34:18] Very cool.
+[34:19] But anyways, guys, that is going to do it.
+[34:20] I hope you enjoyed.
+[34:21] I hope you learned something new.
+[34:22] But if you want to keep diving into more stuff with Codex, and I've made so many videos, I'll tag a playlist right up here that has just a bunch of Codeex content.
+[34:29] So, hope to see you guys over there.
+[34:30] Thanks for sticking to the end, and I'll see you in the next one.
+[34:32] Thanks everyone.

@@ -1,0 +1,510 @@
+{
+  "video_id": "Fuo1i_-9Frc",
+  "chaine": "robonuggets",
+  "titre": {
+    "attente_au_clic": "Apprendre que quelqu'un a cloné les logiciels Adobe en open source gratuit, les voir tester, et savoir si Claude peut s'en servir.",
+    "schema": "Someone Just Rebuilt <Marque> for Free, and <Outil> Can Run Them All (<N> apps tested)",
+    "promesse": "Avoir l'équivalent d'Adobe gratuitement, piloté par Claude",
+    "audace": "audacieux",
+    "registre": "mixte",
+    "briques": [
+      "preuve",
+      "resultat"
+    ],
+    "marqueurs": [
+      "nouveaute",
+      "chiffre",
+      "test"
+    ],
+    "nom_outil": true
+  },
+  "codeur": "agent robonuggets",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "actu",
+    "format_secondaire": null,
+    "sujet": "Artcraft, des clones open source et gratuits de 7 logiciels Adobe, et la question de savoir si Claude peut les piloter",
+    "outils": [
+      "Artcraft (PhotoCraft, FilmCraft, EffectCraft, VectorCraft, DesignCraft, LightCraft, PDFCraft)",
+      "Claude Code",
+      "Opus 5.5",
+      "CLI",
+      "agents.md"
+    ],
+    "niveau": "debutant",
+    "objectif_probable": "vues"
+  },
+  "miniature": {
+    "visage": false,
+    "emotion": "mascotte qui exulte, bras levés",
+    "regard": null,
+    "texte": "Adobe Got Cloned OPEN SOURCE",
+    "texte_mots": 5,
+    "repete_titre": "partiel",
+    "elements": [
+      "texte « Adobe Got Cloned » en serif noir",
+      "pastille noire « OPEN SOURCE » avec flèche",
+      "logo Claude",
+      "mascotte Claude orange en pâte à modeler debout sur une pyramide",
+      "7 blocs colorés aux icônes d'animaux gravés (les apps Artcraft)"
+    ],
+    "nb_elements": 4,
+    "fond": "clair, blanc cassé",
+    "couleurs": [
+      "blanc cassé",
+      "noir",
+      "orange Claude",
+      "bleu, violet, rose, vert, jaune"
+    ],
+    "curiosity_gap": "nouveaute",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Someone just used Claude to rebuild all of Adobe's products and open-sourced it for free",
+    "premiere_phrase_reprend_titre": "oui",
+    "premier_plan": "La page Artcraft avec la grille des apps en capture d'écran, Jay en vignette arrondie en bas à gauche ; à 0:06 des cartes « Photoshop, rebuilt → PhotoCraft » sur fond crème",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": [
+      "actu-annonce",
+      "hook-fait",
+      "demo-d-abord"
+    ],
+    "preuve": {
+      "type": "chiffres",
+      "seconde": 65,
+      "description": "« Photocraft here already has 20,000 stars only a few hours after they launched », la page GitHub à l'écran"
+    },
+    "annonce_plan": {
+      "presente": false,
+      "nb_points": null,
+      "a_l_ecran": false
+    },
+    "boucle_vers_la_fin": {
+      "presente": true,
+      "citation": "I'll talk more about where this fits into your tool stack",
+      "seconde_resolution": 387,
+      "tenue": "oui"
+    },
+    "seconde_premier_point": 16,
+    "attente_tenue": "partiel",
+    "attente_note": "Le clonage et le pilotage par Claude sont montrés. Mais « 7 apps tested » : quatre sont vraiment ouvertes, les trois autres passent en 40 secondes. Et le commentaire critique le plus aimé (350 likes) corrige le « quelques jours de développement »."
+  },
+  "structure": {
+    "modele": "demo-continue",
+    "segments": [
+      {
+        "debut": 0,
+        "fin": 16,
+        "titre": "Intro : Adobe recréé, les noms des apps",
+        "role": "intro",
+        "pull": false,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 16,
+        "fin": 71,
+        "titre": "Clean room : pourquoi c'est légal, où le télécharger",
+        "role": "point",
+        "pull": true,
+        "paint": false,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": true,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 71,
+        "fin": 111,
+        "titre": "PhotoCraft",
+        "role": "demo",
+        "pull": false,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": false,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 111,
+        "fin": 143,
+        "titre": "FilmCraft",
+        "role": "demo",
+        "pull": false,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": false,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 143,
+        "fin": 208,
+        "titre": "EffectCraft",
+        "role": "demo",
+        "pull": true,
+        "paint": true,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": false,
+        "payoff": true,
+        "relance_sortie": true
+      },
+      {
+        "debut": 208,
+        "fin": 249,
+        "titre": "Les 4 autres apps",
+        "role": "demo",
+        "pull": false,
+        "paint": true,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": true
+      },
+      {
+        "debut": 249,
+        "fin": 345,
+        "titre": "Can Claude drive them? Le test EffectCraft et DesignCraft",
+        "role": "demo",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": true,
+        "consignes": false,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 345,
+        "fin": 387,
+        "titre": "Le prompt d'installation, la CLI et agents.md",
+        "role": "point",
+        "pull": false,
+        "paint": true,
+        "point": true,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": true,
+        "payoff": false,
+        "relance_sortie": true
+      },
+      {
+        "debut": 387,
+        "fin": 496,
+        "titre": "Is there still a need? Création IA contre création manuelle",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": true,
+        "preuve": false,
+        "consignes": false,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 496,
+        "fin": 519,
+        "titre": "Wrap up",
+        "role": "fin",
+        "pull": false,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      }
+    ],
+    "relances": [
+      {
+        "seconde": 183,
+        "type": "boucle-ouverte",
+        "citation": "I'll talk more about where this fits into your tool stack"
+      },
+      {
+        "seconde": 251,
+        "type": "question-spectateur",
+        "citation": "the thing that I was curious about when I first tried these out"
+      },
+      {
+        "seconde": 289,
+        "type": "rupture",
+        "citation": "I do realize that a logo animation is probably not the best example, right?"
+      },
+      {
+        "seconde": 388,
+        "type": "question-spectateur",
+        "citation": "is there still a need for these types of software?"
+      }
+    ],
+    "histoires": [
+      {
+        "seconde": 149,
+        "acte": "anecdote",
+        "resume": "Jay a lui-même passé du temps sur After Effects et le trouve le plus dur à recréer."
+      },
+      {
+        "seconde": 267,
+        "acte": "anecdote",
+        "resume": "En testant, il demande à Claude un prompt élaboré, et Claude crée toute une animation avec ses calques dans EffectCraft."
+      }
+    ],
+    "payoffs": [
+      {
+        "seconde": 71,
+        "resume": "PhotoCraft ouvert : texte, effets, styles de calque comme dans Photoshop"
+      },
+      {
+        "seconde": 120,
+        "resume": "FilmCraft : timeline, zoom, raccourcis de Premiere"
+      },
+      {
+        "seconde": 280,
+        "resume": "Un seul prompt : Claude crée une animation avec tous ses calques dans EffectCraft"
+      },
+      {
+        "seconde": 330,
+        "resume": "Claude met en page un magazine dans DesignCraft"
+      },
+      {
+        "seconde": 441,
+        "resume": "La réponse : ces logiciels restent utiles parce qu'on peut retoucher calque par calque"
+      }
+    ],
+    "premier_payoff_seconde": 71,
+    "jargon": 1,
+    "repetitions": 1,
+    "test_du_tweet": "Artcraft a recréé 7 logiciels Adobe en open source et gratuit (PhotoCraft, FilmCraft, EffectCraft...). Démo rapide, puis le test : Claude sait les piloter grâce à une CLI et un agents.md. Utile car on garde la main calque par calque."
+  },
+  "habillage": {
+    "face_camera": {
+      "presente": true,
+      "cadrage": "vignette en carré arrondi en bas à gauche, tout le long",
+      "decor": "bureau ; casquette blanche"
+    },
+    "parts": {
+      "face": 5,
+      "ecran": 85,
+      "motion": 10,
+      "broll": 0
+    },
+    "textes_ecran": "rares",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": [
+      "etiquettes",
+      "curseur-surligne"
+    ],
+    "charte": "Cartes « Photoshop, rebuilt → PhotoCraft » en serif noir sur fond crème, comme la miniature ; le reste en captures d'écran sombres ; à la fin un schéma dessiné au trait sur fond noir.",
+    "rythme": "regulier",
+    "notes": "Le format le plus simple des dix : capture d'écran brute et vignette, 46 changements de plan en 8:39. Pas de crédits, pas de communauté au milieu ; l'épinglé s'excuse d'un souci de son sur la fin."
+  },
+  "fin": {
+    "ctas": [
+      {
+        "seconde": 44,
+        "type": "autre",
+        "cible": "télécharger les apps sur getartcraft.com",
+        "amene_par": "intro",
+        "citation": "all you need to do is to go to getartcraft.com/apps"
+      },
+      {
+        "seconde": 503,
+        "type": "like-commentaire",
+        "cible": "donner son avis en commentaire",
+        "amene_par": "fin",
+        "citation": "try them out and let me know what you think"
+      },
+      {
+        "seconde": 510,
+        "type": "abonnement",
+        "cible": "s'abonner",
+        "amene_par": "fin",
+        "citation": "do me a solid and tap subscribe below"
+      }
+    ],
+    "sponsor": {
+      "present": false,
+      "nom": null,
+      "debut": null,
+      "duree": null,
+      "forme": null
+    },
+    "liens_description": {
+      "lead-magnet": 1,
+      "communaute-payante": 1,
+      "produit": 1,
+      "service": 1,
+      "affiliation": 5,
+      "abonnement": 1,
+      "reseaux": 4,
+      "autre": 1
+    },
+    "commentaire_epingle": {
+      "texte": "Excuses pour un souci de son sur la fin, lien Artcraft, guide gratuit d'automatisation des apps Craft (Skool gratuit, « search for n82 »), communauté payante",
+      "type": "lead-magnet"
+    },
+    "recap_final": false,
+    "derniere_phrase": "do me a solid and tap subscribe below [...] And I'll see you all next time. Cheers.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": [
+      "« Companies used AI to replace people / People used AI to replace those companies » (1 300 likes)",
+      "la rancœur contre Adobe (prix, résiliations)",
+      "l'open source et les utilisateurs Linux",
+      "« This will happen to all software »"
+    ],
+    "demandes": [
+      "cloner AutoCAD et Autodesk (422 likes)",
+      "un clone de Substance Designer, d'Encore, de l'audio et de la 3D",
+      "un serveur MCP et des plugins"
+    ],
+    "critiques": [
+      "pas un succès codé en une nuit : une petite équipe depuis 2015 (350 likes)",
+      "un logiciel encore jeune qui manque d'optimisation",
+      "le risque juridique face à Adobe"
+    ],
+    "reprises": [
+      "« Rip adobe »",
+      "« The Great Humbling »",
+      "« vibe coded »"
+    ],
+    "signal_promesse": "tenue"
+  },
+  "techniques": {
+    "ap_alignement_5s": {
+      "note": 1,
+      "preuve": "1re phrase = titre ; 1er plan la page Artcraft, les icônes de la miniature n'arrivent qu'à 0:06"
+    },
+    "ap_boucle_curiosite": {
+      "note": 1,
+      "preuve": "3:03 « I'll talk more about where this fits into your tool stack », résolue à 6:28, mais ouverte après l'intro"
+    },
+    "ap_effort_montre": {
+      "note": 0,
+      "preuve": "Aucun effort ni test dit dans l'intro"
+    },
+    "ap_setup_progress_payoff": {
+      "note": 1,
+      "preuve": "Une seule partie suit le schéma : la question (4:11), le test EffectCraft puis DesignCraft (4:27), la conclusion « it can definitely do that » (5:42)"
+    },
+    "ap_contraste_rythme": {
+      "note": 1,
+      "preuve": "11 changements de plan la 1re minute, puis 1 à 7 par minute : un départ plus vif, ensuite lent et régulier"
+    },
+    "ap_montrer_sans_son": {
+      "note": 2,
+      "preuve": "Planche intro : « Photoshop, rebuilt → PhotoCraft », « Premiere Pro, rebuilt → FilmCraft » et les autres cartes disent la promesse"
+    },
+    "ali_douleur_histoire": {
+      "note": 0,
+      "preuve": "Aucune douleur ni histoire vécue dans l'intro"
+    },
+    "ali_coeur_unique": {
+      "note": 2,
+      "preuve": "0:00 « Someone just used Claude to rebuild all of Adobe's products and open-sourced it »"
+    },
+    "alx_pont": {
+      "note": 1,
+      "preuve": "Titre repris, contexte (0:20) et preuve (1:05), sans accroche à part la nouvelle, mais sans annonce de plan"
+    },
+    "alx_pull_paint_point": {
+      "note": 1,
+      "preuve": "Complet sur « Is there still a need? » (6:28 à 8:16) ; le reste est une visite des apps"
+    },
+    "alx_nom_idee": {
+      "note": 1,
+      "preuve": "« clean room » expliqué (0:30), « AI creation » nommé à 6:57 ; peu d'autres noms"
+    },
+    "alx_phrase_finale": {
+      "note": 1,
+      "preuve": "7:41 « the main takeaway here is [...] this is definitely worth checking out » ; rare ailleurs"
+    },
+    "alx_douleur_reve": {
+      "note": 1,
+      "preuve": "« for Free » parle du désir, mais Adobe et Claude portent le titre"
+    },
+    "alx_cta_tot": {
+      "note": 0,
+      "preuve": "Aucun lead magnet ni offre dit dans la vidéo ; seulement la description et l'épinglé"
+    },
+    "ed_intro_courte": {
+      "note": 2,
+      "preuve": "La nouvelle, la liste des apps, et le premier point dès 0:16"
+    },
+    "ed_hook": {
+      "note": 2,
+      "preuve": "0:00 « Someone just used Claude to rebuild all of Adobe's products » : un fait qui fait réagir"
+    },
+    "ed_probleme_preuve_consignes": {
+      "note": 1,
+      "preuve": "Une seule partie suit l'ordre : la question (4:11), le test (4:27), le prompt d'installation (5:45)"
+    },
+    "ed_tension_relancee": {
+      "note": 2,
+      "preuve": "4:11 « the thing that I was curious about » ; 6:28 « is there still a need for these types of software? »"
+    },
+    "ed_histoire_vecue": {
+      "note": 1,
+      "preuve": "2:29 et 4:27 des anecdotes de test, pas une histoire"
+    },
+    "ed_sans_surexplication": {
+      "note": 1,
+      "preuve": "« open source and free » redit à 0:54, 2:20, 2:58, 4:09, 5:07 et 7:41"
+    },
+    "ed_niveau_simple": {
+      "note": 2,
+      "preuve": "0:30 clean room expliqué ; 5:54 CLI ; 6:06 agents.md « think of that as a handbook »"
+    },
+    "tous_video_suivante": {
+      "note": 0,
+      "preuve": "« I'll see you all next time », sans vidéo précise"
+    }
+  },
+  "a_retenir": {
+    "titre_miniature": "Un titre-histoire de David contre Goliath (« Someone Just Rebuilt Adobe for Free ») et une miniature « Adobe Got Cloned · OPEN SOURCE ». Aucun changement relevé par VidIQ. 876 commentaires : la colère contre Adobe porte la vidéo.",
+    "intro_structure": "Intro de 16 secondes : la nouvelle, la liste des apps, puis le premier point. Ni crédits, ni plan, ni communauté au milieu. Une seule question relance la vidéo : Claude peut-il les piloter ?",
+    "habillage": "Capture d'écran brute avec la vignette de Jay, quelques cartes « rebuilt » au début, un schéma dessiné à la fin : la vidéo la moins habillée des dix, et l'une des deux plus vues.",
+    "idee_pour_nous": "Quand une nouvelle touche une colère partagée (un éditeur cher, des abonnements), la tourner vite et court en capture d'écran, avec un titre-histoire « quelqu'un vient de... ». Et vérifier les faits racontés.",
+    "objectif": "vues"
+  }
+}

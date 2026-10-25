@@ -1,0 +1,170 @@
+{
+ "id": "LDn7rQKIFro",
+ "url": "https://www.youtube.com/watch?v=LDn7rQKIFro",
+ "chaine": "tristen-obrien",
+ "titre": "Claude Code Just Dropped MODS. (Master it in 10 Minutes).",
+ "titre_ytdlp": "Claude Code Just Dropped MODS. (Master it in 10 Minutes).",
+ "publie": "2026-10-05T13:00:34Z",
+ "duree_s": 600,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "JcjmC7OwuCvZ46thcW1A6-tRH7c",
+  "id": "LDn7rQKIFro",
+  "snippet": {
+   "publishedAt": "2026-10-05T13:00:34Z",
+   "channelId": "UCruPFdKtGG8Oz5dvha6WWgA",
+   "title": "Claude Code Just Dropped MODS. (Master it in 10 Minutes).",
+   "description": "Connect the Higgsfield MCP to Claude in 30 seconds: https://higgsfield.ai?fpr=tristen15\n\n📚 Buy my book, The Smartest Move 👉 https://tristenobrien.ai/smartest-move/\n\n👇 FREE: Get the exact prompts I used to build every mod in this video, plus my full Prompt Library and AI newsletter: https://tristenobrien.ai\n_____\n\nClaude Code just dropped Claude Mods, and it's one of the biggest Claude Code updates yet. Mods let you describe a feature you wish Claude Code had, and Claude builds it right into itself: new buttons, panels, slash commands, even a mini game. No coding required.\n\nIn this video I show you five real Claude Code mods I built this week, including a clean checklist view that hides all the code, a one-click model and effort picker, a dock that runs a whole team of AI agents at once, a photo and video studio powered by the Higgsfield MCP, and a mini racing game you can play while Claude works. Then I show you how to build your own mods, how to save and install them as plugins, and what they cost.\n\nMods launched October 1, 2026 in Claude Code version 2.1.287. They work in the Claude Code terminal and in the Code tab of the Claude desktop app, but not in regular Claude chat.\n_____\n\n⏱️ CHAPTERS\n\n0:00 Claude Mods: the biggest Claude Code update yet\n0:30 What a Claude mod is\n0:52 Mods vs skills vs connectors\n1:15 Mod 1: Clean View\n3:01 Mod 2: Employee Control Panel\n3:47 Mod 3: Agent Dock\n5:12 Bonus: the Session Bar\n5:31 Mod 4: Claude Photos & Videos (with Higgsfield)\n8:11 Mod 5: Road Trip\n8:40 How to build your own mods\n9:34 What mods cost\n_____\n\nTHE MODS IN THIS VIDEO\n\n1. Clean View. Hides the tool calls and code that scroll by while Claude works, and shows a simple checklist of the plan, the current step, and how much is left.\n\n2. Employee Control Panel. Switch your Claude model and effort level in one click instead of typing /model and /effort.\n\n3. Agent Dock. Pick your team size, and Claude splits the job across that many AI helper agents, each with its own live progress card.\n\n4. Claude Photos & Videos. Make AI photos and videos without leaving Claude, using Nano Banana Pro and the other top models on Higgsfield, with a credit check before anything runs.\n\n5. Road Trip. A mini racing game with Claude quiz questions you can play while Claude builds your project.\n\n_____\n\nHOW TO BUILD YOUR OWN CLAUDE MOD\n\n1. Update Claude Code to version 2.1.287 or newer.\n2. Open Claude Code in the terminal or the desktop app's Code tab and describe the mod you want.\n3. Say yes when Claude asks to reload, and your mod shows up when Claude finishes.\n4. When you have one you like, ask Claude to save it as a plugin and install it so it's there every time.\n\nMods don't cost anything extra, but you do need a paid Claude plan that includes Claude Code. Only install mods from people you trust, because a mod has the same access to your computer that Claude Code does.\n_____\n\nThis video is sponsored by Higgsfield. Try it here: https://higgsfield.ai?fpr=tristen15\n\n#Claude #ClaudeCode #ClaudeMods #ClaudeCodeMods #AI #AIAgents #ClaudePlugins #Higgsfield #NanoBananaPro #AITools",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/LDn7rQKIFro/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/LDn7rQKIFro/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/LDn7rQKIFro/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/LDn7rQKIFro/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/LDn7rQKIFro/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    },
+    "uhd": {
+     "url": "https://i.ytimg.com/vi/LDn7rQKIFro/uhddefault.jpg",
+     "width": 3840,
+     "height": 2160
+    }
+   },
+   "channelTitle": "Tristen O'Brien",
+   "tags": [
+    "claude ai",
+    "claude code",
+    "claude projects",
+    "claude cowork",
+    "mods",
+    "claude mods",
+    "higgsfield ai"
+   ],
+   "categoryId": "28",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "en",
+   "localized": {
+    "title": "Claude Code Just Dropped MODS. (Master it in 10 Minutes).",
+    "description": "Connect the Higgsfield MCP to Claude in 30 seconds: https://higgsfield.ai?fpr=tristen15\n\n📚 Buy my book, The Smartest Move 👉 https://tristenobrien.ai/smartest-move/\n\n👇 FREE: Get the exact prompts I used to build every mod in this video, plus my full Prompt Library and AI newsletter: https://tristenobrien.ai\n_____\n\nClaude Code just dropped Claude Mods, and it's one of the biggest Claude Code updates yet. Mods let you describe a feature you wish Claude Code had, and Claude builds it right into itself: new buttons, panels, slash commands, even a mini game. No coding required.\n\nIn this video I show you five real Claude Code mods I built this week, including a clean checklist view that hides all the code, a one-click model and effort picker, a dock that runs a whole team of AI agents at once, a photo and video studio powered by the Higgsfield MCP, and a mini racing game you can play while Claude works. Then I show you how to build your own mods, how to save and install them as plugins, and what they cost.\n\nMods launched October 1, 2026 in Claude Code version 2.1.287. They work in the Claude Code terminal and in the Code tab of the Claude desktop app, but not in regular Claude chat.\n_____\n\n⏱️ CHAPTERS\n\n0:00 Claude Mods: the biggest Claude Code update yet\n0:30 What a Claude mod is\n0:52 Mods vs skills vs connectors\n1:15 Mod 1: Clean View\n3:01 Mod 2: Employee Control Panel\n3:47 Mod 3: Agent Dock\n5:12 Bonus: the Session Bar\n5:31 Mod 4: Claude Photos & Videos (with Higgsfield)\n8:11 Mod 5: Road Trip\n8:40 How to build your own mods\n9:34 What mods cost\n_____\n\nTHE MODS IN THIS VIDEO\n\n1. Clean View. Hides the tool calls and code that scroll by while Claude works, and shows a simple checklist of the plan, the current step, and how much is left.\n\n2. Employee Control Panel. Switch your Claude model and effort level in one click instead of typing /model and /effort.\n\n3. Agent Dock. Pick your team size, and Claude splits the job across that many AI helper agents, each with its own live progress card.\n\n4. Claude Photos & Videos. Make AI photos and videos without leaving Claude, using Nano Banana Pro and the other top models on Higgsfield, with a credit check before anything runs.\n\n5. Road Trip. A mini racing game with Claude quiz questions you can play while Claude builds your project.\n\n_____\n\nHOW TO BUILD YOUR OWN CLAUDE MOD\n\n1. Update Claude Code to version 2.1.287 or newer.\n2. Open Claude Code in the terminal or the desktop app's Code tab and describe the mod you want.\n3. Say yes when Claude asks to reload, and your mod shows up when Claude finishes.\n4. When you have one you like, ask Claude to save it as a plugin and install it so it's there every time.\n\nMods don't cost anything extra, but you do need a paid Claude plan that includes Claude Code. Only install mods from people you trust, because a mod has the same access to your computer that Claude Code does.\n_____\n\nThis video is sponsored by Higgsfield. Try it here: https://higgsfield.ai?fpr=tristen15\n\n#Claude #ClaudeCode #ClaudeMods #ClaudeCodeMods #AI #AIAgents #ClaudePlugins #Higgsfield #NanoBananaPro #AITools"
+   },
+   "defaultAudioLanguage": "en-US"
+  },
+  "contentDetails": {
+   "duration": "PT10M",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": true,
+   "contentRating": {},
+   "projection": "rectangular"
+  },
+  "statistics": {
+   "viewCount": "224848",
+   "likeCount": "2776",
+   "favoriteCount": "0",
+   "commentCount": "235"
+  }
+ },
+ "ytdlp": {
+  "id": "LDn7rQKIFro",
+  "title": "Claude Code Just Dropped MODS. (Master it in 10 Minutes).",
+  "description": "Connect the Higgsfield MCP to Claude in 30 seconds: https://higgsfield.ai?fpr=tristen15\n\n📚 Buy my book, The Smartest Move 👉 https://tristenobrien.ai/smartest-move/\n\n👇 FREE: Get the exact prompts I used to build every mod in this video, plus my full Prompt Library and AI newsletter: https://tristenobrien.ai\n_____\n\nClaude Code just dropped Claude Mods, and it's one of the biggest Claude Code updates yet. Mods let you describe a feature you wish Claude Code had, and Claude builds it right into itself: new buttons, panels, slash commands, even a mini game. No coding required.\n\nIn this video I show you five real Claude Code mods I built this week, including a clean checklist view that hides all the code, a one-click model and effort picker, a dock that runs a whole team of AI agents at once, a photo and video studio powered by the Higgsfield MCP, and a mini racing game you can play while Claude works. Then I show you how to build your own mods, how to save and install them as plugins, and what they cost.\n\nMods launched October 1, 2026 in Claude Code version 2.1.287. They work in the Claude Code terminal and in the Code tab of the Claude desktop app, but not in regular Claude chat.\n_____\n\n⏱️ CHAPTERS\n\n0:00 Claude Mods: the biggest Claude Code update yet\n0:30 What a Claude mod is\n0:52 Mods vs skills vs connectors\n1:15 Mod 1: Clean View\n3:01 Mod 2: Employee Control Panel\n3:47 Mod 3: Agent Dock\n5:12 Bonus: the Session Bar\n5:31 Mod 4: Claude Photos & Videos (with Higgsfield)\n8:11 Mod 5: Road Trip\n8:40 How to build your own mods\n9:34 What mods cost\n_____\n\nTHE MODS IN THIS VIDEO\n\n1. Clean View. Hides the tool calls and code that scroll by while Claude works, and shows a simple checklist of the plan, the current step, and how much is left.\n\n2. Employee Control Panel. Switch your Claude model and effort level in one click instead of typing /model and /effort.\n\n3. Agent Dock. Pick your team size, and Claude splits the job across that many AI helper agents, each with its own live progress card.\n\n4. Claude Photos & Videos. Make AI photos and videos without leaving Claude, using Nano Banana Pro and the other top models on Higgsfield, with a credit check before anything runs.\n\n5. Road Trip. A mini racing game with Claude quiz questions you can play while Claude builds your project.\n\n_____\n\nHOW TO BUILD YOUR OWN CLAUDE MOD\n\n1. Update Claude Code to version 2.1.287 or newer.\n2. Open Claude Code in the terminal or the desktop app's Code tab and describe the mod you want.\n3. Say yes when Claude asks to reload, and your mod shows up when Claude finishes.\n4. When you have one you like, ask Claude to save it as a plugin and install it so it's there every time.\n\nMods don't cost anything extra, but you do need a paid Claude plan that includes Claude Code. Only install mods from people you trust, because a mod has the same access to your computer that Claude Code does.\n_____\n\nThis video is sponsored by Higgsfield. Try it here: https://higgsfield.ai?fpr=tristen15\n\n#Claude #ClaudeCode #ClaudeMods #ClaudeCodeMods #AI #AIAgents #ClaudePlugins #Higgsfield #NanoBananaPro #AITools",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "Claude Mods: the biggest Claude Code update yet",
+    "end_time": 30
+   },
+   {
+    "start_time": 30,
+    "title": "What a Claude mod is",
+    "end_time": 52
+   },
+   {
+    "start_time": 52,
+    "title": "Mods vs skills vs connectors",
+    "end_time": 75
+   },
+   {
+    "start_time": 75,
+    "title": "Mod 1: Clean View",
+    "end_time": 181
+   },
+   {
+    "start_time": 181,
+    "title": "Mod 2: Employee Control Panel",
+    "end_time": 227
+   },
+   {
+    "start_time": 227,
+    "title": "Mod 3: Agent Dock",
+    "end_time": 312
+   },
+   {
+    "start_time": 312,
+    "title": "Bonus: the Session Bar",
+    "end_time": 331
+   },
+   {
+    "start_time": 331,
+    "title": "Mod 4: Claude Photos & Videos (with Higgsfield)",
+    "end_time": 491
+   },
+   {
+    "start_time": 491,
+    "title": "Mod 5: Road Trip",
+    "end_time": 520
+   },
+   {
+    "start_time": 520,
+    "title": "How to build your own mods",
+    "end_time": 574
+   },
+   {
+    "start_time": 574,
+    "title": "What mods cost",
+    "end_time": 600
+   }
+  ],
+  "tags": [
+   "claude ai",
+   "claude code",
+   "claude projects",
+   "claude cowork",
+   "mods",
+   "claude mods",
+   "higgsfield ai"
+  ],
+  "categories": [
+   "Science & Technology"
+  ],
+  "heatmap": null,
+  "upload_date": "20261005",
+  "duration": 600,
+  "channel": "Tristen O'Brien",
+  "channel_id": "UCruPFdKtGG8Oz5dvha6WWgA",
+  "channel_follower_count": 85900,
+  "thumbnail": "https://i.ytimg.com/vi/LDn7rQKIFro/maxresdefault.jpg",
+  "view_count": 224862,
+  "like_count": 2776,
+  "comment_count": 100
+ }
+}

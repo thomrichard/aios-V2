@@ -1,0 +1,163 @@
+{
+  "video_id": "RDeofKimDxo",
+  "chaine": "simon-scrapes",
+  "titre": "37 Cheat Codes to Level Up In Claude Code in 19 Minutes",
+  "codeur": "agent simon-scrapes",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "liste",
+    "format_secondaire": null,
+    "sujet": "37 astuces Claude Code : skills qui raccourcissent les réponses, raccourcis clavier, sessions, tokens, mémoire, Claude.md, skills, permissions, application desktop",
+    "outils": ["Claude Code", "skill simple English", "Stop Slop", "Caveman", "ccusage", "Claude desktop", "Claude design", "Cowork"],
+    "niveau": "intermediaire",
+    "objectif_probable": "vues"
+  },
+  "titre": {
+    "attente_au_clic": "Une avalanche d'astuces Claude Code pour passer d'intermédiaire à avancé en moins de 20 minutes.",
+    "schema": "<N> Cheat Codes to Level Up In <Outil> in <N> Minutes",
+    "promesse": "Passer au niveau supérieur sur Claude Code, vite",
+    "audace": "timide",
+    "registre": "mixte",
+    "briques": ["vitesse", "resultat"],
+    "marqueurs": ["chiffre", "duree"],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": false,
+    "emotion": null,
+    "regard": null,
+    "texte": "Intermediate Advanced",
+    "texte_mots": 2,
+    "repete_titre": "partiel",
+    "elements": ["icône Claude orange « Intermediate »", "flèche blanche", "icône Claude arc-en-ciel néon « Advanced »"],
+    "nb_elements": 3,
+    "fond": "noir avec reflets",
+    "couleurs": ["orange", "arc-en-ciel", "noir", "blanc"],
+    "curiosity_gap": "transformation",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "If you're like me, and you're fed up with over-explained Claude responses, then install this simple English skill",
+    "premiere_phrase_reprend_titre": "non",
+    "premier_plan": "Capture d'une longue réponse de Claude, vignette de Simon à droite et compteur « #1 » en bas",
+    "premier_plan_reprend_miniature": "non",
+    "ouverture": ["douleur", "demo-d-abord"],
+    "preuve": {
+      "type": "resultat-montre",
+      "seconde": 8,
+      "description": "L'avant/après de la skill simple English à l'écran : la réponse écrite « like a Boeing instruction manual »"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 37, "a_l_ecran": false},
+    "boucle_vers_la_fin": {"presente": false, "citation": "", "seconde_resolution": null, "tenue": null},
+    "seconde_premier_point": 0,
+    "attente_tenue": "oui",
+    "attente_note": "Les 37 astuces arrivent bien en 20 minutes, la première dès la première phrase. La description en annonce 36. Des commentaires trouvent le tout trop rapide."
+  },
+  "structure": {
+    "modele": "liste-numerotee",
+    "segments": [
+      {"debut": 0, "fin": 138, "titre": "Make Claude Talk Less (astuces 1 à 4)", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 138, "fin": 350, "titre": "Keys You Didn't Know You Had (5 à 13)", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 350, "fin": 566, "titre": "Never Lose a Session Again (14 à 20)", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 566, "fin": 580, "titre": "Mi-parcours : commentaire et abonnement", "role": "cta", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 580, "fin": 724, "titre": "The Token Bill Fixes (21 à 24)", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 724, "fin": 931, "titre": "Memory That Pays Rent (25 à 29)", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 931, "fin": 1196, "titre": "The Tricks Nobody's Using Yet (30 à 37)", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 1196, "fin": 1206, "titre": "Combien en connaissais-tu ?", "role": "fin", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 19, "type": "annonce-suite", "citation": "that's the first of 37 tricks I'm going to show you in this video"},
+      {"seconde": 72, "type": "annonce-suite", "citation": "this next one will actually make you laugh as well as probably save you money"},
+      {"seconde": 140, "type": "rupture", "citation": "some of the biggest upgrades [...] are not installable skills or plugins at all"},
+      {"seconde": 353, "type": "annonce-suite", "citation": "when something goes wrong in an output [...] make sure that your data is not lost"},
+      {"seconde": 566, "type": "question-spectateur", "citation": "if you've known all 20 so far, I'd honestly like to hear about it"},
+      {"seconde": 580, "type": "question-spectateur", "citation": "something we all care about, right?"},
+      {"seconde": 724, "type": "annonce-suite", "citation": "they've got some brand new memory updates which I had to show you"},
+      {"seconde": 931, "type": "annonce-suite", "citation": "let's move on to skills, because skills are so incredibly important"}
+    ],
+    "histoires": [
+      {"seconde": 692, "acte": "perso-passe", "resume": "Sa première réaction au réglage « clear context on plan accept » : peur de perdre le plan ; en fait le plan survit."},
+      {"seconde": 865, "acte": "client-autre", "resume": "L'astuce du passage de relais « écris un prompt, pas un résumé », reprise du blog de Paul."},
+      {"seconde": 894, "acte": "anecdote", "resume": "Il l'a utilisée le matin même pour la refonte de la page d'accueil de Rankspot."},
+      {"seconde": 1058, "acte": "vision-build", "resume": "Le design system créé pour leur future mémoire IA d'équipe, montré en exemple."}
+    ],
+    "payoffs": [
+      {"seconde": 8, "resume": "La skill simple English : avant et après à l'écran"},
+      {"seconde": 97, "resume": "Caveman : 69 tokens ramenés à 19"},
+      {"seconde": 126, "resume": "Le style de sortie « concise » intégré"},
+      {"seconde": 152, "resume": "Ctrl R pour retrouver n'importe quel ancien prompt"},
+      {"seconde": 410, "resume": "Revenir en arrière (rewind) plutôt que corriger une sortie ratée"},
+      {"seconde": 600, "resume": "ccusage pour voir sa consommation"},
+      {"seconde": 650, "resume": "« Give me a quick answer » : réponse en 1 seconde sans casser le cache"},
+      {"seconde": 900, "resume": "Le passage de relais écrit comme un prompt"},
+      {"seconde": 1010, "resume": "La description de skill avec déclencheurs et anti-déclencheurs"}
+    ],
+    "premier_payoff_seconde": 8,
+    "jargon": 3,
+    "repetitions": 1,
+    "test_du_tweet": "37 astuces Claude Code en 20 minutes : des skills qui font parler Claude moins (simple English, Caveman), des raccourcis clavier cachés, rewind plutôt que corriger, « give me a quick answer » pour garder le cache, des règles par dossier, des descriptions de skills avec anti-déclencheurs."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "vignette à droite presque tout le temps ; quelques plans larges au bureau", "decor": "bureau, mur à lattes de bois, micro RØDE, affiche, fauteuil vert, lampe"},
+    "parts": {"face": 15, "ecran": 80, "motion": 5, "broll": 0},
+    "textes_ecran": "constants",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["cartes-chapitre", "etiquettes", "split-screen", "zooms-ecran"],
+    "charte": "Terminal en thème sombre, pages GitHub sombres, cartes de chapitre orange à titre serif noir (« Make Claude Talk Less ») avec un petit robot en pixels, compteur « #N » blanc en bas à droite. La miniature reprend l'orange et le noir.",
+    "rythme": "regulier",
+    "notes": "Un compteur « #1 » à « #37 » reste à l'écran tout du long. C'est une démo terminal presque continue, au débit le plus rapide de la série (258 mots/min)."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 566, "type": "like-commentaire", "cible": "dire en commentaire s'il connaissait déjà les 20 premières", "amene_par": "transition", "citation": "if you've known all 20 so far, I'd honestly like to hear about it below in the comments"},
+      {"seconde": 572, "type": "abonnement", "cible": "s'abonner pour les 100 000", "amene_par": "transition", "citation": "I'm closing in on 100,000 subscribers, so give this a sub"},
+      {"seconde": 1058, "type": "produit", "cible": "leur future mémoire IA d'équipe, montrée comme exemple de design", "amene_par": "pendant-demo", "citation": "our AI memory that's going to be shared by your whole team"},
+      {"seconde": 1196, "type": "like-commentaire", "cible": "dire combien d'astuces on connaissait", "amene_par": "fin", "citation": "I'm curious to know how many of those did you actually know"}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"formation": 1, "produit": 1, "abonnement": 1},
+    "commentaire_epingle": {"texte": "Commentaire du créateur (épinglage non confirmé) : abonne-toi, puis « Now make AI run without you » vers skool.com/scrapes", "type": "formation"},
+    "recap_final": false,
+    "derniere_phrase": "Thanks for watching, and see you in the next tips video that's coming right up now.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["le débit jugé trop rapide", "la moitié des astuces déjà connues", "des chapitres réclamés", "des conflits entre astuces (Caveman et concise)"],
+    "demandes": ["des chapitres", "les liens vers les ressources citées", "une astuce pour que Claude suive les règles du dépôt"],
+    "critiques": ["« It's too fast [...] Please slow down man »", "pas de liens vers les outils montrés", "/config n'affiche pas l'option montrée"],
+    "reprises": ["/rewind garde le cache", "Caveman"],
+    "signal_promesse": "mixte"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 0, "preuve": "1re phrase sur une skill, pas sur le titre ; 1er plan en capture terminal, rien des icônes de la miniature"},
+    "ap_boucle_curiosite": {"note": 0, "preuve": "Aucune question ouverte : la 1re astuce est donnée tout de suite"},
+    "ap_effort_montre": {"note": 0, "preuve": "Aucun effort dit ou montré"},
+    "ap_setup_progress_payoff": {"note": 1, "preuve": "Chaque chapitre pose un but (moins de bavardage, ne plus perdre de session, payer moins), sans montée d'ensemble"},
+    "ap_contraste_rythme": {"note": 1, "preuve": "17 plans dans la 1re minute, puis 3 à 11 ; débit très rapide et constant (258 mots/min)"},
+    "ap_montrer_sans_son": {"note": 1, "preuve": "Un avant/après de texte à l'écran et le compteur « #1 », mais tout se lit en petits caractères"},
+    "ali_douleur_histoire": {"note": 1, "preuve": "0:00 « If you're like me, and you're fed up with over-explained Claude responses » : douleur partagée, sans histoire"},
+    "ali_coeur_unique": {"note": 0, "preuve": "37 astuces sans message central"},
+    "alx_pont": {"note": 0, "preuve": "Pas de pont : la 1re astuce tombe dès la 1re phrase"},
+    "alx_pull_paint_point": {"note": 1, "preuve": "Complet sur Caveman ou « give me a quick answer » ; la plupart des raccourcis sont donnés sans pourquoi"},
+    "alx_nom_idee": {"note": 1, "preuve": "Cartes de chapitre nommées (« Memory That Pays Rent ») et noms d'outils (Caveman, Stop Slop) ; les astuces elles-mêmes n'ont pas de nom"},
+    "alx_phrase_finale": {"note": 1, "preuve": "6:40 « don't try and fix broken outputs, just rewind and pull the lever » ; 14:47 « write it as a prompt for the next session » ; rare"},
+    "alx_douleur_reve": {"note": 1, "preuve": "« Level Up » parle du désir de progresser, mais l'outil porte le titre"},
+    "alx_cta_tot": {"note": 0, "preuve": "Aucun lead magnet ni offre dans la vidéo ; l'Academy n'est que dans la description"},
+    "ed_intro_courte": {"note": 2, "preuve": "La 1re astuce dès 0:00, l'annonce des 37 à 0:19"},
+    "ed_hook": {"note": 1, "preuve": "0:00 une douleur (réponses trop longues) avec sa solution, ni dissonance, ni question, ni fait"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "Caveman : problème, preuve (69 contre 19 tokens), consigne ; la plupart des raccourcis vont droit à la consigne"},
+    "ed_tension_relancee": {"note": 1, "preuve": "9:40 « something we all care about, right? » ; sinon « Now, the next one »"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "14:25 le blog de Paul, 14:54 la refonte Rankspot du matin : des anecdotes"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "Peu de redites, mais quelques gestes expliqués deux fois (Ctrl S)"},
+    "ed_niveau_simple": {"note": 1, "preuve": "« treat it like a control F » ; mais cache, settings.json, symlinks et worktrees passent sans explication à 258 mots/min"},
+    "tous_video_suivante": {"note": 0, "preuve": "« see you in the next tips video », sans vidéo précise"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Promesse de volume (37) et de vitesse (19 minutes), miniature sans visage ni enjeu (deux icônes Claude, « Intermediate → Advanced »). 15 000 vues à 7 jours, six jours après « 19 Mistakes » (74 000) au même format.",
+    "intro_structure": "Aucune intro : la 1re astuce dès la 1re phrase. Sans hook ni enjeu, la liste ne tient que par le compteur.",
+    "habillage": "Terminal quasi permanent avec vignette et compteur « #N », cartes de chapitre orange ; le débit le plus rapide de la série.",
+    "idee_pour_nous": "Une liste d'astuces sans enjeu ne prend pas, même en volume : à format égal, « les erreurs que tu fais encore » a fait cinq fois plus que « les astuces pour progresser ».",
+    "objectif": "vues"
+  }
+}

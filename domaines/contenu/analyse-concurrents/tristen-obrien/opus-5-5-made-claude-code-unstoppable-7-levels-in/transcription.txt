@@ -1,0 +1,192 @@
+[00:00] So, I've teamed up with Anthropic, who is sponsoring this video, and I am so excited about that because you may feel comfortable with Claude, but now that Opus 5.5 has made Claude code completely unstoppable, you are barely scratching
+[00:13] the surface.
+[00:13] I've spent thousands of hours inside of Claude code at this point, and I've built over 150 AI agents with it, and I've realized that there are seven levels to a Claude code user.
+[00:23] And by the end of this video, you'll know if you've mastered all seven of them, or you'll know exactly which ones that you need to focus on.
+[00:29] So, let's start with level one, which is the describer.
+[00:32] And that means that you're just starting to build your very first thing by describing it to Claude code.
+[00:37] And the easiest way to start using Claude code is by using the Claude desktop app.
+[00:42] You see this code tab right up here?
+[00:44] That is Claude code.
+[00:45] But before we start building anything, let's take a look at some of the settings that we have to set up first.
+[00:50] Take a look down here where it says local.
+[00:52] When you click it, you see a few options that pop up.
+[00:55] Local means it's going to run everything on your computer.
+[00:57] Cloud means it's going to run everything on Anthropic's computers, which is really cool, and we're going to come back to that one later.
+[01:04] But right now, we're going to start with local.
+[01:06] So, next you get to pick the folder that you want your project to live in.
+[01:09] Now, I've already created a folder called demo, so I'm going to use that one.
+[01:12] But after that, you get to pick the model you want to use.
+[01:15] Now, you can see that there's a few models here.
+[01:17] I'm going to pick Opus 5.5, which is Anthropic's latest model, and in my opinion, this is the best model that's out there for almost all of your projects.
+[01:24] And the last setting we're going to change here is the mode.
+[01:27] Now, you see auto and manual.
+[01:29] Manual means that Claude is going to ask every single time before it changes anything.
+[01:33] Auto means that you trust it to make those changes itself.
+[01:36] Now, it does have plenty of safety checks built in, so I'm going to select auto for this project.
+[01:41] And to start, I'm just going to give it my prompt.
+[01:43] I'm going to ask for a very simple app that will track my habits and will track my walks.
+[01:48] And in about 5 minutes, this is what we get.
+[01:50] First, take a look at the summary.
+[01:51] It says that it built us an app called stride.
+[01:54] Now, the reason why I like the summary is because Opus 5.5 communicates with us more clearly than previous models.
+[02:00] And for me, that is a huge upgrade.
+[02:02] Okay, let's take a look at the app that it built us.
+[02:04] Now, it gave us what we asked for.
+[02:06] It's not exactly what I was picturing in my mind, but that's because I didn't give it a great prompt.
+[02:10] I was vague on purpose.
+[02:12] At this point, it didn't ask me any questions, but it did kind of guess what I wanted.
+[02:16] And that brings us to level two.
+[02:17] The level two Claude code user is the talker.
+[02:21] Now, that means that you've realized that you could talk to Claude code way faster than you can type, which makes everything significantly more efficient.
+[02:28] Look down here at this prompt box.
+[02:29] You see that little microphone down there?
+[02:31] If you click it, you can just start talking.
+[02:33] And as you talk, you're going to see your words show up right here in the box.
+[02:36] Now, I have a rule, and the rule is that you want to talk to Claude for as long as you can, just brain dumping every idea that you have about the project.
+[02:43] It doesn't have to be organized.
+[02:45] It doesn't have to be structured.
+[02:46] You just have to start talking to Claude.
+[02:48] And this pairs perfectly with Opus 5.5 because Opus 5.5 follows detailed instructions really well.
+[02:55] So, the more that you tell it, the more it's going to use.
+[02:58] With that said, let's continue to build on the app that Claude code just built for us, but this time we're going to use our voice.
+[03:03] So, I click the microphone and I would start talking.
+[03:05] Now, in this example on the screen, you can see that I'm talking to Claude, and I'm telling it that I want these detailed plans, these new enhancements to my app.
+[03:13] And when I'm done, I'm going to hit the microphone again, and you're going to see that my whole prompt just shows up word for word sitting right there in the prompt box.
+[03:20] I know that if I had typed all of that out, I would have typed out just a couple of sentences, and I would have cut out probably half of what I told it.
+[03:26] And that means that Claude would have to guess once again on what I actually wanted.
+[03:30] But, we're not going to hit enter yet because even with all of that detail, Claude would still have to make a few calls on its own here.
+[03:36] And that brings us to level three, and the level three Claude code user is the planner.
+[03:41] And that means that Claude will think through its entire plan and ask you questions before it builds anything.
+[03:47] And this is where Opus 5.5 really separates itself because it's going to give you a fundamentally different experience than any other AI coding tool that's out there.
+[03:56] So, my prompt is still in the box, and before I hit enter, if you look down here in the mode section, right now it says auto.
+[04:01] When I click it, I'm going to select plan.
+[04:04] In plan mode, Claude is going to take a look at your entire project, and it's going to start asking you questions.
+[04:10] But, it's also not going to change a single file until you look at its plan, and you approve the plan.
+[04:15] With plan mode on, and when I hit enter, take a look at what happens here.
+[04:19] Before it writes any code, it's going to stop and it's going to ask me questions about things that I may have forgot.
+[04:24] So, what's going to do is it's going to write the entire plan out, and you can see that this plan that it created is really long.
+[04:30] Now, we're not going to go through this whole thing in the video, but I do encourage you to read the entire plan before you click approve.
+[04:37] Because down here, you can reject it, or you can revise it, or you can accept it.
+[04:40] I'm going to click accept with auto mode on.
+[04:43] And once it's done, you can see that the plan has been put in the place, and the app is starting to take shape.
+[04:48] But, even with that, if we're looking at the app, it's still not what I was envisioning.
+[04:51] But, level four is going to fix all of that for us.
+[04:54] And the level four Claude code user is the perfectionist.
+[04:58] And that means that you shape the design until it looks exactly how you want it.
+[05:02] Most people, including myself when I first started, would go back and forth with Claude for an hour trying to describe exactly what they want.
+[05:09] If we take a look at the app over here in the preview pane, we're going to make a couple of changes that make this look significantly better.
+[05:14] And we're going to do that with just one prompt.
+[05:16] And the prompt that I like to use is this.
+[05:19] Make this feel like a premium fitness app.
+[05:21] Something that is calm and motivating.
+[05:24] Something that I would actually like to open every single morning.
+[05:27] And I'm still keeping this vague on purpose because I want to show you how powerful Opus 5.5 is.
+[05:32] And after about 10 minutes of running, I'm going to refresh my page, and you can see that the app that it made me, Stride, looks different, has new logo, has cleaner fonts, the elements are bigger.
+[05:43] This is the premium look that I was going for.
+[05:45] And this is what it means when Anthropic says that Opus 5.5 has design taste.
+[05:51] It can take a vague prompt that I gave it and make the app look significantly better.
+[05:55] Now, if you don't like what Claude created, Claude Code saves a checkpoint every single time that you send it a prompt.
+[06:00] And if you hit escape twice on your keyboard, you're going to see the option to rewind.
+[06:05] You can also do this by scrolling up to any message and clicking the rewind button right here.
+[06:10] From there, you get a chance to pick whether you want to roll back the code, roll back the conversation, or you can roll back both of them.
+[06:17] So, it's an undo button for the entire project.
+[06:19] This app is already starting to look good, but there are things that still need to be done.
+[06:23] And there are ways that we can significantly speed this up.
+[06:26] And that takes us to level five.
+[06:28] Before we go to level five, really quick, if this is helpful, do me a favor, hit subscribe, like the video, really helps out the channel.
+[06:34] But, let's jump back into level five.
+[06:36] The level five Claude Code user is the multitasker.
+[06:39] And this, I promise you, will take you to the next level.
+[06:42] You see this plus button right here?
+[06:44] When you click it, you get a brand new session.
+[06:47] Now, notice that it's still in my project folder that I've been using, which is the demo folder, which means that it's still working on the same project.
+[06:53] But, what I'm going to do is I'm going to click that three separate times and I'm going to give each one of them its own job.
+[06:58] The first one's going to add a weekly chart.
+[07:00] The second one is going to write me encouraging messages, cuz you know I need it every single morning.
+[07:05] And the third one is going to look at the app, it's going to check for bugs, and it's also going to fix any issues that it found.
+[07:11] And since we're multitasking here, all three of these are running at the same time.
+[07:15] And you see those little dots that are flashing over there?
+[07:17] Those are all three of the sessions working at the same time.
+[07:20] Now, of course, I can click in and out of them anytime I want if I want to check the status, but they're all working at the same time.
+[07:25] And one thing to know about Opus 5.5 when it comes to multitasking, on most of the work that you do, it performs at the same level as Fable 5.1, and that is Anthropic's top AI model.
+[07:35] It also writes output 30% faster than Opus 5.
+[07:38] On most of the work, it costs around 40% less.
+[07:41] And Anthropic also raised the 5-hour usage limit on Pro, Max, and Team accounts.
+[07:46] And if you're like me, and you run Claude code all day long, that is a significant upgrade.
+[07:51] So, all three of these took about 10 minutes to run.
+[07:53] They made all the changes that we asked for, and that bug checker even found a couple of real problems, and it fixed it on the spot.
+[07:59] But, even though it was 10 minutes, I was still stuck in front of my computer watching it.
+[08:04] But, that is something that Level 6 fixes.
+[08:07] So, the Level 6 Claude code user works from anywhere, which means that you could hand Claude code a big job, you could walk away, and you could check on it from your phone or from the web.
+[08:17] And that is as long as you have one specific feature turned on.
+[08:20] So, let's start a new session here.
+[08:22] I'm going to keep it local, but I'm going to change one thing.
+[08:25] I'm going to open up the effort menu, and I'm going to turn the effort up to high.
+[08:29] And this is because this is a much bigger job.
+[08:31] I'm going to tell it that I'm hosting a big family get-together at my house, and I need a party command center, which means that I'm going to list everything out that I want, and I'm going to give it
+[08:41] to Claude.
+[08:41] There are seven different functions that I want it to do, and I'm going to put it all in one prompt.
+[08:46] Now, I am going to switch this over to plan mode, and after I read the plan, I'm going to accept with auto.
+[08:51] Now, I know this is going to take a little while to run, and that is fine, because as it's running, if you look up here at the top, you're going to see this little computer icon.
+[08:59] When you click it, you're going to want to make sure that remote control is on.
+[09:02] Remote control is the feature that's going to let you check on your Claude code session from anywhere.
+[09:07] So, I started on my computer, but I could check on it on my phone or on the web.
+[09:11] So, I know that I could walk away, and I can see that my session is running right here.
+[09:15] So, here's my phone.
+[09:16] I'm going to open up the Claude app.
+[09:18] I'm going to click on code, and then I'm going to see my session that is running on my computer at home.
+[09:23] Now, I can watch it, I can check to see when it's done, and I can even send it a message if I want to.
+[09:28] That's also true if I go to claude.ai/code in my browser, which you can see that the session is running right here as well.
+[09:34] This did run for about 40 minutes, and if you take a look at what it built, you can see that it built me a dashboard that shows who's coming to my party, who's not coming to my party, what
+[09:42] I need to do next.
+[09:44] There's a menu there that matches my RSVPs.
+[09:47] There's a timeline that tells me when I need to start cooking.
+[09:49] Honestly, this is pretty cool.
+[09:50] And notice that everything that I've built so far has been done without opening up the terminal even once.
+[09:56] And that was on purpose because now you are ready for level seven.
+[09:59] The level seven Claude Code user is unstoppable.
+[10:03] And that means that you graduate to the terminal.
+[10:06] And this is where the real magic happens.
+[10:07] To a lot of people, the terminal looks scary, but it's the same Claude Code that is in the Claude app.
+[10:12] It now just has a text window.
+[10:14] Now, if you don't have this yet, you do need to install it.
+[10:17] The link is in the description, but once your terminal is open, you can go to your project folder, and you can type in the word Claude, and that's it.
+[10:24] You are in.
+[10:25] All of the same features that we've been talking about are also in the terminal, like the voice.
+[10:29] If I type in {slash} voice and I hit enter, all I have to do is hold down the space bar, and I can start talking.
+[10:34] And then when I'm done, I just let go.
+[10:36] If you want to use plan mode like we did in the app, all you have to do is hold down shift and hit tab, and as you can see, it cycles through all of the modes, like manual, accept
+[10:45] edits, plan, auto.
+[10:47] All of that is right there from the keyboard.
+[10:49] If you're somebody who's been coding for a while and you'd rather work in a code editor like VS Code, well, Claude Code also has a plugin that works really well for that.
+[10:57] Now, the terminal does have more advanced features, and one of them I want to show you is called {slash} ultra review.
+[11:03] Now, what this does is it sends an AI agent into Anthropic's cloud to check your project for real bugs.
+[11:10] Now, this does need a Git, and if you've never set that up before, I do have a link in my description.
+[11:14] But when it comes to ultra review, you do get three of them for free, and after that, it does cost money.
+[11:19] Now, I did run this for my own project, and it did find two small bugs, but guess what?
+[11:23] Claude fixed it on the spot, and that is the power of using Claude Code.
+[11:27] So, you may be thinking, why even use the terminal at all?
+[11:30] Well, it's because once you get comfortable here, everything just gets faster.
+[11:33] It's all from your keyboard, and plus you get extra commands like that {slash} ultra review.
+[11:38] But, being unstoppable isn't just about the terminal, it's also about Claude working when you're not even there.
+[11:44] And for that, we are going to go back to the desktop app, and we are going to create a routine.
+[11:49] And it's really easy to do.
+[11:50] On the left-hand side, you're going to see routines, and then we're going to click new routine.
+[11:54] Now, in my case, I'm still going to choose local, and I'm going to name it party morning brief.
+[11:59] Because what we're going to create is a routine around this party that I have coming up.
+[12:03] I'm just going to tell it that every morning I want to check the party command center, and I want it to tell me what has to happen for the day.
+[12:09] Plus, it can give me a few extra things.
+[12:11] And then I'm going to pick my party project folder that I've been using this whole time.
+[12:15] I'm going to put it on auto, I'm going to select Opus 5.5, and I'm going to schedule it for 7:00 a.m.
+[12:20] And just a heads-up, we selected local here, and that means that it only runs when my computer is awake.
+[12:26] And so, what I want to do is I want to go to settings, and then I want to go to Claude Code, and then I want to turn on keep computer awake while Claude works.
+[12:33] And that works really well for me.
+[12:34] That is, until I shut my laptop.
+[12:36] So, if you want to keep this while your laptop's even closed, you can set it up as a cloud routine instead of a local routine.
+[12:43] But, there it is, levels 1 through 7.
+[12:45] Hopefully, in this video, you're able to figure out what level you are at and what steps you need to take to get to level 7.
+[12:51] And at every level, Opus 5.5 is going to continue to be the hero here.
+[12:55] If you want to try all of this yourself, then you can click the link to get started with Claude Code on the Max plan, and that is in the description.
+[13:03] And if you want Claude to even run more on its own, then check out my {slash} goal video as well.
+[13:08] So, thanks for watching this one.
+[13:10] If you have any questions, put it in the comments, and I will see you in the next one.

@@ -1,0 +1,133 @@
+{
+ "id": "oz2CwrPV2Rg",
+ "url": "https://www.youtube.com/watch?v=oz2CwrPV2Rg",
+ "chaine": "nate-herk",
+ "titre": "Anthropic Engineers Just 10x'd Everyone's Claude Code",
+ "titre_ytdlp": "Anthropic Engineers Just 10x'd Everyone's Claude Code",
+ "publie": "2026-10-08T20:48:59Z",
+ "duree_s": 743,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "FQokef_KBlhakrHvVprnMayHFqA",
+  "id": "oz2CwrPV2Rg",
+  "snippet": {
+   "publishedAt": "2026-10-08T20:48:59Z",
+   "channelId": "UC2ojq-nuP8ceeHqiroeKhBA",
+   "title": "Anthropic Engineers Just 10x'd Everyone's Claude Code",
+   "description": "Use your ChatGPT sub to power Hyperagent: https://www.hyperagent.com/nate100\nApply for up to $20K with Hyperagent's agency program: https://www.hyperagent.com/agencies\nFREE AI OS Template: https://app.aiautomationsociety.ai/optin/ai-os/?utm_source=youtube&utm_medium=organic&utm_content=anthropic-engineers-doctor&sl=yt_anthropic-engineers-doctor\n\nMy Tools💻\nFREE MONTH voice to text: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www.hostinger.com/vps/claude-code-hosting\n\nMore instructions don't always mean better results from Claude Code. I break down Anthropic's context engineering guidance, show what /doctor found in my setup, and walk through a small fix to my YouTube workflow. \n\nYou'll learn what to keep in your CLAUDE.md and skills, what to load only when needed, and how to make regular audits part of your AI operating system.\n\nSponsorship Inquiries:\n📧 nate@smoothmedia.co\n\nConnect with me:\nhttps://www.linkedin.com/in/nateherkelman/\nhttps://x.com/nateherk\nhttps://www.instagram.com/nateherk/\n\nTIMESTAMPS \n0:00 Anthropic's New Context Rules\n3:30 Hyperagent (Sponsor)\n4:13 Testing Claude With Fewer Instructions\n6:01 What Context To Keep\n7:04 Auditing My Setup With /doctor\n9:43 Fixing My YouTube Workflow\n10:51 Scheduling AIOS Audits\n12:11 Final Thoughts",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/oz2CwrPV2Rg/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/oz2CwrPV2Rg/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/oz2CwrPV2Rg/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/oz2CwrPV2Rg/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/oz2CwrPV2Rg/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    }
+   },
+   "channelTitle": "Nate Herk | AI Automation",
+   "categoryId": "1",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "en",
+   "localized": {
+    "title": "Anthropic Engineers Just 10x'd Everyone's Claude Code",
+    "description": "Use your ChatGPT sub to power Hyperagent: https://www.hyperagent.com/nate100\nApply for up to $20K with Hyperagent's agency program: https://www.hyperagent.com/agencies\nFREE AI OS Template: https://app.aiautomationsociety.ai/optin/ai-os/?utm_source=youtube&utm_medium=organic&utm_content=anthropic-engineers-doctor&sl=yt_anthropic-engineers-doctor\n\nMy Tools💻\nFREE MONTH voice to text: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www.hostinger.com/vps/claude-code-hosting\n\nMore instructions don't always mean better results from Claude Code. I break down Anthropic's context engineering guidance, show what /doctor found in my setup, and walk through a small fix to my YouTube workflow. \n\nYou'll learn what to keep in your CLAUDE.md and skills, what to load only when needed, and how to make regular audits part of your AI operating system.\n\nSponsorship Inquiries:\n📧 nate@smoothmedia.co\n\nConnect with me:\nhttps://www.linkedin.com/in/nateherkelman/\nhttps://x.com/nateherk\nhttps://www.instagram.com/nateherk/\n\nTIMESTAMPS \n0:00 Anthropic's New Context Rules\n3:30 Hyperagent (Sponsor)\n4:13 Testing Claude With Fewer Instructions\n6:01 What Context To Keep\n7:04 Auditing My Setup With /doctor\n9:43 Fixing My YouTube Workflow\n10:51 Scheduling AIOS Audits\n12:11 Final Thoughts"
+   },
+   "defaultAudioLanguage": "en"
+  },
+  "contentDetails": {
+   "duration": "PT12M23S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": true,
+   "contentRating": {},
+   "projection": "rectangular"
+  },
+  "statistics": {
+   "viewCount": "115625",
+   "likeCount": "1293",
+   "favoriteCount": "0",
+   "commentCount": "72"
+  }
+ },
+ "ytdlp": {
+  "id": "oz2CwrPV2Rg",
+  "title": "Anthropic Engineers Just 10x'd Everyone's Claude Code",
+  "description": "Use your ChatGPT sub to power Hyperagent: https://www.hyperagent.com/nate100\nApply for up to $20K with Hyperagent's agency program: https://www.hyperagent.com/agencies\nFREE AI OS Template: https://app.aiautomationsociety.ai/optin/ai-os/?utm_source=youtube&utm_medium=organic&utm_content=anthropic-engineers-doctor&sl=yt_anthropic-engineers-doctor\n\nMy Tools💻\nFREE MONTH voice to text: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www.hostinger.com/vps/claude-code-hosting\n\nMore instructions don't always mean better results from Claude Code. I break down Anthropic's context engineering guidance, show what /doctor found in my setup, and walk through a small fix to my YouTube workflow. \n\nYou'll learn what to keep in your CLAUDE.md and skills, what to load only when needed, and how to make regular audits part of your AI operating system.\n\nSponsorship Inquiries:\n📧 nate@smoothmedia.co\n\nConnect with me:\nhttps://www.linkedin.com/in/nateherkelman/\nhttps://x.com/nateherk\nhttps://www.instagram.com/nateherk/\n\nTIMESTAMPS \n0:00 Anthropic's New Context Rules\n3:30 Hyperagent (Sponsor)\n4:13 Testing Claude With Fewer Instructions\n6:01 What Context To Keep\n7:04 Auditing My Setup With /doctor\n9:43 Fixing My YouTube Workflow\n10:51 Scheduling AIOS Audits\n12:11 Final Thoughts",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "Anthropic's New Context Rules",
+    "end_time": 210
+   },
+   {
+    "start_time": 210,
+    "title": "Hyperagent (Sponsor)",
+    "end_time": 253
+   },
+   {
+    "start_time": 253,
+    "title": "Testing Claude With Fewer Instructions",
+    "end_time": 361
+   },
+   {
+    "start_time": 361,
+    "title": "What Context To Keep",
+    "end_time": 424
+   },
+   {
+    "start_time": 424,
+    "title": "Auditing My Setup With /doctor",
+    "end_time": 583
+   },
+   {
+    "start_time": 583,
+    "title": "Fixing My YouTube Workflow",
+    "end_time": 651
+   },
+   {
+    "start_time": 651,
+    "title": "Scheduling AIOS Audits",
+    "end_time": 731
+   },
+   {
+    "start_time": 731,
+    "title": "Final Thoughts",
+    "end_time": 742
+   }
+  ],
+  "tags": [],
+  "categories": [
+   "Film & Animation"
+  ],
+  "heatmap": null,
+  "upload_date": "20261008",
+  "duration": 742,
+  "channel": "Nate Herk | AI Automation",
+  "channel_id": "UC2ojq-nuP8ceeHqiroeKhBA",
+  "channel_follower_count": 1090000,
+  "thumbnail": "https://i.ytimg.com/vi/oz2CwrPV2Rg/maxresdefault.jpg",
+  "view_count": 115625,
+  "like_count": 1293,
+  "comment_count": 43
+ }
+}

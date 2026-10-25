@@ -1,0 +1,123 @@
+{
+ "id": "RDeofKimDxo",
+ "url": "https://www.youtube.com/watch?v=RDeofKimDxo",
+ "chaine": "simon-scrapes",
+ "titre": "37 Cheat Codes to Level Up In Claude Code in 19 Minutes",
+ "titre_ytdlp": "37 Cheat Codes to Level Up In Claude Code in 19 Minutes",
+ "publie": "2026-08-28T16:03:30Z",
+ "duree_s": 1206,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "XCF8nS1nMBITKcXT5GvAqhI59V8",
+  "id": "RDeofKimDxo",
+  "snippet": {
+   "publishedAt": "2026-08-28T16:03:30Z",
+   "channelId": "UCdCR4-uYOg5ju-IUuDnfnQA",
+   "title": "37 Cheat Codes to Level Up In Claude Code in 19 Minutes",
+   "description": "🚀 Join the Agentic Academy: https://skool.com/scrapes\n👀 Be the brand AI recommends: https://dub.sh/rankspot-yt\nDon't miss the next build - https://www.youtube.com/@simonscrapes?sub_confirmation=1\n\nIn this video, I'm sharing 36 tricks to level up your Claude Code game in under 20 minutes. We'll cover everything from simple skills that speed up your workflow to hidden keyboard shortcuts and powerful settings that will save you tokens and time. Get ready to transform the way you use Claude Code.\n\n00:00- Make Claude Talk Less\n02:18 - Keys You Didn’t Know You Had\n05:50 - Never Lose a Session Again\n09:37 - The Token Bill Fixes\n12:01 - Memory That Pays Rent\n15:37 - The Tricks Nobody’s Using Yet\n\n#claudecode #claudecodetutorial #claudecheatcode",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/RDeofKimDxo/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/RDeofKimDxo/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/RDeofKimDxo/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/RDeofKimDxo/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/RDeofKimDxo/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    }
+   },
+   "channelTitle": "Simon Scrapes",
+   "categoryId": "28",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "en",
+   "localized": {
+    "title": "37 Cheat Codes to Level Up In Claude Code in 19 Minutes",
+    "description": "🚀 Join the Agentic Academy: https://skool.com/scrapes\n👀 Be the brand AI recommends: https://dub.sh/rankspot-yt\nDon't miss the next build - https://www.youtube.com/@simonscrapes?sub_confirmation=1\n\nIn this video, I'm sharing 36 tricks to level up your Claude Code game in under 20 minutes. We'll cover everything from simple skills that speed up your workflow to hidden keyboard shortcuts and powerful settings that will save you tokens and time. Get ready to transform the way you use Claude Code.\n\n00:00- Make Claude Talk Less\n02:18 - Keys You Didn’t Know You Had\n05:50 - Never Lose a Session Again\n09:37 - The Token Bill Fixes\n12:01 - Memory That Pays Rent\n15:37 - The Tricks Nobody’s Using Yet\n\n#claudecode #claudecodetutorial #claudecheatcode"
+   },
+   "defaultAudioLanguage": "en"
+  },
+  "contentDetails": {
+   "duration": "PT20M6S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": true,
+   "contentRating": {},
+   "projection": "rectangular"
+  },
+  "statistics": {
+   "viewCount": "18388",
+   "likeCount": "262",
+   "favoriteCount": "0",
+   "commentCount": "20"
+  }
+ },
+ "ytdlp": {
+  "id": "RDeofKimDxo",
+  "title": "37 Cheat Codes to Level Up In Claude Code in 19 Minutes",
+  "description": "🚀 Join the Agentic Academy: https://skool.com/scrapes\n👀 Be the brand AI recommends: https://dub.sh/rankspot-yt\nDon't miss the next build - https://www.youtube.com/@simonscrapes?sub_confirmation=1\n\nIn this video, I'm sharing 36 tricks to level up your Claude Code game in under 20 minutes. We'll cover everything from simple skills that speed up your workflow to hidden keyboard shortcuts and powerful settings that will save you tokens and time. Get ready to transform the way you use Claude Code.\n\n00:00- Make Claude Talk Less\n02:18 - Keys You Didn’t Know You Had\n05:50 - Never Lose a Session Again\n09:37 - The Token Bill Fixes\n12:01 - Memory That Pays Rent\n15:37 - The Tricks Nobody’s Using Yet\n\n#claudecode #claudecodetutorial #claudecheatcode",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "Make Claude Talk Less",
+    "end_time": 138
+   },
+   {
+    "start_time": 138,
+    "title": "Keys You Didn’t Know You Had",
+    "end_time": 350
+   },
+   {
+    "start_time": 350,
+    "title": "Never Lose a Session Again",
+    "end_time": 577
+   },
+   {
+    "start_time": 577,
+    "title": "The Token Bill Fixes",
+    "end_time": 721
+   },
+   {
+    "start_time": 721,
+    "title": "Memory That Pays Rent",
+    "end_time": 937
+   },
+   {
+    "start_time": 937,
+    "title": "The Tricks Nobody’s Using Yet",
+    "end_time": 1206
+   }
+  ],
+  "tags": [],
+  "categories": [
+   "Science & Technology"
+  ],
+  "heatmap": null,
+  "upload_date": "20260828",
+  "duration": 1206,
+  "channel": "Simon Scrapes",
+  "channel_id": "UCdCR4-uYOg5ju-IUuDnfnQA",
+  "channel_follower_count": 106000,
+  "thumbnail": "https://i.ytimg.com/vi/RDeofKimDxo/maxresdefault.jpg",
+  "view_count": 18388,
+  "like_count": 262,
+  "comment_count": 12
+ }
+}

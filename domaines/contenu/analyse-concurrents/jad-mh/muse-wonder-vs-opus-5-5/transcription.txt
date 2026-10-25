@@ -1,0 +1,96 @@
+[00:00] Okay, Meta's just dropped a frontier model officially today and it has surpassed ChatGPT for the first time.
+[00:06] It's called Muse water.
+[00:08] Meta says it's their biggest strongest model ever and they put it right next to Claude and GBT on their own charts.
+[00:14] But when I actually read the charts, something's off.
+[00:17] So today, I'll show you what Muse water is, what it costs, what the Meta's own numbers really say, and whether you should switch.
+[00:24] Be sure to subscribe because I drop skills every single week.
+[00:27] So let's get straight into it.
+[00:28] So there are two models.
+[00:30] Muse water and Muse water full.
+[00:31] Muse water is the one that you can actually use.
+[00:34] It's on Meta's API and Muse code.
+[00:36] Muse water full is the bigger one and it's only for Muse code subscribers.
+[00:40] You can't get an API on it.
+[00:42] And this is a big deal for Meta.
+[00:44] This is their first real frontier model.
+[00:47] Their first one since Alexander Wang took over Meta's AI.
+[00:51] And he literally opens the launch video.
+[00:53] They trained it on their giant data center in Ohio and they call it quote our next step towards personal super intelligence.
+[01:02] The whole pitch is memory.
+[01:03] They call it active memory.
+[01:04] It's supposed to remember what matters to you over days, weeks, months, your habits, your preferences, random conversations you had with it.
+[01:12] And the second thing is active focus.
+[01:14] It's trained not to give up if it hits a blocker.
+[01:16] It tries another way.
+[01:18] And Meta showed some demos of what that looks like.
+[01:20] Quick heads up, Meta says these were shortened.
+[01:22] First, someone asked it to plan a next Saturday's run.
+[01:26] It checks their calendar and their health app, maps the routes with marker every 5 kilometers and puts it in their calendar.
+[01:32] Second is make a birthday t-shirt for Coco, the black cat on Instagram.
+[01:37] It goes in Coco's Instagram, picks a photo, designs a black tee with Coco in gold like like a vintage band shirt.
+[01:45] And then it actually orders it.
+[01:46] Third, an insurance claim.
+[01:48] You send a photo of of an urgent care bill and your insurance card.
+[01:53] It finds the billing year, writes you a script to call them.
+[01:56] You say you don't have time to call, it writes an email and sends it over to them.
+[02:00] And the decline gets submitted.
+[02:01] And the last one, a wedding seat chart, a guest list full of notes.
+[02:05] Who needs an accessibility seats, who has allergies, who can sit together.
+[02:09] It turns every note into a rule and seats everyone table by table.
+[02:13] So, that's kind of like the vibe.
+[02:14] Not a chatbot, an agent that does your boring stuff.
+[02:17] Now, let's talk really the price.
+[02:19] $4 per million tokens in, $20 out.
+[02:22] That's exactly the same price as Claude Opus 5.5 to the cent.
+[02:27] And here's kind of what's funny.
+[02:28] Meta used to be the open source guys.
+[02:31] Lama, free weights for everyone.
+[02:33] This one closed.
+[02:35] Same as everyone else.
+[02:36] Now, let's talk about charts.
+[02:38] And this is where it gets super interesting.
+[02:40] Meta compares Muse Wander and Wander Full against Opus 5.5 and Fable 5.1 and GBT 6 Astra on 14 benchmarks.
+[02:50] >> >> And yes, there are some wins in here.
+[02:52] Legal work, Muse Wander scores 10, Opus 5.5 scores 4.2, more than double.
+[02:58] Remember, that's their whole pitch and they win.
+[03:00] Long coding projects on deep SWE, Muse Wander gets 78.8, Opus 74.2.
+[03:08] So far, so good, but look at who has the top score on each row.
+[03:13] Opus 5.5, Claude's model, has the best score on six out of 14 rows.
+[03:18] On Meta's own chart, health, computer use, terminal coding, building a program from scratch, where Opus gets 70.5 and Muse Wander gets 50.
+[03:27] And here's the part most people will miss.
+[03:30] The model you can actually buy, Muse Wander beats Opus on only five out of 14.
+[03:36] The one that looks really good on this chart is Wander Full and Wander Cool is not on the API.
+[03:42] And two more things, straight from Meta's own fine prints.
+[03:45] The memory benchmark, the one they say that's their own internal test.
+[03:49] Same with their big personal super intelligence index at the top.
+[03:53] And Meta literally writes that the competitor runs our best efforts and may not be optional tuned.
+[04:00] So, where they tested Claude and Gemini T themselves, they're telling you it might not be their best.
+[04:05] Okay, so now obviously we have to look at what independent people say.
+[04:09] Artificial Analysis, they run the same test over on every model.
+[04:13] News Wunder scores 52.
+[04:15] >> >> That's number nine out of 219 models.
+[04:18] Really good, but Opus 5.5 is number one with 58.
+[04:22] Fable 1.1 and Gemini T6 Astra are 53.
+[04:26] And what are full scores at 56.
+[04:29] But fair is fair.
+[04:30] News Wunder is cheaper per task, same price per token, but it uses half the tokens.
+[04:35] So, running their whole test costs $4.52 per task with News Wunder and $5.98 with Opus.
+[04:44] That's about 25% cheaper, but Opus is still faster though.
+[04:47] One thing from the model card I found funny, Meta says in themselves 3D and spatial reasoning is still known as a weakness.
+[04:54] So, all those Claude next demos going around the 3D scenes are made with code.
+[04:59] They wouldn't be with this model.
+[05:00] So, I don't really see editing anything so far if that's what you were wondering.
+[05:06] My personal take, Meta's back for real.
+[05:09] Number nine out of 219 models on the independent leaderboard.
+[05:12] A year ago nobody puts Meta in the same sentence as Claude and Gemini T ever.
+[05:17] So, they're doing something right and memory is the right bet and agents that actually remembers your life is what most people really want.
+[05:24] And if News does it really well, that would be huge.
+[05:27] But for what I do personally, coding, editing my videos, building skills, I'm staying on Claude.
+[05:31] Same price, higher independent score on Meta's own charts, Opus still beats News Wunder by 20 points on building a program program from scratch.
+[05:39] And honestly, the question that I keep asking myself, would I let Meta remember everything about my life?
+[05:44] I'm not sure yet, but of course it depends what I feed it.
+[05:47] Tell me in the comments, would you trust Meze with that?
+[05:49] And what do you think of the new model?
+[05:51] I'll put Meze Wonder through the exact same room quote test I gave on Opus and Soul, same price, and we'll see who performs better.
+[05:59] Subscribe if you don't want to miss that.
+[06:01] Thanks for watching, and I'll see you on the next.

@@ -1,0 +1,155 @@
+[00:00] So, Sonnet 5.5 got released early this week, and it turns out it's quite incredible when it comes to video editing and motion graphic animations like the ones you're seeing on this page.
+[00:08] And it's also half the token cost of Opus 5.5, so you can potentially get these types of animations for cheaper.
+[00:14] And just to show you an example, here at the left is a raw footage of me for one of our videos, and basically I just asked Sonnet 5.5 with a single prompt that uses this skill called {slash} animate
+[00:24] in my workspace, and it was able to produce this video on the right.
+[00:28] 17 is to ask for SVGs.
+[00:30] So, when you ask Claude for new icons, illustrations, or diagrams, one of the best things you can do is to ask for them in the SVG format.
+[00:36] That stands for scalable vector graphics, so that it scales to any size without going blurry.
+[00:41] You can open the file and change the color by hand, and you can even have Claude animate these icons.
+[00:45] So, with SVGs, every graphic that you get back from Claude is editable and animatable.
+[00:50] So, there you go.
+[00:50] All of the cuts, all of the animations, and including the motion graphics that you've seen in this video, all done by Sonnet 5.5.
+[00:57] Now, this obviously uses my own design system, the ones you see in our videos, but you can of course use Claude Sonnet for other styles of videos like this flat vector animation, isometric style graphics, 3D render animations like
+[01:08] these, or even ones with liquid motion, glassmorphism animations, cutout animations like the ones from Vox, and at this point pretty much any style that you want.
+[01:17] And these are all done using Sonnet 5.5 and the skill called {slash} animate.
+[01:20] So, today I'll teach you in three steps how to create a skill like this so that you can use Sonnet 5.5 for video animations without having to rely on any other AI video generation models.
+[01:30] And if you're new, my name is J.
+[01:31] I spent over a decade working with brands you probably know, have been in AI since my master's in data science, and now I'm leading our AI business in one of the largest AI communities globally.
+[01:40] Let's dive into it.
+[01:41] So, to give a bit of context, Sonnet 5.5 got released a few days ago, and it is basically the cheaper version of Anthropic's Opus 5.5 model.
+[01:48] And the reason why this matters is because Opus 5.5 from a lot of independent accounts, including our own internal testing and in our community, is actually really good.
+[01:56] In fact, in a video I did just before this one, I was talking about how good Opus 5.5 is when it comes to video editing.
+[02:02] And so mainly, I was curious with Sonnet 5.5, given it is half the cost of Opus, can it actually produce videos that is almost as good as Opus or maybe even better?
+[02:10] And it turns out that it absolutely can.
+[02:12] So these videos that you're seeing, they're all created with Sonnet 5.5 without any extra AI video generation model.
+[02:18] And its diversity and taste in terms of just generating these videos is pretty incredible.
+[02:23] So you can see here that there's different styles that you can do.
+[02:25] You can have flat animations, you can have 3D renderings, you can have this collage or cutout animation, and even this glassmorphism style if you want.
+[02:33] And what's important to remember when it comes to all of these videos is that they're all done with code.
+[02:37] So you can literally go into these videos, and for example, isolate each of these elements.
+[02:41] And if I just turn off the other layers here, you can see that what Sonnet is basically doing is create all of these animations through JavaScript and HTML, and it handles all of the motion graphics and animations under
+[02:52] the hood.
+[02:53] So you can see this particular shape morphing into these different styles.
+[02:56] That is all done by Sonnet 5.5, which is pretty incredible.
+[03:00] And so theoretically, unlike AI video generation models, which are basically just black boxes that are pretty hard or costly to replicate, if you have a style that is dialed in like this flat vector style, then you can potentially
+[03:11] reuse this just by asking Sonnet to turn this into a design system and make that design system part of a skill, and use that skill whenever you want to animate videos like these.
+[03:20] And just to show an example of that, remember for this particular raw footage, what I used here is my own design system.
+[03:26] But if let's say I use an isometric design system, is to ask for SVGs.
+[03:31] So when you ask Claude for new icons, illustrations, or diagrams, one of the best things you can do is to ask for them in the SVG format.
+[03:37] So you can see because Sonnet understands the transcript of what I said in the video, it fit that particular design system and style to create animations specific to what is being said.
+[03:45] And if you want to try another design system, like this flat vector animation, you can see it adjusted what the visuals look like, but it's still maintaining the core of that message, which is about SVGs in this case.
+[03:56] And then this one is another example that uses more 3D elements.
+[04:00] So, I probably won't change my own design style to this, but uh the point being that if you have a core theme that you want and you actually codify that into a skill, then you can actually do pretty
+[04:11] cool things with this capability that Sonnet 5.5 now unlocks, that is much cheaper versus Opus.
+[04:18] And just to give credit, all of those design themes that you saw, it is care of Vincent Wei, who is a pretty good follow on X because he does a lot of these animations.
+[04:25] And basically what he did here is to create these animations via Opus 5.5, and so I was curious if Sonnet can do the same.
+[04:32] Later in the video, I'll also show you how I was able to codify these design systems just by feeding Claude this video, which effectively, once you learn that, you can pretty much look and get any video from the
+[04:42] internet and then feed it to Claude to create your own design system based on that.
+[04:45] All right, so what are now the three steps so that you can fully utilize this capability of Sonnet?
+[04:50] Well, the first one is, especially if you are editing a video that has a transcript or spoken words like the talking head video that I was showing earlier, you of course need a way to transcribe the words being
+[05:00] said in that video, and for Sonnet to actually cut it so that any pauses or any false takes are excluded from the final edit.
+[05:08] And for you to do this, it's really simple.
+[05:09] You can use a prompt like this to get started, where you basically just give the path to the raw footage, and then you ask Claude to transcribe it with AssemblyAI.
+[05:17] Now, AssemblyAI, we're not sponsored by them at all, but we do use them a lot in order to transcribe our videos.
+[05:23] And once you send a prompt like this, Claude will anyway guide you on how to sign up to it.
+[05:27] I believe they're still offering free credits for initial sign-ups, which would last you a long time in terms of transcribing long footage.
+[05:33] And then Claude will just guide you to where to get your API key, which is in the settings of AssemblyAI, which will now let you use their services in order to transcribe videos.
+[05:42] And by the way, all of these starter prompts and resources that I'll mention in this video, I just put together this guide, which you can just get below.
+[05:48] And this eight-page PDF, you can just send that to Claude, and you can just grab the prompts and the resources that you would need in order to build out the stuff that I'll mention in this lesson.
+[05:56] Now, to be clear, Assembly AI is not the only tool that does this.
+[05:59] In fact, if you want a free tool, Whisper is another good one.
+[06:03] However, it does take a while because it just uses your own CPU.
+[06:06] It is open source, that's why it's free.
+[06:08] But, an hour of audio takes around 15 to 50 minutes, depending on the strength of your CPU.
+[06:14] And so, with Assembly AI, the good news about it is if you have an hour of audio, that takes around 42 seconds, which is one of the fastest from the ones that we've tried out.
+[06:22] If you have an Eleven Labs subscription, you can actually use that, and that is at a reasonable cost as well per hour of transcription, and it also transcribes things quite fast.
+[06:31] A bit slower versus Assembly AI, but if you already have an Eleven Labs subscription, then you can just go and use that.
+[06:37] And just to give you an example of an output, you can see here this footage, which is around a minute and 50 seconds long.
+[06:43] That was all transcribed using Assembly AI, it gave me this script of what I said, and then Claude basically looked at this script and identified which parts are worth keeping.
+[06:52] So, if I play this here somewhere in the beginning, uh this is at 2x speed.
+[06:57] >> Number one, design systems.
+[06:58] So, this is where everything starts.
+[07:00] >> So, you can see there I had a false take.
+[07:01] And so, Claude, because it now understands the transcript of what I said, it was able to identify what particular take is the best.
+[07:08] Or, in this case, I just told it to get the latest take.
+[07:11] Now, when you do this and you send that prompt, most likely Claude will give you the final edit, which is just an MP4 file in your machine.
+[07:18] And you can actually give feedback to Claude in that same chat session, but I just find when it comes to video editing, it's much more easier to work with agents when you have an interface like this.
+[07:26] And just to give you a background, this Rubric editor, it is a tool that we're developing for our community, and which we also have started using ourselves.
+[07:33] Where, let's say Claude had some errors in terms of the cuts that it makes, all you can simply do is to adjust this the same way that you would in Premiere.
+[07:40] And when you do that, that will just add a note, which you can see here there's a couple of ones here already that the Claude fixed for me.
+[07:46] And if I copy the comments for all of those clips, I can then just send all of those comments to Claude.
+[07:51] And what I usually do is have it calibrate the skill that we made, so that the next time that it cuts a video, it gets more refined in terms of how much to cut, so that it becomes much
+[07:59] smarter and is much more personalized depending on how I speak.
+[08:03] And again, you don't necessarily need to build yourself an interface like this, but I just find that it is much more helpful if you have one, especially if you do a lot of videos.
+[08:11] And by the way, if you want to learn how to build and sell AI systems that businesses actually pay for, then that's pretty much all we do over at the Robonuggets community, where not only do you get access
+[08:19] to the Claude Living Masterclass, which we update every week and takes you from zero to mastery with the latest on AI, but you also get access to our Agents as a Service course, which walks you through how to
+[08:29] actually get paid for all these AI skills that you are learning.
+[08:32] You also get to be part of a genuinely great community of AI builders.
+[08:36] In fact, you can see just some of the recent wins our members are getting from the program right here.
+[08:40] So, if you want to start earning from AI, then check that just in the pin comment below.
+[08:43] Now, back to the video.
+[08:44] So now, once you have a video that is cut, the next step now is for Sonnet to animate that video.
+[08:49] Now, if you ask Claude to animate the video that you've got using a generic prompt, you probably would be disappointed.
+[08:55] So, for example, that same raw footage that I have, I just asked Claude to make a version using its defaults, so no extra skills, no particular design systems, and this is the animation that we've got, which is not
+[09:06] necessarily bad per se, but the big problem with this is that because these are Sonnet's defaults, these are quickly going to become the new AI vibe-coded slop that a lot of people would want to avoid, including yourself, because
+[09:17] AI slop at the end of the day are just beginner users who are just prompting Claude without any design system, and so they're getting these defaults that you would see everywhere.
+[09:25] And so clearly, the way that you would differentiate yourself is to create your own design system, and then when you ask Claude to animate this video, you can just invoke or declare that design system, so that Claude would
+[09:34] understand the specific aesthetic that you want.
+[09:37] Now, if you don't have a design system, one of the best resources that you can bookmark is styles.refrl.design.
+[09:42] So, let's say if you want this slush design system, they actually have a design markdown file here, which you can just copy, send that to Claude, and just ask it to create a design system and a skill, let's
+[09:53] say {slash} slush design.
+[09:55] And whenever you type in that skill in your prompt, you'd be able to copy this particular design.
+[09:59] Now, apart from styles.refrl, which is mainly for website design systems, what I've actually found recently is the emergence of these websites, which are basically collections of motion graphic videos that are made using, for this one, Opus 5.5, but
+[10:13] basically using Claude.
+[10:14] So, this is from skillery.dev, and again, this is just going to be part of that PDF, which you can just grab below.
+[10:19] And the great thing about this is you can just browse any style that you want from here.
+[10:23] Not all of them are great, but there are some that are quite unique that might fit the use case that you have.
+[10:28] And if you click on one of them, it provides attribution on where the original post is, including a starter prompt that you can just copy.
+[10:35] This is another one called watchshups.com, and it has a lot of launch videos for applications in particular.
+[10:42] And if you click through any of these, that will provide you the link to the X post.
+[10:45] But the only limitation with this website is that it doesn't necessarily have the prompt to get you started with replicating this design system.
+[10:52] So, what can you do?
+[10:53] Well, the good news is you can also use Sonnet 5.5 to effectively have it watch videos for you and actually replicate that design system based on what it sees.
+[11:01] So, for example, this one from Vincent Way that I saw from X, which has done a really good job to create these design themes.
+[11:07] And he did mention that he's going to upload the prompts to GitHub in just a bit.
+[11:11] But since that was not available yet, essentially what I did is to give Claude the link to this X post and have it use a tool called FFmpeg in order to get screenshots of this post and analyze those
+[11:21] frames in order to try and replicate them using Sonnet 5.5.
+[11:24] And just to show you what I mean, I asked Claude here to show me the screenshots that it just took with FFmpeg for that X post, and you can see here that it basically made this contact sheet where
+[11:33] it sort of watched a video by taking screenshots of it.
+[11:36] And then it picked out the themes and design systems that I wanted from this video and tried to recreate it using Sonnet 5.5.
+[11:42] Now, just for your awareness, if in case you haven't used FFmpeg before, that is an open-source tool, have been around for 20-plus years, and basically that is a piece of open-source software that lets you automate basic video commands
+[11:53] like taking screenshots.
+[11:54] So, it's a very good fit for agents is the point.
+[11:57] Now, coming from these screenshots, I just asked Sonnet to create design systems from them, and that is basically how we arrive at these styles that we can now reuse and add to our library.
+[12:07] And so, the big takeaway for this step is if you're just going to prompt Claude generically, then you'll probably be disappointed.
+[12:13] What you first need is a real design system that is attuned to whatever your use case is.
+[12:18] But the thing is, even with a design system, and even if your raw footage is properly cut, if you just send one prompt to animate your footage with a design system, it is very likely the case that you
+[12:27] won't get the final result that you want.
+[12:29] You'll probably get to 80% there, but for you to actually polish it, you need to get to step three, which is about directing and actually looking at the beats and all of the animations that it made, and for
+[12:39] you to give feedback to any changes that you want made.
+[12:42] To give an example of a clip that I had animated, you can see for this clip that I was talking about Claude Designs.
+[12:47] So, I just had Claude add in this UI of Claude Designs, so very meta.
+[12:50] But basically, this is the version two.
+[12:52] So, this is not a one-shot prompt to get to this point.
+[12:55] Because if you look at the version one of this, you can see that essentially, in the beginning, it was using these line art animations, which I thought was okay, but it can probably be improved, or this video can
+[13:06] be improved further if we actually show the actual Claude Design UI.
+[13:10] are sub-optimal, let's say, and probably 80% there in terms of the final look that you want, you can of course just give feedback to Claude via the chat interface, which should still work, but similar to what I mentioned
+[13:22] before, it is just much easier to have an interface like this where you can put in comments to these videos.
+[13:27] Like for example, for this Rubric Editor, which is the toolkit that we're making for our community, you can just click on any part of this video and when I make a comment here, like for example, actually show the
+[13:37] Claude design UI that will not only provide the comment which I said, it also includes in that comment the timestamp that it's in.
+[13:45] It includes the specific point where that comment was made.
+[13:47] And so, once we go through the review process and when we're directing this whole animation and we actually want to give feedback to Claude for its animation to us, we can just watch these animations, give comments to the
+[13:58] ones that we want changed, and then what I usually do is I just copy all of those comments, go back to Claude, and then send the whole thing in one go.
+[14:05] And you can see in this second version of this clip, it was able to accommodate that request of ours.
+[14:09] It now used the Claude design UI and in my view, it is a much better experience for the viewer to actually see user interfaces that they are familiar with versus those line art infographic animations that Claude started with.
+[14:23] And so, that's really the secret because step one and step two, like these steps you can pretty much automate and you can pretty much rely on a one-shot to give you a result that is 80-90% there sometimes.
+[14:34] And even with Sonnet 5.5, it is actually really capable to give you really good animations already.
+[14:39] But if you want to get to production-level quality, then this step three is the most important where you give feedback to Claude in order to iterate on those animations.
+[14:47] Now, what's important here is in that particular session where you have just communicated to Claude the design systems and every feedback that you have, that is where you can ask Claude to make your /animate so that all the
+[14:58] learnings in that particular session, all your feedback that you sent, will now be codified into this /animate shortcut.
+[15:04] And if you already have one, then all that remains to do is to have Claude updated based on skill creation best practices.
+[15:11] And if you ask your agent to do that, then this skill will be polished more and more to suit your tastes.
+[15:16] And so, there you go, that is essentially how I make those videos and how you can rely on Sonnet 5.5 to create quality animations for you even if you're just one person.
+[15:26] Hopefully that was useful and as always thanks for watching until the end and consider tapping subscribe below if you haven't yet because that just helps me a lot to put out more educational stuff like this.
+[15:35] I'll see you all next time.
+[15:36] Cheers.

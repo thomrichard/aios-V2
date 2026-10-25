@@ -1,0 +1,162 @@
+{
+  "video_id": "rL5tw6h78zo",
+  "chaine": "nate-herk",
+  "titre": "I Tested the Viral Reverse Engineer Anything Skill. What You Need to Know.",
+  "codeur": "agent nate-herk",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "actu",
+    "format_secondaire": "talk",
+    "sujet": "Le repo viral Reverse Engineer Anything : ce qu'il fait, cinq étapes, ses limites, et l'idée de fond (montrer l'exemple à l'agent)",
+    "outils": ["REA (Reverse Engineer Anything)", "Claude Code", "Opus 5.5", "GitHub", "Loom (appli étudiée)"],
+    "niveau": "intermediaire",
+    "objectif_probable": "vues"
+  },
+  "titre": {
+    "attente_au_clic": "Un test franc du repo viral Reverse Engineer Anything : ce qu'il vaut, et la preuve qu'il est simple à utiliser.",
+    "schema": "I Tested the Viral <Outil>. What You Need to Know.",
+    "promesse": "Savoir ce que vaut l'outil à la mode avant de s'y mettre",
+    "audace": "timide",
+    "registre": "jargon",
+    "briques": ["preuve"],
+    "marqueurs": ["test"],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "grand sourire",
+    "regard": "camera",
+    "texte": "It's so easy",
+    "texte_mots": 3,
+    "repete_titre": "partiel",
+    "elements": ["texte « It's so easy »", "page GitHub « reverse engineer anything » sur un écran, avec « 200k stars » et « #1 Repository Of The Day »", "flèche blanche vers la recherche", "visage et doigt pointé à gauche"],
+    "nb_elements": 4,
+    "fond": "gris foncé",
+    "couleurs": ["gris foncé", "blanc", "jaune", "violet"],
+    "curiosity_gap": "nouveaute",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "So, this GitHub repo right here, reverse-engineer-anything, has been absolutely blowing up.",
+    "premiere_phrase_reprend_titre": "oui",
+    "premier_plan": "Post X de Matthew Berman avec le README de REA, sur fond bleu-vert, Nate en vignette à gauche",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": ["actu-annonce", "hook-dissonance"],
+    "preuve": {
+      "type": "effort",
+      "seconde": 35,
+      "description": "« I've built games, I've built software, I've built different tools and apps » avec le repo ; puis ses réalisations d'avant (1:06)"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 3, "a_l_ecran": false},
+    "boucle_vers_la_fin": {
+      "presente": false,
+      "citation": "",
+      "seconde_resolution": null,
+      "tenue": null
+    },
+    "seconde_premier_point": 52,
+    "attente_tenue": "partiel",
+    "attente_note": "Le test est là (clone de Loom, deux agents comparés à 13:00), mais pas l'installation pas à pas ; un commentaire réclame un vrai tutoriel. Le message central, « rien de nouveau », va contre l'effet viral de la miniature."
+  },
+  "structure": {
+    "modele": "mixte",
+    "segments": [
+      {"debut": 0, "fin": 52, "titre": "Reverse Engineer Anything", "role": "intro", "pull": true, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 52, "fin": 194, "titre": "Better AI Outputs With References", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 194, "fin": 294, "titre": "Rebuilding App Features : le clone de Loom", "role": "demo", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 294, "fin": 320, "titre": "Skill gratuit Scrollcraft", "role": "cta", "pull": false, "paint": false, "point": false, "nom": true, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 320, "fin": 456, "titre": "How REA Works : la recette et le gâteau", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 456, "fin": 669, "titre": "A Five-Step REA Workflow", "role": "point", "pull": false, "paint": false, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 669, "fin": 777, "titre": "Limits and Caveats", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": true},
+      {"debut": 777, "fin": 899, "titre": "Results and Final Takeaways", "role": "fin", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 24, "type": "annonce-suite", "citation": "how this actually works and why I don't think this is anything really that new"},
+      {"seconde": 60, "type": "annonce-suite", "citation": "examples that I've actually built a while before this GitHub repo existed"},
+      {"seconde": 351, "type": "annonce-suite", "citation": "let me just break down real quick, real simply, what actually this is"},
+      {"seconde": 481, "type": "rupture", "citation": "reverse engineer the reverse engineer anything repo"},
+      {"seconde": 777, "type": "annonce-suite", "citation": "now what I think is interesting about this is a couple things"},
+      {"seconde": 810, "type": "rupture", "citation": "If I refresh, we're going to go up to what? 195? 196k?"}
+    ],
+    "histoires": [
+      {"seconde": 76, "acte": "anecdote", "resume": "Pour son skill de montage de Reels, il a fait regarder à l'IA ses 30 meilleurs Reels : le style est presque identique"},
+      {"seconde": 113, "acte": "anecdote", "resume": "Jordan Watkins défie l'IA de refaire son motion design ; Nate le refait avec Opus, un peu moins bien"},
+      {"seconde": 202, "acte": "vision-build", "resume": "Herk Recorder, son clone local de Loom : on copie la fonction, pas l'interface"},
+      {"seconde": 780, "acte": "anecdote", "resume": "Deux agents, même prompt : celui sans REA finit toujours le premier, celui avec REA plus tard mais mieux"}
+    ],
+    "payoffs": [
+      {"seconde": 76, "resume": "Les Reels montés par son skill ressemblent aux Reels montés à la main"},
+      {"seconde": 113, "resume": "Le motion design de Jordan Watkins refait par Opus à partir de l'exemple"},
+      {"seconde": 213, "resume": "Le clone de Loom tourne : bulle déplaçable, pause, enregistrement local"},
+      {"seconde": 498, "resume": "Les cinq étapes d'usage de REA, tirées du repo lui-même"},
+      {"seconde": 780, "resume": "L'agent avec REA, plus lent mais bien meilleur"}
+    ],
+    "premier_payoff_seconde": 76,
+    "jargon": 2,
+    "repetitions": 1,
+    "test_du_tweet": "REA, le repo viral, fait étudier une appli à ton agent pour en refaire les fonctions. Nate l'a testé (clone de Loom) mais l'idée n'est pas neuve : montrer un exemple précis à l'agent donne de bien meilleurs résultats. Cinq étapes, des limites, un agent plus lent mais meilleur."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine ; en vignette à gauche presque tout le temps", "decor": "bureau, étagères, néon AIS, micro sur bras"},
+    "parts": {"face": 8, "ecran": 42, "motion": 50, "broll": 0},
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["split-screen", "plan-a-l-ecran", "curseur-surligne"],
+    "charte": "Captures et page explicative illustrée (fond blanc, bleu et vert, petits robots, boulangerie et gâteau) posées sur le fond bleu-vert, vignette à gauche, curseur jaune. La miniature, sombre façon GitHub avec étoile jaune, ne reprend pas cette page.",
+    "rythme": "contraste",
+    "notes": "Les schémas sont une page web illustrée, faite avec l'IA, que Nate fait défiler (la recette et le gâteau, les cinq étapes), pas du motion design monté. Les preuves passent par des comparaisons côte à côte « Original vs ours »."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 294, "type": "lead-magnet", "cible": "skill gratuit Scrollcraft (design de site)", "amene_par": "apres-valeur", "citation": "I've got this completely free website design skill that I'm giving away"},
+      {"seconde": 446, "type": "communaute-gratuite", "cible": "la doc REA dans sa communauté Skool gratuite", "amene_par": "pendant-demo", "citation": "I will link in my free school community for completely free"},
+      {"seconde": 768, "type": "communaute-gratuite", "cible": "tout le contenu dans la communauté Skool gratuite", "amene_par": "transition", "citation": "I will link all of this in my free school community"},
+      {"seconde": 891, "type": "like-commentaire", "cible": "liker la vidéo", "amene_par": "fin", "citation": "If it did, please give it a like."}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"lead-magnet": 1, "communaute-payante": 1, "communaute-gratuite": 1, "affiliation": 2, "reseaux": 3, "autre": 1},
+    "commentaire_epingle": {"texte": "Skill gratuit Scrollcraft et Glaido offert un mois", "type": "lead-magnet"},
+    "recap_final": true,
+    "derniere_phrase": "and I'll see you on the next one. Thanks, everyone.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["REA lit le vrai code avec des décompilateurs, d'où de meilleurs résultats", "d'accord, rien de neuf sauf la vitesse", "la franchise sur les limites saluée", "cloner des logiciels payants"],
+    "demandes": ["un vrai tutoriel pas à pas", "publier son enregistreur sur GitHub", "avec quoi il analyse une vidéo image par image", "comment pointer l'agent vers un site"],
+    "critiques": ["pas nouveau, déjà fait avec Ghidra", "les garde-fous d'Opus bloquent la session", "les entreprises ne le feront pas"],
+    "reprises": ["« reverse engineered the reverse engineering tool »", "« seen, inferred, unknown », jugé bon à reprendre", "« It's not new but the speed of doing so is new »"],
+    "signal_promesse": "tenue"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "1re phrase = le repo viral du titre ; 1er plan = un post X avec le README, pas la page GitHub de la miniature"},
+    "ap_boucle_curiosite": {"note": 1, "preuve": "0:24 « why I don't think this is anything really that new » : résolu dès 0:52, pas gardé"},
+    "ap_effort_montre": {"note": 1, "preuve": "0:35 jeux, logiciels, outils construits avec REA : dit, pas chiffré"},
+    "ap_setup_progress_payoff": {"note": 1, "preuve": "Le clone de Loom a un but, une démo et un résultat (3:14 à 4:10) ; le reste explique sans construire"},
+    "ap_contraste_rythme": {"note": 2, "preuve": "17 changements de plan à la 2e minute (comparaisons), 14 à la 6e, puis 1 et 2 sur les cinq étapes"},
+    "ap_montrer_sans_son": {"note": 1, "preuve": "On voit un repo partagé sur X ; la facilité promise par la miniature ne se lit pas sans le son"},
+    "ali_douleur_histoire": {"note": 0, "preuve": "Aucune douleur du spectateur dans l'intro"},
+    "ali_coeur_unique": {"note": 2, "preuve": "2:43 « If you give an agent a generic goal, it's going to give you a generic result », repris à 14:09"},
+    "alx_pont": {"note": 1, "preuve": "Titre repris, contexte, plan, effort ; mais une contre-prise sert d'accroche"},
+    "alx_pull_paint_point": {"note": 1, "preuve": "Complet sur les références (IA pas créative, Reels, cinq exemples de rapport) ; les autres points n'ont pas de pull"},
+    "alx_nom_idee": {"note": 2, "preuve": "« reverse engineering the output », « decompiling », et cinq étapes nommées à l'écran (Pick a feature... Rebuild and test)"},
+    "alx_phrase_finale": {"note": 1, "preuve": "2:43 « generic goal, generic result » ; 3:59 « We cloned the functionality. » ; pas pour chaque point"},
+    "alx_douleur_reve": {"note": 0, "preuve": "Le nom de l'outil porte le titre"},
+    "alx_cta_tot": {"note": 0, "preuve": "Scrollcraft arrive à 4:54, après 4 minutes, et parle de sites web, pas de REA"},
+    "ed_intro_courte": {"note": 1, "preuve": "Premier point à 0:52, après le fait, la contre-prise, le plan et l'effort"},
+    "ed_hook": {"note": 2, "preuve": "0:03 « Matthew Berman himself said software is done », puis 0:24 « I don't think this is anything really that new »"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "Complet sur les références (1:00 à 3:14) ; les cinq étapes vont droit aux consignes"},
+    "ed_tension_relancee": {"note": 0, "preuve": "Les parties s'enchaînent par des annonces (« let me just break down... ») ; aucune question du spectateur"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "Le défi de Jordan Watkins (1:53) et le clone de Loom : des anecdotes, pas une histoire"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "« not anything new » redit à 0:24, 0:44, 5:20 et 14:03"},
+    "ed_niveau_simple": {"note": 2, "preuve": "5:51 « real quick, real simply » puis la recette et le gâteau pour la décompilation ; 2:59 « Look at the app, that's your PRD »"},
+    "tous_video_suivante": {"note": 0, "preuve": "« I'll see you on the next one », sans vidéo précise"}
+  },
+  "a_retenir": {
+    "titre_miniature": "« I Tested the Viral <Outil>. What You Need to Know. » : test et effet de mode. La miniature promet la facilité (« It's so easy ») et montre la preuve sociale du repo (200k stars, #1 Repository Of The Day).",
+    "intro_structure": "Le fait viral, puis la contre-prise (« pas nouveau ») en 25 secondes, l'effort dit, puis des preuves faites avant le repo. Le cœur : montrer un exemple précis à l'agent.",
+    "habillage": "Une page explicative illustrée (recette et gâteau, cinq étapes) défile à l'écran à la place du motion design ; les preuves sont des comparaisons « Original vs ours ».",
+    "idee_pour_nous": "Sur un outil viral, prendre un contre-pied argumenté (« ce n'est pas nouveau, voici l'idée de fond ») et le prouver avec nos réalisations d'avant.",
+    "objectif": "vues"
+  }
+}

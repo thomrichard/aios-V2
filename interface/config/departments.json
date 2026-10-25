@@ -6,6 +6,36 @@
       "label": "Operations",
       "color": "#00bcd4",
       "icon": "coin"
+    },
+    {
+      "key": "contenu",
+      "label": "Contenu",
+      "color": "#e040fb",
+      "icon": "people"
+    },
+    {
+      "key": "communaute",
+      "label": "Communaute",
+      "color": "#fdd835",
+      "icon": "build"
+    },
+    {
+      "key": "consulting",
+      "label": "Consulting",
+      "color": "#43a047",
+      "icon": "data"
+    },
+    {
+      "key": "produits",
+      "label": "Produits",
+      "color": "#f44336",
+      "icon": "pulse"
+    },
+    {
+      "key": "perso",
+      "label": "Perso",
+      "color": "#ec407a",
+      "icon": "book"
     }
   ],
   "layers": [
@@ -47,6 +77,58 @@
     {
       "prefix": "routers/operations.md",
       "dept": "operations"
+    },
+    {
+      "prefix": "domaines/contenu/",
+      "dept": "contenu"
+    },
+    {
+      "prefix": "routers/contenu.md",
+      "dept": "contenu"
+    },
+    {
+      "prefix": "domaines/communaute/",
+      "dept": "communaute"
+    },
+    {
+      "prefix": "routers/communaute.md",
+      "dept": "communaute"
+    },
+    {
+      "prefix": "domaines/consulting/",
+      "dept": "consulting"
+    },
+    {
+      "prefix": "routers/consulting.md",
+      "dept": "consulting"
+    },
+    {
+      "prefix": "domaines/produits/",
+      "dept": "produits"
+    },
+    {
+      "prefix": "routers/produits.md",
+      "dept": "produits"
+    },
+    {
+      "prefix": "domaines/perso/",
+      "dept": "perso"
+    },
+    {
+      "prefix": "routers/perso.md",
+      "dept": "perso"
+    },
+    {
+      "prefix": "projets/references-youtube.md",
+      "dept": "contenu"
+    },
+    {
+      "prefix": "projets/socle-aios-membres.md",
+      "dept": "produits"
+    },
+    {
+      "prefix": "projets/video-brevo.md",
+      "dept": "contenu"
     },
     {
       "prefix": "processus/installation.md",

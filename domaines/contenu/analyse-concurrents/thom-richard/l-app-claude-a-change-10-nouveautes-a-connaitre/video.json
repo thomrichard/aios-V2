@@ -1,0 +1,192 @@
+{
+ "id": "Aeh7q8RA61U",
+ "url": "https://www.youtube.com/watch?v=Aeh7q8RA61U",
+ "chaine": "thom-richard",
+ "titre": "L'app Claude a changé : 10 nouveautés à connaître",
+ "titre_ytdlp": "L'app Claude a changé : 10 nouveautés à connaître",
+ "publie": "2026-10-06T05:15:04Z",
+ "duree_s": 777,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "0MDyCn6wFfWbzt4UHcenbeEkA2E",
+  "id": "Aeh7q8RA61U",
+  "snippet": {
+   "publishedAt": "2026-10-06T05:15:04Z",
+   "channelId": "UCXd_huFLtKC7Ln0mH9pJKzw",
+   "title": "L'app Claude a changé : 10 nouveautés à connaître",
+   "description": "🤝 REJOINS LE CLUB SMART — la communauté pour maîtriser l'IA :\nhttps://www.skool.com/club-smart/about\n\nL'app Claude a changé presque en silence. J'ai testé ses 10 nouveautés sur mon vrai travail : elle crée maintenant des présentations, des documents et des maquettes, et elle travaille même quand ton ordinateur est fermé.\n\n\n🎁 LE GUIDE DES 10 CAS (gratuit) :\nhttps://www.thomrichard.com/ressources/guide-10-nouveautes-claude/\n→ Pour chaque nouveauté : où la trouver, le prompt exact à copier et comment la refaire chez toi.\n\n✅ Ce que tu vas découvrir :\n• Les nouveaux formats de sortie : Slides, Docs, Design et artefacts partagés\n• Chat et Cowork réunis, et les routines qui tournent dans le cloud\n• Claude Code transformé en atelier : terminal, navigateur, fichiers, et une session que tu reprends sur ton téléphone\n\nCe mois-ci, tout le monde a parlé des nouveaux modèles. Pendant ce temps, l'application Claude a beaucoup changé. Dans ce tutoriel en français, je te montre ses 10 nouveautés, testées sur mon travail de créateur de contenu : le bilan de ma chaîne YouTube transformé en présentation, un script retravaillé phrase par phrase, une app mobile maquettée en une demande, une page de vote partagée avec ma communauté. Puis on voit Claude travailler pour toi, avec des routines qui tournent même quand ton ordinateur est éteint. Et enfin Claude Code, qui devient un véritable atelier : terminal, navigateur intégré, fichiers, et la nouveauté qui a changé ma façon de travailler. Je te dis à chaque fois ce qui est en beta ou réservé aux plans payants.\n\n⏱️ CHAPITRES\n0:00 Le bilan de ma chaîne… en présentation\n1:21 Créer depuis le chat\n1:44 01 · Slides\n2:53 02 · Docs\n3:28 03 · Design\n4:26 04 · Artefacts\n5:39 05 · Chat + Cowork réunis\n6:09 06 · Routines dans le cloud\n8:12 07 · Le terminal intégré\n8:31 08 · Le navigateur intégré\n9:20 09 · Les fichiers\n10:46 10 · Continuer dans le cloud (et sur ton téléphone)\n11:31 Ce qu'il faut retenir\n\n🔗 LES OUTILS QUE J'UTILISE DANS MA PRODUCTION\n• Claude — l'outil dont on parle dans toute la vidéo : https://claude.ai\n• Glaido — dicte au lieu de taper et gagne des heures ; 1 mois d'essai gratuit avec ce lien : https://clubsmart.s.gy/glaido\n• Tella* — enregistrer l'écran et la caméra : https://clubsmart.s.gy/tella\n\n* Les liens marqués d'un astérisque sont affiliés : je peux recevoir une commission si tu passes par eux. Merci de soutenir la chaîne !\n\n🎓 LA MASTERCLASS POUR ALLER PLUS LOIN : Comment j'ai automatisé ma vie avec un AIOS\nhttps://www.youtube.com/watch?v=FwnIB-RbC-E\n\n🛠️ Tu veux installer ton propre système IA, accompagné ? Rejoins-moi à l'atelier AIOS : deux heures en petit groupe, sur ton premier projet concret.\nhttps://www.thomrichard.com/atelier-aios\n\n📺 POUR ALLER PLUS LOIN\n→ Claude : tutoriel complet pour passer de débutant à utilisateur avancé — https://www.youtube.com/watch?v=qefrfyxQOEY\n→ 3 minutes pour comprendre : Claude Design — https://www.youtube.com/watch?v=42eQ2M05mnQ\n→ L'AIOS, c'est quoi ? Explication en 3 minutes — https://www.youtube.com/watch?v=mgGQFJRYIpo\n\nLaquelle de ces 10 nouveautés vas-tu essayer en premier ? Dis-le-moi en commentaire.\n\n👉 Et si tu veux avancer accompagné, retrouve-moi dans le Club SMART :\nhttps://www.skool.com/club-smart/about\n\n#ClaudeAI #AppClaude #IA #ClaudeCode #ProductivitéIA #ClubSMART",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/Aeh7q8RA61U/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/Aeh7q8RA61U/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/Aeh7q8RA61U/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/Aeh7q8RA61U/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/Aeh7q8RA61U/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    },
+    "qhd": {
+     "url": "https://i.ytimg.com/vi/Aeh7q8RA61U/qhddefault.jpg",
+     "width": 2560,
+     "height": 1440
+    }
+   },
+   "channelTitle": "ThomRichard ",
+   "tags": [
+    "club smart",
+    "automatisation",
+    "claude code",
+    "claude skills",
+    "claude ai",
+    "claude cowork",
+    "automatisation ia",
+    "app claude",
+    "app claude code",
+    "claude ai tutorial",
+    "claude",
+    "ia"
+   ],
+   "categoryId": "28",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "fr",
+   "localized": {
+    "title": "L'app Claude a changé : 10 nouveautés à connaître",
+    "description": "🤝 REJOINS LE CLUB SMART — la communauté pour maîtriser l'IA :\nhttps://www.skool.com/club-smart/about\n\nL'app Claude a changé presque en silence. J'ai testé ses 10 nouveautés sur mon vrai travail : elle crée maintenant des présentations, des documents et des maquettes, et elle travaille même quand ton ordinateur est fermé.\n\n\n🎁 LE GUIDE DES 10 CAS (gratuit) :\nhttps://www.thomrichard.com/ressources/guide-10-nouveautes-claude/\n→ Pour chaque nouveauté : où la trouver, le prompt exact à copier et comment la refaire chez toi.\n\n✅ Ce que tu vas découvrir :\n• Les nouveaux formats de sortie : Slides, Docs, Design et artefacts partagés\n• Chat et Cowork réunis, et les routines qui tournent dans le cloud\n• Claude Code transformé en atelier : terminal, navigateur, fichiers, et une session que tu reprends sur ton téléphone\n\nCe mois-ci, tout le monde a parlé des nouveaux modèles. Pendant ce temps, l'application Claude a beaucoup changé. Dans ce tutoriel en français, je te montre ses 10 nouveautés, testées sur mon travail de créateur de contenu : le bilan de ma chaîne YouTube transformé en présentation, un script retravaillé phrase par phrase, une app mobile maquettée en une demande, une page de vote partagée avec ma communauté. Puis on voit Claude travailler pour toi, avec des routines qui tournent même quand ton ordinateur est éteint. Et enfin Claude Code, qui devient un véritable atelier : terminal, navigateur intégré, fichiers, et la nouveauté qui a changé ma façon de travailler. Je te dis à chaque fois ce qui est en beta ou réservé aux plans payants.\n\n⏱️ CHAPITRES\n0:00 Le bilan de ma chaîne… en présentation\n1:21 Créer depuis le chat\n1:44 01 · Slides\n2:53 02 · Docs\n3:28 03 · Design\n4:26 04 · Artefacts\n5:39 05 · Chat + Cowork réunis\n6:09 06 · Routines dans le cloud\n8:12 07 · Le terminal intégré\n8:31 08 · Le navigateur intégré\n9:20 09 · Les fichiers\n10:46 10 · Continuer dans le cloud (et sur ton téléphone)\n11:31 Ce qu'il faut retenir\n\n🔗 LES OUTILS QUE J'UTILISE DANS MA PRODUCTION\n• Claude — l'outil dont on parle dans toute la vidéo : https://claude.ai\n• Glaido — dicte au lieu de taper et gagne des heures ; 1 mois d'essai gratuit avec ce lien : https://clubsmart.s.gy/glaido\n• Tella* — enregistrer l'écran et la caméra : https://clubsmart.s.gy/tella\n\n* Les liens marqués d'un astérisque sont affiliés : je peux recevoir une commission si tu passes par eux. Merci de soutenir la chaîne !\n\n🎓 LA MASTERCLASS POUR ALLER PLUS LOIN : Comment j'ai automatisé ma vie avec un AIOS\nhttps://www.youtube.com/watch?v=FwnIB-RbC-E\n\n🛠️ Tu veux installer ton propre système IA, accompagné ? Rejoins-moi à l'atelier AIOS : deux heures en petit groupe, sur ton premier projet concret.\nhttps://www.thomrichard.com/atelier-aios\n\n📺 POUR ALLER PLUS LOIN\n→ Claude : tutoriel complet pour passer de débutant à utilisateur avancé — https://www.youtube.com/watch?v=qefrfyxQOEY\n→ 3 minutes pour comprendre : Claude Design — https://www.youtube.com/watch?v=42eQ2M05mnQ\n→ L'AIOS, c'est quoi ? Explication en 3 minutes — https://www.youtube.com/watch?v=mgGQFJRYIpo\n\nLaquelle de ces 10 nouveautés vas-tu essayer en premier ? Dis-le-moi en commentaire.\n\n👉 Et si tu veux avancer accompagné, retrouve-moi dans le Club SMART :\nhttps://www.skool.com/club-smart/about\n\n#ClaudeAI #AppClaude #IA #ClaudeCode #ProductivitéIA #ClubSMART"
+   },
+   "defaultAudioLanguage": "fr"
+  },
+  "contentDetails": {
+   "duration": "PT12M57S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": true,
+   "contentRating": {},
+   "projection": "rectangular",
+   "hasCustomThumbnail": true
+  },
+  "statistics": {
+   "viewCount": "23204",
+   "likeCount": "285",
+   "dislikeCount": "4",
+   "favoriteCount": "0",
+   "commentCount": "22"
+  }
+ },
+ "ytdlp": {
+  "id": "Aeh7q8RA61U",
+  "title": "L'app Claude a changé : 10 nouveautés à connaître",
+  "description": "🤝 REJOINS LE CLUB SMART — la communauté pour maîtriser l'IA :\nhttps://www.skool.com/club-smart/about\n\nL'app Claude a changé presque en silence. J'ai testé ses 10 nouveautés sur mon vrai travail : elle crée maintenant des présentations, des documents et des maquettes, et elle travaille même quand ton ordinateur est fermé.\n\n\n🎁 LE GUIDE DES 10 CAS (gratuit) :\nhttps://www.thomrichard.com/ressources/guide-10-nouveautes-claude/\n→ Pour chaque nouveauté : où la trouver, le prompt exact à copier et comment la refaire chez toi.\n\n✅ Ce que tu vas découvrir :\n• Les nouveaux formats de sortie : Slides, Docs, Design et artefacts partagés\n• Chat et Cowork réunis, et les routines qui tournent dans le cloud\n• Claude Code transformé en atelier : terminal, navigateur, fichiers, et une session que tu reprends sur ton téléphone\n\nCe mois-ci, tout le monde a parlé des nouveaux modèles. Pendant ce temps, l'application Claude a beaucoup changé. Dans ce tutoriel en français, je te montre ses 10 nouveautés, testées sur mon travail de créateur de contenu : le bilan de ma chaîne YouTube transformé en présentation, un script retravaillé phrase par phrase, une app mobile maquettée en une demande, une page de vote partagée avec ma communauté. Puis on voit Claude travailler pour toi, avec des routines qui tournent même quand ton ordinateur est éteint. Et enfin Claude Code, qui devient un véritable atelier : terminal, navigateur intégré, fichiers, et la nouveauté qui a changé ma façon de travailler. Je te dis à chaque fois ce qui est en beta ou réservé aux plans payants.\n\n⏱️ CHAPITRES\n0:00 Le bilan de ma chaîne… en présentation\n1:21 Créer depuis le chat\n1:44 01 · Slides\n2:53 02 · Docs\n3:28 03 · Design\n4:26 04 · Artefacts\n5:39 05 · Chat + Cowork réunis\n6:09 06 · Routines dans le cloud\n8:12 07 · Le terminal intégré\n8:31 08 · Le navigateur intégré\n9:20 09 · Les fichiers\n10:46 10 · Continuer dans le cloud (et sur ton téléphone)\n11:31 Ce qu'il faut retenir\n\n🔗 LES OUTILS QUE J'UTILISE DANS MA PRODUCTION\n• Claude — l'outil dont on parle dans toute la vidéo : https://claude.ai\n• Glaido — dicte au lieu de taper et gagne des heures ; 1 mois d'essai gratuit avec ce lien : https://clubsmart.s.gy/glaido\n• Tella* — enregistrer l'écran et la caméra : https://clubsmart.s.gy/tella\n\n* Les liens marqués d'un astérisque sont affiliés : je peux recevoir une commission si tu passes par eux. Merci de soutenir la chaîne !\n\n🎓 LA MASTERCLASS POUR ALLER PLUS LOIN : Comment j'ai automatisé ma vie avec un AIOS\nhttps://www.youtube.com/watch?v=FwnIB-RbC-E\n\n🛠️ Tu veux installer ton propre système IA, accompagné ? Rejoins-moi à l'atelier AIOS : deux heures en petit groupe, sur ton premier projet concret.\nhttps://www.thomrichard.com/atelier-aios\n\n📺 POUR ALLER PLUS LOIN\n→ Claude : tutoriel complet pour passer de débutant à utilisateur avancé — https://www.youtube.com/watch?v=qefrfyxQOEY\n→ 3 minutes pour comprendre : Claude Design — https://www.youtube.com/watch?v=42eQ2M05mnQ\n→ L'AIOS, c'est quoi ? Explication en 3 minutes — https://www.youtube.com/watch?v=mgGQFJRYIpo\n\nLaquelle de ces 10 nouveautés vas-tu essayer en premier ? Dis-le-moi en commentaire.\n\n👉 Et si tu veux avancer accompagné, retrouve-moi dans le Club SMART :\nhttps://www.skool.com/club-smart/about\n\n#ClaudeAI #AppClaude #IA #ClaudeCode #ProductivitéIA #ClubSMART",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "My channel review… as a slide deck",
+    "end_time": 81
+   },
+   {
+    "start_time": 81,
+    "title": "Creating from the chat",
+    "end_time": 104
+   },
+   {
+    "start_time": 104,
+    "title": "01 · Slides",
+    "end_time": 173
+   },
+   {
+    "start_time": 173,
+    "title": "02 · Docs",
+    "end_time": 208
+   },
+   {
+    "start_time": 208,
+    "title": "03 · Design",
+    "end_time": 266
+   },
+   {
+    "start_time": 266,
+    "title": "04 · Artifacts",
+    "end_time": 339
+   },
+   {
+    "start_time": 339,
+    "title": "05 · Chat + Cowork merged",
+    "end_time": 369
+   },
+   {
+    "start_time": 369,
+    "title": "06 · Cloud routines",
+    "end_time": 492
+   },
+   {
+    "start_time": 492,
+    "title": "07 · The built-in terminal",
+    "end_time": 511
+   },
+   {
+    "start_time": 511,
+    "title": "08 · The built-in browser",
+    "end_time": 560
+   },
+   {
+    "start_time": 560,
+    "title": "09 · Files",
+    "end_time": 646
+   },
+   {
+    "start_time": 646,
+    "title": "10 · Continue in the cloud (and on your phone)",
+    "end_time": 691
+   },
+   {
+    "start_time": 691,
+    "title": "Key takeaways",
+    "end_time": 777
+   }
+  ],
+  "tags": [
+   "club smart",
+   "automatisation",
+   "claude code",
+   "claude skills",
+   "claude ai",
+   "claude cowork",
+   "automatisation ia",
+   "app claude",
+   "app claude code",
+   "claude ai tutorial",
+   "claude",
+   "ia"
+  ],
+  "categories": [
+   "Science & Technology"
+  ],
+  "heatmap": null,
+  "upload_date": "20261006",
+  "duration": 777,
+  "channel": "Thom RICHARD - AI and Automation",
+  "channel_id": "UCXd_huFLtKC7Ln0mH9pJKzw",
+  "channel_follower_count": 5620,
+  "thumbnail": "https://i.ytimg.com/vi_lc/Aeh7q8RA61U/maxresdefault_en-US.jpg",
+  "view_count": 23205,
+  "like_count": 285,
+  "comment_count": 8
+ }
+}

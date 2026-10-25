@@ -1,0 +1,110 @@
+[00:00] If you spent the last 6 months building an agentic OS with memory, a brand context layer, and team permissions set up on top of Claude, Anthropic have just built their own.
+[00:09] It's definitely still early.
+[00:10] It's Claude code only, so not co-work, and it's still rough, but it tells you exactly the direction that Anthropic are heading.
+[00:17] Now, projects have been in Claude chat for ages.
+[00:20] So, inside chat and co-work, we've always had projects, right?
+[00:22] You attach some context.
+[00:23] Let's say here in my copywriting project, I've got YouTube hook writing guides, LinkedIn copywriting guides, all of that for every piece of copy to write.
+[00:30] So, all your brand docs, your offers, reference files, etc.
+[00:33] We've got a set of instructions which applies to all projects inside of this project or all sessions inside this project.
+[00:38] And then we've got a dedicated memory for specifically sessions inside of this project.
+[00:42] So, every chat you start inside here picks up the knowledge of all the context that you've given it across here.
+[00:47] Now, with the new projects, none of that goes away.
+[00:49] You still have instructions, you still have a dedicated memory, and you still have context.
+[00:53] But, what it does is build on top of that.
+[00:54] So, the problem with this setup of projects was that you were inside a folder and you had to set up individual chats.
+[01:00] So, none of these were able to actually talk to each other.
+[01:02] So, no sessions linked to each other, and the moment a task got really large, you had the same context problem where you actually just run out of context and have to start a new session.
+[01:09] And that is exactly the bit that Anthropic have focused on changing.
+[01:12] So, Anthropic released a video explaining the new version of projects.
+[01:15] So, a project is now one long-running conversation, and that conversation doesn't do the work, it actually delegates it.
+[01:22] So, you can think of this as your main agent orchestrator.
+[01:24] So, you give it a goal, and it spins out and opens multiple sub-threads, much like when you had a main agent and it was spinning out to sub-agents to actually coordinate different tasks.
+[01:32] So, each thread is a full Claude code cloud session on its own branch, and those threads can split into their own sub-agents and workflows underneath those threads.
+[01:41] So, you've got a main agent delegator, and underneath you've got sub-agents that can split out into workflows and further sub-agents, and they each have their own set of contexts in those threads.
+[01:50] And Anthropic specifically says that threads do the work, whereas Claude now directs the work.
+[01:55] So, in plain English, you used to open up Claude Code, give it a task inside a project, sit there, open up another window if you wanted a second thing done, but now you just brief the top-level conversation like
+[02:05] you'd brief a team lead, and it's going to decide whether that's a new thread or something that's existing in an already open thread that it should actually pick up there instead.
+[02:12] And because threads actually now run in the cloud, they keep going after you close your laptop, but that does have some limitations.
+[02:18] And this is exactly the kind of thing we've been hand-building when we're building out an Agent OS with orchestrator skills and sub-agent routing, but they've actually now just put it straight into the product, which is brilliant.
+[02:26] Now, this is only going to be available for Pro and Max plans, and they're still rolling this out, so I don't even have access myself yet to test this.
+[02:32] But, I'll tell you why I'm so excited about this.
+[02:34] Well, firstly, it's all about context and actually better context management.
+[02:38] So, a thread doing work on its own is only useful if it actually knows your business.
+[02:42] Again, why we built the Agent OS in the first place.
+[02:44] And this is the second benefit they built into it.
+[02:46] So, every thread is going to get automatically populated with the project repos, the files you've uploaded, those project instructions, and a memory.md file that carries the decisions across those conversations.
+[02:57] So, previously, those conversations would be completely isolated.
+[03:00] If you asked it to look across the conversations, it would be able to find stuff, but only if you forced it to actually go and look through those different sessions there.
+[03:06] But, now we have one conversation with threads that are interlinked, much like if you chat to an orchestrator on Grok Bot, and it actually communicates with the other agents inside Grok Bot.
+[03:15] And of course, it goes without saying that the thread is going to load your Claude.md or skills and your plugins from the repos inside that project.
+[03:21] So, you get your brand voice, the visual assets, the skills you've already written, all of that's going to come with it.
+[03:25] And then there's a library tab that's going to collect both the files that you added and the files that Claude produced.
+[03:30] So, now we even get to see the outputs, so they don't get lost between 15 different sessions or different threads through that ongoing conversation.
+[03:37] Think of it as delegating a conversation to a team, and all of that knowledge is saved inside that project now.
+[03:43] But, there's also two more things that are actually so much better in this new version to projects.
+[03:47] I'm so excited to get access, and they will be rolling that out to chat and co-work, as well as Claude code, which is where those projects are stored right now.
+[03:55] So, let's talk about those two things, but first, if you're still watching, hit subscribe below and help me reach the 100k subscriber milestone.
+[04:01] So, back to it, the first of the two most exciting things is back to that context management.
+[04:06] So, every one of you who's used Claude seriously has guaranteed hit the wall where it just starts forgetting things.
+[04:11] And the reason is the context window or overloading the context window.
+[04:15] So, once your project knowledge got near that limit before, you were basically down in that chat history.
+[04:19] You had to prune files, split the project, open up a new conversation, and Claude had built-in workarounds to open up new conversations from that.
+[04:26] But, projects will now have a retrieval layer behind them.
+[04:29] So, we effectively have rag or retrieval augmented generation for specific content in projects.
+[04:34] And this is a massive improvement.
+[04:36] So, instead of loading every file into every conversation, Claude is going to get a project knowledge search tool, and it's going to pull only in the bits it needs for the question you've asked.
+[04:44] And the best part about this is you don't have to do any setup.
+[04:47] It's going to be working on your behalf in the background.
+[04:49] And as the project shrinks back under your context limit, it's then going to go back into loading just everything in context again, the Claude.md, etc., etc.
+[04:56] Now, who knows how good this is going to be because nobody's actually been able to test this yet, but it's exactly the rag pipeline that you've seen lots of creators, including myself, building into their Agent OS memory systems.
+[05:06] Albeit, ours recalls reranked results, it sites sources, and uses top-tier semantic recall.
+[05:11] But still, it's clear that they are heading in that direction, and they've done this MVP version of rag in the background where you don't have any setup cost.
+[05:18] And there's a completely separate rag guide for projects, which I'll link below if you want to read more about that.
+[05:22] Now, onto the one that I think matters most for this update.
+[05:25] And I want to be careful with it because it's the least finished so far.
+[05:28] But, this is great news because they are finally thinking about how to handle context with multiple users working across teams.
+[05:33] So, imagine me and you working on the same team.
+[05:36] We're tackling the same project, but you are tackling certain aspects of the project, and I need to understand your decisions.
+[05:41] So, how do we communicate that when we're both working in these isolated environments on our Claude code instance?
+[05:45] And this is where this collaboration and sharing comes in.
+[05:48] So, for users on the team and enterprise plans, we'll be able to set permission levels for projects.
+[05:52] So, we can allow certain people, certain members to just have view access to the data and decisions we've made, others to have edit access.
+[05:59] And there are a bunch of different sharing options.
+[06:00] We can actually share by emails.
+[06:02] We can make it organization-wide.
+[06:04] And all of this gives us complete control.
+[06:05] So, if I have read-only access, I can understand the decisions you've made in the project, but not actually take any actions on that context itself.
+[06:12] But, put all of this together, right?
+[06:13] Those two, you've got shared context with permissions and a project that's going to run its own workflow in the background.
+[06:19] But, also what they're effectively building out here is a team operating system or the infrastructure, or the MVP version of a team operating system.
+[06:25] So, one place where your team's context is going to live and one place where the work is going to get delegated from, which is that project overview, that single conversation.
+[06:32] And the permissions of the business owner to decide, or the project owner to decide who can see what and who can edit what.
+[06:38] And that's exactly what a team OS was designed to do in the first place, which is an upgrade on that Agenda OS.
+[06:42] And it's the thing that 67% of our community told us they wanted inside their Agenda OS.
+[06:47] So, I guess the question to finish on then is is an Agenda OS completely finished?
+[06:50] And it's quite clear that Anthropic have looked at why people built Agenda operating systems, where you put one goal in, a whole workflow happens underneath, uh they inject the right context at the right time, and they've actually decided
+[07:01] to start building that into the product.
+[07:02] And that's a really good thing.
+[07:04] It's what we always thought would happen.
+[07:05] But, does it entirely remove the need for an Agenda OS today?
+[07:08] I don't personally think so, and it's for two reasons.
+[07:11] Firstly, it's not quite there yet.
+[07:13] It's Claude code only, so not chat and co-work yet.
+[07:16] That will be coming soon.
+[07:17] It's cloud only, so it can't see your local files or your local tools.
+[07:20] The main conversation still can't touch any connectors like MCPs, those are done independently in threads.
+[07:25] So, simple tasks, for example, would they be their own thread and take a lot of tokens, perhaps?
+[07:29] And then the second reason is just the depth of detail into this version.
+[07:32] Like, what Anthropic have shipped is quite clearly the direction they're heading, but it's still the broad MVP.
+[07:37] It's the framework for doing this well.
+[07:39] But, the value in an operating system, right, is what's layered on top of the frame.
+[07:42] So, it's a memory system that knows what's personal data and what's shared data.
+[07:46] It's skills that encode how your business actually does the work.
+[07:49] It's brand context that's been refined over months, not a folder of PDFs.
+[07:52] It's team permissions that map to how your company actually runs, not a predefined structure on how they think a project should run.
+[07:58] And let's be clear, the Agent OS or those kind of frameworks will be replaced one day by Anthropic and by other providers.
+[08:05] And as soon as that happens, we will be the first to move across to it because the whole point was never setting up a complex folder structure.
+[08:10] It was the outcome that we're looking to achieve.
+[08:12] But until that day, everything I've shown you today, the memory layer, the skill system, the team operating system is inside the community in the link in description if you want to try it out.
+[08:19] I'd love to hear your thoughts on this upgrade and the direction that Anthropic are heading and see you in the next video.

@@ -1,0 +1,166 @@
+{
+  "video_id": "nRXHWckVxoM",
+  "chaine": "nate-herk",
+  "titre": "This ONE Claude Skill Helps You Think Clearer Than 99% of People",
+  "codeur": "agent nate-herk",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "cas",
+    "format_secondaire": "tuto",
+    "sujet": "Roast Room : un skill Claude Code gratuit où sept conseillers IA inspirés de Bezos, Hormozi, Buffett et d'autres débattent d'une décision et rendent un verdict noté",
+    "outils": ["Claude Code", "sous-agents", "skill Roast Room", "interface web de visualisation du débat"],
+    "niveau": "intermediaire",
+    "objectif_probable": "communaute"
+  },
+  "titre": {
+    "attente_au_clic": "Un skill Claude où des conseillers façon Hormozi, Bezos et Buffett passent tes décisions au grill pour t'aider à mieux réfléchir.",
+    "schema": "This ONE <Outil> Skill Helps You <Bénéfice> Than 99% of People",
+    "promesse": "Penser plus clairement que presque tout le monde grâce à un seul skill",
+    "audace": "audacieux",
+    "registre": "mixte",
+    "briques": ["resultat", "audace"],
+    "marqueurs": ["majuscules", "chiffre", "comparaison-sociale"],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "rire, tous les quatre",
+    "regard": "element",
+    "texte": "/roast-room",
+    "texte_mots": 1,
+    "repete_titre": "non",
+    "elements": ["logo Claude", "texte « /roast-room »", "Nate devant un ordinateur portable", "trois visages célèbres (Hormozi, Bezos, Buffett) penchés sur l'écran"],
+    "nb_elements": 4,
+    "fond": "pièce sombre aux lumières chaudes",
+    "couleurs": ["noir", "blanc", "orange Claude", "bleu clair", "rouge"],
+    "curiosity_gap": "nouveaute",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "So right here you can see that I've got Jeff Bezos, Paul Graham, Alex Herozi, Gary Vee [...] in what I call the roast room.",
+    "premiere_phrase_reprend_titre": "non",
+    "premier_plan": "Interface Roast Room sur fond sombre : sept avatars des conseillers en rang, Nate en vignette à gauche",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": ["demo-d-abord", "pont"],
+    "preuve": {
+      "type": "resultat-montre",
+      "seconde": 0,
+      "description": "Les sept conseillers rédigent leur position sur une vraie décision (conférence à Austin, juin 2027, quatre options)"
+    },
+    "annonce_plan": {"presente": false, "nb_points": null, "a_l_ecran": false},
+    "boucle_vers_la_fin": {
+      "presente": true,
+      "citation": "I'm going to break down how I built this and what actually lives inside of each",
+      "seconde_resolution": 465,
+      "tenue": "oui"
+    },
+    "seconde_premier_point": 42,
+    "attente_tenue": "oui",
+    "attente_note": "Le conseil de la miniature est à l'écran dès 0:00 et le skill promis gratuit à 0:28. Le coût en tokens n'est jamais dit : le commentaire le plus aimé (59 likes) le reproche."
+  },
+  "structure": {
+    "modele": "mixte",
+    "segments": [
+      {"debut": 0, "fin": 42, "titre": "Le Roast Room en direct", "role": "intro", "pull": false, "paint": true, "point": false, "nom": true, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 42, "fin": 139, "titre": "Meet the Roast Room : chaque conseiller porte une question", "role": "demo", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 139, "fin": 217, "titre": "The Advisors Debate", "role": "demo", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 217, "fin": 284, "titre": "The Final Verdict", "role": "demo", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 284, "fin": 340, "titre": "Get the Free Skill (Skool gratuit)", "role": "cta", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": false},
+      {"debut": 340, "fin": 372, "titre": "SOP gratuit premier client", "role": "cta", "pull": true, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 372, "fin": 402, "titre": "Les sessions gardées et rejouées", "role": "demo", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": true},
+      {"debut": 402, "fin": 465, "titre": "How the Council Works", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 465, "fin": 652, "titre": "Advisor Brains and Setup", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 652, "fin": 782, "titre": "Asking Better Questions", "role": "point", "pull": true, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 782, "fin": 871, "titre": "Outsourcing Thinking, Keeping Judgment", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 871, "fin": 885, "titre": "Next Steps", "role": "fin", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 28, "type": "annonce-suite", "citation": "the skill that I'm going to show you guys and give away today"},
+      {"seconde": 85, "type": "boucle-ouverte", "citation": "I'm going to break down how I built this and what actually lives inside of each"},
+      {"seconde": 162, "type": "rupture", "citation": "the chair treats as a warning. So round two is asking Buffett and Martell to argue for option C"},
+      {"seconde": 284, "type": "annonce-suite", "citation": "first, I want to show you how you can get it for completely free"},
+      {"seconde": 402, "type": "annonce-suite", "citation": "let's talk a little bit more about how this actually works"},
+      {"seconde": 695, "type": "question-spectateur", "citation": "So, what do you actually want to give it when you're asking a question?"}
+    ],
+    "histoires": [
+      {"seconde": 54, "acte": "anecdote", "resume": "Il faisait déjà des « roasts » à la main ; il en a fait un conseil plus formel"},
+      {"seconde": 236, "acte": "anecdote", "resume": "Son usage : lancer quelques questions, revenir lire les verdicts, sans les suivre à l'aveugle"},
+      {"seconde": 440, "acte": "perso-passe", "resume": "Il tournait en agent teams ; mêmes réponses, plus cher : retour aux sous-agents"}
+    ],
+    "payoffs": [
+      {"seconde": 106, "resume": "Bezos, Graham et Hormozi votent B avec une note et leurs raisons"},
+      {"seconde": 133, "resume": "Les sept votent B, moyenne 7,1 sur 10 ; le président les fait débattre de l'option C"},
+      {"seconde": 254, "resume": "Le verdict final avec conditions, téléchargé en PDF"},
+      {"seconde": 501, "resume": "Le cerveau d'Hormozi : 124 sources, plus de 1,3 million de mots"},
+      {"seconde": 695, "resume": "Ce qu'il faut mettre dans la question : décision, options, chiffres, limites, succès, penchant"}
+    ],
+    "premier_payoff_seconde": 106,
+    "jargon": 2,
+    "repetitions": 1,
+    "test_du_tweet": "Roast Room : un skill Claude Code gratuit où sept conseillers IA nourris des écrits de Bezos, Hormozi, Buffett et d'autres débattent de ta décision en trois tours et rendent un verdict noté en PDF. Les sous-agents, leurs cerveaux, et comment bien poser la question."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine ; en vignette à gauche presque tout le temps, plein cadre à la fin", "decor": "bureau, étagères, néon AIS, micro sur bras"},
+    "parts": {"face": 12, "ecran": 70, "motion": 18, "broll": 0},
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["split-screen", "curseur-surligne"],
+    "charte": "Interface et schémas sur fond bleu nuit, texte blanc et bleu, accents verts (GO WITH CONDITIONS) ; captures sur le fond bleu-vert avec vignette. La miniature, pièce sombre aux lumières chaudes et orange Claude, n'en garde que le sombre.",
+    "rythme": "contraste",
+    "notes": "Une interface de débat faite pour la vidéo rend visible un process invisible : avatars qui parlent, votes notés, verdict, PDF. Les schémas (How the Roast Room works, Inside one advisor) sont des pages maison sur fond sombre."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 28, "type": "communaute-gratuite", "cible": "le skill Roast Room offert", "amene_par": "intro", "citation": "the skill that I'm going to show you guys and give away today"},
+      {"seconde": 284, "type": "communaute-gratuite", "cible": "le repo Roast Room dans la classroom de la communauté Skool gratuite", "amene_par": "apres-valeur", "citation": "You're going to go to my free school community."},
+      {"seconde": 340, "type": "lead-magnet", "cible": "SOP gratuit pour décrocher un premier client en automatisation", "amene_par": "transition", "citation": "I've got this completely free SOP for you about getting your first aation client"},
+      {"seconde": 871, "type": "communaute-gratuite", "cible": "le skill dans la communauté Skool gratuite", "amene_par": "fin", "citation": "you can find that for completely free inside of my free school community"},
+      {"seconde": 876, "type": "like-commentaire", "cible": "liker la vidéo", "amene_par": "fin", "citation": "please give it a like."}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"communaute-gratuite": 1, "lead-magnet": 1, "communaute-payante": 1, "affiliation": 2, "reseaux": 3},
+    "commentaire_epingle": {"texte": "SOP gratuit pour un premier client et Glaido offert un mois", "type": "lead-magnet"},
+    "recap_final": false,
+    "derniere_phrase": "And I will see you all in the next one. Thanks everyone.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["le coût en tokens (« How to burn your Claude subscribtion », 59 likes)", "des conseillers vraiment en désaccord, ou un seul modèle déguisé", "l'envie de construire son propre conseil", "qui ajouter au conseil (Nate, Peter Thiel)"],
+    "demandes": ["l'usage nécessaire, possible avec l'offre à 20 $", "l'utiliser avec Gemini ou Codex", "une vidéo sur la création des sous-agents de personnalité", "les agents utilisent-ils le même modèle"],
+    "critiques": ["il dévore l'abonnement Claude", "décider avec du « slop »", "un panel sans femmes, des « tech bros »"],
+    "reprises": ["« Roast Room » répété en commentaire", "« simple skill » contesté par un fan"],
+    "signal_promesse": "mixte"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "1er plan = les visages du conseil, comme la miniature ; la 1re phrase reprend la miniature, pas le titre (penser clair)"},
+    "ap_boucle_curiosite": {"note": 2, "preuve": "1:25 « what actually lives inside of each of these specialized agents brains », ouvert à 7:45"},
+    "ap_effort_montre": {"note": 1, "preuve": "1:25 « a lot of data » dans chaque cerveau ; les chiffres (124 sources, 1,3 million de mots) n'arrivent qu'à 8:21"},
+    "ap_setup_progress_payoff": {"note": 2, "preuve": "Décision posée (0:15, quatre options), trois tours de débat, verdict et PDF (4:14) ; même schéma pour les cerveaux"},
+    "ap_contraste_rythme": {"note": 2, "preuve": "13 et 16 changements de plan aux minutes 10 et 11 (fichiers des cerveaux), 0 à la 3e et à la 12e"},
+    "ap_montrer_sans_son": {"note": 2, "preuve": "Sept visages connus en rang qui écrivent leur position, puis des notes et un verdict : la promesse se lit sans le son"},
+    "ali_douleur_histoire": {"note": 0, "preuve": "Aucune douleur du spectateur dans l'intro"},
+    "ali_coeur_unique": {"note": 2, "preuve": "13:12 « outsource your thinking but not the understanding »"},
+    "alx_pont": {"note": 1, "preuve": "Preuve et annonce sans accroche, mais le titre n'est pas repris et il n'y a pas de contexte"},
+    "alx_pull_paint_point": {"note": 1, "preuve": "Complet sur la question à poser (12:25 « AI likes to agree with you ») ; ailleurs démo et explication"},
+    "alx_nom_idee": {"note": 2, "preuve": "roast room, the chair, hot sheet, brains ; titres à l'écran (How the Roast Room works, Inside one advisor)"},
+    "alx_phrase_finale": {"note": 1, "preuve": "13:12 « outsource your thinking but not the understanding » ; à l'écran « Independent first answers = real disagreement »"},
+    "alx_douleur_reve": {"note": 1, "preuve": "« Think Clearer Than 99% » parle du désir, mais « Claude Skill » porte le titre"},
+    "alx_cta_tot": {"note": 2, "preuve": "0:28 le skill du sujet promis gratuit ; le lien Skool est donné à 4:44"},
+    "ed_intro_courte": {"note": 1, "preuve": "Démo et promesse du skill gratuit en 30 secondes, mais sans hook"},
+    "ed_hook": {"note": 1, "preuve": "0:00 Bezos, Graham, Hormozi, Buffett « sitting here in what I call the roast room » : une image qui étonne, pas un des trois types purs"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "Problème puis consignes sur la question à poser (10:52) ; la démo n'a pas de problème posé"},
+    "ed_tension_relancee": {"note": 1, "preuve": "11:35 « what do you actually want to give it when you're asking a question? » ; sinon des annonces"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "7:20 le passage des agent teams aux sous-agents : une anecdote, pas une histoire"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "« l'interface est purement visuelle » redit à 0:42, 6:35 et 10:41"},
+    "ed_niveau_simple": {"note": 1, "preuve": "Sous-agents et président expliqués par le schéma (6:46) ; agent teams, repo et AIOS supposés connus"},
+    "tous_video_suivante": {"note": 0, "preuve": "« I will see you all in the next one », sans vidéo précise"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Le titre promet un bénéfice mental (« Think Clearer Than 99% ») ; la miniature montre l'objet : /roast-room et Hormozi, Bezos, Buffett qui rient autour de Nate. Titre d'origine « I Built the Ultimate AI Board of Advisors (free claude skill) », changé le lendemain ; miniature changée 4 fois le premier jour.",
+    "intro_structure": "Démo d'abord : le conseil débat d'une vraie décision dès 0:00, le skill gratuit est promis à 0:28, les cerveaux promis à 1:25 et ouverts à 7:45.",
+    "habillage": "Une interface faite pour la vidéo rend visible un process invisible (avatars, votes notés, verdict, PDF) ; schémas maison sur fond sombre.",
+    "idee_pour_nous": "Offrir un skill dans le Club, l'annoncer dans les 30 premières secondes, et le montrer en action sur une vraie décision de Thomas avant de l'expliquer.",
+    "objectif": "club"
+  }
+}

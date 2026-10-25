@@ -1,0 +1,11 @@
+{
+  "surtitre": "Comprendre",
+  "titre": "Ce que coûte un message",
+  "lignes": [
+    {"label": "Tout ce qu'il relit", "sous": "ou moins, si le cache est chaud", "valeur": "×0,1", "ton": "pin"},
+    {"label": "Ce qu'il lit de neuf", "sous": "le prix normal", "valeur": "×1", "ton": "neutre"},
+    {"label": "Ce qu'il écrit", "sous": "5 fois le prix de lecture", "valeur": "×5", "ton": "chaud"}
+  ],
+  "total": "= ta consommation, message après message",
+  "conclusion": "Plus la discussion est longue, plus chaque message pèse."
+}

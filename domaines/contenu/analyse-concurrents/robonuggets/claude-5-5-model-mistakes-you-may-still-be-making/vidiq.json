@@ -1,0 +1,140 @@
+{
+ "recupere_le": "2026-10-25",
+ "breakout": null,
+ "vph": 56.75,
+ "stats_jour": [
+  {
+   "timestamp": "2026-10-12T05:32:10.989Z",
+   "views": 282,
+   "likes": 13,
+   "comments": 2,
+   "vph": 402.8571428571429
+  },
+  {
+   "timestamp": "2026-10-13T00:33:33.158Z",
+   "views": 32272,
+   "likes": 604,
+   "comments": 25,
+   "vph": 883.448275862069
+  },
+  {
+   "timestamp": "2026-10-14T00:46:09.540Z",
+   "views": 49319,
+   "likes": 880,
+   "comments": 31,
+   "vph": 584.2622950819673
+  },
+  {
+   "timestamp": "2026-10-15T00:01:28.219Z",
+   "views": 60137,
+   "likes": 1030,
+   "comments": 39,
+   "vph": 283
+  },
+  {
+   "timestamp": "2026-10-16T00:33:00.960Z",
+   "views": 66672,
+   "likes": 1109,
+   "comments": 44,
+   "vph": 179
+  },
+  {
+   "timestamp": "2026-10-17T00:32:55.021Z",
+   "views": 70547,
+   "likes": 1174,
+   "comments": 46,
+   "vph": 67
+  },
+  {
+   "timestamp": "2026-10-18T00:54:14.677Z",
+   "views": 73198,
+   "likes": 1218,
+   "comments": 48,
+   "vph": 93
+  },
+  {
+   "timestamp": "2026-10-19T00:35:50.357Z",
+   "views": 76939,
+   "likes": 1298,
+   "comments": 50,
+   "vph": 139.672131147541
+  },
+  {
+   "timestamp": "2026-10-20T00:32:04.907Z",
+   "views": 79579,
+   "likes": 1349,
+   "comments": 50,
+   "vph": 85.42372881355932
+  },
+  {
+   "timestamp": "2026-10-21T00:32:23.879Z",
+   "views": 81221,
+   "likes": 1391,
+   "comments": 50,
+   "vph": 50.90909090909091
+  },
+  {
+   "timestamp": "2026-10-22T00:32:16.340Z",
+   "views": 82561,
+   "likes": 1415,
+   "comments": 50,
+   "vph": 34.285714285714285
+  },
+  {
+   "timestamp": "2026-10-23T00:18:43.920Z",
+   "views": 83601,
+   "likes": 1435,
+   "comments": 50,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-24T00:03:19.002Z",
+   "views": 84769,
+   "likes": 1453,
+   "comments": 50,
+   "vph": 76.36363636363636
+  },
+  {
+   "timestamp": "2026-10-25T00:28:02.991Z",
+   "views": 85976,
+   "likes": 1468,
+   "comments": 50,
+   "vph": 44
+  }
+ ],
+ "changements": [
+  {
+   "createdAt": "2026-10-12T05:32:10Z",
+   "title": "23 Claude Mistakes that Devour Your Usage Limits (tips for 5.5 Models)",
+   "thumbnails": null
+  },
+  {
+   "createdAt": "2026-10-12T06:52:56Z",
+   "title": null,
+   "thumbnails": [
+    {
+     "id": "35a17d26-83bc-4d2f-bfd9-dfd60f8eff3c",
+     "ytUrl": "https://i.ytimg.com/vi/gvESqM6s0kM/maxresdefault.jpg",
+     "snapshotUrl": "https://vidiq-video-thumbnails.s3.us-east-1.amazonaws.com/gvESqM6s0kM/35a17d26-83bc-4d2f-bfd9-dfd60f8eff3c.jpg"
+    }
+   ]
+  },
+  {
+   "createdAt": "2026-10-12T21:34:18Z",
+   "title": "Claude 5.5 Model Mistakes you may still be making (23 Tips and Fixes)",
+   "thumbnails": null
+  },
+  {
+   "createdAt": "2026-10-12T23:53:48Z",
+   "title": null,
+   "thumbnails": [
+    {
+     "id": "0abc08f9-39ac-4531-af31-b1ed87218a48",
+     "ytUrl": "https://i.ytimg.com/vi/gvESqM6s0kM/maxresdefault.jpg",
+     "snapshotUrl": "https://vidiq-video-thumbnails.s3.us-east-1.amazonaws.com/gvESqM6s0kM/0abc08f9-39ac-4531-af31-b1ed87218a48.jpg"
+    }
+   ]
+  }
+ ],
+ "ab_tests": []
+}

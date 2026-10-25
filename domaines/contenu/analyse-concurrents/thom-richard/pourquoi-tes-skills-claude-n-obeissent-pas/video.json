@@ -1,0 +1,178 @@
+{
+ "id": "iUWyBK4qAxM",
+ "url": "https://www.youtube.com/watch?v=iUWyBK4qAxM",
+ "chaine": "thom-richard",
+ "titre": "Pourquoi tes skills Claude n’obéissent pas toujours (les 7 règles d’Anthropic)",
+ "titre_ytdlp": "Pourquoi tes skills Claude n’obéissent pas toujours (les 7 règles d’Anthropic)",
+ "publie": "2026-10-13T10:47:27Z",
+ "duree_s": 1202,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "Oi33MfZUgXX9SnAIgI-26OUnvSc",
+  "id": "iUWyBK4qAxM",
+  "snippet": {
+   "publishedAt": "2026-10-13T10:47:27Z",
+   "channelId": "UCXd_huFLtKC7Ln0mH9pJKzw",
+   "title": "Pourquoi tes skills Claude n’obéissent pas toujours (les 7 règles d’Anthropic)",
+   "description": "🤝 REJOINS LE CLUB SMART — la communauté pour maîtriser l'IA :\nhttps://www.skool.com/club-smart/about\n\nTa skill Claude saute une étape, ignore une consigne ou ne se lance même pas ? Les modèles ont changé, tes skills, non. Anthropic l'écrit dans son guide : une skill écrite pour un ancien modèle peut faire baisser la qualité de tes résultats. Voici les 7 règles pour la remettre à niveau.\n\n🎁 L'AUDIT DE TES SKILLS (gratuit) :\nhttps://www.thomrichard.com/audit-skills\n→ La skill qui audite toutes tes skills à ta place, et un prompt par règle pour les réparer. Marche aussi avec ChatGPT, Codex et les autres outils qui lisent les skills.\n\n\n\n✅ Ce que tu vas découvrir :\n• Les 7 règles d'Anthropic, chacune avec un exemple concret : compte rendu, devis, post LinkedIn\n• Pourquoi une skill qui marchait hier se met à désobéir avec le nouveau modèle\n• L'audit de mes propres skills, en direct, et comment le lancer sur les tiennes\n\nTes skills Claude, tu les as écrites pour les modèles d'avant. Ceux d'aujourd'hui sont beaucoup plus capables, et une consigne trop rigide peut les brider. Dans ce tutoriel en français, je reprends les sept règles du guide officiel d'Anthropic, dans l'ordre de la vie d'une skill : qu'elle soit trouvée, ce que tu lui dis, qu'elle soit lue en entier, qu'elle vérifie son travail et qu'elle marche chez les autres. Pour chaque règle : le symptôme, la cause et la correction. Puis je lance l'audit sur mes propres skills, et je te donne la grille pour t'y retrouver à chaque nouveau modèle.\n\n⏱️ CHAPITRES\n0:00 Ta skill n'obéit pas toujours\n0:47 Règle 1 · La description\n2:22 Règle 2 · Libre ou à la lettre\n4:38 Règle 3 · L'objectif, pas le mode d'emploi\n6:33 Règle 4 · Qu'il la lise en entier\n9:39 Tes fichiers aussi : l'exemple de mon AIOS\n10:58 Règles 5 et 6 · La boucle et la liste à cocher\n13:11 L'audit de mes skills, en direct\n15:48 Règle 7 · Ce qu'il faut installer\n17:58 Le modèle change : la grille à garder\n\n📚 SOURCES\n• Le guide d'Anthropic pour Claude Fable 5 (copie archivée du 3 octobre 2026, la page d'origine a été remplacée) : https://web.archive.org/web/20261003080118/https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5\n• Skill authoring best practices (Anthropic) : https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices\n• Equipping agents for the real world with Agent Skills (Anthropic) : https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills\n• Le standard ouvert des skills : https://agentskills.io\n\n🔗 LES OUTILS QUE J'UTILISE DANS MA PRODUCTION\n• Claude — l'outil dont on parle dans toute la vidéo : https://claude.ai\n• Glaido — dicte au lieu de taper et gagne des heures ; 1 mois d’essai gratuit avec ce lien : https://clubsmart.s.gy/glaido\n• Tella* — enregistrer l'écran et la caméra : https://clubsmart.s.gy/tella\n\n* Les liens marqués d'un astérisque sont affiliés : je peux recevoir une commission si tu passes par eux. Merci de soutenir la chaîne !\n\nLaquelle de tes skills vas-tu auditer en premier ? Dis-le-moi en commentaire.\n\n👉 Et si tu veux avancer accompagné, retrouve-moi dans le Club SMART :\nhttps://www.skool.com/club-smart/about\n\n#ClaudeAI #SkillsClaude #IA #ClaudeCode #ProductivitéIA #ClubSMART",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/iUWyBK4qAxM/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/iUWyBK4qAxM/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/iUWyBK4qAxM/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/iUWyBK4qAxM/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/iUWyBK4qAxM/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    }
+   },
+   "channelTitle": "ThomRichard ",
+   "tags": [
+    "club smart",
+    "automatisation",
+    "claude",
+    "audit claude",
+    "tuto claude",
+    "skills claude",
+    "skills",
+    "skills audit",
+    "claude skills",
+    "ai",
+    "claude tuto",
+    "apprendre skills claude",
+    "apprendre claude",
+    "apprendre l'ia",
+    "opus 5.5"
+   ],
+   "categoryId": "28",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "fr",
+   "localized": {
+    "title": "Pourquoi tes skills Claude n’obéissent pas toujours (les 7 règles d’Anthropic)",
+    "description": "🤝 REJOINS LE CLUB SMART — la communauté pour maîtriser l'IA :\nhttps://www.skool.com/club-smart/about\n\nTa skill Claude saute une étape, ignore une consigne ou ne se lance même pas ? Les modèles ont changé, tes skills, non. Anthropic l'écrit dans son guide : une skill écrite pour un ancien modèle peut faire baisser la qualité de tes résultats. Voici les 7 règles pour la remettre à niveau.\n\n🎁 L'AUDIT DE TES SKILLS (gratuit) :\nhttps://www.thomrichard.com/audit-skills\n→ La skill qui audite toutes tes skills à ta place, et un prompt par règle pour les réparer. Marche aussi avec ChatGPT, Codex et les autres outils qui lisent les skills.\n\n\n\n✅ Ce que tu vas découvrir :\n• Les 7 règles d'Anthropic, chacune avec un exemple concret : compte rendu, devis, post LinkedIn\n• Pourquoi une skill qui marchait hier se met à désobéir avec le nouveau modèle\n• L'audit de mes propres skills, en direct, et comment le lancer sur les tiennes\n\nTes skills Claude, tu les as écrites pour les modèles d'avant. Ceux d'aujourd'hui sont beaucoup plus capables, et une consigne trop rigide peut les brider. Dans ce tutoriel en français, je reprends les sept règles du guide officiel d'Anthropic, dans l'ordre de la vie d'une skill : qu'elle soit trouvée, ce que tu lui dis, qu'elle soit lue en entier, qu'elle vérifie son travail et qu'elle marche chez les autres. Pour chaque règle : le symptôme, la cause et la correction. Puis je lance l'audit sur mes propres skills, et je te donne la grille pour t'y retrouver à chaque nouveau modèle.\n\n⏱️ CHAPITRES\n0:00 Ta skill n'obéit pas toujours\n0:47 Règle 1 · La description\n2:22 Règle 2 · Libre ou à la lettre\n4:38 Règle 3 · L'objectif, pas le mode d'emploi\n6:33 Règle 4 · Qu'il la lise en entier\n9:39 Tes fichiers aussi : l'exemple de mon AIOS\n10:58 Règles 5 et 6 · La boucle et la liste à cocher\n13:11 L'audit de mes skills, en direct\n15:48 Règle 7 · Ce qu'il faut installer\n17:58 Le modèle change : la grille à garder\n\n📚 SOURCES\n• Le guide d'Anthropic pour Claude Fable 5 (copie archivée du 3 octobre 2026, la page d'origine a été remplacée) : https://web.archive.org/web/20261003080118/https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5\n• Skill authoring best practices (Anthropic) : https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices\n• Equipping agents for the real world with Agent Skills (Anthropic) : https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills\n• Le standard ouvert des skills : https://agentskills.io\n\n🔗 LES OUTILS QUE J'UTILISE DANS MA PRODUCTION\n• Claude — l'outil dont on parle dans toute la vidéo : https://claude.ai\n• Glaido — dicte au lieu de taper et gagne des heures ; 1 mois d’essai gratuit avec ce lien : https://clubsmart.s.gy/glaido\n• Tella* — enregistrer l'écran et la caméra : https://clubsmart.s.gy/tella\n\n* Les liens marqués d'un astérisque sont affiliés : je peux recevoir une commission si tu passes par eux. Merci de soutenir la chaîne !\n\nLaquelle de tes skills vas-tu auditer en premier ? Dis-le-moi en commentaire.\n\n👉 Et si tu veux avancer accompagné, retrouve-moi dans le Club SMART :\nhttps://www.skool.com/club-smart/about\n\n#ClaudeAI #SkillsClaude #IA #ClaudeCode #ProductivitéIA #ClubSMART"
+   },
+   "defaultAudioLanguage": "fr"
+  },
+  "contentDetails": {
+   "duration": "PT20M2S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": true,
+   "contentRating": {},
+   "projection": "rectangular",
+   "hasCustomThumbnail": false
+  },
+  "statistics": {
+   "viewCount": "597",
+   "likeCount": "15",
+   "dislikeCount": "0",
+   "favoriteCount": "0",
+   "commentCount": "4"
+  }
+ },
+ "ytdlp": {
+  "id": "iUWyBK4qAxM",
+  "title": "Pourquoi tes skills Claude n’obéissent pas toujours (les 7 règles d’Anthropic)",
+  "description": "🤝 REJOINS LE CLUB SMART — la communauté pour maîtriser l'IA :\nhttps://www.skool.com/club-smart/about\n\nTa skill Claude saute une étape, ignore une consigne ou ne se lance même pas ? Les modèles ont changé, tes skills, non. Anthropic l'écrit dans son guide : une skill écrite pour un ancien modèle peut faire baisser la qualité de tes résultats. Voici les 7 règles pour la remettre à niveau.\n\n🎁 L'AUDIT DE TES SKILLS (gratuit) :\nhttps://www.thomrichard.com/audit-skills\n→ La skill qui audite toutes tes skills à ta place, et un prompt par règle pour les réparer. Marche aussi avec ChatGPT, Codex et les autres outils qui lisent les skills.\n\n\n\n✅ Ce que tu vas découvrir :\n• Les 7 règles d'Anthropic, chacune avec un exemple concret : compte rendu, devis, post LinkedIn\n• Pourquoi une skill qui marchait hier se met à désobéir avec le nouveau modèle\n• L'audit de mes propres skills, en direct, et comment le lancer sur les tiennes\n\nTes skills Claude, tu les as écrites pour les modèles d'avant. Ceux d'aujourd'hui sont beaucoup plus capables, et une consigne trop rigide peut les brider. Dans ce tutoriel en français, je reprends les sept règles du guide officiel d'Anthropic, dans l'ordre de la vie d'une skill : qu'elle soit trouvée, ce que tu lui dis, qu'elle soit lue en entier, qu'elle vérifie son travail et qu'elle marche chez les autres. Pour chaque règle : le symptôme, la cause et la correction. Puis je lance l'audit sur mes propres skills, et je te donne la grille pour t'y retrouver à chaque nouveau modèle.\n\n⏱️ CHAPITRES\n0:00 Ta skill n'obéit pas toujours\n0:47 Règle 1 · La description\n2:22 Règle 2 · Libre ou à la lettre\n4:38 Règle 3 · L'objectif, pas le mode d'emploi\n6:33 Règle 4 · Qu'il la lise en entier\n9:39 Tes fichiers aussi : l'exemple de mon AIOS\n10:58 Règles 5 et 6 · La boucle et la liste à cocher\n13:11 L'audit de mes skills, en direct\n15:48 Règle 7 · Ce qu'il faut installer\n17:58 Le modèle change : la grille à garder\n\n📚 SOURCES\n• Le guide d'Anthropic pour Claude Fable 5 (copie archivée du 3 octobre 2026, la page d'origine a été remplacée) : https://web.archive.org/web/20261003080118/https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5\n• Skill authoring best practices (Anthropic) : https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices\n• Equipping agents for the real world with Agent Skills (Anthropic) : https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills\n• Le standard ouvert des skills : https://agentskills.io\n\n🔗 LES OUTILS QUE J'UTILISE DANS MA PRODUCTION\n• Claude — l'outil dont on parle dans toute la vidéo : https://claude.ai\n• Glaido — dicte au lieu de taper et gagne des heures ; 1 mois d’essai gratuit avec ce lien : https://clubsmart.s.gy/glaido\n• Tella* — enregistrer l'écran et la caméra : https://clubsmart.s.gy/tella\n\n* Les liens marqués d'un astérisque sont affiliés : je peux recevoir une commission si tu passes par eux. Merci de soutenir la chaîne !\n\nLaquelle de tes skills vas-tu auditer en premier ? Dis-le-moi en commentaire.\n\n👉 Et si tu veux avancer accompagné, retrouve-moi dans le Club SMART :\nhttps://www.skool.com/club-smart/about\n\n#ClaudeAI #SkillsClaude #IA #ClaudeCode #ProductivitéIA #ClubSMART",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "Ta skill n'obéit pas toujours",
+    "end_time": 47
+   },
+   {
+    "start_time": 47,
+    "title": "Règle 1 · La description",
+    "end_time": 142
+   },
+   {
+    "start_time": 142,
+    "title": "Règle 2 · Libre ou à la lettre",
+    "end_time": 278
+   },
+   {
+    "start_time": 278,
+    "title": "Règle 3 · L'objectif, pas le mode d'emploi",
+    "end_time": 393
+   },
+   {
+    "start_time": 393,
+    "title": "Règle 4 · Qu'il la lise en entier",
+    "end_time": 579
+   },
+   {
+    "start_time": 579,
+    "title": "Tes fichiers aussi : l'exemple de mon AIOS",
+    "end_time": 658
+   },
+   {
+    "start_time": 658,
+    "title": "Règles 5 et 6 · La boucle et la liste à cocher",
+    "end_time": 791
+   },
+   {
+    "start_time": 791,
+    "title": "L'audit de mes skills, en direct",
+    "end_time": 948
+   },
+   {
+    "start_time": 948,
+    "title": "Règle 7 · Ce qu'il faut installer",
+    "end_time": 1078
+   },
+   {
+    "start_time": 1078,
+    "title": "Le modèle change : la grille à garder",
+    "end_time": 1201
+   }
+  ],
+  "tags": [
+   "club smart",
+   "automatisation",
+   "claude",
+   "audit claude",
+   "tuto claude",
+   "skills claude",
+   "skills",
+   "skills audit",
+   "claude skills",
+   "ai",
+   "claude tuto",
+   "apprendre skills claude",
+   "apprendre claude",
+   "apprendre l'ia",
+   "opus 5.5"
+  ],
+  "categories": [
+   "Science & Technology"
+  ],
+  "heatmap": null,
+  "upload_date": "20261013",
+  "duration": 1201,
+  "channel": "Thom RICHARD - AI and Automation",
+  "channel_id": "UCXd_huFLtKC7Ln0mH9pJKzw",
+  "channel_follower_count": 5620,
+  "thumbnail": "https://i.ytimg.com/vi/iUWyBK4qAxM/maxresdefault.jpg",
+  "view_count": 597,
+  "like_count": 15,
+  "comment_count": 2
+ }
+}

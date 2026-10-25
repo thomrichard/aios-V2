@@ -1,0 +1,178 @@
+{
+ "id": "98KlVeJ9ylg",
+ "url": "https://www.youtube.com/watch?v=98KlVeJ9ylg",
+ "chaine": "jad-mh",
+ "titre": "The New Viral Motion Graphics (Turned it into a skill)",
+ "titre_ytdlp": "The New Viral Motion Graphics (Turned it into a skill)",
+ "publie": "2026-10-11T20:24:53Z",
+ "duree_s": 885,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "K_eIVSOSKiPRkIn0PlsNrBfG1KI",
+  "id": "98KlVeJ9ylg",
+  "snippet": {
+   "publishedAt": "2026-10-11T20:24:53Z",
+   "channelId": "UCkbjWQ7kLFNRY_RiJbqVWRg",
+   "title": "The New Viral Motion Graphics (Turned it into a skill)",
+   "description": "🔗 Try Higgsfield Katana: https://higgsfield.ai/s/katana-inside-claude-yt-jadm-h-xUOkwW\n📚 Get my Katana Director skill: https://drive.google.com/drive/folders/1Eq0p8Sywk-005GIJssnrvwbAFx0SDQbx?usp=sharing\n\nClaude directed it, Higgsfield Katana built it. I gave Katana a lyric video that already works, and it rebuilt it shot for shot with me in it: same cuts, same timing, same words, every hit on the beat. Katana is a new AI video editing tool that runs inside Claude through the Higgsfield MCP. Pick an edit you love (an aura farming edit, an AI anime edit, an outfit check, a product ad) and it does a viral edit remake with your face, your product or your clips.\n\nThis video is sponsored by Higgsfield. Their offer is at the link at the top.\n\n⚔️ How Katana in Claude works\nStart on the Katana page (https://higgsfield.ai/katana) or type /katana in Claude. There are two ways in: pick a community preset and add up to 5 photos, or upload your own edit and add up to 40 images of your characters, products or clothes. Claude reads the reference and plans every cut. If a shot already works, it keeps it. The text, flashes, colors and camera moves are code, and Higgsfield only generates the shots that are missing, like me as a swordsman. Then it edits everything together and checks the result.\n\n💳 What it cost (from my Higgsfield transactions)\n• Parts made with code or your own footage: 0 credits\n• Ember & Bun burger ad (15 s): 8 AI shots, 420 credits\n• Noir edit (11 s): 2 AI clips, 232 credits\n• AUTOMATE motion graphic: all code, 0 credits\nI ran everything on Opus 5.5 on the Claude Max plan. If you're on a smaller Claude plan, start with a short video.\n\n🧠 The Katana Director skill\nMost people connect Katana and then get stuck: which edit do I pick, what should the video say, what's the hook? The skill turns Claude into a creative director for Katana. It asks about your business, picks the edit, writes the story and hands it to Katana.\n1. Join my Skool community: https://www.skool.com/nextphase-5790\n2. Find the post for this video and download the zip (don't unzip it).\n3. In Claude: Settings → Customize → Skills → Upload a skill.\n4. Start a new chat, type /katana-director and paste the starter prompt from the Google Doc.\n\n🎯 Who is Katana for?\n• Businesses that have never edited a video, like a food shop, a clinic or a gym. A few photos, a logo or one phone clip is enough.\n• Brands: one campaign with three different hooks, so you can test which message works.\n• Personal brands: put yourself in an aura farming edit and show up in every video.\n• Marketers: organic content or paid ads. Run V1 to V4 and keep the winner.\n\n🎨 Katana works in any Claude account with the Higgsfield connector. It also pairs with Claude Motion (beta on Claude Team and Enterprise) if you want designed title cards on top, but it doesn't need it to run.\n\n⏱️ Chapters\n0:00 Can Higgsfield Katana remake a viral edit shot for shot?\n0:38 Why is this video sponsored by Higgsfield?\n2:13 What is Higgsfield Katana?\n2:42 How does Katana in Claude run on the Higgsfield MCP?\n3:08 Why do Katana edits look like real motion graphics?\n3:53 How many Higgsfield credits does a Katana edit cost?\n4:05 What does the Katana Director skill do?\n4:49 Can Katana make an ad for a burger restaurant?\n5:26 What can you remake from the Katana community presets?\n6:23 What are the 3 ways to make a Katana motion graphics edit?\n7:28 Can Katana turn your own clips into a motion graphics edit?\n8:13 How do you install the Katana Director skill in Claude?\n9:05 How do you plan a clothing brand ad with Katana in Claude?\n10:26 How do you make an aura farming edit with /katana?\n13:18 Who is Higgsfield Katana for?\n13:55 Is Higgsfield Katana worth trying?\n\n⚔️ Find an edit you love, open Katana in Claude, and make it yours: [PASTE YOUR HIGGSFIELD TRACKING LINK]\n\n💬 Which edit should I remake next? Tell me in the comments. And if you make something with Katana, post it in the Skool. I want to see it.\n\n🔔 Subscribe for a new Claude skill every week. See you in the next one.\n\n#HiggsfieldKatana #HiggsfieldMCP #AIVideoEditing",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/98KlVeJ9ylg/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/98KlVeJ9ylg/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/98KlVeJ9ylg/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/98KlVeJ9ylg/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/98KlVeJ9ylg/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    },
+    "qhd": {
+     "url": "https://i.ytimg.com/vi/98KlVeJ9ylg/qhddefault.jpg",
+     "width": 2560,
+     "height": 1440
+    }
+   },
+   "channelTitle": "Jad M.H  | AI Automation",
+   "categoryId": "22",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "en",
+   "localized": {
+    "title": "The New Viral Motion Graphics (Turned it into a skill)",
+    "description": "🔗 Try Higgsfield Katana: https://higgsfield.ai/s/katana-inside-claude-yt-jadm-h-xUOkwW\n📚 Get my Katana Director skill: https://drive.google.com/drive/folders/1Eq0p8Sywk-005GIJssnrvwbAFx0SDQbx?usp=sharing\n\nClaude directed it, Higgsfield Katana built it. I gave Katana a lyric video that already works, and it rebuilt it shot for shot with me in it: same cuts, same timing, same words, every hit on the beat. Katana is a new AI video editing tool that runs inside Claude through the Higgsfield MCP. Pick an edit you love (an aura farming edit, an AI anime edit, an outfit check, a product ad) and it does a viral edit remake with your face, your product or your clips.\n\nThis video is sponsored by Higgsfield. Their offer is at the link at the top.\n\n⚔️ How Katana in Claude works\nStart on the Katana page (https://higgsfield.ai/katana) or type /katana in Claude. There are two ways in: pick a community preset and add up to 5 photos, or upload your own edit and add up to 40 images of your characters, products or clothes. Claude reads the reference and plans every cut. If a shot already works, it keeps it. The text, flashes, colors and camera moves are code, and Higgsfield only generates the shots that are missing, like me as a swordsman. Then it edits everything together and checks the result.\n\n💳 What it cost (from my Higgsfield transactions)\n• Parts made with code or your own footage: 0 credits\n• Ember & Bun burger ad (15 s): 8 AI shots, 420 credits\n• Noir edit (11 s): 2 AI clips, 232 credits\n• AUTOMATE motion graphic: all code, 0 credits\nI ran everything on Opus 5.5 on the Claude Max plan. If you're on a smaller Claude plan, start with a short video.\n\n🧠 The Katana Director skill\nMost people connect Katana and then get stuck: which edit do I pick, what should the video say, what's the hook? The skill turns Claude into a creative director for Katana. It asks about your business, picks the edit, writes the story and hands it to Katana.\n1. Join my Skool community: https://www.skool.com/nextphase-5790\n2. Find the post for this video and download the zip (don't unzip it).\n3. In Claude: Settings → Customize → Skills → Upload a skill.\n4. Start a new chat, type /katana-director and paste the starter prompt from the Google Doc.\n\n🎯 Who is Katana for?\n• Businesses that have never edited a video, like a food shop, a clinic or a gym. A few photos, a logo or one phone clip is enough.\n• Brands: one campaign with three different hooks, so you can test which message works.\n• Personal brands: put yourself in an aura farming edit and show up in every video.\n• Marketers: organic content or paid ads. Run V1 to V4 and keep the winner.\n\n🎨 Katana works in any Claude account with the Higgsfield connector. It also pairs with Claude Motion (beta on Claude Team and Enterprise) if you want designed title cards on top, but it doesn't need it to run.\n\n⏱️ Chapters\n0:00 Can Higgsfield Katana remake a viral edit shot for shot?\n0:38 Why is this video sponsored by Higgsfield?\n2:13 What is Higgsfield Katana?\n2:42 How does Katana in Claude run on the Higgsfield MCP?\n3:08 Why do Katana edits look like real motion graphics?\n3:53 How many Higgsfield credits does a Katana edit cost?\n4:05 What does the Katana Director skill do?\n4:49 Can Katana make an ad for a burger restaurant?\n5:26 What can you remake from the Katana community presets?\n6:23 What are the 3 ways to make a Katana motion graphics edit?\n7:28 Can Katana turn your own clips into a motion graphics edit?\n8:13 How do you install the Katana Director skill in Claude?\n9:05 How do you plan a clothing brand ad with Katana in Claude?\n10:26 How do you make an aura farming edit with /katana?\n13:18 Who is Higgsfield Katana for?\n13:55 Is Higgsfield Katana worth trying?\n\n⚔️ Find an edit you love, open Katana in Claude, and make it yours: [PASTE YOUR HIGGSFIELD TRACKING LINK]\n\n💬 Which edit should I remake next? Tell me in the comments. And if you make something with Katana, post it in the Skool. I want to see it.\n\n🔔 Subscribe for a new Claude skill every week. See you in the next one.\n\n#HiggsfieldKatana #HiggsfieldMCP #AIVideoEditing"
+   },
+   "defaultAudioLanguage": "en"
+  },
+  "contentDetails": {
+   "duration": "PT14M45S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": false,
+   "contentRating": {},
+   "projection": "rectangular"
+  },
+  "statistics": {
+   "viewCount": "7770",
+   "likeCount": "175",
+   "favoriteCount": "0",
+   "commentCount": "22"
+  }
+ },
+ "ytdlp": {
+  "id": "98KlVeJ9ylg",
+  "title": "The New Viral Motion Graphics (Turned it into a skill)",
+  "description": "🔗 Try Higgsfield Katana: https://higgsfield.ai/s/katana-inside-claude-yt-jadm-h-xUOkwW\n📚 Get my Katana Director skill: https://drive.google.com/drive/folders/1Eq0p8Sywk-005GIJssnrvwbAFx0SDQbx?usp=sharing\n\nClaude directed it, Higgsfield Katana built it. I gave Katana a lyric video that already works, and it rebuilt it shot for shot with me in it: same cuts, same timing, same words, every hit on the beat. Katana is a new AI video editing tool that runs inside Claude through the Higgsfield MCP. Pick an edit you love (an aura farming edit, an AI anime edit, an outfit check, a product ad) and it does a viral edit remake with your face, your product or your clips.\n\nThis video is sponsored by Higgsfield. Their offer is at the link at the top.\n\n⚔️ How Katana in Claude works\nStart on the Katana page (https://higgsfield.ai/katana) or type /katana in Claude. There are two ways in: pick a community preset and add up to 5 photos, or upload your own edit and add up to 40 images of your characters, products or clothes. Claude reads the reference and plans every cut. If a shot already works, it keeps it. The text, flashes, colors and camera moves are code, and Higgsfield only generates the shots that are missing, like me as a swordsman. Then it edits everything together and checks the result.\n\n💳 What it cost (from my Higgsfield transactions)\n• Parts made with code or your own footage: 0 credits\n• Ember & Bun burger ad (15 s): 8 AI shots, 420 credits\n• Noir edit (11 s): 2 AI clips, 232 credits\n• AUTOMATE motion graphic: all code, 0 credits\nI ran everything on Opus 5.5 on the Claude Max plan. If you're on a smaller Claude plan, start with a short video.\n\n🧠 The Katana Director skill\nMost people connect Katana and then get stuck: which edit do I pick, what should the video say, what's the hook? The skill turns Claude into a creative director for Katana. It asks about your business, picks the edit, writes the story and hands it to Katana.\n1. Join my Skool community: https://www.skool.com/nextphase-5790\n2. Find the post for this video and download the zip (don't unzip it).\n3. In Claude: Settings → Customize → Skills → Upload a skill.\n4. Start a new chat, type /katana-director and paste the starter prompt from the Google Doc.\n\n🎯 Who is Katana for?\n• Businesses that have never edited a video, like a food shop, a clinic or a gym. A few photos, a logo or one phone clip is enough.\n• Brands: one campaign with three different hooks, so you can test which message works.\n• Personal brands: put yourself in an aura farming edit and show up in every video.\n• Marketers: organic content or paid ads. Run V1 to V4 and keep the winner.\n\n🎨 Katana works in any Claude account with the Higgsfield connector. It also pairs with Claude Motion (beta on Claude Team and Enterprise) if you want designed title cards on top, but it doesn't need it to run.\n\n⏱️ Chapters\n0:00 Can Higgsfield Katana remake a viral edit shot for shot?\n0:38 Why is this video sponsored by Higgsfield?\n2:13 What is Higgsfield Katana?\n2:42 How does Katana in Claude run on the Higgsfield MCP?\n3:08 Why do Katana edits look like real motion graphics?\n3:53 How many Higgsfield credits does a Katana edit cost?\n4:05 What does the Katana Director skill do?\n4:49 Can Katana make an ad for a burger restaurant?\n5:26 What can you remake from the Katana community presets?\n6:23 What are the 3 ways to make a Katana motion graphics edit?\n7:28 Can Katana turn your own clips into a motion graphics edit?\n8:13 How do you install the Katana Director skill in Claude?\n9:05 How do you plan a clothing brand ad with Katana in Claude?\n10:26 How do you make an aura farming edit with /katana?\n13:18 Who is Higgsfield Katana for?\n13:55 Is Higgsfield Katana worth trying?\n\n⚔️ Find an edit you love, open Katana in Claude, and make it yours: [PASTE YOUR HIGGSFIELD TRACKING LINK]\n\n💬 Which edit should I remake next? Tell me in the comments. And if you make something with Katana, post it in the Skool. I want to see it.\n\n🔔 Subscribe for a new Claude skill every week. See you in the next one.\n\n#HiggsfieldKatana #HiggsfieldMCP #AIVideoEditing",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "Can Higgsfield Katana remake a viral edit shot for shot?",
+    "end_time": 38
+   },
+   {
+    "start_time": 38,
+    "title": "Why is this video sponsored by Higgsfield?",
+    "end_time": 133
+   },
+   {
+    "start_time": 133,
+    "title": "What is Higgsfield Katana?",
+    "end_time": 162
+   },
+   {
+    "start_time": 162,
+    "title": "How does Katana in Claude run on the Higgsfield MCP?",
+    "end_time": 188
+   },
+   {
+    "start_time": 188,
+    "title": "Why do Katana edits look like real motion graphics?",
+    "end_time": 233
+   },
+   {
+    "start_time": 233,
+    "title": "How many Higgsfield credits does a Katana edit cost?",
+    "end_time": 245
+   },
+   {
+    "start_time": 245,
+    "title": "What does the Katana Director skill do?",
+    "end_time": 289
+   },
+   {
+    "start_time": 289,
+    "title": "Can Katana make an ad for a burger restaurant?",
+    "end_time": 326
+   },
+   {
+    "start_time": 326,
+    "title": "What can you remake from the Katana community presets?",
+    "end_time": 383
+   },
+   {
+    "start_time": 383,
+    "title": "What are the 3 ways to make a Katana motion graphics edit?",
+    "end_time": 448
+   },
+   {
+    "start_time": 448,
+    "title": "Can Katana turn your own clips into a motion graphics edit?",
+    "end_time": 493
+   },
+   {
+    "start_time": 493,
+    "title": "How do you install the Katana Director skill in Claude?",
+    "end_time": 545
+   },
+   {
+    "start_time": 545,
+    "title": "How do you plan a clothing brand ad with Katana in Claude?",
+    "end_time": 626
+   },
+   {
+    "start_time": 626,
+    "title": "How do you make an aura farming edit with /katana?",
+    "end_time": 798
+   },
+   {
+    "start_time": 798,
+    "title": "Who is Higgsfield Katana for?",
+    "end_time": 835
+   },
+   {
+    "start_time": 835,
+    "title": "Is Higgsfield Katana worth trying?",
+    "end_time": 884
+   }
+  ],
+  "tags": [],
+  "categories": [
+   "People & Blogs"
+  ],
+  "heatmap": null,
+  "upload_date": "20261011",
+  "duration": 884,
+  "channel": "Jad M.H  | AI Automation",
+  "channel_id": "UCkbjWQ7kLFNRY_RiJbqVWRg",
+  "channel_follower_count": 8580,
+  "thumbnail": "https://i.ytimg.com/vi/98KlVeJ9ylg/maxresdefault.jpg",
+  "view_count": 7770,
+  "like_count": 175,
+  "comment_count": 13
+ }
+}

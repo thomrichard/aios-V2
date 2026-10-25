@@ -1,0 +1,160 @@
+{
+  "video_id": "HhZdNYI4pJs",
+  "chaine": "nate-herk",
+  "titre": "I Tried 100+ Github Repos for Claude. These 6 Are the Best",
+  "codeur": "agent nate-herk",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "liste",
+    "format_secondaire": null,
+    "sujet": "Les meilleurs repos GitHub pour Claude, triés parmi plus de 100 testés, et ce qu'on peut vendre avec chacun",
+    "outils": ["HyperFrames", "Google Workspace CLI", "Apify MCP", "Scrollcraft", "Humanizer", "Agent Skills (Addy Osmani)", "Expo skills", "Supabase et Stripe skills", "Playwright CLI", "Claude Security", "OpenSEO", "Codeburn"],
+    "niveau": "intermediaire",
+    "objectif_probable": "vues"
+  },
+  "titre": {
+    "attente_au_clic": "La liste des meilleurs repos GitHub pour Claude, triés parmi plus de 100 testés, à copier tels quels.",
+    "schema": "I Tried <N>+ <Objets> for <Outil>. These <N> Are the Best",
+    "promesse": "Gagner le temps du tri : les meilleurs repos parmi plus de 100",
+    "audace": "timide",
+    "registre": "jargon",
+    "briques": ["preuve"],
+    "marqueurs": ["test", "chiffre", "superlatif"],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "grand sourire",
+    "regard": "camera",
+    "texte": "JUST COPY ME",
+    "texte_mots": 3,
+    "repete_titre": "non",
+    "elements": ["six logos en tuiles néon (HyperFrames, Google CLI, Apify, Scroll Craft, Humanizer, Agent Skills)", "visage de Nate au centre", "texte en capitales blanches en bas"],
+    "nb_elements": 3,
+    "fond": "dégradé bleu nuit",
+    "couleurs": ["bleu nuit", "blanc", "néons vert, bleu, orange, violet et rose"],
+    "curiosity_gap": "resultat",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "So, there are over 100,000 GitHub repos built for Claude right now.",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Motion : des dizaines de cartes de repos GitHub sur fond vert sombre, compteur « 55k » puis « 100k Github repo »",
+    "premier_plan_reprend_miniature": "non",
+    "ouverture": ["hook-fait", "douleur", "pont"],
+    "preuve": {
+      "type": "effort",
+      "seconde": 5,
+      "description": "« after trying and actually using more than 100 repos, I found 10 that I cannot work without »"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 3, "a_l_ecran": true},
+    "boucle_vers_la_fin": {
+      "presente": false,
+      "citation": "",
+      "seconde_resolution": null,
+      "tenue": null
+    },
+    "seconde_premier_point": 26,
+    "attente_tenue": "oui",
+    "attente_note": "La liste est livrée, et plus : le titre dit 6, la vidéo en donne 10 (« TOP 10 Repos » à l'écran, et l'écran de fin affiche « These 10 Are the Best »). Le « 6 » n'est jamais dit ; l'effort de test est dit, jamais montré."
+  },
+  "structure": {
+    "modele": "liste-numerotee",
+    "segments": [
+      {"debut": 0, "fin": 24, "titre": "Finding the Best Claude Repos", "role": "intro", "pull": true, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 24, "fin": 88, "titre": "1. Video Editing With Hyperframes", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 88, "fin": 189, "titre": "2 et 3. Google Workspace CLI and Apify", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 189, "fin": 297, "titre": "4 et 5. Scrollcraft and Humanizer", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 297, "fin": 380, "titre": "6. Planning Builds With Agent Skills", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 380, "fin": 454, "titre": "7 et 8. Expo, Supabase, and Stripe", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 454, "fin": 512, "titre": "9. Browser Testing and Security", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 512, "fin": 536, "titre": "10. SEO With Real Data", "role": "point", "pull": true, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 536, "fin": 586, "titre": "Token Savers and Usage Tracking", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": false, "relance_sortie": false},
+      {"debut": 586, "fin": 637, "titre": "Where to Start", "role": "fin", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 17, "type": "annonce-suite", "citation": "I'll show you what they are, what problem each one solves, and how to use them"},
+      {"seconde": 299, "type": "annonce-suite", "citation": "those first five were really about landing a client"},
+      {"seconde": 310, "type": "question-spectateur", "citation": "you've probably had this happen where you're maybe an hour or two into a build"},
+      {"seconde": 539, "type": "question-spectateur", "citation": "some of you guys might be wondering about some of the token saving repos"}
+    ],
+    "histoires": [
+      {"seconde": 259, "acte": "anecdote", "resume": "Humanizer trouvé presque par hasard, utilisé sur chaque produit depuis"}
+    ],
+    "payoffs": [
+      {"seconde": 56, "resume": "HyperFrames : un clip brut devient une vidéo sous-titrée avec carton titre en quelques minutes"},
+      {"seconde": 155, "resume": "Apify : les boulangeries de Chicago sur Instagram, abonnés et vidéos, en tableau"},
+      {"seconde": 219, "resume": "Scrollcraft : ses sites à défilement immersif, AIS compris"},
+      {"seconde": 283, "resume": "Humanizer : un texte qui ne sent plus l'IA"},
+      {"seconde": 334, "resume": "Agent Skills : /spec, /plan, /build pour reprendre une session sans perte"},
+      {"seconde": 475, "resume": "Playwright clique l'appli comme un client ; Claude Security cherche les failles"},
+      {"seconde": 543, "resume": "Les économiseurs de tokens testés par JetBrains : Caveman 8,5 % au lieu des 65 % annoncés"}
+    ],
+    "premier_payoff_seconde": 56,
+    "jargon": 2,
+    "repetitions": 0,
+    "test_du_tweet": "Sur 100+ repos GitHub pour Claude testés, Nate en garde 10 : HyperFrames, Google Workspace CLI, Apify, Scrollcraft, Humanizer, Agent Skills, Expo, Supabase et Stripe, Playwright et Claude Security, OpenSEO. Pour chacun : le problème réglé et ce qu'un client paierait."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine, plein cadre", "decor": "bureau, étagères avec trophées, néon AIS, micro sur bras"},
+    "parts": {"face": 45, "ecran": 25, "motion": 30, "broll": 0},
+    "textes_ecran": "constants",
+    "sous_titres_incrustes": true,
+    "sous_titres_style": "Mots-clés par moments (10X FASTER, SAVES MONEY, You don't have to have any video), capitales blanches avec un mot en rouge",
+    "elements": ["plan-a-l-ecran", "cartes-chapitre", "etiquettes", "chiffres-animes"],
+    "charte": "Fond noir et vert sapin, roue « TOP 10 Repos » vert d'eau, texte blanc en italique gras, accents rouges. La miniature (bleu nuit, tuiles néon multicolores) ne la reprend pas.",
+    "rythme": "regulier",
+    "notes": "La plus montée des 10 : un plan toutes les 3,6 secondes, une roue « TOP 10 » qui revient entre chaque repo, des étiquettes posées sur le face caméra. Un commentaire juge ce motion « généré par Claude » et moins sincère."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 187, "type": "lead-magnet", "cible": "Scrollcraft, son skill de design de site, en lien gratuit", "amene_par": "pendant-demo", "citation": "full disclosure, this next one I built, and it's called Scrollcraft"},
+      {"seconde": 620, "type": "autre", "cible": "tous les repos en description", "amene_par": "fin", "citation": "I'll put every repo from this video inside the description"},
+      {"seconde": 628, "type": "like-commentaire", "cible": "liker la vidéo", "amene_par": "fin", "citation": "please give it a like, it helps me out a ton."}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"lead-magnet": 1, "communaute-payante": 1, "communaute-gratuite": 1, "affiliation": 2, "reseaux": 3, "autre": 12},
+    "commentaire_epingle": {"texte": "Glaido offert un mois et skill gratuit Scrollcraft", "type": "lead-magnet"},
+    "recap_final": false,
+    "derniere_phrase": "I'll see you on the next one. Peace, everyone.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["merci, du temps gagné, une des vidéos les plus utiles", "la sécurité des repos qu'on installe", "les économiseurs de tokens qui dégradent le résultat", "les skills de Matt Pocock et d'Addy Osmani"],
+    "demandes": ["comment vérifier qu'un repo est sûr", "une vidéo pour installer les repos dans Claude", "en faire une série mensuelle", "est-ce que ça marche dans Codex"],
+    "critiques": ["« If I wanted to listen to an ai generated script » (26 likes)", "trop de motion généré par Claude, moins sincère", "« You cannot help saying 10x »", "une phrase coupée au montage vers 7:34"],
+    "reprises": ["« 10x »", "/humanizer", "Scrollcraft"],
+    "signal_promesse": "tenue"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "1re phrase proche du titre (100 000 repos pour Claude) ; 1er plan en motion, sans le visage ni les logos de la miniature"},
+    "ap_boucle_curiosite": {"note": 0, "preuve": "Aucune question gardée pour plus tard"},
+    "ap_effort_montre": {"note": 2, "preuve": "0:05 « after trying and actually using more than 100 repos »"},
+    "ap_setup_progress_payoff": {"note": 1, "preuve": "Chaque repo a un petit problème puis sa solution ; pas de grande partie qui monte vers un résultat"},
+    "ap_contraste_rythme": {"note": 1, "preuve": "Vif d'un bout à l'autre (12 à 27 changements par minute), plus calme seulement sur les deux dernières minutes"},
+    "ap_montrer_sans_son": {"note": 2, "preuve": "« 100k Github repo », « TOP 10 Repos », « 10X FASTER », « SAVES MONEY » et le plan « In this video » se lisent sans le son"},
+    "ali_douleur_histoire": {"note": 1, "preuve": "0:03 « most of them are honestly a waste of time » ; aucune histoire derrière"},
+    "ali_coeur_unique": {"note": 1, "preuve": "10:13 « No one's going to pay you for a GitHub repo » donne un fil, mais la vidéo reste une liste"},
+    "alx_pont": {"note": 1, "preuve": "Contexte, effort et plan, mais ouvert par un fait qui accroche"},
+    "alx_pull_paint_point": {"note": 2, "preuve": "La plupart des repos : pourquoi (Claude n'atteint pas Instagram), un exemple (boulangeries de Chicago, salle de sport, entreprise de ménage), l'usage"},
+    "alx_nom_idee": {"note": 1, "preuve": "Les repos ont déjà un nom ; « LANDING A CLIENT » et « BUILD FOR REAL » nomment les deux moitiés à l'écran"},
+    "alx_phrase_finale": {"note": 1, "preuve": "0:53 « Editing is no longer the bottleneck » ; 10:16 « what you're selling is the thing that you build around it » ; pas pour chaque repo"},
+    "alx_douleur_reve": {"note": 0, "preuve": "Le titre porte l'objet technique (repos GitHub pour Claude)"},
+    "alx_cta_tot": {"note": 2, "preuve": "3:07 Scrollcraft, son skill gratuit, présenté dans la liste avec le lien en description"},
+    "ed_intro_courte": {"note": 1, "preuve": "Premier repo à 0:26, après un fait, une douleur, l'effort et un plan en trois points"},
+    "ed_hook": {"note": 2, "preuve": "0:00 « over 100,000 GitHub repos built for Claude » puis « most of them are honestly a waste of time »"},
+    "ed_probleme_preuve_consignes": {"note": 2, "preuve": "Apify (2:20 page vide), Agent Skills (5:10 Claude oublie), Playwright (7:46 « this works » sans tester) : problème, solution, consigne"},
+    "ed_tension_relancee": {"note": 1, "preuve": "5:10 « you've probably had this happen » ; 8:59 « some of you guys might be wondering » ; ailleurs « number X »"},
+    "ed_histoire_vecue": {"note": 0, "preuve": "Aucune histoire ; Humanizer « found almost by accident » sans récit"},
+    "ed_sans_surexplication": {"note": 2, "preuve": "Script serré : une idée par repo, sans redite"},
+    "ed_niveau_simple": {"note": 2, "preuve": "1:48 « a CLI, a command-line tool » ; 5:17 la context rot expliquée ; 9:49 « if you're brand new to this, don't install all of these »"},
+    "tous_video_suivante": {"note": 0, "preuve": "« I'll see you on the next one » ; la vidéo sur les skills de mai est citée, pas proposée"}
+  },
+  "a_retenir": {
+    "titre_miniature": "« I Tried <N>+ <Objets> for <Outil>. These <N> Are the Best » : l'effort chiffré et le tri. La miniature dit « JUST COPY ME » avec six logos en néon. La vidéo en donne pourtant 10, et son écran de fin affiche « These 10 Are the Best » : le titre a été réduit à 6.",
+    "intro_structure": "26 secondes : un fait (100 000 repos), une douleur (la plupart ne valent rien), l'effort (100+ testés), le plan à l'écran, puis le n° 1. Chaque repo : le problème, ce qu'il fait, ce qu'un client paierait.",
+    "habillage": "La plus montée des 10 : un plan toutes les 3,6 secondes, une roue « TOP 10 » entre les repos, des étiquettes sur le face caméra. Un commentaire juge ce motion trop « Claude ».",
+    "idee_pour_nous": "Une liste « j'ai testé N outils, voici ceux qui restent », avec pour chacun le problème réglé et ce qu'un client paierait : la vidéo parle aux curieux et aux futurs clients.",
+    "objectif": "vues"
+  }
+}

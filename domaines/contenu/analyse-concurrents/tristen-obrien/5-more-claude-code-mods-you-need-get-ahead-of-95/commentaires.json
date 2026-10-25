@@ -1,0 +1,434 @@
+[
+ {
+  "texte": "Prompt Upgrade + Auto Model mods are exactly what I want to experiment with 🔥 Been following Trent Calloway’s content too, and building tools that improve your workflow instead of just adding more prompts feels like the next level..",
+  "likes": 18,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Michael-m9c5j",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "🚨 UPDATE ON AUTO MODEL 🚨: A few of you made a great point in the comments. Claude’s cache is tied to the model, so when Auto Model switches models in the middle of a long session, the new model has to reread your whole conversation, and switching back and forth can end up costing more than it saves. Auto Model really should only pick the model at the start of a session.  So if you're building it yourself, please keep that in mind and I’ve put the Auto Model prompt on hold. Thanks for catching it!",
+  "likes": 11,
+  "epingle": true,
+  "createur": true,
+  "auteur": "@Tristen_OBrien",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Hey thanks for the video. The mods you've mentioned are great... but i'am more interested on how you built yout tristen's tool.",
+  "likes": 4,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@bikabas",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Prompt caching cost\nDid you consider that??",
+  "likes": 4,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@reanalytics1863",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Hey good call out. I'll try to add that a bit later. You can also ask Claude to create a pop out menu in the Status Bar to house your mods. That should get it going. You can take a snap shot of my video where it says Tristen's tools and what it looks like opened. Then give it to Claude code for a reference. That should do the trick.",
+  "likes": 3,
+  "epingle": false,
+  "createur": true,
+  "auteur": "@Tristen_OBrien",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "If you tell us how you built tristen tools you definitely earned one new subscriber 😊",
+  "likes": 3,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@JohnnyMerayo",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "If you change the model half way through a session that model gets hit 100% with your context, no cache.",
+  "likes": 3,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@philware1546",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Your mods are crazy, love them.",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@flaviu-vanca",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Thanks Tristen for this video on Claude Code MODS.😊🙏",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ShinilPayamal",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "This video was very enjoyable. You have struck a balance between being informative and interesting. Your video respected my time and I sincerely thank you for that!",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@jerodbjx",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "I have a concern about auto model switching, since changing the model in between a task the new model would process the entire context as opposed to using the cache, I think in long running tasks model switching would cost more.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@PremChand-ts1bi",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Could you please provide access to the auto model prompt, as it is currently listed as \"coming soon\" on your website?",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@yashashs1250",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "I tried the automodel mod and I'm now about an hour into Claude trying to figure out why it's not working....  Never mind that it's chewing up all my usage....",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@MidianNiles",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "When will the Automodel prompt be available on your page?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@AlfonsoGoB",
+  "date": 1792368000,
+  "parent": "root"
+ },
+ {
+  "texte": "Great video as usual. Thank you very much.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@mohammadanas3320",
+  "date": 1792454400,
+  "parent": "root"
+ },
+ {
+  "texte": "Would be awesome if you have the prompt to create the status bar tools. Great video as always",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@jCrip",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Really helpful.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Danzulu1",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "Thanks Tristen this is gold",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Eysc",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Very helpful thank you!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@JoshyJoshhh",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "love these",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@chameleonhubai",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Great video, but thia will burn usage limit in peo version before you actually use claude to work 😅",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@paulolima2472",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Love it",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@clicksntech",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Sheet man, your video looks crisp!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@bighacks.agency",
+  "date": 1792108800,
+  "parent": "root"
+ },
+ {
+  "texte": "Loved the video, it would be better if you can show us how to build Tristen's tools and add different things there from scratch.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@mohitjoshi8818",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Are you going to add the YouTube TV one to your stuff?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ScullyPop",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Great video! What was the prompt you used to create the \"Tristen's tools\" dock in the bottom right corner? :)",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Silver21Channel",
+  "date": 1792627200,
+  "parent": "root"
+ },
+ {
+  "texte": "These are great, especially auto-model. Thanks for sharing.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@TreyHope",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Hey Tristen!!! and hi everyone! It's Matteo here from far far Italy 🇮🇹😂.... thank you soooo much for this fantastic video!!! And, also, I really like the editing of this video! Which software did you use? Great website too!!! Ciao!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@amanterobot",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Love your ideas. Thanks for sharing! One question, how you collect the 365 challenges?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@iamgcc86",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Fantastic, thank you!\nQ: Auto Model: does it change mid conversation or only at the start? - Nevermind you already answered. :)",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@arcanjl",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Amazing video, I was wondering how you created your Tristen's tools toolbar? That would be amazing if you could add that to the available prompts in your website!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@flxffygabby",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Am I the only person that works exclusively in the cloud environment? These mods only work with local folders.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@RoderickMcSlagerhaden",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Why does your website only have 3 of the 5 mods? I wanted to join the TV mod but it's not there",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@victoroliveira5901",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "When does the fix come?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ForgeToolsHQ",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Love these! Question, for the Todays report. Does it track every Claude session or only the current one? \n\nAsking because at times I have 3 terminals running at once so curious if they are all bundled in the report",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@neutroblack3321",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Excellent and very practical mods.  Can these work in visual studio code with Claude extension?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@yeongnamtan",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "for mod 2 - prompt upgrade, I think there's a danger there of output homogenisation.  By encouraging an initially short prompt, then filling in details the model suggests, you end up with an \"on rails\" experience that might even be better without the extra detail as the model would have to be creative. That is in line with the latest anthropic guidelines as well. Have you set up any evals or judges to measure the output difference between the before and after prompts?\n\nMod 3 and 5 are really cool!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@paulhenricksen5728",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "So how do we build these mods ?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@alucard12333",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "How do we get these mods?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@r4vn0s",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Loved this one. Today’s Report made me curious: how does it estimate the time saved? Does each task type get a fixed number of minutes, or does Claude judge each task on its own?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@VikaTaylor",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "There is no mod 4 youtube TV",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@yeongnamtan",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "auto model is not available...",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@spreedolphin",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "i cant find the Today's Report mod on your site?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@billbridle179",
+  "date": 1792713600,
+  "parent": "root"
+ },
+ {
+  "texte": "Do you use to Claude to edit your videos or to create these motion graphics? Or the videos are manually edited?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Vilkox",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "I cant seem to find the prompt that makes the \"Tristians\" tools box. I have clean view and auto model. Any chance you can help please?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Birlank",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "your highlight at 7:46 was above the button.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@socks5proxy",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "But changing models re read the entire conversation no?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@djmpath971",
+  "date": 1792540800,
+  "parent": "root"
+ },
+ {
+  "texte": "Good mod but it will eat tokken more",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Paul24John",
+  "date": 1791849600,
+  "parent": "root"
+ }
+]

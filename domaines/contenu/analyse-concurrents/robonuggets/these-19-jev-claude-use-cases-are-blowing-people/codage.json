@@ -1,0 +1,160 @@
+{
+  "video_id": "3iDiWTt8lok",
+  "chaine": "robonuggets",
+  "titre": "These 19 Jev-Claude use cases are blowing people's minds (with prompts)",
+  "codeur": "agent robonuggets",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "liste",
+    "format_secondaire": null,
+    "sujet": "19 cas d'usage de Jev, un modèle de décision très rapide et peu cher, avec Claude",
+    "outils": ["Jev", "Claude", "Claude Code", "Google Sheets", "Apify", "Gemini Flash Lite", "extensions Chrome"],
+    "niveau": "intermediaire",
+    "objectif_probable": "vues"
+  },
+  "titre": {
+    "attente_au_clic": "Découvrir 19 usages de Jev avec Claude qui impressionnent tout le monde, avec les prompts pour les refaire.",
+    "schema": "These <N> <Outil>-<Outil> use cases are blowing people's minds (with prompts)",
+    "promesse": "19 usages concrets, prompts compris",
+    "audace": "audacieux",
+    "registre": "jargon",
+    "briques": ["preuve", "resultat"],
+    "marqueurs": ["chiffre"],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": false,
+    "emotion": "deux mascottes enjouées, pouce levé",
+    "regard": "element",
+    "texte": "19 Use Cases",
+    "texte_mots": 3,
+    "repete_titre": "partiel",
+    "elements": ["texte « 19 Use Cases » en serif noir", "flèche", "mascotte Claude orange et mascotte Jev noire en pâte à modeler", "grille de 19 icônes numérotées"],
+    "nb_elements": 3,
+    "fond": "clair, blanc cassé",
+    "couleurs": ["blanc cassé", "noir", "orange Claude"],
+    "curiosity_gap": "aucun",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Jev is the new AI model that everyone's building with right now",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Un point orange sur fond noir qui s'ouvre sur le logo « Jev » à 0:02",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": ["actu-annonce", "hook-fait", "pont"],
+    "preuve": {
+      "type": "chiffres",
+      "seconde": 5,
+      "description": "« up to 200 times faster and 400 times cheaper », affiché « 20-200x faster / 40-400x cheaper » avec la source"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 19, "a_l_ecran": true},
+    "boucle_vers_la_fin": {"presente": false, "citation": "", "seconde_resolution": null, "tenue": null},
+    "seconde_premier_point": 53,
+    "attente_tenue": "oui",
+    "attente_note": "Les 19 usages sont là, la plupart avec un prompt et un chiffre de test. Les commentaires saluent l'accent mis sur les usages plutôt que sur la technique."
+  },
+  "structure": {
+    "modele": "liste-numerotee",
+    "segments": [
+      {"debut": 0, "fin": 52, "titre": "Intro : Jev, 200 fois plus rapide, 19 usages, Jay", "role": "intro", "pull": true, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 52, "fin": 145, "titre": "Faciles 1 et 2 : Jev dans Google Sheets, trier les demandes clients", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 145, "fin": 154, "titre": "Guide PDF gratuit", "role": "cta", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 154, "fin": 337, "titre": "Faciles 3 à 8 : pubs concurrentes, clips, clients, liens internes, acheteurs en commentaires, vérifier Jev", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 337, "fin": 382, "titre": "Le motif des faciles, puis la communauté RoboNuggets", "role": "cta", "pull": true, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 382, "fin": 589, "titre": "Intermédiaires 9 à 14 : choisir la skill, choisir le modèle, filtrer pour l'agent, extensions Chrome, recherche par le sens, recherche d'images", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 589, "fin": 787, "titre": "Avancés 15 à 19 : vérificateur en direct, chatbot sans LLM, icônes, pages qui se montent seules, trouver ses propres usages", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 787, "fin": 845, "titre": "Wrap up : l'API Decisions d'OpenAI, et laquelle construire en premier", "role": "fin", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 28, "type": "annonce-suite", "citation": "some more advanced ones that can truly change how you build"},
+      {"seconde": 307, "type": "annonce-suite", "citation": "Before we go to the rest of the use cases, one of the things you should learn"},
+      {"seconde": 345, "type": "annonce-suite", "citation": "Now, let's get to some of the more intermediate use cases."},
+      {"seconde": 593, "type": "annonce-suite", "citation": "Now let's go to some of the advanced ones."},
+      {"seconde": 634, "type": "rupture", "citation": "This one sounds implausible."},
+      {"seconde": 789, "type": "rupture", "citation": "as a final note, OpenAI in their dev day a few days ago"}
+    ],
+    "histoires": [
+      {"seconde": 180, "acte": "anecdote", "resume": "Jay fait taguer 54 pubs de trois marques par Jev en une seconde et demie, pour moins d'un cent."},
+      {"seconde": 215, "acte": "anecdote", "resume": "Son chercheur de clips note 411 extraits d'une interview de 70 minutes en 6,5 secondes."},
+      {"seconde": 401, "acte": "anecdote", "resume": "Dans son espace de 145 skills, Jev trouve la bonne en 5 secondes sur 14 tests, contre 30 pour Opus 5."},
+      {"seconde": 548, "acte": "anecdote", "resume": "Il génère beaucoup d'images et a construit une recherche par le contenu, à partir des prompts qu'il garde."},
+      {"seconde": 605, "acte": "client-autre", "resume": "Quelqu'un a construit JevMeter, qui note chaque phrase d'un débat en direct."}
+    ],
+    "payoffs": [
+      {"seconde": 60, "resume": "Jev remplit une colonne de catégories dans Google Sheets en direct"},
+      {"seconde": 133, "resume": "217 appels clients triés en 13 secondes pour 7 cents"},
+      {"seconde": 427, "resume": "La commande /jev envoie une tâche simple à Haiku, une tâche dure à Opus"},
+      {"seconde": 646, "resume": "Un chatbot sans appel à un LLM, sur la liste des vidéos de Jay"},
+      {"seconde": 747, "resume": "Faire trouver à Claude ses propres usages de Jev"}
+    ],
+    "premier_payoff_seconde": 60,
+    "jargon": 1,
+    "repetitions": 0,
+    "test_du_tweet": "Jev est un modèle de décision : il n'écrit pas, il choisit, en une fraction de seconde et pour presque rien. 19 usages testés : trier un tableur, des mails, des pubs, des clips, choisir la skill ou le modèle de Claude, chercher par le sens, un chatbot sans LLM. Prompts fournis."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine dans un grand carré arrondi à droite, graphisme à gauche ; vignette sur les démos ; plans plein cadre sur les cartes", "decor": "bureau, étagère, fleurs, micro Rode ; casquette blanche"},
+    "parts": {"face": 40, "ecran": 25, "motion": 35, "broll": 0},
+    "textes_ecran": "constants",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["plan-a-l-ecran", "cartes-chapitre", "etiquettes", "chiffres-animes", "curseur-surligne", "logo-chaine"],
+    "charte": "Fond noir à grille discrète, titres en serif blanc avec sous-titre gris, accent orange, logo Jev rose sur la carte « Easy ». La miniature claire reprend la grille d'icônes et l'orange.",
+    "rythme": "contraste",
+    "notes": "Chaque usage a sa carte numérotée et, souvent, un chiffre de test à l'écran (0.3 s, 1,394 emails, 5.7x slower). Le prompt de chaque usage apparaît dans une fenêtre Claude."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 33, "type": "video-suivante", "cible": "une vidéo précédente qui présente Jev", "amene_par": "intro", "citation": "I'll link a previous lesson I did somewhere in this video"},
+      {"seconde": 145, "type": "lead-magnet", "cible": "guide PDF des usages de Jev (communauté Skool gratuite)", "amene_par": "apres-valeur", "citation": "I've put every use case in this video into this free PDF guide"},
+      {"seconde": 348, "type": "communaute-payante", "cible": "RoboNuggets (Claude Living Masterclass, cours Agents as a Service)", "amene_par": "transition", "citation": "if you want to learn how to build and sell AI systems that businesses actually pay for"},
+      {"seconde": 378, "type": "communaute-payante", "cible": "lien dans le commentaire épinglé", "amene_par": "transition", "citation": "check that just in the pin comment below"},
+      {"seconde": 820, "type": "lead-magnet", "cible": "guide PDF", "amene_par": "fin", "citation": "that free PDF guide with every prompt and resource from this video"},
+      {"seconde": 826, "type": "like-commentaire", "cible": "dire lequel il construirait en premier", "amene_par": "fin", "citation": "I'm curious like which of these would you build first?"}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"lead-magnet": 1, "communaute-payante": 1, "produit": 1, "service": 1, "affiliation": 5, "abonnement": 1, "reseaux": 4},
+    "commentaire_epingle": {"texte": "Le PDF des usages de Jev gratuit (Skool gratuit, « search for n79 ») et la communauté payante", "type": "lead-magnet"},
+    "recap_final": false,
+    "derniere_phrase": "Let me know down below and I'll see you all next time. Cheers.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["des usages persos de Jev (un étudiant en maths, une skill jev-router)", "l'accent sur les usages plutôt que la technique", "la densité de la vidéo"],
+    "demandes": ["trier des milliers de mails Gmail simplement", "des traductions (français, espagnol, arabe)", "comment automatiser les messages aux clients repérés"],
+    "critiques": ["ce que Jev apporte de plus qu'une recherche FTS5 ou une base vectorielle", "la différence avec un classifieur classique"],
+    "reprises": ["« jev-router »", "« decision model »"],
+    "signal_promesse": "tenue"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "1re phrase sur Jev sans les 19 usages ; 1er plan le logo Jev à 0:02, sans la grille de la miniature : partiel"},
+    "ap_boucle_curiosite": {"note": 0, "preuve": "Aucune question ouverte dans l'intro"},
+    "ap_effort_montre": {"note": 1, "preuve": "Tests chiffrés de Jay à partir de 3:00 (« When I tried it »), mais rien dans l'intro"},
+    "ap_setup_progress_payoff": {"note": 1, "preuve": "Une liste qui monte en niveau, sans but qui avance d'une partie à l'autre"},
+    "ap_contraste_rythme": {"note": 1, "preuve": "De 6 à 20 changements de plan par minute ; plus vif à la 9e minute, sans rupture nette"},
+    "ap_montrer_sans_son": {"note": 2, "preuve": "Planche intro : « 20-200x faster / 40-400x cheaper », « Cheaper / Faster / Transform », « 19 Use cases with the prompts », Easy, Intermediate, Advanced"},
+    "ali_douleur_histoire": {"note": 0, "preuve": "Aucune douleur ni histoire vécue dans l'intro"},
+    "ali_coeur_unique": {"note": 2, "preuve": "5:37 « you point Jev at a pile of stuff you already have »"},
+    "alx_pont": {"note": 1, "preuve": "Promesse, plan et crédits comme un pont, mais ouvert par un chiffre-choc"},
+    "alx_pull_paint_point": {"note": 2, "preuve": "La plupart des usages : pourquoi (2:37 « nobody reads hundreds of them by hand »), un exemple (4:42 un vendeur TikTok), l'action"},
+    "alx_nom_idee": {"note": 1, "preuve": "Des cartes descriptives (« Put Jev in Google Sheets », « Search by meaning ») ; « decision model » et « meta use case » plus marquants"},
+    "alx_phrase_finale": {"note": 1, "preuve": "7:23 « you only pay for the big model when the job actually needs it » ; pas sur la plupart"},
+    "alx_douleur_reve": {"note": 0, "preuve": "Titre porté par les outils et l'engouement des autres, sans problème ni désir du spectateur"},
+    "alx_cta_tot": {"note": 2, "preuve": "2:25 le PDF des usages, lié au sujet, avant 4 minutes"},
+    "ed_intro_courte": {"note": 1, "preuve": "Premier point à 0:53, après le chiffre, la promesse, le plan, la vidéo d'initiation et les crédits"},
+    "ed_hook": {"note": 2, "preuve": "0:05 « up to 200 times faster and 400 times cheaper than other models »"},
+    "ed_probleme_preuve_consignes": {"note": 2, "preuve": "La plupart des usages : le problème (3:09 des heures pour trouver des clips), un test chiffré, puis le prompt"},
+    "ed_tension_relancee": {"note": 1, "preuve": "Relances par niveaux (5:45, 9:53), pas par la question du spectateur"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "Anecdotes de test (3:00, 3:15, 6:41), pas une histoire"},
+    "ed_sans_surexplication": {"note": 2, "preuve": "Chaque usage est dit une fois ; le récapitulatif de 5:37 donne le motif commun sans redire les usages"},
+    "ed_niveau_simple": {"note": 2, "preuve": "0:59 « it can't write a sentence, but it can pick true or false » ; 4:13 « a huge folder of notes » ; 5:13 validation set"},
+    "tous_video_suivante": {"note": 1, "preuve": "0:33 une vidéo précédente proposée comme initiation, avec une raison, mais dans l'intro et pas à la fin"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Aucun changement relevé par VidIQ. Gabarit « These <N> <Outil> use cases are blowing people's minds (with prompts) », déjà vu sur la chaîne pour GPT-6 Astra et le gauntlet-loop. Miniature : les mascottes Claude et Jev devant une grille de 19 icônes.",
+    "intro_structure": "Un chiffre-choc (200 fois plus rapide, 400 fois moins cher), 19 usages en trois niveaux. Chaque usage : le problème, un test chiffré de Jay, puis le prompt.",
+    "habillage": "Même charte sombre ; chaque usage a sa carte et un chiffre de test animé. Les prompts apparaissent dans une fenêtre Claude.",
+    "idee_pour_nous": "Pour un nouvel outil, une liste d'usages testés, chacun avec un chiffre mesuré (temps, coût) et le prompt à copier, rangée par niveau.",
+    "objectif": "vues"
+  }
+}

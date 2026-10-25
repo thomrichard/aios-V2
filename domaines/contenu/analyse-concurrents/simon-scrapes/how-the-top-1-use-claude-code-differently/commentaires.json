@@ -1,0 +1,848 @@
+[
+ {
+  "texte": "the advice you pass on 8s different depending on our spending budget. Boris has an infinite budget. Most of us don't. Plan mode helps conserve tokens .",
+  "likes": 119,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@tubege",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "The shift from prompting Claude to designing systems that can run autonomously is what really matters here. I’ve been learning Claude Code mods through a Trent Calloway’s content lately, and combining agents, hooks, and goal-based workflows feels like a whole different level of automation.",
+  "likes": 88,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@tkv-l3h",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "But it's better to make a plan to flesh out the general idea, because as you progress on it, you often make changes, sometimes quite substantial ones.\nSo it's better to make changes to the plan rather than making them on hundreds or thousands of lines of code across multiple files with every change. Risk of inconsistency on large projects and increased token consumption.",
+  "likes": 74,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@massikage",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "1:21 - as non-dev, i would need plan mode to know to write the guardrails - isn't it why plan mode is for?",
+  "likes": 30,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@frosti7",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "\"Trust Claude's setup\" :)) Best joke this week! :))",
+  "likes": 22,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@bidufree",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Top 1% don’t care about token costs.  Reviewing the plan can help reduce token costs and intercept problems early.",
+  "likes": 19,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@raybod1775",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "If you don't care about your code, if you don't want to understand it, or only want to understand it superficially, then don't use plan mode. It's that simple.",
+  "likes": 19,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@gazsi72",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "This is soo wrong. Maybe when you code alone with one session. I have my swarm to do a big plan, then that is stored in artifacts, sliced in sections every task reference the plan file section, and a classifier model check that section with the delivery to sanity check what that agent ships. I would not stop using plan mode.",
+  "likes": 16,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@nestorcolt",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "It really depends on what I'm doing.   Most of my sessions start with research and verification of the idea I'm pursuing.",
+  "likes": 13,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@BobWallice",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "I don't think most of us are using Claude for client briefs which is usually your example",
+  "likes": 9,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@relaxyourealive",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "I use Fable to create numbered requirement docs with open questions that have a proposed answer. Once I have resolved all questions that is me done and I hand over to fable or opus for implementation. I only go more agentic if subscription $100 windows are going too fast and I can save tokens with cheaper models. My requirement docs reference each other and even other projects.",
+  "likes": 9,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@jahelation8658",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Looking at the code changes of the prompt rather than looking at what the model wants to do before it actually changes the code, does not feel good to me. Why would the model need to do all those code changes if I happen to think that the plan needs to be adjusted. Let's take for example migrations. Going back afterwards means rolling back the migration... Also I don't believe this approach to be token efficient, but I guess a guy like Boris would not care about that...\n\nNo, plan mode is not dead. I don't think this video makes a lot of sense...",
+  "likes": 7,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@theflowwizard",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "I still plan before I let the agent do the work. I don't necessarily use plan mode but I'll ask for a spec and then develop it until I'm satisfied.",
+  "likes": 5,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@laura_v191",
+  "date": 1791763200,
+  "parent": "root"
+ },
+ {
+  "texte": "I always preferred to plan on a \"paper\" (in md docs) first and never really tried to use plan mode. It was never meaningful to me.",
+  "likes": 5,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Dimonka2",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "I personally like going into plan mode for myself to iron out my thoughts on how to approach things or just think through how to tackle a solution to a problem.\nSo I think it’s still useful to talk through something before executing it, even if it’s not optimal.",
+  "likes": 4,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@tomboriono",
+  "date": 1791763200,
+  "parent": "root"
+ },
+ {
+  "texte": "So you're saying /doctor is kept up to date by anthropic so it's always impro ing skills and files based on latest updates?",
+  "likes": 4,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@RobCooper",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "So basically AI is taking prompt engineers' jobs 🤣",
+  "likes": 4,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@WyzrdCat",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "The way you present video is poor although your video pack knowledge it's hard to focus,please keep bullet points and summary and more visuals instead of just talking",
+  "likes": 3,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@haidersyed6554",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Just add \"Don't implement anything yet, just show me your plan.\" I prefer English to weird switch codes.",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@jsalsman",
+  "date": 1791763200,
+  "parent": "root"
+ },
+ {
+  "texte": "I just started last week.. feel like it got in during easy mode.",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@stupedcraig",
+  "date": 1792540800,
+  "parent": "root"
+ },
+ {
+  "texte": "i use it on auto and just trust the process",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@bubba6647",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "\"set your goals and requirements clearly\" sounds like a plan. Doesn't matter if it's a dedicated mode or you just ask to plan first, it's still better to have some kind of plan first. LLMs don't know what you want, they will invent things without a plan",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ekklesiast",
+  "date": 1792800000,
+  "parent": "root"
+ },
+ {
+  "texte": "Basically it’s making things automatic that you used to have to tell it to do. The new dashboards are not actually new, they’re just artifacts. Not enough people use them so they’re trying to advertise them in different ways because once you start working in an artifact you won’t want to change workflows or jump back over to their competition.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@CourtneyRoberts1982",
+  "date": 1791763200,
+  "parent": "root"
+ },
+ {
+  "texte": "I hate embedded plan mode and I had my own plan mode months before it appeared. I want to see all questions at once and have a time to think",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@alexmorgun851",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Are you sure it is a model limitation or a harness limitation? \nHow did you test it?",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@mra0ul",
+  "date": 1791763200,
+  "parent": "root"
+ },
+ {
+  "texte": "Is there a /goal equivalent for OpenCode like in Claude Code?",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@soloflo",
+  "date": 1791763200,
+  "parent": "root"
+ },
+ {
+  "texte": "good stuff",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@nasifahmed9728",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "I spent time building a whole routine with subagents in a skill, only to find out that telling opus 5.5 on like medium to just spin up some haiku 5.5 subagents \"where it thinks it makes sense\" works fine, and costs very little.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@KoutsOnTopic",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "that's stupid advice, plan mode was always there ro align yourself wirh the agent, not to tell them what to dom if you already know what you want then skip to build directly?",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@dagoberttrump9290",
+  "date": 1792454400,
+  "parent": "root"
+ },
+ {
+  "texte": "Does this information also apply to codex/OpenAI recent models? Thanks",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@jaqsro",
+  "date": 1792108800,
+  "parent": "root"
+ },
+ {
+  "texte": "Awessomee",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@4Tfyd1985",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Bro, plan mode is more than what is stated, it prompts for the very criteria that you mentioned 🤷‍♂️.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@tizzolicious",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "I love how everyone thinks AI is going to do all the work for them, make money and they can be on an island sipping pina coladas.  Where is the money coming from if everyone is making money with AI and sitting on an island?  \"Robots are going to do everything, and AI will replace everyone.\"  Then who has the money to buy the crap that AI and robots make?",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@stevenpike7857",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "Top 1% what? Token Spenders? What a clickbait statistic",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Fixitt",
+  "date": 1792713600,
+  "parent": "root"
+ },
+ {
+  "texte": "All these clickbait titles makes me lose all interest... X is dead, Y changes everything... No, it is not and it does not. The world is not black or white.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@johansphoto",
+  "date": 1792540800,
+  "parent": "root"
+ },
+ {
+  "texte": "you don’t use examples so i don’t understand a single word you are saying",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@misterphmpg8106",
+  "date": 1792454400,
+  "parent": "root"
+ },
+ {
+  "texte": "This is great content.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@SearchSherpaSEO",
+  "date": 1792800000,
+  "parent": "root"
+ },
+ {
+  "texte": "Running Claude Code for various projects, I run prompts through another free model and still ask Claude to grill me on anything else needed as Sonnet before letting it spin up either opus or codex for the actual work. Let her ride on auto the whole way. \n\nOf course, I’m doing more than just some dinky report based on a CSV or something, but I’ve gotten some major breakthroughs for my use case doing this than under plan mode or some AI IDE like Cursor.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@spacemansquid",
+  "date": 1792854000,
+  "parent": "root"
+ },
+ {
+  "texte": "Hey Austin! Building LÜN³, a sovereign trading OS where AI agents hunt market structure, deterministic code enforces the risk laws, and a human passkey holds the gavel. Switching to goal-oriented prompting (\"audit the whole system and propose the roadmap\") plus a visual plan and review sub-agent harness completely leveled up how we ship.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@HimMIII",
+  "date": 1792627200,
+  "parent": "root"
+ },
+ {
+  "texte": "In plan more : “Can you remove the primary style on the Cancel button?”\n\n“Yes, its possible”\n\nIn no plan mode, it will just go ahead and do it. If you have long plan session, you might accidentally trigger claude to start working. Plan mode is enforced by the harness, not the LLM.\n\nIt is still useful.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@masterkutai",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Do you use /goal in the 'Done' part of the same prompt?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@hankobrat",
+  "date": 1791763200,
+  "parent": "root"
+ },
+ {
+  "texte": "Maby if you have simpler things. But when it comes to creating a solid future proof backend struckture, I find it all still extremely bad and I need a lot slot of iterations and understand ing and working through iteration after iteration of the plan to get to a proper result.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@leonwinkel6084",
+  "date": 1792108800,
+  "parent": "root"
+ },
+ {
+  "texte": "all my prompts were in plan mode long before they implemented it.. also at the same time I got the AI to build hierarchical documentation, to help it remember things and better code.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@FranckMartin",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Excellent work Simon. One thing to note: your chapter heading are out of step with the actual content towards the end of the video.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@UnlikelyExplanations",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Would these rules hold if I don’t use the most expensive models?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Summerland357",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Claude was the top of line for like 2 months. Now it's just a sad reminder of how american tech companies never learn from their mistakes.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@foresthobo1166",
+  "date": 1792903200,
+  "parent": "root"
+ },
+ {
+  "texte": "He didn't say anything about \"make no mistakes\" so I assume that it's still best practice.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@siegfriedkettlitz6529",
+  "date": 1791763200,
+  "parent": "root"
+ },
+ {
+  "texte": "The only skills I've been using over the last 9 months are the one that starts up the session and the one that wraps up the session, which requires a whole bunch of updates and documentation maintenance. This updates the universal Claude.md if required. It updates the project Claude.md if required. It updates the project constraints and protocols continuously through all sessions. It updates a session log doc and a context-carry doc that I have curated for my needs  It updates any relevant Notion pages and it does a maintenance pass on all these documents to make sure that anything old or stale gets archived. \nI keep asking Claude if I'm going to need a skill for whatever task it is I'm doing and he keeps telling me no so I just never have created them.\nMy context is pure knowledge work .",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@icedzinnia",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "“Instead of restricting the model to read-only tools and letting it explore first, let’s tell the agent to restrict itself, and hope that it does it”",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@gld67k",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Hmm. I transcripted this, developed a skill from it and evaluated tasks with and without via ckaude's eval skill. Not a significant improvement",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@7mmScout",
+  "date": 1792882800,
+  "parent": "root"
+ },
+ {
+  "texte": "Question I have is should we ever start new sessions anymore or work within one session for ever",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Psrk4287",
+  "date": 1791763200,
+  "parent": "root"
+ },
+ {
+  "texte": "brilliant. today i learned - A LOT",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@markemerson98",
+  "date": 1791763200,
+  "parent": "root"
+ },
+ {
+  "texte": "I never plan, I just start, and iterate as I go. Claude is so good now, it can just stop and refactor in a couple of minutes.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@retromograph3893",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "I now tell it to build a WBS and we'll work together going through it (if it's a bigger project), or just a work project for a smaller one. I find waterfall works kind of better than Agile, as it encourages monitoring.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@SaintFacetious",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Sorry but /doctor prompt-audit dit not do what you say (it does not automatically create an index with pointers and references to other files)",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@lilivier",
+  "date": 1791763200,
+  "parent": "root"
+ },
+ {
+  "texte": "That ending was perfect.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@JenniferJennifer-w9c",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Im not sure that 80% trim was a good move in hindsight, opus 5 was a significant regression and the system prompt size has grown again is the very awesome opus 5.5. The general trend i agree with but throwing around that 80% advice is naive.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@petermcalister72",
+  "date": 1791763200,
+  "parent": "root"
+ },
+ {
+  "texte": "so we do not need /goal Skills never ever again?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@carstenmeissner5634",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Sorry but a brief upfront and power point explanation at the end isn't gonna cut it. Really don't need developers anymore at that point, but I don't see agents at that level yet. Call it slop with extra steps, good enough for websites and the like. I don't see a database engineer writing a feature request and let the AI do whatever and wave the result through. Not all apps are databases though. If you don't work on anything so complex that an agent can do it too, you really won't have a job in a year, unless AI becomes too expensive.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@EnCey2",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Astra and Sol does the goal without a command, I even have to tell that I want to take control more often",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@alexmorgun851",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "IF you're doing it in an XP way, you would have done this right to begin with.  Plans are thin and are not waterfall like everyone else in mine.  I never used stuff like ultrathink, I did not need it. My stuff is lean.  Small steps,  Already bult into my XP workflow with agents. Done is baked in with TDD.  The done criteria ARE my tests, just like it's been before AI even came  here.  AI is practcing TDD, the tests are the guage of done, are the guage of behavior.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@tddtv",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "As a finance assistant i am setting up operational sops automations. Something as basics as invoice bookings for 19 administrations how do i set goals ? There are alot of different rules? This would be a massive help",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@journeyofaswazi9228",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Does this mean I no longer need to create complete ADR + Buildspecs before coding?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@oweibor",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "Plan mode is like spec design mode in kiro, i rather it do that - as the more complex a code base is the more you need to validate overall, cause for simple tasks sure go for it.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@vOzzieLad",
+  "date": 1792368000,
+  "parent": "root"
+ },
+ {
+  "texte": "if you don't care about code, if you don't care about burning tokens, don't use plan mode.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@mihao-runs",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "Dear Simon. Please fact-check the statements you make against the official documentation. It's really not that complex, you have the best tool for this. Best if you ask an independent unbiased agent.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@AndyKarpenko",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "I use plan mode mainly to manage context!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@olivier_lambert",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "What ? \nI dont get it. \nIt starts building the way it wants not understanding the complete scenario and requirements.. \nAmd then we have to ask to revert changes etc. \n\nClaude assumes things we have not clearly written the requirements.. or 8f there are multiple ways to do it a d we want tina. Spefic way because of bigger reason the session 9snt auppose to care about(just an example).",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@sanketnegi1",
+  "date": 1792800000,
+  "parent": "root"
+ },
+ {
+  "texte": "Okay, no plan needed if you and your agents don't know what tasks to work on?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@lichetyre",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "I don’t do any of this and everything Claude has produced for me runs flawlessly. You’re overthinking and spending more tokens than necessary if you follow this type of plan.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Krmm-xw1rn",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "You should credit the dev's work you're citing & link to it in the description.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@j.jamesjohnson",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "Plan mode helps create the brief. Soooo… not sure what I gain from this?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@HelenIan-u2r",
+  "date": 1792872000,
+  "parent": "root"
+ },
+ {
+  "texte": "Curious if you know about the \"model\" `opusplan`. Take a look at `/model opusplan` and I think you'll see it does a lot of this, better. But you do need to start in plan mode. The value is in the automatic model switching. Opus to plan, architect, design, and sonnet to build, implement, test, etc.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@reality-wins",
+  "date": 1792627200,
+  "parent": "root"
+ },
+ {
+  "texte": "You suggest we all become robots following instructions. At least plan mode isn’t so prescriptive as the suggested replacement.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@elbento",
+  "date": 1792800000,
+  "parent": "root"
+ },
+ {
+  "texte": "I don't like Claude's shifting approach, essentially taking away the flexibility and deterministic nature many users appreciate via CPU.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@tyoong719",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "/skills are memes, it's not normal at all to use them xD maybe if it's your first time using Claude then they are helpful for a few months",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@hHjgi1-w2f",
+  "date": 1792454400,
+  "parent": "root"
+ },
+ {
+  "texte": "Eval is great, but, it cost an arm and a leg 😅",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@dron601",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "As always here in Europe, even on the Pro plan, we do not have access yet to the new Projects feature. We are still running on the old classical Projects",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@BavariaR",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "You can check after it uses all your tokens. Hahahaha. Great advice from the company charging for the tokens.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@the.rey.ortega",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "i never used plan mode one time lmao",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@garrett1247",
+  "date": 1791763200,
+  "parent": "root"
+ },
+ {
+  "texte": "Interesting. And very unclear on how to do all those things.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@EvGenie-Ok",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "If you’re listening to these people and letting them make choices for you, instead of learning on your own, then you’re already behind. You already lost.\n\nTop 1% financially, not intellectually.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@JeremyAndersonBoise",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "When we hit the age, when bots will run whole companies, then your ideas will also lose their value. It's because it would be extremely easy and cost effective to \"pirate\" your ideas. You will not sit on a beach with a pinacolada. You will just stop inventing and trying.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@puliverius",
+  "date": 1791763200,
+  "parent": "root"
+ },
+ {
+  "texte": "Does not work in Enterprise or any actual commercial software development.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@mokeeiswatching",
+  "date": 1792454400,
+  "parent": "root"
+ },
+ {
+  "texte": "Yeah, i dont plan mode any more. Its for the senior devs who want to pretending they still matter",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@NeverTakeNoCut-offs",
+  "date": 1791763200,
+  "parent": "root"
+ },
+ {
+  "texte": "Use plan mode, dont believe what a top 1% say they want you yo spend tokens after like a mindless driver",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@scano88",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "This is not great advice. Going through a plan is exceptionally more efficient. If you don't care about burning tokens than for sure just let Claude do whatever it wants and deal with the junk it produces. It'll work, it won't scale.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@traviscarter5618",
+  "date": 1791763200,
+  "parent": "root"
+ },
+ {
+  "texte": "To skill building specificly, to skill building specificly. Is this AI?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@evilsquidtv",
+  "date": 1791763200,
+  "parent": "root"
+ },
+ {
+  "texte": "Bad advise.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@bfr5621",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "18 minutes to say that \"plan\" is gone and what we already know as \"goal\" is king... again? stop spitting out 18 minutes on a twit.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@udisteinberg",
+  "date": 1792108800,
+  "parent": "root"
+ },
+ {
+  "texte": "I’ve come to hate these video thumbnails and titles. YouTube is now a video version of shitty LinkedIn.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Snoozy310",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "Claude sucks. Worst model out there easily imo. Good video tho",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@MyLifeInBusiness",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "\"What do you do for a living?\"\n\"I tell an AI how many threads its allowed to run\"\nkek",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Pier_99",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Scheduling this advice as obsolete for T+4 weeks",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@encoder6717",
+  "date": 1791849600,
+  "parent": "root"
+ }
+]

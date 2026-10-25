@@ -1,0 +1,194 @@
+{
+  "video_id": "_fBuzCY_hGE",
+  "chaine": "thom-richard",
+  "titre_video": "Watermark Claude : ce que ça change vraiment pour toi",
+  "codeur": "agent thom-richard",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "actu",
+    "format_secondaire": "talk",
+    "sujet": "Le filigrane des textes de Claude et l'article 50 de l'AI Act : ce que ça change pour l'utilisateur, puis son avis sur la chasse à l'IA",
+    "outils": ["Claude", "LinkedIn"],
+    "niveau": "debutant",
+    "objectif_probable": "vues"
+  },
+  "titre": {
+    "attente_au_clic": "Savoir si mes textes écrits avec Claude sont maintenant repérables par un filigrane, et ce que ça change pour moi.",
+    "schema": "<Nouveauté> <Outil> : ce que ça change vraiment pour toi",
+    "promesse": "Savoir ce que le filigrane de Claude change réellement pour toi",
+    "audace": "timide",
+    "registre": "jargon",
+    "briques": [],
+    "marqueurs": [],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "sérieux, sceptique",
+    "regard": "camera",
+    "texte": "INDÉTECTABLE ? / hidden words / [WATERMARK: CLAUDE]",
+    "texte_mots": 5,
+    "repete_titre": "partiel",
+    "elements": ["« INDÉTECTABLE ? » en capitales blanches et jaunes", "fenêtre de code avec une loupe rouge sur « hidden words »", "étiquette « [WATERMARK: CLAUDE] »", "visage à droite"],
+    "nb_elements": 4,
+    "fond": "interface sombre bleu nuit avec du code",
+    "couleurs": ["bleu nuit", "blanc", "jaune", "rouge corail", "vert d'eau"],
+    "curiosity_gap": "nouveaute",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Alors voilà ce qu'on voit passer sur internet depuis 2 semaines.",
+    "premiere_phrase_reprend_titre": "non",
+    "premier_plan": "Face caméra plein cadre, regard baissé, t-shirt bleu, étagère ronde de figurines et lampe ; aucun texte",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": ["hook-fait", "actu-annonce", "hook-dissonance", "boucle-curiosite"],
+    "preuve": {
+      "type": "effort",
+      "seconde": 20,
+      "description": "« je suis allé voir la documentation de Claude et j'ai ouvert le texte de loi » que tout le monde cite sans l'avoir lu"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 3, "a_l_ecran": true},
+    "boucle_vers_la_fin": {
+      "presente": true,
+      "citation": "il y a même une phrase que je n'ai vu citer nulle part",
+      "seconde_resolution": 718,
+      "tenue": "oui"
+    },
+    "seconde_premier_point": 66,
+    "attente_tenue": "oui",
+    "attente_note": "La question de la miniature (« indétectable ? ») a sa réponse : la marque n'est lisible que par une machine et aucun outil public n'existe encore. Ce que ça change pour toi est dit à 11:02 : rien à faire."
+  },
+  "structure": {
+    "modele": "mixte",
+    "segments": [
+      {"debut": 0, "fin": 37, "titre": "Ce qu'on voit passer depuis deux semaines", "role": "intro", "pull": true, "paint": true, "point": false, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 37, "fin": 66, "titre": "Ce qu'on va voir", "role": "intro", "pull": true, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 66, "fin": 104, "titre": "Depuis le 2 août : ce qui change, et pour qui", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 104, "fin": 169, "titre": "Qui a signé, qui a refusé", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 169, "fin": 244, "titre": "Le mécanisme : les mots où le modèle a le choix", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 244, "fin": 281, "titre": "Pourquoi ça n'existe qu'à grande échelle", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 281, "fin": 300, "titre": "Mon avis, en une phrase", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 300, "fin": 506, "titre": "Les cinq objections, une par une", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 506, "fin": 571, "titre": "Relire, traduire, coder : qu'est-ce qui est marqué ?", "role": "point", "pull": true, "paint": false, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": false, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 571, "fin": 607, "titre": "L'AI Act : quatre étages, un seul nous concerne", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 607, "fin": 676, "titre": "L'article 50, alinéa par alinéa", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 676, "fin": 720, "titre": "Les sanctions, et pourquoi tout le monde a bougé en même temps", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 720, "fin": 782, "titre": "La phrase que personne ne cite", "role": "point", "pull": true, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 782, "fin": 941, "titre": "Mon avis", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 941, "fin": 1071, "titre": "Le bouton « AI slop » de LinkedIn", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 1071, "fin": 1159, "titre": "Ce qu'il faut retenir", "role": "fin", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": true, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 29, "type": "boucle-ouverte", "citation": "il y a même une phrase que je n'ai vu citer nulle part"},
+      {"seconde": 57, "type": "annonce-suite", "citation": "tu seras certainement surpris par ce qu'elle demande"},
+      {"seconde": 78, "type": "boucle-ouverte", "citation": "il y a un mot qui compte, qui est tout petit et qui est nouveau"},
+      {"seconde": 132, "type": "annonce-suite", "citation": "Alors je vais t'expliquer comment ça marche."},
+      {"seconde": 294, "type": "annonce-suite", "citation": "on va [...] regarder toutes les objections"},
+      {"seconde": 507, "type": "question-spectateur", "citation": "toi tu vas te dire est-ce que moi ça me [concerne] ?"},
+      {"seconde": 688, "type": "annonce-suite", "citation": "il y a un mot là-dedans qui [...] porte tout le dispositif"},
+      {"seconde": 713, "type": "rappel-promesse", "citation": "Et à nouveau, il y a une phrase qui sort peu"},
+      {"seconde": 782, "type": "annonce-suite", "citation": "Donc maintenant, je vais te donner mon avis."},
+      {"seconde": 1034, "type": "rupture", "citation": "j'attends aussi le bouton [Human Slop]"}
+    ],
+    "histoires": [
+      {"seconde": 20, "acte": "anecdote", "resume": "Il est allé lire la documentation de Claude et le texte de loi que tout le monde cite."},
+      {"seconde": 843, "acte": "anecdote", "resume": "Il utilise l'IA pour le brainstorming et l'organisation des idées, mais donne toujours la direction."}
+    ],
+    "payoffs": [
+      {"seconde": 67, "resume": "Tous les nouveaux modèles Claude marquent leur texte depuis le 2 août, partout, sans option"},
+      {"seconde": 203, "resume": "La marque ne joue que sur les mots où le modèle hésite entre des synonymes"},
+      {"seconde": 304, "resume": "Objection 1 : la marque ne t'identifie pas"},
+      {"seconde": 420, "resume": "Objection 3 : pas de baisse de qualité mesurée, étude publiée dans Nature"},
+      {"seconde": 478, "resume": "Objection 4 : ça ne coûte rien, un mot remplace un autre"},
+      {"seconde": 535, "resume": "Le code est très peu marqué : peu de liberté de formulation"},
+      {"seconde": 662, "resume": "L'alinéa 2 pèse sur l'éditeur du modèle : tu n'as rien à faire"},
+      {"seconde": 720, "resume": "La phrase de l'alinéa 4 : le contenu relu et assumé par un humain est exempté"},
+      {"seconde": 1073, "resume": "Les trois choses à retenir"}
+    ],
+    "premier_payoff_seconde": 67,
+    "jargon": 1,
+    "repetitions": 1,
+    "test_du_tweet": "Depuis le 2 août, les nouveaux modèles Claude marquent leurs textes. Le filigrane ne t'identifie pas, ne dégrade rien, ne coûte rien. L'obligation pèse sur l'éditeur, et l'AI Act exempte le texte relu et assumé par un humain. Le vrai sujet, c'est le slop."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine, plein cadre, image un peu sombre et douce", "decor": "étagère ronde avec figurines et livres, fauteuil blanc, lampe à ampoule ; t-shirt bleu"},
+    "parts": {"face": 75, "ecran": 5, "motion": 20, "broll": 0},
+    "textes_ecran": "rares",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["plan-a-l-ecran", "bandeau-nom", "curseur-surligne"],
+    "charte": "Cartes noir bleuté avec surlignage vert d'eau, titres en petites capitales espacées, encarts translucides posés sur l'image ; pas de vert sapin. La miniature (bleu nuit, jaune) n'est pas reprise.",
+    "rythme": "contraste",
+    "notes": "Presque tout se passe face caméra, dans un autre décor que les autres vidéos. Les cartes sombres (date, signataires, étages de l'AI Act) arrivent par blocs ; la minute 10 n'a aucun changement de plan."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 253, "type": "autre", "cible": "une vidéo technique sur le filigrane, annoncée en description mais absente", "amene_par": "transition", "citation": "je te mets dans la description une vidéo qui le documente très bien"},
+      {"seconde": 1121, "type": "like-commentaire", "cible": "commenter le sujet et le format", "amene_par": "fin", "citation": "dis-moi en commentaire [...] ce que tu penses de ce format"},
+      {"seconde": 1148, "type": "abonnement", "cible": "s'abonner et liker", "amene_par": "fin", "citation": "c'est de t'abonner, si tu l'as pas déjà fait, et de mettre un petit like"},
+      {"seconde": 1155, "type": "video-suivante", "cible": "sa dernière vidéo, sans la nommer", "amene_par": "fin", "citation": "regarde ma dernière vidéo"}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"communaute-payante": 2, "newsletter": 1, "video-suivante": 3, "affiliation": 3, "autre": 1},
+    "commentaire_epingle": null,
+    "recap_final": true,
+    "derniere_phrase": "Donc, je te dis à bientôt et regarde ma dernière vidéo.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["l'IA comme nouvelle façon de travailler", "le filigrane vu comme de la stéganographie classique", "le slop qui éloigne de certains réseaux"],
+    "demandes": ["comment le filigrane touche le code (noms de variables, indentation)"],
+    "critiques": [],
+    "reprises": ["« slop »"],
+    "signal_promesse": "inconnu"
+  },
+  "retention": {
+    "a_30s": 0.737,
+    "a_la_moitie": 0.318,
+    "pertes": [
+      {"seconde": 46, "chute": 8.7, "passage": "« Je vais pas te sortir une [...] version technique indigeste » (annonce du plan en trois parties)", "segment": "Ce qu'on va voir"},
+      {"seconde": 441, "chute": 6.6, "passage": "« Donc ça vaut ce que ça vaut » (juste après l'étude Nature revue)", "segment": "Les cinq objections, une par une"},
+      {"seconde": 695, "chute": 4.9, "passage": "« ont délibérément écarté un texte du genre généré par IA [...] sous l'image »", "segment": "Les sanctions, et pourquoi tout le monde a bougé en même temps"},
+      {"seconde": 81, "chute": 4.2, "passage": "« Je t'ai dit effectivement tous les nouveaux modèles de Claude. » (calendrier des modèles)", "segment": "Depuis le 2 août : ce qui change, et pour qui"},
+      {"seconde": 1008, "chute": 3.4, "passage": "« Beaucoup de gens critiquent ça » (son avis sur la chasse aux sorcières)", "segment": "Le bouton « AI slop » de LinkedIn"}
+    ],
+    "remontees": [
+      {"seconde": 428, "chute": -3.4, "passage": "« Google a même fait un test » (l'article de Nature affiché, phrase surlignée)", "segment": "Les cinq objections, une par une"},
+      {"seconde": 777, "chute": -3.3, "passage": "« Donc maintenant, je vais te donner mon avis. » (début de chapitre)", "segment": "Mon avis"},
+      {"seconde": 672, "chute": -2.7, "passage": "« jusqu'à 15 millions d'euros ou 3 % du chiffre d'affaires mondial » (début de chapitre)", "segment": "Les sanctions, et pourquoi tout le monde a bougé en même temps"},
+      {"seconde": 718, "chute": -2.6, "passage": "« sauf si le contenu a fait l'objet d'un contrôle humain » (la phrase promise en intro)", "segment": "La phrase que personne ne cite"},
+      {"seconde": 568, "chute": -2.3, "passage": "« les IA Act, faut pas le voir comme un un seul bloc » (début de chapitre)", "segment": "L'AI Act : quatre étages, un seul nous concerne"}
+    ]
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 0, "preuve": "La 1re phrase ne reprend pas le titre ; le 1er plan est un visage regard baissé, sans le code ni la loupe de la miniature"},
+    "ap_boucle_curiosite": {"note": 2, "preuve": "0:29 « une phrase que je n'ai vu citer nulle part », résolue à 11:58"},
+    "ap_effort_montre": {"note": 1, "preuve": "0:20 « je suis allé voir la documentation [...] et j'ai ouvert le texte de loi » ; effort dit, sans chiffre"},
+    "ap_setup_progress_payoff": {"note": 1, "preuve": "La partie loi suit le schéma (phrase promise, étages, article 50, phrase livrée à 11:58) ; le reste est une suite de points"},
+    "ap_contraste_rythme": {"note": 1, "preuve": "13 changements de plan les minutes 1 et 3, 0 à la minute 10, 13 à la minute 17 : contraste subi par les blocs de cartes"},
+    "ap_montrer_sans_son": {"note": 0, "preuve": "Les posts cités à 0:02 ne sont pas montrés ; intro face caméra, le plan n'apparaît qu'à 0:40"},
+    "ali_douleur_histoire": {"note": 1, "preuve": "0:14 la peur décrite (textes dégradés, plus cher, se faire repérer) ; pas d'histoire vécue"},
+    "ali_coeur_unique": {"note": 2, "preuve": "12:09 « L'Europe ne te demande pas de déclarer que c'est l'IA qui a écrit. »"},
+    "alx_pont": {"note": 1, "preuve": "Contexte, preuve par l'effort et plan en trois parties comme un pont, mais après deux hooks et une boucle"},
+    "alx_pull_paint_point": {"note": 1, "preuve": "Complet sur le mécanisme (« La capitale de la France », 2:48) et les objections ; la partie loi va droit au point"},
+    "alx_nom_idee": {"note": 1, "preuve": "« liberté de formulation », « risque limité », « AI slop » et « Human slop » ; pas pour toutes les idées"},
+    "alx_phrase_finale": {"note": 1, "preuve": "4:52 « Et le fond, c'est moi qui le porte. » ; 16:03 la chasse au slop, pas à l'IA ; pas pour la plupart des parties"},
+    "alx_douleur_reve": {"note": 0, "preuve": "« Watermark Claude » porte le titre ; « ce que ça change pour toi » ne dit ni douleur ni désir"},
+    "alx_cta_tot": {"note": 0, "preuve": "Aucune offre ni ressource dans les 4 premières minutes"},
+    "ed_intro_courte": {"note": 0, "preuve": "1er point à 1:06, après posts cités, effort, boucle et plan commenté en trois parties"},
+    "ed_hook": {"note": 2, "preuve": "0:27 dissonance : « ce que j'ai trouvé ça ressemble pas du tout à ce qui circule »"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "Les objections suivent problème puis preuve (mécanisme, étude Nature) ; aucune consigne, il n'y a rien à faire"},
+    "ed_tension_relancee": {"note": 1, "preuve": "8:27 « est-ce que moi ça me [concerne] ? » ; le reste par annonces (« Alors maintenant, on va parler de la loi »)"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "Sa lecture de la loi (0:20) et son usage de l'IA (14:03) : des anecdotes, pas des histoires"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "« pas identifié, pas dégradé, rien à payer » redit à 13:22 puis au bilan"},
+    "ed_niveau_simple": {"note": 2, "preuve": "2:26 la probabilité du mot suivant expliquée avec « La capitale de la France », un token « donc un mot »"},
+    "tous_video_suivante": {"note": 0, "preuve": "19:15 « regarde ma dernière vidéo », sans la nommer"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Titre d'actu en jargon (« Watermark Claude ») ; la miniature pose une vraie question (« INDÉTECTABLE ? ») que le titre ne reprend pas.",
+    "intro_structure": "Bonne boucle (« la phrase que personne ne cite ») qui fait remonter la courbe quand elle arrive, mais 9 points perdus sur l'annonce du plan en trois parties.",
+    "habillage": "Face caméra presque tout le temps, dans un autre décor ; cartes sombres par blocs, une charte différente des autres vidéos.",
+    "idee_pour_nous": "Les passages d'avis et la phrase promise font remonter la courbe : sur une actu, annoncer l'avis tôt et le livrer plus tôt.",
+    "objectif": "vues"
+  }
+}

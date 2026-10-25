@@ -1,0 +1,590 @@
+{
+  "video_id": "LDn7rQKIFro",
+  "chaine": "tristen-obrien",
+  "titre_video": "Claude Code Just Dropped MODS. (Master it in 10 Minutes).",
+  "codeur": "agent tristen-obrien",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "actu",
+    "format_secondaire": "liste",
+    "sujet": "Les mods de Claude Code : cinq mods construits, puis comment faire les siens et ce que ça coûte",
+    "outils": [
+      "Claude Code",
+      "Claude mods",
+      "Higgsfield",
+      "Nano Banana Pro",
+      "Opus 5.5"
+    ],
+    "niveau": "intermediaire",
+    "objectif_probable": "vues"
+  },
+  "titre": {
+    "attente_au_clic": "Découvrir la nouvelle fonction /mods de Claude Code et savoir s'en servir en 10 minutes.",
+    "schema": "<Outil> Just Dropped <FONCTION>. (Master it in <N> Minutes).",
+    "promesse": "Maîtriser les mods de Claude Code en 10 minutes",
+    "audace": "audacieux",
+    "registre": "jargon",
+    "briques": [
+      "vitesse",
+      "resultat"
+    ],
+    "marqueurs": [
+      "nouveaute",
+      "duree",
+      "majuscules"
+    ],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "émerveillement, bouche ouverte",
+    "regard": "element",
+    "texte": "Claude > /mods",
+    "texte_mots": 2,
+    "repete_titre": "partiel",
+    "elements": [
+      "logo et mot Claude",
+      "quatre interrupteurs allumés en orange",
+      "pastille de terminal « > /mods » au contour arc-en-ciel",
+      "visage à gauche"
+    ],
+    "nb_elements": 4,
+    "fond": "sombre uni, brun très foncé",
+    "couleurs": [
+      "brun-noir",
+      "orange Claude",
+      "arc-en-ciel"
+    ],
+    "curiosity_gap": "nouveaute",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "So Claude has just given us one of the biggest updates [...] ever",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Face caméra à gauche ; à droite une carte jaune « JUST DROPPED » avec le logo Claude, puis « ONE OF THE BIGGEST UPDATES »",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": [
+      "actu-annonce",
+      "pont"
+    ],
+    "preuve": {
+      "type": "effort",
+      "seconde": 20,
+      "description": "« the six clawed mods that I built for myself this week », avec six cartes de mods à l'écran (dont une « Surprise »)"
+    },
+    "annonce_plan": {
+      "presente": true,
+      "nb_points": 6,
+      "a_l_ecran": true
+    },
+    "boucle_vers_la_fin": {
+      "presente": true,
+      "citation": "Claude code has a built-in skill that teaches Claude how to build these mods",
+      "seconde_resolution": 520,
+      "tenue": "oui"
+    },
+    "seconde_premier_point": 30,
+    "attente_tenue": "oui",
+    "attente_note": "La fonction est expliquée, montrée et la marche à suivre donnée à 8:40. L'intro annonce six mods : il en montre cinq, plus une barre de sessions en bonus dont il conditionne la vidéo aux commentaires."
+  },
+  "structure": {
+    "modele": "liste-numerotee",
+    "segments": [
+      {
+        "debut": 0,
+        "fin": 30,
+        "titre": "Claude Mods: the biggest Claude Code update yet",
+        "role": "intro",
+        "pull": false,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": true
+      },
+      {
+        "debut": 30,
+        "fin": 52,
+        "titre": "What a Claude mod is",
+        "role": "point",
+        "pull": false,
+        "paint": false,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": true,
+        "payoff": false,
+        "relance_sortie": true
+      },
+      {
+        "debut": 52,
+        "fin": 75,
+        "titre": "Mods vs skills vs connectors",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": false,
+        "phrase_finale": true,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 75,
+        "fin": 181,
+        "titre": "Mod 1: Clean View",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": true,
+        "consignes": false,
+        "payoff": true,
+        "relance_sortie": true
+      },
+      {
+        "debut": 181,
+        "fin": 227,
+        "titre": "Mod 2: Employee Control Panel",
+        "role": "point",
+        "pull": true,
+        "paint": false,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": true
+      },
+      {
+        "debut": 227,
+        "fin": 312,
+        "titre": "Mod 3: Agent Dock",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": true
+      },
+      {
+        "debut": 312,
+        "fin": 331,
+        "titre": "Bonus: the Session Bar",
+        "role": "cta",
+        "pull": false,
+        "paint": false,
+        "point": false,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": true
+      },
+      {
+        "debut": 331,
+        "fin": 365,
+        "titre": "Mod 4: Claude Photos, why one tool",
+        "role": "point",
+        "pull": true,
+        "paint": false,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 365,
+        "fin": 467,
+        "titre": "Mod 4: /create demo with Higgsfield",
+        "role": "sponsor",
+        "pull": false,
+        "paint": true,
+        "point": true,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 467,
+        "fin": 491,
+        "titre": "Higgsfield pitch",
+        "role": "sponsor",
+        "pull": true,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 491,
+        "fin": 520,
+        "titre": "Mod 5: Road Trip",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": true,
+        "preuve": true,
+        "consignes": false,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 520,
+        "fin": 574,
+        "titre": "How to build your own mods",
+        "role": "point",
+        "pull": true,
+        "paint": false,
+        "point": true,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 574,
+        "fin": 600,
+        "titre": "What mods cost",
+        "role": "fin",
+        "pull": false,
+        "paint": false,
+        "point": true,
+        "nom": false,
+        "phrase_finale": true,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      }
+    ],
+    "relances": [
+      {
+        "seconde": 17,
+        "type": "annonce-suite",
+        "citation": "I'm going to walk you through how you can build your own mods."
+      },
+      {
+        "seconde": 52,
+        "type": "question-spectateur",
+        "citation": "you might be thinking, \"Well, I already have skills and I already have connectors.\""
+      },
+      {
+        "seconde": 135,
+        "type": "question-spectateur",
+        "citation": "But how does a claude mod change what's on my screen?"
+      },
+      {
+        "seconde": 180,
+        "type": "boucle-ouverte",
+        "citation": "But more on that later."
+      },
+      {
+        "seconde": 227,
+        "type": "annonce-suite",
+        "citation": "the next mod is going to put a whole team of employees to work"
+      },
+      {
+        "seconde": 300,
+        "type": "rupture",
+        "citation": "Now, heads up on this one, though."
+      },
+      {
+        "seconde": 312,
+        "type": "annonce-suite",
+        "citation": "the next mod is one that I use every single day. But before"
+      },
+      {
+        "seconde": 520,
+        "type": "question-spectateur",
+        "citation": "you're probably wondering how you can build these yourself."
+      }
+    ],
+    "histoires": [
+      {
+        "seconde": 78,
+        "acte": "anecdote",
+        "resume": "Sur un projet, il ne veut pas voir défiler le code, juste où en est Claude : d'où Clean View."
+      },
+      {
+        "seconde": 335,
+        "acte": "anecdote",
+        "resume": "Il fait des photos et vidéos IA chaque jour et passe par un seul outil, Higgsfield."
+      }
+    ],
+    "payoffs": [
+      {
+        "seconde": 107,
+        "resume": "Le bruit du terminal disparaît, il ne reste qu'une checklist"
+      },
+      {
+        "seconde": 210,
+        "resume": "Modèle et effort changent en un clic, la barre d'état suit"
+      },
+      {
+        "seconde": 286,
+        "resume": "Chaque agent a sa carte, sa tâche et sa barre de progression"
+      },
+      {
+        "seconde": 460,
+        "resume": "La photo de lui dans un train, faite sans quitter Claude"
+      },
+      {
+        "seconde": 506,
+        "resume": "Le jeu de course tourne pendant que Claude travaille"
+      },
+      {
+        "seconde": 540,
+        "resume": "Le mod décrit apparaît après le rechargement"
+      }
+    ],
+    "premier_payoff_seconde": 107,
+    "jargon": 2,
+    "repetitions": 1,
+    "test_du_tweet": "Claude Code lance les mods : tu décris une fonction, Claude la construit dans Claude Code. Cinq exemples (vue épurée, sélecteur de modèle, équipe d'agents, studio photo Higgsfield, jeu de course), puis comment créer, sauver en plugin et ce que ça coûte."
+  },
+  "habillage": {
+    "face_camera": {
+      "presente": true,
+      "cadrage": "poitrine ; souvent en vignette ou en demi-écran à côté d'une carte",
+      "decor": "bureau, étagères, enseigne Back to the Future, lumière violette"
+    },
+    "parts": {
+      "face": 20,
+      "ecran": 45,
+      "motion": 35,
+      "broll": 0
+    },
+    "textes_ecran": "constants",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": [
+      "plan-a-l-ecran",
+      "cartes-chapitre",
+      "etiquettes",
+      "split-screen",
+      "chiffres-animes",
+      "curseur-surligne",
+      "zooms-ecran",
+      "emojis-stickers"
+    ],
+    "charte": "Fonds pleins orange, vert sapin, bleu, violet et jaune ; texte blanc avec mots-clés jaunes en sans-serif gras ; étiquettes en capitales à chasse fixe (« THE REAL JOB », « THE NEXT MOD »). Le mot MODS en lettres multicolores reprend l'arc-en-ciel de la miniature, pas son fond sombre.",
+    "rythme": "contraste",
+    "notes": "Le sponsor est l'un des mods : la démo Higgsfield occupe plus de deux minutes au cœur de la vidéo. Un carton jaune plein écran « Heads up. » marque la mise en garde sur le coût des 50 agents."
+  },
+  "fin": {
+    "ctas": [
+      {
+        "seconde": 325,
+        "type": "like-commentaire",
+        "cible": "s'abonner et commenter « session bar » pour obtenir une vidéo dessus",
+        "amene_par": "transition",
+        "citation": "if you like it, please go ahead and subscribe and comment session bar"
+      },
+      {
+        "seconde": 365,
+        "type": "sponsor",
+        "cible": "Higgsfield",
+        "amene_par": "pendant-demo",
+        "citation": "I did reach out to Higsfield to see if they wanted to partner"
+      },
+      {
+        "seconde": 488,
+        "type": "sponsor",
+        "cible": "Higgsfield, lien en description",
+        "amene_par": "apres-valeur",
+        "citation": "The link is in my description to try out Hicksfield."
+      },
+      {
+        "seconde": 591,
+        "type": "sponsor",
+        "cible": "Higgsfield, lien en description",
+        "amene_par": "fin",
+        "citation": "Thanks again to Higsfield for sponsoring this video and check out the link"
+      }
+    ],
+    "sponsor": {
+      "present": true,
+      "nom": "Higgsfield",
+      "debut": 351,
+      "duree": 140,
+      "forme": "integre-a-la-demo"
+    },
+    "liens_description": {
+      "sponsor": 2,
+      "produit": 1,
+      "lead-magnet": 1
+    },
+    "commentaire_epingle": {
+      "texte": "Connect the Higgsfield MCP to Claude in 30 seconds (lien affilié)",
+      "type": "sponsor"
+    },
+    "recap_final": false,
+    "derniere_phrase": "Thanks again to Higsfield for sponsoring this video and check out the link",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": [
+      "« session bar » répété en masse, en réponse à l'appel",
+      "le montage et les animations",
+      "partager les mods et la barre Tristen's tools",
+      "le terminal contre l'appli de bureau"
+    ],
+    "demandes": [
+      "une vidéo sur la session bar",
+      "le prompt de Clean View",
+      "comment construire la barre Tristen's tools",
+      "comment il monte ses vidéos"
+    ],
+    "critiques": [
+      "plusieurs mods existent déjà dans l'appli de bureau",
+      "« nothing can be mastered in ten minutes »",
+      "des mods qui mangent des tokens",
+      "le prompt d'Employee Control Panel a disparu du site"
+    ],
+    "reprises": [
+      "« session bar » (des dizaines de commentaires)",
+      "« Tristen's tools »",
+      "« Clean View »"
+    ],
+    "signal_promesse": "tenue"
+  },
+  "techniques": {
+    "ap_alignement_5s": {
+      "note": 1,
+      "preuve": "1re phrase « one of the biggest updates », le mot mods n'arrive qu'à 0:04 ; 1er plan reprend visage et logo Claude, pas « /mods »"
+    },
+    "ap_boucle_curiosite": {
+      "note": 1,
+      "preuve": "0:22 une carte « Surprise ? » parmi les six mods, résolue à 5:12 (session bar) ; ouverte surtout à l'écran"
+    },
+    "ap_effort_montre": {
+      "note": 1,
+      "preuve": "0:20 « the six clawed mods that I built for myself this week » ; pas d'heures ni d'essais"
+    },
+    "ap_setup_progress_payoff": {
+      "note": 2,
+      "preuve": "Chaque mod : besoin, démo, résultat ; Claude Photos : la photo dans un train voulue (6:25), réglée, livrée (7:40)"
+    },
+    "ap_contraste_rythme": {
+      "note": 1,
+      "preuve": "De 7 à 22 changements de visuel par minute ; plus lent sur la démo sponsor, plus rapide sur Road Trip, sans rupture nette"
+    },
+    "ap_montrer_sans_son": {
+      "note": 2,
+      "preuve": "Planche intro : « JUST DROPPED », « THEY CALL IT CLAUDE MODS », « Think of a feature you wish it had », « Turn it into ANY TOOL. »"
+    },
+    "ali_douleur_histoire": {
+      "note": 0,
+      "preuve": "Ni douleur ni histoire perso dans l'intro"
+    },
+    "ali_coeur_unique": {
+      "note": 2,
+      "preuve": "0:06 et 9:44 « a mod is just a feature that you describe, and Claude [...] build it »"
+    },
+    "alx_pont": {
+      "note": 2,
+      "preuve": "Titre repris (0:00), contexte (0:06), preuve (six mods cette semaine), annonce du plan, sans accroche"
+    },
+    "alx_pull_paint_point": {
+      "note": 2,
+      "preuve": "Clean View, Agent Dock (boulangerie Golden Crumb), Claude Photos et Road Trip ont un pourquoi, un exemple et l'action"
+    },
+    "alx_nom_idee": {
+      "note": 2,
+      "preuve": "Clean View, Employee Control Panel, Agent Dock, Session Bar, Road Trip ; « WATCH, CHANGE, HANDLE » à l'écran"
+    },
+    "alx_phrase_finale": {
+      "note": 1,
+      "preuve": "1:03 « But a mod runs inside of Claude code itself. » ; 9:44 la phrase de fin ; rare entre les deux"
+    },
+    "alx_douleur_reve": {
+      "note": 0,
+      "preuve": "Le nom de l'outil et de la fonction porte le titre ; « Master it » promet l'outil, pas un désir du spectateur"
+    },
+    "alx_cta_tot": {
+      "note": 0,
+      "preuve": "Aucun lead magnet ni offre dite dans la vidéo ; les prompts gratuits ne sont que dans la description"
+    },
+    "ed_intro_courte": {
+      "note": 1,
+      "preuve": "Premier point à 0:30 après six phrases et un plan : plus long que trois lignes"
+    },
+    "ed_hook": {
+      "note": 1,
+      "preuve": "0:06 tu décris une fonction et Claude Code se la construit : un fait qui étonne, mais aucun des trois types purs"
+    },
+    "ed_probleme_preuve_consignes": {
+      "note": 2,
+      "preuve": "Clean View, Control Panel, Agent Dock et Photos ouvrent sur un problème (« I hate typing in the slash commands »), puis démo et commande (/dock, /create)"
+    },
+    "ed_tension_relancee": {
+      "note": 2,
+      "preuve": "2:15 « But how does a claude mod change what's on my screen? » ; 8:40 « you're probably wondering how you can build these yourself »"
+    },
+    "ed_histoire_vecue": {
+      "note": 1,
+      "preuve": "1:18 il ne veut pas voir défiler le code ; 5:35 il fait des images IA chaque jour : des anecdotes"
+    },
+    "ed_sans_surexplication": {
+      "note": 1,
+      "preuve": "Les slash commands redites trois fois sur le mod 2 ; quelques redites"
+    },
+    "ed_niveau_simple": {
+      "note": 2,
+      "preuve": "0:59 « A skill tells Claude how to do a job. A connector plugs Claude [...] » ; 4:00 les agents expliqués"
+    },
+    "tous_video_suivante": {
+      "note": 0,
+      "preuve": "Aucune vidéo suivante ; une vidéo sur la session bar promise seulement s'il y a assez de commentaires"
+    }
+  },
+  "a_retenir": {
+    "titre_miniature": "Le gabarit « <Outil> Just Dropped <FONCTION>. (Master it in N Minutes). » ; la miniature tient en logo Claude, commande « > /mods » en arc-en-ciel et visage étonné. VidIQ relève deux versions de la miniature, la seconde 15 heures après la sortie.",
+    "intro_structure": "Intro en pont sans accroche, puis la différence mods, skills, connecteurs avant le premier mod. Un appel « commente session bar » au milieu a rempli les commentaires du même mot.",
+    "habillage": "Cartes de chapitre par mod, captures sur fond de couleur, carton plein écran pour les mises en garde ; le sponsor est intégré comme l'un des mods.",
+    "idee_pour_nous": "Demander un mot précis en commentaire contre la promesse d'une vidéo (« commente session bar ») : ça remplit les commentaires et mesure la demande pour la vidéo suivante.",
+    "objectif": "vues"
+  }
+}

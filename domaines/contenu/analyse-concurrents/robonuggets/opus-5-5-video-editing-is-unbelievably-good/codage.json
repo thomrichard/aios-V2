@@ -1,0 +1,156 @@
+{
+  "video_id": "YKFpSe28mlg",
+  "chaine": "robonuggets",
+  "titre": "Opus 5.5 Video Editing is Unbelievably Good (master it in 12 mins)",
+  "codeur": "agent robonuggets",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "tuto",
+    "format_secondaire": "actu",
+    "sujet": "Monter des vidéos et du motion design avec Opus 5.5 en trois niveaux : un seul prompt, storyboard, direction par commentaires",
+    "outils": ["Opus 5.5", "Claude", "Rubric Editor", "Excalidraw", "HTML, CSS, JavaScript", "three.js", "FFmpeg"],
+    "niveau": "intermediaire",
+    "objectif_probable": "communaute"
+  },
+  "titre": {
+    "attente_au_clic": "Voir à quel point Opus 5.5 monte bien une vidéo, et apprendre à s'en servir en 12 minutes.",
+    "schema": "<Modèle> <Usage> is Unbelievably Good (master it in <N> mins)",
+    "promesse": "Maîtriser le montage vidéo avec Opus 5.5 en 12 minutes",
+    "audace": "audacieux",
+    "registre": "mixte",
+    "briques": ["vitesse", "resultat"],
+    "marqueurs": ["chiffre", "duree"],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "neutre (Jay dans l'aperçu du logiciel) ; mascotte qui montre l'écran",
+    "regard": "camera",
+    "texte": "OPUS 5.5 TOO GOOD",
+    "texte_mots": 4,
+    "repete_titre": "partiel",
+    "elements": ["mascotte Claude orange sur une chaise de bureau, qui montre l'écran", "écran large avec un logiciel de montage : médias, aperçu de Jay, timeline", "étiquettes « OPUS 5.5 » et « TOO GOOD » avec flèches"],
+    "nb_elements": 3,
+    "fond": "clair, blanc cassé, bureau en bois",
+    "couleurs": ["blanc cassé", "orange Claude", "noir", "bois clair"],
+    "curiosity_gap": "resultat",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Opus 5.5 for video editing and motion graphics has gotten pretty unbelievable lately.",
+    "premiere_phrase_reprend_titre": "oui",
+    "premier_plan": "L'interface Claude avec l'aperçu d'une « Claude showreel 2026, 15 seconds », Jay en vignette en bas à gauche",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": ["demo-d-abord", "actu-annonce", "pont"],
+    "preuve": {
+      "type": "resultat-montre",
+      "seconde": 10,
+      "description": "Deux showreels faits par Opus en un prompt, puis 0:43 une vidéo de la chaîne « that already has 300,000 views » montée avec Opus 5.5"
+    },
+    "annonce_plan": {"presente": false, "nb_points": null, "a_l_ecran": false},
+    "boucle_vers_la_fin": {"presente": false, "citation": "", "seconde_resolution": null, "tenue": null},
+    "seconde_premier_point": 126,
+    "attente_tenue": "oui",
+    "attente_note": "Le résultat est montré dès la 1re seconde et les trois niveaux sont donnés. Mais le premier niveau n'arrive qu'à 4:11, et l'outil qui fait les niveaux 2 et 3 (Rubric Editor) n'est pas disponible : les commentaires demandent quand il sort."
+  },
+  "structure": {
+    "modele": "pas-a-pas",
+    "segments": [
+      {"debut": 0, "fin": 126, "titre": "Intro : showreels en un prompt, la vidéo à 300 000 vues, Jay", "role": "intro", "pull": true, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 126, "fin": 218, "titre": "What happens under the hood : du code, pas de modèle vidéo", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 218, "fin": 251, "titre": "La communauté RoboNuggets", "role": "cta", "pull": true, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 251, "fin": 349, "titre": "Niveau 1 : un seul prompt (tester un modèle, se faire un portfolio)", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 349, "fin": 526, "titre": "Niveau 2 : faire storyboarder par Claude, commenter, puis construire", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 526, "fin": 705, "titre": "Niveau 3 : diriger la vidéo finie dans le Rubric Editor", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 705, "fin": 774, "titre": "Wrap up : le goût et le système de travail font la différence", "role": "fin", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 251, "type": "annonce-suite", "citation": "you need to understand that there's still levels to this skill still"},
+      {"seconde": 296, "type": "rupture", "citation": "you are probably here in the red cell"},
+      {"seconde": 349, "type": "annonce-suite", "citation": "the way that you do that is to move towards level two"},
+      {"seconde": 373, "type": "question-spectateur", "citation": "So, why is storyboarding even important in the first place?"},
+      {"seconde": 526, "type": "annonce-suite", "citation": "Now, let's take this one level up"}
+    ],
+    "histoires": [
+      {"seconde": 43, "acte": "anecdote", "resume": "Une de ses vidéos récentes, déjà à 300 000 vues, a été montée avec Opus 5.5."},
+      {"seconde": 627, "acte": "vision-build", "resume": "Pour cette vidéo, Claude garde les bonnes prises du rush ; Jay commente un plan (« focus on the title of the page ») et l'animation revient corrigée."}
+    ],
+    "payoffs": [
+      {"seconde": 10, "resume": "Un showreel de motion design fait par Opus en un seul prompt"},
+      {"seconde": 150, "resume": "Chaque élément de la vidéo se sélectionne : tout est du code"},
+      {"seconde": 445, "resume": "Le storyboard : captures et description de chaque animation, avant tout rendu"},
+      {"seconde": 482, "resume": "Un commentaire sur une image du storyboard, avec son horodatage"},
+      {"seconde": 662, "resume": "Le commentaire de Jay et l'animation corrigée dans la vraie vidéo"}
+    ],
+    "premier_payoff_seconde": 10,
+    "jargon": 2,
+    "repetitions": 2,
+    "test_du_tweet": "Opus 5.5 fait du motion design en code, sans modèle vidéo. Trois niveaux : un seul prompt (pour tester et faire un portfolio), un storyboard commenté avant de construire, puis diriger la vidéo finie par commentaires horodatés. Le goût reste la différence."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "vignette en carré arrondi en bas à gauche presque tout le temps", "decor": "bureau, étagère, fleurs ; casquette blanche"},
+    "parts": {"face": 5, "ecran": 75, "motion": 20, "broll": 0},
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["plan-a-l-ecran", "fleches-annotations", "etiquettes", "curseur-surligne", "logo-chaine"],
+    "charte": "Showreels noir et orange Claude en ouverture ; ensuite un tableau Excalidraw sombre dessiné en direct, écriture manuscrite orange, bleue et verte ; captures du Rubric Editor. La miniature claire reprend la mascotte et un logiciel de montage.",
+    "rythme": "contraste",
+    "notes": "27 changements de plan la 1re minute (showreels), puis 0 à 5 par minute sur le tableau Excalidraw. Le Rubric Editor, outil de la communauté en version bêta, porte les niveaux 2 et 3."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 218, "type": "communaute-payante", "cible": "RoboNuggets (Claude Living Masterclass, cours Agents as a Service)", "amene_par": "apres-valeur", "citation": "if you want to learn how to build and sell AI systems that businesses actually pay for"},
+      {"seconde": 247, "type": "communaute-payante", "cible": "lien dans le commentaire épinglé", "amene_par": "apres-valeur", "citation": "check that just in the pin comment below"},
+      {"seconde": 333, "type": "lead-magnet", "cible": "PDF de 9 pages avec les prompts (communauté Skool gratuite)", "amene_par": "apres-valeur", "citation": "I just made this nine-page PDF, which you can just send to Claude"},
+      {"seconde": 425, "type": "produit", "cible": "l'interface de storyboard, outil développé pour la communauté", "amene_par": "pendant-demo", "citation": "which we're developing as part of the toolkit for our community"},
+      {"seconde": 582, "type": "produit", "cible": "Rubric Editor en bêta", "amene_par": "pendant-demo", "citation": "another beta version of the toolkit that we're developing for our community"},
+      {"seconde": 748, "type": "lead-magnet", "cible": "PDF", "amene_par": "fin", "citation": "you can just grab this PDF and send it to your agent"},
+      {"seconde": 756, "type": "abonnement", "cible": "s'abonner", "amene_par": "fin", "citation": "consider tapping subscribe below if it is"}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"lead-magnet": 1, "communaute-payante": 1, "produit": 1, "service": 1, "affiliation": 5, "abonnement": 1, "reseaux": 4},
+    "commentaire_epingle": {"texte": "Le PDF AI Motion Graphics gratuit (Skool gratuit, « search for n77 ») et la communauté payante", "type": "lead-magnet"},
+    "recap_final": true,
+    "derniere_phrase": "consider tapping subscribe below if it is [...] I'll see you all next time. Cheers.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["l'essai en un prompt qui rate (22 likes, avec humour)", "les remerciements pour suivre l'actualité", "l'envie d'avoir l'outil de montage de Jay"],
+    "demandes": ["quand sort l'appli et comment elle est faite", "si Rubric est open source pour les membres", "la même chose dans DaVinci Resolve ou Final Cut", "le meilleur modèle de voix off", "nettoyer un rush face caméra (coupes, bruit)"],
+    "critiques": ["5:18 l'exemple d'« agence » jugé laid", "une demande d'entrée dans la communauté en attente depuis des mois"],
+    "reprises": ["« one shot »", "« Rubric »"],
+    "signal_promesse": "tenue"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "1re phrase = titre ; 1er plan l'interface Claude avec un aperçu vidéo, pas le logiciel de montage de la miniature"},
+    "ap_boucle_curiosite": {"note": 0, "preuve": "Aucune question ouverte dans l'intro"},
+    "ap_effort_montre": {"note": 1, "preuve": "1:34 « I've been testing this model heavily for automated videos », sans chiffre"},
+    "ap_setup_progress_payoff": {"note": 1, "preuve": "Trois niveaux qui montent vers la qualité de production, mais sur trois exemples différents (showreel, storyboard Rubric, vidéo à 300 000 vues)"},
+    "ap_contraste_rythme": {"note": 2, "preuve": "27 changements de plan la 1re minute, 0 à la 7e : passages nettement plus rapides et plus lents"},
+    "ap_montrer_sans_son": {"note": 1, "preuve": "Les showreels (CLAUDE, MOTION, SPACING) impressionnent sans le son, mais rien ne dit à l'écran qu'Opus les a faits, à part le prompt"},
+    "ali_douleur_histoire": {"note": 0, "preuve": "Aucune douleur ni histoire vécue dans l'intro"},
+    "ali_coeur_unique": {"note": 2, "preuve": "12:02 « the real differentiator [...] would be your own taste, plus also the operating system »"},
+    "alx_pont": {"note": 1, "preuve": "Contexte (1:01), preuve (0:43) et crédits (1:54), mais ouvert par la démo et sans plan annoncé"},
+    "alx_pull_paint_point": {"note": 2, "preuve": "Chaque niveau : pourquoi (6:13 « why is storyboarding even important »), un schéma ou une démo, l'action"},
+    "alx_nom_idee": {"note": 2, "preuve": "« There's levels to this », « Level 1: One-shot prompting », « Level 2: Storyboarding », « Sketch it first, comment, then build » à l'écran"},
+    "alx_phrase_finale": {"note": 1, "preuve": "5:24 « you probably won't get there with one shot » ; 12:02 sur le goût ; pas sur chaque niveau"},
+    "alx_douleur_reve": {"note": 1, "preuve": "« master it » et « Unbelievably Good » parlent du désir, mais le modèle porte le titre"},
+    "alx_cta_tot": {"note": 1, "preuve": "Communauté à 3:38 mais sans lien avec le sujet ; le PDF lié au sujet arrive à 5:33"},
+    "ed_intro_courte": {"note": 0, "preuve": "Premier point à 2:06, premier niveau à 4:11"},
+    "ed_hook": {"note": 1, "preuve": "« has gotten pretty unbelievable lately » avec la démo : une affirmation, aucun des trois types purs"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "Niveaux 2 et 3 : le problème (6:15, 9:00), puis les consignes, puis la preuve en démo : l'ordre n'est pas celui d'Ed"},
+    "ed_tension_relancee": {"note": 1, "preuve": "6:13 « why is storyboarding even important? » ; ailleurs des annonces (« let's take this one level up »)"},
+    "ed_histoire_vecue": {"note": 2, "preuve": "10:27 la vidéo à 300 000 vues : le rush, le commentaire de Jay, l'animation corrigée"},
+    "ed_sans_surexplication": {"note": 0, "preuve": "« much more effective if you have an interface » redit à 7:53 et 9:30 ; « copy all of the comments » redit à 8:28, 10:20 et 11:37"},
+    "ed_niveau_simple": {"note": 1, "preuve": "HTML, CSS, JavaScript, three.js, FFmpeg cités sans explication (« you don't even need to understand all of this »)"},
+    "tous_video_suivante": {"note": 0, "preuve": "10:47 « I made a separate lesson on this », sans la nommer ; fin sans vidéo précise"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Aucun changement relevé par VidIQ. Même gabarit de miniature que la vidéo Sonnet du 2 octobre (mascotte au bureau, logiciel de montage, Jay dans l'aperçu). La moins vue des 10.",
+    "intro_structure": "Deux minutes d'intro (démos, la vidéo à 300 000 vues, crédits), la communauté à 3:38 avant le 1er niveau, qui arrive à 4:11. Le cadre « trois niveaux » est clair et nommé.",
+    "habillage": "Peu habillé : vignette, captures, tableau Excalidraw dessiné en direct (0 changement de plan à la 7e minute) après une minute de showreels très rythmée.",
+    "idee_pour_nous": "Le cadre « il y a des niveaux » (un prompt, storyboard, direction) sert pour tout tuto de création avec l'IA ; mais entrer dans le 1er niveau avant 1 minute.",
+    "objectif": "vues"
+  }
+}

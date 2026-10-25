@@ -1,0 +1,86 @@
+[00:00] Someone just used Claude to rebuild all of Adobe's products and open-sourced it for free for anyone to use.
+[00:06] So, they have a version of Photoshop called Photocraft.
+[00:09] Adobe Premiere is Filmcraft.
+[00:11] Adobe After Effects is Effectcraft.
+[00:13] And then they also have open-source versions for Lightroom, InDesign, Adobe Acrobat, and Illustrator.
+[00:20] And this is all coming from this group called Artcraft who said that they use Opus 5.5 to make clean room reimplementations of Adobe software written purely from scratch using this coding language called Rust.
+[00:30] And in case that's the first time you heard of that term, it's quite important in this context because if we're talking about a clean room reimplementation, that essentially means that they didn't take Adobe software and reverse engineer it.
+[00:39] But what they're claiming is that they rebuilt it from scratch, which means that it is perfectly legal in this case.
+[00:44] And for you to try out these products, all you need to do is to go to getartcraft.com/apps and you'll be able to download the current versions of all these software completely for free.
+[00:54] Or if you prefer, since all of this code is open-source, you can actually just go to their GitHub, which is at github.com/storytold and you can just point your Claude code to this repo and grab the ones that you
+[01:05] need.
+[01:05] So, you can see Photocraft here already has 20,000 stars only a few hours after they launched.
+[01:11] And if I just open Photocraft here, like you can see, this is a pretty sophisticated clone or copy of Photoshop, right?
+[01:17] You would have all of the functionality that you would expect and at least a lot of the shortcuts that I think I may be used to are already here.
+[01:24] So, if we want to go and edit this text, we can definitely do that.
+[01:28] If I go to the effects panel, that is also available for us.
+[01:32] And all these layer styles, if you've ever used Photoshop, this would be familiar to you.
+[01:36] And overall, for something that's probably only a few days old and with only a few weeks development, like a lot of the features of Photoshop that you would expect are already here.
+[01:45] Obviously, it's not a perfect replica because again, it just released like 24 hours ago, maybe less than 24 hours ago.
+[01:51] But if you use Photoshop a lot for your work, then this is definitely worth checking out.
+[01:55] It's the same thing with Filmora Craft, which is their Adobe Premiere clone.
+[02:00] And here you can see, if I just mute the audio here, a lot of the features that you would expect, like being able to zoom into the timeline, and a lot of the shortcuts that I'm also used to,
+[02:08] are also properly encoded and I guess coded into this program.
+[02:13] You would also have the effect controls here, where I guess you can size up and scale up the clip if you want.
+[02:19] You can move the position around.
+[02:20] So, really, just from initially looking at it, a lot of the Adobe Premiere features that you're used to is already built in here, and it's entirely for free.
+[02:29] Another Adobe product that I myself have spent some time in is Adobe After Effects.
+[02:33] And honestly, amongst all of Adobe's products, I would think Adobe After Effects would be the most complex to vibe code or create, because there's so much complexity that they need to build into this thing.
+[02:42] Because if you haven't used Adobe After Effects before, essentially, there's a lot of things that you can do with this.
+[02:47] If you want to add in effects to your motion graphic animations, like these sparks layer, or if you want to add lens flares like these, that's all within the realm of possibilities that you can do with Adobe After
+[02:57] Effects.
+[02:58] And this group has just vibe coded this whole software to become open source and free.
+[03:03] And I'll talk more about where this fits into your tool stack, especially with the presence of really powerful models now, like Opus 5.5 and Fable, that can actually create videos for you.
+[03:12] And given the fact that you have a lot of really good image models now that can pretty much one-shot posters for us, I still think that within the industry, definitely in the creative industry, there's a lot of space
+[03:22] still for products and softwares like these, where you have these individual layers that you can actually edit individually if you need finer tweaks, especially for a lot of production-level work.
+[03:31] And just to go quickly through the other softwares that they released, this is Vector Craft, which is their replacement for Adobe Illustrator, which Illustrator, that's a software that a lot of designers use a lot, because that's the main
+[03:41] way by which you get these scalable vector graphics, where even if you expand it to multiple scales, it doesn't get pixelated.
+[03:49] So, they've definitely captured that here.
+[03:51] This is Design Craft, which is the replacement for InDesign.
+[03:54] And mainly, this is being used for a lot of magazines spreads, because a lot of its functionalities are optimized for that use case.
+[04:01] And finally, you have LightCraft, which is their clone for Lightroom.
+[04:05] Oh, and another one is PDFCraft, which is their answer for Adobe Acrobat.
+[04:09] So, that is also free and open source.
+[04:11] Now, the thing that I was curious about when I first tried these out, because since these are all created using Claude, then supposedly, whoever the creator is, they probably optimize this so that Claude and other agentic platforms can
+[04:21] use them, right?
+[04:22] Well, the good news is that yes, Claude can absolutely drive these platforms, at least to a degree.
+[04:27] And when I was testing them out, at least initially, you can see I asked Claude to just write a pretty sophisticated prompt in here, just to get me to a point where I can actually see what it can
+[04:36] do.
+[04:36] And for this one, I'm using EffectCraft, which is the Adobe After Effects clone.
+[04:40] And that one prompt was actually the one who created this entire animation, along with all of these layers that are now ready for me to edit and refine, if I so wish.
+[04:49] Now, I do realize that a logo animation is probably not the best example, right?
+[04:53] Because a video generation model like Kling or Cedas it can easily make these types of animations, and even the latest models now like Opus 5.5, which I've covered before, can pretty easily create these HTML video animations right now.
+[05:07] But you can imagine if you have a need for a much longer video that you would need something like the power of After Effects in order to create, then trying out this tool, which is again open source and
+[05:16] free, and just have Claude create for you a first draft is definitely a much better experience versus you having to create all these layers by hand and animating things yourself.
+[05:24] Another good use case is this one for DesignCraft, which is the Adobe InDesign clone.
+[05:30] If you need to do layouts for magazine spreads and the like, you can see this whole thing was created by Claude, so I did not obviously write myself, because I was just testing if Claude can actually drive these
+[05:39] software products and create a good first draft for me.
+[05:42] And it turns out that it can definitely do that.
+[05:45] And before you started with letting your AI agents drive the software, you can actually just use this prompt.
+[05:49] And you can see that already has the link to where the open source code is located.
+[05:54] And the reason why agents can actually drive this is because Art C raft included this CLI, which basically stands for a command line interface tool, which a lot of AI agents really like because it helps them use the
+[06:05] software effectively.
+[06:06] They actually include a markdown file, which is this agents.md, which if you're new, just think of that as a handbook that you can have your agents read and they'll be able to understand and use what are the tools
+[06:17] and what are the different features that each of these software pieces have so that they can effectively drive it.
+[06:22] So, if you send this prompt to your agent, they'll be able to guide you to install and set these up without any problems.
+[06:28] Now, obviously, another question to this is given the fact that Claude and the latest models like Opus, Sonnet 5.5 was are really good now when it comes to video creation all using code.
+[06:38] And because you have a lot of generative AI models like Mannequin, Banana, GPT Image 2, and the video models like SeeDance that are available in platforms like Higgs Field and KAI, is there still a need for these types
+[06:49] of software?
+[06:50] And I think that is highly contextual, but in the larger universe of creative work, I definitely think that these are still very relevant.
+[06:57] Because the thing with this subset, which I'm just dubbing as AI creation, most of the time you actually get the final result from just a single prompt.
+[07:05] I find that it's much harder to refine for you to get to the final result and look that you want.
+[07:09] And so, for this type of creative work, even though we're getting a lot of great first drafts now, it is actually much harder polish.
+[07:16] Now, right now, this whole manual creative space where we're using Photoshop or Premiere in order to do creative work, if you ask Claude or an agent to use these platforms, at least from just a couple of tests, they
+[07:28] give you somewhat okay first drafts, not always the best, but they're much easier to refine, especially if you already know and are familiar with these tools because they actually give you layer by layer control in order to get
+[07:39] to the final result that you want.
+[07:41] And so, I think the main takeaway here is that if you are into creative work, then this is definitely worth checking out, especially since it is open source and free.
+[07:49] And also because it is open source, a lot of people will get interested in this, a lot of people will contribute to it, and it will just all get better over time.
+[07:57] Especially since these users who are going to contribute to this project are probably using agents and AI as well.
+[08:04] So for sure the version two or version three of these art craft softwares is probably more suited for agents to use as well.
+[08:11] These are the people improving this open source project are probably using agents like Claude and Coherex as well.
+[08:18] So there you go, kudos to Art Craft for releasing these seven pieces of software in one go.
+[08:23] It definitely made waves in the creative community, and try them out and let me know what you think.
+[08:27] As always, thanks for watching until the end.
+[08:30] And uh if that was useful, then do me a solid and tap subscribe below because that just helps me a lot to put out more educational stuff like this.
+[08:36] And I'll see you all next time.
+[08:37] Cheers.

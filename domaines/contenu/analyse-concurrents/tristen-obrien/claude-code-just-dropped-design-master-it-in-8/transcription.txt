@@ -1,0 +1,116 @@
+[00:00] Claude Code just released a slash command called slash design, and it is the most useful command that they have given us all year.
+[00:07] Basically, what it does is it designs your page before it builds anything, which means that it hands you an artboard, which are just editable design options.
+[00:15] So, nothing gets coded or built before you pick a design that you like.
+[00:19] In this video, I'm going to show you how you can run slash design.
+[00:22] I'm going to show you the words that you have to use to get three real options, and then we're going to talk about why you would ever use slash design over the Claude design app.
+[00:31] But, let's go ahead and start with what slash design actually is.
+[00:34] In Claude Code, when you type in forward slash, a little menu is going to pop up with a bunch of built-in commands.
+[00:40] Each one of these commands is a shortcut with a prompt built into it.
+[00:43] It's there so you don't have to remember what to type in every single time you want to do that action.
+[00:47] And slash design is one of those commands.
+[00:50] So, what this actually does is when you run slash design and you give it some parameters, Claude isn't going to just start building the app or the page that you wanted to build.
+[00:58] What is going to do instead is it's going to take those parameters.
+[01:01] It's going to take what you've asked for, and it's going to open up a canvas and show you finished design concepts that you can choose from.
+[01:07] And this is where you get to be a creative director.
+[01:10] Each one of these designs is called an artboard, and what that really means is it's just a visual concept, a visual option that you can click on and then you can start to change things around.
+[01:19] So, if you click a headline like right here, you can retype anything you want in it.
+[01:23] You can grab something, you can move it around, you can change the spacing, you can change the color, and you can do all of that right on the screen, right on the concept that it gave you.
+[01:31] Or, you can look on the right-hand side, and over there you'll see that there is a panel that lets you edit things directly.
+[01:37] So, here's the problem that slash design is solving.
+[01:39] Let's say that you want a landing page for your business, and you type out a really good prompt, and you hit enter, and Claude builds the whole thing for you.
+[01:47] It probably would do a decent job.
+[01:48] Claude is pretty good at that.
+[01:49] But, by the time that you're looking at it, every single design decision has already been made for you.
+[01:54] So, what would you do?
+[01:55] Well, you would start typing new prompts into Claude.
+[01:57] You would tell Claude that you want to make the header bigger or you want to move a section up or try a different font.
+[02:03] With that, you were directing every single change by hand, and that is not efficient, and that takes absolutely forever.
+[02:10] You're also doing it blind because now you're describing a design instead of looking at a design.
+[02:15] And that's how it used to work.
+[02:17] But /design changes that order around.
+[02:19] Now, you're making design decisions and how things should look before the page ever gets built.
+[02:24] Okay, so let's do an example together on how you would actually run this.
+[02:27] So, if you wanted to use this, you would type in /design, like you know, but then you would describe what you want and then how many different directions you want to see.
+[02:35] So, it sounds something like this.
+[02:37] Give me three versions of a landing page for a dog grooming business.
+[02:41] But you also want to give it something to look at.
+[02:43] For example, if there's a site out there that you just love the layout, go ahead and take a screenshot of that or you can just grab the URL, and then you're going to give it to Claude.
+[02:50] Because what that does is that tells Claude the direction that you want to go for.
+[02:54] Now, you're not copying anybody's site, you're not copying the work.
+[02:57] All you're doing is you're pointing at a design style.
+[03:00] That's what the pros do every single day.
+[03:02] Now, for me, I usually use mobbin.com, which is a big library of real websites and apps that you can browse through, but any site that you like would work.
+[03:11] Just take a copy of it or use the URL and give it to Claude.
+[03:14] But the more specific you are, the more different that those three different designs are going to come back.
+[03:19] And we do want them to be different.
+[03:20] So, you're going to tell it a couple more things.
+[03:21] You want to tell it what the page is for, and then you're going to tell it the job the page is doing.
+[03:26] So, it could sound something like this.
+[03:27] You could say, "I want a landing page for my local dog grooming business.
+[03:31] The only job of the page is to get people to book, and I want five different sections, and here are three images of the pages that I like the look of." Or you can put in the URLs if
+[03:40] you want to.
+[03:41] And the reason why you want to ask for three is because you want three really different takes.
+[03:44] You don't want the same design three separate times.
+[03:47] You want them to look different because you want three different options.
+[03:50] Now, you can also look at a project folder.
+[03:52] If this is already in a project folder and you already have a product of your own with your own colors and your own logo and your own components, you can just work within that folder, right?
+[04:01] So, you can tell Claude, "Hey, take a look at all these colors.
+[04:04] I don't want you to invent anything new.
+[04:06] Here's the page layout that I like, but make sure you're using all of my elements." But, once you're done editing, once you like what you see, what you're going to do is you're going to take a look at
+[04:14] the top of the canvas.
+[04:15] Each one of these designs has its own name up there.
+[04:17] And you're going to want to make sure that you remember that name because we're going to use it here just in a few minutes.
+[04:22] And when you're done, look over on the right-hand side, there is a save button, so go ahead and click save.
+[04:26] And then when you go back to Claude, you're going to tell it which one of these designs that you want to move forward with, or you could have just deleted the ones that you didn't like.
+[04:33] But, there's one more really important thing that you need to do before you hit enter.
+[04:36] And before I tell you what that is, if this video has been helpful so far, please subscribe to the channel and like the video and leave a comment.
+[04:42] It's something that I really appreciate and it helps out the channel.
+[04:45] So, that one more thing I was talking about is images.
+[04:48] Claude can't create images on its own, right?
+[04:50] And a site, a website, is a thousand times better if it has real images on it.
+[04:54] So, you can do a couple things here.
+[04:55] One, you can generate your own images somewhere else and then come back and hand them to Claude to put them in, or you could use something like your Nano Banana API, or you could use Higgs Field.
+[05:05] It doesn't matter which image generator you're using, you just need to make sure that this can have images.
+[05:10] And when I hit enter, and a few minutes later, we get to take a look at what we got here.
+[05:14] Now, this shouldn't surprise you, right?
+[05:16] Cuz we just picked out this design.
+[05:17] And to me, this doesn't look bad at all.
+[05:19] I'll call this version one.
+[05:21] It's clean, it's professional, it's exactly what we picked in the canvas.
+[05:24] If you don't like it, you could always ask Claude to generate something new.
+[05:27] But, if you do like it, this is where you get to keep building on top of it.
+[05:30] Cuz right now, we just asked for a landing page.
+[05:32] So, maybe you want to add a booking system on the back end, or you want to tie it into your calendar.
+[05:37] That's when you go back into Claude code and then you start telling it what functionalities you want.
+[05:42] And if you want different pages, you just go back to {slash} design and then you give it some examples of what you want, and then you start that process over.
+[05:48] Some of you are probably thinking that there's already a Claude design app, so why would I run this inside of Claude code?
+[05:55] And that is a fair question, because the app is really nice.
+[05:58] It's a great place to design, but there's three things that I keep going back to that I feel like this makes it a better use inside of Claude code.
+[06:05] The first one would be where your project lives.
+[06:08] If the thing that you're designing is part of a code base that you're already working in, well, Claude code is sitting right there already.
+[06:13] So, the design and the code never have to leave the same place.
+[06:17] The second one would be what happens after you pick the one that you want.
+[06:20] In Claude code, if you give it the name of the artboard, it's going to start building it right then and there.
+[06:25] Inside of the Claude design app, you do have to export it before handing it over to Claude, and then it's going to build it.
+[06:32] Not a big step, but a little bit more convenient if you're already in Claude code.
+[06:36] And the last one is what you're actually making.
+[06:38] If this is going to become a real page or real app, then do it inside of Claude code.
+[06:42] If this is going to be a poster or a flyer or a social graphic or something like that, then you're going to want to do it inside of the Claude app, cuz you don't need Claude code to create
+[06:51] something like that.
+[06:52] And look, this is still in research preview, and that means that how it looks today inside of Claude code is going to look completely different, probably next week.
+[06:59] And right now, it just comes down to personal preference, to be honest.
+[07:03] If you try it in Claude code and you like it, well, then use it there.
+[07:06] If you try the app and you like the app better, then just use it in the app.
+[07:10] But again, if you're going to be creating a website, if you're going to be creating an app, you have to give it to Claude code anyway, so maybe it makes sense just to start there.
+[07:17] Okay, well, that is /design.
+[07:19] It's really easy.
+[07:20] There's three things to remember here.
+[07:21] One is you're always going to ask for at least three different directions, so you have options to choose from.
+[07:26] Two is you're going to be talking to it like you're talking to a client.
+[07:30] You're going to tell it who it's for.
+[07:31] You're going to tell it what the page has to do.
+[07:33] Then you're going to give it examples of what you like, that way it builds something with structure and not just guessing what are things you might like.
+[07:39] And three is you're always going to check the output against the design that you picked because the artboard is going to give you the visual to start from, but it's not the finished product.
+[07:47] It still can make mistakes.
+[07:49] If you want to see what Claude can actually do on the design side beyond this, well, check out my full Claude design video right here.
+[07:56] If you like this video, please subscribe, give it a like, and leave a comment, and I will see you in the next one.

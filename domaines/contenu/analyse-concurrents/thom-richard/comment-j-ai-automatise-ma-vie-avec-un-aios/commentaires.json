@@ -1,0 +1,119 @@
+[
+ {
+  "texte": "Merci",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Ismaël-v4j-s2c",
+  "date": 1784937600,
+  "parent": "root"
+ },
+ {
+  "texte": "Super",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@landrytchala4974",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Bravo.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@igordolley3620",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Bonjour Thomas,\nmerci beaucoup pour la masterclass, une vraie valeur ajoutée !\nC'est clair, simple, détaillé et accessible.\nJe suis non-dev, menuisier indépendant. Je travaille seul et j'ai vraiment besoin de quelque chose pour m'accompagner dans mes projets.\nDepuis le temps que j'attendais quelque chose comme ça !! Ça fait des mois que je tourne autour. Et là, je sens que je peux être accompagné.Je bricole un peu mais je reste un non-dev.\nJe pense que ce genre de contenu complet, facile d'accès, manque pour des gens comme moi ou des professionnels non numériques, mais  qui ont besoin maintenant de travailler avec l'IA.\nJ'ai trois enfants moi aussi. Dès que j'ai un moment, je me mets dans ma grotte à écrans et je m'installe tout ça, Héhéhé 😅\nEt tu peux compter sur moi comme nouveau membre. Merci encore 😊",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@TheFD31",
+  "date": 1784937600,
+  "parent": "root"
+ },
+ {
+  "texte": "Bravo! Très complet. Je suis PM chez un éditeur et j'utilise déjà un peu obsidian. Je suis très intéressé par l'usage de claude dans mon quotidien professionnel. Merci pour cette vidéo.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@piezzo4762",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Merci !",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@oursblanc6477",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Très belle masterclass. Est ce que tu mélanges le pro et le perso dans ton aios ou bien tu sépares en 2?",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@william_bmr",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "Bonjour, quelles différences avec une session Claude Cowork dans un Projet?",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@IssaBayeFall011",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Bonjour Thomas, j’utilise VSC avec Claude Code (payé au token avec Open Router pour tester ce système). D’après ce que j’ai vu, tu utilises Claude sur abonnement. Obsidian pour ma part (depuis les vidéos Elliott M.)´ je trouve l’interface peu ergonomique malgré le fait que ces liens transversaux sont pertinents ; autre inconvénient : les fichiers Word ou les images insérées dans les notes qui créent des lignes de notes supplémentaires…Ta. Vidéo est très intéressante et je vais m’en inspirer pour compléter mon système hybride en devenir. Question : vu que les fichiers sur lesquels on interroge l’IA transitent sur les serveurs d’Anthropic, quid des noms, adresse, mail, date de naissance,  des montants etc. Comment fais tu pour anonymiser les données ? Ou pas….merci et bravo.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@garancesomontano",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Pourquoi utiliser VS Code ? Le fait d'ouvrir Claude Code dans le terminal directement dans le dossier où est stocké son vault ne suffit-il pas ? J'ai également vu une utilisation d'Open Code dans un contexte similaire, est-ce pour la même raison que vous utilisez VS Code ?",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@alain-francoisbalog82",
+  "date": 1784937600,
+  "parent": "root"
+ },
+ {
+  "texte": "C'est juste la 250000 videos sur le sujet qui arrive 6 mois trop tard...pour vendre de l'abonnement Skool  et un produit que l'on trouve gratuit partout !!",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@kianhendrick3794",
+  "date": 1784937600,
+  "parent": "root"
+ },
+ {
+  "texte": "👉 Rejoins le Club SMART — la communauté où on construit ton AIOS ensemble : https://www.skool.com/club-smart/about\n📦 Toutes les ressources de la masterclass (dont le skill qui monte ta structure en quelques minutes) : https://clubsmart.s.gy/masterclass-aios\n🎯 Tu veux ton AIOS installé avec moi, en direct ? Atelier de 2 h, 6 personnes max, sans code, 12 mois de Club SMART Premium inclus : https://www.thomrichard.com/atelier-aios",
+  "likes": 0,
+  "epingle": true,
+  "createur": true,
+  "auteur": "@thomasrichard1978",
+  "date": 1784937600,
+  "parent": "root"
+ },
+ {
+  "texte": "Merci. J'essaie de le mettre en place ce week end avec tes conseils",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@sylvain351",
+  "date": 1784937600,
+  "parent": "root"
+ }
+]

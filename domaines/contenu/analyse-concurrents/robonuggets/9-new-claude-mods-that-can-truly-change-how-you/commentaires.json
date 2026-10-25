@@ -1,0 +1,902 @@
+[
+ {
+  "texte": "this is so nuts... In a year everything will be so different.",
+  "likes": 105,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@lowiejacobs",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Once you actually take the time to understand Claudixum there is really no going back",
+  "likes": 82,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Itx_Adnan-44",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Sounds kinda like DeepSeek harness with everything being a plugin that’s modifiable!",
+  "likes": 47,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Beatwrecka",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "this is literally the first mods video out of a dozen that has actually useful mods, not just some dumb shit. Great job",
+  "likes": 36,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@BrodyDevVlogs",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Finally someone mentioned VS Code! Thanks",
+  "likes": 32,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ADHS-Story",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "This is basically something they inspired from DeepSeek harness as far as I remember? Modular coding environment was something that DeepSeek pulled out in the first place, and it is also opensource, I wonder what makes this one different than the other",
+  "likes": 32,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@nesadlevent",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Before watching this video, I read about mods and thought it was not for me, because why do I care about modifying claude? It basically does everything I need. I see now there are some relevant mods that I actually do want to implement. Thanks!",
+  "likes": 15,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@kylebohnstedt",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Get the 9 Claude Mods PDF for free ➡ https://www.skool.com/robonuggets-free/classroom/750914f0?md=a2e607329db2457f83744f817b9d8610 search for n81\nLearn how to build AI businesses 🚀https://www.skool.com/robonuggets\n\n- Jay\n\np.s. links to the repos are in the description above too",
+  "likes": 10,
+  "epingle": true,
+  "createur": true,
+  "auteur": "@RoboNuggets",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Perfect video. You said why we need something, what we need, and how to use it without fluff. Exceptional.",
+  "likes": 9,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@davetriesthis",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "I 've made a dashboard to keep track of what's building. Sessions per project, status, archive-rename. Also monitors the auto pipeline that works autonomously headless. Pretty useful thing!",
+  "likes": 7,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Xetrus",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "The visualisation of your videos is awesome!",
+  "likes": 5,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@mojmon",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "the first  domino in custom UI just  dropped.  imagine what the would  be a yr from now",
+  "likes": 5,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Another-Painttt",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "where can I find the filetree mod?",
+  "likes": 5,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@manojo123",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Heads-up before installing: Blast Radius's own README calls it \"a safety net, not a permission system\" — it doesn't catch bash -c, find -delete or xargs rm. It lives in anthropics/claude-code-playground, which says it's not an official Anthropic product. Claude Code's docs also warn mods run with your permissions and aren't sandboxed, so running `claude plugin validate` on a mod first is worth the 10 seconds.",
+  "likes": 4,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@AIForge-o7l",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "1. Savvy Progress\n2. Claude Skins\n3. You Should Know\n4. Filetree\n5. Cache Tax\n6. Blast Radius\n7. Reflect\n8. Terminal Browser\n9. Replay Theater\nYou're welcome",
+  "likes": 4,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Mohsen-ty9rc",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "This will sound like a rookie, but the UX looks different from video/my app. What am I missing?",
+  "likes": 3,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ricardooliveira3877",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "great video as always!",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@diabloiii",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Great video thanks bud",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@rajadirajamama1767",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "I wish you showed how to install it via the desktop app. Claude just says use terminal!",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@richard_press",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "I installed the filetree mod and it doesnt look like what you showed on screen. How do you get your version?",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@JonathanDewetfunlifegod",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "I am trying to use the file tree mod in my claude app via claude code but I cannot get it to look like yours does. Mine just looks in the app like it did in the terminal. Is there anything you have to do to get it to work in app like yours does in the demo?",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@eliaswood3302",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "Wait i dont get it. Did you customize the mods? Because I downloaded two from that list and installed them, but neither of them looks anything like what you showed.",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Magieva",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Holy shit, you gave a legit usefull & meaningfull mods list. Appreciate it mate🔥",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@xeiz8666",
+  "date": 1791763200,
+  "parent": "root"
+ },
+ {
+  "texte": "I made myself a simple markdown annotator, since I now spend a bunch of time reviewing MD plan files before AI implements them. Annotations are written as MD comments, which the AI can then read and process. Sure I could just write the comments directly, but not having to write comment tags + my name (when working with other colleagues on a file) + date and doing it all within Claude code improves my flow  significantly.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@tekrunner987",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "INSTANT subscribe. Man really the value here . Some people's sell course for less than what you can teach so clearly in video",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@kevin.newmarketing",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "wtf.... this is crazy man",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@y2Kola",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Thanks for your video. One question. Why does your Mod 4 look so different than the original version?",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@a4fds",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Hey sir, super nice video! \nCan you share more how can I get beautiful design/ui results as yours?",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@naosoudj42",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Anyone else having issues with the 1st mod? I installed it correctly but it does not seem to show the tasks progress above the message bar",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Spareni",
+  "date": 1791763200,
+  "parent": "root"
+ },
+ {
+  "texte": "It works in vscode terminal on windows -> claude … use it from day one … just the ui is not so pretty",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@sunchaser-of-dawn",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Yo why does your cache-tax plugin UI look different to mine? You've got buttons etc. How do i get  that? I feel misled lol",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Barncore",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "\"Get lost of your usage even faster.....\"",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ds_frieren",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "I'm so fucking tired, boss...",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@lashlarue7924",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "This is a very good video. Clear and concise. Thanks so much for this. I just started with Claude yesterday and have been through more than a few videos at this point and after watching this, easy sub.\n\nThanks again man",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@CScottSmith",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Your videos are so well done and informative. Thank you so much!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@aminj6758",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Actually a really great list of mods!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@lucalaure547",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "After I saw the first 3 mods, I thought this video deserves a thumbs up! 👍",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ticusism",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "nice video, thanks!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@mwilson595",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Useful Thanks for sharing!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@FRELAN-AI",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Thanks, subscribed",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@xen35858",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Thanks, great video",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@alandesousacaires9197",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "An install guide is what makes a list like this usable. I'm testing AI tools on real work right now, so this goes on my to-try list.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ankit_rakwal2.1",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "stellar breakdown, interested in the course / community",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Andomccall",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "1:19 skills also connect Claude to apps. Skills are the superset over MPC",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@br3nto",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "thanks for the vid",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@joaocamelier1381",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Awesome ! It will probably help me to get the agent status easier on my Steamdeck to reproduce the OpenAI keyboard.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@regislutter",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "Great overview and tips! This looks like a very useful feature. One concern I have is that it could lead to vendor lock-in since Anthropic is the only one of the frontier labs that has this feature. It’s a clever strategy that I’m sure they are aware of to get people to stick with Claude. And right now with the power and generous usage limits of Opus 5.5, Claude is my favorite ecosystem. But historically that has changed as new models get released, and I like the freedom to move between labs and subscriptions. I like skills because they are universal and reusable/portable across different ecosystems. It would be awesome to have an open mod standard like skills/MCP. I hope that OpenAI does follow suit with a feature like this. And even though the ChatGPT/Codex app has a different architecture than Claude Code, with the help of agents I’m sure it won’t hard to replicate most mods from Claude into it. But for now I feel weary of investing too heavily into Claude mods and becoming dependent on them.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ash.mystic",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "I still remember the days when you were making cool tools for video gen, why not create a mod for that? you have all the exp Jay... \ngood mods u recommend there 👍",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@AgriciDaniel",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Holy shiii, this is super useful!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@SaltyYagi",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "very nice vídeo, this help me a lot",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@FABIANODASILVABARBIERI",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "These mods in vs code plugin would be great for my use cases tbh.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@VitapRamdevputra",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Thanks",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@djkim24601",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "a useful video!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@livelaughlove_88h",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Holy cow. That video edit looks sick. What claude skill/libary is that?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ZeroBrainExploit",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "\"Claude I don't have 12 minutes to 10x my skills, make me a 5 minute summary\"",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@awaniek",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "Watch change and handle are referred to events. Savvy just watches. It does not change or handle (consume) the event",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@federicosandrelli1467",
+  "date": 1791763200,
+  "parent": "root"
+ },
+ {
+  "texte": "Funny that the subs thought you said Entropic - that tracks",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@costanzadotjpg",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "This is very cool. Do you know how the correct functioning of the mod is tested by the harness if at all? What would happen if it came with bugs due to the agent making a logic mistake? Could the temporary nature of the mods be a failsafe for this case? Self improving systems are so interesting.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@enderdream-dl2en",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "The separate Opened and Edited labels in the file panel are useful. Does that view include changes made by subagents too?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@usecadenceapp",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "My first mod was none of the nine: a band above the prompt showing which task the session is working on, its stake in one line, and whether it has been closed. Built in an evening by describing it, kept because it removed a question I asked ten times a day. A mod is not a feature you add. It is a question you stop asking.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Killem6089",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Nice tips. What about /remote mode? I guess theese modes makes tha remote work for example from phone/tablet worser",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@nemopeti",
+  "date": 1792108800,
+  "parent": "root"
+ },
+ {
+  "texte": "Can you give us the prompt for the design in the agent-info in the mod 1?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@patricksfeir6947",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "Didn't expect Anthropic's own Blast Radius and Replay Theater samples to make the list. Which of the 9 mods is everyone installing first?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@a1.republic",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "This is literally just a creative way to burn more tokens to get the same thing",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@greglaycock9405",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Came here just to say that the video thumbnail of you pointing is totally rad. Very cool pointing.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@scottgvd",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "How do you make it show in the desktop app? \nPSA: People want to see the install, just pause on the slide of each segment and go to the respective github repo.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@cfsouzajr",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Do you need to setup subagents individually? Like tell them you are designer, you are engineer?\nDo you set them up each task or is there a place of your agents? Do you have video about them?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@aijokker",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "What software/agent pipeline are you using for the editing ?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Gavidb",
+  "date": 1792627200,
+  "parent": "root"
+ },
+ {
+  "texte": "Crazy update from anthropic bte day 3 of asking you for your video editing skilll bruh plss",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@TheGOAAAAAAATTTTTTTTTTTT",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Is „blast radius“ needed or redundant when using auto-mode?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@TMKFilmsCH",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "Claude skins is best",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Jakobsen123",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Why does every mod I install look visually different to the one in the video, especially the filetree one? The desktop UI does not match",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@piyushdaga",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "\"Here's how to use more of your tokens faster.\"",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@WotanSkyFather",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Does it work in the web ui?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@laukan",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "How to install mods in the CLI ?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@arseni1453",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Maybe I missed something, but I'm not seeing anything on how to actually install the mods. I would appreciate a little extra help.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@The_Grease_Monkey",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "I guess, this only works within Claude Code, right? So this won't work in VS Code?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@laura_v191",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "This is for desktop app only? No cli?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@fullbars",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "Yeah so Anthorpic needed to do this because claude code is closed source and codex is open source so you could already add features yourself to codex cli",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@wombora",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "i can't seem to be able to find de built-in mods talked here, for example the you-should-know one.. anyone with same issue? tried in cli and claude code app, both failed",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@aceflash0r",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Is it working in the cli too ?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@DaronCastor112",
+  "date": 1791763200,
+  "parent": "root"
+ },
+ {
+  "texte": "Is it available in VS??",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@diegoortega2334",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "Can't get n81 mod 1 working (savvy progress). No SVG crabs, only colored boxes. This is a terminal version with minimum UI... (I'm not the only one).\nIs the mod already bugged after less than a day?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@lomio7250",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Hi! Are there plans to make this available in Claude Chat within VS Code as well? I handle everything through that, and it would be really great.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@pgsunihu",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "A very nice video, but just on video...\neven mod 1 doesn't work and I didn't manage to even install it, got the error:\n\nFailed to install: Plugin temp_local_1791562299958_yvuop8 has an invalid manifest file at C:\\Users\\User\\.claude\\plugins\\cache\\temp_local_1791562299958_yvuop8\\.claude-plugin\\plugin.json.\r\n\r\nValidation errors: userConfig.language: Unrecognized key: \"options\"",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@liorke95",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Where is the install guide?  Can't find it and the links above want you to sign in ???",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@mikemiller6457",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Where is the PDF?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@tamasmolnar4157",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "8:53 or just use git. That also works as a backup",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@br3nto",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "where will it stop. next step is maybe claude code can contact aliens with just a click of a button that is only left. it has done everything",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@shriyanshagarwal6910",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Cannot download the file (cant register and log in)",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@jannevanderwerf",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Links to the mods or mod names in the chapters bro.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@SleepyPaul",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Estetic salvation",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@igorshvab2171",
+  "date": 1792713600,
+  "parent": "root"
+ },
+ {
+  "texte": "Is this video also edited/generated with Claude? Or is it manual?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@derekramos2653",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Yeah.. PDF link doesn't existd",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ValdiValdies",
+  "date": 1792800000,
+  "parent": "root"
+ },
+ {
+  "texte": "There's two seperate modes in the mod 4, neither of which are giving any creadit to the dev.. shout out to data-goblins",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Steele1080",
+  "date": 1791763200,
+  "parent": "root"
+ },
+ {
+  "texte": "I LOVE AI",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@thebenblue20",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Ia mod 8 is persistent??",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@nathamuni9435",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "Why upload a complete BIO and picture",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@OscarDupont-l9f",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "I like the cache warmer ❤",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Luther_Luffeigh",
+  "date": 1791676800,
+  "parent": "root"
+ },
+ {
+  "texte": "this this tokenspendingmaxxing no bs?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@svemojesadjemoje",
+  "date": 1792022400,
+  "parent": "root"
+ }
+]

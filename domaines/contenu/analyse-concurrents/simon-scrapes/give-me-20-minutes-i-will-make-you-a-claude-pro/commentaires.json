@@ -1,0 +1,47 @@
+[
+ {
+  "texte": "Thanks for watching my video :)\nSub if you enjoyed it: https://www.youtube.com/@simonscrapes?sub_confirmation=1\nNow make AI run without you: https://skool.com/scrapes",
+  "likes": 2,
+  "epingle": false,
+  "createur": true,
+  "auteur": "@simonscrapes",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Never again with Claude. Claude is nothing but a bug-ridden mess. Garbage development. Unreliable, dangerous, and damaging to business—it just devours money and wastes your life.",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Olaf-x2r",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "These are correct and valuable as long as you wish to stick to the Anthropic models (and increase vendor lock-in). If you wish to quickly switch to another model(s), it will be much more difficult now that you have applied these specific patterns.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@SamosiaB",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Thanks, @simonscapes. A thought came to mind; would a download of my Claude AI history help or hinder the workflow context?  I started with Claude soon after it launched, so it will be a massive file.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@mbteqtalk",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "It seems to me that Claude is getting dumber lately.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Cyberhike",
+  "date": 1790294400,
+  "parent": "root"
+ }
+]

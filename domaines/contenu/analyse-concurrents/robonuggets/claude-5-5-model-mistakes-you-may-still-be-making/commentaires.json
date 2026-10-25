@@ -1,0 +1,353 @@
+[
+ {
+  "texte": "The biggest mistake is assuming a better model automatically means better results. I’ve been learning a lot from Trent Calloway and his operator playbook and getting the most out of Claude really comes down to context, clear instructions, and building a workflow that consistently produces the results you want. Small adjustments there can make a massive difference.",
+  "likes": 19,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@hannah_1998",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "How do you set up Jev correctly to route models? Do you have a video with step by step process or github repo?",
+  "likes": 6,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@BERNARDOALAMOSSALAS",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Your channel is one of the best on youtube, on AI practices.",
+  "likes": 5,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@josh-seb",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Thanks for the video. Have one question, isn't Jev playing the router takes us to the point n2 switching model over chat ? Thanks",
+  "likes": 4,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@r_316-w1z",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "So I learned from this video is I need a personal assistant AI to use AI. Because I am literally guilty of all those things.😂",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@LA_318",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "Can you please share how you setup Jev for routing ??",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@haidersyed6554",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "Get the 23 Claude Mistakes PDF for free ➡ https://www.skool.com/robonuggets-free/classroom search for n83\nLearn how to build AI businesses 🚀https://www.skool.com/robonuggets\n\n- Jay",
+  "likes": 1,
+  "epingle": true,
+  "createur": true,
+  "auteur": "@RoboNuggets",
+  "date": 1791763200,
+  "parent": "root"
+ },
+ {
+  "texte": "9:56 Well, believe it or not, shouting at the model still works very well!",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@shadyworld1",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "Good video, most of it checks out. I had Claude Code grade all the tips against Anthropic's own Claude Code docs. Roughly nineteen of the twenty-three match, several word for word. Two worth correcting: the thirty-day session deletion only applies to plain CLI sessions, Desktop app and Cowork sessions are kept at any age on current versions. And Blast Radius is not an Anthropic tool, it is third party, same as DCG. Auto mode itself is Anthropic's. Everything else held up, thanks for the list.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@mwilson595",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Awesome video! How did you set Jev inside claude code? to pick proper model, or on which layer you put that to know what's the best, you have additional layer of the model run with it with proper creater instruction with an Opus 5.5 or?",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@patrykkowalski8355",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Great list. The one I see most: asking for \"a summary\" without saying who it's for. Same model, completely different answer once you add the reader and the length.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@perrytheprompter",
+  "date": 1792454400,
+  "parent": "root"
+ },
+ {
+  "texte": "The \"kitchen sink\" learns about your product and then writes the code, documentation and website copy. It understands it from the ground up and has been through the reasoning with you. Its surely best placed for those tasks. A new session for each thing needs to learn it all again, ands its going to miss things. Surely that's like hiring a new person each day to do the next job built on the last.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@DaveRune",
+  "date": 1792281600,
+  "parent": "root"
+ },
+ {
+  "texte": "Great stuff, thanks a lot!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Amazombe",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "You are my favorite YouTube lately, you break down complex topics and teaches them so simply that it makes sense and keep my attention in check",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@haidersyed6554",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Awesome video Jay! Learned quite a few tips, thanks for sharing! 👍",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@BlackThor15",
+  "date": 1792108800,
+  "parent": "root"
+ },
+ {
+  "texte": "Wow this was incredible- I will 100% be using the /btw feature. Thanks!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@andyhayes2018",
+  "date": 1792108800,
+  "parent": "root"
+ },
+ {
+  "texte": "Thank you very much. Your suggestions—especially \"/btw\" and \"/loop 30m reply ok\" (ping)—are quite useful...",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@keremgurbuz3210",
+  "date": 1792195200,
+  "parent": "root"
+ },
+ {
+  "texte": "Very helpful. Thank you.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@slavagorovoy1728",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "This is genuinely helpful thank you! I can’t however seem to be able to download the document that you referred to that has these tips listed? It keeps taking me to joining a community page.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@pawool",
+  "date": 1792368000,
+  "parent": "root"
+ },
+ {
+  "texte": "This is like the 90s when tech was changing weekly, so much so you just couldn’t keep up, got overwhelmed, and  sat in decision paralysis mode waiting for the next change.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@minnesota_loon",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Hi Jay, thank you very much for your interesting posts. A video showing how to use Jev in Claude would be very helpful",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@MarcelHess-u4b",
+  "date": 1792108800,
+  "parent": "root"
+ },
+ {
+  "texte": "This was more helpful that you know",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@MK-jn9uu",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "I have been deep diving into Claude and this is so helpful! You got an extra subscriber",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@saravanzandycke",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Wow, this is incredible info, thanks!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@mysoulcalledlife",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "I found that by getting rid of lots of skills, especially superpowers massively reduced the usage. I am on the 5x plan, I used to run out every week now I'm about 75% or so roughly.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@paulhenricksen5728",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "This is how you use AI! I'm not saying the lesson, the video editing screams Claude! I'll definitely use this for my first video. Thanks for sharing!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@jjjsites",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Great tips thank you!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@BenJamminBuilds",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Thanks Jay for the video. Regarding that last point about using Jev to pick the right model, how does it handle switching models between messages in terms of cache refreshes? Wouldn’t you end up paying for the entire cache refresh frequently? Or is the idea to have multiple active subagents, each pinned to a specific model, with Jev routing requests to the appropriate one?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@aminecarmali3356",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "Those 4 hard drive deletions may have been a cryptoscamming trojan horse. They've been going around.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@hughdidit",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "I'm confused between \n#2 \"don't switch between models mid chat\"\nand \n#23 \"auto select model for task\"\n\nWouldn't automatically categorize my prompts to different models destroy my cache?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@TheMightySchink3n",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "When you are showing example Claude chats in your video are you simulating the UI or doing actual screen recording?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@robgalvin5400",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "I'm just curious on your take with using handoff over chat history. I never use my session history and really never tell Claude to reference it because I do handoffs or have instructions on certain workflows to make sure that it's updating as it moves along to be able to hand off to new sessions easily. Are there concerns with maintaining 365 days of session history and then having to reference them? How does that impact usage?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@advanceyourself1441",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Any recommendation for a Local AI harness which can help with document processing be it Word or excel. Do not need watermarks for doing grammatical edits with skills",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Aubfred89",
+  "date": 1792022400,
+  "parent": "root"
+ },
+ {
+  "texte": "Does claude code and desktop app affect usage the same.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Chawaonga",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Amigo seus vídeos são ótimos. Ative a dublagem para PT-BR neles pls.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Danilo4AF",
+  "date": 1792108800,
+  "parent": "root"
+ },
+ {
+  "texte": "The issues with usage limits are over now, isn't it?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@paulham.2447",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Quite a few of these commands no longer work or are valid in the new projects style.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@paulhenricksen5728",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "16:40 these mods only with for claude code not desktop?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@DrDarp",
+  "date": 1791849600,
+  "parent": "root"
+ },
+ {
+  "texte": "Seems like a lot of work is required for something that is meant to be 'intelligent'. \nI really wish the AI CEO's would stop talking shit about AI being able to do peoples jobs when clearly so much hand holding is still required.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@pathetichumans1599",
+  "date": 1791849600,
+  "parent": "root"
+ }
+]

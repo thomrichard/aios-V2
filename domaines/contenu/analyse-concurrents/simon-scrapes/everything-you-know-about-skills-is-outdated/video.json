@@ -1,0 +1,133 @@
+{
+ "id": "e7TY56-yIvM",
+ "url": "https://www.youtube.com/watch?v=e7TY56-yIvM",
+ "chaine": "simon-scrapes",
+ "titre": "Everything You Know About Skills IS OUTDATED",
+ "titre_ytdlp": "Everything You Know About Skills IS OUTDATED",
+ "publie": "2026-10-01T15:38:23Z",
+ "duree_s": 769,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "kQlnB2WsxOv5ORd16J9j_pI3KwY",
+  "id": "e7TY56-yIvM",
+  "snippet": {
+   "publishedAt": "2026-10-01T15:38:23Z",
+   "channelId": "UCdCR4-uYOg5ju-IUuDnfnQA",
+   "title": "Everything You Know About Skills IS OUTDATED",
+   "description": "🚀 Join the Agentic Academy: https://skool.com/scrapes\n👀 Be the brand AI recommends: https://dub.sh/rankspot-yt\nGet the Skill Audit Prompt from this video in the community: https://skool.com/scrapesai\nAnthropic’s skill building best practices: https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices \n\nHave you built a Claude AI skill that feels inconsistent or seems to ignore your instructions? It might be because of recent, subtle changes to how Claude processes skills, like only reading the first 100 lines of a reference file. In this video, we'll dive into Anthropic's updated best practices and cover the essential rules you need to know to make your skills more reliable and effective across all models.\n\n00:00 - Intro: Why Your Skills Are Failing\n00:53 - #1: Content Lists\n01:38 - #2: Degrees of Freedom\n04:25 - #3: Test on Every Model First\n06:30 - #4: Nested References\n08:43 - #5: Using Checklists\n09:58 - #6: Self-Correction Loops\n10:50 - #7: Dependencies\n\n#claudecode #claudecodetutorial #claudeskills",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/e7TY56-yIvM/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/e7TY56-yIvM/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/e7TY56-yIvM/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/e7TY56-yIvM/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/e7TY56-yIvM/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    }
+   },
+   "channelTitle": "Simon Scrapes",
+   "categoryId": "28",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "en",
+   "localized": {
+    "title": "Everything You Know About Skills IS OUTDATED",
+    "description": "🚀 Join the Agentic Academy: https://skool.com/scrapes\n👀 Be the brand AI recommends: https://dub.sh/rankspot-yt\nGet the Skill Audit Prompt from this video in the community: https://skool.com/scrapesai\nAnthropic’s skill building best practices: https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices \n\nHave you built a Claude AI skill that feels inconsistent or seems to ignore your instructions? It might be because of recent, subtle changes to how Claude processes skills, like only reading the first 100 lines of a reference file. In this video, we'll dive into Anthropic's updated best practices and cover the essential rules you need to know to make your skills more reliable and effective across all models.\n\n00:00 - Intro: Why Your Skills Are Failing\n00:53 - #1: Content Lists\n01:38 - #2: Degrees of Freedom\n04:25 - #3: Test on Every Model First\n06:30 - #4: Nested References\n08:43 - #5: Using Checklists\n09:58 - #6: Self-Correction Loops\n10:50 - #7: Dependencies\n\n#claudecode #claudecodetutorial #claudeskills"
+   },
+   "defaultAudioLanguage": "en"
+  },
+  "contentDetails": {
+   "duration": "PT12M49S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": true,
+   "contentRating": {},
+   "projection": "rectangular"
+  },
+  "statistics": {
+   "viewCount": "324178",
+   "likeCount": "3086",
+   "favoriteCount": "0",
+   "commentCount": "105"
+  }
+ },
+ "ytdlp": {
+  "id": "e7TY56-yIvM",
+  "title": "Everything You Know About Skills IS OUTDATED",
+  "description": "🚀 Join the Agentic Academy: https://skool.com/scrapes\n👀 Be the brand AI recommends: https://dub.sh/rankspot-yt\nGet the Skill Audit Prompt from this video in the community: https://skool.com/scrapesai\nAnthropic’s skill building best practices: https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices \n\nHave you built a Claude AI skill that feels inconsistent or seems to ignore your instructions? It might be because of recent, subtle changes to how Claude processes skills, like only reading the first 100 lines of a reference file. In this video, we'll dive into Anthropic's updated best practices and cover the essential rules you need to know to make your skills more reliable and effective across all models.\n\n00:00 - Intro: Why Your Skills Are Failing\n00:53 - #1: Content Lists\n01:38 - #2: Degrees of Freedom\n04:25 - #3: Test on Every Model First\n06:30 - #4: Nested References\n08:43 - #5: Using Checklists\n09:58 - #6: Self-Correction Loops\n10:50 - #7: Dependencies\n\n#claudecode #claudecodetutorial #claudeskills",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "Intro: Why Your Skills Are Failing",
+    "end_time": 53
+   },
+   {
+    "start_time": 53,
+    "title": "1: Content Lists",
+    "end_time": 98
+   },
+   {
+    "start_time": 98,
+    "title": "2: Degrees of Freedom",
+    "end_time": 265
+   },
+   {
+    "start_time": 265,
+    "title": "3: Test on Every Model First",
+    "end_time": 390
+   },
+   {
+    "start_time": 390,
+    "title": "4: Nested References",
+    "end_time": 523
+   },
+   {
+    "start_time": 523,
+    "title": "5: Using Checklists",
+    "end_time": 598
+   },
+   {
+    "start_time": 598,
+    "title": "6: Self-Correction Loops",
+    "end_time": 650
+   },
+   {
+    "start_time": 650,
+    "title": "7: Dependencies",
+    "end_time": 769
+   }
+  ],
+  "tags": [],
+  "categories": [
+   "Science & Technology"
+  ],
+  "heatmap": null,
+  "upload_date": "20261001",
+  "duration": 769,
+  "channel": "Simon Scrapes",
+  "channel_id": "UCdCR4-uYOg5ju-IUuDnfnQA",
+  "channel_follower_count": 106000,
+  "thumbnail": "https://i.ytimg.com/vi_webp/e7TY56-yIvM/maxresdefault.webp",
+  "view_count": 324190,
+  "like_count": 3086,
+  "comment_count": 72
+ }
+}

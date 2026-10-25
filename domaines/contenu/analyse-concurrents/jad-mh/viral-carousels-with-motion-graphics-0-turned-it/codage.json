@@ -1,0 +1,163 @@
+{
+  "video_id": "1CSh8tBR1oc",
+  "chaine": "jad-mh",
+  "titre": "VIRAL Carousels With Motion Graphics 0$ (Turned It Into a Skill)",
+  "codeur": "agent jad-mh",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "cas",
+    "format_secondaire": "liste",
+    "sujet": "Trois carrousels Instagram animés codés par Claude pour trois entreprises (SaaS, burger, streetwear), avec la skill gratuite",
+    "outils": ["Claude Code", "Claude Opus 5.5", "Higgsfield", "GPT Image 2.5", "HyperFrames"],
+    "niveau": "debutant",
+    "objectif_probable": "communaute"
+  },
+  "titre": {
+    "attente_au_clic": "Apprendre à faire des carrousels viraux animés en motion design, pour 0 $, et récupérer la skill qui le fait en un prompt.",
+    "schema": "<MOT EN MAJUSCULES> <Livrable> With <Technique> 0$ (Turned It Into a Skill)",
+    "promesse": "Des carrousels animés qui deviennent viraux, sans payer, grâce à une skill prête",
+    "audace": "audacieux",
+    "registre": "mixte",
+    "briques": ["resultat"],
+    "marqueurs": ["majuscules", "chiffre"],
+    "nom_outil": false
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "neutre, sérieux",
+    "regard": "camera",
+    "texte": "The New Motion graphic VIRAL CAROUSEL Style One Prompt",
+    "texte_mots": 8,
+    "repete_titre": "partiel",
+    "elements": ["visage à gauche", "titre blanc et jaune sur trois lignes", "quatre carrousels de mode avec compteurs de vues (5.3M, 4.2M)", "logo OpenAI rouge", "flèche jaune"],
+    "nb_elements": 4,
+    "fond": "rouge texturé",
+    "couleurs": ["rouge", "blanc", "jaune"],
+    "curiosity_gap": "resultat",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "I'm actually super excited to make this video.",
+    "premiere_phrase_reprend_titre": "non",
+    "premier_plan": "Face caméra plein cadre dans son salon (casquette, lunettes), sous-titre « I'm actually super excited » ; les trois carrousels animés arrivent à 0:04",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": ["demo-d-abord", "histoire-perso", "hook-question", "pont"],
+    "preuve": {
+      "type": "resultat-montre",
+      "seconde": 4,
+      "description": "Les trois carrousels animés défilent dès 0:04 ; puis preuve sociale à 0:21 (« it did over 40,000 views ») et carrousels des membres postés dans Skool"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 7, "a_l_ecran": true},
+    "boucle_vers_la_fin": {"presente": false, "citation": "", "seconde_resolution": null, "tenue": null},
+    "seconde_premier_point": 143,
+    "attente_tenue": "partiel",
+    "attente_note": "Les carrousels animés et la skill sont bien là. Mais les carrousels de mode de la miniature n'apparaissent pas (un commentaire se dit « a bit cheated »), le logo est celui d'OpenAI alors que tout se fait avec Claude, et le premier point arrive à 2:23."
+  },
+  "structure": {
+    "modele": "liste-numerotee",
+    "segments": [
+      {"debut": 0, "fin": 143, "titre": "3 carousels, made by Claude", "role": "intro", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 143, "fin": 251, "titre": "How motion graphics works (5 rules)", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 251, "fin": 380, "titre": "Use case 1: a SaaS app", "role": "demo", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 380, "fin": 492, "titre": "Use case 2: a restaurant", "role": "demo", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 492, "fin": 643, "titre": "Use case 3: a clothing brand", "role": "demo", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 643, "fin": 710, "titre": "What it actually cost", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 710, "fin": 725, "titre": "Which model to use", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 725, "fin": 799, "titre": "How to install the skill", "role": "cta", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 799, "fin": 849, "titre": "Where you can use this", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 849, "fin": 898, "titre": "My honest take", "role": "fin", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 42, "type": "question-spectateur", "citation": "It looks really cool, but what's really the use case?"},
+      {"seconde": 104, "type": "rappel-promesse", "citation": "I'd love if you could stay all the way to the end of this video."},
+      {"seconde": 138, "type": "rupture", "citation": "Okay, I'll stop yapping, I promise. You guys hate that."},
+      {"seconde": 143, "type": "question-spectateur", "citation": "First, real quick, how does motion graphics actually work?"},
+      {"seconde": 223, "type": "annonce-suite", "citation": "here's the thing, most people don't get Cloud isn't generating a video"},
+      {"seconde": 494, "type": "annonce-suite", "citation": "And honestly, this is far my best one."},
+      {"seconde": 581, "type": "rupture", "citation": "So, I'll stay quiet and you watch it."},
+      {"seconde": 643, "type": "question-spectateur", "citation": "Now, a lot of people asked, \"How much does it actually cost?\""},
+      {"seconde": 799, "type": "question-spectateur", "citation": "Now, where can you actually use this?"}
+    ],
+    "histoires": [
+      {"seconde": 13, "acte": "anecdote", "resume": "Il y a trois jours, sa vidéo sur les carrousels animés a fait plus de 40 000 vues, à sa surprise ; les membres ont posté leurs carrousels dans Skool"},
+      {"seconde": 129, "acte": "anecdote", "resume": "Il est passé de 400 à 2 500 abonnés en trois jours : « consistency pays »"}
+    ],
+    "payoffs": [
+      {"seconde": 287, "resume": "Le carrousel SaaS transformé en carte de vol, sans qu'il l'ait demandé"},
+      {"seconde": 404, "resume": "Le burger se construit de slide en slide, dessiné en code"},
+      {"seconde": 581, "resume": "Le carrousel streetwear avec musique, montré sans commentaire pendant 20 secondes"},
+      {"seconde": 643, "resume": "Le coût de chaque carrousel, compté en tokens"},
+      {"seconde": 725, "resume": "L'installation de la skill pas à pas"},
+      {"seconde": 799, "resume": "Les usages : pubs, marketing perso, carrousels Canva animés, commerces locaux"}
+    ],
+    "premier_payoff_seconde": 287,
+    "jargon": 2,
+    "repetitions": 1,
+    "test_du_tweet": "Claude Opus 5.5 code des carrousels Instagram animés. Cinq règles du motion design (easing, poids, rythme, boucle, un seul monde), trois cas réels (SaaS, burger, streetwear), le coût compté en tokens, et la skill gratuite dans sa communauté Skool."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine ; le plus souvent en vignette à droite des captures", "decor": "salon, tableaux, bibliothèque ; casquette et lunettes"},
+    "parts": {"face": 20, "ecran": 70, "motion": 10, "broll": 0},
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": true,
+    "sous_titres_style": "mot à mot, blanc gras sur une ligne, centré en bas",
+    "elements": ["plan-a-l-ecran", "etiquettes", "split-screen", "curseur-surligne", "chiffres-animes"],
+    "charte": "Fond crème à grille de points ; captures dans des cadres arrondis à ombre douce ; étiquettes en petites capitales bleu et vert ; mots-clés en grand (« 1 ask », « $0 / Your attention »). La miniature, rouge texturé, ne reprend pas cette charte.",
+    "rythme": "contraste",
+    "notes": "Un plan toutes les 5,6 s, 16 changements dans la première minute. Le débit tombe à 85 mots par minute quand il se tait pour laisser jouer le carrousel streetwear en musique."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 83, "type": "communaute-gratuite", "cible": "la communauté Skool gratuite où est la skill", "amene_par": "intro", "citation": "Everything you see here is free and my school community link is in the link"},
+      {"seconde": 104, "type": "autre", "cible": "rester jusqu'à la fin pour l'algorithme", "amene_par": "intro", "citation": "it really helps also my video and the algorithm pushes it"},
+      {"seconde": 728, "type": "communaute-gratuite", "cible": "rejoindre Skool pour télécharger la skill", "amene_par": "apres-valeur", "citation": "the first step is go to my school community. It's free."},
+      {"seconde": 864, "type": "communaute-gratuite", "cible": "la skill gratuite, lien en description", "amene_par": "fin", "citation": "You want the skill, it's free. In the description, link is in"},
+      {"seconde": 882, "type": "like-commentaire", "cible": "proposer une idée en commentaire", "amene_par": "fin", "citation": "if you have an idea, please share it in the comment section"},
+      {"seconde": 892, "type": "abonnement", "cible": "s'abonner", "amene_par": "fin", "citation": "if you didn't click on that subscribe button, please do"}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"communaute-gratuite": 2, "video-suivante": 1, "autre": 2},
+    "commentaire_epingle": {"texte": "What's your niche? I'll tell you which carousel format I'd copy for it.", "type": "like-commentaire"},
+    "recap_final": false,
+    "derniere_phrase": "if you didn't click on that subscribe button, please do and I'll see you on the next one.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["merci pour les skills gratuites", "des explications claires pour les débutants", "comment installer et adapter la skill"],
+    "demandes": ["une version pour la niche beauté", "un carrousel de présentation d'appli", "animer des images de carrousel déjà faites", "Claude Code sur le bureau ou sur le web"],
+    "critiques": ["« Longest intro on the internet! »", "la miniature montre des visuels absents de la vidéo (« I felt a bit cheated »)", "« you never showing how to do it »", "Skool hors service au moment de rejoindre"],
+    "reprises": ["« value = attention », écho de sa demande d'attention plutôt que d'argent"],
+    "signal_promesse": "mixte"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "La 1re phrase ne reprend pas le titre ; à 0:04 « every single slide is moving » et les carrousels animés : le titre arrive en substance, mais ni le plan ni les carrousels ne sont ceux de la miniature"},
+    "ap_boucle_curiosite": {"note": 1, "preuve": "0:42 « what's really the use case? » ouvre la question, résolue à 13:19 ; c'est le fil de la vidéo plus qu'une énigme gardée"},
+    "ap_effort_montre": {"note": 1, "preuve": "L'effort vient tard : 10:43 il recompte les tokens des trois sessions, 11:18 une heure et demie par carrousel, 14:31 la journée entière ; rien dans l'intro"},
+    "ap_setup_progress_payoff": {"note": 2, "preuve": "Chaque cas pose l'entreprise et son besoin, décrit le prompt puis chaque slide, et finit sur le carrousel montré (4:11 à 10:43)"},
+    "ap_contraste_rythme": {"note": 2, "preuve": "Énumérations à 200 mots par minute, puis 9:41 « I'll stay quiet and you watch it » : 20 s de carrousel en musique, débit à 85"},
+    "ap_montrer_sans_son": {"note": 2, "preuve": "Planche intro : carrousels animés dès 0:04, commentaire « 40,000 views », plan numéroté à l'écran, sous-titres incrustés"},
+    "ali_douleur_histoire": {"note": 1, "preuve": "Une douleur venue des commentaires (0:42 « They really don't see it ») et une anecdote perso avant (0:13), mais l'histoire ne montre pas qu'il a vécu cette douleur"},
+    "ali_coeur_unique": {"note": 2, "preuve": "14:09 « carousels aren't dead » : avec du motion design, les tiens dépassent ceux qui se ressemblent tous"},
+    "alx_pont": {"note": 1, "preuve": "Contexte (vidéo d'il y a 3 jours), preuve (40 000 vues) et plan annoncé comme un pont, mais ouvert par une démo et noyé dans 1 min de digressions"},
+    "alx_pull_paint_point": {"note": 1, "preuve": "Complet sur les 5 règles (2:27 « once you know this, you will see every slide ») ; les cas ont l'image et le point, rarement le pourquoi"},
+    "alx_nom_idee": {"note": 2, "preuve": "Les 5 règles portent un nom court (Easing, Weight, Rhythm, The loop, One world), « WEIGHT. » affiché à l'écran"},
+    "alx_phrase_finale": {"note": 1, "preuve": "2:46 « That's the number one reason cheap animations look cheap. » ; 4:08 « You don't pay again to try again. » ; absent des cas"},
+    "alx_douleur_reve": {"note": 1, "preuve": "« VIRAL Carousels » parle du désir, mais « Motion Graphics » et « Skill » tirent vers le jargon"},
+    "alx_cta_tot": {"note": 2, "preuve": "1:23 la skill gratuite et le lien Skool en description, liés au sujet"},
+    "ed_intro_courte": {"note": 0, "preuve": "Premier point à 2:23, après remerciements, gratuité, demande d'attention et compteur d'abonnés"},
+    "ed_hook": {"note": 1, "preuve": "La question « what's really the use case? » arrive à 0:42 ; l'ouverture est un « super excited » suivi d'une démo"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "Le cas SaaS pose un problème (5:54 posts faits de captures ou d'UGC), les autres vont du contexte au prompt puis au résultat"},
+    "ed_tension_relancee": {"note": 2, "preuve": "2:23 « how does motion graphics actually work? » ; 10:43 « How much does it actually cost? » ; 13:19 « where can you actually use this? »"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "0:13 la vidéo à 40 000 vues et 2:11 les 400 puis 2 500 abonnés : des anecdotes, pas une histoire"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "La gratuité et l'absence de revenus reviennent cinq fois entre 1:13 et 2:05"},
+    "ed_niveau_simple": {"note": 1, "preuve": "Analogie simple (2:38 la voiture qui accélère) et « it writes code » expliqué, mais MCP, API et tokens jamais expliqués"},
+    "tous_video_suivante": {"note": 0, "preuve": "« I'll see you on the next one » ; la vidéo suivante n'est citée que dans la description"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Gabarit « <MOT EN MAJUSCULES> <livrable> 0$ (Turned It Into a Skill) » : un résultat désiré, un prix nul, une skill prête. La miniature montre des carrousels absents de la vidéo et le logo d'OpenAI : un commentaire s'en plaint.",
+    "intro_structure": "Démo à 0:04, puis plus de deux minutes de remerciements et de gratuité avant le 1er point (« Longest intro on the internet! »). La question des commentaires (« what's the use case? ») sert de fil et revient à la fin.",
+    "habillage": "Face caméra au salon, en vignette à côté de captures posées sur fond crème à grille, sous-titres mot à mot, un plan toutes les 5,6 s ; un passage muet laisse jouer le résultat.",
+    "idee_pour_nous": "Faire d'une question qui revient en commentaire le fil d'une vidéo suite, et donner la ressource dans la communauté gratuite.",
+    "objectif": "club"
+  }
+}

@@ -1,0 +1,379 @@
+{
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "n": 10,
+ "age_min_jours": 7,
+ "chaines": {
+  "nate-herk": [
+   {
+    "id": "Z8lf5oWKfj0",
+    "titre": "Matt Pocock: The Most Valuable Skill to Learn in the Age of AI",
+    "dossier": "matt-pocock-the-most-valuable-skill-to-learn-in",
+    "publie": "2026-10-16T19:52:20Z"
+   },
+   {
+    "id": "KZiF2J83zaY",
+    "titre": "AI Agents Just Became Multiplayer. Here's How to Build Them.",
+    "dossier": "ai-agents-just-became-multiplayer-here-s-how-to",
+    "publie": "2026-10-15T15:16:33Z"
+   },
+   {
+    "id": "rL5tw6h78zo",
+    "titre": "I Tested the Viral Reverse Engineer Anything Skill. What You Need to Know.",
+    "dossier": "i-tested-the-viral-reverse-engineer-anything",
+    "publie": "2026-10-13T17:34:41Z"
+   },
+   {
+    "id": "nRXHWckVxoM",
+    "titre": "This ONE Claude Skill Helps You Think Clearer Than 99% of People",
+    "dossier": "this-one-claude-skill-helps-you-think-clearer",
+    "publie": "2026-10-13T02:42:52Z"
+   },
+   {
+    "id": "HhZdNYI4pJs",
+    "titre": "I Tried 100+ Github Repos for Claude. These 6 Are the Best",
+    "dossier": "i-tried-100-github-repos-for-claude-these-6-are",
+    "publie": "2026-10-11T12:30:18Z"
+   },
+   {
+    "id": "MgvwZaDPCs4",
+    "titre": "Grok Bot Just Got 2 Massive Upgrades. Do These Things Now.",
+    "dossier": "grok-bot-just-got-2-massive-upgrades-do-these",
+    "publie": "2026-10-09T02:02:31Z"
+   },
+   {
+    "id": "oz2CwrPV2Rg",
+    "titre": "Anthropic Engineers Just 10x'd Everyone's Claude Code",
+    "dossier": "anthropic-engineers-just-10x-d-everyone-s-claude",
+    "publie": "2026-10-08T20:48:59Z"
+   },
+   {
+    "id": "bvGptCLDhyo",
+    "titre": "I Built Another Andrej Karpathy Using Claude",
+    "dossier": "i-built-another-andrej-karpathy-using-claude",
+    "publie": "2026-10-05T12:43:22Z"
+   },
+   {
+    "id": "DFlELTiSPk8",
+    "titre": "Master 96% of Codex in under 35 minutes",
+    "dossier": "master-96-of-codex-in-under-35-minutes",
+    "publie": "2026-10-03T15:53:20Z"
+   },
+   {
+    "id": "9hetShMMp2s",
+    "titre": "Claude Code Mods Are Game Changers. Set Up These 5 NOW.",
+    "dossier": "claude-code-mods-are-game-changers-set-up-these-5",
+    "publie": "2026-10-02T21:59:19Z"
+   }
+  ],
+  "robonuggets": [
+   {
+    "id": "NarezKh3w4o",
+    "titre": "Anthropic just shared how they use Claude differently (Master it in 12 mins)",
+    "dossier": "anthropic-just-shared-how-they-use-claude",
+    "publie": "2026-10-17T22:52:03Z"
+   },
+   {
+    "id": "Eg08Lr3zqdw",
+    "titre": "Claude MOTION is Unreal for Video. Master it in 12 minutes.",
+    "dossier": "claude-motion-is-unreal-for-video-master-it-in-12",
+    "publie": "2026-10-16T03:39:31Z"
+   },
+   {
+    "id": "gvESqM6s0kM",
+    "titre": "Claude 5.5 Model Mistakes you may still be making (23 Tips and Fixes)",
+    "dossier": "claude-5-5-model-mistakes-you-may-still-be-making",
+    "publie": "2026-10-12T04:49:14Z"
+   },
+   {
+    "id": "lDrAZ1wAyVs",
+    "titre": "9 NEW Claude Mods that can truly change how you work",
+    "dossier": "9-new-claude-mods-that-can-truly-change-how-you",
+    "publie": "2026-10-08T12:12:10Z"
+   },
+   {
+    "id": "Fuo1i_-9Frc",
+    "titre": "Someone Just Rebuilt Adobe for Free, and Claude Can Run Them All (7 apps tested)",
+    "dossier": "someone-just-rebuilt-adobe-for-free-and-claude",
+    "publie": "2026-10-08T11:08:06Z"
+   },
+   {
+    "id": "VQyYzLJ6xos",
+    "titre": "Anthropic Just Revealed 10 NEW Rules for Claude Skills",
+    "dossier": "anthropic-just-revealed-10-new-rules-for-claude",
+    "publie": "2026-10-05T07:49:31Z"
+   },
+   {
+    "id": "3iDiWTt8lok",
+    "titre": "These 19 Jev-Claude use cases are blowing people's minds (with prompts)",
+    "dossier": "these-19-jev-claude-use-cases-are-blowing-people",
+    "publie": "2026-10-04T00:21:30Z"
+   },
+   {
+    "id": "uaVYHiF8f7k",
+    "titre": "Turn Claude Into a Video Editing GENIUS (in 3 simple steps)",
+    "dossier": "turn-claude-into-a-video-editing-genius-in-3",
+    "publie": "2026-10-02T01:03:02Z"
+   },
+   {
+    "id": "YKFpSe28mlg",
+    "titre": "Opus 5.5 Video Editing is Unbelievably Good (master it in 12 mins)",
+    "dossier": "opus-5-5-video-editing-is-unbelievably-good",
+    "publie": "2026-09-29T11:35:59Z"
+   },
+   {
+    "id": "_SVU3oC4JX8",
+    "titre": "25 Tricks to Level Up Claude Design in 13 Mins",
+    "dossier": "25-tricks-to-level-up-claude-design-in-13-mins",
+    "publie": "2026-09-27T07:50:47Z"
+   }
+  ],
+  "tristen-obrien": [
+   {
+    "id": "yf2OwchM9nw",
+    "titre": "Claude Just Dropped MOTION. (Get Ahead of 95% in 11 Minutes.)",
+    "dossier": "claude-just-dropped-motion-get-ahead-of-95-in-11",
+    "publie": "2026-10-14T15:31:12Z"
+   },
+   {
+    "id": "aD-h7Bcn5OY",
+    "titre": "5 MORE Claude Code MODS You Need | Get Ahead of 95% in 9 Minutes",
+    "dossier": "5-more-claude-code-mods-you-need-get-ahead-of-95",
+    "publie": "2026-10-12T14:52:43Z"
+   },
+   {
+    "id": "LDn7rQKIFro",
+    "titre": "Claude Code Just Dropped MODS. (Master it in 10 Minutes).",
+    "dossier": "claude-code-just-dropped-mods-master-it-in-10",
+    "publie": "2026-10-05T13:00:34Z"
+   },
+   {
+    "id": "Zu-hJAHKJug",
+    "titre": "Opus 5.5 Made Claude Code Unstoppable | 7 Levels in 13 Minutes",
+    "dossier": "opus-5-5-made-claude-code-unstoppable-7-levels-in",
+    "publie": "2026-09-30T13:00:24Z"
+   },
+   {
+    "id": "zLkWg1evkpo",
+    "titre": "How the Top 1% Create Animated Instagram Carousels With AI",
+    "dossier": "how-the-top-1-create-animated-instagram-carousels",
+    "publie": "2026-09-27T13:00:23Z"
+   },
+   {
+    "id": "IHV7eWibqzo",
+    "titre": "How I Mastered AI (Your 100-Day PLAN to Do the Same)",
+    "dossier": "how-i-mastered-ai-your-100-day-plan-to-do-the-same",
+    "publie": "2026-09-24T13:00:37Z"
+   },
+   {
+    "id": "R2FFvPDUo7g",
+    "titre": "Learn 95% of Claude Cowork in Under 9 Minutes",
+    "dossier": "learn-95-of-claude-cowork-in-under-9-minutes",
+    "publie": "2026-09-17T13:00:12Z"
+   },
+   {
+    "id": "z82i2sbAmaM",
+    "titre": "Prompt Claude Like the Top 1% (in 30 Seconds).",
+    "dossier": "prompt-claude-like-the-top-1-in-30-seconds",
+    "publie": "2026-09-14T12:55:06Z"
+   },
+   {
+    "id": "c3B5OMF9MNs",
+    "titre": "Claude Design | Get DANGEROUSLY Good at Website Animation",
+    "dossier": "claude-design-get-dangerously-good-at-website",
+    "publie": "2026-09-08T13:00:24Z"
+   },
+   {
+    "id": "Fqlc0N1qyMo",
+    "titre": "Claude Code Just Dropped /Design. (Master it in 8 Minutes).",
+    "dossier": "claude-code-just-dropped-design-master-it-in-8",
+    "publie": "2026-08-25T13:00:10Z"
+   }
+  ],
+  "jad-mh": [
+   {
+    "id": "lUqjRmtN7bE",
+    "titre": "The New Claude Motion Is Awesome (Scary Good)",
+    "dossier": "the-new-claude-motion-is-awesome-scary-good",
+    "publie": "2026-10-17T15:26:05Z"
+   },
+   {
+    "id": "E8Qz5fXZIaw",
+    "titre": "How To Make Faceless Video $12,000/month (Turned Into A Skill)",
+    "dossier": "how-to-make-faceless-video-12-000-month-turned",
+    "publie": "2026-10-15T19:46:18Z"
+   },
+   {
+    "id": "cA3_8D1NiUU",
+    "titre": "What Is The Best Model For Motion Graphics (Tested)",
+    "dossier": "what-is-the-best-model-for-motion-graphics-tested",
+    "publie": "2026-10-14T19:05:35Z"
+   },
+   {
+    "id": "wBWumXBbDbA",
+    "titre": "Gemini Argon 4 VS Opus 5.5 (No Hype)",
+    "dossier": "gemini-argon-4-vs-opus-5-5-no-hype",
+    "publie": "2026-10-13T19:01:09Z"
+   },
+   {
+    "id": "A-ZQemIfsF4",
+    "titre": "The 3 Levels Of Viral Carousels 0$ (Turned it into a skill)",
+    "dossier": "the-3-levels-of-viral-carousels-0-turned-it-into",
+    "publie": "2026-10-13T14:21:38Z"
+   },
+   {
+    "id": "a4AqKRAp_DE",
+    "titre": "Muse Wonder vs Opus 5.5",
+    "dossier": "muse-wonder-vs-opus-5-5",
+    "publie": "2026-10-12T21:05:19Z"
+   },
+   {
+    "id": "98KlVeJ9ylg",
+    "titre": "The New Viral Motion Graphics (Turned it into a skill)",
+    "dossier": "the-new-viral-motion-graphics-turned-it-into-a",
+    "publie": "2026-10-11T20:24:53Z"
+   },
+   {
+    "id": "j8YDz-VC-AM",
+    "titre": "Claude Opus 5.5 Is INSANE at Video Editing 0$ (Turned it into a skill)",
+    "dossier": "claude-opus-5-5-is-insane-at-video-editing-0",
+    "publie": "2026-10-10T14:20:04Z"
+   },
+   {
+    "id": "y4GwCCsYwvQ",
+    "titre": "Claude Opus 5.5 Is INSANE at Motion Graphics 0$ (Turned it into a skill)",
+    "dossier": "claude-opus-5-5-is-insane-at-motion-graphics-0",
+    "publie": "2026-10-09T18:46:32Z"
+   },
+   {
+    "id": "1CSh8tBR1oc",
+    "titre": "VIRAL Carousels With Motion Graphics 0$ (Turned It Into a Skill)",
+    "dossier": "viral-carousels-with-motion-graphics-0-turned-it",
+    "publie": "2026-10-07T20:15:10Z"
+   }
+  ],
+  "simon-scrapes": [
+   {
+    "id": "YAuWBqZ_gjs",
+    "titre": "Claude Changed Completely - Every NEW Concept Explained",
+    "dossier": "claude-changed-completely-every-new-concept",
+    "publie": "2026-10-17T17:52:04Z"
+   },
+   {
+    "id": "J9NQTYUP6k0",
+    "titre": "How the Top 1% Use Claude Code Differently",
+    "dossier": "how-the-top-1-use-claude-code-differently",
+    "publie": "2026-10-10T16:24:57Z"
+   },
+   {
+    "id": "zac3kEUwIlg",
+    "titre": "You Should Be Using Jev’s Browser Agent, Here’s Why",
+    "dossier": "you-should-be-using-jev-s-browser-agent-here-s-why",
+    "publie": "2026-10-08T15:30:22Z"
+   },
+   {
+    "id": "e7TY56-yIvM",
+    "titre": "Everything You Know About Skills IS OUTDATED",
+    "dossier": "everything-you-know-about-skills-is-outdated",
+    "publie": "2026-10-01T15:38:23Z"
+   },
+   {
+    "id": "D-Z5HnLW_ho",
+    "titre": "Jev + Claude = INSANE Results (Every Concept Explained)",
+    "dossier": "jev-claude-insane-results-every-concept-explained",
+    "publie": "2026-09-23T20:33:14Z"
+   },
+   {
+    "id": "afVpjeoQF2I",
+    "titre": "Anthropic Just Built It’s Own Agentic OS",
+    "dossier": "anthropic-just-built-it-s-own-agentic-os",
+    "publie": "2026-09-18T17:06:55Z"
+   },
+   {
+    "id": "-URQjhtvxZo",
+    "titre": "Give Me 20 Minutes, I Will Make You a Claude Pro",
+    "dossier": "give-me-20-minutes-i-will-make-you-a-claude-pro",
+    "publie": "2026-09-17T16:37:15Z"
+   },
+   {
+    "id": "dfi3BsEPxic",
+    "titre": "Claude Just Changed Prompting Forever (You Need To Do THIS)",
+    "dossier": "claude-just-changed-prompting-forever-you-need-to",
+    "publie": "2026-09-10T15:46:14Z"
+   },
+   {
+    "id": "RDeofKimDxo",
+    "titre": "37 Cheat Codes to Level Up In Claude Code in 19 Minutes",
+    "dossier": "37-cheat-codes-to-level-up-in-claude-code-in-19",
+    "publie": "2026-08-28T16:03:30Z"
+   },
+   {
+    "id": "icM0ewXGvAw",
+    "titre": "19 Claude Code Mistakes \"Pro\" Users Are Still Making",
+    "dossier": "19-claude-code-mistakes-pro-users-are-still-making",
+    "publie": "2026-08-22T15:42:49Z"
+   }
+  ],
+  "thom-richard": [
+   {
+    "id": "iUWyBK4qAxM",
+    "titre": "Pourquoi tes skills Claude n’obéissent pas toujours (les 7 règles d’Anthropic)",
+    "dossier": "pourquoi-tes-skills-claude-n-obeissent-pas",
+    "publie": "2026-10-13T10:47:27Z"
+   },
+   {
+    "id": "Aeh7q8RA61U",
+    "titre": "L'app Claude a changé : 10 nouveautés à connaître",
+    "dossier": "l-app-claude-a-change-10-nouveautes-a-connaitre",
+    "publie": "2026-10-06T05:15:04Z"
+   },
+   {
+    "id": "yl54qmvoq2s",
+    "titre": "Pourquoi ton AIOS est malade (et comment le soigner)",
+    "dossier": "pourquoi-ton-aios-est-malade-et-comment-le-soigner",
+    "publie": "2026-09-22T06:14:53Z"
+   },
+   {
+    "id": "2HhuPhmdayk",
+    "titre": "7 techniques de prompting pour des réponses plus précises (et quand les utiliser)",
+    "dossier": "7-techniques-de-prompting-pour-des-reponses-plus",
+    "publie": "2026-09-15T05:45:39Z"
+   },
+   {
+    "id": "_fBuzCY_hGE",
+    "titre": "Watermark Claude : ce que ça change vraiment pour toi",
+    "dossier": "watermark-claude-ce-que-ca-change-vraiment-pour",
+    "publie": "2026-09-03T12:04:01Z"
+   },
+   {
+    "id": "Te0SztndsQE",
+    "titre": "J'ai passé les cours gratuits de Claude : ce qu'il faut savoir",
+    "dossier": "j-ai-passe-les-cours-gratuits-de-claude-ce-qu-il",
+    "publie": "2026-08-25T05:30:18Z"
+   },
+   {
+    "id": "Yn_1jmRK6TU",
+    "titre": "Tu n'as plus besoin de prompter : voici la méthode qui remplace tout",
+    "dossier": "tu-n-as-plus-besoin-de-prompter-voici-la-methode",
+    "publie": "2026-08-11T05:30:38Z"
+   },
+   {
+    "id": "460SRluCxgo",
+    "titre": "Monétisation YouTube : comment débloquer les 4 000 heures de visionnage en 6 mois ",
+    "dossier": "monetisation-youtube-comment-debloquer-les-4-000",
+    "publie": "2026-07-28T07:45:30Z"
+   },
+   {
+    "id": "mgGQFJRYIpo",
+    "titre": "L'AIOS, c'est quoi ? Explication en 3 minutes",
+    "dossier": "l-aios-c-est-quoi-explication-en-3-minutes",
+    "publie": "2026-07-18T15:49:43Z"
+   },
+   {
+    "id": "FwnIB-RbC-E",
+    "titre": "Comment j'ai automatisé ma vie avec un AIOS",
+    "dossier": "comment-j-ai-automatise-ma-vie-avec-un-aios",
+    "publie": "2026-07-07T10:18:11Z"
+   }
+  ]
+ }
+}

@@ -1,0 +1,201 @@
+{
+  "video_id": "460SRluCxgo",
+  "chaine": "thom-richard",
+  "titre_video": "Monétisation YouTube : comment débloquer les 4 000 heures de visionnage en 6 mois",
+  "codeur": "agent thom-richard",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "cas",
+    "format_secondaire": "talk",
+    "sujet": "Sa reprise d'une chaîne abandonnée jusqu'à la monétisation YouTube (4 000 heures en 6 mois), chiffres réels : sujet, format, vidéos longues, SEO",
+    "outils": ["YouTube Studio", "vidIQ", "NotebookLM", "Opus Clip", "TikTok", "Kit", "Skool"],
+    "niveau": "debutant",
+    "objectif_probable": "vues"
+  },
+  "titre": {
+    "attente_au_clic": "Apprendre comment il a atteint les 4 000 heures de visionnage en 6 mois pour monétiser sa chaîne, chiffres à l'appui.",
+    "schema": "<Sujet> : comment débloquer <seuil chiffré> en <durée>",
+    "promesse": "Atteindre les 4 000 heures de visionnage en 6 mois",
+    "audace": "audacieux",
+    "registre": "douleur-reve",
+    "briques": ["resultat", "vitesse"],
+    "marqueurs": ["chiffre", "duree"],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "joie, bouche ouverte, poing levé",
+    "regard": "camera",
+    "texte": "4 000 HEURES",
+    "texte_mots": 2,
+    "repete_titre": "partiel",
+    "elements": ["« 4 000 HEURES » en rouge néon", "logo YouTube", "courbe verte qui monte", "visage joyeux, poing levé", "petite étoile en bas à droite (marque d'image générée, à vérifier)"],
+    "nb_elements": 4,
+    "fond": "pièce sombre baignée de rouge",
+    "couleurs": ["rouge", "noir", "vert fluo", "blanc"],
+    "curiosity_gap": "resultat",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Ça c'est mon studio YouTube il y a 15 jours.",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Face caméra sur mur blanc, fauteuil blanc ; carte YouTube Studio « 3 998 h de visionnage » incrustée à gauche",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": ["hook-fait", "histoire-perso", "hook-dissonance", "boucle-curiosite", "pont"],
+    "preuve": {
+      "type": "chiffres",
+      "seconde": 0,
+      "description": "La carte YouTube Studio à 3 998 h sur 4 000, puis le compteur « 4 000, Monétisé » et la vignette « la danse de la joie »"
+    },
+    "annonce_plan": {"presente": false, "nb_points": null, "a_l_ecran": false},
+    "boucle_vers_la_fin": {
+      "presente": true,
+      "citation": "pas du tout pour la raison que je croyais",
+      "seconde_resolution": 1632,
+      "tenue": "oui"
+    },
+    "seconde_premier_point": 84,
+    "attente_tenue": "oui",
+    "attente_note": "La monétisation est prouvée en 10 secondes. Mais le « comment » ne commence qu'à 8:32 (changer de sujet) : avant, présentation perso, motivations et premiers chiffres."
+  },
+  "structure": {
+    "modele": "setup-progress-payoff",
+    "segments": [
+      {"debut": 0, "fin": 84, "titre": "Le pari risqué de reprendre une chaîne abandonnée", "role": "intro", "pull": true, "paint": true, "point": false, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 84, "fin": 306, "titre": "Pourquoi je fais vraiment des vidéos YouTube", "role": "point", "pull": false, "paint": true, "point": false, "nom": false, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 306, "fin": 512, "titre": "Le vrai démarrage : les chiffres du début", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 512, "fin": 732, "titre": "Le déclic : changer de sujet pour tout réussir", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 732, "fin": 980, "titre": "Le format miracle : 3 minutes pour comprendre", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 980, "fin": 1522, "titre": "La vidéo qui a tout changé pour ma chaîne", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 1522, "fin": 1880, "titre": "Le moteur silencieux : la puissance du SEO", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 1880, "fin": 1964, "titre": "TikTok et Opus Clip", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 1964, "fin": 2207, "titre": "Capter son audience : newsletter et communauté", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": false, "relance_sortie": false},
+      {"debut": 2207, "fin": 2301, "titre": "Ce que la chaîne m'a apporté", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 2301, "fin": 2465, "titre": "Comment je trouve le temps : l'IA", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": false, "relance_sortie": false},
+      {"debut": 2465, "fin": 2547, "titre": "Mes erreurs, puis le Club SMART", "role": "cta", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": false},
+      {"debut": 2547, "fin": 2781, "titre": "La boussole et le récap", "role": "fin", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": true}
+    ],
+    "relances": [
+      {"seconde": 11, "type": "rupture", "citation": "Spoiler, c'était le cas."},
+      {"seconde": 35, "type": "boucle-ouverte", "citation": "pas du tout pour la raison que je croyais"},
+      {"seconde": 74, "type": "boucle-ouverte", "citation": "reste bien jusqu'au bout parce que je vais te montrer toutes les étapes"},
+      {"seconde": 192, "type": "boucle-ouverte", "citation": "ce bilan, je le fais à la fin de la vidéo"},
+      {"seconde": 307, "type": "rappel-promesse", "citation": "On en parle tout à l'heure."},
+      {"seconde": 517, "type": "annonce-suite", "citation": "Et là mi-janvier, il se passe un truc que j'ai pas vraiment anticipé."},
+      {"seconde": 724, "type": "annonce-suite", "citation": "le vrai déclic avec l'algo, il est venu d'autre chose"},
+      {"seconde": 976, "type": "annonce-suite", "citation": "c'est juste après cette période là que j'ai sorti la vidéo qui a tout changé"},
+      {"seconde": 1529, "type": "rappel-promesse", "citation": "tu te souviens au début, il y a un chiffre que je t'ai donné"},
+      {"seconde": 2302, "type": "question-spectateur", "citation": "Comment je trouve le temps pour [...] faire tout ça ?"},
+      {"seconde": 2554, "type": "rupture", "citation": "Aujourd'hui, je me sens un poil perdu."},
+      {"seconde": 2759, "type": "boucle-ouverte", "citation": "Concrètement, ça rapporte combien une chaîne YouTube qui est monétisée ?"}
+    ],
+    "histoires": [
+      {"seconde": 12, "acte": "perso-passe", "resume": "Sa chaîne était à l'abandon (40 h par mois) ; il l'a gardée pour ses 1 500 abonnés et s'est trompé : ils font 7 % des vues."},
+      {"seconde": 49, "acte": "perso-passe", "resume": "47 ans, un emploi à plein temps, marié, trois enfants : la chaîne est son projet du soir et du week-end."},
+      {"seconde": 517, "acte": "perso-passe", "resume": "Une vidéo sur NotebookLM marche mieux que tout : il recentre la chaîne sur l'IA."},
+      {"seconde": 745, "acte": "perso-passe", "resume": "Faute de temps pour tourner 15 minutes, il invente le format 3 minutes pour comprendre."},
+      {"seconde": 986, "acte": "perso-passe", "resume": "Son tutoriel Claude de 1 h 16, trois jours de travail, lui rapporte 446 abonnés et 2 260 heures."},
+      {"seconde": 1251, "acte": "perso-passe", "resume": "Sa masterclass AIOS s'est effondrée après le départ : il avait parlé du Club SMART et de son parcours dès l'intro."},
+      {"seconde": 2219, "acte": "perso-passe", "resume": "La chaîne lui a valu un poste de responsable de l'IA et de l'automatisation à Montréal."},
+      {"seconde": 2394, "acte": "anecdote", "resume": "Sa dernière vidéo de 3 minutes a été faite par l'IA, avec un clone de sa voix."}
+    ],
+    "payoffs": [
+      {"seconde": 11, "resume": "Monétisé : 3 998 h puis 4 000"},
+      {"seconde": 496, "resume": "Bilan de janvier : 10 vidéos, 2 269 vues, 101 heures"},
+      {"seconde": 587, "resume": "Choisir un sujet qui passionne, validé par les données, et s'y tenir"},
+      {"seconde": 860, "resume": "Le format 3 minutes : 57 à 62 % de visionnage, plus de vues qu'un mois entier"},
+      {"seconde": 1010, "resume": "Le tutoriel long : 13 minutes de visionnage moyen, cinq fois plus de watch time"},
+      {"seconde": 1321, "resume": "Le mix gagnant : formats de 3 minutes et formats de plus d'une heure"},
+      {"seconde": 1632, "resume": "92 % du trafic externe vient de Google : titres basiques à mots clés et chaîne ancienne"},
+      {"seconde": 2655, "resume": "Le récap : sujet, format, SEO ; 35 vidéos, plus de 4 000 heures"}
+    ],
+    "premier_payoff_seconde": 587,
+    "jargon": 1,
+    "repetitions": 2,
+    "test_du_tweet": "Monétisé en 6 mois en reprenant une chaîne morte : les abonnés n'ont rien apporté (7 % des vues). Ce qui a marché : un sujet tenu (l'IA), des vidéos de 3 minutes très regardées, des tutoriels de plus d'une heure, et Google, qui amène 92 % du trafic externe."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine plein cadre, assis dans un fauteuil blanc", "decor": "mur blanc nu, fauteuil blanc ; polo sombre"},
+    "parts": {"face": 70, "ecran": 15, "motion": 15, "broll": 0},
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["chiffres-animes", "etiquettes", "fleches-annotations", "split-screen"],
+    "charte": "Encarts gris ardoise translucides posés sur l'image, sur-titres en petites capitales vert d'eau, chiffres en blanc et jaune ; annotations manuscrites jaunes ; tableaux blancs pour les bilans mensuels. La miniature (rouge néon, courbe verte, logo YouTube) n'en reprend rien.",
+    "rythme": "contraste",
+    "notes": "46 minutes face caméra, relancées par des encarts chiffrés (3 998 → 4 000, 7 % / 93 %, bilans mensuels) et quelques captures (Studio, vidIQ, Google, TikTok, Skool). Une vignette le montre danser, annotée « la danse de la joie »."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 704, "type": "affiliation", "cible": "les outils en description, dont vidIQ", "amene_par": "apres-valeur", "citation": "dans la description, tu vas trouver le lien vers tous les outils que j'utilise"},
+      {"seconde": 2077, "type": "affiliation", "cible": "Kit, sa plateforme de newsletter", "amene_par": "apres-valeur", "citation": "Donc moi, j'utilise Kit à nouveau. Tu peux regarder le lien."},
+      {"seconde": 2380, "type": "video-suivante", "cible": "la masterclass AIOS", "amene_par": "transition", "citation": "Si ça t'intéresse, va voir la masterclass."},
+      {"seconde": 2518, "type": "abonnement", "cible": "s'abonner pour la vidéo sur son système de production", "amene_par": "transition", "citation": "Donc n'hésite pas à t'abonner si ça t'intéresse."},
+      {"seconde": 2522, "type": "communaute-payante", "cible": "le Club SMART", "amene_par": "apres-valeur", "citation": "cette fois je te fais un peu la promo de mon club Smart"},
+      {"seconde": 2762, "type": "video-suivante", "cible": "la future vidéo sur ses revenus après un mois", "amene_par": "fin", "citation": "je te ferai un récap global de tout ce que je gagne"},
+      {"seconde": 2774, "type": "like-commentaire", "cible": "liker, s'abonner, partager", "amene_par": "fin", "citation": "N'hésite pas à liker, n'hésite pas à t'abonner et même à partager"}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"affiliation": 7, "communaute-payante": 2, "newsletter": 1, "video-suivante": 2},
+    "commentaire_epingle": null,
+    "recap_final": true,
+    "derniere_phrase": "et je te dis à bientôt.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["un spectateur conseille un stage YouTube à 2 500 €"],
+    "demandes": [],
+    "critiques": [],
+    "reprises": [],
+    "signal_promesse": "inconnu"
+  },
+  "retention": {
+    "a_30s": 0.929,
+    "a_la_moitie": 0.129,
+    "pertes": [
+      {"seconde": 30, "chute": 29.9, "passage": "« Je m'appelle Thomas, j'ai 47 ans » (annonce, puis présentation perso de 0:42 à 1:09)", "segment": "Le pari risqué de reprendre une chaîne abandonnée"},
+      {"seconde": 111, "chute": 7.9, "passage": "« faire des vidéos YouTube, c'est vraiment sortir de sa zone de confort » (30 points perdus de 0:55 à 2:19)", "segment": "Pourquoi je fais vraiment des vidéos YouTube"},
+      {"seconde": 751, "chute": 4.3, "passage": "« mon format historique [...] c'est des vidéos à peu près de 15 minutes »", "segment": "Le format miracle : 3 minutes pour comprendre"},
+      {"seconde": 389, "chute": 3.2, "passage": "« je m'étais fixé comme objectif de faire deux publications par semaine »", "segment": "Le vrai démarrage : les chiffres du début"},
+      {"seconde": 1947, "chute": 3.2, "passage": "« la monétisation commence à 10000 followers, je crois » (après la capture TikTok)", "segment": "TikTok et Opus Clip"}
+    ],
+    "remontees": [
+      {"seconde": 723, "chute": -7.5, "passage": "« le vrai déclic avec l'algo, il est venu d'autre chose » (début de chapitre)", "segment": "Le format miracle : 3 minutes pour comprendre"},
+      {"seconde": 501, "chute": -3.1, "passage": "« Et là mi-janvier, il se passe un truc que j'ai pas vraiment anticipé. » (début de chapitre)", "segment": "Le déclic : changer de sujet pour tout réussir"},
+      {"seconde": 973, "chute": -3.1, "passage": "« j'ai sorti la vidéo qui a tout changé » (début de chapitre)", "segment": "La vidéo qui a tout changé pour ma chaîne"},
+      {"seconde": 1919, "chute": -2.5, "passage": "« j'ai eu une vidéo qui a fait 120000 vues » (compte TikTok à l'écran)", "segment": "TikTok et Opus Clip"},
+      {"seconde": 2280, "chute": -1.8, "passage": "« Comment je trouve le temps pour [...] faire tout ça ? »", "segment": "Comment je trouve le temps : l'IA"}
+    ]
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 2, "preuve": "0:02 « 3998 heures de visionnage sur 4000 » avec la carte YouTube Studio : le chiffre de la miniature et du titre dès les 5 premières secondes"},
+    "ap_boucle_curiosite": {"note": 2, "preuve": "0:35 « pas du tout pour la raison que je croyais », résolue à 27:12 (Google)"},
+    "ap_effort_montre": {"note": 1, "preuve": "La chaîne à 40 h par mois il y a 6 mois, un projet du soir et du week-end ; pas d'effort chiffré dans l'intro (les trois jours du tutoriel viennent à 16:29)"},
+    "ap_setup_progress_payoff": {"note": 2, "preuve": "But (monétiser), progression mois par mois (101 h en janvier, 357 en mars, 1 612 en juin), résultat (monétisé le 13 juillet)"},
+    "ap_contraste_rythme": {"note": 1, "preuve": "3 à 15 changements de plan par minute, sans passage nettement plus rapide ou plus lent voulu"},
+    "ap_montrer_sans_son": {"note": 2, "preuve": "Planche intro : « 3 998 / 4 000 h », « 4 000 Monétisé », « la danse de la joie », « 7 % / 93 % »"},
+    "ali_douleur_histoire": {"note": 1, "preuve": "Histoire vécue dès 0:12 (chaîne abandonnée) et 0:49 (famille, peu de temps) ; la douleur du spectateur n'est qu'évoquée (« si toi aussi tu as une famille »)"},
+    "ali_coeur_unique": {"note": 1, "preuve": "Trois leçons (sujet, format, SEO) récapitulées à 44:09, sans message unique"},
+    "alx_pont": {"note": 1, "preuve": "Preuve, contexte et annonce (« je vais tout te partager ») comme un pont, mais au milieu de hooks et de boucles"},
+    "alx_pull_paint_point": {"note": 2, "preuve": "Chaque étape : le blocage (format de 15 min qui ne prend pas), son histoire, la leçon (« choisir, c'est renoncer », le mix court et long)"},
+    "alx_nom_idee": {"note": 2, "preuve": "« choisir, c'est renoncer », « format snack », « contenu evergreen », « moteur silencieux », « la boussole »"},
+    "alx_phrase_finale": {"note": 1, "preuve": "10:39 « choisir, c'est renoncer », 23:40 « Ta courbe elle doit être exponentielle » ; pas pour la plupart des parties"},
+    "alx_douleur_reve": {"note": 2, "preuve": "« comment débloquer les 4 000 heures [...] en 6 mois » parle directement du désir des créateurs"},
+    "alx_cta_tot": {"note": 0, "preuve": "Aucune offre ni ressource avant 4 minutes ; le Club SMART n'arrive qu'à 42:00"},
+    "ed_intro_courte": {"note": 0, "preuve": "1er point à 1:24, puis 7 minutes de contexte avant le premier « comment » (8:32)"},
+    "ed_hook": {"note": 2, "preuve": "0:02 fait : « 3998 heures de visionnage sur 4000 » ; 0:26 dissonance : « je me suis complètement trompé »"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "Problèmes et preuves chiffrées partout ; les consignes au spectateur sont rares (le rythme cible à 22:21)"},
+    "ed_tension_relancee": {"note": 2, "preuve": "8:32 « il se passe un truc que j'ai pas vraiment anticipé », 12:04 « le vrai déclic [...] est venu d'autre chose », 16:16 « la vidéo qui a tout changé »"},
+    "ed_histoire_vecue": {"note": 2, "preuve": "Histoires d'acte 1 : la chaîne reprise, le format né du manque de temps, la masterclass qui chute à cause de la promo du Club"},
+    "ed_sans_surexplication": {"note": 0, "preuve": "Le « cannibalisme » entre vidéos redit quatre fois (6:57 à 7:37), « je me suis complètement trompé » deux fois"},
+    "ed_niveau_simple": {"note": 2, "preuve": "Watch time, taux de réaction et contenu evergreen expliqués en une phrase chacun"},
+    "tous_video_suivante": {"note": 1, "preuve": "46:02 la vidéo sur ses revenus annoncée pour plus tard ; la masterclass AIOS citée en passant à 39:40"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Titre rêve chiffré (« 4 000 heures en 6 mois ») et miniature à émotion forte : le seul titre de la sélection qui parle du désir sans parler d'IA.",
+    "intro_structure": "Un début parfait (3 998 h sur 4 000 en 2 s, 93 % de la courbe à 30 s), puis 30 points perdus pendant la présentation perso et 30 de plus sur les motivations.",
+    "habillage": "Face caméra presque tout le temps, relancé par des encarts chiffrés et quelques captures de ses stats.",
+    "idee_pour_nous": "Garder le hook chiffré et entrer dans le « comment » tout de suite : la présentation perso et les motivations coûtent 60 points en 2 minutes. Thomas le dit lui-même à 21:09.",
+    "objectif": "vues"
+  }
+}

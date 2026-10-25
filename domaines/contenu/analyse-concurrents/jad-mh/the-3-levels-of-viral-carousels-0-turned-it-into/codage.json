@@ -1,0 +1,163 @@
+{
+  "video_id": "A-ZQemIfsF4",
+  "chaine": "jad-mh",
+  "titre": "The 3 Levels Of Viral Carousels 0$ (Turned it into a skill)",
+  "codeur": "agent jad-mh",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "liste",
+    "format_secondaire": "comparatif",
+    "sujet": "Trois niveaux de carrousels Instagram : Canva à 0 $, le look « 100 $ » fait gratuitement (Muse ou Qwen en local), et le « 1 000 $ », un système animé à vendre aux entreprises",
+    "outils": ["Canva", "ChatGPT", "Muse (Meta)", "Qwen 3.5 9B", "Ollama", "Higgsfield", "Claude Opus 5.5", "GPT Image 2.5", "Blotato"],
+    "niveau": "debutant",
+    "objectif_probable": "communaute"
+  },
+  "titre": {
+    "attente_au_clic": "Voir la différence entre un carrousel à 0 $, à 100 $ et à 1 000 $, et faire les meilleurs sans payer grâce à une skill.",
+    "schema": "The <N> Levels Of <ADJ> <Livrable> 0$ (Turned it into a skill)",
+    "promesse": "Faire des carrousels qui deviennent viraux, du niveau gratuit au niveau pro, pour 0 $",
+    "audace": "audacieux",
+    "registre": "douleur-reve",
+    "briques": ["resultat"],
+    "marqueurs": ["chiffre"],
+    "nom_outil": false
+  },
+  "miniature": {
+    "visage": false,
+    "emotion": null,
+    "regard": null,
+    "texte": "THE 3 LEVELS OF VIRAL CAROUSELS $0 VS $100 VS $1,000",
+    "texte_mots": 11,
+    "repete_titre": "oui",
+    "elements": ["titre blanc avec « VIRAL » en bleu manuscrit", "trois carrousels côte à côte (texte sobre, magazine « cre*ate », photo de mode annotée) séparés par des ronds « VS »", "prix $0, $100, $1,000 sur des taches jaunes"],
+    "nb_elements": 3,
+    "fond": "ciel étoilé bleu nuit",
+    "couleurs": ["bleu nuit", "blanc", "jaune", "rouge", "bleu vif"],
+    "curiosity_gap": "transformation",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "This is a $0 carousel.",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Un carrousel jaune « 3 pricing mistakes » en trois slides, face caméra en vignette",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": ["demo-d-abord", "hook-fait", "boucle-curiosite", "pont"],
+    "preuve": {
+      "type": "resultat-montre",
+      "seconde": 0,
+      "description": "Les trois niveaux de carrousels défilent dès 0:00 ; à 0:35 l'étude Buffer : 6,9 % d'engagement pour les carrousels contre 3,3 % pour les Reels"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 3, "a_l_ecran": false},
+    "boucle_vers_la_fin": {"presente": false, "citation": "", "seconde_resolution": null, "tenue": null},
+    "seconde_premier_point": 151,
+    "attente_tenue": "partiel",
+    "attente_note": "Les trois niveaux sont expliqués et le niveau « 100 $ » est donné. Mais le niveau à 1 000 $ n'est pas encore une skill (11:08 « we'll be making this as a skill also ») ; un commentaire demande où la trouver."
+  },
+  "structure": {
+    "modele": "liste-numerotee",
+    "segments": [
+      {"debut": 0, "fin": 70, "titre": "$0 vs $100 vs $1,000 carousels", "role": "intro", "pull": true, "paint": false, "point": false, "nom": true, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 70, "fin": 151, "titre": "Free in my Skool + weekly calls", "role": "cta", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 151, "fin": 170, "titre": "What the price tag really means", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 170, "fin": 233, "titre": "The $0 carousel: Canva", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 233, "fin": 344, "titre": "The $100 carousel for $0: Muse, then Qwen 3.5 on my laptop", "role": "point", "pull": true, "paint": false, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 344, "fin": 439, "titre": "The 3 things that make it look pro", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 439, "fin": 526, "titre": "The tests (and the limits)", "role": "demo", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 526, "fin": 689, "titre": "The $1,000 carousel: a motion system", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": false},
+      {"debut": 689, "fin": 763, "titre": "What it costs + which one to make", "role": "fin", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 16, "type": "boucle-ouverte", "citation": "And here's the crazy part. The $100 one, it cost me $0."},
+      {"seconde": 28, "type": "question-spectateur", "citation": "if you're wondering why carousels"},
+      {"seconde": 52, "type": "annonce-suite", "citation": "And here's the part that most people don't know."},
+      {"seconde": 119, "type": "rappel-promesse", "citation": "I would rather you stay all the way to the end to understand how it works."},
+      {"seconde": 134, "type": "rupture", "citation": "And if it feels too long, speed it up."},
+      {"seconde": 196, "type": "question-spectateur", "citation": "Cover the username. Can you tell who made it?"},
+      {"seconde": 230, "type": "annonce-suite", "citation": "So now, let's kind of tell it."},
+      {"seconde": 336, "type": "question-spectateur", "citation": "Now I know what you're thinking Jad [...] I can't make that."},
+      {"seconde": 486, "type": "annonce-suite", "citation": "Now, I'll be honest about the limits"},
+      {"seconde": 732, "type": "question-spectateur", "citation": "So, which one would you actually make?"}
+    ],
+    "histoires": [
+      {"seconde": 88, "acte": "anecdote", "resume": "Moins de deux semaines plus tôt, 400 abonnés ; ce jour-là, 5 600"}
+    ],
+    "payoffs": [
+      {"seconde": 233, "resume": "Le carrousel « 100 $ » fait gratuitement avec Muse, qui peut en faire un par jour"},
+      {"seconde": 286, "resume": "La même chose en local avec Qwen 3.5 9B sur un MacBook Air"},
+      {"seconde": 356, "resume": "Les trois choses à lui donner : feuille de style, exemple, prompt d'une page"},
+      {"seconde": 440, "resume": "Test 1 : un carrousel sur Claude Haiku 5.5 fidèle à la feuille de style"},
+      {"seconde": 469, "resume": "Test 2 : un carrousel construit autour de sa propre photo"},
+      {"seconde": 689, "resume": "Ce que coûte le système et lequel faire"}
+    ],
+    "premier_payoff_seconde": 233,
+    "jargon": 2,
+    "repetitions": 1,
+    "test_du_tweet": "Trois niveaux de carrousels : Canva (0 $), qui ressemble à 50 autres ; le look « 100 $ » fait gratuitement avec Muse ou un modèle local grâce à une feuille de style, un exemple et un long prompt ; le « 1 000 $ », un système animé qui publie seul, à vendre aux entreprises."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine, souvent plein cadre", "decor": "salon, tableau, bibliothèque, lumière violette à gauche ; casquette, t-shirt noir"},
+    "parts": {"face": 45, "ecran": 45, "motion": 10, "broll": 0},
+    "textes_ecran": "rares",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["cartes-chapitre", "curseur-surligne", "split-screen", "fleches-annotations"],
+    "charte": "Fond crème à grille, captures en cadres arrondis, cartes de chapitre bleu roi numérotées (« 01 MY SKOOL », « 09 THE COST ») ; surlignage jaune sur les règles de la feuille de style. La miniature (ciel étoilé) ne reprend pas cette charte.",
+    "rythme": "regulier",
+    "notes": "La seule vidéo sans sous-titres incrustés, et la plus face caméra : près de la moitié du temps en plein cadre. De 9 à 16 changements de plan par minute, débit stable."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 77, "type": "communaute-gratuite", "cible": "la skill, les feuilles de style et le prompt dans Skool", "amene_par": "intro", "citation": "Everything you need for the $100 one is already actually in my school community"},
+      {"seconde": 109, "type": "communaute-gratuite", "cible": "des appels hebdomadaires dans Skool pour installer les skills", "amene_par": "intro", "citation": "we now have weekly calls in school to help you set it up."},
+      {"seconde": 119, "type": "autre", "cible": "rester jusqu'à la fin", "amene_par": "intro", "citation": "I would rather you stay all the way to the end"},
+      {"seconde": 145, "type": "abonnement", "cible": "s'abonner", "amene_par": "intro", "citation": "If you're new here, leave a follow because I drop scales every day"},
+      {"seconde": 632, "type": "sponsor", "cible": "l'offre Higgsfield avec code promo", "amene_par": "pendant-demo", "citation": "I was able to get an offer from Hickfield. There's a link down in the description"},
+      {"seconde": 746, "type": "communaute-gratuite", "cible": "tout est dans le lien en description", "amene_par": "fin", "citation": "Everything is in the link in the description."},
+      {"seconde": 755, "type": "abonnement", "cible": "s'abonner pour les skills de la semaine", "amene_par": "fin", "citation": "Subscribe if you want more skills like these."}
+    ],
+    "sponsor": {"present": true, "nom": "Higgsfield", "debut": 632, "duree": 16, "forme": "integre-a-la-demo"},
+    "liens_description": {"communaute-gratuite": 1, "sponsor": 2, "video-suivante": 1, "autre": 6},
+    "commentaire_epingle": {"texte": "Get Acces to the promo (lien Higgsfield Katana)", "type": "sponsor"},
+    "recap_final": false,
+    "derniere_phrase": "Subscribe if you want more skills like these. I drop skills every week. and I'll see you in the next",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["Skool inaccessible depuis certains pays", "adhésion Skool pas encore validée", "le carrousel à 1 000 $ qui intrigue"],
+    "demandes": ["déposer la skill ailleurs que sur Skool", "les prompts ou la skill du carrousel à 1 000 $", "où trouver le lien"],
+    "critiques": ["l'accès à Skool bloque plusieurs spectateurs"],
+    "reprises": ["« The $1000 carousel »"],
+    "signal_promesse": "mixte"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "0:00 « This is a $0 carousel. » puis « $100 » à 0:05 : le titre et la miniature en substance, mais pas les carrousels de la miniature ; le plus proche de la chaîne"},
+    "ap_boucle_curiosite": {"note": 2, "preuve": "0:17 « The $100 one, it cost me $0 », résolue à 3:53 ; « isn't really a carousel. It's a system » résolue à 8:46"},
+    "ap_effort_montre": {"note": 0, "preuve": "Aucun effort dit dans l'intro"},
+    "ap_setup_progress_payoff": {"note": 2, "preuve": "Chaque niveau pose ce qu'il est, comment il se fait, puis montre le résultat ou ses limites, de 0 $ à 1 000 $"},
+    "ap_contraste_rythme": {"note": 0, "preuve": "De 9 à 16 changements de plan par minute, débit stable"},
+    "ap_montrer_sans_son": {"note": 1, "preuve": "Les carrousels se voient, mais les prix ne sont pas écrits à l'écran et il n'y a pas de sous-titres"},
+    "ali_douleur_histoire": {"note": 0, "preuve": "La douleur (3:09 « your post looks like 50 other posts ») arrive après l'intro, sans histoire"},
+    "ali_coeur_unique": {"note": 2, "preuve": "2:31 « the price tag is not what you pay for, it's what it looks like »"},
+    "alx_pont": {"note": 0, "preuve": "Ouverture sur une démo et des chiffres d'accroche"},
+    "alx_pull_paint_point": {"note": 2, "preuve": "Canva (le test « Cover the username »), le niveau 100 $ (« that's what you're paying a designer for »), le système (un dentiste à Austin)"},
+    "alx_nom_idee": {"note": 2, "preuve": "Les niveaux « $0 / $100 / $1,000 carousel » et les trois ingrédients (style sheet, example, prompt), en cartes de chapitre"},
+    "alx_phrase_finale": {"note": 2, "preuve": "3:47 « Nobody told it what good looks like. » ; 5:45 « The model is not the secret. » ; 11:23 « something that makes itself. »"},
+    "alx_douleur_reve": {"note": 2, "preuve": "« Viral Carousels » et « 0$ » : le désir, sans nom d'outil"},
+    "alx_cta_tot": {"note": 2, "preuve": "1:17 la skill, les feuilles de style et le prompt dans Skool, plus des appels hebdo"},
+    "ed_intro_courte": {"note": 0, "preuve": "Premier point à 2:31, après Skool, remerciements et demande d'attention"},
+    "ed_hook": {"note": 2, "preuve": "0:02 « 90% of people are posting this » puis « Only 1% » ; 0:38 6,9 % contre 3,3 %"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "Canva : problème puis test ; niveau 100 $ : objection, consignes, puis tests ; l'ordre varie"},
+    "ed_tension_relancee": {"note": 2, "preuve": "3:50 « So now, let's kind of tell it. » ; 5:36 « Now I know what you're thinking » ; 12:12 « which one would you actually make? »"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "1:28 de 400 à 5 600 abonnés : une anecdote"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "La gratuité et les skills hebdo reviennent plusieurs fois dans l'intro"},
+    "ed_niveau_simple": {"note": 2, "preuve": "5:58 « a style sheet. This is one image with all the design rules » ; les paramètres restent non expliqués"},
+    "tous_video_suivante": {"note": 0, "preuve": "« I'll see you in the next », sans vidéo précise"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Le titre le plus tourné vers le désir (aucun outil) et la miniature la plus lisible : trois carrousels, trois prix, sans visage. La vidéo reste pourtant sous la médiane de la sélection.",
+    "intro_structure": "Hook en paliers (90 %, la moitié, 1 %) et une boucle (« the $100 one cost me $0 ») tenue à 3:53, puis 1 min 20 de Skool et de remerciements. Le titre dit « Turned it into a skill », mais le niveau à 1 000 $ n'en est pas encore une.",
+    "habillage": "Seule vidéo sans sous-titres et la plus face caméra (près de la moitié du temps), avec des cartes de chapitre bleu roi numérotées.",
+    "idee_pour_nous": "Le format « 3 niveaux : 0, 100, 1 000 € » sur un livrable que nos membres vendent, le niveau haut présenté comme une offre pour leurs clients.",
+    "objectif": "club"
+  }
+}

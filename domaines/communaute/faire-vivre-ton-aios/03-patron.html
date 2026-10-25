@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carte de workflow</title>
+<style>
+  /* Zéro dépendance : polices système, aucun appel réseau. Le fichier marche hors ligne,
+     dans n'importe quel navigateur, et se partage par simple envoi. */
+  :root{
+    --bg:#FAFAFA;--panel:#F1F2F4;--card:#FFFFFF;
+    --border:rgba(16,18,20,.12);--border-soft:rgba(16,18,20,.07);
+    --text:#101214;--muted:#5C666E;
+    --x-humain:#B0740A;--x-agent:#4A5FC1;--x-outil:#2E7D8F;--x-signal:#6B7280;--x-sortie:#3E8E4F;
+    --gate:#B0740A;--grid:rgba(16,18,20,.05);
+  }
+  [data-theme="dark"]{
+    --bg:#17181A;--panel:#1F2124;--card:#25282B;
+    --border:rgba(255,255,255,.13);--border-soft:rgba(255,255,255,.07);
+    --text:#E6E8EA;--muted:#98A1A8;
+    --x-humain:#F0A93B;--x-agent:#8C9BE8;--x-outil:#4FB3C7;--x-signal:#98A1A8;--x-sortie:#5BB86D;
+    --gate:#F0A93B;--grid:rgba(255,255,255,.05);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    background-image:radial-gradient(var(--grid) 1px,transparent 1px);background-size:22px 22px;
+    display:flex;flex-direction:column;overflow:hidden}
+
+  header{display:flex;align-items:flex-start;gap:18px;padding:16px 22px 12px;border-bottom:1px solid var(--border-soft);flex:0 0 auto}
+  .htxt{min-width:0;flex:1}
+  h1{font-weight:800;font-size:20px;letter-spacing:-.02em;margin:0}
+  .sub{font-size:13px;color:var(--muted);margin-top:3px;max-width:70ch}
+  .legend{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;justify-content:flex-end;max-width:340px}
+  .lg{display:inline-flex;align-items:center;gap:6px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+  .dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+  .th{background:transparent;border:1px solid var(--border);color:var(--muted);border-radius:8px;
+    padding:5px 12px;font-size:12px;font-weight:700;cursor:pointer;height:30px;flex:0 0 auto}
+  .th:hover{color:var(--text);border-color:var(--muted)}
+
+  main{flex:1 1 auto;display:flex;min-height:0}
+  #canvas{flex:1 1 auto;min-width:0;display:block}
+  svg{width:100%;height:100%;display:block}
+
+  aside{flex:0 0 286px;border-left:1px solid var(--border-soft);background:var(--panel);
+    padding:16px 16px 10px;overflow-y:auto}
+  .ah{font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin:0 0 10px}
+  .flow{width:100%;text-align:left;background:transparent;border:1px solid var(--border);border-radius:10px;
+    padding:9px 11px;margin-bottom:7px;cursor:pointer;color:var(--text);
+    font-weight:700;font-size:13px;line-height:1.25;display:flex;gap:9px;align-items:center;font-family:inherit}
+  .flow:hover{border-color:var(--muted)}
+  .flow[aria-pressed="true"]{background:var(--card);border-color:currentColor}
+  .flow .fd{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+  .flow .fn{flex:1;min-width:0}
+  .flow small{display:block;font-weight:400;font-size:11.5px;color:var(--muted);margin-top:2px}
+  ol.steps{list-style:none;margin:14px 0 0;padding:0;border-top:1px solid var(--border-soft);padding-top:12px}
+  ol.steps li{display:flex;gap:9px;margin-bottom:11px}
+  ol.steps .n{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:10.5px;color:var(--muted);padding-top:2px;flex:0 0 16px}
+  ol.steps b{font-weight:700;font-size:12.5px;display:block;line-height:1.3}
+  ol.steps span{font-size:11.5px;color:var(--muted);display:block;margin-top:1px;line-height:1.35}
+  ol.steps li.gate b{color:var(--gate)}
+  .hint{font-size:11.5px;color:var(--muted);margin-top:12px;line-height:1.4}
+
+  footer{flex:0 0 auto;display:flex;gap:18px;align-items:center;padding:9px 22px;
+    border-top:1px solid var(--border-soft);
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:10.5px;color:var(--muted);
+    text-transform:uppercase;letter-spacing:.06em}
+  footer .warn{color:var(--gate)}
+  footer .src{margin-left:auto;text-transform:none;letter-spacing:0}
+  footer a{color:inherit}
+
+  .node{cursor:default}
+  .node rect.bx{fill:var(--card);stroke:var(--border);stroke-width:1}
+  .node.on rect.bx{filter:drop-shadow(0 2px 10px rgba(0,0,0,.10))}
+  .lbl{font-weight:700;font-size:12.5px;fill:var(--text)}
+  .note{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:9.5px;fill:var(--muted)}
+  .badge{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:9px;fill:var(--muted);
+    text-transform:uppercase;letter-spacing:.08em}
+  .colh{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:9.5px;fill:var(--muted);
+    text-transform:uppercase;letter-spacing:.11em}
+  .edge{fill:none;stroke-width:1.5;opacity:.38;stroke-dasharray:4 4}
+  .edge.active{opacity:1;stroke-dasharray:none;stroke-width:2}
+  .gateline{stroke:var(--gate);stroke-width:1.4;stroke-dasharray:5 5;opacity:.6}
+  .gatelbl{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:9px;fill:var(--gate);
+    text-transform:uppercase;letter-spacing:.09em;font-weight:700}
+  .loop{fill:none;stroke:var(--gate);stroke-width:1.4;stroke-dasharray:6 5;opacity:.5}
+  .looplbl{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:9px;fill:var(--gate);
+    text-transform:uppercase;letter-spacing:.09em}
+  .dim{opacity:.12;transition:opacity .3s}
+  .g-flow .node,.g-flow .edge,.g-flow .gate,.g-flow .loop{transition:opacity .3s}
+  .spark{opacity:.9}
+  [tabindex]:focus-visible,button:focus-visible{outline:2px solid var(--gate);outline-offset:2px}
+
+  @media (prefers-reduced-motion: reduce){ .spark{display:none} *{transition:none !important;animation:none !important} }
+  @media (max-width:900px){
+    body{overflow:auto}
+    main{flex-direction:column}
+    aside{flex:1 1 auto;border-left:none;border-top:1px solid var(--border-soft)}
+    #canvas{min-height:60vh}
+  }
+</style>
+</head>
+<body>
+
+<script>
+/* ═══════════════════════════════════════════════════════════════════════════
+   LA CARTE — tout est ici.
+
+   Pour adapter cette carte à TON workflow : remplace le contenu de MAP.
+   Tu n'as jamais à toucher au code en dessous — corriger un label, ajouter une
+   étape ou changer un exécuteur, c'est éditer des données.
+
+   L'exemple ci-dessous est générique : remplace-le entièrement.
+   ═══════════════════════════════════════════════════════════════════════════ */
+const MAP = {
+  title: "Onboarding client — du contrat signé au premier livrable",
+  subtitle: "Ce qui doit rester vrai : aucun accès client n’est créé avant que le paiement soit confirmé, et rien ne part au client sans relecture humaine.",
+  source: { label: "", href: "" },   // optionnel : d'où vient ce workflow (fiche, doc, wiki)
+
+  // Type d'exécuteur → libellé affiché + couleur. Supprime ceux que tu n'utilises pas.
+  executors: {
+    humain: { label: "Moi",           color: "var(--x-humain)" },
+    agent:  { label: "Agent IA",      color: "var(--x-agent)"  },
+    outil:  { label: "Outil / script",color: "var(--x-outil)"  },
+    signal: { label: "Signal externe",color: "var(--x-signal)" },
+    sortie: { label: "Destination",   color: "var(--x-sortie)" },
+  },
+
+  // Les étages du flux, de gauche à droite. Vise 5 à 7 : au-delà ça devient une frise.
+  columns: [
+    { key: "entree",     label: "Déclencheur" },
+    { key: "preparation",label: "Préparation" },
+    { key: "controle",   label: "Contrôle" },
+    { key: "mise_en_route", label: "Mise en route" },
+    { key: "livraison",  label: "Livraison" },
+    { key: "suite",      label: "Ce qui suit" },
+  ],
+
+  nodes: [
+    { id:"A1", col:"entree", x:"signal", label:"Contrat signé", note:"notification de signature" },
+    { id:"A2", col:"entree", x:"signal", label:"Paiement reçu", note:"acompte encaissé" },
+
+    { id:"B1", col:"preparation", x:"agent", label:"Fiche client", note:"résume l’échange de vente" },
+    { id:"B2", col:"preparation", x:"agent", label:"Plan de démarrage", note:"jalons + ce qu’il me faut" },
+
+    { id:"C1", col:"controle", x:"humain", label:"Relecture", note:"je corrige et je tranche" },
+
+    { id:"D1", col:"mise_en_route", x:"outil", label:"Espace de travail", note:"dossier + droits créés" },
+    { id:"D2", col:"mise_en_route", x:"outil", label:"Mail de bienvenue", note:"envoyé après validation" },
+    { id:"D3", col:"mise_en_route", x:"outil", label:"Fiche CRM", note:"statut : démarrage" },
+
+    { id:"E1", col:"livraison", x:"humain", label:"Appel de cadrage", note:"45 min, ordre du jour envoyé" },
+
+    { id:"F1", col:"suite", x:"sortie", label:"Premier livrable", note:"daté dans le plan" },
+    { id:"F2", col:"suite", x:"sortie", label:"Dossier client", note:"tout ce qui a été décidé" },
+  ],
+
+  // Qui produit → qui consomme. Aucun nœud ne doit rester sans lien.
+  edges: [
+    ["A1","B1"], ["A2","B1"],
+    ["B1","B2"],
+    ["B2","C1"],
+    ["C1","D1"], ["C1","D2"], ["C1","D3"],
+    ["D1","E1"], ["D2","E1"], ["D3","E1"],
+    ["E1","F1"], ["E1","F2"],
+  ],
+
+  // Un gate = un arrêt dur. Tout ce qui précède est produit, puis ça attend.
+  gates: [
+    { id:"g1", after:"preparation", who:"Moi", what:"rien ne part au client sans ma relecture" },
+    { id:"g2", after:"mise_en_route", who:"Moi", what:"les accès sont vérifiés avant l’appel" },
+  ],
+
+  // Ce qui repart en arrière et nourrit une étape amont.
+  loops: [
+    { from:"E1", to:"B2", label:"Ce qui ressort de l’appel corrige le plan de démarrage" },
+  ],
+
+  // 3 à 5 chemins bout en bout. Le plus long s'ouvre automatiquement.
+  flows: [
+    { id:"f1", name:"Le chemin normal", desc:"Contrat signé jusqu’au premier livrable.",
+      path:["A1","B1","B2","C1","D1","E1","F1"] },
+    { id:"f2", name:"Ce que le client reçoit", desc:"Tout ce qui sort de chez moi et arrive chez lui.",
+      path:["C1","D2","E1","F2"] },
+    { id:"f3", name:"La boucle de cadrage", desc:"L’appel corrige le plan avant qu’il ne devienne faux.",
+      path:["B2","C1","E1"], loops:["0"] },
+  ],
+};
+</script>
+
+<header>
+  <div class="htxt">
+    <h1 id="title"></h1>
+    <div class="sub" id="subtitle"></div>
+  </div>
+  <div class="legend" id="legend"></div>
+  <button class="th" id="theme" type="button">Thème</button>
+</header>
+
+<main>
+  <div id="canvas"><svg id="svg" role="img" aria-labelledby="title"></svg></div>
+  <aside>
+    <p class="ah">Les chemins</p>
+    <div id="flows"></div>
+    <ol class="steps" id="steps"></ol>
+    <p class="hint" id="hint">Clique un chemin pour l’isoler. Survole un nœud pour éclairer ses connexions. Échap remet tout.</p>
+  </aside>
+</main>
+
+<footer>
+  <span id="counts"></span>
+  <span class="warn" id="orphans"></span>
+  <span class="src"><a id="srclink" href="#"></a></span>
+</footer>
+
+<script>
+(() => {
+  const NS = "http://www.w3.org/2000/svg";
+  const svg = document.getElementById("svg");
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // ── Géométrie ──────────────────────────────────────────────────────────────
+  const W = 210, H = 96, GAPX = 76, GAPY = 40, PAD = 30, HEADY = 30, LOOPY = 78;
+  const NOTE_MAX = 31; // caractères tenant dans la largeur d'un nœud
+
+  const byId = Object.fromEntries(MAP.nodes.map(n => [n.id, n]));
+  const cols = MAP.columns.map(c => c.key);
+  const colIndex = Object.fromEntries(cols.map((k, i) => [k, i]));
+  const colX = i => PAD + i * (W + GAPX);
+
+  const perCol = cols.map(k => MAP.nodes.filter(n => n.col === k));
+  const tallest = Math.max(...perCol.map(a => a.length));
+  const bandH = tallest * H + (tallest - 1) * GAPY;
+  const topY = PAD + HEADY;
+
+  perCol.forEach((list, ci) => {
+    const h = list.length * H + (list.length - 1) * GAPY;
+    const y0 = topY + (bandH - h) / 2;
+    list.forEach((n, i) => { n._x = colX(ci); n._y = y0 + i * (H + GAPY); });
+  });
+
+  const VW = PAD * 2 + cols.length * W + (cols.length - 1) * GAPX;
+  const VH = topY + bandH + LOOPY + PAD;
+  svg.setAttribute("viewBox", `0 0 ${VW} ${VH}`);
+  svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+
+  const el = (tag, attrs = {}, parent = svg) => {
+    const e = document.createElementNS(NS, tag);
+    for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v);
+    parent.appendChild(e);
+    return e;
+  };
+  const color = id => MAP.executors[byId[id].x].color;
+
+  const gLoops = el("g", { class: "g-flow" });
+  const gEdges = el("g", { class: "g-flow" });
+  const gGates = el("g", { class: "g-flow" });
+  const gNodes = el("g", { class: "g-flow" });
+  const gSpark = el("g");
+
+  MAP.columns.forEach((c, i) => {
+    el("text", { class: "colh", x: colX(i), y: PAD + 4 }, gNodes).textContent = c.label.toUpperCase();
+  });
+
+  // ── Arêtes ─────────────────────────────────────────────────────────────────
+  const edgeEls = {};
+  MAP.edges.forEach(([a, b], i) => {
+    const s = byId[a], t = byId[b];
+    if (!s || !t) return console.warn("Arête vers un nœud inconnu :", a, b);
+    const x1 = s._x + W, y1 = s._y + H / 2, x2 = t._x, y2 = t._y + H / 2;
+    const dx = Math.max(38, (x2 - x1) * 0.5);
+    const d = `M ${x1} ${y1} C ${x1 + dx} ${y1}, ${x2 - dx} ${y2}, ${x2} ${y2}`;
+    edgeEls[`${a}>${b}`] = el("path", { class: "edge", d, id: `e${i}`, stroke: color(a) }, gEdges);
+  });
+
+  // ── Gates ──────────────────────────────────────────────────────────────────
+  MAP.gates.forEach(g => {
+    const gx = colX(colIndex[g.after]) + W + GAPX / 2;
+    const wrap = el("g", { class: "gate" }, gGates);
+    el("line", { class: "gateline", x1: gx, y1: topY - 12, x2: gx, y2: topY + bandH + 12 }, wrap);
+    const cy = topY + bandH / 2;
+    el("circle", { cx: gx, cy, r: 13, fill: "var(--bg)", stroke: "var(--gate)", "stroke-width": 1.4 }, wrap);
+    el("path", { d: `M ${gx - 5} ${cy} l 3.5 3.5 l 6 -7`, fill: "none", stroke: "var(--gate)", "stroke-width": 1.8, "stroke-linecap": "round", "stroke-linejoin": "round" }, wrap);
+    el("text", { class: "gatelbl", x: gx, y: topY - 22, "text-anchor": "middle" }, wrap).textContent = "REVIEW";
+    el("text", { class: "gatelbl", x: gx, y: cy + 30, "text-anchor": "middle" }, wrap).textContent = g.who.toUpperCase();
+    el("title", {}, wrap).textContent = `Arrêt dur — ${g.who} : ${g.what}`;
+  });
+
+  // ── Boucles ────────────────────────────────────────────────────────────────
+  MAP.loops.forEach((lp, i) => {
+    const s = byId[lp.from], t = byId[lp.to];
+    if (!s || !t) return;
+    const x1 = s._x + W / 2, x2 = t._x + W / 2;
+    const yb = topY + bandH, ya = yb + LOOPY - 14;
+    el("path", { class: "loop", id: `l${i}`,
+      d: `M ${x1} ${s._y + H} C ${x1} ${ya}, ${x2} ${ya}, ${x2} ${t._y + H}` }, gLoops);
+    el("text", { class: "looplbl", x: (x1 + x2) / 2, y: ya + 12, "text-anchor": "middle" }, gLoops)
+      .textContent = lp.label.toUpperCase();
+  });
+
+  // ── Nœuds ──────────────────────────────────────────────────────────────────
+  const wrapTxt = (s, max = 20) => {
+    const out = []; let line = "";
+    for (const w of s.split(" ")) {
+      if ((line + " " + w).trim().length > max && line) { out.push(line); line = w; }
+      else line = (line + " " + w).trim();
+    }
+    if (line) out.push(line);
+    return out.slice(0, 2);
+  };
+
+  const nodeEls = {};
+  MAP.nodes.forEach(n => {
+    const c = color(n.id);
+    const g = el("g", { class: "node", tabindex: "0", "data-id": n.id,
+      "aria-label": `${n.label} — exécuté par ${MAP.executors[n.x].label}` }, gNodes);
+    el("rect", { class: "bx", x: n._x, y: n._y, width: W, height: H, rx: 11 }, g);
+    el("rect", { x: n._x, y: n._y + 10, width: 3, height: H - 20, rx: 1.5, fill: c }, g);
+
+    const lines = wrapTxt(n.label);
+    const two = lines.length > 1;
+    const yLbl = n._y + (two ? 28 : 34), yNote = n._y + (two ? 68 : 62), yBadge = n._y + 86;
+    lines.forEach((ln, i) => el("text", { class: "lbl", x: n._x + 16, y: yLbl + i * 17 }, g).textContent = ln);
+    const note = n.note.length > NOTE_MAX ? n.note.slice(0, NOTE_MAX - 1) + "…" : n.note;
+    el("text", { class: "note", x: n._x + 16, y: yNote }, g).textContent = note;
+    el("title", {}, g).textContent = `${n.label} — ${MAP.executors[n.x].label} · ${n.note}`;
+    el("circle", { cx: n._x + 19, cy: yBadge - 3, r: 3.5, fill: c }, g);
+    el("text", { class: "badge", x: n._x + 28, y: yBadge }, g).textContent = MAP.executors[n.x].label;
+    nodeEls[n.id] = g;
+  });
+
+  // ── Légende, compteurs, orphelins ──────────────────────────────────────────
+  const used = [...new Set(MAP.nodes.map(n => n.x))];
+  document.getElementById("legend").innerHTML = used.map(k =>
+    `<span class="lg"><span class="dot" style="background:${MAP.executors[k].color}"></span>${MAP.executors[k].label}</span>`).join("");
+
+  const linked = new Set(MAP.edges.flat());
+  MAP.loops.forEach(l => { linked.add(l.from); linked.add(l.to); });
+  const orphans = MAP.nodes.filter(n => !linked.has(n.id)).map(n => n.id);
+
+  document.getElementById("title").textContent = MAP.title;
+  document.title = MAP.title;
+  document.getElementById("subtitle").textContent = MAP.subtitle;
+  document.getElementById("counts").textContent =
+    `${MAP.nodes.length} nœuds · ${MAP.edges.length} connexions · ${MAP.gates.length} gates · ${MAP.loops.length} boucle${MAP.loops.length > 1 ? "s" : ""}`;
+  document.getElementById("orphans").textContent = orphans.length ? `· ${orphans.length} orphelin(s) : ${orphans.join(", ")}` : "";
+  const sl = document.getElementById("srclink");
+  if (MAP.source && MAP.source.label) { sl.textContent = MAP.source.label; sl.href = MAP.source.href || "#"; }
+
+  // ── Sélection d'un chemin ──────────────────────────────────────────────────
+  const flowsBox = document.getElementById("flows");
+  const stepsBox = document.getElementById("steps");
+  let current = null;
+
+  MAP.flows.forEach(f => {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "flow"; b.setAttribute("aria-pressed", "false"); b.dataset.id = f.id;
+    b.style.color = color(f.path[0]);
+    b.innerHTML = `<span class="fd" style="background:${color(f.path[0])}"></span>
+      <span class="fn"><span style="color:var(--text)">${f.name}</span><small>${f.desc}</small></span>`;
+    b.addEventListener("click", () => select(f.id === current ? null : f.id));
+    flowsBox.appendChild(b);
+  });
+
+  const gatesOnPath = path => MAP.gates.filter(g => {
+    const gi = colIndex[g.after];
+    return path.some((id, i) => i > 0 && colIndex[byId[path[i - 1]].col] <= gi && colIndex[byId[id].col] > gi);
+  });
+
+  function select(id) {
+    current = id;
+    gSpark.textContent = "";
+    document.querySelectorAll(".flow").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.id === id)));
+
+    if (!id) {
+      svg.querySelectorAll(".node,.edge,.gate,.loop").forEach(e => e.classList.remove("dim", "active", "on"));
+      stepsBox.innerHTML = "";
+      return;
+    }
+
+    const f = MAP.flows.find(x => x.id === id);
+    const onNodes = new Set(f.path);
+    const onEdges = new Set(f.path.slice(0, -1).map((a, i) => `${a}>${f.path[i + 1]}`));
+    const onGates = new Set(gatesOnPath(f.path).map(g => g.id));
+    const onLoops = new Set((f.loops || []).map(Number));
+
+    MAP.nodes.forEach(n => {
+      nodeEls[n.id].classList.toggle("dim", !onNodes.has(n.id));
+      nodeEls[n.id].classList.toggle("on", onNodes.has(n.id));
+    });
+    Object.entries(edgeEls).forEach(([k, p]) => {
+      p.classList.toggle("active", onEdges.has(k));
+      p.classList.toggle("dim", !onEdges.has(k));
+    });
+    gGates.querySelectorAll(".gate").forEach((g, i) => g.classList.toggle("dim", !onGates.has(MAP.gates[i].id)));
+    gLoops.querySelectorAll(".loop").forEach((l, i) => l.classList.toggle("dim", !onLoops.has(i)));
+
+    if (!reduced) {
+      [...onEdges].forEach((k, i) => {
+        const p = edgeEls[k]; if (!p) return;
+        const c = el("circle", { r: 3.2, fill: p.getAttribute("stroke"), class: "spark" }, gSpark);
+        const m = el("animateMotion", { dur: "2.4s", begin: `${i * 0.28}s`, repeatCount: "indefinite" }, c);
+        el("mpath", { href: `#${p.id}` }, m);
+      });
+      [...onLoops].forEach(i => {
+        const c = el("circle", { r: 3.2, fill: "var(--gate)", class: "spark" }, gSpark);
+        const m = el("animateMotion", { dur: "3.2s", repeatCount: "indefinite" }, c);
+        el("mpath", { href: `#l${i}` }, m);
+      });
+    }
+
+    const items = [];
+    f.path.forEach((nid, i) => {
+      if (i > 0) {
+        const ci = colIndex[byId[f.path[i - 1]].col], cj = colIndex[byId[nid].col];
+        MAP.gates.forEach(g => {
+          const gi = colIndex[g.after];
+          if (ci <= gi && cj > gi) items.push({ gate: true, b: `Review gate — ${g.who}`, s: g.what });
+        });
+      }
+      const n = byId[nid];
+      items.push({ b: n.label, s: `${MAP.executors[n.x].label} · ${n.note}` });
+    });
+    (f.loops || []).forEach(i => items.push({ b: "Retour", s: MAP.loops[Number(i)].label }));
+
+    let step = 0;
+    stepsBox.innerHTML = items.map(it =>
+      `<li class="${it.gate ? "gate" : ""}"><span class="n">${it.gate ? "◇" : String(++step).padStart(2, "0")}</span>
+       <span><b>${it.b}</b><span>${it.s}</span></span></li>`).join("");
+  }
+
+  // ── Survol ─────────────────────────────────────────────────────────────────
+  const hoverEdges = id => Object.entries(edgeEls).filter(([k]) => k.startsWith(id + ">") || k.endsWith(">" + id));
+  MAP.nodes.forEach(n => {
+    const g = nodeEls[n.id];
+    const on = () => hoverEdges(n.id).forEach(([, p]) => { p.classList.remove("dim"); p.classList.add("active"); });
+    const off = () => { if (current) select(current); else hoverEdges(n.id).forEach(([, p]) => p.classList.remove("active")); };
+    g.addEventListener("mouseenter", on); g.addEventListener("focus", on);
+    g.addEventListener("mouseleave", off); g.addEventListener("blur", off);
+  });
+
+  document.addEventListener("keydown", e => { if (e.key === "Escape") select(null); });
+
+  // ── Thème ──────────────────────────────────────────────────────────────────
+  const root = document.documentElement;
+  const saved = localStorage.getItem("carte-workflow-theme");
+  if (saved) root.setAttribute("data-theme", saved);
+  else if (matchMedia("(prefers-color-scheme: dark)").matches) root.setAttribute("data-theme", "dark");
+  document.getElementById("theme").addEventListener("click", () => {
+    const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next); localStorage.setItem("carte-workflow-theme", next);
+    if (current) select(current);
+  });
+
+  const longest = MAP.flows.reduce((a, b) => (b.path.length > a.path.length ? b : a));
+  if (reduced) select(longest.id);
+  else setTimeout(() => { if (!current) select(longest.id); }, 900);
+})();
+</script>
+</body>
+</html>

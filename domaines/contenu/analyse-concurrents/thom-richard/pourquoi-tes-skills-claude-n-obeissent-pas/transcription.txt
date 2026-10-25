@@ -1,0 +1,230 @@
+[00:00] Est-ce que ça t'est déjà arrivé de passer au nouveau modèle de Claude qui vient tout juste de sortir, de lui proposer tes skills et d'être complètement déçu par le ?
+[00:07] Pire, ta skill n'obéit pas, c'est pas le résultat attendu, elle se lance pas, elle saute des étapes, elle ignore complètement des consignes qui sont pourtant écrites noir sur blanc.
+[00:16] Le problème, ça vient pas de Claude.
+[00:18] Le modèle a évolué, ta skill non.
+[00:20] Et elle a été écrite pour un modèle qui est moins intelligent que celui que tu es en train d'essayer.
+[00:24] Et Anthropic en parle d'ailleurs dans son dernier guide, une skill écrite pour un modèle ancien peut faire baisser la qualité de tes résultats.
+[00:31] Dans cette vidéo, on va voir ensemble les sept raisons pour lesquelles tes skills ne t'obéissent pas bien et comment corriger tes anciennes skills pour qu'elles soient le plus efficace possible.
+[00:40] Et à la fin de cette vidéo, je te donne un outil pour toi pour faire l'audit de tout ton système et pour le corriger de façon automatique.
+[00:47] Le premier problème que tu peux rencontrer, c'est que ta skill, elle ne va même pas se déclencher.
+[00:51] Imagine, tu as une skill pour tes comptes-rendus de réunion.
+[00:53] Tu prends ton transcript, tu le donnes à Claude et tu lui demandes "Fais-moi un résumé de ça." Et tu tapes "Résume-moi ça." Et Claude te fait un résumé sans ouvrir ta skill.
+[01:02] Il ne respecte pas la structure que tu as pourtant écrite dedans.
+[01:06] Alors pour rappel, une skill, c'est un ensemble de fichiers qui donnent des consignes à Claude pour refaire une tâche exactement comme toi tu le ferais ou en tout cas comme toi tu as envie qu'il le fasse.
+[01:15] Claude, on a des dizaines.
+[01:17] Il y en a que tu as téléchargé sur internet et que tu lui as donné, il y en a que tu as créé avec lui et il y en a qu'il a par nature, par défaut, comme par exemple
+[01:24] celle du Skill Creator.
+[01:25] Au démarrage, il ne va pas tout lire.
+[01:27] Il va lire le titre de la skill, son nom, ainsi qu'un court résumé.
+[01:31] Et c'est avec ce court résumé qu'il va choisir quelle skill il va utiliser dans tel contexte.
+[01:35] En fait, tu peux imaginer la description de ta skill comme une étiquette sur un tiroir que tu dois ouvrir.
+[01:40] Il y a deux façons de rater complètement cette étiquette.
+[01:43] Par exemple, tu as une skill qui permet de répondre à des clients dans un cas bien précis.
+[01:47] Et là, ta skill s'appelle "Réponse client".
+[01:49] Peut-être que tu en as une pour euh des clients qui te demandent des informations supplémentaires, peut-être tu en as une qui doit répondre à ton SAV de client.
+[01:57] Claude ne sait pas lequel utiliser.
+[01:59] La deuxième façon de la rater, c'est vraiment dans la formulation.
+[02:02] Si sur la description de ta skill, il est écrit "Je t'aide à résumer une réunion", Claude ne va pas savoir qui parle à qui.
+[02:08] Est-ce que c'est lui qui parle à ?
+[02:09] Est-ce que c'est toi qui parle à ?
+[02:10] Bref, la règle, c'est que la description doit être écrite à la troisième personne.
+[02:14] Donc si tu veux faire un test, tu prends une skill, tu vas regarder les premières lignes et tu regardes si ces premières lignes te disent quand utiliser cette skill spécifiquement.
+[02:22] La deuxième raison pour laquelle tu peux être déçu du résultat de tes skills avec ces nouveaux modèles, c'est qu'elles vont se lancer, mais elles vont parfois se tromper sur un élément de la réponse, un élément prévu dans le
+[02:32] skill.
+[02:32] Par exemple, sur un message de remerciement, il va toujours avoir un message un peu fixe, un peu toujours le même, alors que toi tu aimerais bien un peu plus de liberté, un peu plus de fantaisie.
+[02:41] Par contre, à un moment donné, il va se tromper complètement dans tes conditions de remboursement.
+[02:45] Il annonce au client 48h de remboursement, alors que normalement toi tu es plutôt sur 2 semaines.
+[02:50] Le problème, c'est que les consignes du skill qui proposent plusieurs étapes sont les mêmes pour tous, c'est-à-dire que tu vas lui donner la même rigidité, quels que soient l'étape dans laquelle tu te trouves dans ta skill.
+[03:01] Ça veut dire que ces règles vont être trop précises là où il faudrait un peu plus de liberté et qu'elles vont être trop floues là où il fallait de la rigueur.
+[03:07] Par exemple, sur cette réponse client, le temps de la réponse aurait pu être libre, c'est-à-dire que tu t'en tu t'en fiches un peu tant que le message est là, tu laisses la main à l'IA.
+[03:15] La trame, elle, est semi-guidée.
+[03:17] Tu commences par remercier, ensuite tu réponds à sa question et ensuite tu dis la suite en annonçant par exemple tes délais de remboursement.
+[03:24] Et là, sur ce dernier point, faut pas se tromper.
+[03:27] Tu as une politique, tu as peut-être quelques cas précis, mais justement, il faut être très précis sur ces cas pour pas que l'IA invente et pour pas que l'IA aille chercher le mauvais cas.
+[03:36] En fait, Entropic appelle ça les degrés de liberté.
+[03:38] Ils donnent l'image d'un chemin que tu montres à Claude.
+[03:42] Donc, pour le champ libre, bah c'est c'est très simple, il y a aucun obstacle devant Claude, tu lui montres une direction, il y va, il passe par le chemin qu'il veut.
+[03:49] Le deuxième degré, ça va être justement que tu as un chemin, tu as une route sur laquelle il doit rester mais la route est suffisamment large pour qu'il puisse prendre quelques libertés.
+[03:58] Et le degré le plus fin, c'est que c'est un pont, imagine un pont qui passe au-dessus d'un ravin, s'il marche à côté, il tombe.
+[04:03] Ton résultat est complètement foutu.
+[04:05] La question que tu dois te poser à chaque étape de cette skill, c'est de dire "Et s'il fait autrement que ce que j'ai en tête, est-ce que c'est ?
+[04:11] Est-ce que ça a un impact négatif sur ce que je voulais lui faire ?" Si c'est pas grave, laisse-le libre, donne-lui juste la direction, donne-lui juste l'objectif que tu vas atteindre dans ce skill.
+[04:20] Si l'impact de faire autrement que ce que tu lui as dit de faire est important et négatif, là, il faut brider.
+[04:25] Il faut lui donner vraiment un cadre très précis.
+[04:28] N'invente pas, euh choisis parmi ces éléments, choisis telle condition si euh le client se trouve dans tel tel cas, sinon tu lui donnes telles conditions et cetera, tu dois être le plus précis possible.
+[04:38] La 3e raison qui pourrait expliquer ta déception quand tu utilises un nouveau modèle sur tes skills, c'est ce que dit Anthropic.
+[04:44] C'est que, tu te souviens, on l'a vu au départ dans l'intro de la vidéo, le nouveau modèle est plus malin.
+[04:50] Il est plus intelligent, il est censé être plus rapide et même un petit peu plus cher et pourtant tu as exactement le même résultat qu'avant.
+[04:56] C'est un peu frustrant.
+[04:57] En fait, travailler avec des modèles aujourd'hui, c'est comme si tu travaillais avec quelqu'un de brillant, quelqu'un d'ultra intelligent.
+[05:02] Si tu lui donnes des tâches écrites et quelque chose à respecter, tu le laisses pas exploiter euh son potentiel.
+[05:08] Un autre exemple qu'on pourrait te prendre, c'est imagine, tu viens de t'acheter le dernier GPS, le GPS dernier cri qui euh t'assure que tu auras les meilleures euh conditions de route et cetera.
+[05:19] Et là, tu lui rentres son adresse, tu dis "OK, moi je veux aller là." Et là, il te dit "Mais tu vas passer par telle route et puis après euh tu tourneras à gauche au 2e feu parce que
+[05:25] je sais que c'est plus rapide et cetera." Il va te faire suivre cette route, mais au final, si tu l'avais écouté, il t'aurait peut-être fait passer de l'autre côté, tu aurais gagné du temps, tu aurais eu une un
+[05:33] meilleur paysage et pourquoi pas, ça t'aurait coûté moins cher.
+[05:36] C'est exactement pareil, c'est exactement la même logique.
+[05:39] Si tes skills sont pleines de important, de toujours en majuscule, des choses euh des listes qui n'en finissent plus, des étapes une, étape deux, étape trois, puis après tu fais ça.
+[05:49] En fait, tu es trop directif avec ces nouveaux modèles.
+[05:51] Par exemple, tu fais une skill qui fait des comptes-rendus de réunion et tu vas lui dire "Donne-moi les cinq points clés de la réunion." Bah, peut-être qu'il y en a pas cinq, peut-être qu'il y en a 10, peut-être
+[05:59] qu'il y en a que trois et souvent tu vas te retrouver avec cinq points où deux vont être vraiment importants, ça va refléter ce qui était dit à la réunion et au même niveau, tu vas retrouver des choses
+[06:07] qui sont un peu triviales, qui ont pas trop d'intérêt, mais il y a la Mila parce que tu lui as demandé cinq points clés.
+[06:13] Donc, le point numéro trois, c'est que l'objectif, tu ne dois pas donner le mode d'emploi.
+[06:19] Donc, tu dois lui dire ce que tu veux obtenir, ce qui compte pour toi.
+[06:22] Et là où il ne doit pas se tromper, c'est là où tu vas fermer un petit peu le degré de liberté.
+[06:26] Donc, par exemple, pour le compte-rendu qu'on a vu tout à l'heure, tu lui as dit "Après une lecture de 30 secondes, je suis capable de comprendre ce qui a été décidé dans la réunion et quelles sont les prochaines
+[06:33] étapes." La quatrième raison, et c'est la raison la plus frustrante, c'est que ta consigne est écrite noir sur blanc et pourtant Claude va l'ignorer.
+[06:40] Par exemple, dans une skill de compte-rendu de réunion, tu lui as dit "Mets-moi les actions avec à chaque fois le porteur de l'action, donc la personne qui va être responsable de tout ça." Et pourtant, quand tu reçois ton
+[06:50] résumé, tu as juste l'action et tu as rien d'autre.
+[06:53] Alors, qu'est-ce qui s'est ?
+[06:53] En fait, Claude ne l'a tout simplement pas lu.
+[06:57] ?
+[06:57] Un skill ou une skill, c'est pas un seul fichier, c'est un ensemble de fichiers.
+[07:01] Tu as la fiche principale qui va expliquer ce qu'il faut faire et cetera et qui va s'appuyer sur tout un tas de ressources, en fait d'autres annexes.
+[07:08] Tu as par exemple le ton de ta voix, le ton du compte-rendu, tu as par exemple le modèle à utiliser, donc une fiche avec le modèle.
+[07:16] Tu as d'autres choses, donc bref, tu as tout un tas de ressources qui permettent à ta skill d'être efficace.
+[07:20] Sauf que Claude est un peu feignant et un peu comme toi quand tu vas lire un contrat, tu vas te lire les premiers renvois numérotés, tu sais, les petites lettres qu'on voit en bas du contrat et il va
+[07:30] lire simplement les premières parce que les autres, la dixième, au bout d'un moment, il en a marre, il pense qu'il a suffisamment d'infos pour continuer.
+[07:37] Là, c'est exactement pareil.
+[07:38] Ce qui se passe, c'est uniquement dans dans cas de fichiers qui sont des annexes à la fiche principale.
+[07:44] Si ces fichiers font plus de 100 lignes, sur ces fichiers, Claude ne va pas lire plus de 100 lignes.
+[07:50] Donc si ta remarque sur la nécessité de mettre les noms sur les porteurs d'actions sur la liste des actions et au-delà de la 100e liste, Claude ne va tout simplement pas le lire.
+[08:00] En fait, imagine un livre de recettes, tu as la recette de ton plat principal et il faut faire appel à la recette de la sauce béchamel.
+[08:06] Il faut faire appel à la recette de comment cuire ta viande au four sous torchon.
+[08:11] Tu as comme ça la recette sur les pommes frites façon grand-mère et cetera.
+[08:14] Toi quand tu vas lire ton livre de recettes, tu vas regarder la béchamel, tu dis OK, tac tac tac, OK, bah tu les fais avec tel tel ingrédient, tu fais comme ça comme ça comme ça, hop, c'est bon,
+[08:22] j'ai l'info, je continue.
+[08:23] Tu vas faire pareil avec ta viande, tu vas faire pareil avec les patates façon grand-mère.
+[08:27] Voilà, c'est exactement pareil.
+[08:28] Claude va lire ses fichiers et il veut avoir une overview.
+[08:32] Il ne va lire la fiche que si tu lui demandes expressément dans la fiche principale ou alors s'il considère qu'il en a besoin.
+[08:38] Et pour ça, la parade, c'est que pour chaque fiche qui a plus de 100 lignes, tu dois lui proposer un index avec exactement ce qu'il va trouver dans cette fiche.
+[08:48] Donc une sorte de petit sommaire en disant attention, ligne 150, tu as les consignes exactes de rédaction de ton compte-rendu et c'est là-dedans qu'il va trouver le fait de devoir mettre les noms à côté de l'action.
+[08:59] Autre point pour régler ce problème-là et pour éviter le renvoi de renvoi de renvoi, c'est que l'architecture de ta skill doit être une fiche et au même niveau tous les annexes.
+[09:08] Tu dois pas mettre des sous-dossiers, des dossiers et cetera.
+[09:10] En fait, le sommaire, c'est un réflexe assez simple à avoir, mais ça manque beaucoup et ça va manquer des fois sur des skills que tu vas récupérer chez d'autres personnes.
+[09:18] Par exemple, Hyperframes, moi j'utilise cette skill, c'est pas moi qui l'ai écrite, j'ai téléchargé la skill sur un GitHub et je l'utilise pour faire mes vidéos YouTube.
+[09:26] Et bah, j'ai vérifié, cette bonne pratique n'est pas reprise.
+[09:29] Donc le plus simple, c'est ce que j'ai fait dans les ressources dont je te parlais tout à l'heure dans la vidéo.
+[09:34] En fait, je t'ai mis un prompt qui va récupérer ces règles-là va aller balayer toutes tes skills pour les appliquer.
+[09:40] Le truc, c'est que ça ne concerne pas que les skills.
+[09:42] En fait, si tu utilises Claude Co-work ou Claude Code, tu utilises certainement des dossiers avec des fichiers que tu as dedans.
+[09:50] Et là, c'est exactement la même chose.
+[09:51] Il faut s'assurer que Claude va lire l'ensemble de tes fiches pour récupérer le bon contexte.
+[09:55] Moi par exemple, voici Voici mon mon Claude.
+[09:58] Donc j'ai ici ma fenêtre de discussion et j'ai ici tous les fichiers que j'utilise pour lui donner du contexte du contexte.
+[10:05] C'est ce que j'appelle mon AIOS.
+[10:07] Tu y retrouves mes projets, mes ressources.
+[10:09] Je lui explique qui je suis, quel travail j'ai et cetera, ce qui permet d'avoir un contexte infini et d'être beaucoup plus précis.
+[10:16] Claude va chercher exactement ce dont il a besoin pour travailler sur mes projets.
+[10:19] Et ce qui se passe, c'est que Claude quand il démarre une session, il va aller chercher ici mon fichier de contexte.
+[10:25] C'est exactement ce genre de tableau-là que tu dois mettre en place.
+[10:28] À gauche, le besoin, à droite, la référence, c'est-à-dire le lien vers le fichier qui va qui va lui permettre de répondre au besoin.
+[10:35] Donc je suis en dessous des 100 lignes et si j'avais mis tout ça à la ligne en en faisant plusieurs blocs, une partie de ces besoins-là n'auraient pas été couverts à chaque fois que j'ouvrais ma session.
+[10:44] C'est exactement le même principe que l'étiquette de tiroir dont on a parlé tout à l'heure pour le nom de de la skill et sa description.
+[10:51] Là, tu fais la même chose avec le fichier.
+[10:53] Tu lui dis ce qu'il va trouver dedans, ce qui fait que Claude va aller le lire de façon intégrale quand il en aura besoin.
+[10:58] Donc maintenant on s'est assuré que Claude Claude va lire les bonnes consignes.
+[11:01] Maintenant, est-ce qu'il vérifie son ?
+[11:03] Et là, c'est la 5e raison de de déception des nouveaux de l'utilisation des skills avec les nouveaux modèles, c'est que tu as l'impression que la skill obéit mais un peu à moitié, qu'elle va pas au bout des choses.
+[11:14] Par exemple, tu lui demandes ce fameux compte-rendu, elle te sort un 1er jet et c'est moyen.
+[11:18] Tu as la moitié des actions qui ont pas de date d'échéance ni de personnes qui sont porteurs de l'action ou alors tu as envoyé un devis et il a oublié de calculer la TVA ou des choses comme ça,
+[11:28] des choses qui font que bah c'est pas ce ce tu as demandé tu as ou c'est pas entièrement ce que tu as demandé.
+[11:32] Et ?
+[11:32] Parce que à aucun moment tu lui demandes de vérifier son travail.
+[11:36] Tu as peut-être vu mon short sur la façon de prompter avec un goal, avec un objectif, et ben là c'est exactement la même chose.
+[11:42] Tu dois créer une boucle de vérification.
+[11:45] Dans ta skill, tu dois lui tu dois lui donner les critères qui font que sa tâche est réussie.
+[11:50] Alors attention, tu dois pas être vague, tu dois vraiment dire par exemple, tu as accès à ma voix, à mon style d'écriture, vérifie bien que ce que tu produis colle et qu'il y a pas par exemple de mots
+[12:00] que j'ai interdit ou alors que ça reprend bien les formules et la façon d'écrire que je t'ai décrite.
+[12:06] Et en fait, tu ne peux pas lui dire uniquement vérifie que c'est bien ou vérifie que c'est beau parce que c'est trop abstrait, il il va pas savoir sur quoi s'appuyer.
+[12:13] Et là on revient un petit peu sur les principes qu'on a vu au départ de champ de liberté et du degré de latitude que tu vas donner que tu vas donner à Claude.
+[12:21] Par exemple, quand tu vas faire le compte-rendu, tu vas lui dire tu vas lui dire avant de me rendre le compte-rendu, vérifie bien que chaque action a une date et un porteur de cette action-là, un responsable de cette
+[12:31] action.
+[12:31] S'il en manque, reprends les notes, reprends les notes, complète et vérifie.
+[12:37] Quand tu quand tu fais une skill qui envoie une communication à un client, tu peux lui dire par exemple, avant d'envoyer l'email au client, vérifie dans les conditions vérifie que le vérifie que la réponse n'est pas en contradiction
+[12:50] avec mes conditions générales de vente.
+[12:52] S'il y a un délai, un montant qui ne figure pas dans ces conditions, tu n'envoies pas, tu corriges et tu te réfères à ce qu'il y a dans les conditions.
+[12:57] Et donc si on revient sur ce principe de degré de liberté et le système du pont, si tu as une tâche qui est bien précise et qui doit être faite dans un ordre bien précis, c'est là que tu
+[13:05] peux lui dire étape 1, étape 1 tu fais ça, étape 2, étape 3 et cetera.
+[13:09] Tu peux lui faire une liste de cases à cocher.
+[13:11] Donc sur les 7 raisons que je t'ai annoncées, il me manque la 7e.
+[13:14] On va faire une petite pause et je vais te parler de l'audit.
+[13:16] En fait, moi je t'ai préparé deux choses.
+[13:18] La première chose, c'est une skill.
+[13:20] En fait, comme je t'ai déjà dit, elle va parcourir l'intégralité de tes skills et elle va identifier les points qui ne sont pas en cohérence avec les règles dont on est en train de parler.
+[13:29] C'est important parce que rapidement, tu peux avoir plusieurs dizaines de skills que tu dois vérifier et si tu fais à la main, ça va être long et honnêtement, ça va être vraiment pénible.
+[13:37] La sortie de cette skill, c'est un rapport dans lequel tu vas avoir la liste de tes skills et en face les critères avec ce qui est bon, ce qui est moins bon, ce qui est à corriger.
+[13:45] Cette skill te fait un rapport mais ne va pas venir corriger des choses ou modifier tes skills sans ta permission.
+[13:50] Donc le deuxième élément que je vais te fournir, c'est une liste de prompt qui te permettent de corriger tes skills, les skills qui vont être mises en avant.
+[13:56] C'est-à-dire que corriger celles qui sont identifiées comme ayant des problèmes.
+[13:59] Et cette skill, une fois qu'elle a fini de faire ton audit, elle te crée un rapport.
+[14:03] Ce rapport, le voilà à l'écran, regroupe tes skills par famille et ici va te dire OK, celui-là et iOS Bootstrap est à corriger.
+[14:12] Et si tu vas dessus, on va te dire la règle 4, un seul niveau, une fiche courte n'est pas respectée.
+[14:17] Donc ça, c'est assez urgent à mettre en place.
+[14:20] Et là, il te reprend le contenu de ta skills.
+[14:22] Ici, on retrouve juste quand on parlait Hyperframes, ici, tu vas retrouver Google Workspace et qui lui pour le coup est à jour.
+[14:29] Et là ici, on a Agent qui te permet d'avoir de te faire des avatars.
+[14:32] Là, on voit que leur skill n'est pas à jour.
+[14:34] Je vais te faire une petite démo, tu vois, j'ai ma skill ici iOS Bootstrap, c'est une skill qui euh bah d'ailleurs qui est disponible gratuitement.
+[14:40] Tu peux aller voir cette vidéo, ça permet d'installer cette iOS.
+[14:44] Elle a des choses à corriger.
+[14:45] Donc ce que je vais faire, c'est que je vais interroger Claude et je vais lui dire "Audit ma skill iOS Bootstrap." Donc voilà ce que la skill m'a faite, voilà le résultat de l'audit.
+[15:06] Donc il me sort le rapport d'état euh que je t'ai montré juste avant.
+[15:09] Ici, il se fait une petite euh checklist, on en a parlé tout à l'heure.
+[15:13] En fait, il a fait une checklist des différentes étapes qu'il va faire dans le cadre de cette skill.
+[15:18] Et donc on voit qu'il a fait l'inventaire, le périmètre, la lecture de chaque skill, la vérification des règles et cetera, il s'est arrêté.
+[15:25] Choix des corrections par l'utilisateur, c'est-à-dire qu'il va me demander quelle correction il applique et après il pourra continuer pour aller jusqu'au bout du process.
+[15:33] Et donc là voilà, il me fait un audit, il m'explique ce qu'il a et là, il va me donner une dizaine de points quand même à corriger.
+[15:39] Donc voilà.
+[15:40] Et à la fin, il me demande "Quelle correction veux-tu ?" Soit je mets le numéro, soit je mets tout, soit je mets aucune et je peux continuer le process.
+[15:47] Donc je vais pas faire ça maintenant.
+[15:48] Donc on va continuer la vidéo avec la dernière règle qui concerne la portabilité de tes skills.
+[15:54] Donc la frustration que tu peux avoir dans l'utilisation de tes skills, c'est que tu en fais une qui marche super bien sur ton ordinateur portable et un jour, tu as un autre ordinateur, un fixe et tu as envie
+[16:03] de migrer cette skill.
+[16:04] Donc tu prends le fichier, tu l'installes sur ton ordinateur et là, paf, ça plante.
+[16:07] ?
+[16:08] Ou autre cas, tu fais une skill dont tu es fier, tu vas la confier à quelqu'un au boulot ou à un copain ou je sais pas, à n'importe qui.
+[16:14] Ou alors même tu vas changer de modèle et là, paf, ça plante.
+[16:17] ?
+[16:18] En fait, le truc c'est que ton ordinateur a déjà toutes les informations qu'il faut.
+[16:21] On a parlé tout à l'heure de HyperFrames, la skill existe mais elle nécessite l'installation de plusieurs logiciels, plusieurs morceaux de code qui permettent de faire le rendu et cetera.
+[16:30] Donc ta skill, elle doit lister les gestes qu'elle va faire mais elle doit aussi lister les besoins qu'elle a pour pouvoir remplir son objectif.
+[16:39] Si on veut faire plus simple, un exemple plus simple, c'est que si tu as une skill qui doit lire des fichiers Excel pour te faire un résumé ou que sais-je, cette skill doit avoir accès à Excel, tout simplement.
+[16:50] Ça veut dire que si tu la mets dans un contexte où elle n'a pas accès à Excel, elle pourra pas remplir son son office.
+[16:55] Et là, l'important c'est de quand on quand ta skill va utiliser un outil qu'elle va aller chercher sur le web, qu'elle va va utiliser qui doit être présent sur ton ordinateur, il faut lister ces outils et il faut
+[17:07] également lister la façon dont on peut ajouter ces outils.
+[17:10] C'est les lignes de commande, c'est le fichier le dossier GitHub dans lequel tu vas trouver le petit bout de programme à installer, par exemple celui qui va extraire les images et le transcript d'une vidéo pour que tu puisses
+[17:20] le faire gratuitement sur ton ordinateur.
+[17:21] Donc je te mets ici à l'écran un exemple sur une skill qui va lire des PDF avec un outil qui s'appelle pyPDF.
+[17:29] Donc pyPDF.
+[17:30] Et pour l'installer, il faut rentrer une ligne de commande dans ton terminal.
+[17:34] Ça, on sait pas forcément.
+[17:35] Moi personnellement, je suis pas développeur, je les connais pas par cœur ces programmes.
+[17:39] Mais en le mettant dans ta skill, la prochaine fois que tu vas l'utiliser dans un autre contexte que ton ordinateur sur lequel est installé ce programme, Claude ou n'importe quel autre LLM, il ira chercher cette fonctionnalité, viendra l'installer
+[17:51] dessus.
+[17:51] Bien sûr, il te demandera les permissions, mais ça permet de s'assurer que la skill a tout ce qu'il faut pour arriver au bout et pour livrer ce qu'elle veut livrer.
+[17:58] Donc ça y est, on a fait le tour des sept, mais maintenant il reste une question.
+[18:02] Imagine tu as installé la skill que je t'ai fournie pour faire l'audit, pour réparer chacune de tes skills, qu'est-ce qui va se passer quand un nouveau modèle va sortir et va tout à nouveau ?
+[18:11] Tout ce qu'on a vu, c'est sept c'est sept conseils donc qui viennent pas de moi, hein, qui viennent d'Anthropic.
+[18:16] Bah moi je te les explique et je te donne les outils qui te permettent de de les appliquer.
+[18:20] Toutes ces règles-là, tu dois les appliquer à toutes tes skills.
+[18:22] Et donc ça concerne, comme on disait au départ, les skills que toi tu as créées, les skills que tu as téléchargées sur internet sur internet et installées sur ton Claude.
+[18:32] Et pourquoi pas les skills direct de qui sont intégrées dans Claude nativement.
+[18:37] Et moi cette skill, je l'ai intégrée, donc je suis en train de Tu l'as vu, je suis en train de la passer, j'ai encore pas mal de choses à modifier.
+[18:42] Et je l'ai installée et je l'ai installée de manière récurrente.
+[18:45] J'aurais pu utiliser un prompt que je fais tourner X fois.
+[18:48] Là, c'est une skill que j'ai mis dans mon AIOS qui va tourner de façon automatique toutes les deux semaines, peut-être quatre.
+[18:54] Et l'idée c'est j'ai déjà d'autres systèmes comme ça qui viennent m'assurer que mon AIOS et continuer à me répondre et que toutes mes skills sont bien efficaces.
+[19:03] En résumé, je te mets une grille ici de de symptômes, critères, de de de choses à vérifier quand tu n'es pas satisfait de ce que te produit ta skill.
+[19:12] Si elle se lance pas, check la description.
+[19:14] Si elle se trompe au mauvais endroit, je te laisse la parcourir, elle sera de toute façon dans dans un document qui accompagne les ressources de cette vidéo.
+[19:21] Mais ça te permet d'avoir une grille de lecture pour essayer d'identifier le problème et pouvoir le résoudre.
+[19:27] Donc si ta skill ne t'obéit pas, maintenant tu sais exactement ce que tu dois faire.
+[19:30] Encore une fois, toutes les ressources que je t'ai mis, l'audit, la skill, la petite notice pour expliquer tout ça, sont présents dans la description.
+[19:37] Tu as vu mon tu as aperçu mon iOS, sache sache que c'est un système qui te permet de booster d'une force ta productivité.
+[19:44] Je te mets une vidéo dans laquelle je présente tout ce système-là.
+[19:47] N'hésite pas à aller faire un tour, tu pourras l'installer et le tester de façon gratuite.
+[19:51] Il est à ta dispo.
+[19:52] Donc n'hésite pas à te renseigner.
+[19:53] Si tu as aimé, si tu trouves que j'apporte de la valeur, n'hésite pas à mettre un petit like, un petit commentaire, ça m'aide énormément.
+[19:59] Et je te dis à bientôt pour la prochaine vidéo.

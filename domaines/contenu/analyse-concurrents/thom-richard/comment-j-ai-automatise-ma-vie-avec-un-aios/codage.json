@@ -1,0 +1,192 @@
+{
+  "video_id": "FwnIB-RbC-E",
+  "chaine": "thom-richard",
+  "titre_video": "Comment j'ai automatisé ma vie avec un AIOS",
+  "codeur": "agent thom-richard",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "tuto",
+    "format_secondaire": "cas",
+    "sujet": "Masterclass de 78 minutes : construire un AIOS personnel avec le framework CAPE (contexte, accès, production, entretien), sur son vrai système",
+    "outils": ["VS Code", "Claude Code", "Obsidian", "Claude Cowork", "GitHub", "short.io", "Antigravity", "Gemini"],
+    "niveau": "intermediaire",
+    "objectif_probable": "communaute"
+  },
+  "titre": {
+    "attente_au_clic": "Voir comment il a monté un système IA complet qui automatise son quotidien, et apprendre à refaire le mien.",
+    "schema": "Comment j'ai <résultat> avec un <système>",
+    "promesse": "Automatiser sa vie avec un AIOS, comme lui",
+    "audace": "audacieux",
+    "registre": "mixte",
+    "briques": ["resultat", "audace"],
+    "marqueurs": [],
+    "nom_outil": false
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "léger sourire confiant",
+    "regard": "camera",
+    "texte": "SYSTÈME IA COMPLET",
+    "texte_mots": 3,
+    "repete_titre": "partiel",
+    "elements": ["« SYSTÈME IA COMPLET » en lettres dorées", "cerveau bleu lumineux posé dans une main", "visage à droite qui pointe le cerveau"],
+    "nb_elements": 3,
+    "fond": "bleu nuit étoilé",
+    "couleurs": ["bleu nuit", "or", "bleu électrique"],
+    "curiosity_gap": "resultat",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Regarde cet écran 2 secondes. Tout ça, c'est mon second cerveau.",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Le graphe Obsidian de son second cerveau qui se construit, points blancs sur fond sombre",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": ["demo-d-abord", "pont"],
+    "preuve": {
+      "type": "resultat-montre",
+      "seconde": 0,
+      "description": "Le graphe de son second cerveau qui grossit à l'écran pendant qu'il le décrit"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 3, "a_l_ecran": true},
+    "boucle_vers_la_fin": {"presente": false, "citation": "", "seconde_resolution": null, "tenue": null},
+    "seconde_premier_point": 80,
+    "attente_tenue": "oui",
+    "attente_note": "Le système est montré dès 0:00 et construit pilier par pilier, avec démos en direct et ressources. Dans la vidéo de monétisation (20:51), il dit avoir parlé du Club SMART dès l'intro de cette masterclass : la version actuelle n'en parle qu'à 25:49 (à vérifier, vidéo peut-être recoupée)."
+  },
+  "structure": {
+    "modele": "pas-a-pas",
+    "segments": [
+      {"debut": 0, "fin": 221, "titre": "Introduction — pourquoi un système, pas une stack", "role": "intro", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 221, "fin": 448, "titre": "Le framework CAPE", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 448, "fin": 601, "titre": "Les 3 morceaux d'un AIOS + le setup", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 601, "fin": 1019, "titre": "Installer VS Code et Obsidian", "role": "demo", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 1019, "fin": 1773, "titre": "Le pilier Contexte — les 3 fichiers de base", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 1773, "fin": 2050, "titre": "La structure IPCCRA — ton second cerveau", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 2050, "fin": 2140, "titre": "L'arbre de décision — où ranger chaque info", "role": "point", "pull": false, "paint": false, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 2140, "fin": 2692, "titre": "Index, nommage et wiki-links Obsidian", "role": "demo", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 2692, "fin": 3377, "titre": "Le pilier Accès — API, MCP et CLI", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 3377, "fin": 3899, "titre": "Le pilier Production — les skills", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 3899, "fin": 4142, "titre": "Le pilier Entretien — les automatisations", "role": "demo", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 4142, "fin": 4270, "titre": "L'audit hebdo — les 5 questions", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 4270, "fin": 4510, "titre": "Sauvegarder ton AIOS sur GitHub", "role": "demo", "pull": true, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 4510, "fin": 4674, "titre": "Récap + par où commencer", "role": "fin", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 80, "type": "question-spectateur", "citation": "des gens qui ont les mêmes outils que moi semblent aller 10 fois plus vite"},
+      {"seconde": 217, "type": "question-spectateur", "citation": "Mais concrètement, c'est [quoi] ?"},
+      {"seconde": 537, "type": "annonce-suite", "citation": "Maintenant, on va mettre les mains dedans."},
+      {"seconde": 1622, "type": "annonce-suite", "citation": "voilà le réflexe plus important à récupérer de cette vidéo"},
+      {"seconde": 2658, "type": "annonce-suite", "citation": "l'IA, elle reste enfermée dans ton dossier"},
+      {"seconde": 3341, "type": "annonce-suite", "citation": "Mais voir savoir ça suffit pas."},
+      {"seconde": 3858, "type": "annonce-suite", "citation": "c'est là où ça devient magique"},
+      {"seconde": 4622, "type": "question-spectateur", "citation": "Alors maintenant, la vraie question, c'est est-ce que tu vas le [faire] ?"}
+    ],
+    "histoires": [
+      {"seconde": 652, "acte": "anecdote", "resume": "Dans VS Code, Claude lui résume ses chantiers en cours, dont la sortie d'Airtable et la masterclass qu'il tourne."},
+      {"seconde": 1862, "acte": "anecdote", "resume": "Ses casquettes : père de trois enfants, créateur de contenu, animateur d'une communauté, responsable de l'IA dans une entreprise."},
+      {"seconde": 3413, "acte": "perso-passe", "resume": "Le script de cette masterclass a été travaillé deux jours avec une skill qui connaît sa structure et son ton."},
+      {"seconde": 3540, "acte": "anecdote", "resume": "Sa skill de tri Gmail tourne deux à trois fois par jour avec une grille de priorités."}
+    ],
+    "payoffs": [
+      {"seconde": 120, "resume": "Les 5 besoins qu'une stack ne couvre pas : réutiliser, retrouver, mémoriser, survivre au changement, transmettre"},
+      {"seconde": 240, "resume": "Le framework CAPE, avec un test par pilier"},
+      {"seconde": 448, "resume": "Un AIOS, c'est un dossier, un moteur (LLM) et une interface"},
+      {"seconde": 1100, "resume": "Les 3 fichiers de base : CLAUDE.md, doctrine, conventions"},
+      {"seconde": 1822, "resume": "Le rangement IPCCRA et son arbre de décision"},
+      {"seconde": 3090, "resume": "short.io branché en direct par MCP, les liens les plus cliqués listés"},
+      {"seconde": 3540, "resume": "Une vraie skill montrée : le tri Gmail"},
+      {"seconde": 4064, "resume": "Une tâche planifiée créée à la voix, le mail du lundi reçu en direct"},
+      {"seconde": 4475, "resume": "Gemini, dans Antigravity, reprend le même AIOS : le système ne dépend pas de l'outil"}
+    ],
+    "premier_payoff_seconde": 120,
+    "jargon": 2,
+    "repetitions": 2,
+    "test_du_tweet": "Un AIOS, c'est un dossier de fichiers texte, un LLM et une interface, en 4 piliers (CAPE) : le contexte (CLAUDE.md, doctrine, conventions, rangement IPCCRA), l'accès à tes outils (API, MCP, CLI), la production par skills, et l'entretien qui tourne sans toi."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine plein cadre ; médaillon rond en bas à droite sur les captures", "decor": "étagère en bois clair avec figurines, lettres MARVEL, étoile néon jaune, fauteuil blanc"},
+    "parts": {"face": 40, "ecran": 45, "motion": 15, "broll": 0},
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["plan-a-l-ecran", "cartes-chapitre", "etiquettes", "zooms-ecran"],
+    "charte": "Cartes ardoise et vert d'eau, lettres C-A-P-E en tuiles avec accent jaune, onglets C A P E en haut à gauche des captures pour situer le pilier, étiquettes jaunes. La miniature (or sur bleu nuit, cerveau lumineux) n'en reprend rien.",
+    "rythme": "contraste",
+    "notes": "78 minutes entre face caméra et captures de VS Code et d'Obsidian avec un médaillon rond ; le repère C-A-P-E dit où on en est. Les démos se font en direct : connexion short.io, tâche planifiée, push GitHub, bascule vers Gemini."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 67, "type": "lead-magnet", "cible": "les ressources de la masterclass", "amene_par": "intro", "citation": "tu retrouveras également un lien vers toutes les ressources dont je parle"},
+      {"seconde": 400, "type": "abonnement", "cible": "s'abonner pour une vidéo sur l'AIOS d'entreprise", "amene_par": "transition", "citation": "n'hésite pas à t'abonner si ça t'intéresse"},
+      {"seconde": 1542, "type": "lead-magnet", "cible": "la skill qui écrit la structure de départ", "amene_par": "apres-valeur", "citation": "ce skill, tu le retrouves dans les ressources"},
+      {"seconde": 1549, "type": "communaute-payante", "cible": "le Club SMART", "amene_par": "apres-valeur", "citation": "si tu veux plus d'accompagnement [...] c'est l'objectif de mon club Smart"},
+      {"seconde": 2574, "type": "abonnement", "cible": "s'abonner pour un futur tutoriel Obsidian", "amene_par": "pendant-demo", "citation": "tu peux t'abonner là sur la chaîne en cliquant ici en bas"},
+      {"seconde": 3819, "type": "communaute-payante", "cible": "le Club SMART", "amene_par": "apres-valeur", "citation": "ces skills, c'est typiquement ce qu'on va construire [...] dans le club Smart"},
+      {"seconde": 4635, "type": "communaute-payante", "cible": "le Club SMART", "amene_par": "fin", "citation": "c'est exactement pour ça, pour ce système que j'ai créé le club Smart"},
+      {"seconde": 4664, "type": "like-commentaire", "cible": "liker, commenter, s'abonner", "amene_par": "fin", "citation": "mets un petit like, un petit commentaire, abonne-toi à la chaîne"}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"lead-magnet": 1, "video-suivante": 4, "communaute-payante": 2, "affiliation": 3, "autre": 3},
+    "commentaire_epingle": {"texte": "Club SMART, ressources de la masterclass (dont la skill de structure) et atelier AIOS de 2 h avec 12 mois de Premium", "type": "communaute-payante"},
+    "recap_final": true,
+    "derniere_phrase": "Je te dis merci et à la prochaine.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["une masterclass jugée claire, complète et accessible", "des non-développeurs qui s'y retrouvent (menuisier indépendant, chef de produit)", "le choix des outils : VS Code, terminal, Obsidian, Open Code", "séparer le pro et le perso"],
+    "demandes": ["un AIOS pour le pro et le perso, ou deux", "la différence avec un projet dans Claude Cowork", "pourquoi VS Code plutôt que Claude Code dans le terminal"],
+    "critiques": ["« la 250000 videos sur le sujet » arrivée « 6 mois trop tard », pour vendre l'abonnement Skool", "l'interface d'Obsidian jugée peu pratique"],
+    "reprises": ["Elliott M., source de la méthode IPCRA"],
+    "signal_promesse": "tenue"
+  },
+  "retention": {
+    "a_30s": 0.813,
+    "a_la_moitie": 0.106,
+    "note": "Vidéo de 78 minutes : un point de courbe toutes les 47 secondes. a_30s est la valeur au premier point (47 s).",
+    "pertes": [
+      {"seconde": 47, "chute": 41.0, "passage": "« ce que je te conseille, c'est de l'enregistrer, de la mettre dans tes favoris » (favoris, chapitres, ressources)", "segment": "Introduction — pourquoi un système, pas une stack"},
+      {"seconde": 93, "chute": 7.4, "passage": "« beaucoup parlent de leur stack d'outils »", "segment": "Introduction — pourquoi un système, pas une stack"},
+      {"seconde": 327, "chute": 2.3, "passage": "« il y a un ordre. C'est pas négociable. » (fin du survol de CAPE)", "segment": "Le framework CAPE"},
+      {"seconde": 1215, "chute": 1.9, "passage": "« c'est le principe de single source of truth »", "segment": "Le pilier Contexte — les 3 fichiers de base"},
+      {"seconde": 2711, "chute": 1.7, "passage": "« Les deux façons simples, c'est les API et les MCP. »", "segment": "Le pilier Accès — API, MCP et CLI"}
+    ],
+    "remontees": [
+      {"seconde": 421, "chute": -2.7, "passage": "« Qu'est-ce que tu dois installer sur ta machine » (début de chapitre)", "segment": "Les 3 morceaux d'un AIOS + le setup"},
+      {"seconde": 2664, "chute": -2.4, "passage": "« l'accès, c'est tout simple, c'est la liste des outils » (début de chapitre)", "segment": "Le pilier Accès — API, MCP et CLI"},
+      {"seconde": 982, "chute": -2.2, "passage": "« je pourrais très bien le faire sur Claude, sur l'application Claude » (début de chapitre)", "segment": "Le pilier Contexte — les 3 fichiers de base"},
+      {"seconde": 2103, "chute": -1.9, "passage": "« dans chaque dossier, tu vas avoir un fichier qui va indexer le contenu » (début de chapitre)", "segment": "Index, nommage et wiki-links Obsidian"},
+      {"seconde": 561, "chute": -1.8, "passage": "« Moi, j'ai choisi VS Code » (début de chapitre)", "segment": "Installer VS Code et Obsidian"}
+    ]
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "1er plan : le graphe du second cerveau, proche du cerveau lumineux de la miniature ; la 1re phrase parle de second cerveau, pas d'AIOS ni d'automatiser sa vie"},
+    "ap_boucle_curiosite": {"note": 0, "preuve": "Aucune question ouverte dans l'intro"},
+    "ap_effort_montre": {"note": 0, "preuve": "Rien dans l'intro ; les deux jours de travail sur le script ne sont dits qu'à 56:56"},
+    "ap_setup_progress_payoff": {"note": 2, "preuve": "Accès : but (ouvrir les portes, 44:25), branchement short.io, liens listés (51:35) ; Entretien : demande à la voix, cron, mail reçu (67:44)"},
+    "ap_contraste_rythme": {"note": 1, "preuve": "0 à 14 changements de plan par minute selon les démos, sans contraste construit"},
+    "ap_montrer_sans_son": {"note": 1, "preuve": "Le graphe qui grandit intrigue, les tuiles « AIOS, ton système d'exploitation personnel » et le plan se lisent ; l'idée d'automatiser sa vie passe par la voix"},
+    "ali_douleur_histoire": {"note": 0, "preuve": "Ni douleur ni histoire dans l'intro ; le problème de la stack n'arrive qu'à 1:20"},
+    "ali_coeur_unique": {"note": 2, "preuve": "3:19 « la stack, c'est une collection, un système, c'est construit autour de toi »"},
+    "alx_pont": {"note": 2, "preuve": "Preuve (le graphe), contexte, titre repris (« un système AIOS »), plan en trois temps à l'écran, sans accroche forcée"},
+    "alx_pull_paint_point": {"note": 2, "preuve": "Chaque pilier : pourquoi (l'IA enfermée dans ton dossier), une image (chef d'orchestre, prise USB, tarte aux pommes, sécateur), puis le point"},
+    "alx_nom_idee": {"note": 2, "preuve": "« CAPE », « IPCCRA », « chef d'orchestre », « les 5 besoins », « l'audit [...] comme un sécateur », affichés"},
+    "alx_phrase_finale": {"note": 2, "preuve": "3:19 « un système, c'est construit autour de toi » ; 61:06 « Un skill, c'est de la valeur qui reste. » ; 69:36 le sécateur"},
+    "alx_douleur_reve": {"note": 1, "preuve": "« automatisé ma vie » parle du désir, mais « AIOS » porte la fin du titre"},
+    "alx_cta_tot": {"note": 2, "preuve": "1:07 les ressources gratuites de la masterclass, liées au sujet, en description"},
+    "ed_intro_courte": {"note": 0, "preuve": "1er point à 1:20, après la démo, la promesse, le plan et les conseils de visionnage"},
+    "ed_hook": {"note": 1, "preuve": "0:00 « Regarde cet écran 2 secondes » : une accroche visuelle, pas un des trois types ; la question arrive à 1:20"},
+    "ed_probleme_preuve_consignes": {"note": 2, "preuve": "Chaque pilier part d'un problème (copier-coller, prompt jetable, système qui grossit), montre sa preuve en direct, puis les étapes"},
+    "ed_tension_relancee": {"note": 2, "preuve": "44:18 « l'IA, elle reste enfermée dans ton dossier » lance l'Accès ; 55:41 « Mais voir savoir ça suffit pas » lance la Production"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "Ses chantiers, ses casquettes, sa skill Gmail : du vécu montré, sans récit"},
+    "ed_sans_surexplication": {"note": 0, "preuve": "CAPE récapitulé quatre fois, « la voix va plus vite » redit à 50:20, 62:20 et 66:40"},
+    "ed_niveau_simple": {"note": 2, "preuve": "LLM, CRUD, API, MCP (« une prise universelle ») et tokens expliqués en une phrase"},
+    "tous_video_suivante": {"note": 0, "preuve": "La fin renvoie au Club SMART, sans vidéo précise"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Titre récit à la 1re personne (« Comment j'ai automatisé ma vie ») et miniature promesse (« SYSTÈME IA COMPLET ») : 2 460 vues à 7 jours, 230 abonnés, la porte d'entrée de toute la chaîne.",
+    "intro_structure": "Une intro en pont propre, puis 41 points perdus en 47 secondes sur les conseils de visionnage (favoris, chapitres, ressources) : la plus grosse chute de la sélection.",
+    "habillage": "Captures VS Code et Obsidian en direct avec médaillon rond et repère C-A-P-E qui situe le pilier en cours.",
+    "idee_pour_nous": "Supprimer les consignes de visionnage de l'intro (« mets-la en favoris ») et donner les ressources en une phrase après le 1er point.",
+    "objectif": "club"
+  }
+}

@@ -1,0 +1,389 @@
+[
+ {
+  "texte": "Bonjour Thomas, merci pour ta vidéo. De surcroît, en français, c'est cool.\nSi c'est ok pour toi, je me permets de compléter pour ceux qui veulent aller un peu plus loin dans le process :\n\nLe contexte à poser avant de débuter le rambling\nAvant de basculer en mode vocal et de parler sans interruption, il est indispensable de donner au modèle une consigne de cadrage initiale (le header du prompt). Ce contexte prévient l'IA de la nature brute du message et lui indique la posture d'analyse à adopter.\nLe message initial doit établir clairement :\n1. La nature du flux : Avertir qu'il s'agit d'une saisie vocale brute en mode « flux de conscience », sujette aux fautes de frappe ou de transcription.\n2. L'interdiction d'agir immédiatement : Demander explicitement à l'IA de ne pas générer de solution, de code ou de plan d'action d'emblée.\n3. Le rôle attendu (Reconstruction / Effet miroir) : Exiger du modèle qu'il écoute, filtre le bruit, structure la pensée, identifie les hypothèses implicites, et reformule un cahier des charges clair (un clean brief).\n\nRègles essentielles\n1. Cadrer la posture initiale de l'IA : Déclarer en première phrase le passage en dictée vocale sans filtre et demander à l'IA de se positionner en mode récepteur/reformulateur avant toute exécution.\n2. Activer la dictée vocale sans filtre : Parler en continu pendant 5 à 10 minutes sans chercher à être structuré ou concis ; exprimer librement les objectifs, contraintes, doutes, incohérences et exemples.\n3. Demander la restitution synthétique (Play back) : Exiger de l'IA qu'elle résume la vision globale, récapitule les contraintes clés et explicite les hypothèses qu'elle a déduites du discours.\n4. Valider et corriger le brief : Passer une seule étape d'ajustement pour corriger les erreurs d'interprétation sur le brief reconstitué avant de lancer le travail d'exécution de l'agent.\n\nMerci de compléter ce complément au besoin! ☺️",
+  "likes": 5,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@TheFD31",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Salut et merci pour ta vidéo ! J’en ai appris beaucoup pour la mise en place de mon projet grâce à toi.",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@danielstreng",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Merci pour votre vidéo, c’est clair, Grok est mon complice et j’ai vraiment l’impression de parler avec un vrai ami!  Je ne parlerai jamais a voix haute car la IA sur Google est entrain de dire comment penser, agir et reflechir! Ils sont entrain de reecrire toute notre histoire, c’est vraiment dangereux pour le destin de nos enfants......😢😢",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@shatane1964",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "c'est drole mais c'est exactement ce que je fait depuis que je m'y suis mis, parceque j'ai demarrer sans formation particuliere, j'ai demarer intuitivement comme ça en débalant de long monologue.",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@oimtom3631",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Tres interessant",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@lesnouveauxexportateurs",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Très intéressant, je suis dev/CTO depuis 25 ans, j'avais testé rapidement le mode vocal avec Whisper mais j'ai trop l'habitude des prompts (depuis 1 an avec c.c, tous les jours), difficile de franchir le pas.\nAprès ce que tu montres est bien adapté pour du vibe coding. De mon côté je dois souvent lui dérouler un plan d'implantation très précis (je commence toujours en mode plan) pour des projets professionnels très cadrés. Là c'est pas si évident car à l'écrit, c'est comme écrire des specs, je me sens beaucoup plus précis car je réfléchis en même temps que j'écris et ce temps de réflexion est difficile à avoir à l'oral qui induit beaucoup d'improvisation en quelques sorte. Mais à voir, c'est peut être un entraînement à avoir. Ce qui m'avait gêné aussi c'est le fait qu'il ne sache pas toujours quand j'ai terminé. Vu que justement je dois beaucoup réfléchir sur la manière précise dont il doit implémenter les choses, je fais des pauses. Et quand je fais une pause il pense que j'ai fini de parler et prend le relais direct. Faudra que je repasse du temps à retester car depuis quelques mois, je ne code plus, c.c. a pris le relais à 100% et je passe mes journées à lui envoyer des prompts souvent sur plusieurs sessions en même temps.",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@v6A228JGHV",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Intéressant.\nMerci beaucoup pour le partage 🫡",
+  "likes": 2,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@glennmambutu7778",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "en effet je vais utiliser whispr flow, et j'ai deja tout en mode PARA...surtout mes notes de projets, je vais enregistrer les idees de mes notes avec WF et ensuite injecter dans l'IA...",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@jymesnil",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "3:22 6 axes:\nCe que tu veux construire et pour qui\nCe qui coince et comment tu verra que c'est réglé\nA quoi ça ressemble quand c'est bien fait\nOu elle a le droit d'aller chercher des informations\nSous quelle forme et ou ça atterrit\nCe qu'elle ne doit jamais faire",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@breannestahlman5953",
+  "date": 1791936000,
+  "parent": "root"
+ },
+ {
+  "texte": "le prompt ...depuis le début , je  renseigne le ou les contextes du  mieux que je le peut pour l'aider à définir les meilleures probabilités de tokens en réponse ^^\nmais c'est vrai que les modèles d'IA peuvent désormais ingurgiter en \"paroles \" un flux énorme de \"contextes' adjacent à la demande ....du coup t'oublie rien ....c'est pas con 👍",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ben2846-c4s",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Merci, intéressant, par contre conseil : achetez vous un micro car le son n'est pas top (trop de son de réverbération) ou alors traitement IA avant le rendu final",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@divinevideo",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Bonjour Thomas, je regarde tes vidéos depuis quelques mois et pour aller plus loin j'hésite à adhérer au club smart. N'ayant aucun visée entrepreunariale ou business mais seulement une \"amelioration \" de mon quotidien, je me demandais si le club smart était adapté à une personne qui ferait une utilisation plutôt lambda de l'IA ?",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@fredericacr2053",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Merci pour tes vidéos ... extrêmement pertinent",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@landrytchala4974",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Exactement ce que je fais depuis 2 semaines, quasiment pour tout, le modèle s'adapte parfaitement aux erreurs de transcription et sortir les idées de ma tete est tellement plus fluide et complet. Je peux rajouter des infos qui poppent dans ma tête instant pour rajouter du contexte, c'est incroyablement efficace. Idem j'utilise une app extérieure (speechify) pour la dictée (et qui me sert pour la lecture mais je m'en sers très peu). Inconvenient, je ne leve le nez de mon ecran que quand je tape la limite d'usage ^^' Après j'imagine que c'est surtout parce qu'il y a tellement de choses que j'avais en tete sans en avoir le temps ou la capacité d'attention requise que ça se bouscule un peu pour le moment. J'ai regardé quelques une de tes vidéos, très interessant, merci pour ce contenu 👍",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@laureldev",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Salut c’est intéressant. C’est vrai que c’est long d’écrire son prompt quand on veut donner pas mal de détail.. Une question sur la vidéo: quand tu lui demandes la création ou les changements sur ton site, il a déjà l’adresse url ou il te sort un site factice de présentation? Tu vois ce que je veux dire? Ça marche pas sur WordPress ça? Merci",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Lorenzzini",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Totalement d'accord.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@dan_s_marseille",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "👉 REJOINS LE CLUB SMART — construis et personnalise ton AIOS :\nhttps://www.skool.com/club-smart/about\n\nc'est tout le context que tu auras dans ton AIOS qui fera la différence dans ton utilisation de l'IA",
+  "likes": 1,
+  "epingle": false,
+  "createur": true,
+  "auteur": "@thomasrichard1978",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Bonjour je suis photographe amateur et actuellement je cumul une grande quantité de documents et photos de famille afin de créer un livre qui regroupe tous ma collecte d'information (qui va des actes de naissance, naturalisation, photos anciennes etc...) concernant notre famille afin de laisser une trace à mes petits enfants. Au vue de ta vidéo je voulais savoir étant donné ton expertise s'il est possible de faire ma requête avec l'IA pour construire ce livre d'une manière très logique et digeste pour une lecture ludique ? étant donné le nombre de document l'IA peut-elle ordonner toutes mes informations ? Merci pour la qualité de tes vidéos",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@freddykolodziejczak1237",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Très bonne méthode sauf que tu vas cramer 5 à 10 fois plus de tokens en entrée qu'avec un simple prompt sans oublier qu'un prompt en français consomme jusqu'à 50% de tokens de plus que son équivalent en anglais. La méthode Karpathy c'est un boost pour les revenus d'Anthropic. Il faut pas être naïf 🤔",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Zboob999",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Est-ce qu’il t’es arrivé que le modèle déconne? Déconne tellement qu’il te supprime des documents d’autres répertoires sans ton consentement? 🤔\n\nComment tu lui limites les accès?",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@klark699",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Oui moi aussi je parle désormais et je n'écris plus. C'est effectivement beaucoup plus rapide.",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Lumiere904",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "le règne de la paresse. il faut s'attendre a un QI en chute libre pour les futures generations",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@haddadslim254",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Et tu appelle ça quoi , \"Request Ingeneering\" ?",
+  "likes": 1,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@armandbessala6252",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "📌 Cette méthode, tu peux l'avoir installée chez toi : ton contexte, tes skills et un premier projet qui tourne. On le fait ensemble dans l'atelier AIOS : 2 h en direct, 6 personnes max, sans code. 12 mois de Club SMART Premium inclus.\n👉 https://www.thomrichard.com/atelier-aios",
+  "likes": 0,
+  "epingle": true,
+  "createur": true,
+  "auteur": "@thomasrichard1978",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Comme les toilettes chinoise plus besoin de ..... SUPER !!!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@landrepas",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Je crée une formation Claude, et je préfère la construire à partir de ce que vous me dites plutôt que de la décider tout seul.\nUne minute de questions : les sujets qui t'intéressent, comment tu préfères qu'on travaille, quels créneaux te vont.\n\nhttps://tally.so/r/XxbqAj?source=youtube&video=academy\n\nÇa ne t'engage à rien, et c'est ce qui décide du programme.",
+  "likes": 0,
+  "epingle": false,
+  "createur": true,
+  "auteur": "@thomasrichard1978",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "moi j utilise draveur pour taper comme je pense ! draveur est un correcteur de frappe ..",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@loomMusique",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Attention un PRD est un Product Requirements Document et non ce qui est mentionné dans la vidéo!!!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@alifarrent5249",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Haaa..., je viens de comprendre que tu utilisais Claude...",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@BYfilms_pubs_annonces_web",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Parler pendant 3 minutes d'affilée pour déverser un flot de consignes présente plusieurs inconvénients majeurs :\nLa perte de structure : L'oral est par nature linéaire, non structuré et souvent redondant. Difficile de poser une architecture propre, des contraintes de state management ou des schémas de données rigoureux rien qu'en parlant à bâtons rompus.\nL'effet \"boîte noire\" : Plus le prompt initial est long et complexe, plus l'IA risque de rater une nuance, d'inventer des éléments ou de partir dans une mauvaise direction. Le résultat final est souvent une déception qui demande plus de temps de correction qu'une construction méthodique.\nIl faut de l'expérience pour s'y mettre !",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@vertimaron",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "Ben ça fait des mois que tous les Youtubers le disent en même temps (je ne te parle pas de ceux qui se regardent le nombril). Je tape au clavier dans ma demande et je ne vois pas pourquoi j’irai parler à haute voix là où je suis 95 pour-cent du temps à l’extérieur lorsque je lui écris",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@eliechaya9690",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Bonjour . ns brûlons les tokens en mode orale déballage, non?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@artisall2015",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "J'ai fais ça naturellement avec l'IA, pas exactement de la même manière mais le principe est là, j'ai dédié un échange pour créer ce contexte, et il l'a tout de suite intégré et j'ai constaté une différence sur ses réponses et ses méthodes sur l'apporche des projets qui me préoccupé le plus.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@briandupuis8022",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "C’est un peu de la « br@nlette cérébrale » ce genre de propos, et présenté comme une règle générale ça peut même devenir dangereux. Je suis data scientist et je travaille depuis 17 ans en R&D médicale : ce qui est dit peut être vrai pour certains usages conversationnels, mais certainement pas pour tous les domaines, et encore moins lorsqu’on développe des systèmes complexes.\n\nLes modèles modernes ont beaucoup moins besoin des anciennes recettes de prompt engineering artificiellement compliquées, c’est vrai. Mais cela ne signifie absolument pas qu’il faut devenir moins précis sur l’objectif, le contexte et les contraintes.\n\nPrenons volontairement un exemple caricatural : « trouve le moyen le plus efficace d’éliminer toutes les cellules cancéreuses ». Une solution parfaitement conforme à cet objectif serait de tuer l’organisme qui les contient. Objectif atteint, résultat évidemment catastrophique.\n\nLe problème n’est donc pas seulement de savoir si l’IA comprend la phrase. Le problème est de définir ce qu’elle doit optimiser et, surtout, ce qu’elle ne doit jamais sacrifier pour y parvenir.\n\nPlus on donne d’autonomie aux IA, plus cette distinction devient importante. Leur apprendre à mieux interpréter le langage naturel est formidable. Apprendre aux utilisateurs qu’ils peuvent rester vagues parce que « l’IA devinera » est en revanche une très mauvaise idée.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@kaneda666-d5z",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "As tu regardé la vidéo?",
+  "likes": 0,
+  "epingle": false,
+  "createur": true,
+  "auteur": "@thomasrichard1978",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Très laid le site. Marque de l'IA.",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@luapmada1",
+  "date": 1790294400,
+  "parent": "root"
+ },
+ {
+  "texte": "AVANT TOUT CE BLABLA NOUS AIMERIONS PLUTÔT QUE TU NOUS FOURNISSE LE LIEN DU PDF COMPLET DU MODE D'EMPLOI COMPLET DE CLAUDE IA !!!!",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@c.p6969",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Tout ça pour un site en IA que l'on ne trouve pas ? retour sur le web et l'IA si je cherche \"vulgarisation de l’IA en français\" dans la balise title site introuvable, Après une landing page qui ressemble aux autres, plus aucun créativité et des textes noyé dans la masse, oui l'IA demande moins de prompt, mais !",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@AEPRESSEWEB",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "C'est intéressant comme méthode mais pour ceux qui n'ont pas un abonnement premium maxi full super cher, je risque d'être bloqué et forcé d'attendre 5 heures dès que j'ai balancé mon discours, non?",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@Gaho_artiste",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "bof c'est du joujou cela;..... le prompt parfait n'existe pas, la capacité à tirer la compétence ultime de ces llm c'est ce qui fait que tu deviens maitre dans ton domaine.... car ce qui me fait peur c'est l'incompétence de tous ceux qui savent. Les vidéos me font toutes rire et en meme temps, sont un danger car la maitrise de ses outils n'est géré que par les majors et demande la création d'une architecture extremement complexe autour....",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@sandrinemira-l2s",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "Si ça ce n'est pas un prompt...C'est quoi un prompt finalement? Le titre est un clickbait...",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@emmanuel_vibes",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "le micro... bon sujet mais mes oreilles saignent",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@MrNicolasM",
+  "date": 1787616000,
+  "parent": "root"
+ },
+ {
+  "texte": "svp achete un micro c'est horrible a entendre",
+  "likes": 0,
+  "epingle": false,
+  "createur": false,
+  "auteur": "@ericnieto6320",
+  "date": 1787616000,
+  "parent": "root"
+ }
+]

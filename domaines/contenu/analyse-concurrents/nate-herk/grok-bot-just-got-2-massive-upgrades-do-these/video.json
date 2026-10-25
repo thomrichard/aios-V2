@@ -1,0 +1,128 @@
+{
+ "id": "MgvwZaDPCs4",
+ "url": "https://www.youtube.com/watch?v=MgvwZaDPCs4",
+ "chaine": "nate-herk",
+ "titre": "Grok Bot Just Got 2 Massive Upgrades. Do These Things Now.",
+ "titre_ytdlp": "Grok Bot Just Got 2 Massive Upgrades. Do These Things Now.",
+ "publie": "2026-10-09T02:02:31Z",
+ "duree_s": 551,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "NLy-X6360pDYDHt6DilLGgRIg0A",
+  "id": "MgvwZaDPCs4",
+  "snippet": {
+   "publishedAt": "2026-10-09T02:02:31Z",
+   "channelId": "UC2ojq-nuP8ceeHqiroeKhBA",
+   "title": "Grok Bot Just Got 2 Massive Upgrades. Do These Things Now.",
+   "description": "FREE AI OS Template: https://app.aiautomationsociety.ai/optin/ai-os/?utm_source=youtube&utm_medium=organic&utm_content=grok-bot-2-upgrades&sl=yt_grok-bot-2-upgrades\nHow I built an AI agency from 0 to over $1 million per year: https://www.skool.com/ai-automation-society-plus/about?el=grok-bot-2-upgrades&hcategory=youtube-videos&utm_campaign=plus-group\nMy FREE resources: https://www.skool.com/ai-automation-society/about?el=grok-bot-2-upgrades&hcategory=youtube-videos&utm_campaign=free-group\n\nMy Tools💻\nFREE MONTH voice to text: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www.hostinger.com/vps/claude-code-hosting\n\nGrok Bot has two new upgrades: automatic model routing and native X search. \n\nI walk through switching my bots away from the paid X API, why I'm rethinking how I structure my skills, and what I'd still like to see from model routing. Then I show you my favorite setup: running Claude Code inside Grok Bot with my own subscription so I can access my projects from my phone.\n\nSponsorship Inquiries:\n📧 nate@smoothmedia.co\n\nConnect with me:\nhttps://www.linkedin.com/in/nateherkelman/\nhttps://x.com/nateherk\nhttps://www.instagram.com/nateherk/\n\nTIMESTAMPS \n0:00 Two Major Grok Bot Upgrades\n0:14 Automatic Model Routing\n2:00 Native X Search\n4:08 Free AI OS Kit\n4:35 Rethinking Your Skills\n6:39 Running Claude Code Inside Grok Bot\n8:59 Final Thoughts",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/MgvwZaDPCs4/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/MgvwZaDPCs4/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/MgvwZaDPCs4/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/MgvwZaDPCs4/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/MgvwZaDPCs4/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    }
+   },
+   "channelTitle": "Nate Herk | AI Automation",
+   "categoryId": "1",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "en",
+   "localized": {
+    "title": "Grok Bot Just Got 2 Massive Upgrades. Do These Things Now.",
+    "description": "FREE AI OS Template: https://app.aiautomationsociety.ai/optin/ai-os/?utm_source=youtube&utm_medium=organic&utm_content=grok-bot-2-upgrades&sl=yt_grok-bot-2-upgrades\nHow I built an AI agency from 0 to over $1 million per year: https://www.skool.com/ai-automation-society-plus/about?el=grok-bot-2-upgrades&hcategory=youtube-videos&utm_campaign=plus-group\nMy FREE resources: https://www.skool.com/ai-automation-society/about?el=grok-bot-2-upgrades&hcategory=youtube-videos&utm_campaign=free-group\n\nMy Tools💻\nFREE MONTH voice to text: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www.hostinger.com/vps/claude-code-hosting\n\nGrok Bot has two new upgrades: automatic model routing and native X search. \n\nI walk through switching my bots away from the paid X API, why I'm rethinking how I structure my skills, and what I'd still like to see from model routing. Then I show you my favorite setup: running Claude Code inside Grok Bot with my own subscription so I can access my projects from my phone.\n\nSponsorship Inquiries:\n📧 nate@smoothmedia.co\n\nConnect with me:\nhttps://www.linkedin.com/in/nateherkelman/\nhttps://x.com/nateherk\nhttps://www.instagram.com/nateherk/\n\nTIMESTAMPS \n0:00 Two Major Grok Bot Upgrades\n0:14 Automatic Model Routing\n2:00 Native X Search\n4:08 Free AI OS Kit\n4:35 Rethinking Your Skills\n6:39 Running Claude Code Inside Grok Bot\n8:59 Final Thoughts"
+   },
+   "defaultAudioLanguage": "en"
+  },
+  "contentDetails": {
+   "duration": "PT9M11S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": true,
+   "contentRating": {},
+   "projection": "rectangular"
+  },
+  "statistics": {
+   "viewCount": "132939",
+   "likeCount": "1311",
+   "favoriteCount": "0",
+   "commentCount": "97"
+  }
+ },
+ "ytdlp": {
+  "id": "MgvwZaDPCs4",
+  "title": "Grok Bot Just Got 2 Massive Upgrades. Do These Things Now.",
+  "description": "FREE AI OS Template: https://app.aiautomationsociety.ai/optin/ai-os/?utm_source=youtube&utm_medium=organic&utm_content=grok-bot-2-upgrades&sl=yt_grok-bot-2-upgrades\nHow I built an AI agency from 0 to over $1 million per year: https://www.skool.com/ai-automation-society-plus/about?el=grok-bot-2-upgrades&hcategory=youtube-videos&utm_campaign=plus-group\nMy FREE resources: https://www.skool.com/ai-automation-society/about?el=grok-bot-2-upgrades&hcategory=youtube-videos&utm_campaign=free-group\n\nMy Tools💻\nFREE MONTH voice to text: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www.hostinger.com/vps/claude-code-hosting\n\nGrok Bot has two new upgrades: automatic model routing and native X search. \n\nI walk through switching my bots away from the paid X API, why I'm rethinking how I structure my skills, and what I'd still like to see from model routing. Then I show you my favorite setup: running Claude Code inside Grok Bot with my own subscription so I can access my projects from my phone.\n\nSponsorship Inquiries:\n📧 nate@smoothmedia.co\n\nConnect with me:\nhttps://www.linkedin.com/in/nateherkelman/\nhttps://x.com/nateherk\nhttps://www.instagram.com/nateherk/\n\nTIMESTAMPS \n0:00 Two Major Grok Bot Upgrades\n0:14 Automatic Model Routing\n2:00 Native X Search\n4:08 Free AI OS Kit\n4:35 Rethinking Your Skills\n6:39 Running Claude Code Inside Grok Bot\n8:59 Final Thoughts",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "Two Major Grok Bot Upgrades",
+    "end_time": 14
+   },
+   {
+    "start_time": 14,
+    "title": "Automatic Model Routing",
+    "end_time": 120
+   },
+   {
+    "start_time": 120,
+    "title": "Native X Search",
+    "end_time": 248
+   },
+   {
+    "start_time": 248,
+    "title": "Free AI OS Kit",
+    "end_time": 275
+   },
+   {
+    "start_time": 275,
+    "title": "Rethinking Your Skills",
+    "end_time": 399
+   },
+   {
+    "start_time": 399,
+    "title": "Running Claude Code Inside Grok Bot",
+    "end_time": 539
+   },
+   {
+    "start_time": 539,
+    "title": "Final Thoughts",
+    "end_time": 551
+   }
+  ],
+  "tags": [],
+  "categories": [
+   "Film & Animation"
+  ],
+  "heatmap": null,
+  "upload_date": "20261009",
+  "duration": 551,
+  "channel": "Nate Herk | AI Automation",
+  "channel_id": "UC2ojq-nuP8ceeHqiroeKhBA",
+  "channel_follower_count": 1090000,
+  "thumbnail": "https://i.ytimg.com/vi_webp/MgvwZaDPCs4/maxresdefault.webp",
+  "view_count": 132948,
+  "like_count": 1311,
+  "comment_count": 68
+ }
+}

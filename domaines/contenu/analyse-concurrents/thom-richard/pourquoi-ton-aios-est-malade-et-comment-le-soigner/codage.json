@@ -1,0 +1,188 @@
+{
+  "video_id": "yl54qmvoq2s",
+  "chaine": "thom-richard",
+  "titre_video": "Pourquoi ton AIOS est malade (et comment le soigner)",
+  "codeur": "agent thom-richard",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "liste",
+    "format_secondaire": "talk",
+    "sujet": "Diagnostiquer un AIOS qui oublie ou travaille mal, et le soigner sans tout reconstruire",
+    "outils": ["AIOS (son système)", "skills Claude", "CLAUDE.md"],
+    "niveau": "intermediaire",
+    "objectif_probable": "communaute"
+  },
+  "titre": {
+    "attente_au_clic": "Comprendre pourquoi mon IA ou mon AIOS oublie tout, et savoir comment le réparer.",
+    "schema": "Pourquoi ton <système> est <problème> (et comment le <résoudre>)",
+    "promesse": "Trouver ce qui cloche dans son AIOS et le soigner",
+    "audace": "timide",
+    "registre": "mixte",
+    "briques": ["resultat"],
+    "marqueurs": ["question"],
+    "nom_outil": false
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "concentré, inquiet",
+    "regard": "element",
+    "texte": "TON IA OUBLIE TOUT",
+    "texte_mots": 4,
+    "repete_titre": "non",
+    "elements": ["Thomas en blouse de médecin avec stéthoscope", "ordinateur portable avec électrocardiogramme rouge qui s'éteint", "texte crème cerné de rouge"],
+    "nb_elements": 3,
+    "fond": "bureau vert sombre avec plantes et lampe",
+    "couleurs": ["vert sombre", "blanc de la blouse", "rouge", "crème"],
+    "curiosity_gap": "moment",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Ton [AIOS] n'est pas mourant, il est malade.",
+    "premiere_phrase_reprend_titre": "oui",
+    "premier_plan": "Face caméra plein cadre, il met un stéthoscope violet à ses oreilles ; étagère et lampe derrière",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": ["hook-dissonance", "douleur", "boucle-curiosite"],
+    "preuve": {
+      "type": "autorite",
+      "seconde": 78,
+      "description": "« Ça fait plus de 6 mois que je [...] peaufine mon AIOS », il dit accompagner près de 200 personnes dans le Club SMART"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 2, "a_l_ecran": true},
+    "boucle_vers_la_fin": {
+      "presente": true,
+      "citation": "Le remède là-dessus [...] On en parle tout à la fin",
+      "seconde_resolution": 770,
+      "tenue": "oui"
+    },
+    "seconde_premier_point": 119,
+    "attente_tenue": "partiel",
+    "attente_note": "L'oubli de la miniature est bien le premier symptôme, et chaque maladie a son remède. Mais les remèdes sont surtout nommés : les skills close, audit et level up sont décrites sans démonstration ni lien."
+  },
+  "structure": {
+    "modele": "probleme-solution",
+    "segments": [
+      {"debut": 0, "fin": 119, "titre": "Introduction", "role": "intro", "pull": true, "paint": true, "point": false, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 119, "fin": 209, "titre": "Ton AIOS n'intègre plus les bonnes informations", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 209, "fin": 389, "titre": "Informations introuvables ou périmées : classement, audit et source de vérité", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 389, "fin": 499, "titre": "Il ne fait pas ce que tu attends : processus et skills", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 499, "fin": 678, "titre": "Résultats inconstants et connexions qui ne fonctionnent plus", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 678, "fin": 769, "titre": "Les trois questions avant d'ajouter une fonctionnalité", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 769, "fin": 879, "titre": "Faire grandir ton AIOS sans tout reconstruire", "role": "fin", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 53, "type": "annonce-suite", "citation": "il y a une autre maladie qu'il faut identifier"},
+      {"seconde": 71, "type": "boucle-ouverte", "citation": "On en parle tout à la fin"},
+      {"seconde": 174, "type": "question-spectateur", "citation": "Alors, comment tu traites ça ?"},
+      {"seconde": 284, "type": "question-spectateur", "citation": "Est-ce qu'une bonne [ontologie] suffit à être 100 % tout le temps ?"},
+      {"seconde": 324, "type": "question-spectateur", "citation": "Pourquoi ?"},
+      {"seconde": 533, "type": "question-spectateur", "citation": "Qu'est-ce que c'est ?"},
+      {"seconde": 579, "type": "question-spectateur", "citation": "Concrètement, c'est quoi ?"},
+      {"seconde": 680, "type": "annonce-suite", "citation": "te donner le bon réflexe que tu dois appliquer"}
+    ],
+    "histoires": [
+      {"seconde": 186, "acte": "anecdote", "resume": "Il a créé la skill close, qui relit chaque conversation et met son système à jour, tâches comprises."},
+      {"seconde": 299, "acte": "anecdote", "resume": "Sa skill d'audit dresse un état des lieux chaque semaine ou tous les 15 jours."},
+      {"seconde": 472, "acte": "anecdote", "resume": "Son rituel level up, inspiré de Nate Herk, propose une skill après trois fois la même tâche."},
+      {"seconde": 745, "acte": "anecdote", "resume": "Quand il teste un outil, il prévient son AIOS et se donne 7 jours avant de décider."},
+      {"seconde": 835, "acte": "anecdote", "resume": "Depuis quelques mois, il fait évoluer un AIOS avec les personnes qu'il accompagne ; la vidéo en vient."}
+    ],
+    "payoffs": [
+      {"seconde": 176, "resume": "Définir ses points de capture, et la skill close en fin de discussion"},
+      {"seconde": 245, "resume": "Une ontologie qui passe le test des 10 secondes"},
+      {"seconde": 289, "resume": "Un audit régulier pour les fichiers isolés et les contradictions"},
+      {"seconde": 326, "resume": "Une source de vérité unique par information"},
+      {"seconde": 449, "resume": "Une carte fonctionnelle des processus, montrée à l'écran"},
+      {"seconde": 469, "resume": "Le level up : une skill proposée après trois fois la même tâche"},
+      {"seconde": 529, "resume": "Un arbre de décision qui hiérarchise les règles"},
+      {"seconde": 573, "resume": "Le journal de décisions en deux fichiers"},
+      {"seconde": 619, "resume": "Savoir quelles connexions sont branchées et utilisées"},
+      {"seconde": 694, "resume": "Les trois questions quand on travaille à côté de son AIOS"},
+      {"seconde": 770, "resume": "Construire doucement, un MVP, sans anticiper ses besoins"}
+    ],
+    "premier_payoff_seconde": 176,
+    "jargon": 2,
+    "repetitions": 1,
+    "test_du_tweet": "Ton AIOS n'est pas mourant, il est malade : ne le reconstruis pas. Il ne sait plus (capture, rangement, source de vérité unique) ou il ne sait plus faire (carte des processus, arbre de décision, connexions). Des rituels pour l'entretenir, et 3 questions avant d'ajouter un outil."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine, plein cadre ou à droite d'un tableau de post-it", "decor": "mur blanc, étagère noire avec figurines, livres et lettres MARVEL, lampe à ampoule"},
+    "parts": {"face": 55, "ecran": 10, "motion": 35, "broll": 0},
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["plan-a-l-ecran", "split-screen", "etiquettes", "emojis-stickers"],
+    "charte": "Tableau crème façon Excalidraw, police manuscrite, post-it roses (symptômes), jaunes (traitements de structure) et verts (rituels) ; en intro, cartes vert très foncé avec dossiers jaunes. La miniature (blouse de médecin, électrocardiogramme rouge) ne reprend pas cette charte.",
+    "rythme": "contraste",
+    "notes": "Un tableau de post-it se remplit au fil de la vidéo : chaque symptôme rose reçoit son traitement jaune et son rituel vert, ce qui sert de plan visible. Après les deux premières minutes, le plan ne change que 1 à 6 fois par minute ; quelques mots clés en grandes capitales blanches s'incrustent en intro."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 86, "type": "communaute-payante", "cible": "le Club SMART", "amene_par": "intro", "citation": "ça vient du club [SMART]. Si tu veux plus d'infos, tu vas voir la description."},
+      {"seconde": 665, "type": "abonnement", "cible": "s'abonner à la chaîne", "amene_par": "transition", "citation": "je te conseille de t'abonner à la chaîne"},
+      {"seconde": 853, "type": "communaute-payante", "cible": "le Club SMART", "amene_par": "fin", "citation": "Ça s'appelle le [Club], tu as toutes les infos en bas."},
+      {"seconde": 856, "type": "video-suivante", "cible": "la masterclass AIOS", "amene_par": "fin", "citation": "je te mets toutes les ressources gratuites et à dispo dans cette masterclass"}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"video-suivante": 3, "service": 1, "communaute-payante": 2, "newsletter": 1, "affiliation": 3},
+    "commentaire_epingle": null,
+    "recap_final": false,
+    "derniere_phrase": "je te dis à bientôt pour la prochaine vidéo. Bye.",
+    "video_suivante_precise": true
+  },
+  "commentaires": {
+    "themes": ["remerciements", "un AIOS qui marche avec n'importe quel agent", "séparer le pro et le perso"],
+    "demandes": ["rendre l'AIOS indépendant de l'agent", "un ou deux cerveaux pour le pro et le perso"],
+    "critiques": ["la figurine tombée sur l'étagère, « très perturbant »"],
+    "reprises": [],
+    "signal_promesse": "inconnu"
+  },
+  "retention": {
+    "a_30s": 0.613,
+    "a_la_moitie": 0.248,
+    "pertes": [
+      {"seconde": 30, "chute": 7.9, "passage": "« Alors, rapidement, je vais te réexpliquer ce qu'est un [AIOS]. » (définition face caméra)", "segment": "Introduction"},
+      {"seconde": 298, "chute": 2.8, "passage": "« moi j'ai créé une skill qui fait ça » (l'audit, décrit sans être montré)", "segment": "Informations introuvables ou périmées : classement, audit et source de vérité"},
+      {"seconde": 140, "chute": 2.4, "passage": "« tu viens télécharger le transcript d'une réunion » (exemple raconté face au tableau)", "segment": "Ton AIOS n'intègre plus les bonnes informations"},
+      {"seconde": 228, "chute": 2.4, "passage": "« Je connais pas, dis-moi, explique-moi » (deuxième exemple du même problème)", "segment": "Informations introuvables ou périmées : classement, audit et source de vérité"},
+      {"seconde": 597, "chute": 2.4, "passage": "« un autre symptôme c'est que bah ça marchait il y a quelques jours »", "segment": "Résultats inconstants et connexions qui ne fonctionnent plus"}
+    ],
+    "remontees": [
+      {"seconde": 579, "chute": -2.9, "passage": "« Concrètement, c'est quoi ? C'est pas un log en fait, c'est deux fichiers. » (journal de décisions)", "segment": "Résultats inconstants et connexions qui ne fonctionnent plus"},
+      {"seconde": 456, "chute": -1.9, "passage": "« ton [AIOS] doit être capable de se référer à cette carte » (sa carte des processus à l'écran)", "segment": "Il ne fait pas ce que tu attends : processus et skills"},
+      {"seconde": 113, "chute": -1.8, "passage": "« Donc le premier symptôme, c'est mon [AIOS] ne sait rien de bon. » (début de chapitre)", "segment": "Ton AIOS n'intègre plus les bonnes informations"},
+      {"seconde": 342, "chute": -1.8, "passage": "« Donc si tu as un CRM, c'est ton CRM. » (source de vérité unique)", "segment": "Informations introuvables ou périmées : classement, audit et source de vérité"},
+      {"seconde": 280, "chute": -1.7, "passage": "« Est-ce qu'une bonne [ontologie] suffit à être 100 % tout le temps ? »", "segment": "Informations introuvables ou périmées : classement, audit et source de vérité"}
+    ]
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "1re phrase = titre (« malade ») ; le 1er plan reprend le stéthoscope mais pas la blouse ni l'ordinateur de la miniature. Doute entre 1 et 2"},
+    "ap_boucle_curiosite": {"note": 1, "preuve": "1:13 « On en parle tout à la fin », résolue à 12:50, mais le remède est déjà donné (« étape par étape ») : peu de question ouverte"},
+    "ap_effort_montre": {"note": 2, "preuve": "1:18 « plus de 6 mois que je travaille et que je [peaufine] mon [AIOS] », près de 200 personnes accompagnées"},
+    "ap_setup_progress_payoff": {"note": 1, "preuve": "Chaque maladie va du symptôme au remède ; le tableau de post-it qui se remplit montre une progression, sans but posé au départ"},
+    "ap_contraste_rythme": {"note": 1, "preuve": "17 et 13 changements de plan les deux premières minutes, puis 1 à 6 : le contraste vient de l'intro montée, pas d'un choix au fil de la vidéo"},
+    "ap_montrer_sans_son": {"note": 1, "preuve": "Stéthoscope, « Et si je recommençais ? AIOS V2 → V3 », « Deux symptômes » se lisent, mais l'idée « malade, pas mourant » passe par la voix"},
+    "ali_douleur_histoire": {"note": 1, "preuve": "Douleur à 0:08 (tu l'utilises de moins en moins, tu recommences en V2, V3) ; pas d'histoire vécue, seulement son parcours à 1:18"},
+    "ali_coeur_unique": {"note": 2, "preuve": "0:05 « Un système mourant, tu le remplaces. Un système qui est malade, tu le [soignes]. »"},
+    "alx_pont": {"note": 1, "preuve": "Définition, crédit et plan comme un pont, mais ouverts par deux hooks de dissonance"},
+    "alx_pull_paint_point": {"note": 2, "preuve": "Chaque maladie : l'agacement (pull), un exemple (réunion, prix périmé, tutoiement), puis le remède"},
+    "alx_nom_idee": {"note": 2, "preuve": "« test des 10 secondes », « source de vérité unique », « level up », « journal de décisions », « lance-pierre », écrits sur les post-it"},
+    "alx_phrase_finale": {"note": 1, "preuve": "6:11 « Faut surtout pas que ça se gère à plusieurs endroits. », 12:18 « parfois la bonne réponse, c'est non » ; pas pour chaque maladie"},
+    "alx_douleur_reve": {"note": 1, "preuve": "« malade » dit la douleur, mais le titre repose sur « AIOS », un mot que seuls les initiés connaissent"},
+    "alx_cta_tot": {"note": 1, "preuve": "1:26 le Club SMART cité en passant (« tu vas voir la description »), sans dire ce qu'on y gagne"},
+    "ed_intro_courte": {"note": 0, "preuve": "1er point à 1:59, après hooks, définition, une maladie bonus, crédit et deux types de traitements"},
+    "ed_hook": {"note": 2, "preuve": "0:16 dissonance : « Tu vas faire ce que tout le monde fait. Tu vas recommencer. » puis « Sauf que... »"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "Problème puis remède à chaque fois ; la preuve manque, sauf la carte des processus montrée vers 7:30"},
+    "ed_tension_relancee": {"note": 1, "preuve": "Beaucoup de questions dans les points (4:44, 5:24, 9:39), mais les passages d'un point à l'autre sont des annonces (« Sujet suivant. Problème suivant »)"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "Ses skills close, audit, level up et son test de 7 jours : des usages cités, pas racontés"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "L'audit expliqué deux fois (4:49, 6:17 « j'en ai déjà un peu parlé »), deux exemples par maladie"},
+    "ed_niveau_simple": {"note": 1, "preuve": "Ontologie, source de vérité et MVP expliqués ; IPCRA, MCP, CLAUDE.md et Codex non expliqués"},
+    "tous_video_suivante": {"note": 2, "preuve": "14:16 la masterclass AIOS, carte « Construis ton AIOS, étape par étape », pour installer le sien"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Une métaphore médicale portée par le titre et la miniature (blouse, stéthoscope), mais le texte de la miniature (« TON IA OUBLIE TOUT ») ne reprend pas le titre.",
+    "intro_structure": "Deux bons hooks de dissonance, puis 1 minute 30 de définition, crédit et plan : la courbe tombe à 61 % à 30 s, la plus basse des dix.",
+    "habillage": "Un tableau de post-it roses, jaunes et verts qui se remplit au fil des maladies : un plan visible et une synthèse qu'on peut capturer.",
+    "idee_pour_nous": "Garder le tableau de post-it qui se remplit comme plan visible, et entrer dans le 1er symptôme juste après le hook.",
+    "objectif": "vues"
+  }
+}

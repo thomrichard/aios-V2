@@ -1,0 +1,305 @@
+{
+ "recupere_le": "2026-10-25",
+ "breakout": 1.2433059408160214,
+ "vph": 21.74576271186441,
+ "stats_jour": [
+  {
+   "timestamp": "2026-09-17T13:01:00.417Z",
+   "views": 2,
+   "likes": 1,
+   "comments": 0,
+   "vph": null
+  },
+  {
+   "timestamp": "2026-09-18T00:33:40.867Z",
+   "views": 4208,
+   "likes": 78,
+   "comments": 22,
+   "vph": 624.5901639344263
+  },
+  {
+   "timestamp": "2026-09-19T00:20:56.943Z",
+   "views": 12363,
+   "likes": 159,
+   "comments": 34,
+   "vph": 113.91304347826087
+  },
+  {
+   "timestamp": "2026-09-20T00:59:44.919Z",
+   "views": 18879,
+   "likes": 246,
+   "comments": 39,
+   "vph": 244
+  },
+  {
+   "timestamp": "2026-09-21T00:22:06.046Z",
+   "views": 29471,
+   "likes": 354,
+   "comments": 41,
+   "vph": 474
+  },
+  {
+   "timestamp": "2026-09-22T00:49:39.859Z",
+   "views": 35979,
+   "likes": 463,
+   "comments": 45,
+   "vph": 357
+  },
+  {
+   "timestamp": "2026-09-23T00:41:44.209Z",
+   "views": 41828,
+   "likes": 543,
+   "comments": 47,
+   "vph": 285.21739130434787
+  },
+  {
+   "timestamp": "2026-09-24T00:33:17.730Z",
+   "views": 46617,
+   "likes": 592,
+   "comments": 52,
+   "vph": 210
+  },
+  {
+   "timestamp": "2026-09-25T00:36:10.577Z",
+   "views": 50543,
+   "likes": 630,
+   "comments": 52,
+   "vph": 165
+  },
+  {
+   "timestamp": "2026-09-26T00:34:53.646Z",
+   "views": 52943,
+   "likes": 657,
+   "comments": 53,
+   "vph": 95.40983606557377
+  },
+  {
+   "timestamp": "2026-09-27T01:34:36.234Z",
+   "views": 54940,
+   "likes": 684,
+   "comments": 53,
+   "vph": 54.70588235294118
+  },
+  {
+   "timestamp": "2026-09-28T00:35:43.219Z",
+   "views": 56327,
+   "likes": 701,
+   "comments": 55,
+   "vph": 64.76190476190476
+  },
+  {
+   "timestamp": "2026-09-29T00:36:49.109Z",
+   "views": 57556,
+   "likes": 726,
+   "comments": 58,
+   "vph": 44.28571428571429
+  },
+  {
+   "timestamp": "2026-09-30T00:12:35.640Z",
+   "views": 58530,
+   "likes": 737,
+   "comments": 59,
+   "vph": 110.32258064516128
+  },
+  {
+   "timestamp": "2026-10-01T00:19:46.313Z",
+   "views": 59401,
+   "likes": 750,
+   "comments": 60,
+   "vph": 52.6027397260274
+  },
+  {
+   "timestamp": "2026-10-02T00:26:42.690Z",
+   "views": 60501,
+   "likes": 770,
+   "comments": 63,
+   "vph": 38.82352941176471
+  },
+  {
+   "timestamp": "2026-10-03T00:01:23.572Z",
+   "views": 61498,
+   "likes": 785,
+   "comments": 64,
+   "vph": 43.96039603960396
+  },
+  {
+   "timestamp": "2026-10-04T00:57:27.246Z",
+   "views": 62462,
+   "likes": 796,
+   "comments": 64,
+   "vph": 21.818181818181817
+  },
+  {
+   "timestamp": "2026-10-05T00:58:31.982Z",
+   "views": 63128,
+   "likes": 810,
+   "comments": 65,
+   "vph": 5.625
+  },
+  {
+   "timestamp": "2026-10-06T00:20:36.682Z",
+   "views": 63789,
+   "likes": 823,
+   "comments": 69,
+   "vph": 64.91803278688525
+  },
+  {
+   "timestamp": "2026-10-07T00:33:50.296Z",
+   "views": 64690,
+   "likes": 834,
+   "comments": 69,
+   "vph": 47.21311475409836
+  },
+  {
+   "timestamp": "2026-10-08T00:38:01.670Z",
+   "views": 65673,
+   "likes": 857,
+   "comments": 69,
+   "vph": 59.03225806451612
+  },
+  {
+   "timestamp": "2026-10-09T00:56:14.219Z",
+   "views": 66788,
+   "likes": 875,
+   "comments": 70,
+   "vph": 22.816901408450704
+  },
+  {
+   "timestamp": "2026-10-10T00:32:59.986Z",
+   "views": 67476,
+   "likes": 890,
+   "comments": 70,
+   "vph": 12.203389830508476
+  },
+  {
+   "timestamp": "2026-10-11T00:55:53.016Z",
+   "views": 68099,
+   "likes": 899,
+   "comments": 70,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-12T01:06:47.214Z",
+   "views": 69167,
+   "likes": 920,
+   "comments": 71,
+   "vph": 44.776119402985074
+  },
+  {
+   "timestamp": "2026-10-13T01:03:52.540Z",
+   "views": 69998,
+   "likes": 925,
+   "comments": 72,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-14T00:35:23.622Z",
+   "views": 70819,
+   "likes": 932,
+   "comments": 74,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-15T00:35:46.886Z",
+   "views": 71825,
+   "likes": 948,
+   "comments": 74,
+   "vph": 50.32258064516129
+  },
+  {
+   "timestamp": "2026-10-16T00:40:18.887Z",
+   "views": 73007,
+   "likes": 974,
+   "comments": 76,
+   "vph": 44.776119402985074
+  },
+  {
+   "timestamp": "2026-10-17T00:33:40.506Z",
+   "views": 73885,
+   "likes": 988,
+   "comments": 76,
+   "vph": 25.57377049180328
+  },
+  {
+   "timestamp": "2026-10-18T00:35:35.300Z",
+   "views": 74416,
+   "likes": 1003,
+   "comments": 76,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-19T00:04:16.809Z",
+   "views": 75028,
+   "likes": 1016,
+   "comments": 76,
+   "vph": 23.60655737704918
+  },
+  {
+   "timestamp": "2026-10-20T00:29:41.731Z",
+   "views": 75898,
+   "likes": 1028,
+   "comments": 76,
+   "vph": 33
+  },
+  {
+   "timestamp": "2026-10-21T00:28:35.092Z",
+   "views": 76811,
+   "likes": 1034,
+   "comments": 76,
+   "vph": 37.5
+  },
+  {
+   "timestamp": "2026-10-22T00:49:25.083Z",
+   "views": 77405,
+   "likes": 1044,
+   "comments": 76,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-23T00:36:14.905Z",
+   "views": 78052,
+   "likes": 1058,
+   "comments": 76,
+   "vph": 94.83870967741935
+  },
+  {
+   "timestamp": "2026-10-24T00:51:02.443Z",
+   "views": 78596,
+   "likes": 1068,
+   "comments": 76,
+   "vph": 80
+  },
+  {
+   "timestamp": "2026-10-25T01:02:51.339Z",
+   "views": 78991,
+   "likes": 1074,
+   "comments": 76,
+   "vph": 0
+  }
+ ],
+ "changements": [
+  {
+   "createdAt": "2026-09-17T15:54:35Z",
+   "title": null,
+   "thumbnails": [
+    {
+     "id": "dca7a012-efe0-47e5-bee2-e8c183b67d60",
+     "ytUrl": "https://i.ytimg.com/vi/R2FFvPDUo7g/maxresdefault.jpg",
+     "snapshotUrl": "https://vidiq-video-thumbnails.s3.us-east-1.amazonaws.com/R2FFvPDUo7g/dca7a012-efe0-47e5-bee2-e8c183b67d60.jpg"
+    }
+   ]
+  },
+  {
+   "createdAt": "2026-09-20T16:52:20Z",
+   "title": null,
+   "thumbnails": [
+    {
+     "id": "68b0c20f-06d2-4b35-ba1a-e22bdc5549d9",
+     "ytUrl": "https://i.ytimg.com/vi/R2FFvPDUo7g/maxresdefault.jpg",
+     "snapshotUrl": "https://vidiq-video-thumbnails.s3.us-east-1.amazonaws.com/R2FFvPDUo7g/68b0c20f-06d2-4b35-ba1a-e22bdc5549d9.jpg"
+    }
+   ]
+  }
+ ],
+ "ab_tests": []
+}

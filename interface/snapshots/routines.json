@@ -13,14 +13,22 @@
       "name": "Rangement de nuit",
       "source": "planificateur",
       "desc": "chaque nuit, 2 h · skill rangement · active : le point du jour",
-      "status": "paused",
+      "status": "active",
       "cron": "0 2 * * *"
     },
     {
       "id": "veille",
-      "name": "Veille (exemple)",
+      "name": "Veille",
       "source": "planificateur",
-      "desc": "lundi, 1 h · skill veille · passive",
+      "desc": "lundi, 1 h · skill veille · passive : dépose ses captures dans `inbox/`",
+      "status": "paused",
+      "cron": "0 1 * * 1"
+    },
+    {
+      "id": "stats-youtube",
+      "name": "Stats YouTube",
+      "source": "planificateur",
+      "desc": "lundi, 1 h · skill stats-youtube · passive : signale une vidéo qui décroche ou surperforme",
       "status": "paused",
       "cron": "0 1 * * 1"
     },
@@ -28,8 +36,8 @@
       "id": "fiches-youtube",
       "name": "Fiches YouTube",
       "source": "planificateur",
-      "desc": "dimanche et jeudi, 1 h · sans IA · exemple · directe, passive : met à jour les fiches vidéo de `domaines/contenu/`",
-      "status": "paused",
+      "desc": "dimanche et jeudi, 1 h · sans IA · directe, passive : met à jour les fiches vidéo de `domaines/contenu/`",
+      "status": "active",
       "cron": "0 1 * * 0,4"
     },
     {
@@ -37,7 +45,7 @@
       "name": "Sauvegarde de nuit",
       "source": "planificateur",
       "desc": "chaque nuit, 3 h · sans IA · directe, passive : envoie le travail du jour vers prive",
-      "status": "paused",
+      "status": "active",
       "cron": "0 3 * * *"
     },
     {
@@ -47,6 +55,22 @@
       "desc": "le 1er du mois, 1 h · skill audit · passive",
       "status": "paused",
       "cron": "0 1 1 * *"
+    },
+    {
+      "id": "jeton-skool",
+      "name": "Jeton Skool",
+      "source": "planificateur",
+      "desc": "chaque jour, 8 h 37 · sans IA · directe, passive : renouvelle le jeton WAF de Skool s'il a expiré, prévient à J-7 de la fin de session",
+      "status": "active",
+      "cron": "37 8 * * *"
+    },
+    {
+      "id": "revenus-skool",
+      "name": "Revenus Skool",
+      "source": "planificateur",
+      "desc": "le 2 du mois, 1 h · sans IA · directe, passive : refait `domaines/communaute/revenus-club-smart.md` et la ligne Club SMART de `domaines/operations/revenus.md`",
+      "status": "active",
+      "cron": "0 1 2 * *"
     }
   ]
 }

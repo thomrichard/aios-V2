@@ -1,0 +1,155 @@
+[00:00] So Claude has just given us one of the biggest updates that they have ever given us.
+[00:04] They call it Claude mods.
+[00:06] And basically, if you could think of a feature that you wish Claude Code had, and you can describe it, well, Claude Code will build it right into itself, which means that you can turn Claude Code into pretty much
+[00:16] any tool that you want it to be.
+[00:17] And in this video, I'm going to walk you through how you can build your own mods.
+[00:20] I'm going to walk you through the six clawed mods that I built for myself this week.
+[00:24] But to kick off this video, let's go through what Claude mods are and what Enthropic actually announced.
+[00:30] So, a mod is just a small add-on that changes how Claude Code looks and how Claude Code works.
+[00:35] It came out on October 1st, and if you've already updated your software, then it's turned on for you and it's ready to use.
+[00:41] Now, it works in the Claude Code terminal and also works in the Claude tab inside of the desktop app, but it doesn't work inside of the Claude chat.
+[00:49] So, you do want to make sure that you're using this inside of Claude Code.
+[00:52] Now, you might be thinking, "Well, I already have skills and I already have connectors." And that's true, but those work from the outside.
+[00:59] A skill tells Claude how to do a job.
+[01:01] A connector plugs Claude into another app.
+[01:03] But a mod runs inside of Claude code itself.
+[01:06] So, it can change exactly what you see on the screen, which means that you can add buttons, you can add a panel, you could add a miniame that you can play while you wait for Claude to finish.
+[01:15] Which takes me to the first mod that I built, which I call Clean View.
+[01:18] Now, when I'm working on a project, sometimes I don't want to see all that text flying by when I'm using claw code.
+[01:23] I don't necessarily care about the code that's behind it.
+[01:26] I don't care about the tools that it's calling.
+[01:28] I just want to see what it's working on, how far along it is and what else it has to do.
+[01:32] And with this mod, when you take a look down here at the bottom right, it says Tristan's tools.
+[01:37] Now, we're going to go through all of these in a bit, but one of them is clean view.
+[01:41] Now, since that's turned on, I'm going to type a prompt like build me a weather dashboard for New York City.
+[01:46] And then I'm going to hit enter.
+[01:47] And you're going to see that all of that noise that's usually there is gone.
+[01:51] All I get is a simple checklist.
+[01:53] It thinks about what I asked.
+[01:54] It comes up with a plan.
+[01:55] It shows me every step of the way what it's doing, how much is left, and then when it's done, it's going to give me the dashboard that I asked for.
+[02:02] Now, that's not the point, though.
+[02:03] Yes, this dashboard looks pretty nice.
+[02:05] But back in Clawed Code, the point I'm trying to make is that I get a short summary of what it did, and that's really all I want.
+[02:12] It's clean.
+[02:12] It's minimalistic, and it's what I typically appreciate.
+[02:15] But how does a claude mod change what's on my screen?
+[02:18] Well, every time Claude does something like run a file or run a command, it sends out a little signal called an event.
+[02:24] A mod is just a small piece of code that listens for those events.
+[02:28] And when one of those events comes through, the mod can do one of three things.
+[02:31] It can watch it, it can change it, or can handle it itself.
+[02:34] So the normal thing that you're expecting to happen never happens.
+[02:37] So, with the cleaning view mod, the one that we're looking at right now, every time Claude is about to show one of those technical rows, one of those tools that it needs to call, the mod is going to
+[02:45] step in and it's going to hide it.
+[02:47] And when Claude finishes the step, the mod is going to check it off the list.
+[02:51] Now, the good news here is that Claude code has a built-in skill that teaches Claude how to build these mods.
+[02:57] All you're going to have to do is describe what you want and then Claude is going to build it for you.
+[03:00] But more on that later.
+[03:01] Let's jump over to the second mod I built, which I call employee control panel.
+[03:06] Now, normally if you want to switch models, you would have to type in slashmodel and then pick the one from the list.
+[03:11] Or if you want to change how hard Claude thinks, then you had to type in slasheffort and then do the same thing.
+[03:16] Now, those work for sure, but to be honest, I hate typing in the slash commands just to change the model or effort.
+[03:22] So, with this mod, I'm going to click Tristan's tools at the bottom here, and you're going to see that the model and effort are right there for me to change.
+[03:30] And when I change them, you can take a look at the status bar below.
+[03:32] it changes right away.
+[03:34] So, I don't have to take the time to type in slash commands just to pick the model or effort I want.
+[03:39] I'm just going to go to my toolbar and it's right there for me to change.
+[03:42] Now, I know this one is small, but it does make my day easier and I think it's going to make your day easier, too.
+[03:47] But the next mod is going to put a whole team of employees to work at once, and I call it the agent dock, which actually is pretty awesome.
+[03:55] When you give Claude a big job, it can hand pieces of those to helper agents.
+[04:00] Now, these little agents are just extra copies of Claude that can each take a small piece of the work.
+[04:05] But the problem here is that you don't always get to see what the agents are doing.
+[04:09] And you usually don't get to select how many agents you want to work on your project at any given time.
+[04:14] But with this mod, if I type in /doc, I'm going to get to pick how many agents I want on my team for the very next prompt that I give Claude.
+[04:20] And I'm going to select up to 50 agents.
+[04:23] Now, I'm going to give it a real job here to test this out.
+[04:26] This is for a new bakery called Golden Crumb.
+[04:28] And what I want to do is I want to create a dashboard that tracks 50 different tasks before the grand opening.
+[04:34] Now, in my little toolbar down here, you can also pick what type of helper you're going to use for these agents.
+[04:39] You can either use fast and cheap or you can use the same model that you're using like Opus 5.5.
+[04:45] But take a look at this.
+[04:46] Every agent gets its own card and its own task with its own progress bar.
+[04:50] Now, we selected 50.
+[04:51] 20 of them are showing right now.
+[04:53] 10 are working.
+[04:54] The rest are just waiting their turn.
+[04:55] And when they're all done, Claude is going to pull everything together in one dashboard.
+[05:00] Now, heads up on this one, though.
+[05:01] If you do select a big team, like 50 agents, you will go through your plan a lot faster.
+[05:06] My mod does warn me about that before I go too big, but it is worth knowing in case you build this yourself.
+[05:12] Now, the next mod is one that I use every single day.
+[05:14] But before I show you what that is, take a look at the session bar over here on the lefth hand side.
+[05:18] You can see which sessions are actively running.
+[05:20] You can jump to whichever session that you want to jump into.
+[05:23] And this is something that I built.
+[05:25] And if you like it, please go ahead and subscribe and comment session bar.
+[05:28] If I do get enough comments, I'll go ahead and shoot a video on that one as well.
+[05:31] But let's get back to mod number four, which is Claude photos.
+[05:35] Now, I make AI photos and videos every single day, but we know that Claude can't make them on their own.
+[05:40] Now, what that normally means is that you have to leave Claude and go into a different tool like Gemini or Chatt or any other tool that's running Seance2.5.
+[05:49] But I don't do that.
+[05:51] I use one tool, which is Higsfield.
+[05:53] Now, the reason why I like Hicksfield so much is because yes, it has every top image and video and audio model all in one place, but they have a connector right inside of Claude.
+[06:03] So, it just made sense to build a mod right on top of it.
+[06:05] And full disclosure, I did reach out to Higsfield to see if they wanted to partner on this video and they are sponsoring it, which makes sense since this whole mod runs on top of Higsfield.
+[06:13] Now, if I type in /create, take a look at this.
+[06:16] I get a full photo and video experience right inside of Claude.
+[06:20] On the top right, I get to see how many Higsfield credits I have.
+[06:22] Then I get to describe the type of video or photo that I want.
+[06:25] Now, I'm just going to ask it to make a photo of me riding a train.
+[06:28] It can pick my outfit.
+[06:29] It can pick my expression, whatever.
+[06:31] This is just for a demo, but then I get to pick whether I want this as a photo or video.
+[06:36] So, of course, I'm going to pick photo.
+[06:37] And then I get to pick the model that I'm going to use.
+[06:39] Now, I'm going to select Nano Banana Pro because I think it's one of the best ones that's out there.
+[06:44] I get to pick my image size, which would be 16 by9.
+[06:47] And I'm going to pick that I want this in 4K.
+[06:49] Then I also can do some of the extra settings here, which is where I can upload a photo of me so it knows what I look like.
+[06:56] With that said, Claude is going to take that one sentence and turn it into a much bigger and more detailed prompt that's written exactly for the model that we chose.
+[07:05] And of course, you can change the prompt if you want, but it's a much more detailed prompt than I would have ever used.
+[07:10] So, when I hit enter, it has the tasks already lined up for me.
+[07:13] Now, one thing it's going to do is it's going to tell me how many credits this is going to use, and it's going to pause there until I click yes.
+[07:20] Now, I did that on purpose because I don't want a crazy amount of tokens or credits being used without my approval.
+[07:26] But once I hit that, it's going to do one interesting thing.
+[07:29] Now, since this is running in the terminal, it's going to give me this little pixel preview, which I thought was just fun to add in.
+[07:35] You know, you could remove that if you don't want to use it.
+[07:37] But down here is where you click and see the real photo.
+[07:40] And that is me on the train just like I asked.
+[07:44] But I never had to leave Claude.
+[07:45] And this photo is already saved on my computer.
+[07:47] Now, of course, this is just the tip of the iceberg when it comes to Hicksfield.
+[07:50] We all create images.
+[07:51] We all create videos.
+[07:53] If you've never been to Hicksfield's website, you should definitely check it out.
+[07:56] They have some of the coolest and most popular AI videos that you can just copy the prompt and make it yourself if you want to.
+[08:02] And most of them are the videos that you see that are going viral online.
+[08:06] So, if you haven't checked them out, check it out.
+[08:08] The link is in my description to try out Hicksfield.
+[08:11] But that does take us to the fifth mod and I call it Roadtrip.
+[08:14] Now, this one I built just for fun, but I do like it and I have been using it.
+[08:17] It's a mini racing game that plays right inside of Claude Code while you wait for Claude to build your project.
+[08:23] So, let's say that you ask Claude to make your weather dashboard better.
+[08:26] While it's running, you can just click play and now you're driving.
+[08:29] You're playing the game.
+[08:29] And every so often in the game, it's going to ask you a quiz question about Claude, which by the way, let me tell you, is a lot better than just staring at the screen waiting for Claude to finish.
+[08:39] Those are five mods that I built this week.
+[08:40] Now, you're probably wondering how you can build these yourself.
+[08:43] You're going to want to make sure that Claude Code is up to date because Claude Mods needs version 2.1.287, I believe, or newer.
+[08:50] Then, all you have to do is open up Claude Code and just describe the mod that you want.
+[08:54] Claude Code is going to start building it, and then it's going to ask you to reload.
+[08:58] When it does that, you're going to want to say yes.
+[09:00] And when you do that, your mod is going to show up as soon as Claude finishes.
+[09:03] And if you don't like something, you can just talk to it like a normal human.
+[09:06] You just tell it what you don't like and what you want changed and it's going to change it for you.
+[09:09] Now, one thing to keep in mind is a mod is just a type of a plugin, which means it installs the same way a plugin does.
+[09:15] So, if somebody shares a mod with you, you can type in /plugin and search for it and install it just like any other plugin.
+[09:21] One thing to keep in mind though is that a mod that Claude builds for you are temporary by default, which means that as you're building these and you find the ones that you like, you're going to ask Claude
+[09:30] to save it as a plugin and install it.
+[09:32] That way, it's going to be there for you every single time that you open up Claude.
+[09:35] Now, mods don't cost anything extra, but you do need a paid plan that includes Claude Code.
+[09:39] And of course, if a mod is running in the background, it is using your subscription credits as well.
+[09:44] And that's it.
+[09:44] And just remember that a mod is just a feature that you describe, and Claude is going to build it right inside of Claude Code for you.
+[09:50] So, thanks again for watching.
+[09:51] Thanks again to Higsfield for sponsoring this video and check out the link in the description.

@@ -1,0 +1,189 @@
+{
+ "recupere_le": "2026-10-25",
+ "breakout": 1.03,
+ "vph": 25.78,
+ "stats_jour": [
+  {
+   "timestamp": "2026-10-05T08:33:11.373Z",
+   "views": 412,
+   "likes": 28,
+   "comments": 1,
+   "vph": 574.8837209302326
+  },
+  {
+   "timestamp": "2026-10-06T00:32:50.556Z",
+   "views": 58412,
+   "likes": 672,
+   "comments": 23,
+   "vph": 1604.2105263157896
+  },
+  {
+   "timestamp": "2026-10-07T00:45:45.621Z",
+   "views": 82118,
+   "likes": 916,
+   "comments": 30,
+   "vph": 535
+  },
+  {
+   "timestamp": "2026-10-08T00:37:04.147Z",
+   "views": 92820,
+   "likes": 1008,
+   "comments": 31,
+   "vph": 338.7096774193548
+  },
+  {
+   "timestamp": "2026-10-09T00:58:18.954Z",
+   "views": 97884,
+   "likes": 1054,
+   "comments": 31,
+   "vph": 169.18032786885246
+  },
+  {
+   "timestamp": "2026-10-10T00:36:45.837Z",
+   "views": 102203,
+   "likes": 1087,
+   "comments": 31,
+   "vph": 103
+  },
+  {
+   "timestamp": "2026-10-11T00:54:09.497Z",
+   "views": 104947,
+   "likes": 1126,
+   "comments": 32,
+   "vph": 69
+  },
+  {
+   "timestamp": "2026-10-12T00:10:19.725Z",
+   "views": 107761,
+   "likes": 1165,
+   "comments": 34,
+   "vph": 70
+  },
+  {
+   "timestamp": "2026-10-13T00:25:52.716Z",
+   "views": 109988,
+   "likes": 1189,
+   "comments": 36,
+   "vph": 65.90163934426229
+  },
+  {
+   "timestamp": "2026-10-14T00:44:32.147Z",
+   "views": 111264,
+   "likes": 1202,
+   "comments": 36,
+   "vph": 87
+  },
+  {
+   "timestamp": "2026-10-15T00:33:47.428Z",
+   "views": 112348,
+   "likes": 1208,
+   "comments": 36,
+   "vph": 116
+  },
+  {
+   "timestamp": "2026-10-16T00:33:00.960Z",
+   "views": 113522,
+   "likes": 1226,
+   "comments": 36,
+   "vph": 52
+  },
+  {
+   "timestamp": "2026-10-17T00:32:55.021Z",
+   "views": 114359,
+   "likes": 1234,
+   "comments": 36,
+   "vph": 19
+  },
+  {
+   "timestamp": "2026-10-18T00:05:40.759Z",
+   "views": 115065,
+   "likes": 1245,
+   "comments": 36,
+   "vph": 30.909090909090907
+  },
+  {
+   "timestamp": "2026-10-19T00:35:50.357Z",
+   "views": 116042,
+   "likes": 1258,
+   "comments": 36,
+   "vph": 43.278688524590166
+  },
+  {
+   "timestamp": "2026-10-20T00:32:04.907Z",
+   "views": 116858,
+   "likes": 1267,
+   "comments": 33,
+   "vph": 42.71186440677966
+  },
+  {
+   "timestamp": "2026-10-21T00:05:44.804Z",
+   "views": 117523,
+   "likes": 1274,
+   "comments": 33,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-22T00:32:16.340Z",
+   "views": 118041,
+   "likes": 1279,
+   "comments": 33,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-23T00:42:05.742Z",
+   "views": 118566,
+   "likes": 1281,
+   "comments": 33,
+   "vph": 24.923076923076923
+  },
+  {
+   "timestamp": "2026-10-24T01:15:12.395Z",
+   "views": 119089,
+   "likes": 1288,
+   "comments": 33,
+   "vph": 0.7407407407407407
+  },
+  {
+   "timestamp": "2026-10-25T00:54:47.570Z",
+   "views": 119434,
+   "likes": 1290,
+   "comments": 33,
+   "vph": 0
+  }
+ ],
+ "changements": [
+  {
+   "createdAt": "2026-10-05T08:33:11Z",
+   "title": "The NEW Skills framework for Claude 5.5 Models is here (10 New Rules)",
+   "thumbnails": null
+  },
+  {
+   "createdAt": "2026-10-05T09:54:31Z",
+   "title": null,
+   "thumbnails": [
+    {
+     "id": "e45bd89d-0286-44bd-8c07-02fc565a3700",
+     "ytUrl": "https://i.ytimg.com/vi/VQyYzLJ6xos/maxresdefault.jpg",
+     "snapshotUrl": "https://vidiq-video-thumbnails.s3.us-east-1.amazonaws.com/VQyYzLJ6xos/e45bd89d-0286-44bd-8c07-02fc565a3700.jpg"
+    }
+   ]
+  },
+  {
+   "createdAt": "2026-10-05T12:33:04Z",
+   "title": "Anthropic Just Revealed 10 NEW Rules for Claude Skills",
+   "thumbnails": null
+  },
+  {
+   "createdAt": "2026-10-05T12:55:39Z",
+   "title": null,
+   "thumbnails": [
+    {
+     "id": "d03ee7db-7901-4115-870a-717da31bad00",
+     "ytUrl": "https://i.ytimg.com/vi/VQyYzLJ6xos/maxresdefault.jpg",
+     "snapshotUrl": "https://vidiq-video-thumbnails.s3.us-east-1.amazonaws.com/VQyYzLJ6xos/d03ee7db-7901-4115-870a-717da31bad00.jpg"
+    }
+   ]
+  }
+ ],
+ "ab_tests": []
+}

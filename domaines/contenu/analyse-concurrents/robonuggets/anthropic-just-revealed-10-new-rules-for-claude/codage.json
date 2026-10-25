@@ -1,0 +1,162 @@
+{
+  "video_id": "VQyYzLJ6xos",
+  "chaine": "robonuggets",
+  "titre": "Anthropic Just Revealed 10 NEW Rules for Claude Skills",
+  "codeur": "agent robonuggets",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "liste",
+    "format_secondaire": "actu",
+    "sujet": "Les 10 règles du guide d'Anthropic pour écrire des skills avec les modèles 5.5",
+    "outils": ["Claude Code", "skills (SKILL.md)", "hooks", "Haiku, Sonnet, Opus, Fable", "skill-creator-plus"],
+    "niveau": "intermediaire",
+    "objectif_probable": "communaute"
+  },
+  "titre": {
+    "attente_au_clic": "Connaître les 10 nouvelles règles d'Anthropic pour écrire des skills qui marchent avec les modèles 5.5.",
+    "schema": "<Marque> Just Revealed <N> NEW Rules for <Outil> <Fonction>",
+    "promesse": "Écrire ses skills selon les nouvelles règles d'Anthropic",
+    "audace": "timide",
+    "registre": "jargon",
+    "briques": ["preuve"],
+    "marqueurs": ["nouveaute", "chiffre", "majuscules"],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": false,
+    "emotion": null,
+    "regard": null,
+    "texte": "Skills Just Changed 5.5 MODELS",
+    "texte_mots": 5,
+    "repete_titre": "partiel",
+    "elements": ["texte « Skills Just Changed » en serif noir", "pastille noire « 5.5 MODELS » avec flèche", "logo Claude", "mascotte pixel orange de Claude Code en pâte à modeler", "pile de feuilles « SKILL.md »"],
+    "nb_elements": 4,
+    "fond": "clair, blanc cassé",
+    "couleurs": ["blanc cassé", "noir", "orange Claude"],
+    "curiosity_gap": "nouveaute",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Claude's 5.5 models are here, and the way we build and use skills [...]",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Jay dans un grand cadre arrondi à droite sur fond noir vide, puis les fiches Claude Opus 5.5 et Sonnet 5.5",
+    "premier_plan_reprend_miniature": "non",
+    "ouverture": ["actu-annonce", "hook-dissonance", "hook-question", "pont"],
+    "preuve": {
+      "type": "effort",
+      "seconde": 28,
+      "description": "« I read through Anthropic's new skills guide fully », le guide officiel affiché et surligné"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 10, "a_l_ecran": true},
+    "boucle_vers_la_fin": {"presente": false, "citation": "", "seconde_resolution": null, "tenue": null},
+    "seconde_premier_point": 49,
+    "attente_tenue": "partiel",
+    "attente_note": "Les 10 règles sont données avec un exemple suivi. Mais ce sont les bonnes pratiques du guide, pas toutes nouvelles pour les 5.5 : un commentaire long le reproche. Et « les 100 premières lignes » de l'intro ne vaut, à la règle 1, que pour les renvois imbriqués."
+  },
+  "structure": {
+    "modele": "liste-numerotee",
+    "segments": [
+      {"debut": 0, "fin": 49, "titre": "Intro : le guide a changé, les 100 premières lignes, un prompt d'audit promis", "role": "intro", "pull": true, "paint": false, "point": false, "nom": false, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 49, "fin": 128, "titre": "Règle 1 : progressive disclosure, un seul niveau de renvois", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 128, "fin": 142, "titre": "Guide PDF gratuit", "role": "cta", "pull": true, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 142, "fin": 175, "titre": "La communauté RoboNuggets", "role": "cta", "pull": true, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 175, "fin": 217, "titre": "Règle 2 : une table des matières en tête des longs fichiers", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 217, "fin": 302, "titre": "Règle 3 : les degrés de liberté", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 302, "fin": 373, "titre": "Règle 4 : tester ses skills sur chaque modèle", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 373, "fin": 421, "titre": "Règle 5 : écrire court, description à la 3e personne", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 421, "fin": 468, "titre": "Règle 6 : étapes et checklist, la ligne « go back »", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 468, "fin": 514, "titre": "Règle 7 : boucles de vérification", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 514, "fin": 571, "titre": "Règle 8 : modèle, exemples, embranchement", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 571, "fin": 621, "titre": "Règle 9 : écrire pour partager", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 621, "fin": 687, "titre": "Règle 10 : les hooks pour les règles qui ne doivent jamais casser", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 687, "fin": 735, "titre": "Wrap up : le PDF et skill-creator-plus", "role": "cta", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 14, "type": "question-spectateur", "citation": "did you know that if you have a long skill file, Claude may only read the first 100 lines"},
+      {"seconde": 28, "type": "annonce-suite", "citation": "I'll also share with you a prompt that audits all of your skills"},
+      {"seconde": 94, "type": "rupture", "citation": "Now, here's the catch."},
+      {"seconde": 117, "type": "annonce-suite", "citation": "that's something we'll go through in rule number two"},
+      {"seconde": 361, "type": "rupture", "citation": "Anthropic would recommend this and would love for you to do that because that would burn through your tokens"},
+      {"seconde": 471, "type": "question-spectateur", "citation": "So, what's a feedback loop?"},
+      {"seconde": 621, "type": "annonce-suite", "citation": "Number 10 is pretty underutilized, but it's probably one of the most important ones"}
+    ],
+    "histoires": [
+      {"seconde": 687, "acte": "anecdote", "resume": "Jay a fait sa propre skill-creator-plus parce que celle d'Anthropic n'a pas été mise à jour depuis mars."}
+    ],
+    "payoffs": [
+      {"seconde": 111, "resume": "Garder les renvois à un seul niveau depuis SKILL.md"},
+      {"seconde": 122, "resume": "Le prompt d'audit des skills, promis dans l'intro"},
+      {"seconde": 238, "resume": "Les trois degrés de liberté, illustrés sur la skill de facturation"},
+      {"seconde": 446, "resume": "La ligne « go back » qui empêche une mauvaise facture de partir"},
+      {"seconde": 657, "resume": "Passer une règle critique de la skill à un hook"}
+    ],
+    "premier_payoff_seconde": 111,
+    "jargon": 1,
+    "repetitions": 1,
+    "test_du_tweet": "Anthropic a mis à jour son guide des skills. 10 règles : SKILL.md sous 500 lignes et un seul niveau de renvois, table des matières, degrés de liberté, tester sur chaque modèle, écrire court, checklist, boucles de vérification, exemples, partage, hooks pour les règles critiques."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine dans un grand carré arrondi à droite, graphisme à gauche ; quelques plans plein cadre sur les cartes de règle", "decor": "bureau, étagère, fleurs, micro Rode ; casquette blanche"},
+    "parts": {"face": 35, "ecran": 25, "motion": 40, "broll": 0},
+    "textes_ecran": "constants",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["plan-a-l-ecran", "cartes-chapitre", "etiquettes", "curseur-surligne", "chiffres-animes", "logo-chaine"],
+    "charte": "Fond noir à grille discrète, titres en serif blanc avec sous-titre gris, accent orange, extraits du guide d'Anthropic surlignés en orange ; transition par une vague jaune. La miniature claire reprend l'orange et la mascotte pixel.",
+    "rythme": "contraste",
+    "notes": "Une même skill de facturation sert d'exemple à toutes les règles. Chaque règle a sa carte numérotée et ses citations du guide surlignées."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 128, "type": "lead-magnet", "cible": "guide PDF des 10 règles + skill-creator-plus (communauté Skool gratuite)", "amene_par": "apres-valeur", "citation": "I put every one of these resources and prompts into a free PDF guide"},
+      {"seconde": 142, "type": "communaute-payante", "cible": "RoboNuggets (Claude Living Masterclass, cours Agents as a Service)", "amene_par": "apres-valeur", "citation": "if you want to learn how to build and sell AI systems that businesses actually pay for"},
+      {"seconde": 171, "type": "communaute-payante", "cible": "lien dans le commentaire épinglé", "amene_par": "apres-valeur", "citation": "check that just in the pinned comment below"},
+      {"seconde": 687, "type": "lead-magnet", "cible": "le PDF et la skill skill-creator-plus", "amene_par": "fin", "citation": "that includes this skill I made called skill creator plus"},
+      {"seconde": 715, "type": "abonnement", "cible": "s'abonner", "amene_par": "fin", "citation": "consider tapping subscribe down below"}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"lead-magnet": 1, "communaute-payante": 1, "produit": 1, "service": 1, "affiliation": 5, "abonnement": 1, "reseaux": 4},
+    "commentaire_epingle": {"texte": "Le PDF des 10 règles et skill-creator-plus gratuits (Skool gratuit, « search for n80 ») et la communauté payante", "type": "lead-magnet"},
+    "recap_final": false,
+    "derniere_phrase": "consider tapping subscribe down below [...] I'll see you all next time. Cheers.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["où trouver le guide d'origine d'Anthropic", "l'organisation et les PDF de la chaîne", "faut-il apprendre des règles ou laisser l'IA écrire ses skills"],
+    "demandes": ["partager sa skill de montage vidéo", "une vidéo sur le tool calling", "sauvegarder ses sessions et skills Claude Desktop", "savoir si les skills sont liées à un projet"],
+    "critiques": ["« 10 NEW Rules » présenté comme nouveau pour les 5.5 alors que ce sont des bonnes pratiques", "le lien du PDF ne renvoie aucun résultat", "« delete all of your skills »"],
+    "reprises": ["« Subscribed, joined the club and got your comprehensive PDF »"],
+    "signal_promesse": "mixte"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "1re phrase proche de la miniature (« Skills Just Changed », 5.5) ; 1er plan Jay sur fond noir, sans la mascotte ni SKILL.md"},
+    "ap_boucle_curiosite": {"note": 1, "preuve": "0:28 un prompt d'audit promis, livré à 2:02 : une promesse plus qu'une question ouverte"},
+    "ap_effort_montre": {"note": 1, "preuve": "0:28 « I read through Anthropic's new skills guide fully » : un effort dit, modeste"},
+    "ap_setup_progress_payoff": {"note": 1, "preuve": "La skill de facturation avance de règle en règle (1:18, 4:49, 7:26, 10:26), mais sans résultat final montré"},
+    "ap_contraste_rythme": {"note": 2, "preuve": "2 changements de plan à la 5e minute, 15 à la 8e, 20 à la 1re"},
+    "ap_montrer_sans_son": {"note": 2, "preuve": "Planche intro : « New Rules for Skills », « What worked before is now slowing you down », « The first 100 lines », « 10 New Rules »"},
+    "ali_douleur_histoire": {"note": 1, "preuve": "0:12 la douleur est dite (« slowing you down or costing you more »), aucune histoire vécue ne suit"},
+    "ali_coeur_unique": {"note": 1, "preuve": "Une thèse (ce qui marchait freine maintenant), mais 10 règles indépendantes"},
+    "alx_pont": {"note": 1, "preuve": "Contexte, preuve d'effort, annonce et crédits comme un pont, mais avec deux accroches (dissonance, question)"},
+    "alx_pull_paint_point": {"note": 2, "preuve": "La plupart des règles : pourquoi (4:37 « so intelligent »), l'exemple de facturation, l'action"},
+    "alx_nom_idee": {"note": 2, "preuve": "« Progressive Disclosure », « degrees of freedom », « go back line », « Build for Shareability » en cartes"},
+    "alx_phrase_finale": {"note": 1, "preuve": "0:21 « they may as well not exist » ; 7:42 « just because a box got ticked » ; pas sur la plupart"},
+    "alx_douleur_reve": {"note": 0, "preuve": "Titre d'autorité et de jargon : Anthropic, règles, skills"},
+    "alx_cta_tot": {"note": 2, "preuve": "2:08 le PDF et la skill d'audit, liés au sujet, avant 4 minutes"},
+    "ed_intro_courte": {"note": 1, "preuve": "Premier point à 0:49, après deux accroches, la preuve, la promesse et les crédits"},
+    "ed_hook": {"note": 2, "preuve": "0:14 « did you know that [...] Claude may only read the first 100 lines »"},
+    "ed_probleme_preuve_consignes": {"note": 2, "preuve": "La plupart des règles : le problème, ce que dit Anthropic, la consigne (10:26 à 11:20 pour les hooks)"},
+    "ed_tension_relancee": {"note": 1, "preuve": "Quelques questions (7:51 « what's a feedback loop? »), mais les règles s'enchaînent par « Rule number X »"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "11:27 l'anecdote de skill-creator-plus, pas une histoire"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "3:09 les « 100 premières lignes » réexpliquées à la règle 2"},
+    "ed_niveau_simple": {"note": 2, "preuve": "1:04 progressive disclosure expliqué ; 7:52 feedback loop ; 10:46 hook « a bit of code that Claude code runs on its own »"},
+    "tous_video_suivante": {"note": 0, "preuve": "« I'll see you all next time », sans vidéo précise"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Titre d'origine « The NEW Skills framework for Claude 5.5 Models is here (10 New Rules) », changé environ 4 h 45 après la sortie (relevé VidIQ), miniature changée deux fois. Miniature « Skills Just Changed · 5.5 MODELS » avec la mascotte pixel sur une pile de SKILL.md.",
+    "intro_structure": "Deux accroches (« ce qui marchait vous freine », « saviez-vous que Claude ne lit que 100 lignes »), puis l'effort et un prompt d'audit promis. Une seule skill de facturation sert d'exemple à toutes les règles. PDF à 2:08 et communauté à 2:22.",
+    "habillage": "Carte par règle, Jay dans un grand cadre arrondi, citations du guide surlignées en orange : on voit la source à chaque règle.",
+    "idee_pour_nous": "Traduire un guide officiel en N règles, avec un seul exemple concret qui revient à chaque règle, et donner la skill d'audit en lead magnet. Ne pas vendre comme « nouveau » ce qui ne l'est pas.",
+    "objectif": "club"
+  }
+}

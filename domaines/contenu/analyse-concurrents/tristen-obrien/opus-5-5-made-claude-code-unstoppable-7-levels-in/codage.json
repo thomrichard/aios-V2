@@ -1,0 +1,565 @@
+{
+  "video_id": "Zu-hJAHKJug",
+  "chaine": "tristen-obrien",
+  "titre_video": "Opus 5.5 Made Claude Code Unstoppable | 7 Levels in 13 Minutes",
+  "codeur": "agent tristen-obrien",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "tuto",
+    "format_secondaire": "liste",
+    "sujet": "Les 7 niveaux d'un utilisateur de Claude Code avec Opus 5.5, en construisant une même appli",
+    "outils": [
+      "Claude Code",
+      "appli Claude Desktop",
+      "Opus 5.5",
+      "remote control",
+      "/ultrareview",
+      "routines"
+    ],
+    "niveau": "debutant",
+    "objectif_probable": "vente"
+  },
+  "titre": {
+    "attente_au_clic": "Voir ce qu'Opus 5.5 change à Claude Code, en 7 niveaux d'usage, et savoir à quel niveau on est.",
+    "schema": "<Modèle> Made <Outil> Unstoppable | <N> Levels in <N> Minutes",
+    "promesse": "Parcourir les 7 niveaux de Claude Code et devenir « unstoppable » en 13 minutes",
+    "audace": "audacieux",
+    "registre": "mixte",
+    "briques": [
+      "vitesse",
+      "resultat"
+    ],
+    "marqueurs": [
+      "chiffre",
+      "duree"
+    ],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "sourire confiant",
+    "regard": "camera",
+    "texte": "Claude Code UNSTOPPABLE",
+    "texte_mots": 3,
+    "repete_titre": "partiel",
+    "elements": [
+      "logo et mots Claude Code",
+      "mot UNSTOPPABLE en orange",
+      "ordinateur portable tenu en main, Claude Code à l'écran",
+      "buste à droite"
+    ],
+    "nb_elements": 4,
+    "fond": "bleu roi texturé",
+    "couleurs": [
+      "bleu roi",
+      "blanc cassé",
+      "orange Claude"
+    ],
+    "curiosity_gap": "resultat",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "I've teamed up with Anthropic [...] Opus 5.5 has made Claude code completely unstoppable",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Face caméra à gauche ; à droite une carte crème qui s'écrit « Sponsored by ANTHROPIC »",
+    "premier_plan_reprend_miniature": "non",
+    "ouverture": [
+      "hook-dissonance",
+      "boucle-curiosite"
+    ],
+    "preuve": {
+      "type": "effort",
+      "seconde": 13,
+      "description": "« thousands of hours inside of Claude code » et « over 150 AI agents », chiffres à l'écran"
+    },
+    "annonce_plan": {
+      "presente": true,
+      "nb_points": 7,
+      "a_l_ecran": true
+    },
+    "boucle_vers_la_fin": {
+      "presente": true,
+      "citation": "by the end of this video, you'll know if you've mastered all seven of them",
+      "seconde_resolution": 765,
+      "tenue": "partiel"
+    },
+    "seconde_premier_point": 29,
+    "attente_tenue": "oui",
+    "attente_note": "Les sept niveaux sont montrés sur une même appli, avec Opus 5.5 au centre. La boucle « tu sauras à quel niveau tu es » se ferme en une phrase, sans grille pour se situer."
+  },
+  "structure": {
+    "modele": "liste-numerotee",
+    "segments": [
+      {
+        "debut": 0,
+        "fin": 29,
+        "titre": "Intro: the 7 levels of Claude Code",
+        "role": "intro",
+        "pull": false,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": true,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": true
+      },
+      {
+        "debut": 29,
+        "fin": 136,
+        "titre": "Level 1: The Describer",
+        "role": "point",
+        "pull": false,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": true
+      },
+      {
+        "debut": 136,
+        "fin": 216,
+        "titre": "Level 2: The Talker",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": true,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": true
+      },
+      {
+        "debut": 216,
+        "fin": 291,
+        "titre": "Level 3: The Planner",
+        "role": "point",
+        "pull": true,
+        "paint": false,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": true
+      },
+      {
+        "debut": 291,
+        "fin": 388,
+        "titre": "Level 4: The Perfectionist",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": true,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": true
+      },
+      {
+        "debut": 388,
+        "fin": 396,
+        "titre": "Subscribe, like",
+        "role": "cta",
+        "pull": false,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 396,
+        "fin": 485,
+        "titre": "Level 5: The Multi-Tasker",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": true
+      },
+      {
+        "debut": 485,
+        "fin": 598,
+        "titre": "Level 6: Work From Anywhere",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": true
+      },
+      {
+        "debut": 598,
+        "fin": 763,
+        "titre": "Level 7: Unstoppable",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": true,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 763,
+        "fin": 794,
+        "titre": "Wrap-up",
+        "role": "fin",
+        "pull": false,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": true,
+        "relance_sortie": false
+      }
+    ],
+    "relances": [
+      {
+        "seconde": 23,
+        "type": "boucle-ouverte",
+        "citation": "by the end of this video, you'll know if you've mastered all seven of them"
+      },
+      {
+        "seconde": 60,
+        "type": "boucle-ouverte",
+        "citation": "which is really cool, and we're going to come back to that one later"
+      },
+      {
+        "seconde": 210,
+        "type": "annonce-suite",
+        "citation": "even with all of that detail, Claude would still have to make a few calls"
+      },
+      {
+        "seconde": 288,
+        "type": "annonce-suite",
+        "citation": "But, level four is going to fix all of that for us."
+      },
+      {
+        "seconde": 383,
+        "type": "annonce-suite",
+        "citation": "And there are ways that we can significantly speed this up."
+      },
+      {
+        "seconde": 479,
+        "type": "annonce-suite",
+        "citation": "I was still stuck in front of my computer watching it."
+      },
+      {
+        "seconde": 590,
+        "type": "annonce-suite",
+        "citation": "And that was on purpose because now you are ready for level seven."
+      },
+      {
+        "seconde": 687,
+        "type": "question-spectateur",
+        "citation": "So, you may be thinking, why even use the terminal at all?"
+      },
+      {
+        "seconde": 698,
+        "type": "annonce-suite",
+        "citation": "it's also about Claude working when you're not even there"
+      }
+    ],
+    "histoires": [
+      {
+        "seconde": 302,
+        "acte": "perso-passe",
+        "resume": "Comme beaucoup, quand il a commencé, il passait une heure en allers-retours avec Claude pour décrire un design."
+      },
+      {
+        "seconde": 511,
+        "acte": "anecdote",
+        "resume": "Il prépare une fête de famille chez lui et fait construire un « party command center »."
+      }
+    ],
+    "payoffs": [
+      {
+        "seconde": 108,
+        "resume": "L'appli Stride est construite en 5 minutes à partir d'une phrase vague"
+      },
+      {
+        "seconde": 200,
+        "resume": "Le long prompt dicté s'affiche mot pour mot dans la boîte"
+      },
+      {
+        "seconde": 283,
+        "resume": "Le plan est approuvé et l'appli prend forme"
+      },
+      {
+        "seconde": 335,
+        "resume": "Une seule phrase donne à Stride un look premium"
+      },
+      {
+        "seconde": 473,
+        "resume": "Trois sessions en parallèle, le vérificateur trouve et corrige de vrais bugs"
+      },
+      {
+        "seconde": 574,
+        "resume": "Le tableau de bord de la fête, suivi depuis le téléphone, livré après 40 minutes"
+      },
+      {
+        "seconde": 679,
+        "resume": "/ultrareview trouve deux bugs, Claude les corrige"
+      },
+      {
+        "seconde": 735,
+        "resume": "Une routine programmée à 7 h pour le brief du matin"
+      }
+    ],
+    "premier_payoff_seconde": 108,
+    "jargon": 1,
+    "repetitions": 1,
+    "test_du_tweet": "Les 7 niveaux d'un utilisateur de Claude Code avec Opus 5.5, sur une même appli : décrire, parler, planifier, peaufiner le design, lancer plusieurs sessions, suivre à distance, puis le terminal et les routines. Tu vois où tu en es et quoi apprendre ensuite."
+  },
+  "habillage": {
+    "face_camera": {
+      "presente": true,
+      "cadrage": "poitrine ; en demi-écran à côté d'une carte, ou en vignette sur les captures",
+      "decor": "bureau, étagères, enseigne Back to the Future, lumière violette"
+    },
+    "parts": {
+      "face": 25,
+      "ecran": 50,
+      "motion": 25,
+      "broll": 0
+    },
+    "textes_ecran": "constants",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": [
+      "plan-a-l-ecran",
+      "cartes-chapitre",
+      "etiquettes",
+      "split-screen",
+      "chiffres-animes",
+      "zooms-ecran",
+      "curseur-surligne",
+      "emojis-stickers"
+    ],
+    "charte": "Charte d'Anthropic, le sponsor : fonds crème et beige doré, terracotta, vert sapin, titres en serif ; chaque capture porte une légende courte en haut (« Start in Claude Desktop. », « Where the work runs. »). Ni la miniature bleue ni les fonds vifs habituels de la chaîne.",
+    "rythme": "regulier",
+    "notes": "Vidéo entièrement sponsorisée par Anthropic, et l'habillage le montre : la palette de la chaîne disparaît au profit de celle de la marque. Un escalier de sept marches sert de plan et revient à chaque niveau."
+  },
+  "fin": {
+    "ctas": [
+      {
+        "seconde": 0,
+        "type": "sponsor",
+        "cible": "Anthropic",
+        "amene_par": "intro",
+        "citation": "I've teamed up with Anthropic, who is sponsoring this video"
+      },
+      {
+        "seconde": 388,
+        "type": "abonnement",
+        "cible": "s'abonner, liker",
+        "amene_par": "transition",
+        "citation": "if this is helpful, do me a favor, hit subscribe, like the video"
+      },
+      {
+        "seconde": 617,
+        "type": "autre",
+        "cible": "installer Claude Code, lien en description",
+        "amene_par": "pendant-demo",
+        "citation": "The link is in the description"
+      },
+      {
+        "seconde": 775,
+        "type": "sponsor",
+        "cible": "Claude Code sur l'offre Max, lien en description",
+        "amene_par": "fin",
+        "citation": "click the link to get started with Claude Code on the Max plan"
+      },
+      {
+        "seconde": 783,
+        "type": "video-suivante",
+        "cible": "sa vidéo sur /goal",
+        "amene_par": "fin",
+        "citation": "then check out my {slash} goal video"
+      },
+      {
+        "seconde": 790,
+        "type": "like-commentaire",
+        "cible": "poser ses questions en commentaire",
+        "amene_par": "fin",
+        "citation": "If you have any questions, put it in the comments"
+      }
+    ],
+    "sponsor": {
+      "present": true,
+      "nom": "Anthropic",
+      "debut": 0,
+      "duree": 794,
+      "forme": "integre-a-la-demo"
+    },
+    "liens_description": {
+      "sponsor": 1,
+      "autre": 3
+    },
+    "commentaire_epingle": null,
+    "recap_final": false,
+    "derniere_phrase": "put it in the comments, and I will see you in the next one.",
+    "video_suivante_precise": true
+  },
+  "commentaires": {
+    "themes": [
+      "chacun donne son niveau (« level 6 », « level 7 »)",
+      "la clarté et le pas à pas",
+      "le montage et les animations",
+      "remote control"
+    ],
+    "demandes": [
+      "une vidéo sur le terminal",
+      "plusieurs sessions sur un même projet",
+      "éviter le « context rot »",
+      "comment faire ces animations"
+    ],
+    "critiques": [
+      "l'icône de remote control introuvable chez certains",
+      "remote control demande un ordinateur allumé",
+      "être « level 7 » en se sentant débutant"
+    ],
+    "reprises": [
+      "« level 6 »",
+      "« Level 6.5 »",
+      "« level 7 »",
+      "« lvl 10 »"
+    ],
+    "signal_promesse": "tenue"
+  },
+  "techniques": {
+    "ap_alignement_5s": {
+      "note": 1,
+      "preuve": "La 1re phrase contient le titre mais s'ouvre sur le sponsor ; le 1er plan est la carte « Sponsored by ANTHROPIC », pas la miniature"
+    },
+    "ap_boucle_curiosite": {
+      "note": 2,
+      "preuve": "0:23 « you'll know if you've mastered all seven of them », refermée à 12:45"
+    },
+    "ap_effort_montre": {
+      "note": 2,
+      "preuve": "0:13 « thousands of hours inside of Claude code » et « over 150 AI agents », chiffres à l'écran"
+    },
+    "ap_setup_progress_payoff": {
+      "note": 2,
+      "preuve": "Une appli vague au niveau 1 (1:48), améliorée à chaque niveau, look premium au niveau 4 (5:32)"
+    },
+    "ap_contraste_rythme": {
+      "note": 0,
+      "preuve": "Entre 10 et 15 changements de visuel par minute, une seule minute à 7 ; pas de contraste voulu"
+    },
+    "ap_montrer_sans_son": {
+      "note": 2,
+      "preuve": "Planche intro : « You may feel comfortable with Claude », « Barely scratching the surface. », « Thousands of hours. », « Seven levels. » en escalier"
+    },
+    "ali_douleur_histoire": {
+      "note": 1,
+      "preuve": "Douleur légère (« you are barely scratching the surface »), suivie d'une preuve en heures, pas d'une histoire"
+    },
+    "ali_coeur_unique": {
+      "note": 2,
+      "preuve": "0:20 « there are seven levels to a Claude code user », repris à 12:43"
+    },
+    "alx_pont": {
+      "note": 1,
+      "preuve": "Titre repris, preuve et annonce comme un pont, mais avec une accroche dissonance"
+    },
+    "alx_pull_paint_point": {
+      "note": 2,
+      "preuve": "Chaque niveau dit pourquoi, montre un exemple (Stride, la fête de famille) et donne l'action"
+    },
+    "alx_nom_idee": {
+      "note": 2,
+      "preuve": "The Describer, The Talker, The Planner, The Perfectionist, The Multi-Tasker, Unstoppable, chacun sur une carte"
+    },
+    "alx_phrase_finale": {
+      "note": 1,
+      "preuve": "6:17 « it's an undo button for the entire project » ; 11:23 « that is the power of using Claude Code » ; pas pour la plupart"
+    },
+    "alx_douleur_reve": {
+      "note": 1,
+      "preuve": "« Unstoppable » parle d'un désir, mais Opus 5.5 et Claude Code portent le titre"
+    },
+    "alx_cta_tot": {
+      "note": 0,
+      "preuve": "Aucun lead magnet ni offre de la chaîne ; seule l'offre Max du sponsor, à 12:55"
+    },
+    "ed_intro_courte": {
+      "note": 1,
+      "preuve": "Promesse, hook, preuve et plan en quatre phrases, premier point à 0:29 : un peu plus que trois lignes"
+    },
+    "ed_hook": {
+      "note": 2,
+      "preuve": "0:05 « you may feel comfortable with Claude, but [...] you are barely scratching the surface »"
+    },
+    "ed_probleme_preuve_consignes": {
+      "note": 2,
+      "preuve": "Chaque niveau part de la limite du précédent (Claude devine, le design déçoit, on attend devant l'écran), puis consignes et résultat"
+    },
+    "ed_tension_relancee": {
+      "note": 2,
+      "preuve": "4:48 « still not what I was envisioning. But, level four is going to fix [...] » ; 7:59 « I was still stuck in front of my computer »"
+    },
+    "ed_histoire_vecue": {
+      "note": 1,
+      "preuve": "5:02 « including myself when I first started » : une ligne d'acte 1 ; la fête de famille est un exemple"
+    },
+    "ed_sans_surexplication": {
+      "note": 1,
+      "preuve": "Opus 5.5 vanté à chaque niveau, « significantly » revient souvent ; quelques redites"
+    },
+    "ed_niveau_simple": {
+      "note": 2,
+      "preuve": "0:55 « Local means it's going to run everything on your computer » ; 10:07 le terminal « just has a text window »"
+    },
+    "tous_video_suivante": {
+      "note": 2,
+      "preuve": "13:03 « if you want Claude to even run more on its own, [...] my /goal video »"
+    }
+  },
+  "a_retenir": {
+    "titre_miniature": "Le titre donne le mérite au modèle (« Opus 5.5 Made Claude Code Unstoppable ») et ajoute un chiffre et une durée. La miniature bleue montre l'ordinateur et le mot UNSTOPPABLE, sans rien des niveaux.",
+    "intro_structure": "Chaque niveau se termine sur la limite que le suivant règle, sur une seule appli fil rouge : la tension se relance d'elle-même pendant 13 minutes.",
+    "habillage": "Vidéo sponsorisée par Anthropic : la charte de la chaîne cède la place à celle de la marque (crème, terracotta, serif), avec un escalier de sept marches comme plan.",
+    "idee_pour_nous": "Un tuto en niveaux sur un seul projet fil rouge, chaque niveau ouvrant sur la limite du précédent ; le spectateur se situe et dit son niveau en commentaire.",
+    "objectif": "vues"
+  }
+}

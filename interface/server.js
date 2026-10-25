@@ -170,24 +170,44 @@ const PARTNER_HINTS = new RegExp(CFG.partnerHints || 'sponsor|collab|partner|bra
 const LEAD_HINTS = new RegExp(CFG.leadHints || 'join|member|sign\\s?up|subscri|pricing|enroll|course|coaching|access|billing|refund', 'i');
 const PERSONAL_FROM = new RegExp(CFG.personalFrom || '@(gmail|googlemail|yahoo|outlook|hotmail|icloud|proton)\\.', 'i');
 const jsonFrom = out => { const i = out.indexOf('{'); if (i < 0) throw new Error('pas de JSON renvoyé par la commande e-mail'); return JSON.parse(out.slice(i)); };
+const gwsParams = o => process.platform === 'win32' ? '"' + JSON.stringify(o).replace(/"/g, '\\"') + '"' : JSON.stringify(o);
+const MAIL_CATS = { partenariat: 'partnerships', coaching: 'leads', perso: 'personal', autre: 'other' };
+const AUTO_FROM = /no-?reply|notification|newsletter|mailer-daemon|do-?not-?reply/i;
+function mailRules() {
+  const root = workspaceRoot(); if (!root) return [];
+  try {
+    return fs.readFileSync(path.join(root, 'domaines', 'operations', 'mail-apprentissage.md'), 'utf8').split('\n')
+      .map(l => l.match(/^\|\s*(expediteur|domaine|mot)\s*\|\s*(.+?)\s*\|\s*(partenariat|coaching|perso|autre)\s*\|/i))
+      .filter(Boolean).map(m => ({ type: m[1].toLowerCase(), value: m[2].toLowerCase(), kind: MAIL_CATS[m[3].toLowerCase()] }));
+  } catch (_) { return []; }
+}
+const learnedKind = (rules, addr, subject) => {
+  const dom = addr.split('@')[1] || '', subj = subject.toLowerCase();
+  const r = rules.find(x => (x.type === 'expediteur' && x.value === addr) || (x.type === 'domaine' && x.value === dom) || (x.type === 'mot' && subj.includes(x.value)));
+  return r && r.kind;
+};
 async function getEmail() {
   if (!EMAIL.enabled) return { needsSetup: true };
   const cli = /^[A-Za-z0-9._-]+$/.test(EMAIL.command || 'gws') ? (EMAIL.command || 'gws') : 'gws';
-  const list = jsonFrom(await run(cli, ['gmail', 'users', 'messages', 'list', '--params', '"{\\"userId\\":\\"me\\",\\"q\\":\\"newer_than:1d -category:promotions\\",\\"maxResults\\":40}"']));
+  const list = jsonFrom(await run(cli, ['gmail', 'users', 'messages', 'list', '--params', gwsParams({ userId: 'me', q: 'newer_than:1d -category:promotions', maxResults: 40 })]));
   const ids = (list.messages || []).slice(0, 18).map(m => m.id).filter(id => /^[A-Za-z0-9]+$/.test(id));
-  const rows = [];
+  const rows = [], rules = mailRules(), doubts = [];
   for (const id of ids) {
     try {
-      const m = jsonFrom(await run(cli, ['gmail', 'users', 'messages', 'get', '--params', `"{\\"userId\\":\\"me\\",\\"id\\":\\"${id}\\",\\"format\\":\\"metadata\\"}"`], 25000));
+      const m = jsonFrom(await run(cli, ['gmail', 'users', 'messages', 'get', '--params', gwsParams({ userId: 'me', id, format: 'metadata' })], 25000));
       const h = {}; (m.payload?.headers || []).forEach(x => h[x.name.toLowerCase()] = x.value);
       const subject = h.subject || '(sans objet)', rawFrom = h.from || '';
-      const kind = PARTNER_HINTS.test(subject) ? 'partnerships' : LEAD_HINTS.test(subject) ? 'leads' : PERSONAL_FROM.test(rawFrom) ? 'personal' : 'other';
+      const addr = ((rawFrom.match(/<([^>]+)>/) || [])[1] || rawFrom).trim().toLowerCase();
+      let kind = learnedKind(rules, addr, subject);
+      if (!kind) kind = PARTNER_HINTS.test(subject) ? 'partnerships' : LEAD_HINTS.test(subject) ? 'leads' : PERSONAL_FROM.test(rawFrom) ? 'personal' : 'other';
+      if (!kind || (kind === 'other' && !learnedKind(rules, addr, subject) && !h['list-unsubscribe'] && !AUTO_FROM.test(addr))) doubts.push({ id, subject, from: rawFrom.replace(/"/g, '').trim(), addr });
       rows.push({ id, subject, from: rawFrom.replace(/<.*/, '').replace(/"/g, '').trim(), unread: (m.labelIds || []).includes('UNREAD'), kind, ts: +(m.internalDate || 0), snippet: (m.snippet || '').slice(0, 90) });
     } catch (_) { }
   }
+  try { fs.writeFileSync(path.join(SNAP, 'mail-doutes.json'), JSON.stringify({ fetched: new Date().toISOString(), doubts }, null, 2)); } catch (_) { }
   const count = k => rows.filter(r => r.kind === k).length;
   return { fetched: new Date().toISOString(), total: list.resultSizeEstimate || rows.length, unread: rows.filter(r => r.unread).length,
-    flagged: rows.filter(r => r.kind === 'partnerships' || r.kind === 'leads').slice(0, 6), mix: { partnerships: count('partnerships'), leads: count('leads'), personal: count('personal'), other: count('other') } };
+    flagged: rows.filter(r => r.kind === 'partnerships' || r.kind === 'leads').slice(0, 6), doubts: doubts.length, mix: { partnerships: count('partnerships'), leads: count('leads'), personal: count('personal'), other: count('other') } };
 }
 
 /* ---------------------------- STATS (WIRING.md) ---------------------------- */

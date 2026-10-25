@@ -1,0 +1,177 @@
+[00:00] Claude, fais moi le bilan de ma chaîne YouTube sur les 6 derniers mois.
+[00:05] Comme tu peux le voir, j'ai demandé à Claude de me faire un bilan de ma chaîne YouTube.
+[00:07] Il ne m'a pas répondu que par chiffres, il m'a également proposé une présentation.
+[00:11] Ce qu'il y a de nouveau, c'est que cette présentation, elle se passe au sein de Claude, ce n'est pas un PowerPoint et je peux venir l'éditer avec Claude.
+[00:17] Et ça, c'est une fonctionnalité de l'application Claude qui a évolué énormément ces derniers temps.
+[00:21] Et j'ai tout testé.
+[00:23] Dans cette vidéo, je te présente les 10 nouveautés de l'application Claude qui ont un impact.
+[00:27] Et tu verras, l'une d'elles a complètement transformé ma façon de travailler avec l'IA.
+[00:31] Alors depuis la rentrée de septembre, tout le monde a parlé énormément des nouveaux modèles et de leurs capacités.
+[00:35] Pendant ce temps-là, presque sans faire d'annonce, l'application Claude a évolué et a complètement changé par rapport à celle que qu'on avait depuis quelques mois.
+[00:41] Moi, j'utilise Claude tous les jours, que ce soit pour faire tourner mon activité de création de contenu ou alors dans mon job au quotidien où je m'occupe de l'installation d'agents IA et d'automatisation dans une grosse société.
+[00:50] Pendant des mois, j'ai surtout utilisé Claude en dehors de son application, dans mon propre système IA.
+[00:55] Mais depuis quelques semaines, j'y reviens parce que l'application, elle a vraiment énormément évolué.
+[00:59] On va faire ça en trois temps.
+[01:00] D'abord, on va voir ce que tu peux créer directement depuis l'application dans le chat.
+[01:04] Ensuite, on va voir comment, via l'app, Claude travaille pour toi sans que tu sois présent.
+[01:08] Et enfin, on va voir Claude Code qui devient un véritable atelier.
+[01:11] Et pour chacune de ces nouveautés, je t'ai préparé un petit guide gratuit et tu trouveras le lien dans la description de cette vidéo.
+[01:16] Tu auras le prompt exact que j'ai utilisé et comment, chez toi, utiliser chacune de ces fonctionnalités.
+[01:21] Alors le premier changement, c'est le plus visible.
+[01:23] Ça se passe directement au niveau de la fenêtre de chat, sous la zone de saisie.
+[01:27] Tu peux maintenant choisir le format de sortie de la réponse de Claude.
+[01:30] Et donc, tu peux chercher un document, une présentation ou du design.
+[01:34] Tu peux choisir parmi toutes ces options.
+[01:36] Je m'attarderai sur les trois premiers formats de sortie qui sont directement intégrés dans Claude et je vais te montrer pourquoi c'est vraiment intéressant.
+[01:41] Le premier format, c'est celui que j'ai choisi dans mon introduction, c'est celui de slides, des présentations exactement comme PowerPoint.
+[01:47] La différence, c'est que là, on reste dans l'application de Claude.
+[01:50] Donc, on voit, on a ici une présentation qui est tout à fait correcte, qui est surtout basée sur mes vraies données et ce que je peux faire ici, c'est venir éditer, comme je le ferais justement dans PowerPoint.
+[02:00] Sauf encore une fois, on est sur Claude.
+[02:02] Donc ça c'est vraiment un nouveau changement.
+[02:03] Et ce qui est intéressant, c'est que tu peux venir ici mettre des commentaires.
+[02:06] Donc là, je vais lui dire, tu vois, je l'envoie à Claude et je vais lui dire "Donne plus de visibilité à cette phrase.
+[02:11] Elle est importante." Donc je l'envoie à Claude et si je clique ici, on voit que ça vient envoyer une commande supplémentaire avec mon commentaire et la l'instruction de traiter le commentaire.
+[02:21] Donc tu peux faire venir évoluer ce document directement avec Claude.
+[02:25] Voilà, là il a changé, il est mis du plus haut.
+[02:26] Directement avec Claude, en laissant des commentaires tout simplement.
+[02:29] Et comme tu peux le partager ici au sein de ton organisation, tu peux faire intervenir plusieurs personnes, récupérer chacun des commentaires et envoyer tous à Claude d'un seul coup.
+[02:38] Ce fichier, une fois que tu as terminé, tu peux venir le partager, tu peux venir l'exporter en PDF, sous PowerPoint, et cetera et cetera.
+[02:45] Donc c'est vraiment une super façon de créer avec un côté collaboratif, que ce soit avec tes collègues ou avec Claude.
+[02:52] Le deuxième format, ça va être le document.
+[02:54] Donc ça marche exactement de la même façon.
+[02:56] Comment tu le ?
+[02:57] En fait, tu viens ici chercher dans l'output le format document.
+[03:00] Donc j'ai lancé moi tout à l'heure un prompt, "Mon prochain script de vidéo YouTube" et voici ce qu'il me propose.
+[03:05] Et là encore, ce qui est intéressant, c'est que ça c'est comme un traitement de texte intégré, je peux venir travailler le format, travailler la forme et le fond et ici, j'ai demandé à Claude par exemple "Travaille cette phrase-là."
+[03:15] Je peux lui remettre un commentaire, "Travaille cette phrase-là" et cetera, exactement comme on l'a fait pour les présentations.
+[03:20] Comme de l'autre côté, tu peux partager au format Word, PDF, Markdown, Google Docs et cetera et même Notion.
+[03:26] Le troisième format de sortie qu'on va regarder, c'est celui du design.
+[03:29] Donc tu peux demander à Claude de générer un design bien précis.
+[03:33] Alors moi, je lui ai demandé d'imaginer l'application mobile du Club Smart.
+[03:37] Donc le Club Smart, c'est la communauté dans laquelle je forme les membres à utiliser l'IA, à créer leurs propres systèmes et iOS et à créer des systèmes à côté pour leurs besoins.
+[03:45] Et donc, je lui ai demandé d'imaginer une application pour ça et il m'a sorti, donc ces différentes maquettes au bout d'un seul prompt, hein, j'ai pas eu grand-chose à lui dire.
+[03:54] Je peux venir changer la couleur en respectant directement mon mon design système.
+[03:58] Donc par exemple ici, je mets ça plutôt en jaune.
+[04:01] Je peux venir modifier le texte.
+[04:03] Je peux faire mes remarques à Claude et cetera et cetera.
+[04:06] Donc exactement le même principe.
+[04:07] Donc là, on s'approche vraiment d'une solution de design hyper puissante comme Figma.
+[04:12] Et donc là, tu peux imaginer un travail collaboratif sur des maquettes avec d'autres personnes de ta société qui vont venir ici commenter chacun leur tour.
+[04:19] Toi encore une fois, tu n'as plus qu'à choisir ici ce que tu veux envoyer à Claude ou non et Claude prendra les retours.
+[04:25] La nouveauté qu'on va voir, c'est les artefacts.
+[04:27] Donc les artefacts, c'est une sorte de page HTML que Claude construit pour présenter l'un de tes besoins.
+[04:32] Avant, on contrôlait pas trop le quand on utilisait un artefact, quand on l'utilisait pas.
+[04:36] Où il fallait vraiment le spécifier.
+[04:37] Là, tu peux le choisir ici.
+[04:38] Et la grande nouveauté, ce qui est vraiment excellent, c'est qu'il peut être dynamique et se mettre à jour de façon automatique.
+[04:44] Alors moi, je lui ai demandé de faire un artefact pour le Claude Smart justement pour faire une interface où on va choisir le prochain sujet.
+[04:51] Donc par exemple, ici, je peux proposer un système IA pour euh pour l'édition de vidéo.
+[04:58] C'est ce que je fais moi aujourd'hui.
+[04:59] Je propose l'item rejoint une liste qui est dynamique ici.
+[05:02] On voit que chacune des personnes présentes a trois votes disponibles et donc je peux venir voter pour celui-ci ou celui-ci.
+[05:09] Et là, il me reste un vote pour le prochain sujet que j'aurai envie de mettre en avant.
+[05:12] Et ça encore une fois, je peux le partager à différents membres pour qu'ils viennent voter et proposer des solutions.
+[05:17] Donc l'artefact, ça devient vraiment un vrai petit programme et on peut faire un tas de choses avec.
+[05:22] On va attaquer maintenant la deuxième partie.
+[05:24] Là, c'est tout un tas de nouveautés que j'ai regroupées dans un item que j'appelle Claude travaille pour toi.
+[05:28] Donc c'est des nouveautés qui vont donner plus d'autonomie à Claude.
+[05:32] Alors la première, elle est plus difficile à démontrer, c'est que jusqu'ici, quand tu crées une nouvelle discussion, tu devais choisir obligatoirement entre chat ou co-work.
+[05:40] Donc co-work te permettait notamment de de donner accès à ton ordinateur, ce que tu pouvais pas faire dans le chat.
+[05:46] Donc si tu avais commencé par chat, qu'au bout d'un moment tu voulais don donner accès à Claude à un certain dossier, tu ne pouvais plus le faire.
+[05:53] Il fallait recommencer une discussion dans Cowork.
+[05:55] Là aujourd'hui, c'est plus le cas.
+[05:56] Tu peux vraiment basculer de l'un à l'autre.
+[05:57] Euh il y a plus de limite entre les deux.
+[05:59] Ils utilisent les mêmes composants et euh tu peux switcher de l'un à l'autre.
+[06:02] D'ailleurs, je pense que bientôt l'interface va évoluer, on aura plus ce bouton entre chat et Cowork.
+[06:07] La deuxième nouveauté dont j'ai envie de te parler, c'est les routines.
+[06:10] Donc les routines ici, c'est tâches planifiées.
+[06:13] Et en gros, tu peux venir programmer des tâches à intervalles réguliers.
+[06:17] Donc moi par exemple, j'ai un triage de mail qui se fait le matin, le midi, le soir où il va venir poser un indice de priorité et une catégorisation de l'email.
+[06:25] Donc ma boîte email est toujours à jour et je sais identifier les mails les plus importants et de quoi ils vont traiter.
+[06:30] Donc pour en créer une, tu vas tout simplement ici sur tâches planifiées, tu crées une nouvelle tâche et là tu peux créer avec Claude c'est un espèce de tutoriel guidé ou configurer manuellement.
+[06:39] Tu vas simplement injecter un prompt pour créer toute ta ressource.
+[06:42] Donc par exemple, tu crées la tâche planifiée.
+[06:44] Ici, je mets mon prompt et là tu choisis la période à laquelle tu vas pouvoir déclencher cette automatisation.
+[06:50] Et là il y a une option qui est assez intéressante, c'est nécessiter cet ordinateur.
+[06:53] Tu dois cocher ici cette case-là si tu veux que cette automatisation aille chercher des informations qui sont présentes sur ton ordinateur.
+[07:00] Pour être tout à fait honnête, ces ces routines elles existaient déjà.
+[07:02] Ce qui change aujourd'hui, c'est qu'elles sont maintenant disponibles sur le cloud.
+[07:05] Donc actives même quand ton ordinateur est fermé.
+[07:08] Et ça c'est vraiment nouveau.
+[07:09] Et par exemple dans le cas du tri de mail, c'est hyper intéressant.
+[07:11] Le fait que ce soit présent dans le cloud, ça te permet également d'aller consulter le résultat de ces routines directement sur ton téléphone.
+[07:18] Et ce qui est intéressant là-dedans, c'est que il va créer le lien entre la version Claude code de ton ordinateur et le cloud.
+[07:25] Ce qui te permet en fait de faire suivre tes routines mais également tes skills, tes connecteurs.
+[07:29] En fait, c'est tout ton système IA qui va pouvoir te suivre.
+[07:33] Et tout ça, on y revient à la fin car moi c'est vraiment ça qui a changé ma façon de bosser avec.
+[07:36] La troisième partie, c'est Claude code qui se transforme en atelier.
+[07:39] Maintenant l'interface te propose tout un tas d'extensions qui améliorent l'utilisation de cet outil.
+[07:44] Donc là, je vais lui demander par exemple quels sont mes sujets en cours.
+[07:47] Alors il les connaît parce qu'il est justement branché à mon système IA, donc il a accès à tout mon contexte.
+[07:51] Il va être capable d'aller scroller la partie projet et de me faire un petit récap rapide de tout ça.
+[07:56] Donc voilà, il m'a trié les plus récents aux plus anciens.
+[07:58] Donc vidéo Les 10 nouveautés de l'AppCode, on est en train de la filmer, donc c'est normal qu'il en parle.
+[08:02] Ménage des outils, des coûts et cetera.
+[08:03] Bref, il me fait la liste de tout ce que je veux.
+[08:05] Maintenant ce qui est intéressant, c'est que le fait d'avoir lancé cette discussion, ça me permet ici d'accéder à ces petites icônes qu'on voit là.
+[08:11] Qu'est-ce que tu peux ?
+[08:12] Ici tu as ton terminal.
+[08:13] Donc Cloud Code normalement ça s'utilise dans un terminal et quand tu vas développer des applications, il va des des fois te donner des lignes de commande à taper et jusqu'à présent tu devais jongler entre l'application Cloud et le
+[08:23] terminal.
+[08:23] Maintenant tu y as accès directement ici, ce qui est assez pratique.
+[08:26] Deuxième icône, c'est ici, c'est le fichier qui vient de modifier.
+[08:30] Troisième, c'est un navigateur qui est intégré.
+[08:32] Donc là par exemple, je peux lui dire d'aller sur Google.
+[08:35] Je vais lui dire ici "Décris-moi cette page." Et donc là il m'explique que son navigateur intégré affiche la page de Google et cetera, il me décrit tout ça.
+[08:42] Ce qui est ultra intéressant, c'est qu'il peut venir naviguer à ta place.
+[08:45] Donc par exemple, je me suis connecté ici à mon Cloud Smart et cette communauté elle n'a pas d'API, c'est-à-dire tu peux pas automatiser jusqu'à présent.
+[08:51] Maintenant je peux lui dire "À l'aide du navigateur intégré, prépare-moi un petit prompt pour souhaiter le bonjour à tous les membres de ma communauté." Et donc maintenant, je clique sur Entrée.
+[08:59] Et donc là il dit "Je lis la page de ton Cloud Smart sur School pour coller au ton de la communauté.
+[09:03] Peux-tu préparer le brouillon, s'il te plaît, et le mettre dans la fenêtre en utilisant ton navigateur ?" Donc il vient d'ouvrir la fenêtre qui permet d'écrire des posts, d'écrire sur le mur de la communauté.
+[09:12] Et ça y est, il vient de remplir directement le message.
+[09:15] Alors je vais pas l'envoyer parce que j'essaie de mettre un peu plus de valeur en général.
+[09:18] Il reste encore deux choses hyper intéressantes.
+[09:20] La première, c'est les fichiers.
+[09:21] Globalement ici, j'ai tout mon système IA.
+[09:24] Donc mon système IA, c'est une organisation des fichiers qui constitue ma base de connaissances, qui constitue mon actualité, quels sont mes projets en cours et également quelles sont mes compétences et cetera.
+[09:32] Donc tout ça c'est organisé sous un dossier avec des fichiers et cetera.
+[09:35] Moi aujourd'hui j'utilisais VS Code parce que justement ça me donnait accès à ces fichiers là.
+[09:40] Donc là par exemple si je vais dans mon inbox, j'ai ici les dernières réunions que j'ai eu avec un petit résumé qui vient se mettre automatiquement.
+[09:46] Ici j'ai mes projets, donc par exemple ici j'ai un atelier que j'ai fait pour installer son iOS et j'ai ici toute la trame à suivre pendant l'atelier.
+[09:54] Donc toutes les réflexions que j'ai eu, elles sont rassemblées là et l'intérêt c'est que je peux venir ici visualiser ce qu'il y a et comme à côté je peux venir copier et coller ici pour lui donner davantage de
+[10:05] contexte et faire des modifications.
+[10:07] Et le dernier, moi j'en ai pas forcément l'usage pour le moment, c'est un simulateur OS.
+[10:11] Donc ça veut dire que le jour où tu veux créer une application directement sur iOS, tu peux simuler ton iPhone pour voir ce que ça donne.
+[10:17] Donc c'est ultra puissant en terme de développement, en terme de débugage et cetera.
+[10:20] Alors je t'ai montré mon iOS juste avant, donc c'est une arborescence de fichiers qui est organisée de façon à optimiser l'utilisation de l'IA.
+[10:26] L'inconvénient c'est que c'est sur mon ordinateur.
+[10:28] Donc si je veux travailler sur un point précis dans le cloud sur mon mobile ou sur un autre ordinateur, c'est un peu compliqué.
+[10:33] Il y a des solutions mais Cloud vient d'en ajouter une nouvelle qui est ici de prendre la discussion et venir ici l'ouvrir dans le cloud.
+[10:40] Donc on a ici tout un tas d'options, ce sont des éditeurs de code, mais ici on a maintenant le cloud et quand je clique dessus, je fais continuer dans le cloud et je vais pouvoir récupérer cette discussion, ça
+[10:51] c'était déjà possible, mais aussi le contexte qui va avec.
+[10:53] Donc tous les fichiers qui sont associés à cette discussion.
+[10:56] Donc là je vais je vais prendre mon téléphone.
+[10:57] Donc je suis ici sur mon iPhone et je vais venir chercher Cloud.
+[11:02] Et là la nouveauté c'est que je vais sur Cloud Code ce qui n'existait pas avant et voilà, je retrouve le dossier sujet en cours.
+[11:08] Donc c'est exactement le dossier que j'avais avec et maintenant je peux lui dire "liste-moi les fichiers présents dans le projet c'est un peu vague mais on va voir ce qu'il va nous sortir".
+[11:18] Et là on voit que là par exemple le noyau de l'iOS, il y a des bilans, les décisions, les skills, les connexions et cetera.
+[11:23] Donc il a accès à mes fichiers présents sur mon ordinateur et ça c'est vraiment excellent parce que ça te permet de transporter ton travail d'un d'un à un autre.
+[11:31] Voilà donc on vient de voir une dizaine de nouveautés de l'application.
+[11:33] Il y en a encore d'autres petites, je t'ai donné les majeures.
+[11:35] Honnêtement, l'application elle elle donne vraiment une expérience très intéressante.
+[11:39] Finalement, c'est ce qu'on appelle le harness, donc tout ce qui est autour du moteur de l'IA.
+[11:42] Moi, ça m'intéresse particulièrement parce que avant je devais jongler entre Obsidian pour mon second cerveau, VS Code pour pouvoir modifier directement et parfois Claude Code.
+[11:50] Là, je suis en train de tout rassembler au même endroit et ça me permet de travailler, de modifier la sortie, de réagir directement, de marcher avec le système de commentaires qui est extrêmement puissant.
+[11:59] Bref, une très belle expérience.
+[12:01] Donc, si tu dois retenir quelque chose de cette vidéo, c'est celle-ci.
+[12:04] Claude ne va te répondre plus simplement, maintenant il crée des documents que tu peux venir travailler avec lui et itérer sur ces mêmes documents.
+[12:10] La deuxième, c'est qu'il te permet maintenant de travailler sans toi.
+[12:13] Il permet de continuer à travailler sur ton ordinateur à distance.
+[12:17] Donc, comme je te le disais, tu vas retrouver tous les prompts qui ont été utilisés, toute la documentation qui est faite autour de ces fonctionnalités dans un fichier qui se trouve dans la description de cette vidéo.
+[12:26] Si ça t'a plu, je t'invite également à t'abonner.
+[12:27] Tu peux également booster la vidéo depuis l'application YouTube, ça me permet d'avoir vraiment plus de visibilité et c'est super sympa si toi tu as retenu quelque chose de cette vidéo.
+[12:36] Et enfin, je t'ai montré mon travail, je t'ai montré l'arborescence que j'ai et qui me permet d'avoir mon contexte en permanence avec moi et d'être beaucoup plus efficace dans mon travail avec l'IA.
+[12:45] Si ça t'intéresse, ça s'appelle un Nea iOS et tu vas trouver ici une vidéo avec le lien vers une masterclass dans laquelle je t'explique et je te montre comment monter le tien.
+[12:54] Je te dis à bientôt pour la prochaine vidéo.
+[12:56] Bye.

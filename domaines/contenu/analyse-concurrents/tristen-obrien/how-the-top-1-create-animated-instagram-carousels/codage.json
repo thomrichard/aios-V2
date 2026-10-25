@@ -1,0 +1,548 @@
+{
+  "video_id": "zLkWg1evkpo",
+  "chaine": "tristen-obrien",
+  "titre_video": "How the Top 1% Create Animated Instagram Carousels With AI",
+  "codeur": "agent tristen-obrien",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "tuto",
+    "format_secondaire": null,
+    "sujet": "Un carrousel Instagram animé fait avec Gamma (recherche, modèle, retouches par agent), animé dans ChatGPT puis publié",
+    "outils": [
+      "Gamma 5",
+      "ChatGPT (GPT-6 Astra)",
+      "plugin Gamma pour ChatGPT",
+      "Instagram",
+      "Nano Banana Pro",
+      "GPT Image 2"
+    ],
+    "niveau": "debutant",
+    "objectif_probable": "vente"
+  },
+  "titre": {
+    "attente_au_clic": "Apprendre la méthode des meilleurs créateurs pour faire des carrousels Instagram animés avec l'IA.",
+    "schema": "How the Top <N>% Create <Résultat> With AI",
+    "promesse": "Faire des carrousels Instagram animés comme le top 1 %, avec l'IA",
+    "audace": "timide",
+    "registre": "douleur-reve",
+    "briques": [
+      "resultat"
+    ],
+    "marqueurs": [
+      "chiffre",
+      "comparaison-sociale"
+    ],
+    "nom_outil": false
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "enthousiasme, bouche ouverte",
+    "regard": "camera",
+    "texte": "CAROUSELS ANIMATED",
+    "texte_mots": 2,
+    "repete_titre": "partiel",
+    "elements": [
+      "logo Instagram",
+      "mot CAROUSELS en corail et ANIMATED en noir",
+      "téléphone d'où sortent trois images de carrousel avec flou de mouvement et points de pagination",
+      "buste à droite"
+    ],
+    "nb_elements": 4,
+    "fond": "bleu ciel clair uni",
+    "couleurs": [
+      "bleu ciel",
+      "corail",
+      "noir",
+      "dégradé Instagram"
+    ],
+    "curiosity_gap": "resultat",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Have you seen the animated carousels that are showing up on over Instagram?",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Face caméra à gauche ; à droite un téléphone ouvert sur Instagram avec le carrousel « Stop typing \"continue\" » et le mot « Animated »",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": [
+      "demo-d-abord",
+      "hook-fait",
+      "pont"
+    ],
+    "preuve": {
+      "type": "resultat-montre",
+      "seconde": 0,
+      "description": "Le carrousel animé construit dans la vidéo tourne dans le téléphone dès le premier plan"
+    },
+    "annonce_plan": {
+      "presente": true,
+      "nb_points": 3,
+      "a_l_ecran": true
+    },
+    "boucle_vers_la_fin": {
+      "presente": false,
+      "citation": "",
+      "seconde_resolution": null,
+      "tenue": null
+    },
+    "seconde_premier_point": 35,
+    "attente_tenue": "oui",
+    "attente_note": "Le flux complet est montré, de l'idée à la publication. Le « Top 1% » du titre n'est jamais repris : c'est la méthode de Gamma, sponsor de toute la vidéo."
+  },
+  "structure": {
+    "modele": "pas-a-pas",
+    "segments": [
+      {
+        "debut": 0,
+        "fin": 23,
+        "titre": "Why animated carousels get more engagement",
+        "role": "intro",
+        "pull": true,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": true,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 23,
+        "fin": 35,
+        "titre": "Gamma sponsors this video",
+        "role": "sponsor",
+        "pull": false,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 35,
+        "fin": 131,
+        "titre": "Research, effort, prompt and template in Gamma",
+        "role": "demo",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": true,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 131,
+        "fin": 203,
+        "titre": "Gamma asks questions, outline, generate",
+        "role": "demo",
+        "pull": true,
+        "paint": false,
+        "point": true,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": true,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 203,
+        "fin": 293,
+        "titre": "Editing cards, image models, Edit with Agent",
+        "role": "demo",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 293,
+        "fin": 300,
+        "titre": "Subscribe",
+        "role": "cta",
+        "pull": false,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 300,
+        "fin": 343,
+        "titre": "Adding images, layout and card style",
+        "role": "demo",
+        "pull": false,
+        "paint": true,
+        "point": true,
+        "nom": false,
+        "phrase_finale": true,
+        "probleme": true,
+        "preuve": true,
+        "consignes": true,
+        "payoff": false,
+        "relance_sortie": true
+      },
+      {
+        "debut": 343,
+        "fin": 374,
+        "titre": "Exporting the cards as PNGs",
+        "role": "point",
+        "pull": true,
+        "paint": false,
+        "point": true,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": false,
+        "consignes": true,
+        "payoff": false,
+        "relance_sortie": true
+      },
+      {
+        "debut": 374,
+        "fin": 422,
+        "titre": "Animating every card in ChatGPT with the Gamma plugin",
+        "role": "demo",
+        "pull": false,
+        "paint": false,
+        "point": true,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": true,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 422,
+        "fin": 432,
+        "titre": "The animated cards",
+        "role": "demo",
+        "pull": false,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": false,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 432,
+        "fin": 467,
+        "titre": "Posting the animated carousel on Instagram",
+        "role": "point",
+        "pull": false,
+        "paint": false,
+        "point": true,
+        "nom": false,
+        "phrase_finale": true,
+        "probleme": false,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 467,
+        "fin": 480,
+        "titre": "Automating with Make.com (comment MAKE)",
+        "role": "cta",
+        "pull": false,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 480,
+        "fin": 506,
+        "titre": "Final thoughts",
+        "role": "fin",
+        "pull": false,
+        "paint": false,
+        "point": true,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      }
+    ],
+    "relances": [
+      {
+        "seconde": 13,
+        "type": "annonce-suite",
+        "citation": "starting with the part that takes me the most time"
+      },
+      {
+        "seconde": 250,
+        "type": "annonce-suite",
+        "citation": "But, the biggest power here is the edit with agent"
+      },
+      {
+        "seconde": 316,
+        "type": "question-spectateur",
+        "citation": "And by the way, I think that's normal, right?"
+      },
+      {
+        "seconde": 340,
+        "type": "annonce-suite",
+        "citation": "these are still just images, and we're making an animated carousel"
+      }
+    ],
+    "histoires": [
+      {
+        "seconde": 23,
+        "acte": "anecdote",
+        "resume": "Il fait ses carrousels sur Gamma et leur a demandé de sponsoriser la vidéo."
+      }
+    ],
+    "payoffs": [
+      {
+        "seconde": 203,
+        "resume": "Les six cartes sont générées à partir de deux phrases et de la recherche"
+      },
+      {
+        "seconde": 267,
+        "resume": "L'agent passe le drapeau du vert au bleu, retour possible à l'original"
+      },
+      {
+        "seconde": 424,
+        "resume": "Toutes les cartes sont animées, même celles sans image"
+      },
+      {
+        "seconde": 455,
+        "resume": "Le carrousel animé de six cartes est publié sur Instagram"
+      }
+    ],
+    "premier_payoff_seconde": 203,
+    "jargon": 1,
+    "repetitions": 1,
+    "test_du_tweet": "Carrousel Instagram animé sans rien dessiner : Gamma fait la recherche, pose ses questions, propose un plan et génère les cartes, son agent les retouche, export en PNG, puis ChatGPT avec le plugin Gamma anime chaque carte. Il ne reste qu'à publier."
+  },
+  "habillage": {
+    "face_camera": {
+      "presente": true,
+      "cadrage": "poitrine ; en vignette ou en demi-écran sur les captures",
+      "decor": "bureau, étagères, enseigne Back to the Future, lumière violette ; blouson noir, image plus sombre"
+    },
+    "parts": {
+      "face": 20,
+      "ecran": 70,
+      "motion": 10,
+      "broll": 0
+    },
+    "textes_ecran": "rares",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": [
+      "plan-a-l-ecran",
+      "etiquettes",
+      "split-screen",
+      "zooms-ecran",
+      "bandeau-nom"
+    ],
+    "charte": "Intro sur fond crème avec accent corail, titres sans-serif noirs et corail, maquettes de téléphone ; ensuite des captures sur fond dégradé bleu-vert. Le corail de la miniature est repris, pas son bleu ciel.",
+    "rythme": "regulier",
+    "notes": "Seule l'intro reçoit le motion design habituel ; le milieu est une démo Gamma en capture plein écran, sans cartes de chapitre. Un badge « Sponsored by Gamma » s'affiche au moment de la mention."
+  },
+  "fin": {
+    "ctas": [
+      {
+        "seconde": 23,
+        "type": "sponsor",
+        "cible": "Gamma",
+        "amene_par": "intro",
+        "citation": "I did ask Gamma to sponsor this video"
+      },
+      {
+        "seconde": 293,
+        "type": "abonnement",
+        "cible": "s'abonner",
+        "amene_par": "apres-valeur",
+        "citation": "if this is helping, please do me a favor and hit subscribe"
+      },
+      {
+        "seconde": 475,
+        "type": "like-commentaire",
+        "cible": "commenter « make » pour obtenir une vidéo sur l'automatisation avec Make.com",
+        "amene_par": "apres-valeur",
+        "citation": "go ahead and comment the word make and I will create a video on it"
+      },
+      {
+        "seconde": 496,
+        "type": "sponsor",
+        "cible": "Gamma, lien en description",
+        "amene_par": "fin",
+        "citation": "If you want to try out Gamma yourself, the link is in the description."
+      },
+      {
+        "seconde": 499,
+        "type": "abonnement",
+        "cible": "s'abonner, liker, commenter",
+        "amene_par": "fin",
+        "citation": "please subscribe, like the video, leave a comment"
+      }
+    ],
+    "sponsor": {
+      "present": true,
+      "nom": "Gamma",
+      "debut": 23,
+      "duree": 483,
+      "forme": "integre-a-la-demo"
+    },
+    "liens_description": {
+      "sponsor": 1
+    },
+    "commentaire_epingle": {
+      "texte": "Try Gamma's New Connectors (lien sponsor)",
+      "type": "sponsor"
+    },
+    "recap_final": true,
+    "derniere_phrase": "please subscribe, like the video, leave a comment, and I will see you",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": [
+      "merci pour un cas pratique sur les réseaux sociaux",
+      "d'autres façons de faire (Astra seul, Claude Design)"
+    ],
+    "demandes": [
+      "faire les carrousels avec Claude Design"
+    ],
+    "critiques": [
+      "deux heures passées sur Gamma pour des résultats décevants"
+    ],
+    "reprises": [],
+    "signal_promesse": "mixte"
+  },
+  "techniques": {
+    "ap_alignement_5s": {
+      "note": 1,
+      "preuve": "1re phrase sur les carrousels animés d'Instagram, sans IA ni top 1 % ; 1er plan reprend téléphone et carrousel, pas le fond ni la mise en page"
+    },
+    "ap_boucle_curiosite": {
+      "note": 0,
+      "preuve": "« What goes on each card? » est résolu tout de suite par la recherche Gamma ; aucune question gardée"
+    },
+    "ap_effort_montre": {
+      "note": 0,
+      "preuve": "Ni heures ni essais ; « the part that takes me the most time » parle de sa peine, pas d'un effort mis dans la vidéo"
+    },
+    "ap_setup_progress_payoff": {
+      "note": 2,
+      "preuve": "But (un carrousel animé), étapes Gamma, cartes à 3:23 ; puis animation, cartes animées à 7:04 et publication à 7:35"
+    },
+    "ap_contraste_rythme": {
+      "note": 0,
+      "preuve": "De 9 à 18 changements de visuel par minute, sans passage nettement lent ou rapide"
+    },
+    "ap_montrer_sans_son": {
+      "note": 2,
+      "preuve": "Planche intro : « Animated carousels. », « Way more engagement. » avec barres, « AI does most of the work. », plan Gamma, ChatGPT, Instagram"
+    },
+    "ali_douleur_histoire": {
+      "note": 1,
+      "preuve": "0:18 le plus long pour lui est de trouver quoi mettre sur chaque carte : une douleur, sans histoire"
+    },
+    "ali_coeur_unique": {
+      "note": 2,
+      "preuve": "7:35 « now we have a six-card animated carousel on Instagram that I didn't have to design »"
+    },
+    "alx_pont": {
+      "note": 1,
+      "preuve": "Plan et contexte comme un pont, mais ouvert par un fait sur l'engagement qui sert d'accroche"
+    },
+    "alx_pull_paint_point": {
+      "note": 1,
+      "preuve": "Pull et exemple sur la recherche (« I want Gamma to do the digging ») et sur le drapeau bleu ; la plupart des étapes sont des consignes"
+    },
+    "alx_nom_idee": {
+      "note": 0,
+      "preuve": "Aucune idée nommée ; seuls les noms des fonctions Gamma (Research, Edit with Agent)"
+    },
+    "alx_phrase_finale": {
+      "note": 1,
+      "preuve": "5:40 « these are still just images » ; 7:46 « We just used AI tools to do it. » ; rare"
+    },
+    "alx_douleur_reve": {
+      "note": 2,
+      "preuve": "Le titre parle du résultat voulu (des carrousels animés comme le top 1 %), sans nom d'outil d'IA"
+    },
+    "alx_cta_tot": {
+      "note": 0,
+      "preuve": "Aucun lead magnet ni offre de la chaîne ; seul le sponsor à 0:23"
+    },
+    "ed_intro_courte": {
+      "note": 1,
+      "preuve": "Promesse et hook en trois phrases (0:13), mais la mention du sponsor repousse le premier point à 0:35"
+    },
+    "ed_hook": {
+      "note": 2,
+      "preuve": "0:03 « carousels are already getting way more engagement than any other post », graphique à l'écran"
+    },
+    "ed_probleme_preuve_consignes": {
+      "note": 1,
+      "preuve": "Problème posé deux fois (carte « kind of boring » à 5:01, images fixes à 5:40) ; le reste va droit aux consignes"
+    },
+    "ed_tension_relancee": {
+      "note": 1,
+      "preuve": "5:40 « these are still just images, and we're making an animated carousel » lance l'animation ; ailleurs les étapes s'enchaînent"
+    },
+    "ed_histoire_vecue": {
+      "note": 1,
+      "preuve": "0:23 il fait ses carrousels sur Gamma : une anecdote d'usage, pas une histoire"
+    },
+    "ed_sans_surexplication": {
+      "note": 1,
+      "preuve": "« you can change it if you want to » et « you can always revert back » reviennent plusieurs fois"
+    },
+    "ed_niveau_simple": {
+      "note": 2,
+      "preuve": "1:11 light, standard, max expliqués en une phrase ; vocabulaire simple partout"
+    },
+    "tous_video_suivante": {
+      "note": 0,
+      "preuve": "Une vidéo Make.com promise seulement si on commente « make » ; aucune vidéo précise"
+    }
+  },
+  "a_retenir": {
+    "titre_miniature": "Seul titre de la série sans outil d'IA : « How the Top 1% Create ... With AI » parle du résultat. Miniature claire (bleu ciel, téléphone, carrousel qui défile), changée une fois le lendemain de la sortie selon VidIQ (deux versions relevées).",
+    "intro_structure": "Hook-fait sur l'engagement des carrousels et résultat montré dès 0:00, puis sept minutes de démo pas à pas du sponsor, sans boucle ni idée nommée.",
+    "habillage": "Motion design réduit à l'intro (crème et corail) ; le reste en captures plein écran de Gamma.",
+    "idee_pour_nous": "Un sujet sponsorisé hors du cœur de la chaîne (Instagram, Gamma) plafonne malgré une miniature soignée : n'accepter un sponsor que sur le sujet phare.",
+    "objectif": "vues"
+  }
+}

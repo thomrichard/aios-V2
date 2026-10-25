@@ -1,0 +1,148 @@
+{
+ "id": "j8YDz-VC-AM",
+ "url": "https://www.youtube.com/watch?v=j8YDz-VC-AM",
+ "chaine": "jad-mh",
+ "titre": "Claude Opus 5.5 Is INSANE at Video Editing 0$ (Turned it into a skill)",
+ "titre_ytdlp": "Claude Opus 5.5 Is INSANE at Video Editing 0$ (Turned it into a skill)",
+ "publie": "2026-10-10T14:20:04Z",
+ "duree_s": 973,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "5YKKxrC3ENm7eg2sL-_VoCTwxXo",
+  "id": "j8YDz-VC-AM",
+  "snippet": {
+   "publishedAt": "2026-10-10T14:20:04Z",
+   "channelId": "UCkbjWQ7kLFNRY_RiJbqVWRg",
+   "title": "Claude Opus 5.5 Is INSANE at Video Editing 0$ (Turned it into a skill)",
+   "description": "My full AI video editor, start to finish: how Claude Code edits my long-form YouTube videos AND my short-form videos (Shorts, TikTok, Reels), what it costs, and how to install it. I turned both editors into free Claude skills 👇\n\n🎁 Get both editing skills free in my Skool: https://www.skool.com/nextphase-5790\n\n🙅 Not sponsored. I don't make money from my channel or the skills. The only thing you pay for is your Claude subscription.\n\n💬 I read all your comments\nYour #1 question: \"How do you edit your videos?\" Claude edited this whole video: the layouts, the motion graphics and the real screenshots. I have 2 AI editors: long form (this video) and short form (one of my shorts did over 100K views on TikTok). They're why I could post 16 videos in 16 days (over 300,000 views). A month ago I posted once or twice a week.\n\n🤔 Why an AI editor?\nAn edit isn't one job, it's 7. If a human edit comes back days later, AI news is already old. These skills do all 7 for $0 on top of your Claude subscription.\n\n👥 Who it's for\n• Businesses that need content every week (YouTube, Shorts, TikTok, Reels)\n• Brands: same colors, fonts and feel in every video\n• Personal brands that want to post a lot and stay consistent\n• Marketers: every client gets their own style\n• Agencies: offer it as part of your service\n\n⚙️ How it works: the 7 jobs\nClaude can't watch or make a video. It reads and writes text and uses free tools on your computer. Drop your recording in the folder, say \"edit this\", pick a style.\n1️⃣ Transcribe: every word with its exact time, using Parakeet (free, runs on my laptop). It once dropped 13 seconds of audio, so the editor now checks the transcript minute by minute.\n2️⃣ Cut: pauses, ums and retakes. Say a line twice and it keeps the good one.\n3️⃣ Research: every site, tool or post I name, it opens Chrome and screenshots the real thing.\n4️⃣ Motion graphics: no video model. Every chart and title is a little web page. HyperFrames screenshots every frame and FFmpeg glues them together, so everything stays editable.\n5️⃣ Color: grades the footage against the reference and can cut me out so big words go behind my head.\n6️⃣ Sound (mostly for shorts): every layout change gets a transition and a sound.\n7️⃣ Finish: joins the chapters, writes captions and timestamps. It never posts. It renders and stops so I watch first.\n\n🎨 Styles and rules\n\"Edit my video\" alone gives you the default look everyone has. That's AI slop. Every style I have came from a video I loved: Claude grabs frames with FFmpeg and measures the colors, fonts, layouts and timing. This style changes layout every 8 seconds. Long form has 8 styles, short form has 5.\nRules: I give notes like a director, then say \"add that to your skill\". My short-form editor has a blacklist of 21 rules, each from a cut I rejected. You start with all my notes.\n\n🎬 A real edit\nIt transcribes, cuts, writes a plan (every chapter, what goes on screen) and waits for my OK.\n\n💰 What it costs\nI'm on Claude Max. No paid APIs: Parakeet, HyperFrames and FFmpeg are all $0. Building the skills cost me over $200 (I maxed out my plan), and that part is done for you. I've edited 81 shorts with it, 5 in one day.\n\n📥 How to install\n1. Join my free Skool: https://www.skool.com/nextphase-5790\n2. Find the post for this video. It links to my Google Drive. Download both editors (long + short), each in its own folder.\n3. Open Claude Code, open the install prompt, copy everything, paste it in and hit enter. It sets up the free tools for you.\n4. Start a new Claude Code session so the skill loads, drop your recording in and say \"edit this\".\n5. Use Opus 5.5 (type /model). Editing is a big job, so don't go cheap on the model.\n\n⚠️ It's not perfect\nYour first edit won't be perfect. Mine weren't. Give it notes and say \"add it to the skill\". The voice jumps some of you noticed? That's my own manual cutting. Someone still has to decide what's good, so editing experience gets you even better results.\n\n⏱️ Chapters\n0:00 I read all your comments\n3:05 Thank you\n4:15 Why you need an AI editor\n5:13 Who it's for\n6:21 How it works: the 7 jobs\n9:53 Styles and rules\n12:26 A real edit, start to finish\n12:44 What it costs\n13:52 How to install it\n15:15 It's not perfect\n\n🔗 Tools used\nClaude Code + Opus 5.5\nParakeet (free, NVIDIA): https://huggingface.co/nvidia/parakeet-tdt-0.6b-v2\nHyperFrames (free, open source): https://github.com/heygen-com/hyperframes\nFFmpeg (free): https://ffmpeg.org\n\n📺 Watch next: https://youtu.be/zke3bTtvmLo\n\n🙏 Almost 4,000 of you in Skool and over 4,400 on YouTube. Thank you. I read every comment, and I'll keep making free skills every week.\n\n💬 Would you let AI edit your videos? Tell me in the comments.\n\n🔔 Subscribe for more free skills. See you in the next one.\n\n#claude #claudecode #aivideoediting",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/j8YDz-VC-AM/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/j8YDz-VC-AM/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/j8YDz-VC-AM/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/j8YDz-VC-AM/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/j8YDz-VC-AM/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    },
+    "qhd": {
+     "url": "https://i.ytimg.com/vi/j8YDz-VC-AM/qhddefault.jpg",
+     "width": 2560,
+     "height": 1440
+    }
+   },
+   "channelTitle": "Jad M.H  | AI Automation",
+   "categoryId": "22",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "en",
+   "localized": {
+    "title": "Claude Opus 5.5 Is INSANE at Video Editing 0$ (Turned it into a skill)",
+    "description": "My full AI video editor, start to finish: how Claude Code edits my long-form YouTube videos AND my short-form videos (Shorts, TikTok, Reels), what it costs, and how to install it. I turned both editors into free Claude skills 👇\n\n🎁 Get both editing skills free in my Skool: https://www.skool.com/nextphase-5790\n\n🙅 Not sponsored. I don't make money from my channel or the skills. The only thing you pay for is your Claude subscription.\n\n💬 I read all your comments\nYour #1 question: \"How do you edit your videos?\" Claude edited this whole video: the layouts, the motion graphics and the real screenshots. I have 2 AI editors: long form (this video) and short form (one of my shorts did over 100K views on TikTok). They're why I could post 16 videos in 16 days (over 300,000 views). A month ago I posted once or twice a week.\n\n🤔 Why an AI editor?\nAn edit isn't one job, it's 7. If a human edit comes back days later, AI news is already old. These skills do all 7 for $0 on top of your Claude subscription.\n\n👥 Who it's for\n• Businesses that need content every week (YouTube, Shorts, TikTok, Reels)\n• Brands: same colors, fonts and feel in every video\n• Personal brands that want to post a lot and stay consistent\n• Marketers: every client gets their own style\n• Agencies: offer it as part of your service\n\n⚙️ How it works: the 7 jobs\nClaude can't watch or make a video. It reads and writes text and uses free tools on your computer. Drop your recording in the folder, say \"edit this\", pick a style.\n1️⃣ Transcribe: every word with its exact time, using Parakeet (free, runs on my laptop). It once dropped 13 seconds of audio, so the editor now checks the transcript minute by minute.\n2️⃣ Cut: pauses, ums and retakes. Say a line twice and it keeps the good one.\n3️⃣ Research: every site, tool or post I name, it opens Chrome and screenshots the real thing.\n4️⃣ Motion graphics: no video model. Every chart and title is a little web page. HyperFrames screenshots every frame and FFmpeg glues them together, so everything stays editable.\n5️⃣ Color: grades the footage against the reference and can cut me out so big words go behind my head.\n6️⃣ Sound (mostly for shorts): every layout change gets a transition and a sound.\n7️⃣ Finish: joins the chapters, writes captions and timestamps. It never posts. It renders and stops so I watch first.\n\n🎨 Styles and rules\n\"Edit my video\" alone gives you the default look everyone has. That's AI slop. Every style I have came from a video I loved: Claude grabs frames with FFmpeg and measures the colors, fonts, layouts and timing. This style changes layout every 8 seconds. Long form has 8 styles, short form has 5.\nRules: I give notes like a director, then say \"add that to your skill\". My short-form editor has a blacklist of 21 rules, each from a cut I rejected. You start with all my notes.\n\n🎬 A real edit\nIt transcribes, cuts, writes a plan (every chapter, what goes on screen) and waits for my OK.\n\n💰 What it costs\nI'm on Claude Max. No paid APIs: Parakeet, HyperFrames and FFmpeg are all $0. Building the skills cost me over $200 (I maxed out my plan), and that part is done for you. I've edited 81 shorts with it, 5 in one day.\n\n📥 How to install\n1. Join my free Skool: https://www.skool.com/nextphase-5790\n2. Find the post for this video. It links to my Google Drive. Download both editors (long + short), each in its own folder.\n3. Open Claude Code, open the install prompt, copy everything, paste it in and hit enter. It sets up the free tools for you.\n4. Start a new Claude Code session so the skill loads, drop your recording in and say \"edit this\".\n5. Use Opus 5.5 (type /model). Editing is a big job, so don't go cheap on the model.\n\n⚠️ It's not perfect\nYour first edit won't be perfect. Mine weren't. Give it notes and say \"add it to the skill\". The voice jumps some of you noticed? That's my own manual cutting. Someone still has to decide what's good, so editing experience gets you even better results.\n\n⏱️ Chapters\n0:00 I read all your comments\n3:05 Thank you\n4:15 Why you need an AI editor\n5:13 Who it's for\n6:21 How it works: the 7 jobs\n9:53 Styles and rules\n12:26 A real edit, start to finish\n12:44 What it costs\n13:52 How to install it\n15:15 It's not perfect\n\n🔗 Tools used\nClaude Code + Opus 5.5\nParakeet (free, NVIDIA): https://huggingface.co/nvidia/parakeet-tdt-0.6b-v2\nHyperFrames (free, open source): https://github.com/heygen-com/hyperframes\nFFmpeg (free): https://ffmpeg.org\n\n📺 Watch next: https://youtu.be/zke3bTtvmLo\n\n🙏 Almost 4,000 of you in Skool and over 4,400 on YouTube. Thank you. I read every comment, and I'll keep making free skills every week.\n\n💬 Would you let AI edit your videos? Tell me in the comments.\n\n🔔 Subscribe for more free skills. See you in the next one.\n\n#claude #claudecode #aivideoediting"
+   },
+   "defaultAudioLanguage": "en"
+  },
+  "contentDetails": {
+   "duration": "PT16M13S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": false,
+   "contentRating": {},
+   "projection": "rectangular"
+  },
+  "statistics": {
+   "viewCount": "19939",
+   "likeCount": "411",
+   "favoriteCount": "0",
+   "commentCount": "68"
+  }
+ },
+ "ytdlp": {
+  "id": "j8YDz-VC-AM",
+  "title": "Claude Opus 5.5 Is INSANE at Video Editing 0$ (Turned it into a skill)",
+  "description": "My full AI video editor, start to finish: how Claude Code edits my long-form YouTube videos AND my short-form videos (Shorts, TikTok, Reels), what it costs, and how to install it. I turned both editors into free Claude skills 👇\n\n🎁 Get both editing skills free in my Skool: https://www.skool.com/nextphase-5790\n\n🙅 Not sponsored. I don't make money from my channel or the skills. The only thing you pay for is your Claude subscription.\n\n💬 I read all your comments\nYour #1 question: \"How do you edit your videos?\" Claude edited this whole video: the layouts, the motion graphics and the real screenshots. I have 2 AI editors: long form (this video) and short form (one of my shorts did over 100K views on TikTok). They're why I could post 16 videos in 16 days (over 300,000 views). A month ago I posted once or twice a week.\n\n🤔 Why an AI editor?\nAn edit isn't one job, it's 7. If a human edit comes back days later, AI news is already old. These skills do all 7 for $0 on top of your Claude subscription.\n\n👥 Who it's for\n• Businesses that need content every week (YouTube, Shorts, TikTok, Reels)\n• Brands: same colors, fonts and feel in every video\n• Personal brands that want to post a lot and stay consistent\n• Marketers: every client gets their own style\n• Agencies: offer it as part of your service\n\n⚙️ How it works: the 7 jobs\nClaude can't watch or make a video. It reads and writes text and uses free tools on your computer. Drop your recording in the folder, say \"edit this\", pick a style.\n1️⃣ Transcribe: every word with its exact time, using Parakeet (free, runs on my laptop). It once dropped 13 seconds of audio, so the editor now checks the transcript minute by minute.\n2️⃣ Cut: pauses, ums and retakes. Say a line twice and it keeps the good one.\n3️⃣ Research: every site, tool or post I name, it opens Chrome and screenshots the real thing.\n4️⃣ Motion graphics: no video model. Every chart and title is a little web page. HyperFrames screenshots every frame and FFmpeg glues them together, so everything stays editable.\n5️⃣ Color: grades the footage against the reference and can cut me out so big words go behind my head.\n6️⃣ Sound (mostly for shorts): every layout change gets a transition and a sound.\n7️⃣ Finish: joins the chapters, writes captions and timestamps. It never posts. It renders and stops so I watch first.\n\n🎨 Styles and rules\n\"Edit my video\" alone gives you the default look everyone has. That's AI slop. Every style I have came from a video I loved: Claude grabs frames with FFmpeg and measures the colors, fonts, layouts and timing. This style changes layout every 8 seconds. Long form has 8 styles, short form has 5.\nRules: I give notes like a director, then say \"add that to your skill\". My short-form editor has a blacklist of 21 rules, each from a cut I rejected. You start with all my notes.\n\n🎬 A real edit\nIt transcribes, cuts, writes a plan (every chapter, what goes on screen) and waits for my OK.\n\n💰 What it costs\nI'm on Claude Max. No paid APIs: Parakeet, HyperFrames and FFmpeg are all $0. Building the skills cost me over $200 (I maxed out my plan), and that part is done for you. I've edited 81 shorts with it, 5 in one day.\n\n📥 How to install\n1. Join my free Skool: https://www.skool.com/nextphase-5790\n2. Find the post for this video. It links to my Google Drive. Download both editors (long + short), each in its own folder.\n3. Open Claude Code, open the install prompt, copy everything, paste it in and hit enter. It sets up the free tools for you.\n4. Start a new Claude Code session so the skill loads, drop your recording in and say \"edit this\".\n5. Use Opus 5.5 (type /model). Editing is a big job, so don't go cheap on the model.\n\n⚠️ It's not perfect\nYour first edit won't be perfect. Mine weren't. Give it notes and say \"add it to the skill\". The voice jumps some of you noticed? That's my own manual cutting. Someone still has to decide what's good, so editing experience gets you even better results.\n\n⏱️ Chapters\n0:00 I read all your comments\n3:05 Thank you\n4:15 Why you need an AI editor\n5:13 Who it's for\n6:21 How it works: the 7 jobs\n9:53 Styles and rules\n12:26 A real edit, start to finish\n12:44 What it costs\n13:52 How to install it\n15:15 It's not perfect\n\n🔗 Tools used\nClaude Code + Opus 5.5\nParakeet (free, NVIDIA): https://huggingface.co/nvidia/parakeet-tdt-0.6b-v2\nHyperFrames (free, open source): https://github.com/heygen-com/hyperframes\nFFmpeg (free): https://ffmpeg.org\n\n📺 Watch next: https://youtu.be/zke3bTtvmLo\n\n🙏 Almost 4,000 of you in Skool and over 4,400 on YouTube. Thank you. I read every comment, and I'll keep making free skills every week.\n\n💬 Would you let AI edit your videos? Tell me in the comments.\n\n🔔 Subscribe for more free skills. See you in the next one.\n\n#claude #claudecode #aivideoediting",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "I read all your comments",
+    "end_time": 185
+   },
+   {
+    "start_time": 185,
+    "title": "Thank you",
+    "end_time": 255
+   },
+   {
+    "start_time": 255,
+    "title": "Why you need an AI editor",
+    "end_time": 313
+   },
+   {
+    "start_time": 313,
+    "title": "Who it's for",
+    "end_time": 381
+   },
+   {
+    "start_time": 381,
+    "title": "How it works: the 7 jobs",
+    "end_time": 593
+   },
+   {
+    "start_time": 593,
+    "title": "Styles and rules",
+    "end_time": 746
+   },
+   {
+    "start_time": 746,
+    "title": "A real edit, start to finish",
+    "end_time": 764
+   },
+   {
+    "start_time": 764,
+    "title": "What it costs",
+    "end_time": 832
+   },
+   {
+    "start_time": 832,
+    "title": "How to install it",
+    "end_time": 915
+   },
+   {
+    "start_time": 915,
+    "title": "It's not perfect",
+    "end_time": 972
+   }
+  ],
+  "tags": [],
+  "categories": [
+   "People & Blogs"
+  ],
+  "heatmap": null,
+  "upload_date": "20261010",
+  "duration": 972,
+  "channel": "Jad M.H  | AI Automation",
+  "channel_id": "UCkbjWQ7kLFNRY_RiJbqVWRg",
+  "channel_follower_count": 8580,
+  "thumbnail": "https://i.ytimg.com/vi_webp/j8YDz-VC-AM/maxresdefault.webp",
+  "view_count": 19941,
+  "like_count": 411,
+  "comment_count": 35
+ }
+}

@@ -1,0 +1,128 @@
+[00:00] If you're using Claude every day, you have certainly heard of Claude co-work.
+[00:03] And if you still can't figure out why you need to use it, this video is for you.
+[00:07] So, I've spent way over a thousand hours inside of Claude at this point, and I use co-work every single day.
+[00:12] In this video, I'm going to walk you through the six things that make Claude co-work a must-use tool.
+[00:17] Four of them are the core features, and the other two act as superpowers that make those four incredibly powerful.
+[00:24] And this is something that everybody can do.
+[00:26] So, let's jump into number one, which is give it a job to do.
+[00:30] Now, this is the foundation of everything that we're going to talk about today.
+[00:32] So, Claude co-work lives inside of the Claude app.
+[00:35] It's on your desktop, it's on your phone, it's in the web.
+[00:38] But, the desktop app is the one that can actually reach out to files on your computer.
+[00:42] And it actually has the same backbone as Claude code, except you don't have to use the terminal in this case.
+[00:47] And there is a real reason for that, which we'll talk about here just in a couple seconds.
+[00:51] And there also is a difference between Claude chat and Claude co-work.
+[00:55] And it boils down to one thing.
+[00:56] In Claude chat, you can ask it a question, and you're going to get a response back.
+[01:00] In co-work, you're going to assign real tasks for it to complete.
+[01:03] And you may be thinking, why not just use Claude code inside of the app?
+[01:07] And that is true, because both of them are there.
+[01:09] Now, I think Anthropic says it best.
+[01:11] It says, "Claude code is built for software engineering.
+[01:14] If you're going to be writing, debugging, shipping code, then use Claude code.
+[01:19] But, Claude co-work is built for non-technical knowledge work." And that's things like research and analysis, documents, anything that has to move across your folders.
+[01:30] It could be your apps or even your browser.
+[01:32] Now, it has the same engine underneath, but they are doing two completely different jobs here.
+[01:36] Again, if you're writing code, use Claude code.
+[01:38] If you don't, and you still want to do awesome workflows like use AI agents and get real work done, then you're going to want to use Claude co-work.
+[01:46] And that takes us to number two, which is co-work can now use the browser.
+[01:50] Okay, so this is relatively new, but it does work really well.
+[01:53] So, let's say that you had to log into a website every single week.
+[01:56] And that could be a supplier portal, it could be a payroll site, it could be the seller's dashboard of whatever marketplace you're selling on.
+[02:04] It really doesn't matter.
+[02:04] If there's no app for it, and there's no integration, that means that you have to log in every single week, you have to grab a handful of numbers just to copy them onto a spreadsheet, and that could take
+[02:14] you 20 minutes per site that you have to do that for.
+[02:17] But, this is something that CoWorker can do for you relatively easy.
+[02:20] So, you're going to give Claude CoWorker a task.
+[02:22] Now, what it's going to do is it's going to open up a browser on the side panel right next to your task.
+[02:27] Now, you can watch the whole thing happen if you want to.
+[02:29] It's going to go to the site that you've already signed into.
+[02:31] It's going to find the page that you need, it's going to pull those numbers, and it's going to drop them into a file that you can open.
+[02:37] And guess what?
+[02:38] You don't always have to have your computer on for this to work, which takes us to number three, and that is Claude CoWorker keeps working even when your laptop is closed.
+[02:47] So, this is one that I find really powerful.
+[02:49] Let's say that my laptop is closed, and it's the middle of the night, and I still want CoWorker doing all of the work.
+[02:54] So, when it's done, it's waiting for me in the morning whenever I wake up.
+[02:57] Well, it can do that.
+[02:58] So, there's two things to understand here.
+[02:59] The first part is when you hand a CoWorker a job, the job has to run somewhere.
+[03:03] It could run on the machine that you're using right now, or it could run on a computer sitting in one of Anthropic's data centers.
+[03:10] And that's what people mean when they say that they are using things in the cloud.
+[03:14] It's not floating out there somewhere, it's a real machine in a real building, it's just running on somebody else's computer.
+[03:20] So, what this means is that when your CoWorker task is running on a machine in the cloud instead of yours, your laptop or your computer really doesn't matter at that point, right?
+[03:29] Like, you can shut it, you can turn it off, you can go to bed, the work is still going to get done.
+[03:34] And the second part here is that you don't even have to start the task if you don't want to.
+[03:38] You can actually turn on a schedule for it to run.
+[03:40] Now, a schedule can run hourly, daily, weekly, it doesn't matter.
+[03:44] As long as you're on a paid plan like Claude Pro, these tasks can be scheduled.
+[03:49] If the job needs something that only exists on your computer, like files or or folders, then the browser does need your computer to be awake and the desktop app needs to be open, which goes against what I said
+[03:59] that you can just close your laptop.
+[04:01] Now, there is good news here.
+[04:02] Inside of Claude, if you go to settings and then you go to desktop app, then you go to general, you're going to see this button right here that says keep computer awake.
+[04:11] Now, if this is something that you want to turn on and you turn it on, what's going to happen is that your computer screen will still go off, but your schedule tasks are still going to run.
+[04:18] And that brings me to number four, which is co-work follows you from one device to another.
+[04:24] Now, this one is really convenient.
+[04:25] Your co-work session is tied to your Claude account, not the machine that you started it on.
+[04:30] So, if you start something on your desktop and you get up and you walk away, maybe you go to work, you can pull up the exact same session on your phone and then keep going right where you left
+[04:39] off.
+[04:39] Now, it's going to have the same thread, it's going to have the same memory, and you're not re-explaining anything, it's just following you from device to device.
+[04:46] But then there's dispatch.
+[04:48] Dispatch is one of my favorite things inside of co-work.
+[04:51] With dispatch, you can use your phone to remote right inside of your computer.
+[04:54] And now, the benefit to that is if you are giving Claude co-work a task through dispatch, it can act as an agent to complete the entire job in one pass, meaning that your computer is going to pick it
+[05:05] up, it's going to do the work, it's going to look at your real files, look at your real apps, look at your browser if it needs to, and then when it's finished, it's going to give you back the
+[05:13] result.
+[05:13] And some people get confused with the difference between dispatch and then just the co-work app, and I think there's a really easy way to understand this.
+[05:20] The Claude co-work app on your phone is best for things that are in the cloud.
+[05:24] That could be files that you saved in the cloud, it could be research, it could be anything that doesn't live on your machine.
+[05:30] Dispatch, however, is what you want to use when the job needs your actual computer.
+[05:35] That means the files that are in your computer, your hard drive, apps, anything that you've given it permission to on your computer itself, which brings me to the two upgrades that really make Claude co-work absolutely amazing to work
+[05:46] with.
+[05:46] But before we get into those two, if you're finding this helpful, if you could, please subscribe, please like this video, leave a comment.
+[05:52] It really helps out the channel.
+[05:54] It's something that I really appreciate.
+[05:55] But, back to number five, which is using connectors.
+[05:58] So, if you're not sure what a connector is, a connector is really easy to understand.
+[06:01] It basically is how Claude talks to other applications and services.
+[06:05] So, it can go to Gmail, it can go to Google Drive, it can go to Slack and hundreds of other places at this point.
+[06:12] And you may have heard of MCP before.
+[06:14] MCP stands for Model Contact Protocol.
+[06:16] Connectors are powered by MCP.
+[06:19] You don't need to know what an MCP is.
+[06:20] You just need to know that Anthropic has packaged up a way that you could talk to applications and made it really easy, and they call it a connector.
+[06:28] But, if you connect something, you instantly have access to that as a tool.
+[06:32] Now, I use plenty of connectors myself.
+[06:34] I have Google and Google Drive and Google Calendar and a bunch of other connectors, probably a dozen other ones that I use on a regular basis.
+[06:41] Now, Claude works great even without these connectors, but with a connector, Claude work is significantly more powerful.
+[06:47] Which brings us lastly to number six.
+[06:50] And this one is skills.
+[06:52] A skill is something that you teach Claude how to do just one time.
+[06:54] And when you teach it, you never have to type that long prompt out over and over again.
+[06:59] You just tell it to run that skill and it's going to complete that task exactly how you want it to be completed.
+[07:04] Which means that you don't have to re-explain yourself over and over to Claude.
+[07:08] If we're going back to that weekly browser poll, that means that you only have to write down the steps one time and then it's going to be able to do that every single time.
+[07:15] But, if you don't want to describe your task on how to get something done, they have added something really cool and it's called record a skill.
+[07:22] Now, this is the easy button to skills because now you're not typing anything out, you're literally showing Claude how to do a task.
+[07:29] So, what you do is you would hit this plus button down here.
+[07:31] You would click record a skill.
+[07:33] And then it's going to record your screen, your clicks, your typing, your voice, and then it's just going to do that task for you.
+[07:39] So, let's say we want Claude to order the best pizza in town for me.
+[07:42] What I would do is I would click record.
+[07:45] I would walk through the entire order process from Papa John's exactly the way that I normally would.
+[07:50] And then I hit done.
+[07:51] So, the next time I say order me a pizza, it's going to run through that whole thing and Papa John's will be ordered.
+[07:56] Best pizza in town.
+[07:58] Now, one warning that Entropic gives you is they say don't put anything sensitive on the screen when it's recording like passwords or medical information or anything that you don't want it to record basically.
+[08:09] I think that makes sense.
+[08:10] I do have to have a paid plan to use record a skill.
+[08:12] It's on the pro, the max, the team plans.
+[08:15] And I believe it's only in Co-work for Mac.
+[08:18] So, if you have Windows, it may not be there yet.
+[08:19] But those are the six features that make Co-work an unsung hero.
+[08:23] Remember, you're giving it a task instead of just having it answer a question for you.
+[08:27] It's going to use the web browser.
+[08:29] It's going to keep going even when your laptop's closed.
+[08:31] It's going to follow you from device to device.
+[08:34] It's going to use connectors to talk to other applications.
+[08:37] And then skills, it's going to teach it how you want things done.
+[08:40] So, if this is helpful, please hit subscribe, like the video, leave a comment, and I will see you in the next one.

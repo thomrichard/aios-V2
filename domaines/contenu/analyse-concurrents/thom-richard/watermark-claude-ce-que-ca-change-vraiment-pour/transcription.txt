@@ -1,0 +1,245 @@
+[00:00] Alors voilà ce qu'on voit passer sur internet depuis 2 semaines.
+[00:02] Ce sont les "Fini écriture avec IA, je résilie mon abonnement." Et celui-là c'est mon préféré "LinkedIn va enfin bannir l'IA." Et ce qui a déclenché tout ça, c'est que depuis le 2 août, tout ce que Claude écrit porte
+[00:11] une marque invisible.
+[00:12] Et alors depuis on voit passer tout et son contraire.
+[00:14] Que tes textes vont être dégradés, que ça va te coûter plus cher, tu ne peux plus travailler avec l'IA sans te faire repérer.
+[00:20] Ce que j'ai fait, c'est que je suis allé voir la documentation de Claude et j'ai ouvert le texte de loi qui est à l'origine de tout ça et que tout le monde cite sans jamais l'avoir lu.
+[00:27] Et ce que j'ai trouvé ça ça ressemble pas du tout à ce qui circule.
+[00:29] Et dans cette loi, il y a même une phrase que je n'ai vu citer nulle part et pourtant elle te concerne directement toi, utilisateur.
+[00:34] Allez, on rentre dans le vif du sujet.
+[00:38] Alors on va faire trois choses.
+[00:40] D'abord, je vais t'expliquer ce que c'est ce filigrane et surtout concrètement ce que ça change pour toi.
+[00:44] Je vais pas te sortir une une version technique indigeste, je vais te l'expliquer d'une façon que tu pourras retransmettre toi-même plus tard à n'importe qui.
+[00:51] Deux, on va regarder ce que dit le texte de loi européen, le AI Act, parce que tout le monde dit que l'Europe interdit d'écrire avec l'IA et c'est pas ça du tout.
+[00:57] Et tu verras, tu seras certainement surpris par ce qu'elle demande, c'est tout simple.
+[01:00] Et trois, je vais te donner mon avis sur l'espèce d'ambiance qu'il y a autour de ça.
+[01:03] Je vais ménager personne, ni ceux qui paniquent à cause de cette loi et ni ceux qui ont écrit cette loi.
+[01:07] Depuis le 2 août, tout nouveau modèle Claude qui sort produit du texte marqué.
+[01:11] C'est pas qu'en Europe, c'est mondial.
+[01:13] Il n'y a aucune option pour le désactiver, ni dans l'application, ni dans l'API, ni même dans une offre entreprise.
+[01:18] Et maintenant, dans ce que je viens de te dire, il y a un mot qui compte, qui est tout petit et qui est nouveau.
+[01:22] Je t'ai dit effectivement "tous les nouveaux modèles de Claude".
+[01:26] Donc les modèles qui sont sortis avant le 2 août, eux ne portent pas la marque.
+[01:29] Et ils vont être équipés petit à petit.
+[01:31] Il n'y a pas de calendrier officiel là-dessus.
+[01:32] La seule date ferme qu'on a, c'est la date butoir proposée par la loi qui est celle du 2 décembre 2026.
+[01:38] À partir de là, tous les modèles doivent être marqués.
+[01:40] Et je vais tout de suite couper court à une idée que j'ai vue, c'est pas une bille d'entropie autour de Claude.
+[01:44] Ça concerne tous les éditeurs.
+[01:46] Open AI, Google, Meta, Microsoft, Mistral, tous ceux-là ont signé cet engagement.
+[01:50] Il y en a qui ont refusé, il s'agit de X, donc Grok, et également les autres les modèles open source chinois.
+[01:55] Et attention, refuser de signer ça veut pas dire que tu es exempté, donc potentiellement il pourrait être bloqué ou avoir des pénalités à cette date-là.
+[02:01] Et ça veut juste dire qu'ils ne se sont pas engagés à suivre la méthode commune que vont utiliser tous ceux qui ont signé cette charte.
+[02:07] Ils vont faire leur truc dans leur coin.
+[02:09] Et à date, il y a rien de documenté, en tout cas rien d'officiel chez eux.
+[02:12] Alors je vais t'expliquer comment ça marche.
+[02:13] Globalement, il y a rien de visuel, il y a rien que tu ne puisses trouver.
+[02:16] Il y a pas de caractère invisible, c'est pas une balise qui est ajoutée quelque part on ne sait où, et c'est pas quelque chose qui est dans le fichier du même.
+[02:21] En fait, tout va se jouer sur le texte.
+[02:23] Et alors pour ça, tu dois comprendre ou te rappeler comment marche le IA.
+[02:26] Quand tu n'y as écrit quelque chose, à chaque mot, elle va calculer la probabilité du mot suivant.
+[02:31] Et pour ce mot suivant, elle a une liste de candidats et en fonction du contexte, elle va choisir le plus pertinent.
+[02:36] Donc c'est chacun des candidats a une une cote, un peu comme sur un pari.
+[02:39] Tu en as qui ont plus de poids que d'autres.
+[02:41] Et avec ce mécanisme, tu as deux situations complètement différentes.
+[02:43] Tu as la première situation où il y a pas de débat.
+[02:46] Et finalement, il peut pas y avoir d'autres mots.
+[02:48] C'est par exemple, si tu as mis en début de phrase "La capitale de la France c'est", pour le mot suivant, et ben il y a pas 10000 choix, c'est Paris.
+[02:56] Donc il y a pas de différents candidats, il y a un mot, c'est tout.
+[02:59] Par contre, tu as une deuxième situation où tu as un mot, tu pourrais appliquer un synonyme et ça va pas changer le sens de la phrase.
+[03:06] Par exemple, dans la phrase "C'est un grand changement pour l'équipe", grand, ça pourrait être un gros changement, ça pourrait être un important changement, et cetera et cetera.
+[03:15] En changeant juste ce mot-là, tu ne changes pas le sens de la phrase.
+[03:18] Globalement, ces mots-là ont le même score, la même cote pour Claude au moment où il doit choisir.
+[03:23] Et toute la logique du système, c'est que le le watermark, donc le filigrane, va s'appliquer uniquement dans ce deuxième cas.
+[03:30] Donc il ne peut pas s'appliquer sur le premier.
+[03:33] Et alors concrètement, comment ça ?
+[03:35] En fait, quand tu as une liste de candidats comme ça qui ont à peu près le même euh le même score, il y a une clé qui va déterminer le bon mot à mettre.
+[03:41] Et euh cette clé, elle va changer.
+[03:43] Ça veut dire qu'elle va elle elle est faite pour ne pas chercher tout le temps le même synonyme.
+[03:47] Sinon, tu pourrais effectivement avoir une répétition de synonymes dans tout dans tout le le corps de de texte et ça dégrade ton ton document.
+[03:54] Donc, il y a pas un mot ou un autre qui est favorisé, la clé c'est l'explication du choix parmi les X synonymes euh de qui sont proposés à Claude ou que Claude envisage pour la suite.
+[04:04] Il faut en fait des centaines de choix dans le même document pour que là la clé prenne de la valeur et que cette logique prenne de la valeur.
+[04:11] Je vais pas rentrer plus loin dans la technique, c'est pas le sujet aujourd'hui.
+[04:13] Si tu veux plus de détails, je te mets dans la description une vidéo qui le documente très bien.
+[04:18] Et donc une autre euh une autre conséquence immédiate de ce de ce mode de fonctionnement, c'est que ta clé, elle se trouve dans le texte.
+[04:25] Ton filigrane se trouve dans le texte.
+[04:27] Donc, le copier-coller, ça ne t'enlève pas le fait d'avoir ce filigrane dans ton texte.
+[04:32] Changer de phrase, ça ne suffit pas non plus.
+[04:34] Et tu ne peux pas par exemple mettre euh ton texte sous doc, l'enregistrer et penser que ça va aller mieux, c'est vraiment dans le contenu, dans le choix des mots que ça se joue.
+[04:41] Euh moi je l'assume, je travaille avec l'IA.
+[04:44] Pour moi, l'IA, c'est mon rédacteur et pour moi, le le fond a beaucoup plus d'importance que la forme.
+[04:52] Et le fond, c'est moi qui le porte.
+[04:54] Alors maintenant ce qu'on va faire, c'est qu'on va euh regarder toutes les objections, tous les toutes les critiques qu'on peut faire, enfin qu'on voit passer sur cette méthode et on va les prendre une par une pour voir ce
+[05:02] que ça vaut.
+[05:02] J'en ai sélectionné cinq qu'on va regarder ensemble.
+[05:04] Donc, la première c'est "Ça va m'identifier." Alors non.
+[05:08] Par rapport à ce que je viens de t'expliquer, tu tu vois très bien qu'il y a aucune chose qui va plus venir t'identifier toi.
+[05:15] Donc non.
+[05:16] Il n'y a rien dans tout ça, dans tout ce que je viens de t'expliquer qui permet de remonter à ton compte, de t'identifier.
+[05:21] En fait, c'est juste une sorte de tournure de style qui est pilotée par une clé.
+[05:25] Mais à aucun moment ça va dire c'est ce compte Entropique là qui a généré ou ce compte d'ailleurs Google ou ce compte Open AI.
+[05:31] On l'a vu, ils ils vont tous fonctionner de la même manière, il y en a il y a aucune manière pour remonter à toi.
+[05:37] Alors la deuxième objection, c'est "Ça va prouver que Claude a écrit mon texte." Alors là non plus, et là il y a deux choses.
+[05:42] Alors la première chose découle directement de ce qu'on vient de voir juste avant, c'est qu'il faut du volume.
+[05:47] Donc finalement ce qui ce qui ce qui va impacter la détection ce qui va impacter ce filigrane, c'est le nombre de mots que Claude a choisi dans ce texte.
+[05:55] Si tu as écrit une page toi-même et que Claude a modifié deux lignes, ces quelques mots-là vont se noyer dans les tiens.
+[06:01] Et la deuxième chose, c'est que en fait c'est des probabilités, donc c'est pas c'est pas une affirmation exacte.
+[06:08] Enfin quand quand la marque est détectée, quand elle est là, on dit pas ça a été écrit par Claude, elle dit en fait ce texte, il est cohérent avec un passage par Claude parce que rien n'empêche un humain
+[06:18] d'avoir choisi exactement les mêmes mots que Claude.
+[06:20] Autre petite remarque sur cette deuxième, est-ce que vraiment c'est grave si on sait que tu as écrit tes textes avec ?
+[06:25] J'en parle après dans ma critique.
+[06:27] Moi je suis d'avis que non.
+[06:28] La troisième objection, elle va être plus importante, c'est est-ce que ça va dégrader mon ?
+[06:33] Bah oui puisque les mots que qui sont choisis ne sont plus choisis uniquement en fonction du sens mais sont choisis pour pouvoir appliquer ce filigrane.
+[06:39] Donc tu peux tu peux te dire est-ce que c'est est-ce que ça va dégrader mon mon ?
+[06:44] Donc là, on est un peu obligé de se fier à la méthode et qui dit que c'est appliqué uniquement sur des mots qui ne changent pas du tout le sens de la phrase et qui sont vraiment très proches.
+[06:54] Et cette logique finalement elle est bah elle marche.
+[06:57] Tu dis un grand changement ou un changement majeur, au final c'est un peu la même chose.
+[07:00] Et Google a même fait un test euh un test sur les réponses de Gemini et ils ont mesuré le niveau de satisfaction donc tu sais quand quand tu quand tu bosses avec Gemini mais ça marche aussi avec Claude
+[07:12] et avec ChatGPT, tu peux mettre un pouce en l'air ou un pouce vers le bas pour noter la qualité de la réponse.
+[07:17] Et ils n'ont vu aucune différence notable entre les deux versions.
+[07:21] Et ça c'est une c'est une étude qui est parue dans Nature donc indépendante, c'est pas Google qui l'a mis sur son blog.
+[07:26] Donc ça vaut ce que ça vaut mais clairement d'un côté on a la méthode telle qu'elle est décrite qui ne peut pas qui qui tient la route et qui ne qui pour moi répond à la promesse et on
+[07:35] a en plus un test qui a été fait autour de Google.
+[07:37] Donc pour moi non, ça ne va pas changer la qualité de tes tes écritures.
+[07:41] La quatrième objection, c'est que ça va te coûter plus cher.
+[07:44] Donc forcément, naturellement, il y a une méfiance envers quelqu'un qui va te vendre quelque chose, en tout cas, particulièrement en France, et là, le réflexe ça va être de se dire OK, bah ils vont générer des tokens supplémentaires
+[07:55] pour mettre en place ce filigrane, ils font ça pour gagner de l'argent.
+[07:58] Non.
+[07:59] Puisque la seule différence se fait dans le choix du token.
+[08:02] Ça veut pas dire que tu vas avoir deux tokens au lieu d'un seul, ça veut dire que tu remplaces un token, donc un mot, par un autre.
+[08:08] Donc ça ne te coûte strictement rien.
+[08:11] Et ensuite, j'ai j'ai vu d'autres, bon bah qui m'a voilà, qui m'a un peu fait un peu plus fait rire, c'est que euh il y en a qui disent ça va polluer mon code.
+[08:21] Non.
+[08:22] Euh pas du tout.
+[08:23] Pas pour la raison euh qu'ils peuvent croire et je vais le montrer ça tout de suite.
+[08:27] Bon maintenant, une autre question réelle, toi tu vas te dire est-ce que moi ça me ?
+[08:31] Quand je fais relire un texte par Claude, est-ce qu'il est ?
+[08:33] Quand je fais traduire un document, est-ce qu'il est ?
+[08:35] Quand j'écris du code avec Claude, est-ce qu'il est ?
+[08:37] Et en fait, en réfléchissant bien, tu as la réponse.
+[08:40] Il suffit de se rappeler le principe du fonctionnement qui est de dire que c'est marqué à la hauteur de la liberté de formulation.
+[08:46] Ça c'est repris directement de de l'explication de d'Anthropic, ce qui veut dire que plus il y a de façons de dire la même chose, plus il y a de place pour cette marque.
+[08:55] Et alors, pour le code, donc le code, ça exige une sortie qui est exacte, c'est-à-dire que c'est pas de la littérature.
+[09:02] Finalement, tu as peu de choix arbitraire à faire.
+[09:04] En fait, le code, c'est le pire c'est l'un des pires supports pour ce genre de marquage.
+[09:09] Donc c'est pas fait pour ça.
+[09:10] Alors maintenant, on va parler de la loi.
+[09:11] Et cette loi, elle est imposée par l'Europe, par Bruxelles.
+[09:14] Et en fait, les IA Act, faut pas le voir comme un un seul bloc.
+[09:17] En fait, ils ont défini plusieurs étages en fonction de la gravité de l'utilisation de l'IA et ils ont mis en face des actions à faire.
+[09:22] Et là, ce dont on parle aujourd'hui, le marquage, ça ne concerne qu'un seul étage et c'est le plus léger où ils imposent quelque chose.
+[09:29] Ils appellent ça le le risque limité et ce qu'ils veulent, c'est développer de la transparence.
+[09:33] Donc si on reprend très vite la carte de cette loi, tout en haut, tu as un risque qui n'est pas acceptable, c'est interdit, point, tu peux pas utiliser l'IA.
+[09:41] Donc par exemple, la notation sociale des citoyens.
+[09:43] Donc ça c'est des exemples qui sont dans la loi, hein.
+[09:45] Euh en dessous, là où il y a du haut risque, le recrutement, le crédit, la santé.
+[09:49] Il y a des obligations très lourdes et elles ne sont même pas encore toutes en Ensuite, tu as le risque limité, c'est l'étage dont on parle actuellement, où là on demande de la transparence.
+[09:58] Et en bas, tu as le risque minimal.
+[10:00] Là, rien du tout.
+[10:01] Donc si on revient sur euh sur ce l'étage de cette loi-là, celui qui nous concerne, il y a un article à retenir, c'est l'article 50.
+[10:08] C'est dans cet article, il y a quatre alinéas.
+[10:10] Alinéa 1, prévenir quelqu'un qu'il est en train de parler à une IA et pas à un un humain.
+[10:15] Alors ça, ça ne concerne pas l'utilisateur, ça concerne celui qui fournit le système, celui qui fournit l'outil.
+[10:22] Donc Anthropic, Google, OpenAI, et cetera et cetera.
+[10:26] Alinéa 2, marquer les sorties dans un format lisible par machine.
+[10:31] Ça pèse aussi sur les fournisseurs.
+[10:33] Et en fait, c'est exactement de celui-là qu'on parle depuis le début de cette vidéo.
+[10:36] Alinéa 3, la reconnaissance des émotions, la biométrie, ça ne nous concerne pas dans le sujet présent, donc on passe.
+[10:44] Alinéa 4, les deepfakes, les textes publiés pour informer le public sur des questions d'intérêt général.
+[10:50] En fait, c'est celui-là qui pèse sur celui qui crée quelque chose.
+[10:53] Donc potentiellement, toi et moi.
+[10:56] Donc si on prend juste un pas de recul là par rapport à tout ça, la marque de Claude, c'est l'alinéa 2.
+[11:02] Une obligation qui pèse sur celui qui édite le modèle, c'est pas sur toi.
+[11:05] Ça veut dire tu n'as rien à faire, tu n'as rien à cocher, rien à déclarer, tu ne vas pas être identifié, c'est même pas une obligation que toi tu portes.
+[11:11] Et juste pour bien comprendre la portée des des sanctions, parce que ça explique la mise en place assez rapide de tout ça, c'est que ça fait jusqu'à 15 millions d'euros ou 3 % du chiffre d'affaires mondial.
+[11:20] Donc autant dire que ça fait largement plus de 15 millions.
+[11:24] Donc voilà pourquoi tout le monde a bougé en même temps et pourquoi ils ont même pas eu le temps de demander ton avis finalement.
+[11:28] Et il y a un mot là-dedans qui qui ressort et qui porte tout le dispositif, c'est que ce mécanisme, il doit être lisible par une machine.
+[11:35] Donc le législateur, donc les les juristes ont délibérément écarté un texte du genre généré par IA par IA sous l'image.
+[11:44] Le but, c'est pas que les autres humains le voient, c'est qu'on puisse tracer à l'aide d'une machine le texte qui a été généré par l'IA ou qui est possiblement généré par l'IA.
+[11:53] On va parler de l'alinéa 4, donc c'est celui qui qui concerne ceux qui créent du contenu.
+[11:58] Et à nouveau, il y a une phrase qui sort peu, qui est sauf si le contenu a fait l'objet d'un contrôle humain ou d'une responsabilité éditoriale.
+[12:07] Donc relis-la bien lentement.
+[12:09] L'Europe ne te demande pas de déclarer que c'est l'IA qui a écrit.
+[12:14] Elle demande simplement de savoir qu'il y a quelqu'un derrière ce texte.
+[12:19] Quelqu'un qui a relu, qui a corrigé et qui assume ce qu'il publie.
+[12:22] Donc ce qui est visé, c'est pas l'utilisation de l'IA, ce qui est visé, c'est la publication en mode automatique via l'IA.
+[12:29] Donc c'est le contenu qui sort tout seul, en boucle, dans des sur des machines isolées et cetera, sans que personne n'ait regardé ce qui est produit.
+[12:38] Et que ce soit déversé partout.
+[12:40] En fait, finalement, pendant que l'Europe travaillait sur ces sujets-là, je pense que les plateformes de réseaux sociaux travaillent elles-mêmes là-dessus.
+[12:46] On a vu que YouTube a commencé à fermer des chaînes qui étaient publiées en automatique.
+[12:51] LinkedIn, on en parle juste après, a mis un système qui permet d'identifier les contenus qui sont publiés par l'IA.
+[12:58] Et globalement, ils ont mis tout ça en place sans pas sans avoir besoin de la loi.
+[13:02] Donc maintenant, je vais te donner mon avis.
+[13:04] Je vais commencer par ceux qui du coup disent "Non, mais moi je vais arrêter mon Je vais arrêter mon abonnement.
+[13:11] Je trouve ça inacceptable et cetera.
+[13:12] C'est encore l'utilisateur qui va payer pour ces conneries et cetera." Bref, ça franchement, moi je trouve que c'est une bêtise.
+[13:18] Euh enfin, c'est une réaction qui est qui est qui est bête.
+[13:22] Euh tout simplement, en fait, qui est de mal informé, c'est que globalement, tu es pas identifié, il y a pas de chasse aux ça va pas dégrader ton contenu et ça ne te coûte rien.
+[13:30] Donc voilà et en plus euh c'est seulement lisible par les machines.
+[13:34] Le but c'est pas que tes lecteurs, que ceux qui vont lire ton contenu sachent que tu l'as publié avec l'IA.
+[13:39] Et donc cette détection elle est uniquement réservée à notre outil et pour la petite histoire, il y a même pas encore de date annoncée pour l'outil public de détection.
+[13:48] Et on l'a vu, en fait le détecteur ne dit pas "C'est de l'IA." il dit "C'est probablement passé par de l'IA." Et donc au final, c'est très difficile de de mettre en place un système comme ça de de
+[14:00] vérification parce que de toute façon c'est que de la probabilité.
+[14:03] Donc je je mets de l'IA pour faire du brainstorming, je mets de l'IA pour organiser mes idées, mais à chaque fois que je produis quelque chose, je dis à l'IA la direction, je dis à l'IA les sujets sur
+[14:13] lesquels on va parler.
+[14:14] Donc j'assume travailler avec l'IA et pour moi il faut travailler avec l'IA, c'est c'est bête de pas le faire parce que tu vas te faire dépasser par tout le monde.
+[14:22] En fait, s'interdire de bosser par avec l'IA parce que ça se voit, ben oui, mais quand des gens sont passés du de la plume au stylo, euh c'est pareil, ça se voyait et les gens écrivaient beaucoup plus vite.
+[14:35] Et là on est exactement sur la même chose.
+[14:37] C'est un outil et il faut s'en servir, il faut apprendre à bien s'en servir.
+[14:40] Et en fait finalement quand tu réfléchis, pourquoi tu veux te battre sur le fait qu'on voit que ton travail est fait avec ?
+[14:46] À mon avis, c'est que euh tu assumes pas en fait, c'est exactement dans le texte, c'est que c'est que bah tu fais du slop euh on en reparle encore après mais globalement bah tu balances ton IA et tu
+[14:57] fais pas gaffe à ce qu'elle fait et c'est justement c'est effectivement ça que les plateformes vont combattre.
+[15:03] Maintenant au niveau si on prend euh le point de vue si on parle de l'Europe maintenant qui a imposé ça, euh globalement l'idée c'est de savoir ce qui sort d'une machine.
+[15:11] Et moi je trouve ça plutôt louable.
+[15:13] Euh aujourd'hui on a beaucoup de désinformation, beaucoup de choses comme ça.
+[15:16] Donc oui euh clairement l'intention est bonne.
+[15:20] Il y a un responsable dont on a pas parlé, c'est aussi ceux qui vont porter euh la publication.
+[15:24] Donc et on en parle juste maintenant voir un peu comment eux ils réagissent, c'est des réseaux sociaux par exemple.
+[15:29] Énormément d'IA dessus.
+[15:31] Est-ce que c'est pas à eux finalement aussi de maîtriser ce qui est sur leur sur leur ?
+[15:36] Alors justement ça arrive à peu près au même endroit donc de mon point de vue, c'est pas forcément lié, peut-être que ça l'est.
+[15:42] Mais LinkedIn a sorti un bouton qui s'appelle Seems like AI Slop.
+[15:48] Donc ça ressemble à du Slop AI.
+[15:50] Donc il y a du contenu IA bâclé.
+[15:51] Et si tu regardes bien, on joue pas sur la même échelle parce que c'est ça ressemble à et c'est un bouton qui est activé par le lecteur.
+[15:59] Et va beaucoup passer LinkedIn fait la la chasse à l'IA.
+[16:03] Non, il fait la chasse au AI Slop.
+[16:06] Donc le Slop est très important.
+[16:08] C'est le contenu vide, c'est de la bouillie, c'est littéralement de la bouillie.
+[16:11] Donc c'est du contenu qui est complètement inintéressant.
+[16:13] Et là-dessus, l'approche est différente.
+[16:15] Donc c'est pas basé sur un watermark qui est détectable par la machine.
+[16:19] C'est de la entre guillemets dénonciation du lecteur pour dire ça, c'est de l'IA.
+[16:24] Ça j'ai l'impression ça ça m'intéresse pas.
+[16:25] C'est de l'IA Slop, c'est euh passez-moi l'expression, c'est de la merde.
+[16:28] Et justement, ils ont sorti de récemment une info comme quoi il y avait eu plus d'un million de signalements et ça les a poussés à faire quelque chose.
+[16:35] Donc normalement, tant que tu écris des choses intéressantes, personne, même si tu le fais avec l'IA, tant que tu intéresses les gens, tu ne vas pas être détecté comme écrivant avec l'IA en postant sur LinkedIn.
+[16:44] Par contre, moi je trouve qu'il y a une espèce de de chasse aux sorcières qui s'organise.
+[16:48] Beaucoup de gens critiquent ça et cetera.
+[16:50] Encore une fois, c'est se passer d'un outil qui quand il est bien utilisé ne dégrade pas la pensée qu'il y a derrière et qui permet juste de produire plus vite euh du contenu de qualité.
+[17:01] Et en fait, là c'est le dernier truc dont je vais parler par rapport à ce que j'en pense, c'est que en fait quand tu réfléchis, on n'a pas attendu l'IA pour avoir des contenus pauvres sur LinkedIn.
+[17:10] Euh pour avoir des trucs qui servent à rien, des commentaires complètement stupides.
+[17:14] L'IA a accéléré ça mais euh personnellement, ben j'attends aussi le bouton euh Human Slow, parce que quand je vois des fausses vérités, quand je vois des mensonges, tout ça, il y a il y a rien pour le signaler.
+[17:24] Donc, c'est ce que je te disais tout à l'heure, pour moi, la responsabilité elle n'appartient pas à celui qui fournit l'outil, elle appartient à celui qui diffuse.
+[17:33] Donc, à la fois celui qui écrit et qui doit assumer ce qu'il a écrit et à la fois la plateforme qui diffuse et qui elle doit faire la chasse à toutes ces fausses vérités, à toutes ces ces ces
+[17:43] trucs vides.
+[17:44] Euh voilà.
+[17:45] LinkedIn l'a compris, ils ils font des des choses là-dessus, YouTube l'a compris pris aussi.
+[17:50] On va voir où ça mène tout ça.
+[17:51] Donc, on va faire un petit bilan.
+[17:53] Choses à retenir, la première, c'est que la marque ne t'identifie pas, elle ne dégrade pas ton travail, elle ne te coûte rien et personne ne peut la lire aujourd'hui.
+[18:02] C'est pas une raison, du coup, de changer euh ta façon de travailler et surtout d'arrêter de travailler avec l'IA.
+[18:07] La deuxième chose, c'est que l'obligation de marquer, c'est elle pèse pas sur toi, elle pèse simplement sur celui qui fournit l'outil.
+[18:13] Toi, ce qu'on te demande simplement, c'est d'assumer derrière ce que tu écris, ce que tu publies et c'est simplement d'être maître de ce que tu écris.
+[18:21] Et là, pour moi, la troisième chose à retenir, c'est que le sujet le plus important, finalement, c'est plus la diffusion que euh la création de de contenu.
+[18:30] Donc, voilà pour cette vidéo, c'est pas le genre de vidéo que je fais d'habitude.
+[18:34] D'habitude, je suis plutôt sur du côté pratique, euh comment mettre en place l'IA, comment mettre en place un iOS, du tutoriel sur Claude et cetera.
+[18:41] Là, honnêtement, ça me démangeait parce que j'ai vu passer beaucoup de choses et des des choses qui pour moi étaient fausses et euh et prenaient un sens ouais, ça, de chasse aux sorcières, de "Bouh, c'est pas bien de
+[18:50] travailler avec l'IA." Euh donc, dis-moi euh dis-moi en commentaire si euh ce que toi tu penses du sujet, ce que tu penses de ce format, est-ce que ça t'a plu, est-ce que c'est le genre de sujet qui permettent
+[19:02] de d'avoir d'autres angles, d'autres avis sur l'actualité, finalement.
+[19:06] Euh vas-y, envoie tout, moi je lis tout, je m'adapte.
+[19:08] Est-ce que je te propose, c'est de t'abonner, si tu l'as pas déjà fait, et de mettre un petit like sur la vidéo.
+[19:12] Moi, ça m'aide beaucoup et ça permet de faire grandir la chaîne.
+[19:15] Donc, je te dis à bientôt et regarde ma dernière vidéo.

@@ -1,0 +1,131 @@
+[00:00] In 1939, a student turned up late to a statistics class, copied two problems off the board thinking they were homework, and handed in his answers the next day.
+[00:09] They were two unsolved problems in statistics, and he solved them because he didn't know that they weren't solved.
+[00:16] And according to the lead engineer of the Claude app at Anthropic, that is the mindset that the top 1% of agentic AI users have.
+[00:24] His article on it called how to be more ambitious, a tutorial for humans with models, now has over 4.5 million views on X.
+[00:32] So today I'll share with you all the insights he shared and go through the three methods by which you can become more ambitious with AI.
+[00:39] And for each one, I'll show you what most people do right now and what the top 1% of AI users' version looks like so that you can apply it on your own to become even more effective when you're
+[00:49] using Claude for your business.
+[00:51] And if you're new, my name is Jay.
+[00:52] I spent over a decade working with brands you probably know, have been in AI since my master's in data science, and now I'm leading our AI business in one of the largest AI communities globally.
+[01:01] So Felix Riesberg is a lead engineer at Anthropic, and he's led the engineering for the Claude app, co-work, and the Claude code desktop app, which means he's worked on a lot of the agents that we use every day.
+[01:12] And what he noticed is that, as he puts it, some people seem to be flying with AI, while many others are still struggling to get their new wings to work.
+[01:20] Now, his fix in just three words is to be more ambitious.
+[01:24] But he admits that's pretty tricky and general advice to follow, so he broke it down into types of ambition.
+[01:30] And today we'll go through three of them.
+[01:32] So we'll go through each of those three, and to keep it concrete, I'll also give you examples from different kinds of businesses for each one.
+[01:38] So let's start with the first method, which is altitude.
+[01:41] Felix says people often flippantly call this letting the model operate at a higher abstraction, which basically means that instead of asking for the task, you ask for the outcome.
+[01:51] Because when you give Claude a task, it's only carrying out your best guess at how to get what you want.
+[01:57] So, the question Felix says to ask yourself is, "What do you actually want to happen next?
+[02:01] Or what's the goal beyond the goal?" His own example is that at the start of the last year, he was still asking Claude to fix the crashes in his apps one at a time.
+[02:10] And eventually, he just asked Claude to keep the apps crash-free.
+[02:14] And what that resulted in is what Felix calls a durable workflow, one that is more effective at taking the human out of the loop.
+[02:21] So, he no longer has to hand Claude task after task.
+[02:24] So, in your own business, what you can do is to look at the task that you're about to hand Claude and ask what it's actually for.
+[02:30] For example, let's say you're putting together a pitch deck for a client.
+[02:33] And maybe you already have a slide template for this.
+[02:36] Now, what most people do is ask Claude to just fill in the slides.
+[02:39] And to be fair, that works for most use cases.
+[02:41] But if the real goal is to impress the client, then if you give Claude that goal instead, it might come back with a completely different approach.
+[02:48] If the pitch involves a venue, for example, maybe it builds an explorable 3D world of the space that you can walk the client through.
+[02:55] Or instead of a boring slide pack made in PowerPoint, it now builds you beautiful HTML slides that are interactive, can animate, and clearly show what you're going to deliver.
+[03:03] Now, Altitude works best when you really are after some ultimate definable outcome, like keeping the apps crash-free, for example.
+[03:10] However, at least with the models right now, it works less well for creative work.
+[03:15] So, for example, if you just ask Claude to go make money and not make any mistakes, that doesn't really work for most businesses by itself in 2026.
+[03:23] Because that part still takes a lot of creativity from you.
+[03:26] Although Felix also does say that models seem to be able to handle higher and higher levels of abstraction the more capable they get.
+[03:33] So, we'll see if that changes down the line.
+[03:35] And also, as we go deeper into the next two types, just know that I've put every resource, prompt, and learning from this video into this free guide that includes a skill, which you can just send to your agent.
+[03:45] So that if you want your agent to be more ambitious with a certain task, then it invokes all the key points and best practices from this video.
+[03:52] That's just in the description below if you need it.
+[03:55] So, now let's take it to a second level with depth because sometimes you just want a task done really, really well.
+[04:01] And being ambitious in depth means getting the task done the way that a top expert in that field would.
+[04:06] And the trap that Felix points out is that when you just tell a model to act like a professional, what it often does is just change his vocabulary.
+[04:14] It uses the jargon without really changing its methods.
+[04:17] So, how do you get your agent to work like an expert just sound like one?
+[04:21] Well, Felix actually uses three techniques.
+[04:23] To show them, we'll use his example, a company called Acme that's losing customers every month, which is called churn, and it needs to get ready for its quarterly review.
+[04:32] The first technique is to insist on the same tools that the best in the industry use.
+[04:36] Because to work on Acme's churn properly, Claude would need the tools that the experts themselves use.
+[04:42] So, at least for this problem, maybe you're thinking of a customer success manager or a pricing strategist.
+[04:46] Or for large-scale churn reduction work, you would also need a data scientist.
+[04:50] So, if Claude just reaches for a simple table in the chat and just goes ahead and does the task, push back and ask it if that's really what the best in the field would use.
+[04:59] And the good news is you don't even need to know or understand what the experts use because these models, including Claude, usually does.
+[05:06] Second is that you need to pick goals that sound and reasonable and just tell the model to have a crack at it.
+[05:12] For example, if you need your website to load in 5 seconds instead of 10, don't just ask for 5 and see if Claude can get it down to load in 1 second or even 200 milliseconds.
+[05:21] And if Claude says that's impossible, Felix says that you can just tell it that it's very much solvable and it just needs to keep going.
+[05:28] Another technique is to use an outside judge, which means never asking the model to judge his own work for your most important tasks.
+[05:35] And this is important because if you notice, a lot of the AI models that we have now are quite agreeable and it actually doesn't take a few prompts to convince them that what you are saying is right.
+[05:44] Now, Felix does note that he expects this will get solved as the models get smarter, but for now he says to insist on outside validation.
+[05:52] Ideally, this is a tool that the model can call, like let's say for that website example, it can be a speed test that it runs after every change.
+[05:59] Or if it's more creative work, spawning a sub-agent which acts as a judge is proven by multiple independent tests to be quite effective in refining the final output.
+[06:08] And the good news is you can get most of the way there for this method with just a single prompt.
+[06:12] And Felix actually shares the one that he uses himself to get a deeper version of any task.
+[06:17] It asks Claude four things before it starts.
+[06:20] What would a top professional do here that you are not asking for?
+[06:23] What's the rawest material that they would start from?
+[06:25] Which methods and tools would they use?
+[06:28] And what, other than you or Claude, would show that the result is right?
+[06:32] Then it rewrites your prompt to ask for exactly that.
+[06:35] And this prompt you can just screenshot it, or you can also access that skill that I mentioned below, so that it's always one short command away.
+[06:42] And by the way, if you want to learn how to build and sell AI systems that businesses actually pay for, then that's pretty much all we do over at the Robo Nuggets community.
+[06:49] Where not only do you get access to the Claude Living Masterclass, which we update every week and takes you from zero to mastery with the latest on AI, but you also get access to our Agents as a Service
+[06:59] course, which walks you through how to actually get paid for all these AI skills that you are learning.
+[07:03] You also get to be part of a genuinely great community of AI builders.
+[07:07] In fact, you can see just some of the recent wins our members are getting from the program right here.
+[07:11] So if you want to start earning from AI, then check that just in the pinned comment below.
+[07:14] Now back to the video.
+[07:16] And finally, the third component of being more ambitious is range.
+[07:19] Because if altitude is looking at things at a thousand feet view, and depth is pushing each task to its maximum possible output, range goes sideways, which means looking at your work from the point of view of other fields.
+[07:32] And probably more points of view than would have ever made sense to do versus the past.
+[07:36] Now, this isn't a new idea, because every single heist movie that you to about would spend the first 30 minutes putting together a crew of five different people and talents, right?
+[07:45] So, that's basically the same principle.
+[07:47] But, now it's really to have your agents split a job across several helpers at once.
+[07:51] And for a very important task, it helps if those sub-agents have varying points of view so that you can figure out what we call unknown unknowns, which means the part of your work that you didn't even know is
+[08:03] an option to begin with.
+[08:04] Now, Felix admits this one isn't easy because it takes some creativity.
+[08:09] For example, he said that until he saw his colleague use Blender, which is this free 3D software to render interior designs, he never thought of using Claude to build 3D environments for his own website.
+[08:20] So, that's an example of an option that he didn't even consider in the beginning, an unknown unknown.
+[08:26] So, given this challenge, how do you actually do it?
+[08:28] Well, the first trick Felix uses is an old one from a book called The Art of innovation, which is to try replacing the nouns with verbs.
+[08:36] So, if we talk about an example of a QBR, which is a quarterly business review that a lot of companies do, some people may describe that output as a PowerPoint presentation, which is the noun in this case.
+[08:47] The verb, and I'll read verbatim from what Felix wrote here, is getting busy people to believe a story about cause and effect and to decide under uncertainty in 30 minutes.
+[08:57] And having the verbs makes it much easier for not just your agent, but also yourself to see what the actual goal is and which fields could bring in a unique and useful point of view, which leads us to
+[09:08] a follow-up trick, which is to assemble the crew.
+[09:11] Meaning that you can insist that Claude bring in several roles and points of view and not just its own.
+[09:17] So, for the quarterly review example, Claude would then bring an analyst, a sales manager, and if it's being presented, it can even bring in a graphic designer, too.
+[09:25] And a good practice, as we mentioned in the earlier point, is to bring in the point of view of a red team, which if in case you don't know that red teaming is basically this practice where their job
+[09:34] is to find holes in the work, sort of like a devil's advocate group.
+[09:38] Now, obviously, deploying helpers can be token-intensive, so you can do this for just your most important work, and you can get started with a prompt like this one, which you can just screenshot.
+[09:47] Now, just to provide an example before we leave this point.
+[09:49] Say you're a real estate agent with a house to sell, and selling this house is extremely important to meet your revenue target for the year.
+[09:56] Now, what most people do is just ask Claude to output the real estate listing, which is the noun in this case.
+[10:02] But, the verb is, for example, helping a family picture their life in this house before they ever visit.
+[10:07] And once you say it like that, then the mixture of experts that Claude can bring in can change and can become clearer.
+[10:14] You can have it assume the role of an interior designer to stage each room, maybe a 3D artist to build a walk-through, a bit like Felix's a blender example.
+[10:22] You can even assume the role of a local who knows the best restaurants nearby, so that the final listing page that you get in the end is not just some generic real estate page, but one that is customized
+[10:33] for that project given its importance to you.
+[10:35] So, those are the three lovers of ambition.
+[10:37] But, what I really also like is how Felix ends, because it all leads up to one idea which he mentions, which is this term called self-efficacy.
+[10:45] And basically, that means how much you believe that you can pull something off.
+[10:49] And if you can increase it, especially now that we have AI, you also increase your chances of success in whatever field or game you're playing in.
+[10:56] And the great thing is that self-efficacy can actually be hacked in some way.
+[10:59] There's apparently more than 35 years of goal-setting studies behind this, and there's actually three hacks that are pretty well documented.
+[11:06] So, very quickly, I'll just highlight each one because it is quite interesting.
+[11:10] The first is believing it's possible, like that student George Dantzig who solved two never-before-solved problems in statistics back in the 1930s because he thought they were homework.
+[11:21] The second is watching somebody else do it.
+[11:23] For decades, for example, nobody could run a mile in under 4 minutes.
+[11:27] Then, Roger Bannister did it in the 1950s, and only after a few days, someone else did it too.
+[11:33] And the third is giving yourself permission to fail, which is just related to the idea that if you just ship things and put your work out there improving each time, then you will eventually succeed.
+[11:43] And as Felix Enz and puts it, self-efficacy isn't really a new concept, but it's a more powerful one now.
+[11:49] Because in a world where our abilities make leaps every couple of weeks, we can actually be more ambitious in the things that we can bring the world.
+[11:57] But I think this also needs a counterpoint because when we talk about AI, we also need to talk about pacing that ambition and even finding the why behind that ambition.
+[12:06] Or else you just end up going faster and faster and getting more and more ambitious without a clear reason why.
+[12:11] So really, definitely taking these techniques and methods to become more ambitious given how powerful AI agents have become, but at the end of the day, remember why you're even doing it and feel free to pause when you need
+[12:23] to.
+[12:23] As usual, thanks for watching till the end.
+[12:25] I usually do sessions like these to help you use AI better for your business.
+[12:28] So if that's your thing, feel free to do subscribe.
+[12:30] I'll see you next time.
+[12:31] Cheers.
+[12:32] >>

@@ -1,0 +1,448 @@
+{
+  "video_id": "IHV7eWibqzo",
+  "chaine": "tristen-obrien",
+  "titre_video": "How I Mastered AI (Your 100-Day PLAN to Do the Same)",
+  "codeur": "agent tristen-obrien",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "liste",
+    "format_secondaire": "talk",
+    "sujet": "Cinq choses sur lesquelles se concentrer pendant les 100 derniers jours de l'année pour progresser en IA",
+    "outils": [
+      "Claude",
+      "ChatGPT",
+      "Gemini",
+      "Perplexity",
+      "MCP"
+    ],
+    "niveau": "debutant",
+    "objectif_probable": "communaute"
+  },
+  "titre": {
+    "attente_au_clic": "Savoir comment il est devenu bon en IA et recevoir un plan de 100 jours pour faire pareil, en commençant par choisir une seule IA.",
+    "schema": "How I <Résultat> (Your <N>-Day PLAN to Do the Same)",
+    "promesse": "Maîtriser l'IA comme lui grâce à un plan de 100 jours",
+    "audace": "audacieux",
+    "registre": "douleur-reve",
+    "briques": [
+      "preuve",
+      "resultat"
+    ],
+    "marqueurs": [
+      "chiffre",
+      "majuscules"
+    ],
+    "nom_outil": false
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "inquiétude, sourcils levés, bouche ouverte",
+    "regard": "camera",
+    "texte": "PICK ONE",
+    "texte_mots": 2,
+    "repete_titre": "non",
+    "elements": [
+      "trois écrans avec six logos d'IA (ChatGPT, Claude, Gemini, Perplexity, DeepSeek et un autre)",
+      "visage au centre",
+      "texte PICK ONE en blanc cerné de noir"
+    ],
+    "nb_elements": 3,
+    "fond": "bureau sombre, lampes allumées, trois écrans",
+    "couleurs": [
+      "brun sombre",
+      "blanc",
+      "logos colorés"
+    ],
+    "curiosity_gap": "resultat",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "There's only 100 days left in this year, and if you're still jumping [...]",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Carte orange « 100 days left. » avec un calendrier 2026, face caméra en vignette ; à 0:02 « Still switching? » et les logos Claude, ChatGPT, Gemini",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": [
+      "hook-fait",
+      "douleur",
+      "hook-dissonance"
+    ],
+    "preuve": {
+      "type": "aucune",
+      "seconde": null,
+      "description": "Aucune preuve dans l'intro ; les 150 agents arrivent à 2:22, les 1 000 heures à 5:33"
+    },
+    "annonce_plan": {
+      "presente": true,
+      "nb_points": 5,
+      "a_l_ecran": true
+    },
+    "boucle_vers_la_fin": {
+      "presente": false,
+      "citation": "",
+      "seconde_resolution": null,
+      "tenue": null
+    },
+    "seconde_premier_point": 19,
+    "attente_tenue": "partiel",
+    "attente_note": "Le plan en cinq points est donné. Mais le « How I » du titre n'est pas raconté, et « PICK ONE » ne désigne aucune plateforme : « I'm not going to tell you which platform to pick »."
+  },
+  "structure": {
+    "modele": "liste-numerotee",
+    "segments": [
+      {
+        "debut": 0,
+        "fin": 19,
+        "titre": "The 100-Day AI Plan",
+        "role": "intro",
+        "pull": true,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": true,
+        "probleme": true,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 19,
+        "fin": 137,
+        "titre": "Master One AI Platform",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": true,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 137,
+        "fin": 188,
+        "titre": "Build an AI Employee",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 188,
+        "fin": 238,
+        "titre": "Learn AI Skills",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": false,
+        "preuve": false,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 238,
+        "fin": 281,
+        "titre": "Connect Your Tools With MCP",
+        "role": "point",
+        "pull": true,
+        "paint": false,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": false,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 281,
+        "fin": 324,
+        "titre": "Stay a Generalist on Purpose",
+        "role": "point",
+        "pull": false,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": false,
+        "preuve": false,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 324,
+        "fin": 355,
+        "titre": "Join the 100-Day AI Challenge",
+        "role": "fin",
+        "pull": false,
+        "paint": false,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      }
+    ],
+    "relances": [
+      {
+        "seconde": 101,
+        "type": "question-spectateur",
+        "citation": "So, how do you pick the one that you're going to focus on?"
+      },
+      {
+        "seconde": 152,
+        "type": "question-spectateur",
+        "citation": "So, what is an AI agent?"
+      },
+      {
+        "seconde": 174,
+        "type": "annonce-suite",
+        "citation": "Now, here's the challenge that I have for you."
+      },
+      {
+        "seconde": 270,
+        "type": "rupture",
+        "citation": "connect one new tool to AI, you guessed it, every single week"
+      }
+    ],
+    "histoires": [
+      {
+        "seconde": 113,
+        "acte": "anecdote",
+        "resume": "Il utilise Claude depuis longtemps comme outil principal, et d'autres IA chaque jour."
+      },
+      {
+        "seconde": 202,
+        "acte": "anecdote",
+        "resume": "Son agent de voyage connaît sa compagnie, son siège côté couloir, Marriott, et aucun vol avant 8 h."
+      },
+      {
+        "seconde": 333,
+        "acte": "anecdote",
+        "resume": "Plus de 1 000 heures passées sur Claude ; c'est le plan qu'il suivrait lui-même."
+      }
+    ],
+    "payoffs": [
+      {
+        "seconde": 55,
+        "resume": "Le défi : choisir une plateforme et la maîtriser"
+      },
+      {
+        "seconde": 176,
+        "resume": "Un agent par semaine, 14 agents au Nouvel An"
+      },
+      {
+        "seconde": 232,
+        "resume": "Une skill par semaine"
+      },
+      {
+        "seconde": 270,
+        "resume": "Un outil branché par semaine avec MCP"
+      },
+      {
+        "seconde": 302,
+        "resume": "Une heure par semaine pour tester les nouveaux modèles avec les mêmes prompts"
+      }
+    ],
+    "premier_payoff_seconde": 55,
+    "jargon": 1,
+    "repetitions": 2,
+    "test_du_tweet": "100 jours avant la fin de l'année : arrête de sauter d'une IA à l'autre. Choisis une plateforme et maîtrise-la, construis un agent par semaine, une skill par semaine, branche un outil par semaine avec MCP, et garde une heure par semaine pour tester le reste."
+  },
+  "habillage": {
+    "face_camera": {
+      "presente": true,
+      "cadrage": "poitrine ; en demi-écran à côté d'une carte ou en vignette",
+      "decor": "bureau, étagères, enseigne Back to the Future, lumière violette ; chemise à carreaux"
+    },
+    "parts": {
+      "face": 30,
+      "ecran": 0,
+      "motion": 70,
+      "broll": 0
+    },
+    "textes_ecran": "constants",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": [
+      "plan-a-l-ecran",
+      "cartes-chapitre",
+      "chiffres-animes",
+      "etiquettes",
+      "split-screen",
+      "emojis-stickers"
+    ],
+    "charte": "Palette sourde : crème, orange brûlé, vert sapin, bleu ardoise, vert sauge, jaune moutarde ; titres sans-serif noirs, étiquettes en petites capitales. La miniature (photo sombre, PICK ONE en blanc) n'est pas reprise.",
+    "rythme": "regulier",
+    "notes": "Aucune capture d'écran : chaque idée a sa carte animée avec un titre court (« Switching cost. », « 14 agents. », « Agent ≠ Skill. »). Un bandeau bas nomme chaque partie (« Mastering One Platform »)."
+  },
+  "fin": {
+    "ctas": [
+      {
+        "seconde": 341,
+        "type": "abonnement",
+        "cible": "s'abonner pour suivre le « 100 Days of AI Challenge »",
+        "amene_par": "fin",
+        "citation": "Subscribe to the channel and follow along because I'll be sharing other AI tips"
+      },
+      {
+        "seconde": 349,
+        "type": "abonnement",
+        "cible": "s'abonner, liker, commenter",
+        "amene_par": "fin",
+        "citation": "please subscribe, like the video, leave a comment"
+      }
+    ],
+    "sponsor": {
+      "present": false,
+      "nom": null,
+      "debut": null,
+      "duree": null,
+      "forme": null
+    },
+    "liens_description": {
+      "lead-magnet": 2,
+      "produit": 1
+    },
+    "commentaire_epingle": null,
+    "recap_final": true,
+    "derniere_phrase": "please subscribe, like the video, leave a comment, and I will see you",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": [
+      "s'en tenir à une seule IA",
+      "se sentir visé par le zapping",
+      "apprendre en construisant",
+      "les animations"
+    ],
+    "demandes": [
+      "montrer comment il fait ses graphismes animés"
+    ],
+    "critiques": [
+      "partir du problème avant l'outil",
+      "certains restent sur Copilot, Codex ou GPT-6 Astra"
+    ],
+    "reprises": [
+      "« stick with one, master it »",
+      "« I feel so called out »"
+    ],
+    "signal_promesse": "tenue"
+  },
+  "techniques": {
+    "ap_alignement_5s": {
+      "note": 1,
+      "preuve": "1re phrase reprend les 100 jours, pas « How I Mastered » ; les logos d'IA de la miniature n'arrivent qu'à 0:02, sans visage ni PICK ONE"
+    },
+    "ap_boucle_curiosite": {
+      "note": 0,
+      "preuve": "Aucune question gardée ; il refuse même de dire quelle plateforme choisir (1:07)"
+    },
+    "ap_effort_montre": {
+      "note": 0,
+      "preuve": "Rien dans l'intro ; les 150 agents à 2:22 et les 1 000 heures à 5:33"
+    },
+    "ap_setup_progress_payoff": {
+      "note": 0,
+      "preuve": "Talk sans démo : chaque point pose un but et donne un défi, sans progression ni résultat montré"
+    },
+    "ap_contraste_rythme": {
+      "note": 0,
+      "preuve": "De 8 à 13 changements de visuel par minute, sans contraste"
+    },
+    "ap_montrer_sans_son": {
+      "note": 2,
+      "preuve": "Planche intro : « 100 days left. », « Still switching? Always starting over. », « One plan. 5 things that matter. », « Get ahead of 99% »"
+    },
+    "ali_douleur_histoire": {
+      "note": 1,
+      "preuve": "Douleur nette (0:00 « you are falling behind », coût du changement), mais pas d'histoire vécue derrière"
+    },
+    "ali_coeur_unique": {
+      "note": 2,
+      "preuve": "0:05 « you can't master any of them if you're trying to keep up [...] »"
+    },
+    "alx_pont": {
+      "note": 0,
+      "preuve": "Intro par accroches (fait, douleur, dissonance), pas en pont"
+    },
+    "alx_pull_paint_point": {
+      "note": 2,
+      "preuve": "Pourquoi, exemple (coiffeur, burrito ; siège côté couloir et Marriott ; sa pile d'outils) et action hebdo pour la plupart des points"
+    },
+    "alx_nom_idee": {
+      "note": 2,
+      "preuve": "« Switching cost », « AI employee », « Stay a generalist on purpose », « 100 Days of AI Challenge », chacun sur une carte"
+    },
+    "alx_phrase_finale": {
+      "note": 2,
+      "preuve": "3:47 « every single time that you catch yourself explaining [...], turn that into a skill » ; 5:20 « stay current without rebuilding everything »"
+    },
+    "alx_douleur_reve": {
+      "note": 2,
+      "preuve": "« How I Mastered AI » parle du désir, sans nom d'outil"
+    },
+    "alx_cta_tot": {
+      "note": 0,
+      "preuve": "Aucun lead magnet dit dans la vidéo ; les prompts gratuits ne sont que dans la description"
+    },
+    "ed_intro_courte": {
+      "note": 2,
+      "preuve": "Fait, dissonance, promesse en trois phrases, premier point à 0:19"
+    },
+    "ed_hook": {
+      "note": 2,
+      "preuve": "0:05 « you can't master any of them if you're trying to keep up [...] »"
+    },
+    "ed_probleme_preuve_consignes": {
+      "note": 1,
+      "preuve": "Net sur le point 1 (problème, coût du changement cité, consigne) ; les autres vont droit au défi hebdomadaire"
+    },
+    "ed_tension_relancee": {
+      "note": 1,
+      "preuve": "1:41 « So, how do you pick the one [...]? » et 2:32 « So, what is an AI agent? » ; entre les points, « which brings me to number two »"
+    },
+    "ed_histoire_vecue": {
+      "note": 1,
+      "preuve": "3:42 son agent de voyage et ses préférences : une anecdote d'usage, pas une histoire"
+    },
+    "ed_sans_surexplication": {
+      "note": 0,
+      "preuve": "« commit to one platform » redit au moins quatre fois dans le point 1 (0:55, 1:14, 1:49, 2:04)"
+    },
+    "ed_niveau_simple": {
+      "note": 2,
+      "preuve": "2:34 un agent « just an AI that you give a job to » ; 3:13 agent et skill distingués simplement"
+    },
+    "tous_video_suivante": {
+      "note": 0,
+      "preuve": "Aucune vidéo suivante proposée"
+    }
+  },
+  "a_retenir": {
+    "titre_miniature": "Titre changé le lendemain selon VidIQ : « You Have 100 Days Left to Get Good at AI (Here's the PLAN) » devenu « How I Mastered AI (...) ». Miniature à part : visage inquiet devant six logos, « PICK ONE ».",
+    "intro_structure": "L'intro la plus courte de la série (premier point à 0:19) : fait, douleur, dissonance, promesse. Un talk en cinq règles, chacune avec un défi hebdomadaire.",
+    "habillage": "Aucune capture : tout en cartes animées, palette crème, orange brûlé, vert sapin.",
+    "idee_pour_nous": "Un plan « N jours » avec un défi par semaine colle mieux à une communauté qui le suit ensemble qu'aux vues : ici 6 000 vues à 7 jours malgré une écriture soignée.",
+    "objectif": "club"
+  }
+}

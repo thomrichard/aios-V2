@@ -62,9 +62,20 @@ Tes domaines, tes types et tes champs à toi. La skill `installation` les écrit
 
 | Domaine | Ce qu'il couvre |
 |---|---|
+| contenu | La chaîne YouTube, la newsletter, les réseaux sociaux et les idées de vidéos. Aussi ce que l'audience rapporte : revenus YouTube, sponsoring, affiliation, avec la grille tarifaire et le kit média. |
+| communaute | Le Club SMART et la communauté Skool, y compris les abonnements. |
+| consulting | Les accompagnements individuels et de groupe, avec la transcription de chaque séance, les rapports et les supports. |
+| produits | SM4RT dans sa version publiée (le socle mis à disposition), puis les produits suivants. |
+| perso | Ce qui ne relève pas du travail : maison, santé, famille, projets perso, finances personnelles et papiers perso. Les finances pro restent dans operations. |
 
 | Type | Ce que c'est | Statuts | Fin | Chemin |
 |---|---|---|---|---|
+| video | Une vidéo, du sujet à la mise en ligne | sujet, en-cours, a-valider, publie | publie | `domaines/<domaine>/<slug>-<date>.md` |
+| newsletter | Un numéro de la newsletter, du sujet à l'envoi | sujet, en-cours, a-valider, publie | publie | `domaines/<domaine>/<slug>-<date>.md` |
+| support | Un support de formation ou d'atelier | en-cours, a-valider, publie | publie | `domaines/<domaine>/<slug>.md` |
+| atelier | Un atelier de groupe : l'offre, la page de vente, les dates et les inscrits | a-preparer, en-vente, termine, annule | termine, annule | `domaines/<domaine>/<slug>-<date>.md` |
+| idee | Un truc que j'aimerais peut-être creuser un jour, sans engagement | notee, en-reflexion, lancee, abandonnee | lancee, abandonnee | `domaines/<domaine>/<slug>.md` |
 
 | Champ | Ce qu'il dit | Format | Obligatoire pour |
 |---|---|---|---|
+| ressortir | Le contexte où me rappeler cette idée, pas une date | texte | aucun |

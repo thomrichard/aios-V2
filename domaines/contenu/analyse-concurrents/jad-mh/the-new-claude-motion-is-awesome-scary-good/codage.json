@@ -1,0 +1,165 @@
+{
+  "video_id": "lUqjRmtN7bE",
+  "chaine": "jad-mh",
+  "titre": "The New Claude Motion Is Awesome (Scary Good)",
+  "codeur": "agent jad-mh",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "actu",
+    "format_secondaire": "tuto",
+    "sujet": "Claude Motion, la nouveauté d'Anthropic réservée aux offres Team et Enterprise : ce qu'elle fait et ne fait pas, un prompt en 4 parties, et sa skill Claude Code + HyperFrames pour faire pareil sur l'offre à 20 $",
+    "outils": ["Claude Motion", "Claude Code", "HyperFrames", "ACE-Step 1.5", "Higgsfield", "Claude Haiku 5.5"],
+    "niveau": "debutant",
+    "objectif_probable": "communaute"
+  },
+  "titre": {
+    "attente_au_clic": "Découvrir Claude Motion, la nouveauté d'Anthropic, et voir à quel point elle est bonne.",
+    "schema": "The New <Outil> Is <Adjectif> (<Superlatif>)",
+    "promesse": "Voir la nouveauté Claude Motion à l'œuvre",
+    "audace": "timide",
+    "registre": "jargon",
+    "briques": [],
+    "marqueurs": ["nouveaute", "superlatif"],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "sérieux, mains jointes sous le menton",
+    "regard": "camera",
+    "texte": "/motion",
+    "texte_mots": 1,
+    "repete_titre": "partiel",
+    "elements": ["« /motion » en rouge géant", "visage au centre, casquette, mains jointes", "mosaïque lumineuse de vignettes d'animations (Rewind, Grand Opening, Aurora, Level)"],
+    "nb_elements": 3,
+    "fond": "ciel étoilé et Terre, mosaïque de vignettes",
+    "couleurs": ["rouge", "bleu nuit", "multicolore"],
+    "curiosity_gap": "nouveaute",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Every animation you're going to see in this video, I didn't edit a single frame of it.",
+    "premiere_phrase_reprend_titre": "non",
+    "premier_plan": "« WATCH THE LETTERS COME » en lettres chromées violettes animées, face en vignette",
+    "premier_plan_reprend_miniature": "non",
+    "ouverture": ["demo-d-abord", "actu-annonce", "pont"],
+    "preuve": {
+      "type": "resultat-montre",
+      "seconde": 0,
+      "description": "Les animations à l'écran sont faites en code par Claude (0:06) ; puis 0:53 « one of my videos just passed 200,000 views »"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 4, "a_l_ecran": true},
+    "boucle_vers_la_fin": {
+      "presente": true,
+      "citation": "I'll also show you the skill that I have made that will give you access to this",
+      "seconde_resolution": 287,
+      "tenue": "oui"
+    },
+    "seconde_premier_point": 72,
+    "attente_tenue": "partiel",
+    "attente_note": "Claude Motion est expliqué, mais il ne l'a pas (« I'm on Max, so I don't have it either ») : aucune animation de la vidéo n'est faite avec, toutes viennent de sa skill. Le titre dit « Awesome (Scary Good) », sa conclusion dit « it's not the best »."
+  },
+  "structure": {
+    "modele": "probleme-solution",
+    "segments": [
+      {"debut": 0, "fin": 72, "titre": "Every frame is code", "role": "intro", "pull": true, "paint": true, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 72, "fin": 117, "titre": "What Claude Motion is", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 117, "fin": 170, "titre": "Who can use it", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 170, "fin": 217, "titre": "How it actually works", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": false, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 217, "fin": 236, "titre": "What it can't do", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 236, "fin": 287, "titre": "The 4-part prompt", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 287, "fin": 429, "titre": "The skill", "role": "demo", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 429, "fin": 481, "titre": "Real images", "role": "demo", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 481, "fin": 517, "titre": "Which one to use", "role": "fin", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 18, "type": "annonce-suite", "citation": "And here's why it's a big deal now"},
+      {"seconde": 40, "type": "boucle-ouverte", "citation": "I'll also show you the skill that I have made"},
+      {"seconde": 100, "type": "annonce-suite", "citation": "And here's what I actually find the most interesting."},
+      {"seconde": 166, "type": "annonce-suite", "citation": "In a few minutes, I'll show you exactly how I make these videos"},
+      {"seconde": 208, "type": "question-spectateur", "citation": "So, what does that mean for you?"},
+      {"seconde": 234, "type": "annonce-suite", "citation": "And I'll show you how I get around that, too."},
+      {"seconde": 287, "type": "rappel-promesse", "citation": "Okay, so now the part that I promised, the skill"},
+      {"seconde": 354, "type": "rupture", "citation": "Now watch this. This is the part I love."},
+      {"seconde": 481, "type": "question-spectateur", "citation": "Now, if you were wondering which one you should use"}
+    ],
+    "histoires": [
+      {"seconde": 53, "acte": "anecdote", "resume": "Il fait du motion design avec Claude chaque jour depuis des semaines ; une vidéo a passé 200 000 vues"}
+    ],
+    "payoffs": [
+      {"seconde": 72, "resume": "Ce qu'est Claude Motion : /motion, une description, une animation en MP4"},
+      {"seconde": 176, "resume": "Modèle vidéo = un JPEG ; Claude Motion = le fichier Canva, chaque pièce se change"},
+      {"seconde": 236, "resume": "Le prompt en 4 parties : pour qui, le look, scène par scène, les règles"},
+      {"seconde": 334, "resume": "La promo Fade House faite avec sa skill"},
+      {"seconde": 355, "resume": "« 25 $ » devient « 30 $ » en une ligne, tout le reste identique"},
+      {"seconde": 444, "resume": "La basket générée dans Higgsfield, animée par Claude en code"},
+      {"seconde": 481, "resume": "Lequel choisir : Claude Motion en équipe, sa skill seul sur l'offre à 20 $"}
+    ],
+    "premier_payoff_seconde": 72,
+    "jargon": 1,
+    "repetitions": 1,
+    "test_du_tweet": "Claude Motion transforme une description en animation, en code : on change un mot sans tout régénérer. Mais c'est réservé aux offres Team et Enterprise. Son prompt en 4 parties, et sa skill Claude Code + HyperFrames pour faire pareil sur l'offre à 20 $."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine, micro sur bras ; plein cadre ou en vignette", "decor": "pièce avec fenêtre sur des arbres, lumière violette ; casquette, t-shirt noir"},
+    "parts": {"face": 40, "ecran": 20, "motion": 40, "broll": 0},
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["plan-a-l-ecran", "etiquettes", "chiffres-animes", "split-screen", "curseur-surligne"],
+    "charte": "Beige éditorial, police à empattements avec mots en rouge orangé, astérisque Claude, pastilles d'étiquettes, cartes numérotées 1-2-3. La miniature (« /motion » rouge sur l'espace) ne reprend pas cette charte.",
+    "rythme": "regulier",
+    "notes": "Aucune animation n'est faite avec Claude Motion : toutes viennent de sa skill, ce que précise la description. De 16 à 26 changements de plan par minute, débit stable autour de 200 mots par minute."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 63, "type": "communaute-gratuite", "cible": "la communauté Skool et ses appels hebdomadaires", "amene_par": "intro", "citation": "So join my school community. We do weekly calls to help you set up these skills."},
+      {"seconde": 462, "type": "sponsor", "cible": "l'offre Higgsfield en description", "amene_par": "pendant-demo", "citation": "And I was able to get an offer for you guys. The link is in the description."},
+      {"seconde": 475, "type": "communaute-gratuite", "cible": "la skill de motion design dans Skool", "amene_par": "apres-valeur", "citation": "The motion graphic skill is in my school community."},
+      {"seconde": 507, "type": "abonnement", "cible": "s'abonner pour les skills de la semaine", "amene_par": "fin", "citation": "Subscribe if you want more skills like these."}
+    ],
+    "sponsor": {"present": true, "nom": "Higgsfield", "debut": 462, "duree": 10, "forme": "integre-a-la-demo"},
+    "liens_description": {"sponsor": 1, "communaute-gratuite": 1},
+    "commentaire_epingle": {"texte": "The Higgsfield offer I mentioned (sans abonnement, API à l'usage)", "type": "sponsor"},
+    "recap_final": false,
+    "derniere_phrase": "I drop free skills every single week, and I'll see you in the next one.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["remerciements", "le montage apprécié, regardé jusqu'au bout sans accélérer", "membres de la communauté Skool"],
+    "demandes": ["un tuto sur les miniatures", "une vidéo sur « open design »", "Whisper ou Parakeet ?"],
+    "critiques": ["« I've need it on Pro!! » : Claude Motion n'est pas sur son offre"],
+    "reprises": [],
+    "signal_promesse": "tenue"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 0, "preuve": "Claude Motion n'est nommé qu'à 0:11 ; le 1er plan (lettres chromées) ne reprend pas la miniature « /motion »"},
+    "ap_boucle_curiosite": {"note": 2, "preuve": "0:40 la skill pour l'offre à 20 $ promise, tenue à 4:47 « now the part that I promised »"},
+    "ap_effort_montre": {"note": 1, "preuve": "0:53 « making motion graphics videos with Claude every day for the past weeks » : une pratique dite, pas l'effort de cette vidéo ; dans le doute, 1"},
+    "ap_setup_progress_payoff": {"note": 2, "preuve": "La promo barbier : le prompt en 4 parties (5:22), le rendu (5:34), puis le prix changé en une ligne (6:01)"},
+    "ap_contraste_rythme": {"note": 0, "preuve": "De 16 à 26 changements de plan par minute, débit stable"},
+    "ap_montrer_sans_son": {"note": 2, "preuve": "Planche intro : animations, « no After Effects », l'interface /motion, cartes « 1 what Claude Motion is / 2 how it works »"},
+    "ali_douleur_histoire": {"note": 0, "preuve": "Ni douleur ni histoire perso dans l'intro"},
+    "ali_coeur_unique": {"note": 2, "preuve": "6:19 « That's literally the whole point of actually making videos with code. It's how much you can modify. »"},
+    "alx_pont": {"note": 1, "preuve": "Annonce, contexte, preuve (200 000 vues) et plan à l'écran comme un pont, mais ouverts par une démo"},
+    "alx_pull_paint_point": {"note": 2, "preuve": "« How it works » (2:50 pourquoi, puis le JPEG contre le fichier Canva), le prompt (le barbier), la skill (25 $ devient 30 $)"},
+    "alx_nom_idee": {"note": 2, "preuve": "« VIDEO MODEL = PIXELS » à l'écran, le JPEG contre le fichier Canva, « the 4-part prompt » en cartes numérotées"},
+    "alx_phrase_finale": {"note": 2, "preuve": "1:52 « It plugs them right into the system. » ; 3:31 « a 10-second change, not a whole new video. » ; 4:37 « the rules are the secret. »"},
+    "alx_douleur_reve": {"note": 0, "preuve": "Le nom de l'outil et un adjectif ; aucun désir ni problème"},
+    "alx_cta_tot": {"note": 2, "preuve": "0:40 la skill, 1:03 la communauté Skool et ses appels hebdo"},
+    "ed_intro_courte": {"note": 1, "preuve": "Premier point à 1:12 : promesse, démo et plan, puis présentation et appel à Skool"},
+    "ed_hook": {"note": 1, "preuve": "« Every animation you're going to see in this video, I didn't edit a single frame » : un fait qui étonne, pas un des trois types purs"},
+    "ed_probleme_preuve_consignes": {"note": 2, "preuve": "Pas accessible sur ton offre (1:57), puis la skill et sa preuve ; ne fait pas de vraies images (3:37), puis la méthode et la basket"},
+    "ed_tension_relancee": {"note": 2, "preuve": "3:28 « So, what does that mean for you? » ; 3:54 « I'll show you how I get around that, too. » ; 8:01 « which one you should use »"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "0:53 ses vidéos quotidiennes et les 200 000 vues : une anecdote"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "L'usage qui fond sur l'offre à 20 $ est redit à 2:24 et 6:55"},
+    "ed_niveau_simple": {"note": 2, "preuve": "2:58 « A video model [...] gives you a JPEG » ; 5:04 Claude Code, « Claude working inside a folder on your computer »"},
+    "tous_video_suivante": {"note": 0, "preuve": "« I'll see you in the next one »"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Titre changé 3 h après la sortie : « How To Create Insane Motion Graphics With Opus 5.5 (Turned Into A Skill) » devient « The New Claude Motion Is Awesome (Scary Good) ». Or il n'a pas Claude Motion et conclut « it's not the best ». Miniature en un seul mot : « /motion ».",
+    "intro_structure": "La vidéo se donne comme sa propre preuve (« Claude wrote every single one of them in code »), plan en cartes, premier point à 1:12. La boucle « la skill pour l'offre à 20 $ » est tenue à 4:47.",
+    "habillage": "Style éditorial beige à empattements, environ 40 % de face caméra, un plan toutes les 2,9 s. Aucune animation n'est faite avec l'outil du titre.",
+    "idee_pour_nous": "Quand une nouveauté n'est pas accessible à notre public, le dire tout de suite et montrer l'alternative qu'il peut utiliser aujourd'hui.",
+    "objectif": "vues"
+  }
+}

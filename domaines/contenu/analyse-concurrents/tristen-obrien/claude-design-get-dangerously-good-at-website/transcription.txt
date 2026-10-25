@@ -1,0 +1,126 @@
+[00:00] So, I've been using Claude design for a while now, but ever since this slash design command came out, I've been building these awesome animated websites with it.
+[00:08] And today, I'm going to walk you through three simple steps that are going to make you dangerously good at making these as well.
+[00:15] So, take a look at this.
+[00:16] This is a website for a lawn care business, and that gopher that you see right there is following my mouse wherever I move it.
+[00:22] Now, of course, he doesn't want you to sign up, so he's just going to sit there and judge you.
+[00:26] Now, these are just really fun to build, which is why I built over a dozen of them at this point, and I'm going to give you the exact prompts that I used.
+[00:33] So, let's get started with step number one, which is designing your page.
+[00:37] So, the first thing you're going to need is a character.
+[00:39] Now, that could be an animal, it could be a person, it could be a product.
+[00:43] Mine is going to be the gopher because of the lawn care site, but there's one thing that you probably know already, and that is Claude code is not great at making images on its own.
+[00:52] So, we do need a tool for that.
+[00:54] Now, I use Higgsfield.
+[00:55] They're always my number one go-to AI tool when it comes to creating photos or videos or these animations.
+[01:01] They are a great partner of this channel, and I did ask them if they wanted to sponsor this video, which they are.
+[01:05] So, I'm going to use them in this video to create the images and the motion in the videos, and I'm going to do that right inside of Claude with the Higgsfield connector, which does make it really easy, but
+[01:14] you can also go to their website and use the same prompts if you want to do that instead.
+[01:19] Now, what we're going to start with is just one image of your character and the scene that you want it to be sitting in.
+[01:24] And what I'm going to ask for is I'm going to ask for a gopher that is grumpy, but still kind of cute.
+[01:30] I want his mouth to be closed, but I want him to have the big buck teeth that the gophers have.
+[01:34] I want his eyes to be glossy, and to start, I want him staring directly at the camera.
+[01:39] I also like to ask for four different variations, that way we can pick out the one that I think looks the grumpiest, but also fits the vibe that I'm going for.
+[01:47] And just so you know, every single prompt that I'm using in this video is going to be linked in the description, so don't feel like you have to write anything down.
+[01:53] All you're going to have to do is change out the character and scene that you want, and it's going to work the way that you expect.
+[01:58] Now, one of the biggest things I want to reiterate here is that you want to make sure that your character is centered in the middle of the screen.
+[02:04] And that's because it's going to give them room on both sides to turn its head left and right as you move the mouse around.
+[02:09] Again, there's two different ways that you can design this.
+[02:12] One, there's the claw design app.
+[02:14] And then two, there's the slash design command right inside of Claude code.
+[02:18] Now, both of them are absolutely great, but since we're building a real website here, I'm going to keep everything inside of Claude code, which means that I'm going to be using the slash design command.
+[02:27] Now, to get started, what we're going to do is we're going to take the image that we just created, and we're going to drop it into a folder on your desktop.
+[02:34] Now, that is going to be your new project folder.
+[02:36] So, what we're going to do here is we are going to open up a new project inside of Claude code, and we are going to point it at the folder that our image is in.
+[02:43] Then we're going to start by typing {slash} design.
+[02:46] And by the way, if you've never run {slash} design before, basically what it does is it designs your page before it builds anything, which means that it's going to hand you a canvas of finished concepts for you to
+[02:56] choose from, and those are called art boards.
+[02:58] And you can click on any of them, and you can change the text, you can change the color.
+[03:02] You pretty much can edit the whole thing, but nothing is going to get built or coded before you pick the one that you want to build.
+[03:08] Now, if you want to go deeper, I do have a full video on this command, so you can go ahead and check it out after this one.
+[03:13] But by default, {slash} design is going to start looking at your project folder.
+[03:18] It's going to look to see if you have any colors, any fonts, any logos, any components.
+[03:23] But in this case, there's nothing in that folder with the exception of the gopher image that we just created.
+[03:28] So, it's going to act like it's a brand new project.
+[03:30] And because this is a brand new project, one of the best practices out there is to find a few websites that you really like.
+[03:36] Ones that you want your website to be inspired by.
+[03:39] Now, we're not going to copy the website, we're just using this for inspiration, which by the way, that's what all the top designers do.
+[03:44] But we're going to find the websites that we like, and we're going to hand it over to Claude.
+[03:47] That way it has an idea of what we're going for.
+[03:51] So, take a look at this prompt.
+[03:52] What we're doing is we are telling Claude that we want it to create a few different design options for us.
+[03:57] Now, I'm going to give it those websites that I liked, just a snapshot of them, and then I'm going to tell it to use the photo that we created as a hero of the webpage.
+[04:05] If you've never heard that term before, the hero is just the first section that somebody sees when they go to your website.
+[04:11] So, let's take a look at what came back here.
+[04:12] These are three real directions that Claude has given us.
+[04:15] All of these are built around the gopher image that we created.
+[04:18] Like I mentioned before, you can edit any of these, but you're just going to pick the one that you like.
+[04:23] And by the way, each one of these has a name right above them, and you're going to remember that name because what we're going to do is we're going to go back into Claude, and then we're going to
+[04:30] tell it that this is the one that we want it to build for us.
+[04:33] So, you're going to go back into Claude code, you're going to tell it the artboard that you like, and you're going to tell it to build it out.
+[04:38] And what you're going to get is a website like this, which does not look great, by the way, but it is a really good first draft.
+[04:44] And when you look at it, you see that the gopher image that we created is still static, right?
+[04:48] It's not following the mouse back and forth.
+[04:50] Step number two is where your character comes alive, and this is really easy to do.
+[04:54] What a lot of people do here is they take that static image that they have, and they hand it to a video model, and they just ask it to make a video of its head turning back and forth.
+[05:04] Now, that's a big mistake.
+[05:05] You do not want to do that because what's going to come back looks really rough.
+[05:09] Your video is going to snap in place instead of being that smooth back and forth following the mouse feel that we're going for.
+[05:16] Now, the fix to this is actually pretty easy.
+[05:18] What you're going to do is you're going to give Claude both ends of the turn instead of just the start.
+[05:23] What that means is we're going to ask for two more images, one where he's looking to the left and one where he's looking to the right.
+[05:30] So, to create these two images, you're going to do something specific here.
+[05:32] You're going to take that original photo that you created, you're going to give it to Claude, and then you're going to tell it that you need two different images here.
+[05:38] And you're going to tell it that you want everything to stay exactly the same with the one exception.
+[05:43] And that exception is that you want the head to turn about 70° to the left, and then you want one that turns 70° to the right.
+[05:51] And the reason you want those degrees in there is because if you tell it to look to the left, and then look to the right, even if it's 90°, it's going to lose both of its eyes, and you
+[06:00] don't want that.
+[06:01] You want the eyes to stay in the video the entire time, and then click enter.
+[06:04] Okay, now that we have all three of these photos, we are ready to move on to the next stage, but before we do that, if you could do me a favor, like this video, please subscribe if you haven't
+[06:12] done that already, leave a comment.
+[06:14] It's something that really helps out the channel, and it's something that I really appreciate.
+[06:17] Okay, let's go back to the next step here.
+[06:19] So, what we're going to do now is we're going to take those images, the two that you just created, and the original one, and then we're going to label them one, two, and three.
+[06:26] The one looking to the left is labeled one, the one in the middle is labeled two, and the one that's looking to the right is labeled three.
+[06:32] Now, we're going to take all three of those, and we're going to give it to Claude, and then we're going to use this prompt right here.
+[06:36] We're going to say something like, connect to Hicksfield, and create a 5-second video starting in the one position, going all the way to the three position.
+[06:45] We want it to make sure that it's turning its head smoothly and at a consistent speed.
+[06:49] And we want to make sure that we're keeping the body frozen, and we're going to ask for three different variations, so you have a few to choose from.
+[06:55] Now, for mine, I did use C Dance right inside of Hicksfield, because it's one of the best models that are out there.
+[07:01] So, now that you have your videos, you do want to make sure that you're choosing the smoothest one.
+[07:05] And you don't want one that's close to being smooth, you want one that's absolutely smooth, because any jerkiness that's in the video, it's really going to show up on the page.
+[07:13] Now, with your naked eye, it's hard to tell which one is the smoothest by just watching it.
+[07:18] They all look pretty smooth at full speed, but what you need to do is you need to let Claude go through them frame by frame.
+[07:23] Now, we call that scrubbing, and what that really means is Claude is going to measure how much the picture actually changes between each frame.
+[07:31] Now, what you're going to do is take this prompt right here, put it into Claude code, and it is going to do the rest.
+[07:36] But, in the background, what it's doing is it's taking this little program that it wrote for itself.
+[07:40] It's going to score every single take.
+[07:42] It's going to tell you which one is genuinely the smoothest.
+[07:45] It's going to sharpen it up to 4K, and then it's going to double the frames so your mouse has more positions to land on.
+[07:51] Now, this prompt is over 400 words, and it has over six different paragraphs, so I'm not going to read the whole thing to you, but just know that you can get this prompt inside of a link in the
+[08:00] description, so you can copy it and use it yourself.
+[08:03] Okay, so after this, you should have a 5-second video of your image, and in my case, it's the gopher.
+[08:07] But we haven't put it on the website yet, right?
+[08:10] That is step number three.
+[08:11] So we're going to take that video clip, we're going to drop it into our project folder, and then we are going to go back into Claude code.
+[08:16] Now, we do have to give it one more prompt, and this prompt is about the same size as the last one.
+[08:20] So again, I'm not going to read it to you.
+[08:21] So what's actually happening here is Claude is going to take that video, and it's going to put it on our website, but it's not going to actually play the video.
+[08:29] The video is just going to sit there paused the entire time.
+[08:32] But the video has spots in it.
+[08:34] It has 0 seconds, 1 second, 2 seconds, half seconds, goes up from there.
+[08:37] But what your website's going to do is it's going to look where your mouse is at, and it's going to jump directly to that frame of the video.
+[08:45] So if your mouse is on the far left of the screen, you're starting at the beginning of the video.
+[08:49] That's where your gopher is going to be glaring all the way to the left.
+[08:52] But as you move your mouse to the middle, and you land in the middle, you're going to be in the middle of the video, where he's staring right at you.
+[08:58] And same thing as you move your mouse all the way to the right.
+[09:01] Now, sometimes you have to go through several different iterations for this to look perfect.
+[09:05] Very rarely is the very first version the perfect one for you.
+[09:08] So you can always go back into Claude and tell it what you want changed.
+[09:11] So really, that's it.
+[09:13] You make your character, you pin both ends of the turn, so the left and the right.
+[09:17] There's one prompt that's going to clean up the clip for you, then Claude Design is going to create the entire page for you.
+[09:22] And obviously, you can make dozens of these if you want to.
+[09:25] It could be a cockroach for a pest control, or a bird for a pool service, or a squirrel for a roofer.
+[09:31] Any of these, you can just have a lot of fun with them.
+[09:32] So just pick one and start creating it.
+[09:35] And if you want to see everything else that Claude design can do or the {slash} design command, again, I made a full video of that and you can watch that right here.
+[09:42] But if this helped, please subscribe, leave a comment, like the video, and I will see you in the next one.

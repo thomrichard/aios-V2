@@ -1,0 +1,522 @@
+{
+  "video_id": "c3B5OMF9MNs",
+  "chaine": "tristen-obrien",
+  "titre_video": "Claude Design | Get DANGEROUSLY Good at Website Animation",
+  "codeur": "agent tristen-obrien",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "tuto",
+    "format_secondaire": "cas",
+    "sujet": "Un site web dont le personnage suit la souris, en trois étapes : /design, Higgsfield, intégration par Claude Code",
+    "outils": [
+      "Claude Code",
+      "/design",
+      "Claude Design",
+      "Higgsfield (connecteur)",
+      "Seedance"
+    ],
+    "niveau": "intermediaire",
+    "objectif_probable": "vues"
+  },
+  "titre": {
+    "attente_au_clic": "Apprendre à faire avec Claude Design un site animé qui réagit à la souris, comme celui de la miniature.",
+    "schema": "<Outil> | Get DANGEROUSLY Good at <Compétence>",
+    "promesse": "Devenir redoutable en animation de site web avec Claude Design",
+    "audace": "audacieux",
+    "registre": "mixte",
+    "briques": [
+      "resultat",
+      "audace"
+    ],
+    "marqueurs": [
+      "majuscules"
+    ],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "petit sourire confiant",
+    "regard": "camera",
+    "texte": "DESIGN Claude",
+    "texte_mots": 2,
+    "repete_titre": "partiel",
+    "elements": [
+      "mot DESIGN géant en blanc derrière la tête",
+      "ordinateur tenu en main avec le site du gopher et un curseur (« Our only unhappy customer. »)",
+      "logo et mot Claude en bas à droite",
+      "visage et buste"
+    ],
+    "nb_elements": 4,
+    "fond": "noir uni",
+    "couleurs": [
+      "noir",
+      "blanc",
+      "vert gazon",
+      "orange Claude"
+    ],
+    "curiosity_gap": "resultat",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "I've been using Claude design for a while now [...] building these awesome animated websites",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Face caméra en vignette ; à droite une carte « PICK A DIRECTION » avec trois aperçus de sites, dont celui du gopher",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": [
+      "pont",
+      "demo-d-abord"
+    ],
+    "preuve": {
+      "type": "resultat-montre",
+      "seconde": 16,
+      "description": "Le site d'une entreprise d'entretien de pelouse : le gopher suit la souris ; puis « I built over a dozen of them » (0:26)"
+    },
+    "annonce_plan": {
+      "presente": true,
+      "nb_points": 3,
+      "a_l_ecran": true
+    },
+    "boucle_vers_la_fin": {
+      "presente": false,
+      "citation": "",
+      "seconde_resolution": null,
+      "tenue": null
+    },
+    "seconde_premier_point": 33,
+    "attente_tenue": "oui",
+    "attente_note": "Le site animé est construit de bout en bout. Plusieurs commentaires ne trouvent pas les prompts promis sur le site, et demandent ce que ça donne sur mobile, sans curseur."
+  },
+  "structure": {
+    "modele": "pas-a-pas",
+    "segments": [
+      {
+        "debut": 0,
+        "fin": 33,
+        "titre": "What you're building + the demo",
+        "role": "intro",
+        "pull": true,
+        "paint": true,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 33,
+        "fin": 54,
+        "titre": "Step 1: Design the page, the character",
+        "role": "point",
+        "pull": false,
+        "paint": true,
+        "point": true,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": false,
+        "consignes": true,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 54,
+        "fin": 79,
+        "titre": "Where the image comes from: Higgsfield",
+        "role": "sponsor",
+        "pull": true,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 79,
+        "fin": 147,
+        "titre": "The character prompt + the one rule: keep it centered",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": true,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 147,
+        "fin": 290,
+        "titre": "Project folder, /design, websites you like, three artboards",
+        "role": "demo",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": true
+      },
+      {
+        "debut": 290,
+        "fin": 364,
+        "titre": "Step 2: Make it move, pin both ends, the 70 degree trick",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": true,
+        "preuve": true,
+        "consignes": true,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 364,
+        "fin": 377,
+        "titre": "Like, subscribe, comment",
+        "role": "cta",
+        "pull": false,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 377,
+        "fin": 488,
+        "titre": "Label 1, 2, 3, the video, picking the smoothest, scrubbing",
+        "role": "demo",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": true,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": true
+      },
+      {
+        "debut": 488,
+        "fin": 551,
+        "titre": "Step 3: Put it on the site, how cursor tracking works",
+        "role": "point",
+        "pull": false,
+        "paint": true,
+        "point": true,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 551,
+        "fin": 589,
+        "titre": "Recap and what else you can make",
+        "role": "fin",
+        "pull": false,
+        "paint": true,
+        "point": true,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": true,
+        "payoff": false,
+        "relance_sortie": false
+      }
+    ],
+    "relances": [
+      {
+        "seconde": 22,
+        "type": "rupture",
+        "citation": "he's just going to sit there and judge you"
+      },
+      {
+        "seconde": 284,
+        "type": "annonce-suite",
+        "citation": "it's still static, right? It's not following the mouse back and forth."
+      },
+      {
+        "seconde": 304,
+        "type": "rupture",
+        "citation": "Now, that's a big mistake."
+      },
+      {
+        "seconde": 487,
+        "type": "question-spectateur",
+        "citation": "But we haven't put it on the website yet, right?"
+      }
+    ],
+    "histoires": [
+      {
+        "seconde": 26,
+        "acte": "anecdote",
+        "resume": "Il a déjà construit plus d'une douzaine de ces sites animés."
+      }
+    ],
+    "payoffs": [
+      {
+        "seconde": 252,
+        "resume": "Trois directions de page autour de l'image du gopher"
+      },
+      {
+        "seconde": 278,
+        "resume": "Un premier jet du site, encore statique"
+      },
+      {
+        "seconde": 420,
+        "resume": "La vidéo de 5 secondes où la tête tourne de gauche à droite"
+      },
+      {
+        "seconde": 460,
+        "resume": "Claude note chaque prise et garde la plus fluide, en 4K"
+      },
+      {
+        "seconde": 525,
+        "resume": "Sur le site, le gopher suit la souris"
+      }
+    ],
+    "premier_payoff_seconde": 252,
+    "jargon": 2,
+    "repetitions": 1,
+    "test_du_tweet": "Un site qui réagit à la souris en trois étapes : un personnage centré fait avec Higgsfield et une page dessinée avec /design ; la tête tournée à 70° à gauche et à droite, puis une vidéo de 5 secondes ; Claude cale l'image de la vidéo sur la position du curseur."
+  },
+  "habillage": {
+    "face_camera": {
+      "presente": true,
+      "cadrage": "poitrine ; plein cadre, en demi-écran ou en vignette",
+      "decor": "bureau, étagères, enseigne Back to the Future, lumière violette ; chemise à carreaux"
+    },
+    "parts": {
+      "face": 40,
+      "ecran": 15,
+      "motion": 45,
+      "broll": 0
+    },
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": [
+      "plan-a-l-ecran",
+      "cartes-chapitre",
+      "chiffres-animes",
+      "etiquettes",
+      "split-screen",
+      "curseur-surligne",
+      "emojis-stickers"
+    ],
+    "charte": "Fonds blanc cassé, numéros et titres en violet et vert, étiquettes en capitales à chasse fixe ; les images du gopher sur gazon vert reviennent partout. La miniature noire au mot DESIGN n'est pas reprise.",
+    "rythme": "contraste",
+    "notes": "Les mauvaises versions sont montrées et étiquetées (« ROUGH », « SNAP ») avant la bonne (« SMOOTH »). Les chiffres s'animent pour expliquer la technique (98 puis 120 images, 70°)."
+  },
+  "fin": {
+    "ctas": [
+      {
+        "seconde": 26,
+        "type": "lead-magnet",
+        "cible": "les prompts exacts, sur tristenobrien.ai avec la newsletter",
+        "amene_par": "intro",
+        "citation": "I'm going to give you the exact prompts that I used"
+      },
+      {
+        "seconde": 61,
+        "type": "sponsor",
+        "cible": "Higgsfield",
+        "amene_par": "pendant-demo",
+        "citation": "I did ask them if they wanted to sponsor this video, which they are"
+      },
+      {
+        "seconde": 107,
+        "type": "lead-magnet",
+        "cible": "tous les prompts, lien en description",
+        "amene_par": "pendant-demo",
+        "citation": "every single prompt that I'm using in this video is going to be linked"
+      },
+      {
+        "seconde": 364,
+        "type": "abonnement",
+        "cible": "liker, s'abonner, commenter",
+        "amene_par": "transition",
+        "citation": "like this video, please subscribe if you haven't done that already"
+      },
+      {
+        "seconde": 575,
+        "type": "video-suivante",
+        "cible": "sa vidéo complète sur /design",
+        "amene_par": "fin",
+        "citation": "I made a full video of that and you can watch that right here"
+      },
+      {
+        "seconde": 582,
+        "type": "abonnement",
+        "cible": "s'abonner, commenter, liker",
+        "amene_par": "fin",
+        "citation": "please subscribe, leave a comment, like the video"
+      }
+    ],
+    "sponsor": {
+      "present": true,
+      "nom": "Higgsfield",
+      "debut": 54,
+      "duree": 93,
+      "forme": "integre-a-la-demo"
+    },
+    "liens_description": {
+      "sponsor": 1,
+      "produit": 1,
+      "lead-magnet": 1,
+      "affiliation": 1,
+      "autre": 1
+    },
+    "commentaire_epingle": null,
+    "recap_final": true,
+    "derniere_phrase": "please subscribe, leave a comment, like the video, and I will see you",
+    "video_suivante_precise": true
+  },
+  "commentaires": {
+    "themes": [
+      "les prompts introuvables sur son site",
+      "le rendu sur mobile, sans curseur",
+      "le poids de la vidéo et le référencement",
+      "son montage"
+    ],
+    "demandes": [
+      "un tuto Claude Code et Remotion",
+      "comment il monte ses vidéos",
+      "suivre aussi la souris à la verticale"
+    ],
+    "critiques": [
+      "« WHERE IS THE PROMPT IN STEP 3? »",
+      "pas de vraie 3D, three.js ou GSAP feraient mieux",
+      "payer Claude et Higgsfield",
+      "des sites pensés pour l'ordinateur alors que le public est sur téléphone"
+    ],
+    "reprises": [
+      "le gopher",
+      "« wooden mallet » (le curseur en maillet)"
+    ],
+    "signal_promesse": "mixte"
+  },
+  "techniques": {
+    "ap_alignement_5s": {
+      "note": 1,
+      "preuve": "1re phrase sur Claude Design et les sites animés, sans « dangerously » ; le site du gopher n'apparaît qu'à 0:06"
+    },
+    "ap_boucle_curiosite": {
+      "note": 1,
+      "preuve": "0:16 le gopher suit la souris : le « comment » n'est expliqué qu'à 8:23 ; question implicite"
+    },
+    "ap_effort_montre": {
+      "note": 2,
+      "preuve": "0:26 « I built over a dozen of them at this point »"
+    },
+    "ap_setup_progress_payoff": {
+      "note": 2,
+      "preuve": "But (le gopher qui suit la souris), trois étapes, chacune livrée : maquettes (4:12), vidéo (7:01), site (8:45)"
+    },
+    "ap_contraste_rythme": {
+      "note": 1,
+      "preuve": "De 7 à 23 changements de visuel par minute ; pic sur l'erreur et le truc des 70°"
+    },
+    "ap_montrer_sans_son": {
+      "note": 2,
+      "preuve": "Planche intro : « One command. One page. », « 3 SIMPLE » étapes, le site du gopher, « 01 DESIGNING YOUR PAGE »"
+    },
+    "ali_douleur_histoire": {
+      "note": 0,
+      "preuve": "Ni douleur ni histoire dans l'intro"
+    },
+    "ali_coeur_unique": {
+      "note": 2,
+      "preuve": "9:13 le récap en une phrase : personnage, les deux bouts du mouvement, un prompt de nettoyage, la page"
+    },
+    "alx_pont": {
+      "note": 2,
+      "preuve": "Titre repris (0:00), démo comme preuve, « over a dozen », annonce des trois étapes et des prompts, sans accroche"
+    },
+    "alx_pull_paint_point": {
+      "note": 2,
+      "preuve": "Pourquoi centrer, pourquoi 70° (à 90° il perd les yeux), pourquoi « scrubber » : chaque étape a pourquoi, image et action"
+    },
+    "alx_nom_idee": {
+      "note": 2,
+      "preuve": "« pin both ends of the turn », « the 70 degree trick », « scrubbing », « the one rule: keep it centered »"
+    },
+    "alx_phrase_finale": {
+      "note": 1,
+      "preuve": "6:01 « You want the eyes to stay in the video the entire time » ; 9:05 « Very rarely is the very first version the perfect one » ; pas pour la plupart"
+    },
+    "alx_douleur_reve": {
+      "note": 1,
+      "preuve": "« Get DANGEROUSLY Good » parle du désir, mais Claude Design ouvre le titre"
+    },
+    "alx_cta_tot": {
+      "note": 2,
+      "preuve": "0:26 « I'm going to give you the exact prompts », en description sur son site avec newsletter"
+    },
+    "ed_intro_courte": {
+      "note": 1,
+      "preuve": "Contexte, promesse, démo et preuve, premier point à 0:33"
+    },
+    "ed_hook": {
+      "note": 1,
+      "preuve": "0:16 le gopher qui suit la souris et « judge you » : une démo qui accroche, aucun des trois types purs"
+    },
+    "ed_probleme_preuve_consignes": {
+      "note": 2,
+      "preuve": "5:04 « that's a big mistake » (la tête saute), preuve par « ROUGH » et « SNAP », puis la consigne des 70°"
+    },
+    "ed_tension_relancee": {
+      "note": 2,
+      "preuve": "4:44 « it's still static, right? » ; 8:07 « But we haven't put it on the website yet, right? »"
+    },
+    "ed_histoire_vecue": {
+      "note": 1,
+      "preuve": "0:26 plus d'une douzaine de sites construits : une anecdote"
+    },
+    "ed_sans_surexplication": {
+      "note": 1,
+      "preuve": "Les prompts « in the description » redits trois fois ; « I'm not going to read it to you » deux fois"
+    },
+    "ed_niveau_simple": {
+      "note": 2,
+      "preuve": "4:05 « the hero is just the first section that somebody sees » ; 7:23 le scrubbing expliqué"
+    },
+    "tous_video_suivante": {
+      "note": 2,
+      "preuve": "9:35 « if you want to see everything else that Claude design can do », la vidéo complète « right here »"
+    }
+  },
+  "a_retenir": {
+    "titre_miniature": "« <Outil> | Get DANGEROUSLY Good at <Compétence> » ; la miniature montre le résultat (le site du gopher sur l'ordinateur) devant le mot DESIGN géant.",
+    "intro_structure": "Démo d'abord (le gopher qui suit la souris et « te juge »), puis trois étapes. Les erreurs sont montrées avant la bonne façon, et chaque étape finit sur ce qui manque encore.",
+    "habillage": "Étiquettes « ROUGH », « SNAP », « SMOOTH » sur les essais ; chiffres animés pour expliquer la technique.",
+    "idee_pour_nous": "Montrer le mauvais résultat, étiqueté, juste avant le bon : la consigne devient évidente sans la répéter.",
+    "objectif": "vues"
+  }
+}

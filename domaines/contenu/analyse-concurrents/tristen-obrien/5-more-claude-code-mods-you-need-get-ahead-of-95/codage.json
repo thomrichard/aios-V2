@@ -1,0 +1,541 @@
+{
+  "video_id": "aD-h7Bcn5OY",
+  "chaine": "tristen-obrien",
+  "titre_video": "5 MORE Claude Code MODS You Need | Get Ahead of 95% in 9 Minutes",
+  "codeur": "agent tristen-obrien",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "liste",
+    "format_secondaire": null,
+    "sujet": "Cinq nouveaux mods Claude Code construits en les décrivant, suite de la vidéo sur les mods",
+    "outils": [
+      "Claude Code",
+      "Claude mods",
+      "Opus 5.5",
+      "Haiku 5.5"
+    ],
+    "niveau": "intermediaire",
+    "objectif_probable": "vues"
+  },
+  "titre": {
+    "attente_au_clic": "Recevoir cinq nouveaux mods Claude Code utiles, à installer tout de suite, en 9 minutes.",
+    "schema": "<N> MORE <Outil> <FONCTION> You Need | Get Ahead of <N>% in <N> Minutes",
+    "promesse": "Cinq mods qui améliorent Claude Code, pour passer devant 95 % des gens en 9 minutes",
+    "audace": "audacieux",
+    "registre": "mixte",
+    "briques": [
+      "vitesse",
+      "resultat"
+    ],
+    "marqueurs": [
+      "chiffre",
+      "duree",
+      "majuscules",
+      "comparaison-sociale"
+    ],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "sourire amusé",
+    "regard": "element",
+    "texte": "Claude 5 NEW MODS",
+    "texte_mots": 4,
+    "repete_titre": "partiel",
+    "elements": [
+      "logo et mot Claude",
+      "cinq icônes d'applis colorées (compteur, baguette, graphique, télé, flamme)",
+      "pastille « 5 NEW MODS » au contour arc-en-ciel",
+      "visage à gauche"
+    ],
+    "nb_elements": 4,
+    "fond": "sombre uni, brun très foncé",
+    "couleurs": [
+      "brun-noir",
+      "orange Claude",
+      "rouge, jaune, vert, bleu, violet",
+      "arc-en-ciel"
+    ],
+    "curiosity_gap": "nouveaute",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Claude mods are one of the biggest updates that Claude Code has ever given us",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Face caméra à gauche ; à droite une carte bleue « MODS » en lettres colorées avec le logo Claude",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": [
+      "pont",
+      "boucle-curiosite"
+    ],
+    "preuve": {
+      "type": "effort",
+      "seconde": 4,
+      "description": "Rappel des cinq mods de la vidéo précédente, affichés à l'écran, et « I can't stop building these things » (0:10)"
+    },
+    "annonce_plan": {
+      "presente": true,
+      "nb_points": 5,
+      "a_l_ecran": true
+    },
+    "boucle_vers_la_fin": {
+      "presente": false,
+      "citation": "",
+      "seconde_resolution": null,
+      "tenue": null
+    },
+    "seconde_premier_point": 29,
+    "attente_tenue": "oui",
+    "attente_note": "Les cinq mods sont montrés comme promis. Mais le commentaire épinglé met le prompt d'Auto Model en pause, et plusieurs commentaires disent ne pas trouver tous les prompts sur le site."
+  },
+  "structure": {
+    "modele": "liste-numerotee",
+    "segments": [
+      {
+        "debut": 0,
+        "fin": 29,
+        "titre": "5 More Claude Mods",
+        "role": "intro",
+        "pull": false,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": true
+      },
+      {
+        "debut": 29,
+        "fin": 70,
+        "titre": "What Is a Claude Mod?",
+        "role": "point",
+        "pull": false,
+        "paint": false,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": false,
+        "preuve": false,
+        "consignes": true,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 70,
+        "fin": 82,
+        "titre": "Where My Mods Live",
+        "role": "transition",
+        "pull": false,
+        "paint": false,
+        "point": false,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": true
+      },
+      {
+        "debut": 82,
+        "fin": 178,
+        "titre": "Mod 1: Auto Model",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": true,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 178,
+        "fin": 255,
+        "titre": "Mod 2: Prompt Upgrade",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": true,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 255,
+        "fin": 357,
+        "titre": "Mod 3: Today's Report",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": true
+      },
+      {
+        "debut": 357,
+        "fin": 368,
+        "titre": "Like, subscribe, comment",
+        "role": "cta",
+        "pull": false,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 368,
+        "fin": 433,
+        "titre": "Mod 4: YouTube TV",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": true,
+        "consignes": false,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 433,
+        "fin": 509,
+        "titre": "Mod 5: Daily Challenge",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": false,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 509,
+        "fin": 543,
+        "titre": "Recap and Free Prompts",
+        "role": "fin",
+        "pull": false,
+        "paint": false,
+        "point": true,
+        "nom": false,
+        "phrase_finale": true,
+        "probleme": false,
+        "preuve": false,
+        "consignes": true,
+        "payoff": false,
+        "relance_sortie": false
+      }
+    ],
+    "relances": [
+      {
+        "seconde": 20,
+        "type": "boucle-ouverte",
+        "citation": "One of them is going to change your perception on what [...] Claude is worth."
+      },
+      {
+        "seconde": 108,
+        "type": "rupture",
+        "citation": "Now, you don't have to touch anything. Like, watch this."
+      },
+      {
+        "seconde": 146,
+        "type": "question-spectateur",
+        "citation": "you may not even know what Haiku and Sonnet and Opus and Fable actually do"
+      },
+      {
+        "seconde": 286,
+        "type": "question-spectateur",
+        "citation": "if you were doing this yourself [...] how much would you get paid to do it?"
+      },
+      {
+        "seconde": 357,
+        "type": "annonce-suite",
+        "citation": "the next mod I want to show you is pretty fun, but before"
+      }
+    ],
+    "histoires": [
+      {
+        "seconde": 259,
+        "acte": "anecdote",
+        "resume": "Il est sur l'offre Max à 200 $ et voulait savoir ce que Claude lui rapporte vraiment."
+      },
+      {
+        "seconde": 336,
+        "acte": "anecdote",
+        "resume": "Depuis juin, Claude a fait 8 518 tâches pour lui, près de 2 000 heures et presque 100 000 $ à 50 $ de l'heure."
+      }
+    ],
+    "payoffs": [
+      {
+        "seconde": 115,
+        "resume": "La barre d'état passe seule sur Haiku 5.5 pour compter les mails"
+      },
+      {
+        "seconde": 127,
+        "resume": "Elle repasse sur Opus 5.5 pour construire un tableau de bord météo"
+      },
+      {
+        "seconde": 230,
+        "resume": "Le prompt d'une phrase devient un prompt détaillé, côte à côte"
+      },
+      {
+        "seconde": 319,
+        "resume": "Today's Report : 701 heures gagnées en une semaine"
+      },
+      {
+        "seconde": 347,
+        "resume": "Près de 100 000 $ de travail depuis juin"
+      },
+      {
+        "seconde": 399,
+        "resume": "Une vieille télé joue YouTube dans Claude Code pendant que Claude travaille"
+      },
+      {
+        "seconde": 479,
+        "resume": "« Coach me through it » guide pas à pas et lance la série de jours"
+      }
+    ],
+    "premier_payoff_seconde": 115,
+    "jargon": 1,
+    "repetitions": 1,
+    "test_du_tweet": "Cinq nouveaux mods Claude Code, construits juste en les décrivant : Auto Model choisit le modèle, Prompt Upgrade étoffe un prompt court, Today's Report chiffre le temps gagné, YouTube TV occupe l'attente, Daily Challenge fait progresser chaque jour. Prompts gratuits."
+  },
+  "habillage": {
+    "face_camera": {
+      "presente": true,
+      "cadrage": "poitrine ; souvent en vignette ou en demi-écran à côté d'une carte",
+      "decor": "bureau, étagères, enseigne Back to the Future, lumière violette"
+    },
+    "parts": {
+      "face": 15,
+      "ecran": 40,
+      "motion": 45,
+      "broll": 0
+    },
+    "textes_ecran": "constants",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": [
+      "plan-a-l-ecran",
+      "cartes-chapitre",
+      "chiffres-animes",
+      "etiquettes",
+      "split-screen",
+      "curseur-surligne",
+      "fleches-annotations",
+      "emojis-stickers"
+    ],
+    "charte": "Fonds pleins bleu, vert sapin, orange, violet et rouge ; texte blanc avec mots-clés jaunes ou orange en sans-serif gras ; étiquettes en capitales à chasse fixe (« MOD NUMBER THREE », « THE REAL THING »). Les cinq icônes colorées de la miniature reviennent en cartes de mods, mais le fond sombre de la miniature n'est pas repris.",
+    "rythme": "contraste",
+    "notes": "Chaque mod a sa carte de chapitre numérotée (« MOD 03 Today's Report »), puis une démo en capture cadrée sur fond de couleur. Les chiffres du rapport (701 heures, 99 821 $) sont animés en gros."
+  },
+  "fin": {
+    "ctas": [
+      {
+        "seconde": 55,
+        "type": "lead-magnet",
+        "cible": "les prompts gratuits de chaque mod (tristenobrien.ai)",
+        "amene_par": "intro",
+        "citation": "I am going to give you the prompt for free"
+      },
+      {
+        "seconde": 357,
+        "type": "abonnement",
+        "cible": "liker, s'abonner, commenter",
+        "amene_par": "apres-valeur",
+        "citation": "if this has been helpful so far, please like the video, please subscribe"
+      },
+      {
+        "seconde": 530,
+        "type": "lead-magnet",
+        "cible": "les cinq prompts gratuits, lien en description",
+        "amene_par": "fin",
+        "citation": "all five prompts are free and the link in the description"
+      },
+      {
+        "seconde": 534,
+        "type": "video-suivante",
+        "cible": "la première vidéo sur les mods",
+        "amene_par": "fin",
+        "citation": "if you missed my first Claude mod video, you can also check it out"
+      },
+      {
+        "seconde": 537,
+        "type": "abonnement",
+        "cible": "liker, s'abonner",
+        "amene_par": "fin",
+        "citation": "leave a like, subscribe, and I will see you in the next one"
+      }
+    ],
+    "sponsor": {
+      "present": false,
+      "nom": null,
+      "debut": null,
+      "duree": null,
+      "forme": null
+    },
+    "liens_description": {
+      "lead-magnet": 2,
+      "affiliation": 1,
+      "produit": 1,
+      "video-suivante": 1
+    },
+    "commentaire_epingle": {
+      "texte": "Mise à jour du créateur : Auto Model casse le cache s'il change de modèle en cours de session ; prompt mis en pause",
+      "type": "autre"
+    },
+    "recap_final": true,
+    "derniere_phrase": "leave a like, subscribe, and I will see you in the next one.",
+    "video_suivante_precise": true
+  },
+  "commentaires": {
+    "themes": [
+      "comment construire la barre « Tristen's tools »",
+      "le coût du cache quand Auto Model change de modèle",
+      "les prompts introuvables sur le site",
+      "le montage et les animations"
+    ],
+    "demandes": [
+      "le prompt de la barre Tristen's tools",
+      "le prompt Auto Model, annoncé « coming soon »",
+      "le mod YouTube TV",
+      "savoir si ça marche dans VS Code ou dans le cloud"
+    ],
+    "critiques": [
+      "Auto Model coûte plus cher en cassant le cache (le créateur le reconnaît et épingle une mise à jour)",
+      "seuls 3 des 5 prompts sur le site",
+      "les mods consomment le quota d'une offre Pro",
+      "Prompt Upgrade risque d'uniformiser les réponses"
+    ],
+    "reprises": [
+      "« Tristen's tools »",
+      "« Auto Model »",
+      "« Prompt Upgrade »",
+      "« Today's Report »"
+    ],
+    "signal_promesse": "mixte"
+  },
+  "techniques": {
+    "ap_alignement_5s": {
+      "note": 1,
+      "preuve": "1re phrase sur les mods Claude Code sans le « 5 MORE » ; 1er plan reprend visage et logo Claude, pas les cinq icônes"
+    },
+    "ap_boucle_curiosite": {
+      "note": 2,
+      "preuve": "0:20 « One of them is going to change your perception on what [...] Claude is worth », résolue de 4:17 à 5:53"
+    },
+    "ap_effort_montre": {
+      "note": 1,
+      "preuve": "0:10 « I can't stop building these things » et les cinq mods de la vidéo précédente à l'écran ; pas d'heures ni d'essais chiffrés"
+    },
+    "ap_setup_progress_payoff": {
+      "note": 2,
+      "preuve": "Chaque mod pose un besoin, montre la démo pas à pas, puis le résultat : Auto Model (1:22 à 2:58), Prompt Upgrade (2:58 à 4:15)"
+    },
+    "ap_contraste_rythme": {
+      "note": 1,
+      "preuve": "De 4 à 19 changements de visuel par minute ; la minute lente est une longue capture de Prompt Upgrade, sans rupture voulue"
+    },
+    "ap_montrer_sans_son": {
+      "note": 2,
+      "preuve": "Planche intro : « Last video: 5 MODS I built », « Today: 5 MORE », plan « 3 seriously UPGRADE / 1 Claude is WORTH / 1 just for FUN »"
+    },
+    "ali_douleur_histoire": {
+      "note": 0,
+      "preuve": "Ni douleur ni histoire perso dans l'intro"
+    },
+    "ali_coeur_unique": {
+      "note": 1,
+      "preuve": "8:29 « a mod is a feature that you describe and Claude builds it » ; mais la vidéo est un catalogue de cinq outils"
+    },
+    "alx_pont": {
+      "note": 1,
+      "preuve": "Titre repris, contexte (vidéo précédente), annonce du plan, mais un teaser (« what Claude is worth ») sert d'accroche"
+    },
+    "alx_pull_paint_point": {
+      "note": 2,
+      "preuve": "Les cinq mods ont un pourquoi, un exemple concret (mails, pizzeria, 50 $ de l'heure, télé, défi) et l'action"
+    },
+    "alx_nom_idee": {
+      "note": 2,
+      "preuve": "Auto Model, Prompt Upgrade, Today's Report, YouTube TV, Daily Challenge, chacun sur une carte à l'écran"
+    },
+    "alx_phrase_finale": {
+      "note": 1,
+      "preuve": "2:18 « auto model made that call for me » ; 8:25 « you're going to know Claude better than most people » ; pas pour chaque mod"
+    },
+    "alx_douleur_reve": {
+      "note": 1,
+      "preuve": "« Get Ahead of 95% » parle du désir, mais « Claude Code MODS » porte le titre"
+    },
+    "alx_cta_tot": {
+      "note": 2,
+      "preuve": "0:55 « I am going to give you the prompt for free » ; lien en description vers le site avec newsletter"
+    },
+    "ed_intro_courte": {
+      "note": 1,
+      "preuve": "Premier point à 0:29 après sept phrases et un plan en trois groupes : plus long que trois lignes"
+    },
+    "ed_hook": {
+      "note": 0,
+      "preuve": "« one of the biggest updates » est une affirmation, pas un fait chiffré, une question ni une dissonance"
+    },
+    "ed_probleme_preuve_consignes": {
+      "note": 1,
+      "preuve": "Problème posé pour Auto Model, Prompt Upgrade et YouTube TV, preuve par la démo ; les consignes se limitent à cliquer sur le mod"
+    },
+    "ed_tension_relancee": {
+      "note": 1,
+      "preuve": "4:46 « how much would you get paid to do it? » ; 5:57 « the next mod [...] is pretty fun » ; ailleurs « which takes me to » sans tension"
+    },
+    "ed_histoire_vecue": {
+      "note": 1,
+      "preuve": "4:21 il est sur l'offre Max à 200 $ ; 5:36 depuis juin, 8 518 tâches : des anecdotes, pas une histoire"
+    },
+    "ed_sans_surexplication": {
+      "note": 1,
+      "preuve": "« every single day » et « Tristan's tools » reviennent souvent ; quelques redites"
+    },
+    "ed_niveau_simple": {
+      "note": 2,
+      "preuve": "1:57 Haiku « fastest and cheapest model » ; 0:33 un mod « just a small add-on »"
+    },
+    "tous_video_suivante": {
+      "note": 2,
+      "preuve": "8:54 « if you missed my first Claude mod video, you can also check it out », carte à l'écran"
+    }
+  },
+  "a_retenir": {
+    "titre_miniature": "Suite assumée d'un tube : « 5 MORE ... MODS » reprend le mot qui a marché, la miniature montre les cinq icônes à découvrir et une pastille arc-en-ciel.",
+    "intro_structure": "Un plan annoncé en trois groupes (3 utiles, 1 qui change ta vision de la valeur, 1 pour le fun) crée une boucle qui tient jusqu'à la minute 6. Chaque mod a un nom, un besoin, une démo, un résultat.",
+    "habillage": "Cartes de chapitre numérotées pour chaque mod et chiffres animés en gros ; captures toujours posées sur un fond de couleur.",
+    "idee_pour_nous": "Après une vidéo qui marche, tourner la suite « N de plus » avec les mêmes mots, et donner un nom court à chaque outil montré.",
+    "objectif": "vues"
+  }
+}

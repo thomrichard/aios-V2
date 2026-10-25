@@ -1,0 +1,210 @@
+{
+ "id": "_fBuzCY_hGE",
+ "url": "https://www.youtube.com/watch?v=_fBuzCY_hGE",
+ "chaine": "thom-richard",
+ "titre": "Watermark Claude : ce que ça change vraiment pour toi",
+ "titre_ytdlp": "Watermark Claude : ce que ça change vraiment pour toi",
+ "publie": "2026-09-03T12:04:01Z",
+ "duree_s": 1159,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "ef1BV5IQkaFuWrs7dg-OAZESek4",
+  "id": "_fBuzCY_hGE",
+  "snippet": {
+   "publishedAt": "2026-09-03T12:04:01Z",
+   "channelId": "UCXd_huFLtKC7Ln0mH9pJKzw",
+   "title": "Watermark Claude : ce que ça change vraiment pour toi",
+   "description": "Depuis le 2 août, tout ce que Claude écrit porte une marque invisible. J'ai lu la loi que tout le monde commente sans l'ouvrir.\n\n👉 REJOINS LE CLUB SMART — la communauté pour maîtriser l'IA :\nhttps://www.skool.com/club-smart/about\n\n📬 REÇOIS MA NEWSLETTER — mes ressources IA et les coulisses de la chaîne :\nhttps://clubsmart.s.gy/hub-newsletter\n\n✅ Ce que tu vas apprendre :\n• Comment fonctionne vraiment le filigrane de Claude — et pourquoi il ne t'identifie pas\n• Ce que l'AI Act demande, article 50 en main, et sur qui pèse l'obligation\n• Quoi répondre aux cinq objections qui circulent partout depuis deux semaines\n\nDepuis le 2 août 2026, tout nouveau modèle Claude marque le texte qu'il produit. Mondialement, sans option pour le désactiver. Et depuis, on lit tout et son contraire : que tes textes vont être dégradés, que ça va te coûter plus cher, que l'Europe interdit d'écrire avec l'IA.\n\nAlors je suis allé voir la documentation d'Anthropic, et j'ai ouvert le texte de loi que tout le monde cite sans jamais l'avoir lu. Ce que j'y ai trouvé ne ressemble pas du tout à ce qui circule — et il y a même une phrase, dans l'article 50, que je n'ai vue citer nulle part alors qu'elle te concerne directement.\n\nDans ce tutoriel en français, on comprend le mécanisme sans jargon, on démonte les objections une par une, et je te donne mon avis sur l'ambiance qui entoure tout ça. Un point de productivité pour tous ceux qui travaillent avec l'IA au quotidien.\n\n🎓 LA MASTERCLASS QUI A TOUT DÉBLOQUÉ — regarde-la en entier :\nhttps://www.youtube.com/watch?v=FwnIB-RbC-E\n\n⏱️ CHAPITRES\n\n0:00 Ce qu'on voit passer depuis deux semaines\n0:37 Ce qu'on va voir\n1:06 Depuis le 2 août : ce qui change, et pour qui\n1:44 Qui a signé, qui a refusé\n2:49 Le mécanisme : les mots où le modèle a le choix\n4:04 Pourquoi ça n'existe qu'à grande échelle\n4:41 Mon avis, en une phrase\n5:00 Les cinq objections, une par une\n8:26 Relire, traduire, coder : qu'est-ce qui est marqué ?\n9:31 L'AI Act : quatre étages, un seul nous concerne\n10:07 L'article 50, alinéa par alinéa\n11:16 Les sanctions, et pourquoi tout le monde a bougé en même temps\n12:00 La phrase que personne ne cite\n13:02 Mon avis\n15:41 Le bouton « AI slop » de LinkedIn\n17:51 Ce qu'il faut retenir\n\n🔗 LES OUTILS QUE J'UTILISE DANS MA PRODUCTION\n• Claude — l'outil dont on parle dans cette vidéo : https://claude.ai\n• vidIQ* — pour tester mes titres avant de publier : https://clubsmart.s.gy/vidiq\n• CapCut* — montage vidéo assisté par IA : https://clubsmart.s.gy/capcut\n• Wispr* — dicte au lieu de taper et gagne des heures : https://clubsmart.s.gy/wispr\n\n* Certains de ces liens sont affiliés : ça donne un petit coup de pouce à la chaîne, et ça ne te coûte rien de plus. Merci de passer par là !\n\n📺 POUR ALLER PLUS LOIN\n→ J'ai passé les cours gratuits de Claude : ce qu'il faut savoir — https://www.youtube.com/watch?v=Te0SztndsQE\n→ Claude : tutoriel complet pour passer de débutant à utilisateur avancé — https://www.youtube.com/watch?v=qefrfyxQOEY\n\n👉 Et si tu veux avancer accompagné, le Club SMART est fait pour ça :\nhttps://www.skool.com/club-smart/about\n\n\n\n\nL'AI Act impose de nouvelles règles. Comprenez les catégories de risques et les exemptions pour rester en conformité.\n\nLe règlement européen sur l'intelligence artificielle est désormais une réalité. Cette vidéo décrypte la structure complexe de l'AI Act, en classant les systèmes selon leurs niveaux de risque : inacceptable, élevé, limité ou minimal. C'est un point de passage obligé pour tout professionnel qui développe ou utilise des outils technologiques dans l'Union européenne.\n\nVous apprendrez spécifiquement comment fonctionne la conformité IA pour vos projets. Nous analysons l'article 50(4) du règlement 2024/1689 pour comprendre les exemptions liées à la responsabilité éditoriale et à la supervision humaine. Savoir quand vous êtes exempté permet d'avancer plus sereinement dans vos développements en intelligence artificielle sans craindre de sanctions inutiles.\n\nAbonnez-vous pour décoder les enjeux juridiques de la tech, et dites-moi en commentaire si vous pensez que cette régulation européenne freinera l'innovation.",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/_fBuzCY_hGE/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/_fBuzCY_hGE/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/_fBuzCY_hGE/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/_fBuzCY_hGE/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/_fBuzCY_hGE/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    }
+   },
+   "channelTitle": "ThomRichard ",
+   "tags": [
+    "club smart",
+    "automatisation",
+    "eu ai act",
+    "claude",
+    "ai compliance",
+    "claude watermark",
+    "watermark",
+    "anthropic claude",
+    "claude ai",
+    "claude code",
+    "marque ia",
+    "claude filigrane",
+    "AI Act",
+    "Régulation européenne",
+    "conformité IA",
+    "intelligence artificielle"
+   ],
+   "categoryId": "28",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "fr",
+   "localized": {
+    "title": "Watermark Claude : ce que ça change vraiment pour toi",
+    "description": "Depuis le 2 août, tout ce que Claude écrit porte une marque invisible. J'ai lu la loi que tout le monde commente sans l'ouvrir.\n\n👉 REJOINS LE CLUB SMART — la communauté pour maîtriser l'IA :\nhttps://www.skool.com/club-smart/about\n\n📬 REÇOIS MA NEWSLETTER — mes ressources IA et les coulisses de la chaîne :\nhttps://clubsmart.s.gy/hub-newsletter\n\n✅ Ce que tu vas apprendre :\n• Comment fonctionne vraiment le filigrane de Claude — et pourquoi il ne t'identifie pas\n• Ce que l'AI Act demande, article 50 en main, et sur qui pèse l'obligation\n• Quoi répondre aux cinq objections qui circulent partout depuis deux semaines\n\nDepuis le 2 août 2026, tout nouveau modèle Claude marque le texte qu'il produit. Mondialement, sans option pour le désactiver. Et depuis, on lit tout et son contraire : que tes textes vont être dégradés, que ça va te coûter plus cher, que l'Europe interdit d'écrire avec l'IA.\n\nAlors je suis allé voir la documentation d'Anthropic, et j'ai ouvert le texte de loi que tout le monde cite sans jamais l'avoir lu. Ce que j'y ai trouvé ne ressemble pas du tout à ce qui circule — et il y a même une phrase, dans l'article 50, que je n'ai vue citer nulle part alors qu'elle te concerne directement.\n\nDans ce tutoriel en français, on comprend le mécanisme sans jargon, on démonte les objections une par une, et je te donne mon avis sur l'ambiance qui entoure tout ça. Un point de productivité pour tous ceux qui travaillent avec l'IA au quotidien.\n\n🎓 LA MASTERCLASS QUI A TOUT DÉBLOQUÉ — regarde-la en entier :\nhttps://www.youtube.com/watch?v=FwnIB-RbC-E\n\n⏱️ CHAPITRES\n\n0:00 Ce qu'on voit passer depuis deux semaines\n0:37 Ce qu'on va voir\n1:06 Depuis le 2 août : ce qui change, et pour qui\n1:44 Qui a signé, qui a refusé\n2:49 Le mécanisme : les mots où le modèle a le choix\n4:04 Pourquoi ça n'existe qu'à grande échelle\n4:41 Mon avis, en une phrase\n5:00 Les cinq objections, une par une\n8:26 Relire, traduire, coder : qu'est-ce qui est marqué ?\n9:31 L'AI Act : quatre étages, un seul nous concerne\n10:07 L'article 50, alinéa par alinéa\n11:16 Les sanctions, et pourquoi tout le monde a bougé en même temps\n12:00 La phrase que personne ne cite\n13:02 Mon avis\n15:41 Le bouton « AI slop » de LinkedIn\n17:51 Ce qu'il faut retenir\n\n🔗 LES OUTILS QUE J'UTILISE DANS MA PRODUCTION\n• Claude — l'outil dont on parle dans cette vidéo : https://claude.ai\n• vidIQ* — pour tester mes titres avant de publier : https://clubsmart.s.gy/vidiq\n• CapCut* — montage vidéo assisté par IA : https://clubsmart.s.gy/capcut\n• Wispr* — dicte au lieu de taper et gagne des heures : https://clubsmart.s.gy/wispr\n\n* Certains de ces liens sont affiliés : ça donne un petit coup de pouce à la chaîne, et ça ne te coûte rien de plus. Merci de passer par là !\n\n📺 POUR ALLER PLUS LOIN\n→ J'ai passé les cours gratuits de Claude : ce qu'il faut savoir — https://www.youtube.com/watch?v=Te0SztndsQE\n→ Claude : tutoriel complet pour passer de débutant à utilisateur avancé — https://www.youtube.com/watch?v=qefrfyxQOEY\n\n👉 Et si tu veux avancer accompagné, le Club SMART est fait pour ça :\nhttps://www.skool.com/club-smart/about\n\n\n\n\nL'AI Act impose de nouvelles règles. Comprenez les catégories de risques et les exemptions pour rester en conformité.\n\nLe règlement européen sur l'intelligence artificielle est désormais une réalité. Cette vidéo décrypte la structure complexe de l'AI Act, en classant les systèmes selon leurs niveaux de risque : inacceptable, élevé, limité ou minimal. C'est un point de passage obligé pour tout professionnel qui développe ou utilise des outils technologiques dans l'Union européenne.\n\nVous apprendrez spécifiquement comment fonctionne la conformité IA pour vos projets. Nous analysons l'article 50(4) du règlement 2024/1689 pour comprendre les exemptions liées à la responsabilité éditoriale et à la supervision humaine. Savoir quand vous êtes exempté permet d'avancer plus sereinement dans vos développements en intelligence artificielle sans craindre de sanctions inutiles.\n\nAbonnez-vous pour décoder les enjeux juridiques de la tech, et dites-moi en commentaire si vous pensez que cette régulation européenne freinera l'innovation."
+   },
+   "defaultAudioLanguage": "fr"
+  },
+  "contentDetails": {
+   "duration": "PT19M19S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": true,
+   "contentRating": {},
+   "projection": "rectangular",
+   "hasCustomThumbnail": true
+  },
+  "statistics": {
+   "viewCount": "532",
+   "likeCount": "15",
+   "dislikeCount": "0",
+   "favoriteCount": "0",
+   "commentCount": "4"
+  }
+ },
+ "ytdlp": {
+  "id": "_fBuzCY_hGE",
+  "title": "Watermark Claude : ce que ça change vraiment pour toi",
+  "description": "Depuis le 2 août, tout ce que Claude écrit porte une marque invisible. J'ai lu la loi que tout le monde commente sans l'ouvrir.\n\n👉 REJOINS LE CLUB SMART — la communauté pour maîtriser l'IA :\nhttps://www.skool.com/club-smart/about\n\n📬 REÇOIS MA NEWSLETTER — mes ressources IA et les coulisses de la chaîne :\nhttps://clubsmart.s.gy/hub-newsletter\n\n✅ Ce que tu vas apprendre :\n• Comment fonctionne vraiment le filigrane de Claude — et pourquoi il ne t'identifie pas\n• Ce que l'AI Act demande, article 50 en main, et sur qui pèse l'obligation\n• Quoi répondre aux cinq objections qui circulent partout depuis deux semaines\n\nDepuis le 2 août 2026, tout nouveau modèle Claude marque le texte qu'il produit. Mondialement, sans option pour le désactiver. Et depuis, on lit tout et son contraire : que tes textes vont être dégradés, que ça va te coûter plus cher, que l'Europe interdit d'écrire avec l'IA.\n\nAlors je suis allé voir la documentation d'Anthropic, et j'ai ouvert le texte de loi que tout le monde cite sans jamais l'avoir lu. Ce que j'y ai trouvé ne ressemble pas du tout à ce qui circule — et il y a même une phrase, dans l'article 50, que je n'ai vue citer nulle part alors qu'elle te concerne directement.\n\nDans ce tutoriel en français, on comprend le mécanisme sans jargon, on démonte les objections une par une, et je te donne mon avis sur l'ambiance qui entoure tout ça. Un point de productivité pour tous ceux qui travaillent avec l'IA au quotidien.\n\n🎓 LA MASTERCLASS QUI A TOUT DÉBLOQUÉ — regarde-la en entier :\nhttps://www.youtube.com/watch?v=FwnIB-RbC-E\n\n⏱️ CHAPITRES\n\n0:00 Ce qu'on voit passer depuis deux semaines\n0:37 Ce qu'on va voir\n1:06 Depuis le 2 août : ce qui change, et pour qui\n1:44 Qui a signé, qui a refusé\n2:49 Le mécanisme : les mots où le modèle a le choix\n4:04 Pourquoi ça n'existe qu'à grande échelle\n4:41 Mon avis, en une phrase\n5:00 Les cinq objections, une par une\n8:26 Relire, traduire, coder : qu'est-ce qui est marqué ?\n9:31 L'AI Act : quatre étages, un seul nous concerne\n10:07 L'article 50, alinéa par alinéa\n11:16 Les sanctions, et pourquoi tout le monde a bougé en même temps\n12:00 La phrase que personne ne cite\n13:02 Mon avis\n15:41 Le bouton « AI slop » de LinkedIn\n17:51 Ce qu'il faut retenir\n\n🔗 LES OUTILS QUE J'UTILISE DANS MA PRODUCTION\n• Claude — l'outil dont on parle dans cette vidéo : https://claude.ai\n• vidIQ* — pour tester mes titres avant de publier : https://clubsmart.s.gy/vidiq\n• CapCut* — montage vidéo assisté par IA : https://clubsmart.s.gy/capcut\n• Wispr* — dicte au lieu de taper et gagne des heures : https://clubsmart.s.gy/wispr\n\n* Certains de ces liens sont affiliés : ça donne un petit coup de pouce à la chaîne, et ça ne te coûte rien de plus. Merci de passer par là !\n\n📺 POUR ALLER PLUS LOIN\n→ J'ai passé les cours gratuits de Claude : ce qu'il faut savoir — https://www.youtube.com/watch?v=Te0SztndsQE\n→ Claude : tutoriel complet pour passer de débutant à utilisateur avancé — https://www.youtube.com/watch?v=qefrfyxQOEY\n\n👉 Et si tu veux avancer accompagné, le Club SMART est fait pour ça :\nhttps://www.skool.com/club-smart/about\n\n\n\n\nL'AI Act impose de nouvelles règles. Comprenez les catégories de risques et les exemptions pour rester en conformité.\n\nLe règlement européen sur l'intelligence artificielle est désormais une réalité. Cette vidéo décrypte la structure complexe de l'AI Act, en classant les systèmes selon leurs niveaux de risque : inacceptable, élevé, limité ou minimal. C'est un point de passage obligé pour tout professionnel qui développe ou utilise des outils technologiques dans l'Union européenne.\n\nVous apprendrez spécifiquement comment fonctionne la conformité IA pour vos projets. Nous analysons l'article 50(4) du règlement 2024/1689 pour comprendre les exemptions liées à la responsabilité éditoriale et à la supervision humaine. Savoir quand vous êtes exempté permet d'avancer plus sereinement dans vos développements en intelligence artificielle sans craindre de sanctions inutiles.\n\nAbonnez-vous pour décoder les enjeux juridiques de la tech, et dites-moi en commentaire si vous pensez que cette régulation européenne freinera l'innovation.",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "What's been going around for two weeks",
+    "end_time": 37
+   },
+   {
+    "start_time": 37,
+    "title": "What we'll cover",
+    "end_time": 66
+   },
+   {
+    "start_time": 66,
+    "title": "Since August 2: what changes, and for whom",
+    "end_time": 104
+   },
+   {
+    "start_time": 104,
+    "title": "Who signed, who refused",
+    "end_time": 169
+   },
+   {
+    "start_time": 169,
+    "title": "The mechanism: the words where the model has a choice",
+    "end_time": 244
+   },
+   {
+    "start_time": 244,
+    "title": "Why it only works at scale",
+    "end_time": 281
+   },
+   {
+    "start_time": 281,
+    "title": "My take, in one sentence",
+    "end_time": 300
+   },
+   {
+    "start_time": 300,
+    "title": "The five objections, one by one",
+    "end_time": 506
+   },
+   {
+    "start_time": 506,
+    "title": "Proofreading, translating, coding: what gets marked?",
+    "end_time": 571
+   },
+   {
+    "start_time": 571,
+    "title": "The AI Act: four tiers, only one concerns us",
+    "end_time": 607
+   },
+   {
+    "start_time": 607,
+    "title": "Article 50, paragraph by paragraph",
+    "end_time": 676
+   },
+   {
+    "start_time": 676,
+    "title": "The penalties, and why everyone moved at the same time",
+    "end_time": 720
+   },
+   {
+    "start_time": 720,
+    "title": "The sentence nobody quotes",
+    "end_time": 782
+   },
+   {
+    "start_time": 782,
+    "title": "My take",
+    "end_time": 941
+   },
+   {
+    "start_time": 941,
+    "title": "LinkedIn's \"AI slop\" button",
+    "end_time": 1071
+   },
+   {
+    "start_time": 1071,
+    "title": "Key takeaways",
+    "end_time": 1158
+   }
+  ],
+  "tags": [
+   "club smart",
+   "automatisation",
+   "eu ai act",
+   "claude",
+   "ai compliance",
+   "claude watermark",
+   "watermark",
+   "anthropic claude",
+   "claude ai",
+   "claude code",
+   "marque ia",
+   "claude filigrane",
+   "AI Act",
+   "Régulation européenne",
+   "conformité IA",
+   "intelligence artificielle"
+  ],
+  "categories": [
+   "Science & Technology"
+  ],
+  "heatmap": null,
+  "upload_date": "20260903",
+  "duration": 1158,
+  "channel": "Thom RICHARD - AI and Automation",
+  "channel_id": "UCXd_huFLtKC7Ln0mH9pJKzw",
+  "channel_follower_count": 5620,
+  "thumbnail": "https://i.ytimg.com/vi/_fBuzCY_hGE/maxresdefault.jpg",
+  "view_count": 532,
+  "like_count": 15,
+  "comment_count": 2
+ }
+}

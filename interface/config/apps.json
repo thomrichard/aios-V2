@@ -1,4 +1,153 @@
 {
   "_note": "Généré par systeme/scripts/index.py depuis systeme/connexions.md : ne pas modifier à la main.",
-  "apps": []
+  "apps": [
+    {
+      "id": "app:youtube-data-v3-analytics-v2",
+      "label": "YouTube (Data v3, Analytics v2)",
+      "kind": "api",
+      "access": "local",
+      "status": "live",
+      "desc": "Fiches vidéos, stats, revenus, par `systeme/scripts/youtube.py` (OAuth en lecture seule, avec le compte qui possède la chaîne)"
+    },
+    {
+      "id": "app:yt-dlp",
+      "label": "yt-dlp",
+      "kind": "cli",
+      "access": "local",
+      "status": "live",
+      "desc": "Sous-titres automatiques des vidéos",
+      "command": "yt-dlp"
+    },
+    {
+      "id": "app:google-workspace-cli",
+      "label": "Google Workspace CLI",
+      "kind": "cli",
+      "access": "local",
+      "status": "live",
+      "desc": "Gmail, Agenda et Drive en ligne de commande",
+      "command": "gws"
+    },
+    {
+      "id": "app:vidiq",
+      "label": "vidIQ",
+      "kind": "mcp",
+      "access": "local",
+      "status": "live",
+      "desc": "Recherche YouTube, stats de chaîne, titres et miniatures",
+      "mcp": [
+        "vidiq",
+        "102e3d80-56f1-4fc2-9c0f-5bd03edaf6f4"
+      ]
+    },
+    {
+      "id": "app:gmail",
+      "label": "Gmail",
+      "kind": "mcp",
+      "access": "local",
+      "status": "live",
+      "desc": "Lire, trier et préparer des e-mails",
+      "mcp": "332ce25a-1938-49e6-b6e1-27a367640409"
+    },
+    {
+      "id": "app:wispr-flow",
+      "label": "Wispr Flow",
+      "kind": "mcp",
+      "access": "local",
+      "status": "live",
+      "desc": "Réunions et notes dictées",
+      "mcp": [
+        "wisprflow",
+        "af934a57-1574-4e32-a045-6bf30d43e1b8"
+      ]
+    },
+    {
+      "id": "app:claude-docs",
+      "label": "Claude Docs",
+      "kind": "mcp",
+      "access": "local",
+      "status": "live",
+      "desc": "Documents partagés sur claude.ai",
+      "mcp": "1a59c906-04da-521d-bda7-7f71b9f9e01c"
+    },
+    {
+      "id": "app:apify",
+      "label": "Apify",
+      "kind": "mcp",
+      "access": "local",
+      "status": "live",
+      "desc": "Extraction de données sur le web",
+      "mcp": "apify"
+    },
+    {
+      "id": "app:kit",
+      "label": "Kit",
+      "kind": "api",
+      "access": "local",
+      "status": "live",
+      "desc": "Newsletter : abonnés, croissance, envois et leurs stats, par `systeme/scripts/kit.py` (lecture seule, clé API v4). Le MCP officiel de Kit demande un plan payant."
+    },
+    {
+      "id": "app:google-drive",
+      "label": "Google Drive",
+      "kind": "mcp",
+      "access": "local",
+      "status": "live",
+      "desc": "Fichiers du Drive",
+      "mcp": "e0b911f2-25ad-40f5-8338-65388b05b66c"
+    },
+    {
+      "id": "app:github-cli",
+      "label": "GitHub CLI",
+      "kind": "app",
+      "access": "local",
+      "status": "live",
+      "desc": "Dépôts, pull requests, tickets",
+      "command": "gh"
+    },
+    {
+      "id": "app:opusclip",
+      "label": "OpusClip",
+      "kind": "mcp",
+      "access": "local",
+      "status": "live",
+      "desc": "Clips courts tirés des vidéos",
+      "mcp": "795efe4a-bf2c-4ca8-978d-f788eb5759b3"
+    },
+    {
+      "id": "app:google-agenda",
+      "label": "Google Agenda",
+      "kind": "mcp",
+      "access": "local",
+      "status": "live",
+      "desc": "Événements et disponibilités",
+      "mcp": "0168199f-d285-4b9b-8c92-6a93fb5ca090"
+    },
+    {
+      "id": "app:skool",
+      "label": "Skool",
+      "kind": "cli",
+      "access": "local",
+      "status": "live",
+      "desc": "Club SMART : membres, classrooms, leçons et posts. CLI maison (code et scripts : `~/Dev/skool-toolkit`, dépôt privé), connectée par le cookie de session ; le jeton WAF (quelques jours) est renouvelé chaque matin à 8 h 37 par la routine Jeton Skool",
+      "command": "skool-pp-cli"
+    },
+    {
+      "id": "app:vercel",
+      "label": "Vercel",
+      "kind": "app",
+      "access": "local",
+      "status": "live",
+      "desc": "Le site web et les autres projets en ligne : déploiements, journaux, domaines. La CLI `vercel` (connectée) et le connecteur Vercel du compte.",
+      "command": "vercel"
+    },
+    {
+      "id": "app:excalidraw",
+      "label": "Excalidraw",
+      "kind": "mcp",
+      "access": "local",
+      "status": "live",
+      "desc": "Diagrammes éditables en direct (skill `excalidraw-diagram`). Serveur de la communauté (`~/Dev/mcp_excalidraw`) ; son canevas doit tourner : `PORT=3737 npm run canvas` dans ce dossier.",
+      "mcp": "excalidraw"
+    }
+  ]
 }

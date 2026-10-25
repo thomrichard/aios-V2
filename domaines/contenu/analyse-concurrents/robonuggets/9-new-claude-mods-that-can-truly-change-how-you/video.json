@@ -1,0 +1,167 @@
+{
+ "id": "lDrAZ1wAyVs",
+ "url": "https://www.youtube.com/watch?v=lDrAZ1wAyVs",
+ "chaine": "robonuggets",
+ "titre": "9 NEW Claude Mods that can truly change how you work",
+ "titre_ytdlp": "9 NEW Claude Mods that can truly change how you work",
+ "publie": "2026-10-08T12:12:10Z",
+ "duree_s": 767,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "Af7Q3Pk7swz59v7ORndm1vYQhiM",
+  "id": "lDrAZ1wAyVs",
+  "snippet": {
+   "publishedAt": "2026-10-08T12:12:10Z",
+   "channelId": "UCgscS8mBsQZ5sFRkJIFWD7Q",
+   "title": "9 NEW Claude Mods that can truly change how you work",
+   "description": "Get the 9 Claude Mods PDF guide for free ➡ https://www.skool.com/robonuggets-free/classroom/750914f0?md=a2e607329db2457f83744f817b9d8610 search for n81\nLearn how to build AI businesses 🚀https://www.skool.com/robonuggets\n\nGet RUBRIC - The Command Centre for AI Agents: https://www.getrubric.app/\n\n***\nSavvy Progress: https://github.com/JohnnyVizz/claude-kit/tree/main/plugins/savvy-progress\nClaude Skins: https://github.com/hellosverre/claude-skins\nYou Should Know: built into Claude Code by Anthropic, so it has no public repo. You turn it on with /plugin enable cc-plugin-you-should-know@builtin. \nFiletree: https://github.com/data-goblin/claude-code-filetree\nCache Tax: https://github.com/karanb192/cache-tax\nBlast Radius (Anthropic's sample): https://github.com/anthropics/claude-code-playground/tree/main/claude-code/mods/blast-radius\nReflect: https://github.com/BayramAnnakov/claude-reflect\nTerminal Browser: https://github.com/zenbu-labs/terminal-browser\nReplay Theater (Anthropic's sample): https://github.com/anthropics/claude-code-playground/tree/main/claude-code/mods/replay-theater\n\n\nOur AI Partner Tools (affiliate revenue go to community perks):\n🥚 Free trial of Blotato: https://blotato.com/?ref=robonuggets\n🥚 Free trial of n8n: https://n8n.partnerlinks.io/o3jqtj032c02\n🥚 Free trial of Make https://www.make.com/en/register?pc=robonuggets\n🥚 Free trial of ElevenLabs: https://try.elevenlabs.io/m5mn2jkv5rzk\n🥚 Free credits at Apify:  https://www.apify.com?fpr=sffv1\n\n---\nAbout Me 👋🏻\n\nHey thanks for watching! I'm Jay - spent my career in data and brand building, founded the ROBO Group to help forward-looking businesses grow with AI, and now teaching what I know through this channel and the RoboNuggets community.\n\nIf you learned something new and want to see more, support the channel by subscribing: https://www.youtube.com/@RoboNuggets\n\nFollow on other platforms 🔻\n➗ Instagram: https://www.instagram.com/robonuggets\n➖ Tiktok: https://www.tiktok.com/@robonuggets\n✖️ Twitter/X:  https://www.twitter.com/robonuggets\n➕ LinkedIn: https://www.linkedin.com/in/j-enri/\n\nFor business, reach out at https://robolabs.so\n\nLeave me a comment if you have a specific request! Thanks.\n- Jay\n\n---\n\nTimestamps\n00:00 - Intro\n00:39 - What mods are\n02:02 - Mod 1\n03:02 - How a mod works\n03:57 - Mod 2\n04:34 - Mod 3\n06:05 - Mod 4\n07:04 - Mod 5\n08:15 - Mod 6\n09:04 - Mod 7\n09:39 - Mod 8\n10:09 - Mod 9\n10:43 - Build your own mod\n11:56 - Wrap up\n\n#AIAgents #AgenticAI #AIAutomation #OpenClaw #ClaudeCode #Antigravity #MCPProtocol #Anthropic #AIAgency #AgentBuilding #AITools #AIWorkflow #AutonomousAgents #MultiAgent #VibeCoding",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/lDrAZ1wAyVs/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/lDrAZ1wAyVs/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/lDrAZ1wAyVs/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/lDrAZ1wAyVs/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/lDrAZ1wAyVs/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    },
+    "qhd": {
+     "url": "https://i.ytimg.com/vi/lDrAZ1wAyVs/qhddefault.jpg",
+     "width": 2560,
+     "height": 1440
+    }
+   },
+   "channelTitle": "Jay E | RoboNuggets",
+   "categoryId": "27",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "en",
+   "localized": {
+    "title": "9 NEW Claude Mods that can truly change how you work",
+    "description": "Get the 9 Claude Mods PDF guide for free ➡ https://www.skool.com/robonuggets-free/classroom/750914f0?md=a2e607329db2457f83744f817b9d8610 search for n81\nLearn how to build AI businesses 🚀https://www.skool.com/robonuggets\n\nGet RUBRIC - The Command Centre for AI Agents: https://www.getrubric.app/\n\n***\nSavvy Progress: https://github.com/JohnnyVizz/claude-kit/tree/main/plugins/savvy-progress\nClaude Skins: https://github.com/hellosverre/claude-skins\nYou Should Know: built into Claude Code by Anthropic, so it has no public repo. You turn it on with /plugin enable cc-plugin-you-should-know@builtin. \nFiletree: https://github.com/data-goblin/claude-code-filetree\nCache Tax: https://github.com/karanb192/cache-tax\nBlast Radius (Anthropic's sample): https://github.com/anthropics/claude-code-playground/tree/main/claude-code/mods/blast-radius\nReflect: https://github.com/BayramAnnakov/claude-reflect\nTerminal Browser: https://github.com/zenbu-labs/terminal-browser\nReplay Theater (Anthropic's sample): https://github.com/anthropics/claude-code-playground/tree/main/claude-code/mods/replay-theater\n\n\nOur AI Partner Tools (affiliate revenue go to community perks):\n🥚 Free trial of Blotato: https://blotato.com/?ref=robonuggets\n🥚 Free trial of n8n: https://n8n.partnerlinks.io/o3jqtj032c02\n🥚 Free trial of Make https://www.make.com/en/register?pc=robonuggets\n🥚 Free trial of ElevenLabs: https://try.elevenlabs.io/m5mn2jkv5rzk\n🥚 Free credits at Apify:  https://www.apify.com?fpr=sffv1\n\n---\nAbout Me 👋🏻\n\nHey thanks for watching! I'm Jay - spent my career in data and brand building, founded the ROBO Group to help forward-looking businesses grow with AI, and now teaching what I know through this channel and the RoboNuggets community.\n\nIf you learned something new and want to see more, support the channel by subscribing: https://www.youtube.com/@RoboNuggets\n\nFollow on other platforms 🔻\n➗ Instagram: https://www.instagram.com/robonuggets\n➖ Tiktok: https://www.tiktok.com/@robonuggets\n✖️ Twitter/X:  https://www.twitter.com/robonuggets\n➕ LinkedIn: https://www.linkedin.com/in/j-enri/\n\nFor business, reach out at https://robolabs.so\n\nLeave me a comment if you have a specific request! Thanks.\n- Jay\n\n---\n\nTimestamps\n00:00 - Intro\n00:39 - What mods are\n02:02 - Mod 1\n03:02 - How a mod works\n03:57 - Mod 2\n04:34 - Mod 3\n06:05 - Mod 4\n07:04 - Mod 5\n08:15 - Mod 6\n09:04 - Mod 7\n09:39 - Mod 8\n10:09 - Mod 9\n10:43 - Build your own mod\n11:56 - Wrap up\n\n#AIAgents #AgenticAI #AIAutomation #OpenClaw #ClaudeCode #Antigravity #MCPProtocol #Anthropic #AIAgency #AgentBuilding #AITools #AIWorkflow #AutonomousAgents #MultiAgent #VibeCoding"
+   }
+  },
+  "contentDetails": {
+   "duration": "PT12M47S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": true,
+   "contentRating": {},
+   "projection": "rectangular"
+  },
+  "statistics": {
+   "viewCount": "806353",
+   "likeCount": "10046",
+   "favoriteCount": "0",
+   "commentCount": "187"
+  }
+ },
+ "ytdlp": {
+  "id": "lDrAZ1wAyVs",
+  "title": "9 NEW Claude Mods that can truly change how you work",
+  "description": "Get the 9 Claude Mods PDF guide for free ➡ https://www.skool.com/robonuggets-free/classroom/750914f0?md=a2e607329db2457f83744f817b9d8610 search for n81\nLearn how to build AI businesses 🚀https://www.skool.com/robonuggets\n\nGet RUBRIC - The Command Centre for AI Agents: https://www.getrubric.app/\n\n***\nSavvy Progress: https://github.com/JohnnyVizz/claude-kit/tree/main/plugins/savvy-progress\nClaude Skins: https://github.com/hellosverre/claude-skins\nYou Should Know: built into Claude Code by Anthropic, so it has no public repo. You turn it on with /plugin enable cc-plugin-you-should-know@builtin. \nFiletree: https://github.com/data-goblin/claude-code-filetree\nCache Tax: https://github.com/karanb192/cache-tax\nBlast Radius (Anthropic's sample): https://github.com/anthropics/claude-code-playground/tree/main/claude-code/mods/blast-radius\nReflect: https://github.com/BayramAnnakov/claude-reflect\nTerminal Browser: https://github.com/zenbu-labs/terminal-browser\nReplay Theater (Anthropic's sample): https://github.com/anthropics/claude-code-playground/tree/main/claude-code/mods/replay-theater\n\n\nOur AI Partner Tools (affiliate revenue go to community perks):\n🥚 Free trial of Blotato: https://blotato.com/?ref=robonuggets\n🥚 Free trial of n8n: https://n8n.partnerlinks.io/o3jqtj032c02\n🥚 Free trial of Make https://www.make.com/en/register?pc=robonuggets\n🥚 Free trial of ElevenLabs: https://try.elevenlabs.io/m5mn2jkv5rzk\n🥚 Free credits at Apify:  https://www.apify.com?fpr=sffv1\n\n---\nAbout Me 👋🏻\n\nHey thanks for watching! I'm Jay - spent my career in data and brand building, founded the ROBO Group to help forward-looking businesses grow with AI, and now teaching what I know through this channel and the RoboNuggets community.\n\nIf you learned something new and want to see more, support the channel by subscribing: https://www.youtube.com/@RoboNuggets\n\nFollow on other platforms 🔻\n➗ Instagram: https://www.instagram.com/robonuggets\n➖ Tiktok: https://www.tiktok.com/@robonuggets\n✖️ Twitter/X:  https://www.twitter.com/robonuggets\n➕ LinkedIn: https://www.linkedin.com/in/j-enri/\n\nFor business, reach out at https://robolabs.so\n\nLeave me a comment if you have a specific request! Thanks.\n- Jay\n\n---\n\nTimestamps\n00:00 - Intro\n00:39 - What mods are\n02:02 - Mod 1\n03:02 - How a mod works\n03:57 - Mod 2\n04:34 - Mod 3\n06:05 - Mod 4\n07:04 - Mod 5\n08:15 - Mod 6\n09:04 - Mod 7\n09:39 - Mod 8\n10:09 - Mod 9\n10:43 - Build your own mod\n11:56 - Wrap up\n\n#AIAgents #AgenticAI #AIAutomation #OpenClaw #ClaudeCode #Antigravity #MCPProtocol #Anthropic #AIAgency #AgentBuilding #AITools #AIWorkflow #AutonomousAgents #MultiAgent #VibeCoding",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "Intro",
+    "end_time": 39
+   },
+   {
+    "start_time": 39,
+    "title": "What mods are",
+    "end_time": 122
+   },
+   {
+    "start_time": 122,
+    "title": "Mod 1",
+    "end_time": 182
+   },
+   {
+    "start_time": 182,
+    "title": "How a mod works",
+    "end_time": 237
+   },
+   {
+    "start_time": 237,
+    "title": "Mod 2",
+    "end_time": 274
+   },
+   {
+    "start_time": 274,
+    "title": "Mod 3",
+    "end_time": 365
+   },
+   {
+    "start_time": 365,
+    "title": "Mod 4",
+    "end_time": 424
+   },
+   {
+    "start_time": 424,
+    "title": "Mod 5",
+    "end_time": 495
+   },
+   {
+    "start_time": 495,
+    "title": "Mod 6",
+    "end_time": 544
+   },
+   {
+    "start_time": 544,
+    "title": "Mod 7",
+    "end_time": 579
+   },
+   {
+    "start_time": 579,
+    "title": "Mod 8",
+    "end_time": 609
+   },
+   {
+    "start_time": 609,
+    "title": "Mod 9",
+    "end_time": 643
+   },
+   {
+    "start_time": 643,
+    "title": "Build your own mod",
+    "end_time": 716
+   },
+   {
+    "start_time": 716,
+    "title": "Wrap up",
+    "end_time": 767
+   }
+  ],
+  "tags": [],
+  "categories": [
+   "Education"
+  ],
+  "heatmap": null,
+  "upload_date": "20261008",
+  "duration": 767,
+  "channel": "Jay E | RoboNuggets",
+  "channel_id": "UCgscS8mBsQZ5sFRkJIFWD7Q",
+  "channel_follower_count": 205000,
+  "thumbnail": "https://i.ytimg.com/vi_webp/lDrAZ1wAyVs/maxresdefault.webp",
+  "view_count": 806434,
+  "like_count": 10048,
+  "comment_count": 100
+ }
+}

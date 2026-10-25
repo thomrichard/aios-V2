@@ -1,0 +1,169 @@
+{
+  "video_id": "DFlELTiSPk8",
+  "chaine": "nate-herk",
+  "titre": "Master 96% of Codex in under 35 minutes",
+  "codeur": "agent nate-herk",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "liste",
+    "format_secondaire": "tuto",
+    "sujet": "Les 18 notions clés de Codex pour débuter, en quatre parties, montrées sur son propre AIOS",
+    "outils": ["Codex", "GPT-6 Astra", "AGENTS.md", "skills", "plugins", "navigateur Codex", "Sites", "sous-agents", "tâches planifiées", "mode voix", "HyperFrames"],
+    "niveau": "debutant",
+    "objectif_probable": "vues"
+  },
+  "titre": {
+    "attente_au_clic": "Un cours express sur les 18 notions de Codex, pour le maîtriser presque entièrement en 35 minutes.",
+    "schema": "Master <N>% of <Outil> in under <N> minutes",
+    "promesse": "Maîtriser presque tout Codex en moins de 35 minutes",
+    "audace": "audacieux",
+    "registre": "mixte",
+    "briques": ["vitesse", "resultat"],
+    "marqueurs": ["chiffre", "duree"],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": false,
+    "emotion": null,
+    "regard": null,
+    "texte": "Codex / Projects / Agents.MD / Skills / Sites / Voice / 18 concepts",
+    "texte_mots": 8,
+    "repete_titre": "partiel",
+    "elements": ["logo OpenAI et mot « Codex »", "cinq tuiles d'icônes (Projects, Agents.MD, Skills, Sites, Voice)", "« 18 concepts » en très gros"],
+    "nb_elements": 3,
+    "fond": "dégradé bleu vif",
+    "couleurs": ["bleu vif", "blanc", "noir"],
+    "curiosity_gap": "aucun",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Today I'm going over the 18 core Codeex concepts that you actually need to know in order to start using it right away",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Nate face caméra plein cadre, lumière bleue et néon AIS ; à 0:02, carte « 18 core concepts » avec une grille de 1 à 18",
+    "premier_plan_reprend_miniature": "non",
+    "ouverture": ["pont"],
+    "preuve": {
+      "type": "aucune",
+      "seconde": null,
+      "description": "Aucune preuve dans l'intro ; la première démo (résumé de son mois) arrive à 1:26"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 18, "a_l_ecran": true},
+    "boucle_vers_la_fin": {
+      "presente": false,
+      "citation": "",
+      "seconde_resolution": null,
+      "tenue": null
+    },
+    "seconde_premier_point": 23,
+    "attente_tenue": "oui",
+    "attente_note": "Les 18 notions sont données en 34 minutes. Le « 96 % » n'est jamais expliqué (un commentaire demande « What's the other 4%? ») ; il vient du changement de titre du 7 octobre."
+  },
+  "structure": {
+    "modele": "liste-numerotee",
+    "segments": [
+      {"debut": 0, "fin": 23, "titre": "Intro et plan en quatre parties", "role": "intro", "pull": true, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 23, "fin": 238, "titre": "1 et 2. Projects And AGENTS.md", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 238, "fin": 524, "titre": "3 et 4. Agent Loop And Goals", "role": "point", "pull": false, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 524, "fin": 594, "titre": "Aparté : passer de Claude Code à Codex", "role": "point", "pull": true, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": true, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": true},
+      {"debut": 594, "fin": 805, "titre": "5. Local, Cloud, And Remote", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": true},
+      {"debut": 805, "fin": 970, "titre": "6 et 7. Worktrees And .codex", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 970, "fin": 1158, "titre": "8. Models, Tokens, And Usage", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 1158, "fin": 1298, "titre": "9 et 10. Effort And Permissions", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": false},
+      {"debut": 1298, "fin": 1503, "titre": "11 et 12. Skills And .agents", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 1503, "fin": 1625, "titre": "13 et 14. Plugins And Browser Use", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 1625, "fin": 1698, "titre": "15. Hosting With Sites", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": false, "relance_sortie": false},
+      {"debut": 1698, "fin": 1901, "titre": "16 et 17. Subagents And Scheduled Tasks", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 1901, "fin": 2059, "titre": "18. Voice Mode", "role": "demo", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 2059, "fin": 2074, "titre": "Final Thoughts", "role": "fin", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 15, "type": "annonce-suite", "citation": "they get cooler as we continue to go on"},
+      {"seconde": 524, "type": "question-spectateur", "citation": "But Nate, what if we've been using cloud code for a long time?"},
+      {"seconde": 594, "type": "annonce-suite", "citation": "let's move on to part two of these core concepts, which is environments"},
+      {"seconde": 966, "type": "annonce-suite", "citation": "that is a great segue into part three of the core concepts"},
+      {"seconde": 1409, "type": "rupture", "citation": "Man, I think I planned this out so good."},
+      {"seconde": 1558, "type": "annonce-suite", "citation": "part four, which is tools and scale. Okay, we've got five left here."},
+      {"seconde": 1928, "type": "rupture", "citation": "forgive me here as I'm awkwardly like hunching down"},
+      {"seconde": 1980, "type": "rappel-promesse", "citation": "Now, do you guys see how this is all coming together?"}
+    ],
+    "histoires": [
+      {"seconde": 542, "acte": "perso-passe", "resume": "Son passage de Claude Code à Codex : il a copié CLAUDE.md en AGENTS.md et ses skills dans .agents, en le demandant à Codex"},
+      {"seconde": 705, "acte": "anecdote", "resume": "Les tweets moqueurs de « débutants » qui partagent des liens localhost que personne ne peut ouvrir"},
+      {"seconde": 1874, "acte": "anecdote", "resume": "Sept ou huit tâches planifiées qui tradent 10 000 $ de son argent réel"}
+    ],
+    "payoffs": [
+      {"seconde": 86, "resume": "Codex résume son mois de travail à partir du projet Herk 2"},
+      {"seconde": 366, "resume": "La boucle d'agent en direct : trois commentaires drôles de sa dernière vidéo"},
+      {"seconde": 486, "resume": "/goal a produit toutes les animations de cette vidéo"},
+      {"seconde": 778, "resume": "Il pilote Codex sur son ordinateur depuis son téléphone"},
+      {"seconde": 1105, "resume": "200 $ d'abonnement valent environ 14 000 $ d'inférence par mois"},
+      {"seconde": 1356, "resume": "Une chaîne de skills : description YouTube, chapitres, post LinkedIn, puis article X en brouillon"},
+      {"seconde": 1745, "resume": "Cinq sous-agents sur un modèle moins cher font la veille en parallèle"},
+      {"seconde": 1993, "resume": "En parlant, il lance un fil qui crée une miniature et l'envoie à un autre fil"}
+    ],
+    "premier_payoff_seconde": 86,
+    "jargon": 1,
+    "repetitions": 1,
+    "test_du_tweet": "Codex en 18 notions pour non-codeurs, en quatre parties : projets et AGENTS.md, boucle d'agent et /goal, local, cloud et téléphone, modèles, tokens, effort, skills, plugins, navigateur, sites, sous-agents, tâches planifiées, mode voix. Chaque notion montrée sur son AIOS."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine ; en vignette à gauche presque tout le temps", "decor": "bureau, étagères éclairées en bleu, néon AIS, micro sur bras"},
+    "parts": {"face": 10, "ecran": 80, "motion": 10, "broll": 0},
+    "textes_ecran": "rares",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["plan-a-l-ecran", "cartes-chapitre", "curseur-surligne"],
+    "charte": "Captures sur le fond bleu-vert avec vignette ; cartes de notion et plan en gris anthracite sobre avec chiffres blancs, faites par Codex ; quelques croquis dessinés en direct (robot, « goal »). La miniature, bleu vif et sans visage, ne la reprend pas.",
+    "rythme": "regulier",
+    "notes": "Les cartes de notion et l'intro animée ont été faites par Codex lui-même avec /goal et HyperFrames, et Nate le dit à 8:05 : l'habillage sert de preuve. Le reste est une longue capture commentée."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 2062, "type": "video-suivante", "cible": "une playlist de ses vidéos sur Codex", "amene_par": "fin", "citation": "I'll tag a playlist right up here that has just a bunch of Codeex content"}
+    ],
+    "sponsor": {"present": true, "nom": "OpenAI (« #ChatGPT_Partner » et lien de téléchargement en description, rien de dit dans la vidéo ; à vérifier)", "debut": null, "duree": null, "forme": "lien-seul"},
+    "liens_description": {"sponsor": 1, "communaute-payante": 1, "communaute-gratuite": 1, "affiliation": 2, "reseaux": 3},
+    "commentaire_epingle": {"texte": "Lien vers sa communauté payante (agence à 1 M$ par an) et Glaido", "type": "communaute-payante"},
+    "recap_final": false,
+    "derniere_phrase": "Thanks for sticking to the end, and I'll see you in the next one. Thanks everyone.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["l'explication pour non-techniciens saluée", "la partie local contre cloud", "l'envie de la même vidéo pour Claude Code", "des bugs et l'usage de Codex"],
+    "demandes": ["la même chose pour Claude Code", "un modèle de son AGENTS.md", "plus sur les worktrees et le versioning pour débutants", "n8n vaut-il encore le coup"],
+    "critiques": ["« What's the other 4%? »", "Codex instable ou gourmand pour certains", "le modèle Terra jugé inutile"],
+    "reprises": ["« local vs. cloud »", "« Codex concepts for non-coders », l'ancien titre"],
+    "signal_promesse": "tenue"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "1re phrase = la miniature (18 notions), pas le « 96 % en 35 minutes » du titre ; 1er plan = Nate, la miniature est sans visage"},
+    "ap_boucle_curiosite": {"note": 0, "preuve": "0:15 « they get cooler as we continue » : pas de question gardée"},
+    "ap_effort_montre": {"note": 0, "preuve": "Aucun effort montré dans l'intro"},
+    "ap_setup_progress_payoff": {"note": 1, "preuve": "Quatre parties qui montent, et le mode voix final les réunit (33:00 « see how this is all coming together ») ; chaque notion reste isolée"},
+    "ap_contraste_rythme": {"note": 1, "preuve": "De 0 à 10 changements de plan par minute, sans passage nettement plus vif"},
+    "ap_montrer_sans_son": {"note": 2, "preuve": "0:02 la grille « 18 core concepts », puis « Part 1: Foundation » : la promesse se lit sans le son"},
+    "ali_douleur_histoire": {"note": 0, "preuve": "« It doesn't matter if you're not technical » rassure, sans décrire de douleur"},
+    "ali_coeur_unique": {"note": 0, "preuve": "18 notions sans message central"},
+    "alx_pont": {"note": 2, "preuve": "Titre repris, contexte (« même si tu n'es pas technique »), plan en quatre parties ; aucune accroche, mais pas de preuve"},
+    "alx_pull_paint_point": {"note": 1, "preuve": "Complet sur les projets (tout réexpliquer à chaque chat) et les skills (la recette de pancakes) ; les worktrees « won't matter to you »"},
+    "alx_nom_idee": {"note": 1, "preuve": "Cartes numérotées (« 01 Projects »), mais ce sont les noms des fonctions, pas des idées nommées"},
+    "alx_phrase_finale": {"note": 1, "preuve": "1:57 « This is no longer just an AI chatbot. This is now a co-founder. » ; rare ailleurs"},
+    "alx_douleur_reve": {"note": 1, "preuve": "« Master 96% » parle du désir, mais Codex porte le titre"},
+    "alx_cta_tot": {"note": 0, "preuve": "Aucune offre dite dans la vidéo"},
+    "ed_intro_courte": {"note": 1, "preuve": "Premier point à 0:23 avec promesse et plan, mais sans hook"},
+    "ed_hook": {"note": 0, "preuve": "Ouverture sur l'annonce du sujet, sans dissonance, question ni fait"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "Projets : problème (0:32), démo, consignes ; la plupart des notions sont expliquées sans problème posé"},
+    "ed_tension_relancee": {"note": 1, "preuve": "8:44 « But Nate, what if we've been using cloud code for a long time? » ; ailleurs « moving on to number X »"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "9:02 son passage de Claude Code à Codex : une anecdote"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "« not something I'm actively thinking about » redit pour les worktrees et .codex ; le localhost expliqué longuement"},
+    "ed_niveau_simple": {"note": 2, "preuve": "2:20 « That's what the MD means » ; 18:28 un token, « roughly four characters » ; 21:53 un skill, « just a recipe »"},
+    "tous_video_suivante": {"note": 1, "preuve": "34:22 une playlist Codex proposée avec une raison, pas une vidéo précise"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Titre changé 4 jours après la sortie : de « Every Codex Concept Explained for Non-Coders » à « Master 96% of Codex in under 35 minutes » (pourcentage et durée). La miniature, sans visage, garde l'ancienne promesse : « Codex 18 concepts » et cinq tuiles.",
+    "intro_structure": "15 secondes sans accroche : promesse, « même si tu n'es pas technique », puis 18 notions en quatre parties affichées. Chaque notion est montrée sur son AIOS ; le mode voix final relie tout.",
+    "habillage": "Longue capture commentée avec vignette ; les cartes de notion et l'intro animée ont été faites par Codex avec /goal, ce que Nate dit à 8:05.",
+    "idee_pour_nous": "Un cours « toutes les notions de <outil> pour non-techniciens », en parties affichées, chaque notion montrée sur l'AIOS de Thomas : il démarre lentement mais continue de monter.",
+    "objectif": "club"
+  }
+}

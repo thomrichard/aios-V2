@@ -1,0 +1,244 @@
+{
+ "recupere_le": "2026-10-25",
+ "breakout": null,
+ "vph": 0.5,
+ "stats_jour": [
+  {
+   "timestamp": "2026-09-24T13:06:45.166Z",
+   "views": 10,
+   "likes": 1,
+   "comments": 0,
+   "vph": 100
+  },
+  {
+   "timestamp": "2026-09-25T00:32:32.905Z",
+   "views": 2487,
+   "likes": 48,
+   "comments": 11,
+   "vph": 205
+  },
+  {
+   "timestamp": "2026-09-26T00:34:53.646Z",
+   "views": 4160,
+   "likes": 67,
+   "comments": 13,
+   "vph": 27.54098360655738
+  },
+  {
+   "timestamp": "2026-09-27T01:23:14.203Z",
+   "views": 5073,
+   "likes": 88,
+   "comments": 17,
+   "vph": 13.125
+  },
+  {
+   "timestamp": "2026-09-28T00:35:43.219Z",
+   "views": 5504,
+   "likes": 97,
+   "comments": 17,
+   "vph": 23.80952380952381
+  },
+  {
+   "timestamp": "2026-09-29T00:36:49.109Z",
+   "views": 5681,
+   "likes": 100,
+   "comments": 17,
+   "vph": 12.8
+  },
+  {
+   "timestamp": "2026-09-30T00:21:30.070Z",
+   "views": 5795,
+   "likes": 106,
+   "comments": 17,
+   "vph": 8.095238095238095
+  },
+  {
+   "timestamp": "2026-10-01T00:49:50.350Z",
+   "views": 5886,
+   "likes": 110,
+   "comments": 17,
+   "vph": 10.714285714285714
+  },
+  {
+   "timestamp": "2026-10-02T00:40:45.550Z",
+   "views": 5988,
+   "likes": 112,
+   "comments": 17,
+   "vph": 8.307692307692308
+  },
+  {
+   "timestamp": "2026-10-03T03:13:26.954Z",
+   "views": 6083,
+   "likes": 113,
+   "comments": 17,
+   "vph": 2.8402366863905324
+  },
+  {
+   "timestamp": "2026-10-04T00:57:27.246Z",
+   "views": 6163,
+   "likes": 114,
+   "comments": 17,
+   "vph": 8
+  },
+  {
+   "timestamp": "2026-10-05T00:05:23.271Z",
+   "views": 6240,
+   "likes": 116,
+   "comments": 17,
+   "vph": 6
+  },
+  {
+   "timestamp": "2026-10-06T00:29:16.641Z",
+   "views": 6350,
+   "likes": 118,
+   "comments": 17,
+   "vph": 26.93877551020408
+  },
+  {
+   "timestamp": "2026-10-07T00:35:26.485Z",
+   "views": 6451,
+   "likes": 119,
+   "comments": 17,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-08T00:38:01.670Z",
+   "views": 6603,
+   "likes": 123,
+   "comments": 18,
+   "vph": 10.64516129032258
+  },
+  {
+   "timestamp": "2026-10-09T00:56:14.214Z",
+   "views": 6701,
+   "likes": 126,
+   "comments": 18,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-10T00:32:59.986Z",
+   "views": 6744,
+   "likes": 126,
+   "comments": 18,
+   "vph": null
+  },
+  {
+   "timestamp": "2026-10-11T02:09:08.890Z",
+   "views": 6774,
+   "likes": 126,
+   "comments": 18,
+   "vph": 1.3432835820895521
+  },
+  {
+   "timestamp": "2026-10-12T01:45:14.318Z",
+   "views": 6805,
+   "likes": 128,
+   "comments": 20,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-13T01:03:52.553Z",
+   "views": 6845,
+   "likes": 129,
+   "comments": 20,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-14T00:35:23.622Z",
+   "views": 6886,
+   "likes": 132,
+   "comments": 20,
+   "vph": 2.857142857142857
+  },
+  {
+   "timestamp": "2026-10-15T00:35:31.745Z",
+   "views": 6941,
+   "likes": 132,
+   "comments": 20,
+   "vph": 8.709677419354838
+  },
+  {
+   "timestamp": "2026-10-16T01:26:53.259Z",
+   "views": 7082,
+   "likes": 142,
+   "comments": 20,
+   "vph": 2.8301886792452833
+  },
+  {
+   "timestamp": "2026-10-17T00:35:44.301Z",
+   "views": 7131,
+   "likes": 145,
+   "comments": 20,
+   "vph": 1.9047619047619047
+  },
+  {
+   "timestamp": "2026-10-18T00:35:35.300Z",
+   "views": 7170,
+   "likes": 148,
+   "comments": 20,
+   "vph": 2.9508196721311477
+  },
+  {
+   "timestamp": "2026-10-19T00:04:43.527Z",
+   "views": 7201,
+   "likes": 149,
+   "comments": 20,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-20T00:43:43.787Z",
+   "views": 7238,
+   "likes": 149,
+   "comments": 20,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-21T00:00:52.761Z",
+   "views": 7251,
+   "likes": 149,
+   "comments": 20,
+   "vph": null
+  },
+  {
+   "timestamp": "2026-10-22T00:49:25.083Z",
+   "views": 7273,
+   "likes": 150,
+   "comments": 20,
+   "vph": 0.9677419354838709
+  },
+  {
+   "timestamp": "2026-10-23T00:36:14.905Z",
+   "views": 7294,
+   "likes": 151,
+   "comments": 20,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-24T02:50:35.119Z",
+   "views": 7310,
+   "likes": 151,
+   "comments": 20,
+   "vph": 1.5873015873015874
+  },
+  {
+   "timestamp": "2026-10-25T01:03:24.593Z",
+   "views": 7321,
+   "likes": 151,
+   "comments": 20,
+   "vph": 0.30303030303030304
+  }
+ ],
+ "changements": [
+  {
+   "createdAt": "2026-09-24T13:06:45Z",
+   "title": "You Have 100 Days Left to Get Good at AI (Here's the PLAN)",
+   "thumbnails": null
+  },
+  {
+   "createdAt": "2026-09-25T21:06:00Z",
+   "title": "How I Mastered AI (Your 100-Day PLAN to Do the Same)",
+   "thumbnails": null
+  }
+ ],
+ "ab_tests": []
+}

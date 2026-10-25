@@ -1,0 +1,175 @@
+{
+  "video_id": "J9NQTYUP6k0",
+  "chaine": "simon-scrapes",
+  "titre": "How the Top 1% Use Claude Code Differently",
+  "codeur": "agent simon-scrapes",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "liste",
+    "format_secondaire": null,
+    "sujet": "Dix pratiques actuelles de Claude Code : un brief au lieu du plan mode, l'effort par défaut, des checks, /goal, Claude.md en index, des skills de corrections, des hooks, des sous-agents, Projects",
+    "outils": ["Claude Code", "/goal", "/doctor prompt-audit", "plugin eval", "skill doctor", "hooks", "Projects", "routines", "Codex"],
+    "niveau": "intermediaire",
+    "objectif_probable": "vues"
+  },
+  "titre": {
+    "attente_au_clic": "Apprendre ce que les meilleurs utilisateurs de Claude Code font autrement, à commencer par l'abandon du plan mode.",
+    "schema": "How the Top <N>% Use <Outil> Differently",
+    "promesse": "Utiliser Claude Code comme les 1 % les plus avancés",
+    "audace": "audacieux",
+    "registre": "mixte",
+    "briques": ["resultat"],
+    "marqueurs": ["chiffre", "comparaison-sociale"],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "sourire amusé",
+    "regard": "element",
+    "texte": "Plan mode is Dead Claude",
+    "texte_mots": 5,
+    "repete_titre": "non",
+    "elements": ["« Plan mode is Dead » sur des bandes de papier déchiré, Dead en rouge", "le visage d'un homme au micro qui n'est pas Simon (probablement la personne citée, à vérifier)", "logo Claude"],
+    "nb_elements": 3,
+    "fond": "dégradé orange vers noir",
+    "couleurs": ["orange", "noir", "blanc", "rouge"],
+    "curiosity_gap": "nouveaute",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Every piece of claw code advice for the last year has said the same thing.",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Capture d'un article « How Claude's Plan Mode reduces token costs and improves code quality », vignette de Simon à droite",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": ["hook-dissonance", "hook-fait"],
+    "preuve": {
+      "type": "autorite",
+      "seconde": 7,
+      "description": "Boris Cherny en janvier (« Most sessions start in Plan Mode ») puis sur Hacker News (« plan mode was useful, and is no longer useful »), captures surlignées à l'écran"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 10, "a_l_ecran": false},
+    "boucle_vers_la_fin": {"presente": false, "citation": "", "seconde_resolution": null, "tenue": null},
+    "seconde_premier_point": 29,
+    "attente_tenue": "oui",
+    "attente_note": "Le plan mode est traité dès 0:29, comme la miniature le promet. Le « top 1 % » se résume à Boris Cherny et aux docs d'Anthropic. Dix points annoncés, neuf chapitres, et les chapitres sont décalés après 12:00 (un commentaire le relève)."
+  },
+  "structure": {
+    "modele": "liste-numerotee",
+    "segments": [
+      {"debut": 0, "fin": 29, "titre": "How the Top 1% Use Claude Code Differently", "role": "intro", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 29, "fin": 147, "titre": "1. Plan mode is redundant", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 147, "fin": 199, "titre": "2. Stop picking an effort level", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 199, "fin": 298, "titre": "3. Checks Vs. Plans", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 298, "fin": 404, "titre": "4. Autonomous first with /goal", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 404, "fin": 427, "titre": "Le nouveau cours de l'Agentic Academy", "role": "cta", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 427, "fin": 597, "titre": "5. Turn CLAUDE.md into an index", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 597, "fin": 721, "titre": "6. Only Skill what Claude got wrong", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 721, "fin": 808, "titre": "7. No Skill beats Skill 7/9 times", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 808, "fin": 877, "titre": "8. Put must-hold rules in a hook", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 877, "fin": 993, "titre": "9. Let Claude build its own agent team", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 993, "fin": 1074, "titre": "10. Projects et routines : le dernier déblocage (sans chapitre)", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 1074, "fin": 1089, "titre": "Agentic Academy et vidéo suivante", "role": "fin", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 20, "type": "annonce-suite", "citation": "starting with what they use instead of plan mode"},
+      {"seconde": 123, "type": "annonce-suite", "citation": "here's the picture we're building throughout this video"},
+      {"seconde": 144, "type": "annonce-suite", "citation": "But actually the new advice is to ignore that entirely."},
+      {"seconde": 199, "type": "annonce-suite", "citation": "the next two are about how Claude proves it's actually done the task"},
+      {"seconde": 298, "type": "question-spectateur", "citation": "Otherwise, you'll sit there and keep typing continue"},
+      {"seconde": 427, "type": "rupture", "citation": "Anthropic did something crazy"},
+      {"seconde": 536, "type": "question-spectateur", "citation": "Now, that's quite a few rules, right?"},
+      {"seconde": 563, "type": "rappel-promesse", "citation": "So, back to where we're at on the board"},
+      {"seconde": 659, "type": "rappel-promesse", "citation": "you're probably noticing a theme of change in this video"},
+      {"seconde": 808, "type": "annonce-suite", "citation": "there's three more that are really going to accelerate the amount of work"},
+      {"seconde": 877, "type": "annonce-suite", "citation": "the last two are about how removed we can be from the work itself"},
+      {"seconde": 993, "type": "rupture", "citation": "the dream of sitting on a beach with pina coladas"}
+    ],
+    "histoires": [
+      {"seconde": 39, "acte": "client-autre", "resume": "Boris Cherny a inventé le plan mode un dimanche soir, lassé de demander à Claude de planifier ; l'idée est devenue centrale, puis inutile."},
+      {"seconde": 597, "acte": "perso-passe", "resume": "Construire des skills avant d'avoir testé Claude sans skill l'a piégé « again and again »."},
+      {"seconde": 674, "acte": "anecdote", "resume": "La skill enregistrée sur une automatisation de DM Instagram est sortie toute petite : seulement ses corrections."},
+      {"seconde": 782, "acte": "anecdote", "resume": "Il a nettoyé sa bibliothèque de skills avec skill doctor puis plugin eval."},
+      {"seconde": 1042, "acte": "vision-build", "resume": "Tous ses carrousels et shorts Instagram sont produits ainsi ; il n'a plus qu'à approuver dans son interface maison."}
+    ],
+    "payoffs": [
+      {"seconde": 80, "resume": "Le brief en trois lignes : la tâche, les garde-fous, la définition du fini"},
+      {"seconde": 117, "resume": "Demander à la fin une page visuelle de ce que Claude a fait et supposé"},
+      {"seconde": 185, "resume": "Laisser l'effort au niveau recommandé"},
+      {"seconde": 244, "resume": "Un script check report qui valide la définition du fini"},
+      {"seconde": 372, "resume": "Un /goal complet : le check passe, le gabarit ne bouge pas, 15 tours au plus"},
+      {"seconde": 460, "resume": "Les quatre choses à garder dans Claude.md et les trois règles des pointeurs"},
+      {"seconde": 542, "resume": "/doctor prompt-audit pour nettoyer ses fichiers"},
+      {"seconde": 692, "resume": "Faire le travail sans skill et n'écrire que les corrections"},
+      {"seconde": 755, "resume": "plugin eval : la skill contre pas de skill"},
+      {"seconde": 862, "resume": "Chaque règle en capitales devient un hook ou disparaît"},
+      {"seconde": 969, "resume": "Plafonner le nombre de sous-agents dans la config"}
+    ],
+    "premier_payoff_seconde": 80,
+    "jargon": 2,
+    "repetitions": 1,
+    "test_du_tweet": "Même le créateur de Claude Code a lâché le plan mode. Écris un brief en 3 lignes (tâche, garde-fous, définition du fini), donne à Claude un check qu'il peut lancer, laisse /goal boucler, fais de Claude.md un index et des skills de simples corrections."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "taille, plan large au bureau ; vignette à droite sur les captures", "decor": "bureau, mur à lattes de bois, micro RØDE, affiche, fauteuil vert, lampe"},
+    "parts": {"face": 40, "ecran": 30, "motion": 30, "broll": 0},
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["cartes-chapitre", "curseur-surligne", "split-screen", "zooms-ecran"],
+    "charte": "Fonds blancs et gris clair, docs, tweets et commentaires Hacker News surlignés en orange ; un gros chiffre 3D rouge corail ouvre chaque point ; un schéma au trait avec des blocs rouge-brun se construit au fil de la vidéo. La miniature reprend l'orange, pas le reste.",
+    "rythme": "contraste",
+    "notes": "Un même schéma (toi, le brief, Claude, la sortie, puis Claude.md et les skills) revient et grandit à chaque partie. Les preuves sont des captures surlignées : tweets de Boris datés, doc d'Anthropic, commentaires Hacker News."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 404, "type": "formation", "cible": "le nouveau cours de l'Agentic Academy (Skool)", "amene_par": "transition", "citation": "if you've learned something so far, then you probably love the new course"},
+      {"seconde": 1050, "type": "formation", "cible": "le système de carrousels partagé avec les membres de l'Agentic Academy", "amene_par": "pendant-demo", "citation": "this is something that we're sharing in the Agentic Academy with members"},
+      {"seconde": 1074, "type": "formation", "cible": "être aidé à confier un premier process à l'IA dans l'Agentic Academy", "amene_par": "fin", "citation": "that's what we're helping people to do inside the Agentic Academy"},
+      {"seconde": 1081, "type": "video-suivante", "cible": "la prochaine vidéo sur les changements de la construction de skills", "amene_par": "fin", "citation": "in the next video, I'm running through all updates in the last year to skill building"}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"formation": 1, "abonnement": 1, "produit": 1},
+    "commentaire_epingle": null,
+    "recap_final": false,
+    "derniere_phrase": "See you there. Thanks for watching.",
+    "video_suivante_precise": true
+  },
+  "commentaires": {
+    "themes": ["la défense du plan mode (budget de tokens, gros projets, non-développeurs)", "le passage du prompt à des systèmes autonomes", "le titre jugé racoleur", "des chapitres décalés en fin de vidéo"],
+    "demandes": ["un équivalent de /goal pour OpenCode", "savoir si les conseils valent pour Codex", "faut-il encore ouvrir de nouvelles sessions", "comment fixer des goals pour des automatisations comptables"],
+    "critiques": ["« Boris has an infinite budget. Most of us don't » (119 likes)", "« Top 1% what? Token spenders? » : le chiffre jugé racoleur", "/doctor prompt-audit ne fait pas ce qui est dit", "trop parlé, pas assez d'exemples visuels"],
+    "reprises": ["« Trust Claude's setup », repris avec ironie (22 likes)", "plan mode", "les pina coladas de la fin"],
+    "signal_promesse": "mixte"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "1re phrase et 1er plan reprennent le plan mode de la miniature, pas le « top 1 % » du titre"},
+    "ap_boucle_curiosite": {"note": 1, "preuve": "0:20 « starting with what they use instead of plan mode », résolue 45 s plus tard ; le schéma annoncé à 2:03 se complète jusqu'à la fin"},
+    "ap_effort_montre": {"note": 0, "preuve": "Aucun effort, test ou heure de travail dans l'intro"},
+    "ap_setup_progress_payoff": {"note": 2, "preuve": "Le schéma posé à 2:03 grandit (9:23 Claude.md, 11:46 skills) jusqu'au « final unlock » à 16:33 : un but, une progression, une livraison"},
+    "ap_contraste_rythme": {"note": 1, "preuve": "De 3 plans par minute (doc d'audit tenue longtemps vers 10:00) à 14-15 en fin de vidéo, sans rupture marquée"},
+    "ap_montrer_sans_son": {"note": 2, "preuve": "Planche intro : « Always Use Plan Mode », puis « The same [Boris] in September » et « plan mode was useful, and is no longer useful » surligné : la dissonance se lit sans le son"},
+    "ali_douleur_histoire": {"note": 0, "preuve": "Douleur à peine dite (0:20 « stop wasting time on old advice ») ; l'histoire du dimanche soir est celle de Boris, pas la sienne"},
+    "ali_coeur_unique": {"note": 2, "preuve": "10:39 « leave Claude alone doing its thing until it makes mistakes, then add the infrastructure »"},
+    "alx_pont": {"note": 1, "preuve": "Contexte, preuve (Boris) et annonce des 10 points, mais ouvert par une dissonance nette"},
+    "alx_pull_paint_point": {"note": 2, "preuve": "Presque chaque point dit pourquoi il compte, s'appuie sur l'exemple du rapport client hebdo, puis donne l'action"},
+    "alx_nom_idee": {"note": 1, "preuve": "« definition of done », « Claude.md is the contents page », « Checks vs. Plans » ; peu de noms affichés à l'écran"},
+    "alx_phrase_finale": {"note": 2, "preuve": "1:41 « And that is the advice now » ; 3:17 « trust Claude's setup » ; 12:59 « it's just decoration »"},
+    "alx_douleur_reve": {"note": 1, "preuve": "« Top 1% » parle du désir d'être parmi les meilleurs, mais l'outil porte le titre"},
+    "alx_cta_tot": {"note": 0, "preuve": "Le cours de l'Agentic Academy arrive à 6:44"},
+    "ed_intro_courte": {"note": 1, "preuve": "1er point à 0:29 après cinq phrases"},
+    "ed_hook": {"note": 2, "preuve": "0:00 « Every piece of claw code advice [...] Start in plan mode », puis son créateur dit le contraire : dissonance nette"},
+    "ed_probleme_preuve_consignes": {"note": 2, "preuve": "Plan mode, effort, checks, /goal, Claude.md, skills, sous-agents : problème, preuve (Boris, Anthropic, test de 450 runs), puis consignes"},
+    "ed_tension_relancee": {"note": 2, "preuve": "4:58 « Otherwise, you'll sit there and keep typing continue » lance /goal ; 13:28 « three more » ; 14:37 « the last two »"},
+    "ed_histoire_vecue": {"note": 2, "preuve": "0:39 le plan mode inventé un dimanche soir (acte 2) ; 17:22 ses carrousels produits ainsi (acte 3)"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "La définition du fini et le check sont redits plusieurs fois ; « basically » revient sans cesse"},
+    "ed_niveau_simple": {"note": 2, "preuve": "2:58 et 15:14 « in plain English » ; un seul exemple (le rapport client) porte chaque notion"},
+    "tous_video_suivante": {"note": 1, "preuve": "18:01 la prochaine vidéo sur la construction de skills est annoncée, sans raison ni lien vers une vidéo existante"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Le titre promet un statut (« Top 1% ») et la miniature porte la thèse provocante (« Plan mode is Dead ») avec le visage d'un tiers : deux promesses qui se complètent. La provocation a fait débattre (148 commentaires selon VidIQ, le plus haut des dix).",
+    "intro_structure": "Une dissonance prouvée par l'autorité : le créateur de l'outil a changé d'avis, captures datées à l'appui. Puis un fil rouge (le rapport client) et un schéma qui se construit point après point.",
+    "habillage": "Captures surlignées en orange comme preuves, gros chiffre 3D à chaque point, un schéma au trait qui grandit au fil de la vidéo.",
+    "idee_pour_nous": "Prendre une habitude que tout le monde enseigne et montrer, preuve datée à l'appui, que son créateur l'a abandonnée ; dérouler la vidéo sur un seul exemple concret du public de Thomas.",
+    "objectif": "vues"
+  }
+}

@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design system · trois pistes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,800;1,6..72,400;1,6..72,600;1,6..72,800&family=Public+Sans:wght@400;600;700&family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --shell-bg:#E7E5E0; --shell-ink:#1D1D1B; --shell-mute:#5E5C57; --shell-line:#CFCCC4;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --shell-bg:#141413; --shell-ink:#ECEAE5; --shell-mute:#A3A09A; --shell-line:#34332F; }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--shell-bg);color:var(--shell-ink);font:16px/1.5 "Public Sans",system-ui,sans-serif}
+.shell{max-width:1560px;margin:0 auto;padding:40px 24px 16px}
+.shell h1{font:700 28px/1.2 "Public Sans",sans-serif;margin:0 0 8px;letter-spacing:-.01em}
+.shell p{margin:0;color:var(--shell-mute);max-width:70ch}
+.shell .choix{margin-top:14px;padding-top:14px;border-top:1px solid var(--shell-line);font-size:14px}
+.shell code{font-family:"JetBrains Mono",monospace;font-size:.9em}
+
+.pistes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;max-width:1560px;margin:0 auto;padding:16px 24px 56px}
+@media (max-width:1200px){ .pistes{grid-template-columns:1fr;max-width:640px} }
+@media (max-width:480px){ .shell,.pistes{padding-left:16px;padding-right:16px} }
+
+/* ── Ossature commune d'une piste : chaque piste remplit ses jetons ── */
+.piste{background:var(--bg);color:var(--fg);border-radius:6px;padding:28px 24px 32px;display:flex;flex-direction:column;gap:30px;font-family:var(--f-text)}
+.tete .lettre{font:var(--w-display) 64px/1 var(--f-display);color:var(--accent);margin:0}
+.tete h2{font:var(--w-display) 26px/1.15 var(--f-display);margin:6px 0 6px}
+.tete .axe{color:var(--mute);margin:0 0 14px;font-size:15px}
+.tete .dit{font-style:italic;margin:0 0 14px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.tags li{font:500 12px/1 var(--f-label);border:1px solid var(--line);color:var(--mute);padding:6px 8px;border-radius:var(--r-tag)}
+.bloc h3{font:600 12px/1 var(--f-label);text-transform:uppercase;letter-spacing:.12em;color:var(--mute);margin:0 0 12px}
+
+.signature{display:flex;align-items:center;gap:14px}
+.signature svg{width:46px;height:auto;color:var(--logo)}
+.signature span{font:800 30px/1 "Schibsted Grotesk",sans-serif;letter-spacing:-.01em;color:var(--logo)}
+.signature b{color:var(--accent-4);font-weight:800}
+
+.nuancier{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.nuance i{display:block;height:56px;border-radius:var(--r-tag);border:1px solid var(--line)}
+.nuance strong{display:block;font:600 12px/1.25 var(--f-label);margin-top:6px}
+.nuance small{display:block;font:400 11px/1.3 "JetBrains Mono",monospace;color:var(--mute)}
+.nuance em{display:block;font:400 11px/1.3 var(--f-label);font-style:normal;color:var(--mute)}
+
+.specimen .aa{font:var(--w-display) 72px/1 var(--f-display);margin:0 0 10px}
+.specimen .t{font:var(--w-display) 26px/1.15 var(--f-display);margin:0 0 8px}
+.specimen .p{font-size:15px;margin:0 0 8px;max-width:46ch}
+.specimen .l{font:500 12px/1.3 var(--f-label);color:var(--mute);margin:0}
+.specimen .noms{margin:12px 0 0;font:400 12px/1.5 "JetBrains Mono",monospace;color:var(--mute)}
+
+.miniature{aspect-ratio:16/9;position:relative;overflow:hidden;container-type:inline-size;border-radius:4px}
+.miniature svg{position:absolute}
+.bloc{container-type:inline-size}
+.schema{position:relative}
+.boutons{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.boutons a{text-decoration:none;cursor:pointer}
+
+/* ════════ A · Le tableau (charte vert pin) ════════ */
+.a{--bg:#0C1A15;--fg:#FAF8F3;--mute:#8DA399;--accent:#D9A441;--hot:#C85B41;--brand:#83BBA4;--surface:#10241C;--line:#2E4A3C;
+   --logo:#FAF8F3;--accent-4:#D9A441;--f-display:"Schibsted Grotesk",sans-serif;--f-text:"Schibsted Grotesk",sans-serif;--f-label:"Schibsted Grotesk",sans-serif;--w-display:800;--r-tag:6px}
+.a .miniature{background:#0C1A15;outline:1px solid var(--line)}
+.a .miniature .filigrane{width:78cqw;right:-14cqw;top:-12cqw;color:#83BBA4;opacity:.12}
+.a .miniature .portrait{width:40cqw;right:3cqw;bottom:0;color:#1C4B3C}
+.a .miniature .titre{position:absolute;left:6cqw;top:12cqw;margin:0;font:800 8.6cqw/.98 "Schibsted Grotesk",sans-serif;letter-spacing:-.02em;text-transform:uppercase;color:#FAF8F3}
+.a .miniature .titre span{color:#D9A441}
+.a .miniature .barre{position:absolute;left:6cqw;top:45cqw;width:16cqw;height:1.4cqw;background:#C85B41}
+.a .miniature .pastille{position:absolute;left:6cqw;top:5cqw;font:700 2.8cqw/1 "Schibsted Grotesk",sans-serif;color:#0C1A15;background:#83BBA4;padding:1cqw 1.6cqw;border-radius:1cqw;text-transform:uppercase;letter-spacing:.06em}
+
+.a .schema{border:2px dashed rgba(131,187,164,.45);border-radius:16px;padding:5cqw 5cqw 4cqw}
+.a .schema .k{font:500 2.8cqw/1 "Schibsted Grotesk",sans-serif;color:#8DA399;margin:0}
+.a .schema h4{font:800 5.4cqw/1.1 "Schibsted Grotesk",sans-serif;text-align:center;margin:3cqw 0 5cqw}
+.a .ligne{display:grid;grid-template-columns:44% 1fr;gap:4cqw;align-items:center}
+.a .boite{border:2px solid;border-radius:10px;padding:2.6cqw 2cqw;text-align:center;font:500 3.4cqw/1.2 "Schibsted Grotesk",sans-serif}
+.a .fx{font:700 4.6cqw/1.1 "Schibsted Grotesk",sans-serif;margin:0}
+.a .fx small{display:block;font:400 2.7cqw/1.3 "Schibsted Grotesk",sans-serif;color:#8DA399;margin-top:.6cqw}
+.a .plus{grid-column:1;text-align:center;font:700 4cqw/1 "Schibsted Grotesk",sans-serif;color:#8DA399;margin:1.4cqw 0}
+.a .l1 .boite,.a .l1 .fx{border-color:#83BBA4;color:#83BBA4}
+.a .l1 .boite{color:#FAF8F3}
+.a .l2 .boite{border-color:#FAF8F3}
+.a .l3 .boite{border-color:#D9A441}
+.a .l3 .fx{color:#D9A441}
+.a .schema .total{border-top:2px solid #8DA399;margin:4cqw 0 0;padding-top:2.4cqw;font:500 3.2cqw/1.3 "Schibsted Grotesk",sans-serif;text-align:center}
+.a .schema .morale{font:800 4.2cqw/1.25 "Schibsted Grotesk",sans-serif;color:#D9A441;text-align:center;margin:5cqw 0 0}
+
+.a .btn1{background:#C85B41;color:#FAF8F3;font:700 15px/1 "Schibsted Grotesk",sans-serif;padding:14px 20px;border-radius:8px}
+.a .btn1:hover{background:#B4472F}
+.a .btn2{border:2px solid #83BBA4;color:#83BBA4;font:700 15px/1 "Schibsted Grotesk",sans-serif;padding:12px 18px;border-radius:8px}
+.a .btn2:hover{background:rgba(131,187,164,.12)}
+
+/* ════════ B · La revue (imprimé) ════════ */
+.b{--bg:#F3EEE4;--fg:#17191F;--mute:#6B675F;--accent:#2A3FCB;--surface:#FBF8F2;--line:#CFC7B8;
+   --logo:#17191F;--accent-4:#2A3FCB;--f-display:"Newsreader",serif;--f-text:"Newsreader",serif;--f-label:"Public Sans",sans-serif;--w-display:800;--r-tag:2px}
+.b .piste-corps,.b{font-size:17px}
+.b .tete .lettre{font-style:italic}
+.b .tete h2{font-weight:600}
+.b .specimen .t{font-weight:600}
+.b .specimen .t i{color:#2A3FCB}
+.b .miniature{background:#F3EEE4;outline:1px solid var(--line)}
+.b .miniature .cadre{position:absolute;right:4cqw;top:4cqw;bottom:4cqw;width:38cqw;background:#E4DBCB}
+.b .miniature .portrait{width:36cqw;right:5cqw;bottom:4cqw;color:#17191F}
+.b .miniature .tete-revue{position:absolute;left:5cqw;top:4.5cqw;right:46cqw;border-top:.6cqw solid #17191F;border-bottom:.25cqw solid #17191F;padding:1cqw 0;display:flex;justify-content:space-between;font:700 2.3cqw/1 "Public Sans",sans-serif;text-transform:uppercase;letter-spacing:.14em}
+.b .miniature .titre{position:absolute;left:5cqw;top:15cqw;right:46cqw;margin:0;font:800 7.8cqw/1 "Newsreader",serif;letter-spacing:-.02em;color:#17191F}
+.b .miniature .titre i{color:#2A3FCB;font-weight:800}
+.b .miniature .chapo{position:absolute;left:5cqw;bottom:6cqw;right:46cqw;margin:0;font:italic 400 2.9cqw/1.3 "Newsreader",serif;color:#6B675F;border-left:.6cqw solid #2A3FCB;padding-left:2cqw}
+
+.b .schema{background:#FBF8F2;border-top:4px solid #17191F;padding:4cqw 4.5cqw 4.5cqw}
+.b .schema .k{font:700 2.5cqw/1 "Public Sans",sans-serif;text-transform:uppercase;letter-spacing:.14em;color:#2A3FCB;margin:0}
+.b .schema h4{font:600 6cqw/1.1 "Newsreader",serif;margin:2.4cqw 0 4cqw}
+.b .ligne{display:grid;grid-template-columns:24cqw 1fr;gap:4cqw;align-items:baseline;border-top:1px solid #CFC7B8;padding:3cqw 0}
+.b .fx{font:800 7cqw/1 "Newsreader",serif;margin:0;letter-spacing:-.02em}
+.b .boite{font:600 3.8cqw/1.25 "Newsreader",serif}
+.b .boite small{display:block;font:400 2.7cqw/1.35 "Public Sans",sans-serif;color:#6B675F;margin-top:.8cqw}
+.b .l3 .fx{color:#2A3FCB}
+.b .schema .total{border-top:2px solid #17191F;margin:0;padding-top:2.6cqw;font:400 2.8cqw/1.3 "Public Sans",sans-serif;color:#6B675F;text-transform:uppercase;letter-spacing:.08em}
+.b .schema .morale{font:italic 600 4.8cqw/1.25 "Newsreader",serif;margin:4cqw 0 0;padding-left:3cqw;border-left:3px solid #2A3FCB}
+
+.b .btn1{background:#2A3FCB;color:#F8F6F0;font:600 15px/1 "Public Sans",sans-serif;padding:15px 22px;border-radius:2px}
+.b .btn1:hover{background:#1F30A6}
+.b .btn2{color:#17191F;font:600 15px/1 "Public Sans",sans-serif;padding:14px 4px;border-bottom:2px solid #17191F}
+.b .btn2:hover{color:#2A3FCB;border-color:#2A3FCB}
+
+/* ════════ C · Le laboratoire (planche technique) ════════ */
+.c{--bg:#EBEBE7;--fg:#111111;--mute:#5C5C57;--accent:#111111;--surface:#F7F7F4;--line:#B9B9B3;
+   --logo:#111111;--accent-4:#111111;--f-display:"Archivo",sans-serif;--f-text:"Archivo",sans-serif;--f-label:"JetBrains Mono",monospace;--w-display:800;--r-tag:0}
+.c .tete .lettre,.c .tete h2,.c .specimen .aa,.c .specimen .t{font-stretch:72%;text-transform:uppercase}
+.c .tete .lettre{-webkit-text-stroke:0;color:#111;background:#FFD02E;display:inline-block;padding:4px 10px 0}
+.c .tags li{border-color:#111;color:#111}
+.c .signature b{background:#FFD02E;padding:0 2px}
+.c .specimen .t mark{background:#FFD02E;color:#111;padding:0 4px}
+.c .nuance i{border-color:#111}
+.c .miniature{background:#EBEBE7;outline:1px solid #111;
+  background-image:linear-gradient(rgba(17,17,17,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(17,17,17,.07) 1px,transparent 1px);background-size:5cqw 5cqw}
+.c .miniature .cadre{position:absolute;right:5cqw;top:7cqw;bottom:0;width:34cqw;border:1px solid #111;border-bottom:0;background:#F7F7F4}
+.c .miniature .portrait{width:32cqw;right:6cqw;bottom:0;color:#111}
+.c .miniature .titre{position:absolute;left:5cqw;top:10cqw;margin:0;font:900 10.5cqw/.9 "Archivo",sans-serif;font-stretch:68%;text-transform:uppercase;letter-spacing:-.01em;color:#111}
+.c .miniature .titre mark{background:#FFD02E;color:#111;padding:0 1cqw}
+.c .miniature .repere{position:absolute;font:600 2.2cqw/1 "JetBrains Mono",monospace;color:#111;letter-spacing:.04em}
+.c .miniature .r1{left:5cqw;top:4cqw}
+.c .miniature .r2{left:5cqw;bottom:4cqw}
+
+.c .schema{background:#F7F7F4;border:1px solid #111;padding:4cqw 4.5cqw 4.5cqw;
+  background-image:linear-gradient(rgba(17,17,17,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(17,17,17,.06) 1px,transparent 1px);background-size:4cqw 4cqw}
+.c .schema .k{font:600 2.4cqw/1 "JetBrains Mono",monospace;margin:0;letter-spacing:.04em}
+.c .schema h4{font:800 6.4cqw/1 "Archivo",sans-serif;font-stretch:72%;text-transform:uppercase;margin:2.6cqw 0 4.4cqw}
+.c .ligne{display:grid;grid-template-columns:42% 1fr;gap:4cqw;align-items:center}
+.c .boite{border:1px solid #111;background:#F7F7F4;padding:2.6cqw 2.4cqw;font:500 3.3cqw/1.2 "Archivo",sans-serif}
+.c .l3 .boite{background:#FFD02E}
+.c .fx{font:800 6cqw/1 "Archivo",sans-serif;font-stretch:72%;margin:0}
+.c .fx small{display:block;font:400 2.4cqw/1.3 "JetBrains Mono",monospace;color:#5C5C57;margin-top:.8cqw;font-stretch:100%}
+.c .plus{grid-column:1;width:42%;text-align:center;font:600 3.2cqw/1 "JetBrains Mono",monospace;margin:1.2cqw 0}
+.c .plus::before{content:"";display:block;width:1px;height:2.4cqw;background:#111;margin:0 auto .6cqw}
+.c .schema .total{border-top:1px solid #111;margin:4cqw 0 0;padding-top:2.4cqw;font:400 2.6cqw/1.3 "JetBrains Mono",monospace}
+.c .schema .morale{font:800 4.6cqw/1.15 "Archivo",sans-serif;font-stretch:80%;text-transform:uppercase;margin:3.4cqw 0 0}
+.c .schema .morale mark{background:#FFD02E;color:#111;padding:0 1cqw}
+
+.c .btn1{background:#111;color:#F7F7F4;font:700 15px/1 "Archivo",sans-serif;font-stretch:85%;text-transform:uppercase;letter-spacing:.04em;padding:15px 20px;box-shadow:4px 4px 0 #FFD02E}
+.c .btn1:hover{box-shadow:6px 6px 0 #FFD02E}
+.c .btn2{border:1px solid #111;color:#111;font:600 13px/1 "JetBrains Mono",monospace;padding:14px 16px}
+.c .btn2:hover{background:#FFD02E}
+
+.pied{max-width:1560px;margin:0 auto;padding:0 24px 48px;color:var(--shell-mute);font-size:14px}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="valknut" viewBox="0 0 1240 1143.15"><path fill="currentColor" fill-rule="evenodd" d="M648.45 257.13 579.17 377.13 500 240 207.85 746.03 366.19 746.03 296.91 866.03 0 866.03 500 0ZM500 280 757.51 726.03 620.61 726.03 500 517.13 379.39 726.03 242.49 726.03ZM740 378.56 660.83 515.69 591.55 395.69 740 138.56 1240 1004.59 943.09 1004.59 873.81 884.59 1032.15 884.59ZM740 418.56 997.51 864.59 482.49 864.59 550.94 746.03 792.15 746.03 671.55 537.13ZM500 557.13 568.45 675.69 447.85 884.59 689.06 884.59 757.51 1003.15 242.49 1003.15ZM207.85 1023.15 792.15 1023.15 712.98 886.03 851.55 886.03 1000 1143.15 0 1143.15 148.45 886.03 287.02 886.03Z"/></symbol>
+  <symbol id="portrait" viewBox="0 0 100 110"><circle cx="50" cy="36" r="21" fill="currentColor"/><path d="M6 110C6 78 26 64 50 64S94 78 94 110Z" fill="currentColor"/></symbol>
+</svg>
+
+<header class="shell">
+  <h1>Design system Club SMART · trois pistes</h1>
+  <p>Même contenu, trois langages. A reste fidèle à la charte vert pin, B et C partent ailleurs. Le Valknut et la signature SM4RT restent dans les trois : seule leur couleur change.</p>
+  <p class="choix">Pour choisir : réponds « B », « A avec la typo de C », ou « burst sur B » pour varier encore à partir d'une piste. Le brief : <code>design-system.md</code>, dans ce dossier.</p>
+</header>
+
+<main class="pistes">
+
+  <!-- ═══════════ A ═══════════ -->
+  <article class="piste a">
+    <div class="tete">
+      <p class="lettre">A</p>
+      <h2>Le tableau</h2>
+      <p class="axe">Axe : fidélité. La charte vert pin telle qu'elle est, resserrée.</p>
+      <p class="dit">Le prof au tableau, le soir.</p>
+      <ul class="tags"><li>palette froide, sombre</li><li>grotesque lourde</li><li>texture tableau</li></ul>
+    </div>
+
+    <div class="bloc">
+      <h3>Signature</h3>
+      <div class="signature"><svg viewBox="0 0 1240 1143.15"><use href="#valknut"/></svg><span>SM<b>4</b>RT</span></div>
+    </div>
+
+    <div class="bloc">
+      <h3>Palette</h3>
+      <div class="nuancier">
+        <div class="nuance"><i style="background:#0C1A15"></i><strong>Pin 950</strong><small>#0C1A15</small><em>fond</em></div>
+        <div class="nuance"><i style="background:#FAF8F3"></i><strong>Papier</strong><small>#FAF8F3</small><em>texte</em></div>
+        <div class="nuance"><i style="background:#83BBA4"></i><strong>Pin 300</strong><small>#83BBA4</small><em>marque</em></div>
+        <div class="nuance"><i style="background:#D9A441"></i><strong>Ambre</strong><small>#D9A441</small><em>mise en avant</em></div>
+        <div class="nuance"><i style="background:#C85B41"></i><strong>Brique</strong><small>#C85B41</small><em>action</em></div>
+      </div>
+    </div>
+
+    <div class="bloc specimen">
+      <h3>Typo</h3>
+      <p class="aa">Aa</p>
+      <p class="t">Construis ton AIOS, pas à pas</p>
+      <p class="p">Un AIOS range ce que tu sais, ce que tu fais et ce que tu décides, pour que l'IA travaille avec ton contexte.</p>
+      <p class="l">Leçon · Économiser tes tokens</p>
+      <p class="noms">Titres : Schibsted Grotesk 800<br>Texte : Schibsted Grotesk 400<br>Étiquettes : Schibsted Grotesk 500</p>
+    </div>
+
+    <div class="bloc">
+      <h3>Miniature</h3>
+      <div class="miniature">
+        <svg class="filigrane" viewBox="0 0 1240 1143.15"><use href="#valknut"/></svg>
+        <svg class="portrait" viewBox="0 0 100 110"><use href="#portrait"/></svg>
+        <span class="pastille">Claude</span>
+        <p class="titre">Arrête de<br>gaspiller<br><span>tes tokens</span></p>
+        <span class="barre"></span>
+      </div>
+    </div>
+
+    <div class="bloc">
+      <h3>Schéma</h3>
+      <div class="schema">
+        <p class="k">Comprendre</p>
+        <h4>Ce que coûte un message</h4>
+        <div class="ligne l1"><div class="boite">tout ce qu'il relit</div><p class="fx">× 0,1 ou moins<small>si le cache est chaud</small></p></div>
+        <p class="plus">+</p>
+        <div class="ligne l2"><div class="boite">ce qu'il lit de neuf</div><p class="fx">× 1<small>le prix normal</small></p></div>
+        <p class="plus">+</p>
+        <div class="ligne l3"><div class="boite">ce qu'il écrit</div><p class="fx">× 5<small>5 fois le prix de lecture</small></p></div>
+        <p class="total">= ta consommation, message après message</p>
+        <p class="morale">Plus la discussion est longue, plus chaque message pèse.</p>
+      </div>
+    </div>
+
+    <div class="bloc">
+      <h3>Boutons</h3>
+      <div class="boutons"><a class="btn1">Rejoindre le Club SMART</a><a class="btn2">Voir le programme</a></div>
+    </div>
+  </article>
+
+  <!-- ═══════════ B ═══════════ -->
+  <article class="piste b">
+    <div class="tete">
+      <p class="lettre">B</p>
+      <h2>La revue</h2>
+      <p class="axe">Axe : l'imprimé. Une revue de fond : papier ivoire, serif, une seule encre de couleur.</p>
+      <p class="dit">L'expert qu'on lit comme un bon magazine.</p>
+      <ul class="tags"><li>palette claire, chaude</li><li>serif éditoriale</li><li>texture papier imprimé</li></ul>
+    </div>
+
+    <div class="bloc">
+      <h3>Signature</h3>
+      <div class="signature"><svg viewBox="0 0 1240 1143.15"><use href="#valknut"/></svg><span>SM<b>4</b>RT</span></div>
+    </div>
+
+    <div class="bloc">
+      <h3>Palette</h3>
+      <div class="nuancier">
+        <div class="nuance"><i style="background:#F3EEE4"></i><strong>Ivoire</strong><small>#F3EEE4</small><em>fond</em></div>
+        <div class="nuance"><i style="background:#17191F"></i><strong>Encre</strong><small>#17191F</small><em>texte</em></div>
+        <div class="nuance"><i style="background:#2A3FCB"></i><strong>Outremer</strong><small>#2A3FCB</small><em>accent unique</em></div>
+        <div class="nuance"><i style="background:#6B675F"></i><strong>Pierre</strong><small>#6B675F</small><em>texte atténué</em></div>
+        <div class="nuance"><i style="background:#CFC7B8"></i><strong>Filet</strong><small>#CFC7B8</small><em>traits</em></div>
+      </div>
+    </div>
+
+    <div class="bloc specimen">
+      <h3>Typo</h3>
+      <p class="aa">Aa</p>
+      <p class="t">Construis ton AIOS, <i>pas à pas</i></p>
+      <p class="p">Un AIOS range ce que tu sais, ce que tu fais et ce que tu décides, pour que l'IA travaille avec ton contexte.</p>
+      <p class="l">LEÇON · ÉCONOMISER TES TOKENS</p>
+      <p class="noms">Titres : Newsreader 800 et italique<br>Texte : Newsreader 400<br>Étiquettes : Public Sans 600</p>
+    </div>
+
+    <div class="bloc">
+      <h3>Miniature</h3>
+      <div class="miniature">
+        <span class="cadre"></span>
+        <svg class="portrait" viewBox="0 0 100 110"><use href="#portrait"/></svg>
+        <div class="tete-revue"><span>Club SMART</span><span>Claude</span></div>
+        <p class="titre">Arrête de gaspiller <i>tes tokens</i></p>
+        <p class="chapo">Ce que tu paies vraiment à chaque message.</p>
+      </div>
+    </div>
+
+    <div class="bloc">
+      <h3>Schéma</h3>
+      <div class="schema">
+        <p class="k">Fig. 1 · Comprendre</p>
+        <h4>Ce que coûte un message</h4>
+        <div class="ligne l1"><p class="fx">× 0,1</p><div class="boite">Tout ce qu'il relit<small>ou moins, si le cache est chaud</small></div></div>
+        <div class="ligne l2"><p class="fx">× 1</p><div class="boite">Ce qu'il lit de neuf<small>le prix normal</small></div></div>
+        <div class="ligne l3"><p class="fx">× 5</p><div class="boite">Ce qu'il écrit<small>5 fois le prix de lecture</small></div></div>
+        <p class="total">= Ta consommation, message après message</p>
+        <p class="morale">Plus la discussion est longue, plus chaque message pèse.</p>
+      </div>
+    </div>
+
+    <div class="bloc">
+      <h3>Boutons</h3>
+      <div class="boutons"><a class="btn1">Rejoindre le Club SMART</a><a class="btn2">Voir le programme →</a></div>
+    </div>
+  </article>
+
+  <!-- ═══════════ C ═══════════ -->
+  <article class="piste c">
+    <div class="tete">
+      <p class="lettre">C</p>
+      <h2>Le laboratoire</h2>
+      <p class="axe">Axe : la planche technique. Grille, traits fins, un jaune signal pour seul accent.</p>
+      <p class="dit">L'ingénieur qui montre comment ça marche.</p>
+      <ul class="tags"><li>palette neutre, claire</li><li>grotesque étroite + mono</li><li>texture planche technique</li></ul>
+    </div>
+
+    <div class="bloc">
+      <h3>Signature</h3>
+      <div class="signature"><svg viewBox="0 0 1240 1143.15"><use href="#valknut"/></svg><span>SM<b>4</b>RT</span></div>
+    </div>
+
+    <div class="bloc">
+      <h3>Palette</h3>
+      <div class="nuancier">
+        <div class="nuance"><i style="background:#EBEBE7"></i><strong>Gris labo</strong><small>#EBEBE7</small><em>fond</em></div>
+        <div class="nuance"><i style="background:#111111"></i><strong>Noir</strong><small>#111111</small><em>texte, traits</em></div>
+        <div class="nuance"><i style="background:#FFD02E"></i><strong>Jaune signal</strong><small>#FFD02E</small><em>surlignage</em></div>
+        <div class="nuance"><i style="background:#5C5C57"></i><strong>Graphite</strong><small>#5C5C57</small><em>légendes</em></div>
+        <div class="nuance"><i style="background:#F7F7F4"></i><strong>Blanc</strong><small>#F7F7F4</small><em>surface</em></div>
+      </div>
+    </div>
+
+    <div class="bloc specimen">
+      <h3>Typo</h3>
+      <p class="aa">Aa</p>
+      <p class="t">Construis ton <mark>AIOS</mark>, pas à pas</p>
+      <p class="p">Un AIOS range ce que tu sais, ce que tu fais et ce que tu décides, pour que l'IA travaille avec ton contexte.</p>
+      <p class="l">[ LEÇON · ÉCONOMISER TES TOKENS ]</p>
+      <p class="noms">Titres : Archivo étroit 800<br>Texte : Archivo 400<br>Étiquettes : JetBrains Mono</p>
+    </div>
+
+    <div class="bloc">
+      <h3>Miniature</h3>
+      <div class="miniature">
+        <span class="cadre"></span>
+        <svg class="portrait" viewBox="0 0 100 110"><use href="#portrait"/></svg>
+        <span class="repere r1">[ CLAUDE · TOKENS ]</span>
+        <p class="titre">Arrête de<br>gaspiller<br><mark>tes tokens</mark></p>
+        <span class="repere r2">CLUB SMART</span>
+      </div>
+    </div>
+
+    <div class="bloc">
+      <h3>Schéma</h3>
+      <div class="schema">
+        <p class="k">FIG.01 / COÛT D'UN MESSAGE</p>
+        <h4>Ce que coûte un message</h4>
+        <div class="ligne l1"><div class="boite">tout ce qu'il relit</div><p class="fx">× 0,1<small>ou moins, cache chaud</small></p></div>
+        <p class="plus">+</p>
+        <div class="ligne l2"><div class="boite">ce qu'il lit de neuf</div><p class="fx">× 1<small>prix normal</small></p></div>
+        <p class="plus">+</p>
+        <div class="ligne l3"><div class="boite">ce qu'il écrit</div><p class="fx">× 5<small>5 × le prix de lecture</small></p></div>
+        <p class="total">= ta consommation, message après message</p>
+        <p class="morale">Plus la discussion est longue, plus <mark>chaque message pèse</mark>.</p>
+      </div>
+    </div>
+
+    <div class="bloc">
+      <h3>Boutons</h3>
+      <div class="boutons"><a class="btn1">Rejoindre le Club SMART</a><a class="btn2">Voir le programme</a></div>
+    </div>
+  </article>
+
+</main>
+
+<p class="pied">Le portrait est une silhouette de placement : sur la vraie miniature, c'est la photo détourée de Thomas. Polices : Google Fonts.</p>
+
+</body>
+</html>

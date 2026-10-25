@@ -1,0 +1,160 @@
+[00:00] These three videos were made automatically for me.
+[00:02] This one is a survival story, 3 minutes long and the 40th floor and the whole city loses power.
+[00:08] This one is a horror shorts, in 1990 a girl's home alone and the phone rings at 2:00 a.m.
+[00:13] And this one is a 3D history explainer why the hard hats exist, which is a true story.
+[00:18] The best part here, no image generator, no video model, no stock footage.
+[00:23] Claude built every single frame in code, the rooms, the people, the lighting, the voice, the music, the sound effects, literally all of it.
+[00:32] And the reason I made these, every day on Twitter I see posts like this.
+[00:35] This guy posted four YouTube studio screenshots.
+[00:38] Four faceless channels all started this year.
+[00:40] Together they made $33,000 in March.
+[00:44] And one of those channels alone made 12,000 in 1 month.
+[00:48] This one $51,000 generated, 47-day-old channel.
+[00:52] 420,000 views on that post.
+[00:55] And this one got 1.6 million views.
+[00:58] A 22-year-old making $40,000 to $60,000 a month with faceless YouTube channels.
+[01:04] And you know where he writes his scripts?
+[01:06] In Claude.
+[01:06] So, as you know me, I'm going to show you how I built these three, how I did it step-by-step, what it cost me, and what you can do, too.
+[01:13] And at the end, I'll show you the skill I turned all of this into so you can install it yourself and how you can actually profit from it.
+[01:20] As you know me, I'm not gatekeeping any of this.
+[01:22] It's free in my school community.
+[01:24] Link is in description.
+[01:25] Let's get right into it.
+[01:26] Step one, and this is the thing nobody tells you about faceless content.
+[01:30] You don't need to invent the format.
+[01:32] The format already exists.
+[01:34] Every one of these three started from a faceless video that's already gotten views.
+[01:38] A survival story page on TikTok, an animated horror channel on YouTube, and one of these 3D explainer channels you've definitely seen on shorts.
+[01:47] Here's the thing, if a channel keeps posting the same formats and it keeps getting views, that format works.
+[01:53] So, you don't need to guess.
+[01:55] You start from what's already winning.
+[01:57] But, you don't copy it.
+[01:58] Not their story, not their characters.
+[02:00] You take the formats, the pacing, the layout, how the narrator talks, and then you make yours.
+[02:06] And that matters a lot when you want to make profit from it.
+[02:10] Step two, and this I made it in a lot of videos, the style sheet.
+[02:13] It's super powerful.
+[02:15] This is what makes it look like your channel and not AI slop.
+[02:18] A style sheet is one image with all the rules of your world.
+[02:22] It's the same formats I use for my carousels, six boxes, the fonts, the colors with the hex codes, the characters and the props, what the world looks like, how a frame is laid out, and the rules.
+[02:33] And the rules are the secrets.
+[02:35] Look at this one, Lamplitz Ink Cartoon.
+[02:38] Mustard belongs to the hero's beanie and nothing else is in the frame.
+[02:42] The hero never stands taller than 40% of the frame.
+[02:45] The rule always wins.
+[02:46] This one, Red Ghost.
+[02:47] Every person is glowing red silhouettes, never a readable face.
+[02:51] The room is never brighter than the figure.
+[02:53] No glow attention comes from the light and posts.
+[02:56] In this one, Sunlights Explainer.
+[02:58] Type only exist printed on a project in the scene, never floating over the image.
+[03:03] That's what gives a channel a look every video like it came from the same channel.
+[03:08] That's how people recognize you without ever seeing your face.
+[03:10] I made all three in Hicksfield with GPT Image 2.0.
+[03:14] 3.5 credits I used on each and that's the only thing I used Hicksfield for.
+[03:19] If you don't want to have a subscription, I have a link in the description that gives you a promo for the API tokens.
+[03:24] You only need one image per style.
+[03:26] Step three, Claude.
+[03:27] I opened Claude code with Opus 5.5.
+[03:30] You don't want to go a cheap model.
+[03:32] I dropped it into the style sheet and the link to the reference video.
+[03:35] And I told it pretty much this, no Hicksfield, no images, no generations, no video at all.
+[03:41] Fully local.
+[03:42] 30 seconds, show me the most motion graphics you can do.
+[03:46] And then it does the work.
+[03:47] So, first it has to study the reference.
+[03:49] It pulls the frames and the transcript and it transcribes the narrative.
+[03:53] For the horror one, it figured out the channel cuts every 3 seconds with one line of yellow captions and a calm male narrator.
+[04:00] Then, it writes a brand new story, not theirs, a new one.
+[04:04] Then the voice, a free voice model that runs on my Mac right now.
+[04:07] I'm not paying, no APIs, nothing.
+[04:09] And in the horror one, the man on the phone is a second voice.
+[04:13] Claude turned it into a real whisper and made it sound like it's coming through a 1990 phone.
+[04:18] >> Don't open the door.
+[04:20] >> A man whispered.
+[04:21] >> Then the music for the survival one and the hard hat one, it's free music model on my laptop.
+[04:27] For the horror one, the music is made in code and every sound effect, the phone ring, the knocks, the steam, was also made in code.
+[04:34] Then the visual, and this is the part that actually blew my mind.
+[04:37] In the horror one, the house is a real 3D set built in code.
+[04:41] The stairs, the front door, the phone with with the coiled cord, every texture painted in code.
+[04:46] And the people are made about 40 shapes on a skeleton.
+[04:50] So, Claude can pose them and they actually throw a red light in the room, just like the style sheet says.
+[04:56] In the hard hat one, every person, every face, every head is sculpted in code with a skeleton, five sets, 18 shots, cut to the narration word by word.
+[05:05] The hard hat files up in the sky and turns into World War I helmets in mid-air, and that's code too.
+[05:11] And in the survival one, every line is hand inked, a little wobbly like a style sheet ask, and the rooms are real 3D.
+[05:20] So, when the camera moves, you get the real depth.
+[05:23] Then, it checks its own work.
+[05:24] It screenshots every shot, looks at it, fixes what's wrong, and renders the video.
+[05:29] So, you can either post this in YouTube long format or shorts, TikTok, and Reels.
+[05:33] So, now let's talk how long did it take.
+[05:36] The survival one, 3 minutes long, about 53 minutes of my message to the finished video.
+[05:41] And I only prompted what's.
+[05:42] It's not one massive prompt, it's a skill that I turned.
+[05:46] You can't basically just have the master prompts and it will do it properly.
+[05:49] No, you need to open the folder and set it up properly.
+[05:52] The reason why it took 53 minutes because it's 3 minutes long.
+[05:54] The horror one 33 seconds in both formats about 40 minutes.
+[05:59] And the hard hat one 30 seconds a bit over an hour.
+[06:02] And the cost 3.5 Hex whole credits per style sheets.
+[06:06] The hard hat one took me two tries, so 14 credits for all three.
+[06:10] And Claude is my subscription.
+[06:12] I'm on the max one, so no API nothing extra.
+[06:15] This is heavy work.
+[06:17] So on a smaller plan, you will definitely hit the limit.
+[06:20] I'll be honest.
+[06:20] Everything else, the voice, the music, the sound, the re-render, it runs fully local.
+[06:25] And here's the part that matters for a faceless channel.
+[06:27] Once the world is built, the next video is way faster.
+[06:31] You change the script and every shot re-times itself to the new voice.
+[06:35] So part two in the same house is mostly a rewrite and faceless channel live on volume.
+[06:40] Part one, part two, part three.
+[06:42] Now, to be fair, it's not perfect.
+[06:44] If you want to have the effect, you definitely need the Hex whole subscription to generate those videos.
+[06:49] Because this is fully code.
+[06:51] The face in the hard hat one looks like a little bit if you go a little bit close, you will see there are some issues with the mannequins, sometimes the world, but it is doing a pretty good damn
+[07:02] job.
+[07:02] I could definitely scroll on my TikTok and watch one of those videos.
+[07:05] Again, for zero image generation and zero video generation, I'm not going to lie, this is actually crazy.
+[07:12] So now let's talk about the skill.
+[07:13] I took literally everything that you saw, the style sheet, the story, the voice, the music, the sound, the building, the checking every shot and the re-rendering, I turned it into one skill that you can download.
+[07:25] So here's how you install it.
+[07:27] First, you go to my school, link is in description, you open the post for this video specifically.
+[07:32] It has a Google Drive folder, you download it, open Claude code, paste the install prompts to the folder, and start a new session.
+[07:39] Then you give it two things, your style sheets and the link of that faceless video that you like, and it does the rest.
+[07:45] Use Opus 505 for this.
+[07:47] If you're not sure you're using it, just type {slash} model to switch.
+[07:51] Okay, now, how do you actually profit from this?
+[07:54] Because I'm assuming that's why you clicked.
+[07:56] I'm not going to promise you a number, that part is on you, but here are three ways people are actually making money through faceless content.
+[08:03] So, the first way is your own YouTube channel.
+[08:06] YouTube pays you once you're in the partner program.
+[08:09] Right now, that's 1,000 subscribers plus 4,000 watch hours in the last 12 months or 10 million short views in the last 90 days.
+[08:18] And here's the part where most people will miss.
+[08:20] On February 1st, 2027, they have upped it up to 8,000 watch hours or 20 million short views.
+[08:27] If you're already in, you keep your spot.
+[08:29] So, if you're thinking about starting now, this is the time.
+[08:32] And remember when I say don't copy, YouTube calls mass-produced repetitive videos.
+[08:37] If it's unauthentic, it could definitely strike the channel.
+[08:40] So, try to make your own style sheet to be able to do this.
+[08:43] And it's super simple.
+[08:44] I'll also give you the prompt.
+[08:45] The way you do it, you take multiple screenshots of a faceless channel that you like, then you paste them, and then Claude will write you the style sheet, and you just put it in Xfield.
+[08:52] Now, the second way of generating money is through TikTok.
+[08:55] The Creator Rewards Program only pays for videos that are at least 1 minute long, and you need 10,000 followers and 100,000 views in the last 30 days.
+[09:04] So, for TikTok, go long like the survival story.
+[09:07] Me personally, I'm actually watching some of them at night when I want to go to bed, and I actually see myself doing that.
+[09:13] And that's the reason why I'm making this entire video.
+[09:15] And the third way, and honestly, this is the fastest one to sell, you don't need a million views, you need one client.
+[09:21] A safety gear company wants a video like the hard hat one about their own product.
+[09:26] A museum wants it to tell stories.
+[09:29] A local business wants the stories of how they started.
+[09:32] You make the style sheet once in their colors, and you have an automated system where it posts for them weekly, and you sell it as a one-time offer.
+[09:39] So, if you want the skill, go on my school, link is in the description, or if you just wanted to test it out yourself.
+[09:44] And if you get stuck installing the skill, we do now weekly calls.
+[09:47] So, if you have questions, just prepare them, and I would love to help you there.
+[09:50] Thanks for staying all the way to the end, it means a lot.
+[09:52] And if you haven't dropped a follow, please do.
+[09:54] It helps me a lot.
+[09:55] I drop skills every week.
+[09:57] So, I'll see you in the next one.

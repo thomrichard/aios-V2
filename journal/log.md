@@ -3,19 +3,54 @@
 Ajout seul. Format : `- AAAA-MM-JJ · <action> | <sujet>`
 - 2026-10-22 · création | socle neutre d'AIOS v2
 - 2026-10-22 · ajout | installation en une phrase (adresse du socle et profil)
+- 2026-10-22 · entretien | installation
+- 2026-10-22 · installation | AIOS personnalisé pour Thomas Richard (R4)
 - 2026-10-23 · ajout | métadonnées administrables (systeme/metadonnees.md), contrôle des en-têtes, catalogue de l'installation
 - 2026-10-23 · ajout | les domaines se règlent dans systeme/metadonnees.md ; index.py recopie la carte d'AGENTS.md
 - 2026-10-23 · ajout | projets actifs d'AGENTS.md générés depuis projets/ ; colonne Fin des types
 - 2026-10-23 · ajout | skills classer, fiche et rangement ; ranger.py et colonne Chemin ; questions en attente dans outbox/questions.md ; dossier des fichiers lourds
+- 2026-10-23 · ajout | connexion Skool (skool-pp-cli) ; skill skool-ops reprise de ~/IA-OS, avec les références voix et types de posts tirées des 79 posts du fil
+- 2026-10-23 · routine jeton-skool | jeton vérifié, session : 312 j
+- 2026-10-23 · routine revenus-skool | registre refait, dernier mois complet : 468,00 $ HT (septembre 2026)
+- 2026-10-23 · routine jeton-skool | jeton vérifié, session : 312 j
+- 2026-10-23 · ajout | toolkit Skool dans `~/Dev/skool-toolkit` (dépôt privé), routines Jeton Skool et Revenus Skool, registre `domaines/communaute/revenus-club-smart.md`, référence `skool-ops/references/relances.md`, rubrique « Routines » du rangement ; ancienne veille des départs retirée
+- 2026-10-23 · skool | création classroom « Agentic AI » (brouillon, vide) https://www.skool.com/club-smart/classroom/17480787
+- 2026-10-23 · skool | dossier « Économiser tes tokens » et 22 leçons avec schéma, dans la classroom « Agentic AI » (brouillon) https://www.skool.com/club-smart/classroom/17480787
+- 2026-10-23 · skool | couverture de la classroom « Agentic AI » https://www.skool.com/club-smart/classroom/17480787
 - 2026-10-23 · ajout | skills note et calibrate (calibrate reprise de Jay E | RoboNuggets, licence MIT)
 - 2026-10-23 · ajout | skills align et devil (d'après Jay E | RoboNuggets) ; grill-me renvoie vers elles pour le court
 - 2026-10-23 · ajout | skill close (reprise de la close de Thomas, adaptée à AIOS v2) ; type cloture et journal/clotures/
 - 2026-10-23 · réglage | tutoiement par défaut (AGENTS.md, section Qui) ; l'installation demande tu ou vous
 - 2026-10-23 · ajout | skills search-connectors, reprendre, burst et humanizer (d'après Jay E | RoboNuggets)
 - 2026-10-23 · ajout | skill surprise-me (d'après Jay E | RoboNuggets)
+- 2026-10-23 · skool | récupération des 16 classrooms (122 leçons) dans domaines/communaute/, lecture seule
+- 2026-10-23 · module | « Économiser tes tokens » : 22 leçons avec schémas Excalidraw, tirées de la vidéo ARMS de Jay E, pour la classroom Agentic AI
+- 2026-10-23 · fiche | idée de vidéo « Optimiser ses tokens » dans domaines/contenu/
+- 2026-10-23 · close | session vidéo de Jay → module Agentic AI et classrooms Skool dans l'AIOS
+- 2026-10-23 · ajout | dépôt privé thomrichard/aios-thomas : main y est poussé, le socle public reste la source des mises à jour
+- 2026-10-23 · socle | récupère la PR n° 5 (youtube.py écrit cree)
+- 2026-10-23 · close | session Skool : connexion, skool-ops avec la voix et les types de posts, dépôt privé aios-thomas
 - 2026-10-24 · ajout | les vues (vues/), un index par type et par projet
+- 2026-10-24 · socle | récupère les PR n° 20 à 22 (les vues : un index par type et par projet)
 - 2026-10-24 · réglage | plafond du rangement à 20 éléments par nuit ; routine « Sauvegarde de nuit » vers le distant prive
 - 2026-10-24 · réglage | le plafond d'AGENTS.md ne compte plus la carte ni les projets actifs (générés)
+- 2026-10-24 · socle | récupère les PR n° 23 à 25 (plafond du rangement, sauvegarde de nuit, plafond d'AGENTS.md hors blocs générés)
+- 2026-10-24 · routine jeton-skool | jeton vérifié, session : 312 j
+- 2026-10-24 · réglage | type newsletter (sujet, en-cours, a-valider, publie) ; perso couvre aussi la maison et les projets perso ; systeme/idees.md part dans archives/
+- 2026-10-24 · réglage | type atelier (a-preparer, en-vente, termine, annule), une fiche par édition, pour la relance des ateliers
+- 2026-10-24 · close | session vues, idées et sauvegarde de nuit : socle récupéré (PR #20 à #25), types idee, newsletter et atelier, sauvegarde vers prive en place
+- 2026-10-24 · processus rangement | 2 rangés, 8 questions
+- 2026-10-24 · skool | schéma de la leçon 2 « Pourquoi Claude oublie quand la discussion dure ? » remplacé, avec le titre court https://www.skool.com/club-smart/classroom/17480787?md=d86dccce69244ce9be771bd364ca5995
 - 2026-10-24 · ajout | skill idees ; le type idee et le champ ressortir ajoutés à chaque installation
+- 2026-10-24 · socle | récupère les PR n° 26 et 27 (skill idees, documentation) ; la section « Idées » d'AGENTS.md prend celle du socle
+- 2026-10-24 · ménage | ancien log `~/IA-OS/.scripts/skool-churn-daily.log` vidé (cookie masqué) ; connexion de la CLI `claude` refaite, `loggedIn: true`
 - 2026-10-24 · ajout | l'onglet Fichiers de l'interface : voir, chercher, filtrer et modifier les fichiers du workspace
 - 2026-10-24 · ajout | l'Aperçu de l'onglet Fichiers devient modifiable (barre de mise en forme, raccourcis Markdown)
+- 2026-10-24 · socle | PR n° 32 : l'interface garde le Mac éveillé la nuit (caffeinate -s) ; récupère les PR n° 28 à 32
+- 2026-10-24 · réglage | l'interface garde le Mac éveillé sur secteur (caffeinate -s) : remplace aios-hub pour les routines de nuit
+- 2026-10-24 · réglage | skool-ops : plus d'envoi de messages privés en masse par l'agent ; idée « messages de masse avec Brevo » notée
+- 2026-10-24 · support | « Économiser tes tokens » : deck de 32 slides (22 schémas, 7 chapitres), texte à dire dans les notes du présentateur https://claude.ai/artifact/13SoBe27hLUiPKoBVsxQQZ
+- 2026-10-24 · ajout | 35 pièces jointes des leçons Skool rapatriées à côté de leurs leçons (`domaines/communaute/`), le zip audio d'Otter dans le dossier des fichiers lourds ; les 3 fichiers de test laissés de côté
+- 2026-10-24 · support | « Optimiser ses tokens » : version vidéo du deck, 17 slides (10 schémas repris sans numéro, 7 nouveaux), texte à dire dans les notes https://claude.ai/artifact/YVpxzT1CewhBjUosc6dAmR
+- 2026-10-24 · script | ranger-telechargements.py pour la démo de la vidéo tokens : le code choisit la catégorie, Haiku le sous-dossier ; testé sans rien déplacer (104 noms, 3 447 tokens, ~0,003 $)
+- 2026-10-25 · processus rangement | 0 rangés, 2 questions

@@ -1,0 +1,163 @@
+{
+  "video_id": "E8Qz5fXZIaw",
+  "chaine": "jad-mh",
+  "titre": "How To Make Faceless Video $12,000/month (Turned Into A Skill)",
+  "codeur": "agent jad-mh",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "tuto",
+    "format_secondaire": "cas",
+    "sujet": "Trois vidéos faceless faites entièrement en code par Claude (survie, horreur, histoire en 3D) : la méthode en 3 étapes, le temps, le coût, et 3 façons d'en vivre",
+    "outils": ["Claude Code", "Claude Opus 5.5", "Higgsfield", "GPT Image 2.0", "modèle de voix local", "modèle de musique local"],
+    "niveau": "debutant",
+    "objectif_probable": "communaute"
+  },
+  "titre": {
+    "attente_au_clic": "Apprendre à faire des vidéos faceless qui rapportent 12 000 $ par mois, avec une skill prête.",
+    "schema": "How To Make <Livrable> $<N>/month (Turned Into A Skill)",
+    "promesse": "Gagner 12 000 $ par mois avec des vidéos sans visage",
+    "audace": "audacieux",
+    "registre": "douleur-reve",
+    "briques": ["resultat"],
+    "marqueurs": ["chiffre"],
+    "nom_outil": false
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "neutre, sérieux",
+    "regard": "camera",
+    "texte": "The New Motion graphic VIRAL CAROUSEL Style One Prompt",
+    "texte_mots": 8,
+    "repete_titre": "non",
+    "elements": ["visage à gauche", "titre « carrousel » blanc et jaune", "quatre affiches verticales (casque de chantier, soldat de 14-18, médecin) avec des vues de 1.7M à 4.8M", "logo OpenAI rouge et flèche jaune"],
+    "nb_elements": 4,
+    "fond": "rouge texturé",
+    "couleurs": ["rouge", "blanc", "jaune"],
+    "curiosity_gap": "resultat",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "These three videos were made automatically for me.",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Les trois vidéos sur un ordinateur portable (« 1990 ») et un téléphone (« Part 1 »), en 3D sur fond beige",
+    "premier_plan_reprend_miniature": "non",
+    "ouverture": ["demo-d-abord", "hook-fait", "pont", "boucle-curiosite"],
+    "preuve": {
+      "type": "resultat-montre",
+      "seconde": 0,
+      "description": "Les trois vidéos faceless montrées dès 0:00 ; puis à 0:35 les revenus partagés sur X ($33,962, $51,599) en grand"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 4, "a_l_ecran": false},
+    "boucle_vers_la_fin": {
+      "presente": true,
+      "citation": "at the end, I'll show you the skill [...] and how you can actually profit from it.",
+      "seconde_resolution": 471,
+      "tenue": "oui"
+    },
+    "seconde_premier_point": 86,
+    "attente_tenue": "partiel",
+    "attente_note": "La méthode et trois façons d'en vivre sont données, mais les 12 000 $ sont le chiffre d'un autre (« I'm not going to promise you a number »). La miniature parle de carrousels, pas de vidéos faceless."
+  },
+  "structure": {
+    "modele": "pas-a-pas",
+    "segments": [
+      {"debut": 0, "fin": 32, "titre": "These 3 videos were made in code", "role": "intro", "pull": false, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 32, "fin": 86, "titre": "The posts on X", "role": "intro", "pull": true, "paint": true, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 86, "fin": 130, "titre": "Step 1: The format already exists", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 130, "fin": 206, "titre": "Step 2: The style sheet", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 206, "fin": 333, "titre": "Step 3: Claude builds it", "role": "demo", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false},
+      {"debut": 333, "fin": 432, "titre": "How long did it take? (and the cost)", "role": "point", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": false, "payoff": true, "relance_sortie": false},
+      {"debut": 432, "fin": 471, "titre": "The skill", "role": "cta", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 471, "fin": 599, "titre": "How to actually profit", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": false}
+    ],
+    "relances": [
+      {"seconde": 64, "type": "question-spectateur", "citation": "And you know where he writes his scripts? In Claude."},
+      {"seconde": 73, "type": "boucle-ouverte", "citation": "at the end, I'll show you the skill I turned all of this into"},
+      {"seconde": 86, "type": "annonce-suite", "citation": "this is the thing nobody tells you about faceless content."},
+      {"seconde": 274, "type": "annonce-suite", "citation": "this is the part that actually blew my mind."},
+      {"seconde": 387, "type": "annonce-suite", "citation": "And here's the part that matters for a faceless channel."},
+      {"seconde": 471, "type": "question-spectateur", "citation": "how do you actually profit from this? Because I'm assuming that's why you clicked."},
+      {"seconde": 498, "type": "annonce-suite", "citation": "And here's the part where most people will miss."}
+    ],
+    "histoires": [
+      {"seconde": 32, "acte": "client-autre", "resume": "Des chaînes faceless à 33 000 $ en mars, une à 51 599 $ en 47 jours, un jeune de 22 ans à 40-60 000 $ par mois qui écrit ses scripts avec Claude"},
+      {"seconde": 547, "acte": "anecdote", "resume": "Il regarde lui-même ces histoires de survie le soir avant de dormir"}
+    ],
+    "payoffs": [
+      {"seconde": 86, "resume": "Étape 1 : partir d'un format qui marche déjà, sans copier l'histoire"},
+      {"seconde": 130, "resume": "Étape 2 : la feuille de style et ses règles (« The rule always wins »)"},
+      {"seconde": 237, "resume": "Étape 3 : Claude étudie la référence, écrit, fait la voix, la musique et le décor 3D en code"},
+      {"seconde": 333, "resume": "Le temps (40 à 66 min par vidéo) et le coût (14 crédits)"},
+      {"seconde": 471, "resume": "Trois façons d'en vivre : sa chaîne, TikTok, vendre à un client"}
+    ],
+    "premier_payoff_seconde": 86,
+    "jargon": 1,
+    "repetitions": 0,
+    "test_du_tweet": "Trois vidéos faceless faites tout en code par Claude, sans générateur d'images ni de vidéo. Méthode : partir d'un format qui marche, faire une feuille de style à règles, laisser Claude Code construire. 40 à 66 min par vidéo, 14 crédits. Puis 3 façons d'en vivre."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "poitrine, plein cadre ou en vignette", "decor": "pièce avec fenêtre sur des arbres, lumière violette ; sweat gris"},
+    "parts": {"face": 45, "ecran": 20, "motion": 35, "broll": 0},
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["cartes-chapitre", "etiquettes", "chiffres-animes", "split-screen", "curseur-surligne"],
+    "charte": "Beige éditorial, police à empattements avec mots en rouge orangé (« a survival story »), cartes de chapitre numérotées (« 02 The style sheet »), pastilles d'étiquettes, revenus en grand. La miniature rouge ne reprend pas cette charte.",
+    "rythme": "regulier",
+    "notes": "Le même style éditorial que la vidéo de la veille. 202 mots par minute et un plan toutes les 2,6 s, du début à la fin ; les deux dernières minutes sont presque toutes face caméra."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 80, "type": "communaute-gratuite", "cible": "la skill gratuite dans Skool", "amene_par": "intro", "citation": "It's free in my school community. Link is in description."},
+      {"seconde": 199, "type": "sponsor", "cible": "la promo Higgsfield pour les jetons d'API", "amene_par": "pendant-demo", "citation": "I have a link in the description that gives you a promo for the API tokens."},
+      {"seconde": 447, "type": "communaute-gratuite", "cible": "télécharger la skill dans le post Skool", "amene_par": "apres-valeur", "citation": "First, you go to my school, link is in description"},
+      {"seconde": 579, "type": "communaute-gratuite", "cible": "la skill dans Skool", "amene_par": "fin", "citation": "if you want the skill, go on my school"},
+      {"seconde": 584, "type": "communaute-gratuite", "cible": "les appels hebdomadaires pour installer", "amene_par": "fin", "citation": "if you get stuck installing the skill, we do now weekly calls."},
+      {"seconde": 592, "type": "abonnement", "cible": "s'abonner", "amene_par": "fin", "citation": "if you haven't dropped a follow, please do."}
+    ],
+    "sponsor": {"present": true, "nom": "Higgsfield", "debut": 199, "duree": 6, "forme": "integre-a-la-demo"},
+    "liens_description": {"sponsor": 1, "communaute-gratuite": 1, "autre": 7},
+    "commentaire_epingle": {"texte": "Higgsfield Promo (lien Katana)", "type": "sponsor"},
+    "recap_final": false,
+    "derniere_phrase": "I drop skills every week. So, I'll see you in the next one.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["le sujet tombe à pic", "Skool inaccessible ou adhésion non validée", "la coquille du titre"],
+    "demandes": ["comment la voix est générée", "des décors plus complexes", "la skill sans passer par Skool"],
+    "critiques": ["« Small typo in the title \"(turned into a sill)\" »", "« Fix the title »", "« The link is not working »"],
+    "reprises": ["« The sauce is so thick! »"],
+    "signal_promesse": "tenue"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "La 1re phrase montre « three videos » sans « faceless » ni argent ; le 1er plan (trois écrans en 3D) ne reprend rien de la miniature"},
+    "ap_boucle_curiosite": {"note": 2, "preuve": "1:13 « at the end, I'll show you [...] how you can actually profit from it », résolue à 7:51"},
+    "ap_effort_montre": {"note": 1, "preuve": "Le temps (53, 40, 66 min) et les deux essais arrivent à 5:33, pas dans l'intro"},
+    "ap_setup_progress_payoff": {"note": 2, "preuve": "Trois étapes qui posent, construisent et livrent ; la vidéo d'horreur suivie de la référence au rendu (3:47 à 5:29)"},
+    "ap_contraste_rythme": {"note": 0, "preuve": "De 17 à 26 changements de plan par minute et 193 à 235 mots par minute, sans passage lent"},
+    "ap_montrer_sans_son": {"note": 2, "preuve": "Planche intro : « a survival story / three minutes long », « no image generator / no video model / no stock », « $51,599 » en grand"},
+    "ali_douleur_histoire": {"note": 0, "preuve": "Ni douleur ni histoire perso dans l'intro"},
+    "ali_coeur_unique": {"note": 1, "preuve": "La méthode (format, feuille de style, Claude) et l'argent se partagent la vidéo, sans une phrase qui les tient ensemble"},
+    "alx_pont": {"note": 1, "preuve": "Preuve et annonce comme un pont, mais ouverts par une démo et des revenus chocs"},
+    "alx_pull_paint_point": {"note": 2, "preuve": "Étape 1 (1:26 « the thing nobody tells you »), étape 2 (la règle « Mustard belongs to the hero's beanie »), les gains (« why you clicked »)"},
+    "alx_nom_idee": {"note": 2, "preuve": "« The format already exists », « The style sheet » en cartes ; styles nommés (Lamplit Ink Cartoon, Red Ghost)"},
+    "alx_phrase_finale": {"note": 2, "preuve": "1:55 « You start from what's already winning. » ; 3:08 « people recognize you without ever seeing your face. » ; 9:15 « you need one client. »"},
+    "alx_douleur_reve": {"note": 2, "preuve": "« $12,000/month » parle du désir, sans nom d'outil"},
+    "alx_cta_tot": {"note": 2, "preuve": "1:20 la skill gratuite dans Skool, liée au sujet"},
+    "ed_intro_courte": {"note": 1, "preuve": "Premier point à 1:26 ; intro dense (démo, revenus, plan) mais sans digression"},
+    "ed_hook": {"note": 2, "preuve": "0:38 « Four faceless channels [...] made $33,000 in March » ; 0:48 « $51,000 generated, 47-day-old channel »"},
+    "ed_probleme_preuve_consignes": {"note": 1, "preuve": "L'étape 2 pose le problème (l'AI slop) avant les règles ; les autres vont droit aux consignes"},
+    "ed_tension_relancee": {"note": 2, "preuve": "1:04 « you know where he writes his scripts? » ; 7:51 « how do you actually profit from this? Because I'm assuming that's why you clicked. »"},
+    "ed_histoire_vecue": {"note": 1, "preuve": "0:58 le jeune de 22 ans à 40-60 000 $ par mois : un cas cité, pas raconté"},
+    "ed_sans_surexplication": {"note": 2, "preuve": "Aucune redite ; 202 mots par minute"},
+    "ed_niveau_simple": {"note": 2, "preuve": "2:18 « A style sheet is one image with all the rules of your world. »"},
+    "tous_video_suivante": {"note": 0, "preuve": "« I'll see you in the next one »"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Le titre le plus tourné vers le rêve (« $12,000/month »), mais une miniature recyclée qui dit « VIRAL CAROUSEL Style One Prompt », sans rapport avec le faceless. La coquille « Sill » du titre a été corrigée 13 h après, signalée en commentaire.",
+    "intro_structure": "Démo des trois vidéos en 30 s, revenus tirés de X, plan et boucle (« how you can actually profit »). Premier point à 1:26 sans digression : l'intro la plus dense des vidéos de skills.",
+    "habillage": "Style éditorial beige à empattements, environ la moitié du temps face caméra ; 202 mots par minute, un plan toutes les 2,6 s.",
+    "idee_pour_nous": "Une méthode en 3 étapes (format qui marche, feuille de style à règles, l'IA construit), puis « vendre à un client » comme débouché.",
+    "objectif": "consulting"
+  }
+}

@@ -1,0 +1,604 @@
+{
+  "video_id": "Eg08Lr3zqdw",
+  "chaine": "robonuggets",
+  "titre": {
+    "attente_au_clic": "Voir la nouveauté Claude Motion, qui change la vidéo, et savoir s'en servir en 12 minutes.",
+    "schema": "<Outil> <FONCTION> is Unreal for <Usage>. Master it in <N> minutes.",
+    "promesse": "Maîtriser Claude Motion en 12 minutes",
+    "audace": "audacieux",
+    "registre": "mixte",
+    "briques": [
+      "vitesse",
+      "resultat"
+    ],
+    "marqueurs": [
+      "chiffre",
+      "duree",
+      "majuscules"
+    ],
+    "nom_outil": true
+  },
+  "codeur": "agent robonuggets",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "actu",
+    "format_secondaire": "tuto",
+    "sujet": "Claude Motion : créer une pub animée par prompt, la retoucher, puis y ajouter des images générées",
+    "outils": [
+      "Claude Motion",
+      "Opus 5.5",
+      "kie.ai",
+      "MCP Kie",
+      "GPT Image 2",
+      "SeeDance",
+      "HyperFrames",
+      "Rubric Editor"
+    ],
+    "niveau": "debutant",
+    "objectif_probable": "vues"
+  },
+  "miniature": {
+    "visage": false,
+    "emotion": null,
+    "regard": null,
+    "texte": "Video Just Changed CLAUDE MOTION",
+    "texte_mots": 5,
+    "repete_titre": "partiel",
+    "elements": [
+      "texte « Video Just Changed » en serif noir",
+      "pastille noire « CLAUDE MOTION »",
+      "logo Claude",
+      "mascotte Claude orange en pâte à modeler debout sur un clap",
+      "images d'animations en éventail (carte, affiche, tasse, coucher de soleil)"
+    ],
+    "nb_elements": 4,
+    "fond": "clair, blanc cassé, avec éclats colorés",
+    "couleurs": [
+      "blanc cassé",
+      "orange Claude",
+      "noir",
+      "touches multicolores"
+    ],
+    "curiosity_gap": "nouveaute",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Every single animation you're about to see in this video was not edited manually",
+    "premiere_phrase_reprend_titre": "partiel",
+    "premier_plan": "Jay face caméra plein cadre dans son bureau (étagère, fleurs, casquette blanche), puis dès 0:02 des animations 3D étiquetées « real 3D style »",
+    "premier_plan_reprend_miniature": "non",
+    "ouverture": [
+      "demo-d-abord",
+      "actu-annonce",
+      "pont"
+    ],
+    "preuve": {
+      "type": "resultat-montre",
+      "seconde": 2,
+      "description": "Les animations de l'intro sont faites avec l'outil, chacune avec une étiquette de style (« clay stop-motion style », « shape morph style ») ; puis le parcours de Jay à 0:39"
+    },
+    "annonce_plan": {
+      "presente": true,
+      "nb_points": 3,
+      "a_l_ecran": true
+    },
+    "boucle_vers_la_fin": {
+      "presente": true,
+      "citation": "near the end I'll also show you an alternative",
+      "seconde_resolution": 584,
+      "tenue": "oui"
+    },
+    "seconde_premier_point": 50,
+    "attente_tenue": "oui",
+    "attente_note": "La nouveauté et la prise en main sont tenues. La limite Team et Enterprise est dite tôt (1:43), mais le 2e commentaire le plus aimé (40 likes) la rappelle, signe que beaucoup n'y ont pas accès."
+  },
+  "structure": {
+    "modele": "pas-a-pas",
+    "segments": [
+      {
+        "debut": 0,
+        "fin": 50,
+        "titre": "Intro : animations faites avec Claude Motion, plan, Jay",
+        "role": "intro",
+        "pull": false,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 50,
+        "fin": 123,
+        "titre": "What's Claude Motion (où le trouver, code contre modèle vidéo, offres)",
+        "role": "point",
+        "pull": false,
+        "paint": false,
+        "point": true,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": false,
+        "consignes": true,
+        "payoff": false,
+        "relance_sortie": true
+      },
+      {
+        "debut": 123,
+        "fin": 180,
+        "titre": "Se mettre d'accord sur un plan, puis lancer /motion",
+        "role": "point",
+        "pull": true,
+        "paint": false,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": true,
+        "payoff": false,
+        "relance_sortie": true
+      },
+      {
+        "debut": 180,
+        "fin": 247,
+        "titre": "Behind the scenes : le gâteau contre la recette",
+        "role": "point",
+        "pull": true,
+        "paint": true,
+        "point": true,
+        "nom": true,
+        "phrase_finale": true,
+        "probleme": true,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": true
+      },
+      {
+        "debut": 247,
+        "fin": 345,
+        "titre": "Tweaks, commentaires, partage, export",
+        "role": "demo",
+        "pull": false,
+        "paint": true,
+        "point": true,
+        "nom": false,
+        "phrase_finale": true,
+        "probleme": false,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 345,
+        "fin": 380,
+        "titre": "Ce que ça coûte",
+        "role": "point",
+        "pull": false,
+        "paint": false,
+        "point": true,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": true,
+        "payoff": false,
+        "relance_sortie": true
+      },
+      {
+        "debut": 380,
+        "fin": 412,
+        "titre": "How to master it : donner l'image et la vidéo à Claude",
+        "role": "point",
+        "pull": true,
+        "paint": false,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 412,
+        "fin": 430,
+        "titre": "Guide PDF gratuit",
+        "role": "cta",
+        "pull": false,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 430,
+        "fin": 517,
+        "titre": "kie.ai et le MCP Kie au lieu de Higgsfield",
+        "role": "point",
+        "pull": false,
+        "paint": false,
+        "point": true,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": true,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": true
+      },
+      {
+        "debut": 517,
+        "fin": 550,
+        "titre": "L'inverse : storyboard Motion puis SeeDance",
+        "role": "demo",
+        "pull": false,
+        "paint": true,
+        "point": true,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": false,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 550,
+        "fin": 584,
+        "titre": "La communauté RoboNuggets",
+        "role": "cta",
+        "pull": true,
+        "paint": false,
+        "point": false,
+        "nom": false,
+        "phrase_finale": false,
+        "probleme": false,
+        "preuve": true,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      },
+      {
+        "debut": 584,
+        "fin": 693,
+        "titre": "Les alternatives : HyperFrames et son propre outil (Rubric Editor)",
+        "role": "point",
+        "pull": true,
+        "paint": false,
+        "point": true,
+        "nom": true,
+        "phrase_finale": false,
+        "probleme": true,
+        "preuve": false,
+        "consignes": true,
+        "payoff": true,
+        "relance_sortie": false
+      },
+      {
+        "debut": 693,
+        "fin": 728,
+        "titre": "Wrap up",
+        "role": "fin",
+        "pull": false,
+        "paint": false,
+        "point": true,
+        "nom": false,
+        "phrase_finale": true,
+        "probleme": false,
+        "preuve": false,
+        "consignes": false,
+        "payoff": false,
+        "relance_sortie": false
+      }
+    ],
+    "relances": [
+      {
+        "seconde": 113,
+        "type": "boucle-ouverte",
+        "citation": "near the end I'll also show you an alternative"
+      },
+      {
+        "seconde": 180,
+        "type": "annonce-suite",
+        "citation": "it's actually good to understand what's going on behind the scenes"
+      },
+      {
+        "seconde": 240,
+        "type": "boucle-ouverte",
+        "citation": "without having to have another monthly subscription to another tool like Higgsfield"
+      },
+      {
+        "seconde": 380,
+        "type": "annonce-suite",
+        "citation": "So, now let's take it to another level"
+      },
+      {
+        "seconde": 386,
+        "type": "annonce-suite",
+        "citation": "where it gets really interesting is when you give Claude image and video generation"
+      },
+      {
+        "seconde": 584,
+        "type": "rappel-promesse",
+        "citation": "if you're not on the team or enterprise plan yet [...] don't worry"
+      }
+    ],
+    "histoires": [
+      {
+        "seconde": 443,
+        "acte": "anecdote",
+        "resume": "Jay utilise kie.ai « quite a lot » dans son travail, sans sponsor."
+      },
+      {
+        "seconde": 639,
+        "acte": "anecdote",
+        "resume": "Jay fait la plupart de ses vidéos avec son propre outil, Rubric Editor, qui coupe aussi les pauses."
+      }
+    ],
+    "payoffs": [
+      {
+        "seconde": 247,
+        "resume": "La pub du torréfacteur est finie et se joue"
+      },
+      {
+        "seconde": 265,
+        "resume": "Dans Tweaks, le nom et le prix changent à l'écran pendant qu'il tape"
+      },
+      {
+        "seconde": 304,
+        "resume": "Un commentaire sur la tasse : le café devient glacé, le reste ne bouge pas"
+      },
+      {
+        "seconde": 333,
+        "resume": "Export MP4 sans logiciel de montage"
+      },
+      {
+        "seconde": 493,
+        "resume": "Une vraie photo de torréfaction derrière la scène, le texte toujours modifiable"
+      },
+      {
+        "seconde": 534,
+        "resume": "Le storyboard Motion devient des plans animés façon Ghibli avec SeeDance"
+      },
+      {
+        "seconde": 600,
+        "resume": "HyperFrames, l'alternative gratuite, avec son studio dans le navigateur"
+      }
+    ],
+    "premier_payoff_seconde": 247,
+    "jargon": 1,
+    "repetitions": 1,
+    "test_du_tweet": "Claude Motion fait d'une description en anglais simple une vidéo animée, écrite en code : on change un mot ou un objet sans tout refaire. Démo d'une pub de café, retouches, export. Pour aller plus loin : images via kie.ai. Pas d'offre Team ? HyperFrames ou son propre outil."
+  },
+  "habillage": {
+    "face_camera": {
+      "presente": true,
+      "cadrage": "vignette ronde en bas à gauche la plupart du temps ; poitrine plein cadre en ouverture et sur quelques passages",
+      "decor": "bureau, étagère, fleurs, lumière chaude ; casquette blanche, micro sur bras"
+    },
+    "parts": {
+      "face": 10,
+      "ecran": 50,
+      "motion": 40,
+      "broll": 0
+    },
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": [
+      "plan-a-l-ecran",
+      "cartes-chapitre",
+      "etiquettes",
+      "fleches-annotations",
+      "chiffres-animes",
+      "logo-chaine"
+    ],
+    "charte": "Titres en serif blanc, accent orange Claude ; mais chaque animation change de style (3D réel, pâte à modeler, collage, tableau noir, verre aurore, isométrique), avec une petite étiquette qui nomme le style. La miniature reprend la pâte à modeler et les images d'animations.",
+    "rythme": "contraste",
+    "notes": "La vidéo sert de catalogue des styles de Claude Motion : chaque plan animé porte son étiquette de style. La démo écran suit une seule pub de café du début à la fin."
+  },
+  "fin": {
+    "ctas": [
+      {
+        "seconde": 412,
+        "type": "lead-magnet",
+        "cible": "guide PDF Claude Motion (communauté Skool gratuite)",
+        "amene_par": "transition",
+        "citation": "what I did is just create a PDF guide where all of the prompts"
+      },
+      {
+        "seconde": 550,
+        "type": "communaute-payante",
+        "cible": "RoboNuggets (Claude Living Masterclass, cours Agents as a Service)",
+        "amene_par": "apres-valeur",
+        "citation": "if you want to learn how to build and sell AI systems that businesses actually pay for"
+      },
+      {
+        "seconde": 580,
+        "type": "communaute-payante",
+        "cible": "lien dans le commentaire épinglé",
+        "amene_par": "apres-valeur",
+        "citation": "check that just in the pin comment below"
+      },
+      {
+        "seconde": 639,
+        "type": "produit",
+        "cible": "Rubric Editor, outil construit pour la communauté",
+        "amene_par": "pendant-demo",
+        "citation": "I use Rubric Editor, which is part of the tools that we built for our community"
+      },
+      {
+        "seconde": 699,
+        "type": "abonnement",
+        "cible": "s'abonner",
+        "amene_par": "fin",
+        "citation": "consider tapping subscribe below because that just helps us a lot"
+      },
+      {
+        "seconde": 710,
+        "type": "lead-magnet",
+        "cible": "guide PDF",
+        "amene_par": "fin",
+        "citation": "you can just grab that PDF guide down below"
+      }
+    ],
+    "sponsor": {
+      "present": false,
+      "nom": null,
+      "debut": null,
+      "duree": null,
+      "forme": null
+    },
+    "liens_description": {
+      "lead-magnet": 1,
+      "communaute-payante": 1,
+      "produit": 1,
+      "service": 1,
+      "affiliation": 5,
+      "abonnement": 1,
+      "reseaux": 4
+    },
+    "commentaire_epingle": {
+      "texte": "Le guide Claude Motion gratuit (Skool gratuit, « search for n84 ») et la communauté payante, « including how to automate videos like this one »",
+      "type": "lead-magnet"
+    },
+    "recap_final": true,
+    "derniere_phrase": "you can just grab that PDF guide down below [...] I'll see you next time. Cheers.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": [
+      "le soulagement de voir une vidéo IA sans Higgsfield (60 likes)",
+      "l'accès limité aux offres Team et Enterprise (40 likes)",
+      "les alternatives : HyperFrames, Remotion, Claude Code",
+      "les usages : vidéos explicatives, aide de logiciel"
+    ],
+    "demandes": [
+      "comparer Remotion et HyperFrames",
+      "savoir si ça fait du long format, de la 3D, une animation de personnage",
+      "savoir si la vidéo exportée porte un filigrane invisible",
+      "savoir quelle technique tourne dessous (SVG, HTML)"
+    ],
+    "critiques": [
+      "l'outil n'est pas sur Pro ni Max",
+      "« you said 12 minutes, but its 12:08 »",
+      "le son, comme « inside a can »",
+      "« Gosh, this is boring »"
+    ],
+    "reprises": [
+      "« Higgsfield Marketing is sensational »",
+      "« more plans soon », repris avec ironie"
+    ],
+    "signal_promesse": "mixte"
+  },
+  "techniques": {
+    "ap_alignement_5s": {
+      "note": 1,
+      "preuve": "1re phrase sur les animations, Claude Motion nommé à 0:06 ; 1er plan face caméra, puis des animations proches de celles de la miniature à 0:02 : partiel des deux côtés"
+    },
+    "ap_boucle_curiosite": {
+      "note": 2,
+      "preuve": "1:53 « near the end I'll also show you an alternative », résolue à 9:44"
+    },
+    "ap_effort_montre": {
+      "note": 0,
+      "preuve": "Aucun effort, test ou durée dit dans l'intro"
+    },
+    "ap_setup_progress_payoff": {
+      "note": 2,
+      "preuve": "La pub de café : but (2:05), plan et prompt (2:09 à 2:50), résultat (4:07) ; même schéma pour la version avec photos (6:20 à 8:13)"
+    },
+    "ap_contraste_rythme": {
+      "note": 1,
+      "preuve": "21 changements de plan la 1re minute, puis 6 à 13 par minute ; plus lent sur l'écran des limites d'usage, sans rupture nette"
+    },
+    "ap_montrer_sans_son": {
+      "note": 2,
+      "preuve": "Planche intro : « Plain English », « Claude builds it », « Using code », « No charge », plan « TODAY » en 3 points, « Promos / Explainers / Any video »"
+    },
+    "ali_douleur_histoire": {
+      "note": 0,
+      "preuve": "Aucune douleur décrite ni histoire vécue dans l'intro"
+    },
+    "ali_coeur_unique": {
+      "note": 2,
+      "preuve": "11:34 « Claude Motion where you describe a video in plain English and Claude creates it »"
+    },
+    "alx_pont": {
+      "note": 1,
+      "preuve": "Plan (0:28) et crédits (0:39) comme un pont, mais ouvert par une accroche « démo d'abord »"
+    },
+    "alx_pull_paint_point": {
+      "note": 1,
+      "preuve": "Complet sur la recette contre le gâteau (3:00 à 4:00) ; la plupart des points sont des consignes de démo"
+    },
+    "alx_nom_idee": {
+      "note": 1,
+      "preuve": "« A whole new cake » contre la recette, « Agree on a plan first », « build your own rig » affichés ; surtout des étiquettes descriptives"
+    },
+    "alx_phrase_finale": {
+      "note": 1,
+      "preuve": "5:45 « you just created a video without ever opening an editing app » ; rare ailleurs"
+    },
+    "alx_douleur_reve": {
+      "note": 1,
+      "preuve": "« Master it » parle du désir, mais le nom de l'outil porte le titre"
+    },
+    "alx_cta_tot": {
+      "note": 1,
+      "preuve": "Guide PDF lié au sujet, mais seulement à 6:52"
+    },
+    "ed_intro_courte": {
+      "note": 1,
+      "preuve": "Premier point à 0:50, après la démo, l'explication, le plan et les crédits : plus long que 3 lignes"
+    },
+    "ed_hook": {
+      "note": 1,
+      "preuve": "« not edited manually and not generated with Higgs Field » : un fait qui étonne, aucun des trois types purs"
+    },
+    "ed_probleme_preuve_consignes": {
+      "note": 1,
+      "preuve": "Problème posé à 1:24 (régénérer tout le clip) et 7:10 (le coût de Higgsfield), puis consignes ; la preuve vient après, dans la démo"
+    },
+    "ed_tension_relancee": {
+      "note": 1,
+      "preuve": "Relances par annonces (6:20 « let's take it to another level »), pas par la question du spectateur"
+    },
+    "ed_histoire_vecue": {
+      "note": 1,
+      "preuve": "10:39 « Personally, this is what I do most of the time » : une anecdote d'usage"
+    },
+    "ed_sans_surexplication": {
+      "note": 1,
+      "preuve": "« Agree on a plan first » redit à 2:09, 2:50 et 6:11"
+    },
+    "ed_niveau_simple": {
+      "note": 2,
+      "preuve": "7:45 MCP « basically just a connector » ; 8:00 clé API « sort of like a password » ; 10:25 « rig » expliqué"
+    },
+    "tous_video_suivante": {
+      "note": 0,
+      "preuve": "« I'll see you next time », sans vidéo précise"
+    }
+  },
+  "a_retenir": {
+    "titre_miniature": "Titre d'origine « How to use Claude MOTION better than 99% of people (in 3 simple steps) », remplacé environ 3 h 50 après la sortie (relevé VidIQ), miniature changée deux fois. La miniature dit la nouveauté (« Video Just Changed ») avec la mascotte Claude sur un clap, sans visage.",
+    "intro_structure": "Même sujet que l'étalon de Tristen O'Brien, mais la limite Team et Enterprise est dite à 1:43 avec une alternative promise pour la fin. Jay se place contre Higgsfield : le commentaire le plus aimé (60 likes) l'en remercie.",
+    "habillage": "Chaque animation a un style différent avec une étiquette qui le nomme : la vidéo sert de catalogue de l'outil. Une seule pub de café sert de fil de la démo.",
+    "idee_pour_nous": "Sur une sortie d'outil, dire tôt qui n'y a pas accès, promettre une alternative pour la fin, et se démarquer des vidéos sponsorisées en le disant.",
+    "objectif": "vues"
+  }
+}

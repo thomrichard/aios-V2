@@ -9,6 +9,7 @@ Pilotage (OKR, revue hebdo, revenus), admin et finances, et l'AIOS comme outil d
 - Connexions, routines, modèles : `systeme/`
 
 ## Fichiers clés
+- La jauge, un mod Claude Code (consommation en direct au-dessus du message) : `domaines/operations/jauge/jauge.md`
 
 ## Skills
 - `classer` : donner ses métadonnées à un élément, qui se range tout seul (`systeme/scripts/ranger.py`)

@@ -1,0 +1,164 @@
+{
+  "video_id": "-URQjhtvxZo",
+  "chaine": "simon-scrapes",
+  "titre": "Give Me 20 Minutes, I Will Make You a Claude Pro",
+  "codeur": "agent simon-scrapes",
+  "date_codage": "2026-10-25",
+  "identite": {
+    "format": "liste",
+    "format_secondaire": "tuto",
+    "sujet": "Cinq mises à niveau tirées des docs d'Anthropic : structure du prompt, /goal, Projects, skills, mémoire",
+    "outils": ["Claude", "Claude Code", "/goal", "Projects", "Skills", "record a skill", "mémoire de Claude", "mem search", "Rankspot"],
+    "niveau": "intermediaire",
+    "objectif_probable": "vente"
+  },
+  "titre": {
+    "attente_au_clic": "Passer au niveau « pro » sur Claude en 20 minutes, avec les bons réglages.",
+    "schema": "Give Me <N> Minutes, I Will Make You a <Outil> Pro",
+    "promesse": "Devenir pro de Claude en 20 minutes",
+    "audace": "audacieux",
+    "registre": "mixte",
+    "briques": ["vitesse", "resultat"],
+    "marqueurs": ["chiffre", "duree"],
+    "nom_outil": true
+  },
+  "miniature": {
+    "visage": true,
+    "emotion": "sourire confiant",
+    "regard": "camera",
+    "texte": "GET GOOD, FAST. Claude",
+    "texte_mots": 4,
+    "repete_titre": "partiel",
+    "elements": ["GET GOOD, FAST. sur une bande de papier déchiré", "visage de Simon au centre, stylo en main", "une douzaine de cartes d'interface Claude (Chat, Artifacts, Workflow, Automations, Analytics...)", "logo Claude en bas à droite"],
+    "nb_elements": 15,
+    "fond": "dégradé brun et orange",
+    "couleurs": ["blanc", "noir", "orange", "brun"],
+    "curiosity_gap": "transformation",
+    "lisible_petite_taille": true
+  },
+  "intro": {
+    "premiere_phrase": "Anthropic publishes exact instructions for getting the best out of Claude, right down to lines that they tell you to copy and paste word for word.",
+    "premiere_phrase_reprend_titre": "non",
+    "premier_plan": "Capture de la doc d'Anthropic « Prompting best practices », vignette de Simon à droite",
+    "premier_plan_reprend_miniature": "partiel",
+    "ouverture": ["hook-dissonance", "pont"],
+    "preuve": {
+      "type": "autorite",
+      "seconde": 0,
+      "description": "Les pages de la doc d'Anthropic à l'écran, puis des cartes OPUS 4.6 et OPUS 5 avec une page barrée ; 0:14 « I've gone ahead and read all of the instructions »"
+    },
+    "annonce_plan": {"presente": true, "nb_points": 5, "a_l_ecran": false},
+    "boucle_vers_la_fin": {"presente": false, "citation": "", "seconde_resolution": null, "tenue": null},
+    "seconde_premier_point": 27,
+    "attente_tenue": "partiel",
+    "attente_note": "Les cinq mises à niveau sont livrées en 18 minutes, mais 2 min 40 montrent son produit Rankspot (4:36) et 1 min 20 son système de mémoire vendu dans la communauté (15:43). Titre et miniature ont été testés en quatre titres et une dizaine de miniatures du 17 au 21 septembre."
+  },
+  "structure": {
+    "modele": "liste-numerotee",
+    "segments": [
+      {"debut": 0, "fin": 27, "titre": "Intro: The Rules Have Changed", "role": "intro", "pull": true, "paint": false, "point": false, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": true},
+      {"debut": 27, "fin": 215, "titre": "1: The Perfect Prompt Structure", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 215, "fin": 276, "titre": "2: Autonomous Working (/goal)", "role": "point", "pull": true, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": false, "relance_sortie": true},
+      {"debut": 276, "fin": 377, "titre": "Démo Rankspot : 40 outils gratuits en un week-end", "role": "demo", "pull": false, "paint": true, "point": false, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 377, "fin": 458, "titre": "Le gabarit /goal", "role": "point", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 458, "fin": 662, "titre": "3: Organize Projects the Right Way", "role": "point", "pull": true, "paint": true, "point": true, "nom": true, "phrase_finale": true, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 662, "fin": 872, "titre": "4: Build Skills How They Were Made to be Built", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": true, "consignes": true, "payoff": true, "relance_sortie": true},
+      {"debut": 872, "fin": 943, "titre": "5: Claude Memory Upgrades", "role": "point", "pull": true, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": true, "preuve": false, "consignes": false, "payoff": false, "relance_sortie": false},
+      {"debut": 943, "fin": 1035, "titre": "Son système de mémoire dans l'Agentic OS", "role": "cta", "pull": false, "paint": true, "point": true, "nom": false, "phrase_finale": false, "probleme": false, "preuve": false, "consignes": true, "payoff": false, "relance_sortie": false},
+      {"debut": 1035, "fin": 1087, "titre": "How to Stack All 5 Upgrades", "role": "fin", "pull": false, "paint": false, "point": true, "nom": false, "phrase_finale": true, "probleme": false, "preuve": false, "consignes": false, "payoff": true, "relance_sortie": true}
+    ],
+    "relances": [
+      {"seconde": 40, "type": "rupture", "citation": "that was the right thing to do around 3 months ago [...] And it's totally wrong now."},
+      {"seconde": 138, "type": "annonce-suite", "citation": "the thing that's going to tie this all together [...] their golden rule"},
+      {"seconde": 219, "type": "annonce-suite", "citation": "upgrade 2 is going to be the biggest change to most people's workflow"},
+      {"seconde": 453, "type": "question-spectateur", "citation": "if you're having to reexplain your business at the top of every session"},
+      {"seconde": 648, "type": "annonce-suite", "citation": "what it still doesn't know is how you do a job"},
+      {"seconde": 873, "type": "annonce-suite", "citation": "upgrade five, is probably arguably the most important thing long-term"},
+      {"seconde": 1081, "type": "annonce-suite", "citation": "In the next video, I'm going to break down a series of clawed code tips"}
+    ],
+    "histoires": [
+      {"seconde": 90, "acte": "client-autre", "resume": "L'habitude qui manque dans la plupart des prompts partagés par les membres de sa communauté : donner la raison de chaque consigne."},
+      {"seconde": 276, "acte": "vision-build", "resume": "Avec /goal et des gabarits, son équipe a sorti 40 outils gratuits pour Rankspot en un week-end."},
+      {"seconde": 475, "acte": "anecdote", "resume": "Ses propres projets Claude : copywriting (31 fichiers), comptabilité, perso, chacun séparé."},
+      {"seconde": 943, "acte": "vision-build", "resume": "Le système de mémoire de son Agentic OS, construit à partir des meilleurs frameworks open source."}
+    ],
+    "payoffs": [
+      {"seconde": 67, "resume": "Supprimer les lignes « vérifie ton travail »"},
+      {"seconde": 77, "resume": "Dire quoi faire, jamais quoi ne pas faire"},
+      {"seconde": 113, "resume": "Donner la raison de chaque consigne (l'exemple de la synthèse vocale)"},
+      {"seconde": 162, "resume": "Le gabarit d'Anthropic : le contexte, le besoin, la définition du fini"},
+      {"seconde": 401, "resume": "Le gabarit /goal : un état final mesurable, la preuve, une limite de tours"},
+      {"seconde": 480, "resume": "Un projet par flux de travail, des instructions courtes, Claude qui t'interviewe"},
+      {"seconde": 624, "resume": "Le document en haut, la question en bas : jusqu'à 30 % de mieux"},
+      {"seconde": 1035, "resume": "Les cinq mises à niveau empilées"}
+    ],
+    "premier_payoff_seconde": 67,
+    "jargon": 2,
+    "repetitions": 1,
+    "test_du_tweet": "Anthropic réécrit ses règles à chaque modèle. Cinq mises à niveau : des prompts qui disent quoi faire et pourquoi, /goal avec une définition du fini, un projet par flux de travail, des skills tirées de vraies tâches, une vraie mémoire. Tout à copier dans la description."
+  },
+  "habillage": {
+    "face_camera": {"presente": true, "cadrage": "taille, plan large au bureau ; vignette à droite sur les captures", "decor": "bureau, mur à lattes de bois, micro RØDE, affiche, fauteuil vert, lampe"},
+    "parts": {"face": 30, "ecran": 50, "motion": 20, "broll": 0},
+    "textes_ecran": "frequents",
+    "sous_titres_incrustes": false,
+    "sous_titres_style": "",
+    "elements": ["etiquettes", "curseur-surligne", "split-screen", "zooms-ecran", "fleches-annotations"],
+    "charte": "Cartes parchemin avec liste manuscrite (« Rules from Anthropic have been completely rewritten »), encadrés rouges qui citent la doc, bandeaux rouges numérotés (« 1 One Project Per Work Stream »), schémas de mémoire en couleurs vives. La miniature, brune et chargée, ne reprend pas cette charte.",
+    "rythme": "regulier",
+    "notes": "Le débit le plus rapide de la chaîne sur la période (252 mots/min). Beaucoup d'écrans : la doc, son interface Claude, le site Rankspot, des schémas de mémoire."
+  },
+  "fin": {
+    "ctas": [
+      {"seconde": 22, "type": "lead-magnet", "cible": "les cinq mises à niveau à copier, dans les ressources gratuites (skool.com/scrapesai)", "amene_par": "intro", "citation": "they'll all be available in the resources linked in the description below"},
+      {"seconde": 276, "type": "produit", "cible": "Rankspot.ai et ses outils gratuits", "amene_par": "pendant-demo", "citation": "rankspot.ai and AI search visibility platform"},
+      {"seconde": 597, "type": "lead-magnet", "cible": "le gabarit d'instructions de projet", "amene_par": "pendant-demo", "citation": "I'll leave this template in the free resources in the description below"},
+      {"seconde": 943, "type": "formation", "cible": "l'Agentic OS et son système de mémoire, dans la communauté Skool", "amene_par": "pendant-demo", "citation": "our Aentic operating system, which is available inside our school community"},
+      {"seconde": 1081, "type": "video-suivante", "cible": "une série d'astuces Claude Code", "amene_par": "fin", "citation": "In the next video, I'm going to break down a series of clawed code tips"}
+    ],
+    "sponsor": {"present": false, "nom": null, "debut": null, "duree": null, "forme": null},
+    "liens_description": {"formation": 1, "produit": 1, "abonnement": 1, "lead-magnet": 1},
+    "commentaire_epingle": {"texte": "Commentaire du créateur en tête (épinglage non confirmé) : abonne-toi, puis « Now make AI run without you » vers skool.com/scrapes", "type": "formation"},
+    "recap_final": true,
+    "derniere_phrase": "In the next video, I'm going to break down a series of clawed code tips which will upgrade your setup even more.",
+    "video_suivante_precise": false
+  },
+  "commentaires": {
+    "themes": ["cinq commentaires seulement", "la dépendance aux modèles d'Anthropic", "Claude jugé moins bon ces temps-ci"],
+    "demandes": ["savoir si importer tout son historique Claude aide ou gêne"],
+    "critiques": ["ces règles enferment chez Anthropic", "Claude décrit comme instable et coûteux"],
+    "reprises": [],
+    "signal_promesse": "inconnu"
+  },
+  "techniques": {
+    "ap_alignement_5s": {"note": 1, "preuve": "1re phrase sur les docs d'Anthropic, pas sur « pro en 20 minutes » (dit à 0:18) ; 1er plan Claude avec la vignette de Simon, proche de la miniature"},
+    "ap_boucle_curiosite": {"note": 0, "preuve": "Aucune question laissée ouverte dans l'intro"},
+    "ap_effort_montre": {"note": 1, "preuve": "0:14 « I've gone ahead and read all of the instructions so that you don't have to » : dit, pas chiffré"},
+    "ap_setup_progress_payoff": {"note": 1, "preuve": "17:15 les cinq mises à niveau s'empilent (un goal qui appelle une skill dans un projet), mais chaque partie reste à part"},
+    "ap_contraste_rythme": {"note": 1, "preuve": "De 3 à 12 plans par minute, débit constant autour de 252 mots/min"},
+    "ap_montrer_sans_son": {"note": 1, "preuve": "Cartes OPUS 4.6 puis OPUS 5 avec une page barrée : « les règles changent » se lit ; la promesse « pro en 20 minutes » non"},
+    "ali_douleur_histoire": {"note": 1, "preuve": "0:07 « now actively makes you worse », puis 1:30 les prompts de sa communauté : un constat, pas une histoire vécue"},
+    "ali_coeur_unique": {"note": 1, "preuve": "1:08 « that's basically the theme of this whole video » : les règles sont réécrites ; mais la partie mémoire dévie vers son produit"},
+    "alx_pont": {"note": 1, "preuve": "Titre repris à 0:18, effort, annonce des 5 points et ressources : un pont, ouvert par une dissonance"},
+    "alx_pull_paint_point": {"note": 2, "preuve": "Chaque mise à niveau dit pourquoi, montre un exemple (synthèse vocale, Rankspot, ses projets, skills.sh) et donne l'action"},
+    "alx_nom_idee": {"note": 1, "preuve": "« golden rule », « definition of done », bandeaux « One Project Per Work Stream » ; peu d'idées nommées"},
+    "alx_phrase_finale": {"note": 1, "preuve": "1:57 « the model uses the why to handle every case you didn't think to write down » ; rare ailleurs"},
+    "alx_douleur_reve": {"note": 1, "preuve": "« I Will Make You a Claude Pro » parle du désir, mais l'outil porte le titre"},
+    "alx_cta_tot": {"note": 2, "preuve": "0:22 les cinq mises à niveau à copier dans les ressources gratuites, bandeau « Link Down Below »"},
+    "ed_intro_courte": {"note": 1, "preuve": "1er point à 0:27 après six phrases"},
+    "ed_hook": {"note": 1, "preuve": "0:07 « some of what made you good at Claude [...] now actively makes you worse » : dissonance générale, l'exemple précis n'arrive qu'à 0:31"},
+    "ed_probleme_preuve_consignes": {"note": 2, "preuve": "Prompts, /goal, Projects, skills : le problème, la doc d'Anthropic ou Rankspot en preuve, puis un gabarit"},
+    "ed_tension_relancee": {"note": 2, "preuve": "7:13 « if you're having to reexplain your business at the top of every session » ; 10:48 « what it still doesn't know is how you do a job »"},
+    "ed_histoire_vecue": {"note": 2, "preuve": "4:36 les 40 outils gratuits de Rankspot sortis en un week-end avec /goal (acte 3)"},
+    "ed_sans_surexplication": {"note": 1, "preuve": "Les 40 outils redits trois fois ; /goal réexpliqué « in plain English »"},
+    "ed_niveau_simple": {"note": 1, "preuve": "« in plain English » à 1:57 et 4:06, mais base vectorielle, reranking et stop hooks dans la partie mémoire"},
+    "tous_video_suivante": {"note": 1, "preuve": "18:01 « a series of clawed code tips », sans vidéo nommée ni vraie raison"}
+  },
+  "a_retenir": {
+    "titre_miniature": "Promesse de niveau (« Claude Pro », « GET GOOD, FAST. ») et miniature surchargée (15 blocs). Quatre titres et une dizaine de miniatures testés en trois jours : rien n'a pris (11 000 vues à 7 jours, la plus basse des dix).",
+    "intro_structure": "Le contenu recoupe celui du « Top 1% » (définition du fini, /goal, skills tirées de vraies tâches) qui a fait 20 fois plus trois semaines après : l'écriture n'explique pas l'écart, l'emballage et le sujet si.",
+    "habillage": "Cartes parchemin, encadrés rouges de la doc, schémas colorés ; beaucoup d'écran et le débit le plus rapide de la chaîne.",
+    "idee_pour_nous": "Une promesse générale (« deviens pro ») ne suffit pas sur un sujet déjà vu : il faut une thèse qui contredit une habitude précise, comme « le plan mode est mort ».",
+    "objectif": "vues"
+  }
+}

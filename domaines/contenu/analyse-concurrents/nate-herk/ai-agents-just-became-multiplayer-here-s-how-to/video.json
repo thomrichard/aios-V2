@@ -1,0 +1,138 @@
+{
+ "id": "KZiF2J83zaY",
+ "url": "https://www.youtube.com/watch?v=KZiF2J83zaY",
+ "chaine": "nate-herk",
+ "titre": "AI Agents Just Became Multiplayer. Here's How to Build Them.",
+ "titre_ytdlp": "AI Agents Just Became Multiplayer. Here's How to Build Them.",
+ "publie": "2026-10-15T15:16:33Z",
+ "duree_s": 1344,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "UcU1F0bhGk7EDbBNr0WLGDtos-k",
+  "id": "KZiF2J83zaY",
+  "snippet": {
+   "publishedAt": "2026-10-15T15:16:33Z",
+   "channelId": "UC2ojq-nuP8ceeHqiroeKhBA",
+   "title": "AI Agents Just Became Multiplayer. Here's How to Build Them.",
+   "description": "$50 off Kylon here: https://kylon.io/lp/nate-herk?utm_source=youtube&utm_medium=creator&utm_campaign=nate_herk&utm_content=dedicated_video\nHow I built an AI agency from 0 to over $1 million per year: https://www.skool.com/ai-automation-society-plus/about?el=kylon-video-1&hcategory=youtube-videos&utm_campaign=plus-group\nMy FREE resources: https://www.skool.com/ai-automation-society/about?el=kylon-video-1&hcategory=youtube-videos&utm_campaign=free-group\n\nMy Tools💻\nFREE MONTH voice to text: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www.hostinger.com/vps/claude-code-hosting\n\nMost of us have been using AI in single-player mode, where your AI OS, skills, and connected accounts only help you. \n\nIn this video I show how my team and I use Kylon to put humans and agents in one shared workspace, including our own Claude Code and Codex subscriptions, so everyone can build apps and automations together. I also walk through a fresh setup, how credits and pricing work, and how I’d roll this out to a team one work stream at a time. Kylon sponsored this video.\n\nSponsorship Inquiries:\n📧 nate@smoothmedia.co\n\nConnect with me:\nhttps://www.linkedin.com/in/nateherkelman/\nhttps://x.com/nateherk\nhttps://www.instagram.com/nateherk/\n\nTIMESTAMPS \n0:00 Humans and Agents in One Workspace\n1:17 Single Player vs Multiplayer AI\n3:00 Why I Tried Kylon\n4:01 Moving a Team to AI Native\n5:29 AIS Instagram Room Example\n9:28 Fresh Workspace Setup\n12:55 Bring Your Own Claude Code and Codex\n16:30 How to Get Started With Your Team\n20:57 Final Thoughts",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/KZiF2J83zaY/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/KZiF2J83zaY/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/KZiF2J83zaY/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/KZiF2J83zaY/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/KZiF2J83zaY/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    }
+   },
+   "channelTitle": "Nate Herk | AI Automation",
+   "categoryId": "1",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "en",
+   "localized": {
+    "title": "AI Agents Just Became Multiplayer. Here's How to Build Them.",
+    "description": "$50 off Kylon here: https://kylon.io/lp/nate-herk?utm_source=youtube&utm_medium=creator&utm_campaign=nate_herk&utm_content=dedicated_video\nHow I built an AI agency from 0 to over $1 million per year: https://www.skool.com/ai-automation-society-plus/about?el=kylon-video-1&hcategory=youtube-videos&utm_campaign=plus-group\nMy FREE resources: https://www.skool.com/ai-automation-society/about?el=kylon-video-1&hcategory=youtube-videos&utm_campaign=free-group\n\nMy Tools💻\nFREE MONTH voice to text: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www.hostinger.com/vps/claude-code-hosting\n\nMost of us have been using AI in single-player mode, where your AI OS, skills, and connected accounts only help you. \n\nIn this video I show how my team and I use Kylon to put humans and agents in one shared workspace, including our own Claude Code and Codex subscriptions, so everyone can build apps and automations together. I also walk through a fresh setup, how credits and pricing work, and how I’d roll this out to a team one work stream at a time. Kylon sponsored this video.\n\nSponsorship Inquiries:\n📧 nate@smoothmedia.co\n\nConnect with me:\nhttps://www.linkedin.com/in/nateherkelman/\nhttps://x.com/nateherk\nhttps://www.instagram.com/nateherk/\n\nTIMESTAMPS \n0:00 Humans and Agents in One Workspace\n1:17 Single Player vs Multiplayer AI\n3:00 Why I Tried Kylon\n4:01 Moving a Team to AI Native\n5:29 AIS Instagram Room Example\n9:28 Fresh Workspace Setup\n12:55 Bring Your Own Claude Code and Codex\n16:30 How to Get Started With Your Team\n20:57 Final Thoughts"
+   },
+   "defaultAudioLanguage": "en"
+  },
+  "contentDetails": {
+   "duration": "PT22M24S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": true,
+   "contentRating": {},
+   "projection": "rectangular"
+  },
+  "statistics": {
+   "viewCount": "97170",
+   "likeCount": "986",
+   "favoriteCount": "0",
+   "commentCount": "111"
+  }
+ },
+ "ytdlp": {
+  "id": "KZiF2J83zaY",
+  "title": "AI Agents Just Became Multiplayer. Here's How to Build Them.",
+  "description": "$50 off Kylon here: https://kylon.io/lp/nate-herk?utm_source=youtube&utm_medium=creator&utm_campaign=nate_herk&utm_content=dedicated_video\nHow I built an AI agency from 0 to over $1 million per year: https://www.skool.com/ai-automation-society-plus/about?el=kylon-video-1&hcategory=youtube-videos&utm_campaign=plus-group\nMy FREE resources: https://www.skool.com/ai-automation-society/about?el=kylon-video-1&hcategory=youtube-videos&utm_campaign=free-group\n\nMy Tools💻\nFREE MONTH voice to text: https://get.glaido.com/nate\nCode NATEHERK for 10% off VPS (annual plan): https://www.hostinger.com/vps/claude-code-hosting\n\nMost of us have been using AI in single-player mode, where your AI OS, skills, and connected accounts only help you. \n\nIn this video I show how my team and I use Kylon to put humans and agents in one shared workspace, including our own Claude Code and Codex subscriptions, so everyone can build apps and automations together. I also walk through a fresh setup, how credits and pricing work, and how I’d roll this out to a team one work stream at a time. Kylon sponsored this video.\n\nSponsorship Inquiries:\n📧 nate@smoothmedia.co\n\nConnect with me:\nhttps://www.linkedin.com/in/nateherkelman/\nhttps://x.com/nateherk\nhttps://www.instagram.com/nateherk/\n\nTIMESTAMPS \n0:00 Humans and Agents in One Workspace\n1:17 Single Player vs Multiplayer AI\n3:00 Why I Tried Kylon\n4:01 Moving a Team to AI Native\n5:29 AIS Instagram Room Example\n9:28 Fresh Workspace Setup\n12:55 Bring Your Own Claude Code and Codex\n16:30 How to Get Started With Your Team\n20:57 Final Thoughts",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "Humans and Agents in One Workspace",
+    "end_time": 77
+   },
+   {
+    "start_time": 77,
+    "title": "Single Player vs Multiplayer AI",
+    "end_time": 180
+   },
+   {
+    "start_time": 180,
+    "title": "Why I Tried Kylon",
+    "end_time": 241
+   },
+   {
+    "start_time": 241,
+    "title": "Moving a Team to AI Native",
+    "end_time": 329
+   },
+   {
+    "start_time": 329,
+    "title": "AIS Instagram Room Example",
+    "end_time": 568
+   },
+   {
+    "start_time": 568,
+    "title": "Fresh Workspace Setup",
+    "end_time": 775
+   },
+   {
+    "start_time": 775,
+    "title": "Bring Your Own Claude Code and Codex",
+    "end_time": 990
+   },
+   {
+    "start_time": 990,
+    "title": "How to Get Started With Your Team",
+    "end_time": 1257
+   },
+   {
+    "start_time": 1257,
+    "title": "Final Thoughts",
+    "end_time": 1344
+   }
+  ],
+  "tags": [],
+  "categories": [
+   "Film & Animation"
+  ],
+  "heatmap": null,
+  "upload_date": "20261015",
+  "duration": 1344,
+  "channel": "Nate Herk | AI Automation",
+  "channel_id": "UC2ojq-nuP8ceeHqiroeKhBA",
+  "channel_follower_count": 1090000,
+  "thumbnail": "https://i.ytimg.com/vi_webp/KZiF2J83zaY/maxresdefault.webp",
+  "view_count": 97200,
+  "like_count": 986,
+  "comment_count": 72
+ }
+}

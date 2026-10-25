@@ -1,0 +1,163 @@
+{
+ "recupere_le": "2026-10-25",
+ "breakout": 1.41,
+ "vph": 14.63,
+ "stats_jour": [
+  {
+   "timestamp": "2026-10-04T00:28:45.094Z",
+   "views": 41,
+   "likes": 2,
+   "comments": 1,
+   "vph": 351.42857142857144
+  },
+  {
+   "timestamp": "2026-10-05T00:32:39.208Z",
+   "views": 77439,
+   "likes": 946,
+   "comments": 27,
+   "vph": 1032
+  },
+  {
+   "timestamp": "2026-10-06T00:42:50.388Z",
+   "views": 95939,
+   "likes": 1119,
+   "comments": 30,
+   "vph": 463
+  },
+  {
+   "timestamp": "2026-10-07T00:47:07.245Z",
+   "views": 105318,
+   "likes": 1242,
+   "comments": 30,
+   "vph": 328
+  },
+  {
+   "timestamp": "2026-10-08T00:37:08.031Z",
+   "views": 115453,
+   "likes": 1365,
+   "comments": 31,
+   "vph": 515.8064516129032
+  },
+  {
+   "timestamp": "2026-10-09T00:53:08.891Z",
+   "views": 126410,
+   "likes": 1460,
+   "comments": 33,
+   "vph": 413
+  },
+  {
+   "timestamp": "2026-10-10T00:36:45.837Z",
+   "views": 135045,
+   "likes": 1551,
+   "comments": 34,
+   "vph": 247
+  },
+  {
+   "timestamp": "2026-10-11T00:51:10.104Z",
+   "views": 140062,
+   "likes": 1607,
+   "comments": 34,
+   "vph": 193.33333333333331
+  },
+  {
+   "timestamp": "2026-10-12T00:10:01.185Z",
+   "views": 143374,
+   "likes": 1650,
+   "comments": 37,
+   "vph": 150
+  },
+  {
+   "timestamp": "2026-10-13T00:38:10.557Z",
+   "views": 145663,
+   "likes": 1667,
+   "comments": 38,
+   "vph": 96.33802816901408
+  },
+  {
+   "timestamp": "2026-10-14T00:26:38.529Z",
+   "views": 147108,
+   "likes": 1689,
+   "comments": 39,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-15T00:36:16.563Z",
+   "views": 148902,
+   "likes": 1704,
+   "comments": 39,
+   "vph": 61.904761904761905
+  },
+  {
+   "timestamp": "2026-10-16T00:33:00.960Z",
+   "views": 150017,
+   "likes": 1717,
+   "comments": 40,
+   "vph": 41
+  },
+  {
+   "timestamp": "2026-10-17T00:32:55.021Z",
+   "views": 150760,
+   "likes": 1725,
+   "comments": 40,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-18T00:02:45.692Z",
+   "views": 151498,
+   "likes": 1730,
+   "comments": 40,
+   "vph": 22.388059701492537
+  },
+  {
+   "timestamp": "2026-10-19T00:34:27.278Z",
+   "views": 152046,
+   "likes": 1742,
+   "comments": 40,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-20T00:32:04.808Z",
+   "views": 152562,
+   "likes": 1746,
+   "comments": 39,
+   "vph": 40.67796610169492
+  },
+  {
+   "timestamp": "2026-10-21T00:22:34.268Z",
+   "views": 152834,
+   "likes": 1753,
+   "comments": 39,
+   "vph": 0
+  },
+  {
+   "timestamp": "2026-10-22T00:32:16.340Z",
+   "views": 153265,
+   "likes": 1755,
+   "comments": 39,
+   "vph": 54.78260869565217
+  },
+  {
+   "timestamp": "2026-10-23T00:44:22.963Z",
+   "views": 153631,
+   "likes": 1760,
+   "comments": 39,
+   "vph": 28.235294117647058
+  },
+  {
+   "timestamp": "2026-10-24T00:28:54.077Z",
+   "views": 153969,
+   "likes": 1766,
+   "comments": 39,
+   "vph": 14.999999999999998
+  },
+  {
+   "timestamp": "2026-10-25T00:50:58.446Z",
+   "views": 154417,
+   "likes": 1774,
+   "comments": 39,
+   "vph": 39.047619047619044
+  }
+ ],
+ "changements": [],
+ "ab_tests": []
+}

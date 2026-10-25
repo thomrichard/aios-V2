@@ -1,0 +1,119 @@
+[00:00] Opus 5.5 for video editing and motion graphics has gotten pretty unbelievable lately.
+[00:05] And so these examples that you'll see are all created with Opus, and all I did is to give it access to my workspace.
+[00:10] No generative AI video model was used, and I just sent a simple prompt like this where I asked it to make a dynamic motion graphics video that showcases its capabilities.
+[00:23] >> >> This is another similar example, but where I pushed it to use more 3D elements.
+[00:43] >> >> And in fact, some of the videos I launched recently, like this one that already has 300,000 views, it was also edited using Opus 5.5.
+[01:01] So Opus 5.5 just came out, and Anthropic just published an official comprehensive guide on how to prompt it.
+[01:07] You can keep one agents.md as your single instructions file now instead of keeping a Claude.md and an agents.md in sync.
+[01:14] One of the best things you can do is to ask for them in the SVG format.
+[01:18] That stands for scalable vector graphics, so that it scales to any size without going blurry.
+[01:23] You can open the file and change the color by hand, and you can even have Claude animate these icons.
+[01:28] So with SVGs, every graphic that you get back from Claude is editable and animatable.
+[01:34] So clearly I've been testing this model heavily for automated videos, and in my view, these are all a major step up versus what we had previously.
+[01:41] So today I'll teach you how to best use this capability of 5.5, so that by the end of it you can also level up your video and motion graphic skills using AI.
+[01:49] I know exactly how I make videos like these that get hundreds of thousands of views, even if they are AI edited.
+[01:54] And if you're new, my name is Jay.
+[01:56] I spent over a decade working with brands you probably know.
+[01:58] I've been in AI since my masters in data science, and now I'm leading our AI business in one of the largest AI communities globally.
+[02:05] Let's dive into it.
+[02:06] So, before we go into the different levels by which you can use Opus's capability for video editing, I actually want to give you context of what really happens under the hood when you send a simple prompt like this
+[02:16] to 5.5.
+[02:17] Because as I mentioned earlier, this whole video that it created for us, it didn't really use any generative AI video model for it.
+[02:23] All of the movements, all of the text, and basically everything you see here, those are all created using code.
+[02:28] And in fact, in this demo interface, you can clearly see I can select these individual elements, which are all just images in my workspace, and all they are really is Claude pointing to this particular photo in this case,
+[02:38] and using some code, in this case JavaScript, in order to place them in this exact position in this exact timestamp.
+[02:44] And everything that you see here, including the movements, the motion graphics, that is all using Opus 5.5's taste.
+[02:50] And if you're curious exactly what tools it used to achieve that video, I also just asked Opus to illustrate that here in Excalidraw, and you can see that with that one-shot prompt that we sent it, it just used
+[03:01] its native knowledge of HTML, CSS, JavaScript, and a couple of other libraries like 3.js and FFmpeg in order to achieve that look, which again, you don't even need to understand all of this, although in my view, it's at
+[03:13] least good to be aware of them.
+[03:14] But because of how powerful these models have become, you can pretty much just rely on 5.5 to create you great showreels like that using a single prompt.
+[03:22] I did want to call out though that for this particular test, we did not use Hyperframes or Remotion, which are these popular open-source libraries for video editing using Claude, which just illustrates for you how good natively Opus 5.5
+[03:33] has become because even without these plugins, it's able to create videos like that.
+[03:38] And by the way, if you want to learn how to build and sell AI systems that businesses actually pay for, then that's pretty much all we do over at the Robonuggets community, where not only do you get access
+[03:47] to the Claude Living Masterclass, which we update every week and takes you from zero to mastery with the latest on AI, but you also get access to our agents as a service course, which walks you through how to
+[03:56] actually get paid for all these AI skills that you are learning.
+[03:59] You also get to be part of a genuinely great community of AI builders.
+[04:03] In fact, you can see just some of the recent wins our members are getting from the program right here.
+[04:07] So, if you want to start earning from AI, then check that just in the pin comment below.
+[04:10] Now, back to the video.
+[04:11] But, if you're serious about producing video using AI and using Claude, you need to understand that there's still levels to this skill still.
+[04:18] Because that example that we went through, that's the most basic level.
+[04:21] That's level one, where you sent a single prompt and you get a good result.
+[04:25] Now, in my view, I think this level is still useful at least for you to try out.
+[04:29] Because number one, it gives you a sense of the capability of these models.
+[04:32] So, if you have a prompt like that that pushes the ceiling of what a certain model can do, then when a new model gets released, you can just repeat that same prompt to test how good things are now.
+[04:41] I also think that one-shot prompts that provide showcase reels like that are quite good in terms of building up a portfolio for you.
+[04:48] Because if you're a video editor and you're just looking for show reels to showcase your work, then this is a great and easy way for you to get that almost immediately.
+[04:56] Because remember, and this is a good time to bring up this chart again, if you're watching this video and you know how to use Claude code, amongst the whole population of people, you are probably here in the red
+[05:06] cell.
+[05:07] So, you're in a very small fraction of people who actually know how good these models have become when it comes to video editing at least.
+[05:13] But, for a huge portion of people and the customers that you may be serving, this type of capability and motion graphics is actually something that you would expect a top professional agency to be able to produce.
+[05:24] And so, bottom line is, if you want to create production level videos using Claude, you probably won't get there with one shot, but there's clearly still benefits to doing this.
+[05:33] And so, to make it easy for you to copy those prompts and for you to test it, I just made this nine-page PDF, which you can just send to Claude and pick out all of the starter prompts that
+[05:41] I will mention in this video, including those one-shot prompts that I used in order to create those demo reels.
+[05:46] And you can just grab this PDF for free down below in the description.
+[05:49] Now, like I said, level one it's useful, but you probably won't get to the end result that you want for production-level quality videos.
+[05:57] And so, the way that you do that is to move towards level two, which is taking you from one-shot prompting to actually storyboarding your videos.
+[06:04] Now, the great thing about this is you don't actually have to sketch it yourself, even though you can do that.
+[06:09] You can actually have Claude storyboard your videos for you.
+[06:13] So, why is storyboarding even important in the first place?
+[06:15] Well, usually for most beginners, if they send, let's say, a prompt and they already have an idea of the video that they want, depending on the complexity of this final video, it's more often the case that this prompt
+[06:26] that you start with isn't really detailed enough to give you that final result in one shot.
+[06:30] And so, what ends up happening is that your AI model, Claude in this case, will actually veer away towards the wrong direction and produce for you a final video that has all of the animations and has all of
+[06:42] the tokens already spent and burnt, but producing the wrong result, which is very far away from what you want.
+[06:47] And so, the reason why storyboards are important is that if you ask the AI model to create them first before going all out on this wrong result that it's about to make, if you're able to preview what it's
+[06:56] about to do at less cost and at much faster turnaround times, because this is just a storyboard anyway, then you can steer this model towards the right direction to give you the video that you want.
+[07:05] Now, I'll just show you the interface that I use and which we're developing as part of the toolkit for our community, but at its core, to do storyboarding effectively, you just need two things.
+[07:14] You need to be able to tell Claude that you would want first a storyboard or a set of images of the animations that it's about to do, as well as a description of what actually happens in this particular
+[07:24] scene.
+[07:25] And so, you can see here when I ask it to create a storyboard for me for the Rubric app, it already created all the HTML elements for me, but without the animations yet.
+[07:32] But instead, what it created for me are these screenshots, as well as the descriptions of the animations that it's about to do.
+[07:38] So, it's saying here that the camera whips to the first panel, it then continues across the panels, and so on and so forth.
+[07:44] And so, at this point, it hasn't rendered the video yet, but you get a clear sense of what it's about to do.
+[07:49] Now, the second element, when it comes to storyboarding, is a way for you to give feedback to it.
+[07:53] Now, obviously, you can just open up your chat window and give feedback that way, but I just think with a lot of video and design work, it is much more effective if you can give feedback in the context
+[08:02] of the visuals that you're seeing.
+[08:04] And so, in this interface, let's say I want this to be less text-heavy, I can just click on this particular frame, it will add a comment here, and I can just give that feedback for this particular frame.
+[08:14] And the great thing about this is when this comment is posted to Claude, it will also give the exact timestamp and even the exact point that I made the comment on in this particular frame.
+[08:23] So, it's much more directed and in my view is much more effective as well in terms of steering your agent towards what you want.
+[08:28] And so, what I usually do is I just run through this whole storyboard that it created for us, I give all of my comments, and when I'm done with that, I just copy all of these comments, and then
+[08:37] just paste all of those comments to Claude, either ask for another storyboard or just go directly to the video, depending on how close Claude is already to the video that I actually want.
+[08:46] Now, let's take this one level up, because if you want to be really good at steering your AI agent, in this case Opus 5.5, into creating videos that are really stunning, then you want to get to level three,
+[08:57] where you're actually directing it based on the video that it already created.
+[09:00] Because if we go back to our illustration earlier, if you give feedback on the storyboard and you ask Opus 5.5 for the video that you want, I often find that that takes you around, let's say, 80 to 90%
+[09:10] there in terms of the final polished quality output that you actually really want.
+[09:14] And so, if you get really good at directing AI to create the final video output for you, then you have reached level three.
+[09:20] And at the very core of it, directing really is just giving feedback to the final video, and similar to the previous level, you can always do this by speaking to Claude via the chat window, giving your feedback there
+[09:30] via natural language, but often what I find is when it comes to reviewing video, it's much easier, again, if you actually have an interface on an operating system yourself of how you can give feedback to AI.
+[09:40] Just to show you one example for my work.
+[09:42] This is again another beta version of the toolkit that we're developing for our community.
+[09:47] So it's not yet the final look of this piece of software, but this rubric editor basically lets you play the video, give comments on each of these frames, and more importantly, you can also give feedback on the audio
+[09:57] that it used, which isn't really something that you will hear during the storyboard process, right?
+[10:01] So I'm not sure if you can hear it.
+[10:03] You can pretty much hear the sound effects that it used and give comments there.
+[10:07] So let's say after viewing the video, we decided that this particular frame or scene is no longer important, then we can just say to remove this scene, and you can see this comment comes with a timestamp where I
+[10:16] placed this feedback, and it knows exactly what graphic I am referring to.
+[10:20] And so similar to storyboarding, you can actually just make a lot of comments on this reel, copy all of those comments, and then just send it back to Claude.
+[10:27] And just to give you an example from an actual video, so that Opus 5.5 tips video, which the one that has already 300,000 plus views, this is actually the rubric editor where I work with Opus 5.5 to produce
+[10:39] that final video.
+[10:40] So essentially, the difference with this one is that if you can see here, since this is coming from a raw footage, I asked Claude to identify the specific takes that I want to keep in this video, and I
+[10:50] made a separate lesson on this if you want to learn how to do that.
+[10:53] And then if I play this, which right now it's at 2x speed, which is, you know, uh much faster way for me to just review its animations in there.
+[11:02] You can see that when I reviewed this, I just made this comment for this animation where I just said to focus on the title of the page, and I gave the link to that Claude platform documentation there, which
+[11:11] is why it came back with this animation.
+[11:14] And then I just did that across all clips, because at least for this video, I did want it to pass my own review, and I wanted to match the level of quality that I am envisioning.
+[11:23] The great thing with Opus is that I'm finding that I need to give less and less comments just because of how good it one shots these animations.
+[11:30] Like it really gets the stuff that I want to be shown.
+[11:32] And sometimes when I'm directing this particular video, I just need to provide minor corrections here and there.
+[11:37] And then I copy all of the comments for all of the clips, and I send it back to Claude, wait for it to update this Rubric editor, and then ask it to render the final video when it's done.
+[11:46] And so there you go.
+[11:46] That is, in my view, how you maximize the capability of Opus 5.5 when it comes to automated video editing.
+[11:52] As you can see, there's still a lot of human review involved, which I think is how it should be anyway, because in a world where everyone can pretty much one cut showreels like what you saw in this video,
+[12:02] then the real differentiator that you would have in terms of creating videos would be your own taste, plus also the operating system by which you work and give feedback to your AI models.
+[12:12] Now, to be clear, even if you are storyboarding and even if you are directing on your own, I still think that the lead time to create quality videos have shrunk so much that you can pretty much have just
+[12:22] one person do an entire motion graphics video entirely on their own, plus Opus 5.5.
+[12:28] And as I mentioned, if you need starter prompts for everything that I showed in this video, you can just grab this PDF and send it to your agent.
+[12:35] Hopefully that was useful.
+[12:36] As always, thank you for watching until the end, and consider tapping subscribe below if it is, because that helps me a lot to put out more educational stuff like this.
+[12:43] I'll see you all next time.
+[12:43] Cheers.

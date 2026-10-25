@@ -1,0 +1,123 @@
+[00:00] So, Claude mods are one of the biggest updates that Claude Code has ever given us.
+[00:04] And in my last video, I showed you five mods that I built that changed how I use and interact with Claude every single day.
+[00:10] But, I can't stop building these things.
+[00:12] So, today, I'm going to show you five more, and I think that these are even better than the other ones.
+[00:17] Three of them are going to seriously upgrade your Claude Code experience.
+[00:20] One of them is going to change your perception on what you actually think Claude is worth.
+[00:24] And one of them I built just for fun, but I find myself using it five or six times a day.
+[00:29] But, to kick off this video, let's do a little refresher on what Claude mods actually are.
+[00:33] So, a Claude mod is just a small add-on that changes how Claude Code looks and how it works.
+[00:38] You basically can just describe a feature that you wish Claude Code had, and then Claude Code is going to build it right into itself.
+[00:44] It works with Claude Code terminal, and also works with the code tab right inside of the desktop app, and also works on your Mac, and it works on Windows.
+[00:51] So, as long as you have Claude Code up to date, you can start using it today.
+[00:55] And for every Claude Code mod that I'm about to show you, I am going to give you the prompt for free.
+[00:59] But, the best part here is, if you can think of a mod you can just talk to Claude Code like a human and describe the mod that you want to build.
+[01:06] I didn't write a single line of code here.
+[01:08] I just told Claude what I wanted.
+[01:10] For example, if you take a look down here at the bottom of my screen, you're going to see Tristan's tools.
+[01:15] This is where all of my mods live.
+[01:17] Some of them I showed you in my last video, but today, we are going to go over five brand new mods, which takes me to the first one, and I call that auto model.
+[01:26] Take a look at the bottom of my screen.
+[01:27] You can see that Opus 5.5 has been selected and is showing in the status bar.
+[01:31] Now, Opus is one of Anthropic's flagship models.
+[01:34] It's really good at thinking, but not every question or task that you give it needs a model that big.
+[01:39] So, when we turn on auto mode, what it's going to do is it's going to read your prompt, and then it's going to pick the right model based on the prompt that you gave it.
+[01:47] Now, you don't have to touch anything.
+[01:48] Like, watch this.
+[01:49] If I ask, "How many unread emails are in my Gmail right now?" and I hit enter, take a look at the status bar.
+[01:55] It switched to Haiku 5.5.
+[01:57] Haiku is Anthropic's fastest and cheapest model and counting my emails shouldn't need anything more than that.
+[02:03] And take a look, it came back and it told me that I have 17 unread emails.
+[02:07] But if I give it a bigger task and say, "Build me a weather dashboard for New York City." and I hit enter, take a look, it switches right back to Opus 5.5 because now it actually needs to think.
+[02:16] And that happened all by itself.
+[02:18] I didn't have to select anything, I didn't have to type in a slash command, auto model made that call for me.
+[02:23] Now, most of us never even think about which model we're going to use.
+[02:26] Matter of fact, you may not even know what Haiku and Sonnet and Opus and Fable actually do.
+[02:31] And that's okay.
+[02:31] If you take a look at Anthropic's model page right here, Fable 5.1 is the slowest and it's built for the hardest thinking, but Haiku 5.5 is the fastest and it cost a fraction of the others.
+[02:43] So, you don't need to memorize all of this.
+[02:44] Auto model is going to pick that for you.
+[02:46] So, you save time and you don't burn through all of your subscription because you asked a question on a larger model.
+[02:53] And here's my weather dashboard.
+[02:54] It built it with Opus 5.5 because it needed a bigger brain to think.
+[02:58] And that takes me to my second mod, which I call prompt upgrade.
+[03:01] Now, you know that the output that you get from Claude is only as good as the prompt that you put in.
+[03:07] But sometimes you just don't have time to sit there and write the perfect prompt.
+[03:10] If we go back into Tristan's tools and turn on prompt upgrade, we can type something really simple like this.
+[03:16] We can say, "Build me a 30-day marketing plan for a pizza company." And when we hit enter, take a look at this.
+[03:22] A new screen is going to pop up.
+[03:23] It's called prompt upgrade.
+[03:25] And the very first thing it does is going to ask you a few questions.
+[03:28] In this case, it's asking me, "What is the main goal of this plan?" So, I'm going to say that I want more online orders.
+[03:34] It's going to ask me, "What kind of pizza business is this?" And I'll say it's a small multi-location pizza place.
+[03:40] And then the last one here, it's going to ask me what my marketing budget is.
+[03:43] So, I'll just go ahead and pick a range here as well.
+[03:46] And when you're done with all the questions, it's going to write your upgraded prompt.
+[03:49] And take a look at this.
+[03:50] On the left is what I typed and then on the right is a much more robust and detailed prompt, and it's built from the answers that I gave it.
+[03:57] So, from here, you can edit it, you can copy it, or you can just click run, and when you click run, it's going to put it right into Claude and run that for you.
+[04:05] And here's the finished 30-day plan, which looks pretty good, but I went from one short sentence into something that is much more useful, and I didn't even have to think about it, which takes me to mod number three,
+[04:17] which I call today's report.
+[04:19] Now, I do a lot of work inside of Claude Code.
+[04:21] I'm on the $200 max plan, but sometimes I just want to know the value that I'm actually getting out of Claude.
+[04:27] So, if we click today's report inside of Tristan's tools, a box will pop up.
+[04:31] Now, it's going to show you how many tasks Claude has done for you today, how many hours that it's actually saved you, and how many dollars this is worth.
+[04:39] In this example, I set it to $50 an hour, but the point here is that you can change this to whatever you think that your time is worth.
+[04:46] Like, if you were doing this yourself, the actual tasks, how much would you get paid to do it?
+[04:51] That is the number we want to put in.
+[04:53] It's also going to break down where the time went, like email and documents and image and video, and research.
+[04:59] It shows which models did most the work.
+[05:01] It even keeps track of your streak.
+[05:03] And for me, most of my time went to email for today, which makes sense because I have Claude working through my inbox every hour of the day, and most of my work is done by Opus 5.5.
+[05:14] But at the top, I can switch this from today to the week, to the month, and even to the year.
+[05:19] This week, it says that it saved me 701 hours.
+[05:22] Now, that doesn't mean that Claude worked for 701 hours, it means it did the work that it would have taken me 701 hours to get done myself.
+[05:30] Some of this probably took Claude 15 seconds, but that's over 17 full work weeks in one week.
+[05:36] If I click year, I got a computer back in June, so it only goes back that far, but since June, Claude has done 8,518 tasks for me.
+[05:44] That's almost 2,000 hours, which is over 80 days of work.
+[05:47] And at $50 an hour, that's almost $100,000 worth of work.
+[05:51] And that is really cool.
+[05:53] So, now you can see exactly the value of that you are getting from Claude.
+[05:57] Now, the next mod I want to show you is pretty fun, but before I show you it, if this has been helpful so far, please like the video, please subscribe, and leave a comment.
+[06:04] It really helps out my channel, and it's something that I really appreciate.
+[06:08] But, let's get back to Claude mod number four, which I call YouTube TV.
+[06:13] I'm in Claude code all the time.
+[06:15] You just saw the numbers, and I love it.
+[06:17] But, if you give Claude a big job, it can take a long time for it to complete.
+[06:20] And sitting there while you're waiting gets quite boring.
+[06:23] So, let's give it a bigger job.
+[06:24] I'm going to say, "Research the top 38 pizza restaurants in New York City and give me a PDF summary of the top-ranked ones." Now, that should take a little while for Claude to pull, but while it's running, if
+[06:36] you look down here, you see a little button that says TV.
+[06:38] That is my mod.
+[06:39] And when you click it, it plays YouTube on an old-school TV right inside of Claude code.
+[06:44] Right now, it's playing my YouTube channel.
+[06:47] If you take a look at this, the channel up and down buttons, they actually work.
+[06:51] So, you can flip through the YouTube channel's next video.
+[06:54] The volume button works, the power button works, and down here are channels that I like, but you can put anything you want.
+[07:00] I have study music, AI news, '90s TV and music, whatever.
+[07:04] You can put whatever you want.
+[07:05] There's also a search box down here as well.
+[07:08] So, you can search for any video that you want to watch, and it's going to play right inside of your Claude code.
+[07:13] Which takes me to the fifth and final mod, which I call daily challenge.
+[07:17] Now, again, I use Claude every single day.
+[07:19] It's my go-to tool, but there still are things that I can learn.
+[07:22] So, I wanted something that would help me and you get a little better at Claude every single day.
+[07:27] So, if you click on daily challenge inside of Tristan's tools, it gives you one small challenge for the day.
+[07:32] For example, give Claude rough notes and ask it for a clean document as a saved file.
+[07:37] Or, if you don't want that one, you can click "Give me another." And now it says, "Ask Claude about something recent and see whether it searches the web or it answers it from memory.
+[07:46] Or you can click give me another one, like set up a notification for when a long task finishes.
+[07:50] Or give me another one, where it says to ask Claude which skills it has and then use one of them.
+[07:55] And if you don't know how to do the challenge, you can click coach me through it.
+[07:59] And Claude is actually going to walk you through step-by-step on how to do that task.
+[08:03] Like right here it says, step one of four, ask Claude the skills that it has and it tells you exactly what to type in.
+[08:09] And when you're done, you can come back, you can click mark complete, and when you do that, your streak is going to start.
+[08:15] Now, you get a new challenge every single day, so you don't want to break that streak.
+[08:19] And the whole point of this is to bring you back into Claude code every single day, just for a few minutes, so you can learn something new.
+[08:25] And if you do that for a month, you're going to know Claude better than most people that are using it today.
+[08:29] So, remember this, a mod is a feature that you describe and Claude builds it right inside of Claude code.
+[08:34] And today, you saw a mod that picks the right model for you, one that upgrades your prompt, one that shows you what Claude is actually worth, one that keeps you entertained while you wait, and then one makes you
+[08:44] better at Claude every single day.
+[08:45] Now, you don't have to build all five of these, you can just pick the one that you think's going to help you the most and start right there.
+[08:50] But, all five prompts are free and the link in the description.
+[08:54] And if you missed my first Claude mod video, you can also check it out right here.
+[08:57] And if this has helped, leave a like, subscribe, and I will see you in the next one.

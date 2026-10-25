@@ -1,0 +1,219 @@
+[00:00] With the recent release of the Claude 5.5 models, we are now in a whole new era of using Claude.
+[00:04] Opus and Sonnet 5.5 now think differently.
+[00:07] We now have the capability to create our own mods for Claude code, and even the way the cache saves you money has changed.
+[00:14] So, several of the habits that worked before are now quietly eating your usage limits, and may actually be getting you worse answers.
+[00:21] So, I went through Anthropic's own guides for the 5.5 models, what their engineers actually say, and hundreds of tips from power users, and pulled out the 23 mistakes that are costing you the most.
+[00:31] We'll go from some easy fixes that anyone can do today, all the way to the advanced ones that even pro users get wrong.
+[00:38] And if you're new, my name is J.
+[00:39] I spent over a decade working with brands you probably know, have been in AI since my master's in data science, and now I'm leading our AI business in one of the largest AI communities globally.
+[00:48] So, now let's dive into it, starting with the easy ones.
+[00:51] Number one is the kitchen sink session.
+[00:53] So, one of the first mistakes that beginners make is keeping one chat session going all day.
+[00:58] So, say you're writing a client email.
+[01:00] Then you need to do research on a certain topic.
+[01:01] Then you need to update the copy in your website.
+[01:04] If you do all of that in just one session, the problem is Claude actually rereads the entire conversation you had with it every time that you send a new prompt.
+[01:12] Now, there is such a thing as the prompt cache, which is basically Claude's short-term memory.
+[01:16] And on the newest 5.5 models, it brings the cost of that reread every time you send a prompt to about 5% of the normal amount of tokens that you use.
+[01:25] Now, that is a big discount, but you still do pay for it, and it still counts towards your limit.
+[01:30] Plus, all that unrelated stuff in that one session does distract Claude, so the answers get worse over time.
+[01:36] In fact, this is such a common bad habit that Anthropic themselves even has a name for it, which is the kitchen sink session.
+[01:42] So, the fix is simple.
+[01:43] For every distinct task, try to start just one session.
+[01:46] And when you switch to a new topic, either you start a new chat, or if you really want to minimize token usage, you can just type {slash} clear, so that your Claude.md and your other system prompts, like your
+[01:55] skill descriptions, don't need to load again.
+[01:58] Number two is switching models mid-chat.
+[02:00] So say you're deep in a session on Opus and you suddenly decide to flip to Haiku to save money on a quick question.
+[02:07] The catch is every model has its own prompt cache, so switching means the whole conversation gets reread with no discount.
+[02:15] Anthropic's own engineer says that if you're 100,000 tokens into an Opus chat, switching to Haiku for an easy question actually costs more than just letting Opus answer.
+[02:25] So, pick your model at the start of a task and stick with that.
+[02:29] The good news is on the newest models, so all of the 5.5 models plus Fable 5.1, changing the effort mid-chat doesn't actually wipe the cache anymore.
+[02:38] So changing the model midway cost you more tokens because of the cache being erased, while changing effort midway is actually okay now because the cache gets kept.
+[02:47] Do note though that this piece on the effort not wiping the cache is still on beta as per Anthropic, so it's better to check it on your own setup if it already holds true.
+[02:55] And you can do that through this simple prompt that you can just screenshot.
+[02:58] And by the way, I've put this entire list and all the resources and prompts that I mentioned here into this free PDF guide that is detailed enough so that if you just send it to your agent, you can
+[03:07] just ask it which of these mistakes you have been making in your past sessions so that you can correct them and these habits right away.
+[03:14] The link for that is just in the description below if you need it.
+[03:16] Number three is arguing instead of rewinding.
+[03:19] Next is arguing with Claude.
+[03:21] It gets something wrong, you correct it, it's still wrong, you correct it again, and now you're five rounds deep on giving feedback via succeeding prompts.
+[03:29] Now the thing is every one of those failed attempts stays in the chat and you're paying again for that entire conversation to be reread with every prompt you send.
+[03:36] Yes, you may benefit from the discount from your prompt cache, but it does still drain your usage.
+[03:41] So Anthropic's own rule is after two failed corrections, that is when you should probably stop and just use the rewind feature.
+[03:48] To do that, you can just press escape twice or type {slash} rewind in your chat, and that would bring up a list of your earlier messages so that you can just pick the point just before it went wrong
+[03:58] and start from there.
+[03:59] Number four is side questions in your main chat.
+[04:03] Say you're in the middle of a task and you actually want a simple question, like let's say you want to learn what a webhook is because that was mentioned by Claude, or you're wondering what was the answer to
+[04:12] a question from a few prompts back, or maybe you're wondering what the status is of the long build that Claude is working on at the moment.
+[04:19] So, you send a new prompt.
+[04:21] The thing is that little detour now stays in the conversation, confusing your agent later on, and it also gets resent with every message for the rest of the task, draining your usage limits even faster.
+[04:32] So, instead of doing that, just type {slash} BTW or by the way, then your question.
+[04:37] You then get the answer in a side panel that pops up, but it never goes into the chat history, so your main task stays clean.
+[04:44] Number five is using max effort more than you should.
+[04:47] If you're putting effort on max for every single task, then you're probably draining your usage much faster than you should.
+[04:54] Anthropic themselves say that max effort can now show diminishing returns and is actually prone to overthinking.
+[05:00] So, for a lot of users, setting effort on the maximum isn't really what is recommended.
+[05:05] And if you look at some independent tests and benchmarks, the extra intelligence that you get from max just isn't worth the costs.
+[05:11] For example, from the test from artificialanalysis.ai, which is this independent company that runs every AI model through the same tests, for Opus 5.5, max scores about four points higher than high, so only a bit, but costs over three
+[05:25] times as much per task.
+[05:27] So, unless you have an unlimited budget, just leave it on medium maybe for most normal work and go high or extra high when it really matters, and save max for the rare big jobs.
+[05:36] Number six are one-liner vague prompts.
+[05:39] Like if you want a website, you just send a simple prompt like make me a website, or when you want an article written, you just ask to write an article.
+[05:46] This usually gives you bad results because Claude has to guess, so it falls back to the most average answer.
+[05:52] And then you spend five follow-ups fixing it.
+[05:55] In fact, Anthropic says this themselves.
+[05:57] In their documentation for prompting Opus 5.5, if you ask it for a design without a direction, it actually falls back on a few default styles, which, if you think about it, is where most AI slop comes from, the
+[06:08] defaults.
+[06:09] So, what you need to do when you name the output that you want, you also need to give context on who it's for, what is the goal or intention, and what tone actually looks like.
+[06:17] And for anything you do often, you can always give Claude a harness, which, at its core, is just a set of instructions, like, for example, a design system for anything visual, or even skills, which are these SOP guides
+[06:28] that you can give their agents for the jobs that you repeat.
+[06:31] That way, it starts from your standards instead of from scratch every single time.
+[06:35] Number seven is giving Claude rules without a reason.
+[06:39] If you give your agent exact rules, like, "Never use bullet points," or "Never mention a price," without the why, Claude mostly follows the rule blindly, and sometimes it misses the point or even uses it where it makes zero
+[06:50] sense.
+[06:51] So, add the reason in one short clause.
+[06:54] For example, instead of just saying that you don't want bullet points, say that you want this because this gets read out loud on a podcast.
+[07:00] "Don't mention price because this is a cold first email, and price comes during the onboarding call." With today's models, Claude is smart enough to work out the rest from just the reason, and as models keep getting smarter and
+[07:13] smarter, explaining your intention instead of hamstringing your agents based on guardrails that are too specific are only going to matter more.
+[07:22] Number eight is asking your agent to make it not look like AI made it.
+[07:25] And Anthropic actually tested this.
+[07:27] If you give just a general line like, "Avoid a generic AI look to your prompt," what that does, even with the newest models, is it mostly just swaps one default style for another.
+[07:37] So, with Claude, you still get those cream backgrounds and the italic headline words because that is what Opus defaults to.
+[07:44] What works then is naming the exact patterns that you don't want, like if you don't want those green backgrounds, if you don't want those italic accents, then you would need to declare that.
+[07:53] Or even better, you can give it your design system, which is just a set of instructions or components or even color palettes that your agent can copy and reference.
+[08:02] Number nine is taking the first draft.
+[08:04] A first draft is Claude's safest, most average guess.
+[08:08] So, for anything that matters, try and ask for three independent versions, then just ask your agent to grade each one against your goal or intent and tell you which is strongest and why.
+[08:19] For a lot of creative work, this works quite well.
+[08:21] Personally, I have this skill which I call burst, which I use whenever I want fresh ideas that I can just filter later on.
+[08:28] Just know that every extra version, of course, would cost you usage.
+[08:31] So, it's great for writing like hooks, titles, and emails, but doing multiple bursts or multiple versions for a big project is probably going to drain your usage.
+[08:40] Number 10 is drip feeding follow-ups.
+[08:43] A mistake some people make is that they send, let's say, half a prompt, then Claude starts writing, you send a follow-up that you actually want to make it shorter, then you actually realize that apart from writing for your
+[08:53] newsletter, you also want to write for LinkedIn.
+[08:55] And with multiple follow-ups, what happens here is that Claude is reading the entire conversation again, and so it's costing you tokens as it does.
+[09:03] Apart from that, it also writes its whole answers again.
+[09:06] So, if you send five prompts in succession, that means you will get five full answers, and the result drifts only a little every time.
+[09:13] So, a good habit to have is to write it once properly with everything in one message if you can.
+[09:19] And if you spot a mistake in your prompt, see if you can rewind to that point and resend it before defaulting to sending more short prompts in succession.
+[09:27] Number 11 is using some old-school prompting techniques on the newer models.
+[09:31] For example, lines like think carefully step by step or don't be lazy or you must always do this in all capital letters.
+[09:38] Those were actually written or may have been effective for older models that needed a little bit more of pushing.
+[09:44] Now, the newer models follow instructions more closely if you give them.
+[09:48] So, shouting doesn't really do anything.
+[09:50] Anthropic found that removing a think carefully line made replies start sooner with no clear drop in quality.
+[09:57] So, just be clear in your instructions and let the effort setting be the one to control how hard your agent thinks.
+[10:03] You can even ask Claude to go through your Claude.md and your skills and find the lines that were written for older models.
+[10:10] And you can get started with that by using this prompt.
+[10:12] Okay, so those are the easy ones and if you just fix those, you'd be ahead already of most people using Claude.
+[10:18] Now, let's get into the intermediate ones, which are the mistakes that even regular Claude code users make every day.
+[10:24] And by the way, if you want to learn how to build and sell AI systems that businesses actually pay for, then that's pretty much all we do over at the Robo Nuggets community.
+[10:31] Where not only do you get access to the Claude Living Masterclass, which we update and takes you from zero to mastery with the latest on AI, but you also get access to our agents as a service course, which
+[10:41] walks you through how to actually get paid for all these AI skills that you are learning.
+[10:45] You also get to be part of a genuinely great community of AI builders.
+[10:49] In fact, you can see just some of the recent wins our members are getting from the program right here.
+[10:53] So, if you want to start earning from AI, then check that just in the pinned comment below.
+[10:56] Now, back to the video.
+[10:57] Number 12 is walking away mid-session.
+[11:00] Let's say you have a big conversation already with Claude and you leave it open over lunch, come back and just type continue.
+[11:07] Well, if you remember, Claude keeps your chat in a cache, which is basically a discount for the conversations that it has to reread.
+[11:13] Well, on a subscription, that prompt cache goes cold after about an hour.
+[11:17] Then your first message back after your lunch break would reread the whole thing at full price.
+[11:22] In one example in a big session where the conversation was already about 400,000 words long, it only cost 15 cents to continue the conversation warm with a cache and almost $12 if it's cold.
+[11:33] So, once you come back from your break, just type {slash} clear if you're already done with a conversation or if saving tokens is your priority, you can use compact while it's still warm so that when you prompt it
+[11:44] next, it doesn't cost you as much.
+[11:46] And if you really need to keep your conversation warm, a trick that a lot of power users use is to have Claude ping itself with something like a {slash} loop command, let's say every 30 minutes, so that each
+[11:57] ping would keep your cash warm.
+[11:59] On a big session that cost only around 10 cents.
+[12:01] That way the moment you get back, that whole conversation is still ready for you for your next prompt.
+[12:06] Number 13 is stuffing your Claude.md.
+[12:08] Claude.md, which is the instruction file that Claude reads at the start of every session, some people actually store every rule, every preference, your whole life story into the Claude.md until it's hundreds, sometimes thousands of lines long.
+[12:21] Now, that file loads on every single message, so it costs usage every turn.
+[12:26] And Entropic says that when it gets too long, Claude also starts ignoring parts of it because the important rules get lost in all the noise.
+[12:33] So, best practice, keep it under 200 lines and treat it like a router.
+[12:37] So, instead of holding everything, it just points Claude to where things live, like your skills, your docs, your project folders, so Claude would only pull in the detail when it actually needs it.
+[12:46] Number 14 is turning off all safety.
+[12:49] Now, permission prompts can get annoying, so people start sometimes using Claude code with the permissions skipped or click yes to everything without reading.
+[12:58] Now, this one's a bit serious because a few days ago, someone reported that Claude deleted his entire C drive while running in that mode.
+[13:05] He got most of it back from backups, fortunately, but there have been at least four similar reports from Windows users since September.
+[13:11] So, use auto mode instead where a second model can check each action and also block the risky ones.
+[13:17] And for extra protection, you can add a guard.
+[13:20] DCG, which is short for destructive command guard, is a free open source add-on that blocks dangerous commands like deleting a folder or a force push, before they run.
+[13:30] And also Blast Rages, which is this new mod from Anthropic themselves, shows you exactly which files a command would delete with a proceed and a cancel button, so that you can manually trigger it before Claude automatically deletes them.
+[13:42] Number 15 is letting Claude edit important files with no backup.
+[13:45] Because of the way that AI agents work, there's no real undo button for a lot of what Claude does to your files.
+[13:52] And so for very important files, what you need to do is to make a dated backup first.
+[13:56] Just ask Claude to copy the folder with today's date before any big change.
+[14:00] And if you're a bit more advanced, you can ask Claude to set up this tool called Git.
+[14:04] Think of it as a save button for your whole project, where every time you save, it keeps a snapshot, and you can jump back to any snapshot later on.
+[14:12] Then you can experiment more freely, because you can always roll things back.
+[14:16] Number 16 is having everything connected all the time.
+[14:19] If you use your agents with Gmail, Notion, Google Drive, Slack, plus five other MCP connector servers, which are basically these add-ons that Claude can use to plug into other apps.
+[14:29] If you leave all of those switched on for every chat, it may be draining your usage, and is also a bit riskier because of more access that your agents have, probably more than they should.
+[14:38] Now, Claude Code is a bit smarter about this now, and only loads a tool's full details when it needs it, but every connection, every MCP server, still adds a list of tools to every chat, so they would still
+[14:49] eat into your usage limits.
+[14:51] So every so often, have Claude audit them.
+[14:53] I'll put this prompt on screen where you can just have it go through your MCP and tell you which ones you actually use in the last 2 weeks, what each one cost you, and which ones have a command
+[15:03] line tool that it could use instead.
+[15:05] And that last part matters a lot, by the way, because a CLI, a command line interface, usually beats an MCP on being cheaper and faster.
+[15:13] Because a CLI is just a way to control an app just by typing text.
+[15:17] And guess who's really good at text?
+[15:18] Is all the LLM AI models.
+[15:20] So Claude already knows how to use most of these CLIs.
+[15:23] They cost nothing until they run, and Claude can trim the results before they fill up your chat.
+[15:28] Number 17 is infinite exploration.
+[15:30] Like having Claude look into why sales dropped or going through all of your client folders without limit in the same session you're working in.
+[15:38] What happens there is that Claude reads hundreds of files, and every one of them lands in your main chat before the real work even start.
+[15:44] Anthropic calls this the infinite exploration.
+[15:47] So, a better way is to either scope it, like let's say you only want the Q2 reports in the sales folder, or say to use a sub-agent to investigate this.
+[15:55] If you're new, a sub-agent is a helper that Claude can spawn that can read everything in its own separate window and only hands back a summary.
+[16:02] It also has that added benefit, of course, that you can run it on a lower-cost model, like Sonnet or Haiku, to do the grunt work for you.
+[16:09] Number 18 is never checking usage.
+[16:12] If you keep hitting your limits and you have no idea what ate it, you can just type {slash} usage.
+[16:17] That would break down your usage by skill, by sub-agent, plug-in, and MCP server, and it even flags any habit that's taking 10% or more nowadays.
+[16:26] If you want to see it all the time, you can also build a mod that shows it for you automatically.
+[16:31] Here's one prompt that I used to get you started.
+[16:34] Basically, it just asks to show your 5-hour and weekly usage beside your prompt box, and also warns you when a session is getting expensive.
+[16:41] Number 19 is skipping alignment.
+[16:43] For a larger build, like let's say you're developing a client portal or an onboarding system, you write one paragraph and you hope that Claude can fill in the gaps.
+[16:51] It will fill them, of course, but with guesses, and you find out 3 hours later that it gets wrong on the things that mattered most.
+[16:57] So, what you should do is let Claude interview you first.
+[17:00] I do this before almost every big task.
+[17:02] The skill I use is called align, and what it does is just ask me a few numbered questions that I can answer just by typing the number and my choice.
+[17:10] Because most of the time with the newer models, I find that they already get the sense of my intention, and we just need to confirm alignment before we get to building.
+[17:18] All right, now the advanced ones.
+[17:20] These are the mistakes that I see even some power users make.
+[17:23] And as always, if any of these get a bit too technical, you can just grab that PDF in the description and have Claude explain these simply to fit your setup.
+[17:31] Number 20 is losing your old chats.
+[17:33] If you go looking for a session from last month to pick up where you left off and you find that it's gone, that is because Claude code deletes your local session history after 30 days by default.
+[17:45] So, if you want to keep them for longer, you can ask Claude to set your cleanup period days to 365 in your settings file so that old sessions don't get deleted within a year.
+[17:54] And you can of course adjust this if you want it shorter or even longer.
+[17:57] It obviously won't bring back the ones that are already gone, but from then on a whole year's sessions stays there ready to pick up again using {slash} resume.
+[18:05] Number 21 is installing mods and plugins blind.
+[18:08] If you see something cool on X and you install it straight away, that's actually very risky behavior because a plugin can run scripts on your machine and many of them add tokens to every single message, too.
+[18:18] Stack 10 of them and you pay for all 10 on every turn whether you use them or not.
+[18:23] So, have a process for a quick assessment first.
+[18:25] You can check the plugin's details for what it installs and what it costs you every turn or even better, let Claude do it.
+[18:31] I have a skill called personalize where I just paste in the repo or the plugin that I plan to install, check whether it fits my setup, whether it's safe, and whether I need it at all.
+[18:40] Number 22 is not setting a direction for compaction.
+[18:44] When your chat gets full, Claude summarizes it on its own, often right in the middle of a task.
+[18:49] And Anthropic's own engineer says that the model is actually at its least intelligent point when it's compacting, so the details usually get dropped.
+[18:57] So, compact it yourself whenever you can at a natural break and tell it what to keep.
+[19:01] Like you can say {slash} compact and make sure to keep the client brief and the final price list, for example.
+[19:06] Or even better, you can add compact instructions to your Claude.md so every compaction keeps what you actually care about.
+[19:14] Number 22 is not having a model routing system.
+[19:17] Using the biggest model for everything, even renames of files or quick emails, is actually quite wasteful.
+[19:23] Anthropic says that surprise bills usually trace back to this one habit, and big models love to go big.
+[19:29] One user says that Fable spun up 10 side agents on an open-ended task and emptied his 5-hour limit in just 5 minutes.
+[19:36] The basic fix, of course, is Sonnet for most defined work and Opus for more exploratory work.
+[19:41] But, the advanced fix is to let something route it for you.
+[19:44] I used the decision model, the new one called Jev, which reads every prompt I send and decides which model should handle it.
+[19:50] Over the last 3 weeks, amongst all of my prompts, nine out of 10 were actually small enough and were routed for Sonnet or Haiku.
+[19:57] All that routing cost me only 13 cents, and Haiku cost about 40 times less than Opus.
+[20:02] So, every small job that goes there costed me a tiny fraction of what Opus would have charged.
+[20:07] So, that is all 23 mistakes.
+[20:09] As usual, thanks for watching till the end, and if that was useful, then consider tapping subscribe below, because that just helps me a lot put out more educational stuff like this that helps you use AI better for your
+[20:18] business.
+[20:19] I'll see you all next time.
+[20:20] Cheers.
+[20:24] >>

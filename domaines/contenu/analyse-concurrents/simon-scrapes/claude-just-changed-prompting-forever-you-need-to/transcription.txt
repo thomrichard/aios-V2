@@ -1,0 +1,242 @@
+[00:00] Everything you were taught about prompting was to be specific, spell out the steps, and tell it to double-check its own work.
+[00:06] But on Fable 5 and Opus 5, every one of those now makes the output worse.
+[00:12] And that's Anthropic saying it, not me.
+[00:14] So, take a look at this prompt.
+[00:15] It actually does all three of those things.
+[00:17] It breaks seven of Anthropic's new rules, and by the end of the video, we'll have fixed this prompt live so that you can actually apply the same learnings to all of your prompts and your skills that were written
+[00:28] before today.
+[00:29] We'll also talk about how these rules actually apply to OpenAI models, too, like GPT's new Astra 6.
+[00:36] So, firstly, you spell out the steps in the prompt because 6 months ago, the model would actually skip half of what it was supposed to do unless you were really, really thorough.
+[00:44] But Anthropic now say the total opposite.
+[00:47] So, we've got all six steps here spelled out for the model, but actually that's now the wrong thing to do.
+[00:52] So, the Opus 5 guide, and I'm reading it verbatim, it performs best when given the complete task specification up front and left to run.
+[00:59] And then the Fable 5 prompting guide goes even further.
+[01:02] It says skills written for prior models are often too prescriptive for Claude Fable 5, and as a result, can degrade output quality.
+[01:10] And the advice is to basically review whatever you've written before Fable 5 came out, and then remove the older instructions, the ones that are going to degrade the quality.
+[01:17] So, in plain English, these models have been trained on doing an entire job end-to-end.
+[01:22] So, when you hand them a list of steps, you're not actually helping.
+[01:25] You're narrowing them down to your version of what you think the job is.
+[01:28] Your version is actually potentially worse than what they'd have worked out from if you just gave them those broader instructions, like the goal to start with.
+[01:36] So, the steps then are basically to open the client spreadsheet, work out this week's leads, spend, and cost per lead, compare it to last week, write a summary, draft an email.
+[01:44] You see, they're very, very prescriptive.
+[01:46] And then it says, "If any of the numbers look wrong, fix them in the spreadsheet." We can actually replace this entire step-by-step with just a broader goal.
+[01:53] So, using this week's tracker, "Tell me how leads, spend, and cost per lead" So, we're giving it a metric on how to define success here have moved against last week and then the outcome is drafting the client email
+[02:03] so we can get rid of those steps.
+[02:04] It'll be able to go and open the sheet, it'll do the maths and it will do the comparisons to achieve that goal.
+[02:09] So it's smart enough now to be able to go and achieve that by itself.
+[02:12] The one caveat I'm going to add here is that if the task really is a few minute thing then you're actually advised by Anthropic themselves to drop the effort setting to low or medium.
+[02:21] So down here we can choose the effort and we can actually by default it'll be on medium but we could drop it to low if it's a simple task like this.
+[02:27] And Anthropic themselves say that Fable 5.1 on low is still actually competitive with the older Opus models in terms of cost per task.
+[02:35] So actually you can use a more powerful model with a lower effort level and actually then reduce the cost per task.
+[02:40] Now the second rule is actually that something is missing from this original prompt.
+[02:45] So around 3 to 6 months ago you were told to keep prompts really tight, leave out any extra detail like the the back story.
+[02:52] So nowhere in that prompt does it say who the client is, what they pay us for or what they'll do with the email.
+[02:57] And that's the why.
+[02:58] So this is exactly the kind of stuff you tell if you were teaching a human why you were doing this so that they could actually understand intent and perform better as a result.
+[03:06] And the newer models like the Fable 5 guide even has a section called give the reason not only the request.
+[03:11] And they basically say that the model now performs better when it understands the intent.
+[03:15] And the reason that matters is that on any real task there are like 50 small decisions that you probably don't specify.
+[03:21] Let's take metrics for example.
+[03:23] So is a 4% drop in our leads bad news or is it just noise for this data?
+[03:28] Is that like a fluctuation that we expect happen?
+[03:30] Or in the email should they lead with spend or cost per lead?
+[03:34] So if it knows what the client is actually judged on and the reason for those things in the email it can actually make those calls the same way that you would.
+[03:41] And to make it even easier they actually give us a template for this which is here.
+[03:44] I'm working on then you specify the larger task that you're working on.
+[03:47] So for us it'll be tracking the status of our clients leads and their projects.
+[03:51] We'd say exactly who it's for.
+[03:52] We then say what the output would actually enable.
+[03:55] So, this output would enable them to see their cost per lead and whether that is increasing or decreasing so they can show this to their board or make decisions based on that request.
+[04:03] So, it's giving that why.
+[04:04] And then with that in mind, we then give it the task.
+[04:06] So, task would be, you know, using this week's tracker, tell me how leads, spend, and cost per lead moved against last week and draft the client email.
+[04:13] So, let's make it tangible with a real example here.
+[04:15] Think of this top section as the reasoning is the context you give before you ask for the definition of done on the task.
+[04:22] And then down here, with that in mind, with the request, it's asking for the exact thing we want to see on the output.
+[04:28] So, as a working example, I'm working on a weekly report for a website called rankspot.ai.
+[04:33] We're basically trying to improve their visibility inside ChatGPT.
+[04:37] And to give some more context to the prompt, I say, "They pay us to run their SEO and AI search visibility, and this is how they judge us." So, I'm giving the reasoning up front.
+[04:46] They judge us on how many leads they're going to get through ChatGPT, Claude, and other AI search engines, because that's the number that they're actually trying to improve.
+[04:53] So, I give the reasoning.
+[04:54] Their North Star metric is how many leads they're getting through those different search channels.
+[04:58] Now, they need to know, in one read of the email, whether this week was better or worse and why.
+[05:03] So, it's a summary email.
+[05:04] So, that's all the context.
+[05:06] With that in mind, I'm going to give them the task, which is, "Tell me how number of leads," so we're giving it a specific metric, "and percentage share of answers for the prompts that they actually want to rank
+[05:15] for changed over the last week and month." So, I'm very specific in the definition of done.
+[05:20] And then draft the email to them.
+[05:21] So, you can see that we've given them the reasoning and the broader goal, but not specified the exact steps they need to take.
+[05:26] So, we've got the exact request and we've got the reason why we're doing that to give it that intent.
+[05:31] The third missing thing then is when to stop actually working.
+[05:35] So, if you look at the older models, think Sonnet and some of the earlier Opus models, they actually did too little work and we had to prompt them to continue working and keep reprompting them.
+[05:44] But, the Claude 5 models actually do too much work.
+[05:47] So, you might have noticed how you've asked for an answer to a question and Claude by default will go and rework the entire output and then will also produce a dashboard that you didn't ask for or a chart
+[05:56] that you didn't ask for or find a bunch of links or do some deep research.
+[05:59] And the Opus 5 guide says that by default it expands the scope and adds steps you didn't ask for.
+[06:06] So, the fix for both of these is actually telling it what done looks like and what length the task needs.
+[06:12] And this is in the task scope and over verification stage.
+[06:14] You can see Claude Opus 5 can expand the scope of a task adding steps that weren't requested or applying its own judgment.
+[06:20] So, for narrow task constrain scope explicitly.
+[06:23] So, we might literally say, "What does done look like?" So, for this example it would be a client email drafted in my mailbox under 300 words leading with the total number of leads for the week and the change
+[06:34] in the percentage share of AI visibility.
+[06:37] So, the percentage share of answers and how that's changed in the prompts that they want to rank for.
+[06:41] But also we'd want to deliver the top three reasons that those numbers have shifted or the top three reasons it thinks those numbers have shifted in a table.
+[06:48] So, we're very explicit with what the definition of done looks like for these the very defined tasks.
+[06:53] And this is all good and well for small very definable tasks like this one.
+[06:57] But what do you actually do when you've got a larger build?
+[06:59] How do you prompt that correctly?
+[07:01] How do you give that definition of done when you don't entirely know the definition of done from the start?
+[07:05] So, Anthropic's answer here isn't try and write a better prompt a more defined prompt if you don't exactly know what's going in it.
+[07:11] It's to actually have Claude interview you and write the brief itself.
+[07:14] So, this is from the Claude code best practices guide.
+[07:17] Let Claude interview you.
+[07:18] So, for larger features have Claude interview you first.
+[07:21] Start with a minimal prompt so something that we've already defined and ask Claude to interview you using the ask user questions tool.
+[07:27] And this is something you've seen again and again the tool that will pop up when it doesn't have enough information or when you're in planning mode and gives you a selection of answers and the ability to type in
+[07:34] any prompt.
+[07:35] So, tell it you want to do this thing which might be a SAS build or an application build or something larger.
+[07:40] Interview me in detail using the ask user questions tool.
+[07:43] Ask about the goal, who it's for, what done looks like, edge cases and trade-offs.
+[07:48] Dig into the parts I haven't considered.
+[07:50] So, you're what you're trying to do is get it to actually build out this brief on your behalf that meets those same criteria.
+[07:56] It gives the intent, the reason why, also gives the definition of done.
+[07:59] And then the output of that is going to be a brief or a prompt that can then start the project and start building out that project.
+[08:04] And that's how to do it for larger builds.
+[08:06] So, everything we've covered so far was all about what the prompt was missing.
+[08:10] Now, let's talk about what the prompt had in it that's actually going to cause you extra headaches that you can completely remove from your old prompts.
+[08:16] And you're probably going to recognize some of these patterns from Anthropic's old prompting guides that are now completely redundant and are actually causing Claude to degrade your outputs.
+[08:24] But, before we move on to that, if you've learned something so far, then do me a favor and hit subscribe and drop a comment below because it will massively help the reach of this video.
+[08:33] Now, remember the days when we were told that writing things like important or always or never was the only way to get a model to listen, and we were told to capitalize that as well.
+[08:43] Well, now Anthropic's best practices say that these models are so responsive that those kind of words now over trigger it.
+[08:49] And their fix is swapping rules like critical, you must use this tool when to something as straightforward as use this tool when.
+[08:56] Because then it's not over triggering Claude.
+[08:58] It's also not telling it what not to do, which is part of the prompting best practices now, but it's telling it exactly what to do.
+[09:04] So, use this tool when is now as powerful and doesn't over trigger Claude versus something like this, critical, you must use this tool always or etc.
+[09:12] etc.
+[09:13] So, we just use something as simple as use this tool when.
+[09:15] And this is a big reason of exactly how Anthropic cut over 80% of Claude code's own system prompts with the same way.
+[09:21] So, they got rid of all the hard constraints, but they added some of that reasoning and that judgment in.
+[09:26] And then they also added instructions into the system prompt of models like Fable 5.1 to use fewer bullets, less bold, fewer tables than earlier models.
+[09:35] So, writing things like don't use bullets or never use bullets is now actually giving it a surplus information that's unnecessary and a waste of your own tokens, not to mention it adds another constraint that's kind of potentially fighting
+[09:46] with the system prompt of those models.
+[09:47] So, in short, replace the rule with the behavior that you actually want, not the behavior you don't want, and the reason, the justification for that behavior.
+[09:56] So, you can see the justification or the intent behind it is super important now in Claude 5 model prompting.
+[10:02] And whilst we're talking about prompts in a co-work environment, it's also important to stress that these lines aren't just in your prompts, they're in your Claude 3 MD, and every skill you wrote before this summer.
+[10:13] So, this is the first takeaway, right?
+[10:15] Every skill that you've written before today, before these Claude 3 models, need to be reviewed and rewritten.
+[10:21] So, I've actually built a rewrite skill.
+[10:22] It's going to read your existing skills, it's going to read your existing prompts, and what it's going to do is keep the goal, keep who it's for, keep what done looks like, but it's also going to strip out
+[10:31] the constraints that are no longer relevant.
+[10:33] So, every time it mentions never or always or must, it's going to turn it into a positive instruction with a reason or intent of why we actually do that.
+[10:40] It's going to strip out all the step lists and turn it into a defined goal in this format that we talked about.
+[10:45] And then what it's going to do is show you exactly what's changed.
+[10:48] So, before it makes the changes, you're able to actually go through and approve that.
+[10:51] And I'd highly recommend grabbing that skill for free down in the description, and then running it on a couple of your most used skills first.
+[10:57] Now, let's talk about the two lines that I highly recommended 3 months ago, but are now totally not best practice and are actually ruining your outputs, too.
+[11:05] So, there were certain rituals that we used to add to prompts like walk me through your reasoning at each step or double-check every number before finishing.
+[11:14] And we've added those, right?
+[11:15] because every prompting guide early 2026 told you to add both of those.
+[11:19] But on Claude 5 models, both are going to cost you money and time, and one can even get Fable 5 to refuse the task itself.
+[11:26] So, firstly, on thinking, Opus 5 thinks before it answers by default.
+[11:31] So, Anthropic say that we can leave on the thinking and control the cost of the thinking using this effort scale.
+[11:37] So, if you want to reduce the cost, we leave on thinking and we turn it to low, for example.
+[11:42] So, saying something like "Think carefully." asks for something it already does and therefore it's again going to over-trigger it.
+[11:48] It's going to trigger another set of reasoning, another set of thinking on top of what it's already doing by default.
+[11:53] And then on Fable 5, it says "Don't instruct Claude to reproduce its reasoning in the response." And that's because it can actually trigger a refusal in itself.
+[12:01] So, by actually asking for the reasoning, you can cause Fable 5 to actually not do the task in the first place.
+[12:06] And that's because it has a safeguard built in against people trying to extract its thinking and actually reverse-engineer the model itself.
+[12:12] And a line like "Walk me through your reasoning at each step." looks like an attempt to extract that reasoning.
+[12:16] So, Anthropic specifically tell you to search for your skills that have that line or lines of that effect and take them out of it.
+[12:22] And I know this is one that I've said in previous videos that you should do.
+[12:25] It's in my skills and on these models it's going to cost you more money for a reduced output effectively.
+[12:31] And then on something like "Double-check every number against the spreadsheet before finishing." the Opus 5 guide says the model already checks its own work.
+[12:37] So, double-check is actually going to buy a second pass on the same thing it's already doing.
+[12:42] I.e., it's going to cost you more money to verify something that's already been done.
+[12:46] And it's the same as when you say something like "Use a sub-agent to verify this." And that rewrite scale that I talked about earlier that you can get below in the description is also going to remove these lines,
+[12:55] too.
+[12:55] So, I explicitly found 11 instances in my own files of this.
+[12:59] Now, for number six, it's all about telling it whether you want an answer or an action.
+[13:04] So, the old models waited to be told what actions to take, but the Claude 5 models are much quicker to act now.
+[13:10] And it might feel quite familiar.
+[13:11] We touched on it earlier.
+[13:12] You ask why a number looks off and by the time you've read its answer, it's gone ahead and edited the sheet, edited the number, it's drafted an email to the client, it's made a backup, it's made a dashboard.
+[13:21] And this is the rule called state the boundaries.
+[13:23] It says "Claude Fable 5 can occasionally take unrequested actions." And they use the example of drafting an email when none was asked for, or creating backups when you didn't ask for a backup.
+[13:32] So, the solution is to define explicit constraints on what Claude 5 should and should not do.
+[13:37] So, when the user is describing a problem, asking a question, or thinking out loud, rather than requesting a change, the deliverable is your assessment.
+[13:45] So, Claude should come back to you with the assessment of the change, not the change itself.
+[13:48] Then it tells you report your findings and stop.
+[13:50] And this isn't a rule that is specific to weekly reports.
+[13:54] This is more broader.
+[13:55] This is something that you should actually add into your Claude.md or the desktop instructions.
+[13:59] And it even goes further.
+[14:00] Before running a command that changes the system state, then check the evidence actually supports doing that specific action.
+[14:06] So, what we do is literally copy that, and inside our project instructions in the desktop app, we would literally add that paragraph.
+[14:12] Now, it will not take the unrequested actions without first checking with you.
+[14:16] And you can see I already had a words to that effect in here.
+[14:19] When someone asked a question about a draft, answer the question.
+[14:22] Rewrite only when asked.
+[14:23] And that's because whenever I would ask a question about a draft post, it would go ahead and just assume that that was the rewrite action and take it on my behalf.
+[14:31] The only exception here are our scheduled tasks.
+[14:33] So, they're designed to run while you're not there.
+[14:35] So, Anthropic actually gives them the opposite paragraph in their system prompt.
+[14:38] They want them to operate autonomously and proceed on those reversible actions.
+[14:42] So, with all that advice in mind then, we can actually get rid of the entire section below that, and we're left with a simple prompt with effectively two different sections.
+[14:51] And we've also added those instructions just then to our global instructions.
+[14:55] And the last bit that's going to dramatically improve the quality of your output to your prompt is all about fixing the voice in one place.
+[15:01] So, I spent half my life talking about brand voice because it's so incredibly important that we aren't outputting verbose, overly long, overly explained things that don't sound like us or sound like AI stuff.
+[15:12] We've all experienced somebody using AI, sending it to us, and it's complete AI stuff.
+[15:17] And we know it because we can read it in the response right away.
+[15:20] And Claude even say themselves that Opus 5 is built to write long outputs.
+[15:24] Whereas Fable 5.1 on the other hand, you might have noticed writes clearer and more clever.
+[15:30] So, Anthropic actually call that second one managed prose, and it's all about the writing density.
+[15:34] So, it says Fable 5.1's writing is generally a step up from earlier Claude models with fewer stock phrases and less unexplained jargon.
+[15:41] But in some cases, the prose is denser than Claude Fable 5's.
+[15:45] Sentences are longer and there are fewer paragraph breaks.
+[15:47] And they summed it up quite well here.
+[15:49] This is why managed prose irritates.
+[15:51] It makes the reader work harder so the writer can perform.
+[15:54] So, whenever you're reading overly verbose responses, it's painful to read because you have to read it three or four times, and it's also just incredibly long.
+[16:01] But instead of adding this big paragraph, I prefer just to add this, the short version to again my project instruction.
+[16:06] Please remove all managed prose.
+[16:08] So, that's how it treats it.
+[16:09] It's managed prose.
+[16:10] So, again, we'll jump in here, and we'll just add that instruction.
+[16:12] Please remove all managed prose.
+[16:14] And you can add that to your Claude.md as well in Claude code.
+[16:16] So, we want to put that instruction in one place that's going to load every single time.
+[16:20] And we can basically go back to the original prompt and remove things that say do not use marketing jargon or any sentences that talk about sentence structure or anything like that.
+[16:28] We just want the outputs to be clear and concise, or at least I do.
+[16:30] So, with all those things being said then, we can actually remove this entire section from that.
+[16:35] And what that leaves us with is a set of instructions that work well inside the Claude.md or the system prompt or the user prompt, as well as the original points around making sure that we give enough justification, the
+[16:45] reason why we're performing certain tasks, as well as the definition of done.
+[16:48] So, compare this to what we started with.
+[16:51] It's a lot less prescriptive, but it gives smarter models a way to interpret and actually work with that version that we've given it.
+[16:57] Because we've embedded the intent inside that.
+[16:59] And not to mention, we've also just simplified massively the number of constraints.
+[17:02] That's easier for us to write and easier for us to actually maintain.
+[17:06] Now, this is all good and well for Claude, but OpenAI recently published their guide also for GPT-6 Astra at the same time.
+[17:13] So, this is how they compare.
+[17:15] So, on the big things largely, the most important thing for you is that they actually agree.
+[17:19] Astra also over-tests small changes the way that Opus 5 over-checks things.
+[17:24] If we state things that are already true in the system prompt, it will over-check and use more tokens.
+[17:28] Both prompts want the goal, as well as the intent or the justification of why we're trying to achieve the goal, not the prescriptive steps.
+[17:35] So, both want just plain paragraphs like these two here.
+[17:38] Astra 6, on the other hand, does not have a bias towards action.
+[17:41] So, if you want it to actually take actions much more quickly like Claude does, then you need to actually specify that I want a bias towards action.
+[17:48] Whereas, as you've seen, Claude 5 models are going to overdo that, and unless you're really prescriptive about the outputs, they will continue to take actions that they think and create new actions on the back of that.
+[17:58] And interestingly enough, OpenAI also shipped a like block list of words.
+[18:02] So, things like delve, leverage, and certain phrases they're actually on a never list inside OpenAI's system prompt, too.
+[18:09] So, all those humanizer skills that we had before are becoming more and more redundant as the models get better.
+[18:13] So, on the left then, we have a bunch of words, really prescriptive instructions.
+[18:18] On the right, we have the justification, the definition of done, and two plain text paragraphs.
+[18:22] But, when you read these side by side, this one tells you a lot more.
+[18:25] It's exactly what you'd hand to a colleague if you wanted them to actually perform the task.
+[18:29] It's the reason why we're doing something rather than a prescriptive set of tasks that leaves zero ambiguity there.
+[18:34] And actually, in our case, ambiguity is quite good because we can get it to do more things with fewer words and therefore less cost.
+[18:41] So, the Anthropic check that they put in their best practice guide is, can you show your prompt to a colleague with zero contacts?
+[18:47] And if they'd be confused, then Claude will be, too.
+[18:50] So, my task for you is this week, just run that rewrite scale on your Claude.md and your three most used skills, and you'll drastically improve the performance of your outputs with the Claude 5 models.
+[19:00] Thanks for watching, and if you want more content like this, then check out the school link in the description below.
+[19:05] Now, in the next video, I'm going to show you 37 tricks to upgrade your Claude code setup.
+[19:10] See you there.

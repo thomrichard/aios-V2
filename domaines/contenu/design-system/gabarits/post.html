@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr" data-mode="papier">
+<head>
+<meta charset="utf-8">
+<title>Gabarit · post carré</title>
+<!-- 1080 × 1080, pour LinkedIn, Skool ou un carrousel. Champs : mode, surtitre, titre, texte, signature, auteur. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../jetons.css">
+<link rel="stylesheet" href="gabarits.css">
+<style>
+.cadre{width:1080px;height:1080px;background:radial-gradient(60% 50% at 88% 6%,rgba(50,122,96,.55),transparent 70%),radial-gradient(40% 36% at 0% 100%,rgba(217,164,65,.16),transparent 70%),var(--fond)}
+[data-mode="papier"] .cadre{background:radial-gradient(60% 50% at 88% 6%,var(--pin-100),transparent 70%),radial-gradient(40% 36% at 0% 100%,var(--ambre-100),transparent 70%),var(--fond)}
+.halo{width:560px;right:-20px;top:-30px}
+.vk{width:700px;right:-170px;top:-130px}
+.contenu{left:88px;right:88px;top:88px;bottom:80px;display:flex;flex-direction:column;z-index:5}
+.pilule{align-self:flex-start;font-size:28px}
+.titre{margin-top:auto;font-size:96px;letter-spacing:-.045em;line-height:.98}
+.texte{margin:36px 0 0;max-width:820px;font-size:34px;line-height:1.4;color:var(--texte-doux)}
+.pied{display:flex;justify-content:space-between;align-items:center;margin-top:60px;padding-top:30px;border-top:1px solid var(--verre-bord);font-size:28px;font-weight:600}
+.signature{display:flex;align-items:center;gap:14px}
+.signature svg{width:42px;color:var(--texte)}
+.auteur{color:var(--texte-doux);font-weight:500}
+</style>
+</head>
+<body>
+<div class="cadre">
+  <svg class="halo" viewBox="0 0 1240 1143.15"><use href="#valknut"/></svg>
+  <svg class="vk" viewBox="0 0 1240 1143.15"><use href="#valknut-lumiere"/></svg>
+  <div class="contenu">
+    <span class="pilule" data-champ="surtitre">Économiser tes tokens</span>
+    <h1 class="titre" data-champ="titre">Plus la discussion est longue, plus <span class="fort">chaque message pèse.</span></h1>
+    <p class="texte" data-champ="texte">Ce que Claude relit, ce qu'il lit de neuf et ce qu'il écrit n'ont pas le même prix. La leçon complète est dans le Club.</p>
+    <div class="pied">
+      <span class="signature"><svg viewBox="0 0 1240 1143.15"><use href="#valknut"/></svg><span data-champ="signature">Club SMART</span></span>
+      <span class="auteur" data-champ="auteur">Thomas Richard</span>
+    </div>
+  </div>
+  <span class="grain"></span>
+</div>
+<script src="commun.js"></script>
+</body>
+</html>

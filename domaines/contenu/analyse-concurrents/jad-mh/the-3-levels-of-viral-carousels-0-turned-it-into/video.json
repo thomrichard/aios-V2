@@ -1,0 +1,143 @@
+{
+ "id": "A-ZQemIfsF4",
+ "url": "https://www.youtube.com/watch?v=A-ZQemIfsF4",
+ "chaine": "jad-mh",
+ "titre": "The 3 Levels Of Viral Carousels 0$ (Turned it into a skill)",
+ "titre_ytdlp": "The 3 Levels Of Viral Carousels 0$ (Turned it into a skill)",
+ "publie": "2026-10-13T14:21:38Z",
+ "duree_s": 763,
+ "collecte_le": "2026-10-25T04:50:09.480024+00:00",
+ "api": {
+  "kind": "youtube#video",
+  "etag": "UytEsvu1IXCJFspodr9EIZ-jd_c",
+  "id": "A-ZQemIfsF4",
+  "snippet": {
+   "publishedAt": "2026-10-13T14:21:38Z",
+   "channelId": "UCkbjWQ7kLFNRY_RiJbqVWRg",
+   "title": "The 3 Levels Of Viral Carousels 0$ (Turned it into a skill)",
+   "description": "Higgsfield Promo: https://higgsfield.ai/katana?utm_source=yt&utm_medium=social&utm_category=gr&utm_campaign=Katana_inside_Claude_YT&utm_creator=jadm.h&utm_content_type=de&utm_post=xUOkwW&invite_code=katana-inside-claude-yt-jadm-h-xUOkwW\n\nThis is a $0 carousel. This is a $100 carousel. And this is a $1,000 carousel. The crazy part: the $100 one cost me $0. No API, no credits. And the $1,000 one isn't really a carousel, it's a system businesses pay for. Here's how each one is made, what it really costs, and which one you should be making 👇\n\n🎁 Everything for the $100 carousel is free in my Skool: the skill, the style sheets and the exact prompt I used in this video\n👉 https://www.skool.com/nextphase-5790\nStuck installing a skill? We now run weekly calls in the Skool to help you set it up.\n\n📊 Why carousels?\n• Buffer compared every format on Instagram: carousels got a 6.9% engagement rate, Reels got 3.3%. More than double.\n• Reels still get a bit more reach, but carousels are what people stop and interact with.\n• If someone scrolls past your carousel, Instagram can show it to them again later, starting on slide 2. A Reel doesn't get that second chance.\n\n💸 The price tag is what it looks like, not what you pay.\n\n🟢 $0: Canva\nPick a template, change the color, type, export. Fast, free, and fine for a quick post. The problem: the template made every decision for you, so your post looks like 50 others. Typing \"make it modern\" into ChatGPT is worse: purple gradients, glowing brains, a new font on every slide.\n\n🔵 $100 (that costs $0)\nWay 1: Muse, Meta's app. Free tier (with a usage limit). Drag in 2 images, paste the prompt, and you can set it to make a new carousel every day. Not in every country yet.\nWay 2: Qwen 3.5 9B from Alibaba, running locally in Ollama on my base MacBook Air (16 GB). About a 7 GB download, it can see images, and nobody counts your tokens.\n\nThe model isn't the secret. What you give it is:\n1. A style sheet: 1 image with the colors (hex codes), the fonts and the rules\n2. An example: a finished carousel in that same style\n3. The prompt: a full page, not 1 line. Research from official sources, a link for every number, show the plan first, and a checklist at the end so it checks its own work\nIt writes the carousel as a web page, so the text is real, sharp and spelled right. Open it in your browser and screenshot each slide.\nTest 1: a 3-slide carousel about Claude Haiku 5.5. Test 2: a carousel built around my own photo.\nThe limits: a 9B model is not Opus. It's slower, and sometimes you have to ask it twice.\n\n🟣 $1,000: motion graphics, as a system\nEvery slide moves, synced to music. It's built for agencies, because a business doesn't want 1 carousel. It wants posts going out every week without touching anything. So you're selling an automation:\n1. Claude Opus 5.5 finds the niche\n2. It finds the ideas that are working in that niche right now\n3. It writes the hook, every slide and the CTA\n4. Higgsfield (connected inside Claude) makes the images with GPT Image 2.5: the product, the scene, or an avatar like Jad-me\n5. It brings it to life: real motion design written in code, not an AI video\n6. Blotato posts it every week\nWhat it costs: a Claude plan, Higgsfield credits and a Blotato plan. It doesn't cost $1,000. That's what you could sell it for.\nMost of the pieces are already in my Skool (the motion carousel skill, the avatar part, the style sheets), and I'm turning the full system into a skill too.\n\n⚡ The Higgsfield offer I mentioned (promo code inside): https://higgsfield.ai/katana?utm_source=yt&utm_medium=social&utm_category=gr&utm_campaign=Katana_inside_Claude_YT&utm_creator=jadm.h&utm_content_type=de&utm_post=xUOkwW&invite_code=katana-inside-claude-yt-jadm-h-xUOkwW\n\n⏱️ Chapters\n0:00 $0 vs $100 vs $1,000 carousels\n1:10 Free in my Skool + weekly calls\n2:31 What the price tag really means\n2:50 The $0 carousel: Canva\n3:53 The $100 carousel for $0: Muse\n4:46 Way 2: Qwen 3.5 on my laptop\n5:44 The 3 things that make it look pro\n7:19 The tests (and the limits)\n8:46 The $1,000 carousel: a motion system\n11:29 What it costs + which one to make\n\n🔗 Sources\nBuffer, best content format by platform: https://buffer.com/resources/data-best-content-format-social-media/\nAdam Mosseri on carousels getting a second chance: https://www.instagram.com/p/DBOeUmTSmIC/\nMeta, introducing Muse: https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/\nMuse free tier and usage limits: https://www.meta.com/help/artificial-intelligence/1303670544995562/\nQwen 3.5 9B on Ollama: https://ollama.com/library/qwen3.5:9b\nBlotato: https://www.blotato.com\n\n📺 Watch next: https://youtu.be/IcMiUHZhVgE\n\n🙏 We just passed 5,600 subscribers. Thank you for all the love in the comments. I'm going to keep giving these skills away.\n\n💬 Which one are you making: $0, $100 or $1,000? Tell me in the comments.\n\n🔔 Subscribe if you want more skills like these. See you in the next one.\n\n#carousel #instagramcarousel #claude",
+   "thumbnails": {
+    "default": {
+     "url": "https://i.ytimg.com/vi/A-ZQemIfsF4/default.jpg",
+     "width": 120,
+     "height": 90
+    },
+    "medium": {
+     "url": "https://i.ytimg.com/vi/A-ZQemIfsF4/mqdefault.jpg",
+     "width": 320,
+     "height": 180
+    },
+    "high": {
+     "url": "https://i.ytimg.com/vi/A-ZQemIfsF4/hqdefault.jpg",
+     "width": 480,
+     "height": 360
+    },
+    "standard": {
+     "url": "https://i.ytimg.com/vi/A-ZQemIfsF4/sddefault.jpg",
+     "width": 640,
+     "height": 480
+    },
+    "maxres": {
+     "url": "https://i.ytimg.com/vi/A-ZQemIfsF4/maxresdefault.jpg",
+     "width": 1280,
+     "height": 720
+    }
+   },
+   "channelTitle": "Jad M.H  | AI Automation",
+   "categoryId": "22",
+   "liveBroadcastContent": "none",
+   "defaultLanguage": "en",
+   "localized": {
+    "title": "The 3 Levels Of Viral Carousels 0$ (Turned it into a skill)",
+    "description": "Higgsfield Promo: https://higgsfield.ai/katana?utm_source=yt&utm_medium=social&utm_category=gr&utm_campaign=Katana_inside_Claude_YT&utm_creator=jadm.h&utm_content_type=de&utm_post=xUOkwW&invite_code=katana-inside-claude-yt-jadm-h-xUOkwW\n\nThis is a $0 carousel. This is a $100 carousel. And this is a $1,000 carousel. The crazy part: the $100 one cost me $0. No API, no credits. And the $1,000 one isn't really a carousel, it's a system businesses pay for. Here's how each one is made, what it really costs, and which one you should be making 👇\n\n🎁 Everything for the $100 carousel is free in my Skool: the skill, the style sheets and the exact prompt I used in this video\n👉 https://www.skool.com/nextphase-5790\nStuck installing a skill? We now run weekly calls in the Skool to help you set it up.\n\n📊 Why carousels?\n• Buffer compared every format on Instagram: carousels got a 6.9% engagement rate, Reels got 3.3%. More than double.\n• Reels still get a bit more reach, but carousels are what people stop and interact with.\n• If someone scrolls past your carousel, Instagram can show it to them again later, starting on slide 2. A Reel doesn't get that second chance.\n\n💸 The price tag is what it looks like, not what you pay.\n\n🟢 $0: Canva\nPick a template, change the color, type, export. Fast, free, and fine for a quick post. The problem: the template made every decision for you, so your post looks like 50 others. Typing \"make it modern\" into ChatGPT is worse: purple gradients, glowing brains, a new font on every slide.\n\n🔵 $100 (that costs $0)\nWay 1: Muse, Meta's app. Free tier (with a usage limit). Drag in 2 images, paste the prompt, and you can set it to make a new carousel every day. Not in every country yet.\nWay 2: Qwen 3.5 9B from Alibaba, running locally in Ollama on my base MacBook Air (16 GB). About a 7 GB download, it can see images, and nobody counts your tokens.\n\nThe model isn't the secret. What you give it is:\n1. A style sheet: 1 image with the colors (hex codes), the fonts and the rules\n2. An example: a finished carousel in that same style\n3. The prompt: a full page, not 1 line. Research from official sources, a link for every number, show the plan first, and a checklist at the end so it checks its own work\nIt writes the carousel as a web page, so the text is real, sharp and spelled right. Open it in your browser and screenshot each slide.\nTest 1: a 3-slide carousel about Claude Haiku 5.5. Test 2: a carousel built around my own photo.\nThe limits: a 9B model is not Opus. It's slower, and sometimes you have to ask it twice.\n\n🟣 $1,000: motion graphics, as a system\nEvery slide moves, synced to music. It's built for agencies, because a business doesn't want 1 carousel. It wants posts going out every week without touching anything. So you're selling an automation:\n1. Claude Opus 5.5 finds the niche\n2. It finds the ideas that are working in that niche right now\n3. It writes the hook, every slide and the CTA\n4. Higgsfield (connected inside Claude) makes the images with GPT Image 2.5: the product, the scene, or an avatar like Jad-me\n5. It brings it to life: real motion design written in code, not an AI video\n6. Blotato posts it every week\nWhat it costs: a Claude plan, Higgsfield credits and a Blotato plan. It doesn't cost $1,000. That's what you could sell it for.\nMost of the pieces are already in my Skool (the motion carousel skill, the avatar part, the style sheets), and I'm turning the full system into a skill too.\n\n⚡ The Higgsfield offer I mentioned (promo code inside): https://higgsfield.ai/katana?utm_source=yt&utm_medium=social&utm_category=gr&utm_campaign=Katana_inside_Claude_YT&utm_creator=jadm.h&utm_content_type=de&utm_post=xUOkwW&invite_code=katana-inside-claude-yt-jadm-h-xUOkwW\n\n⏱️ Chapters\n0:00 $0 vs $100 vs $1,000 carousels\n1:10 Free in my Skool + weekly calls\n2:31 What the price tag really means\n2:50 The $0 carousel: Canva\n3:53 The $100 carousel for $0: Muse\n4:46 Way 2: Qwen 3.5 on my laptop\n5:44 The 3 things that make it look pro\n7:19 The tests (and the limits)\n8:46 The $1,000 carousel: a motion system\n11:29 What it costs + which one to make\n\n🔗 Sources\nBuffer, best content format by platform: https://buffer.com/resources/data-best-content-format-social-media/\nAdam Mosseri on carousels getting a second chance: https://www.instagram.com/p/DBOeUmTSmIC/\nMeta, introducing Muse: https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/\nMuse free tier and usage limits: https://www.meta.com/help/artificial-intelligence/1303670544995562/\nQwen 3.5 9B on Ollama: https://ollama.com/library/qwen3.5:9b\nBlotato: https://www.blotato.com\n\n📺 Watch next: https://youtu.be/IcMiUHZhVgE\n\n🙏 We just passed 5,600 subscribers. Thank you for all the love in the comments. I'm going to keep giving these skills away.\n\n💬 Which one are you making: $0, $100 or $1,000? Tell me in the comments.\n\n🔔 Subscribe if you want more skills like these. See you in the next one.\n\n#carousel #instagramcarousel #claude"
+   },
+   "defaultAudioLanguage": "en"
+  },
+  "contentDetails": {
+   "duration": "PT12M43S",
+   "dimension": "2d",
+   "definition": "hd",
+   "caption": "false",
+   "licensedContent": false,
+   "contentRating": {},
+   "projection": "rectangular"
+  },
+  "statistics": {
+   "viewCount": "8123",
+   "likeCount": "224",
+   "favoriteCount": "0",
+   "commentCount": "18"
+  }
+ },
+ "ytdlp": {
+  "id": "A-ZQemIfsF4",
+  "title": "The 3 Levels Of Viral Carousels 0$ (Turned it into a skill)",
+  "description": "Higgsfield Promo: https://higgsfield.ai/katana?utm_source=yt&utm_medium=social&utm_category=gr&utm_campaign=Katana_inside_Claude_YT&utm_creator=jadm.h&utm_content_type=de&utm_post=xUOkwW&invite_code=katana-inside-claude-yt-jadm-h-xUOkwW\n\nThis is a $0 carousel. This is a $100 carousel. And this is a $1,000 carousel. The crazy part: the $100 one cost me $0. No API, no credits. And the $1,000 one isn't really a carousel, it's a system businesses pay for. Here's how each one is made, what it really costs, and which one you should be making 👇\n\n🎁 Everything for the $100 carousel is free in my Skool: the skill, the style sheets and the exact prompt I used in this video\n👉 https://www.skool.com/nextphase-5790\nStuck installing a skill? We now run weekly calls in the Skool to help you set it up.\n\n📊 Why carousels?\n• Buffer compared every format on Instagram: carousels got a 6.9% engagement rate, Reels got 3.3%. More than double.\n• Reels still get a bit more reach, but carousels are what people stop and interact with.\n• If someone scrolls past your carousel, Instagram can show it to them again later, starting on slide 2. A Reel doesn't get that second chance.\n\n💸 The price tag is what it looks like, not what you pay.\n\n🟢 $0: Canva\nPick a template, change the color, type, export. Fast, free, and fine for a quick post. The problem: the template made every decision for you, so your post looks like 50 others. Typing \"make it modern\" into ChatGPT is worse: purple gradients, glowing brains, a new font on every slide.\n\n🔵 $100 (that costs $0)\nWay 1: Muse, Meta's app. Free tier (with a usage limit). Drag in 2 images, paste the prompt, and you can set it to make a new carousel every day. Not in every country yet.\nWay 2: Qwen 3.5 9B from Alibaba, running locally in Ollama on my base MacBook Air (16 GB). About a 7 GB download, it can see images, and nobody counts your tokens.\n\nThe model isn't the secret. What you give it is:\n1. A style sheet: 1 image with the colors (hex codes), the fonts and the rules\n2. An example: a finished carousel in that same style\n3. The prompt: a full page, not 1 line. Research from official sources, a link for every number, show the plan first, and a checklist at the end so it checks its own work\nIt writes the carousel as a web page, so the text is real, sharp and spelled right. Open it in your browser and screenshot each slide.\nTest 1: a 3-slide carousel about Claude Haiku 5.5. Test 2: a carousel built around my own photo.\nThe limits: a 9B model is not Opus. It's slower, and sometimes you have to ask it twice.\n\n🟣 $1,000: motion graphics, as a system\nEvery slide moves, synced to music. It's built for agencies, because a business doesn't want 1 carousel. It wants posts going out every week without touching anything. So you're selling an automation:\n1. Claude Opus 5.5 finds the niche\n2. It finds the ideas that are working in that niche right now\n3. It writes the hook, every slide and the CTA\n4. Higgsfield (connected inside Claude) makes the images with GPT Image 2.5: the product, the scene, or an avatar like Jad-me\n5. It brings it to life: real motion design written in code, not an AI video\n6. Blotato posts it every week\nWhat it costs: a Claude plan, Higgsfield credits and a Blotato plan. It doesn't cost $1,000. That's what you could sell it for.\nMost of the pieces are already in my Skool (the motion carousel skill, the avatar part, the style sheets), and I'm turning the full system into a skill too.\n\n⚡ The Higgsfield offer I mentioned (promo code inside): https://higgsfield.ai/katana?utm_source=yt&utm_medium=social&utm_category=gr&utm_campaign=Katana_inside_Claude_YT&utm_creator=jadm.h&utm_content_type=de&utm_post=xUOkwW&invite_code=katana-inside-claude-yt-jadm-h-xUOkwW\n\n⏱️ Chapters\n0:00 $0 vs $100 vs $1,000 carousels\n1:10 Free in my Skool + weekly calls\n2:31 What the price tag really means\n2:50 The $0 carousel: Canva\n3:53 The $100 carousel for $0: Muse\n4:46 Way 2: Qwen 3.5 on my laptop\n5:44 The 3 things that make it look pro\n7:19 The tests (and the limits)\n8:46 The $1,000 carousel: a motion system\n11:29 What it costs + which one to make\n\n🔗 Sources\nBuffer, best content format by platform: https://buffer.com/resources/data-best-content-format-social-media/\nAdam Mosseri on carousels getting a second chance: https://www.instagram.com/p/DBOeUmTSmIC/\nMeta, introducing Muse: https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/\nMuse free tier and usage limits: https://www.meta.com/help/artificial-intelligence/1303670544995562/\nQwen 3.5 9B on Ollama: https://ollama.com/library/qwen3.5:9b\nBlotato: https://www.blotato.com\n\n📺 Watch next: https://youtu.be/IcMiUHZhVgE\n\n🙏 We just passed 5,600 subscribers. Thank you for all the love in the comments. I'm going to keep giving these skills away.\n\n💬 Which one are you making: $0, $100 or $1,000? Tell me in the comments.\n\n🔔 Subscribe if you want more skills like these. See you in the next one.\n\n#carousel #instagramcarousel #claude",
+  "chapters": [
+   {
+    "start_time": 0,
+    "title": "0 vs $100 vs $1,000 carousels",
+    "end_time": 70
+   },
+   {
+    "start_time": 70,
+    "title": "Free in my Skool + weekly calls",
+    "end_time": 151
+   },
+   {
+    "start_time": 151,
+    "title": "What the price tag really means",
+    "end_time": 170
+   },
+   {
+    "start_time": 170,
+    "title": "The $0 carousel: Canva",
+    "end_time": 233
+   },
+   {
+    "start_time": 233,
+    "title": "The $100 carousel for $0: Muse",
+    "end_time": 286
+   },
+   {
+    "start_time": 286,
+    "title": "Way 2: Qwen 3.5 on my laptop",
+    "end_time": 344
+   },
+   {
+    "start_time": 344,
+    "title": "The 3 things that make it look pro",
+    "end_time": 439
+   },
+   {
+    "start_time": 439,
+    "title": "The tests (and the limits)",
+    "end_time": 526
+   },
+   {
+    "start_time": 526,
+    "title": "The $1,000 carousel: a motion system",
+    "end_time": 689
+   },
+   {
+    "start_time": 689,
+    "title": "What it costs + which one to make",
+    "end_time": 762
+   }
+  ],
+  "tags": [],
+  "categories": [
+   "People & Blogs"
+  ],
+  "heatmap": null,
+  "upload_date": "20261013",
+  "duration": 762,
+  "channel": "Jad M.H  | AI Automation",
+  "channel_id": "UCkbjWQ7kLFNRY_RiJbqVWRg",
+  "channel_follower_count": 8570,
+  "thumbnail": "https://i.ytimg.com/vi_webp/A-ZQemIfsF4/maxresdefault.webp",
+  "view_count": 8126,
+  "like_count": 224,
+  "comment_count": 9
+ }
+}

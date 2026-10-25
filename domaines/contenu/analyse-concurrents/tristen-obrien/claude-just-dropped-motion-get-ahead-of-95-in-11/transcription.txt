@@ -1,0 +1,155 @@
+[00:00] So, Claude just dropped a Claude Motion, and everything that you're looking at right now was made with that tool, along with every single animation that you're going to see in this video.
+[00:08] Along the way, I'm going to show you what Claude Motion is, I'm going to show you how to get started, and I'm going to explain how this thing works in really simple terms.
+[00:15] I'm also going to show you how you can make this look even significantly more premium, and at the end, you'll see an alternative that you can start using today, even if you don't have Claude Motion yet.
+[00:24] With that said, let's go ahead and get started with what Claude Motion actually is.
+[00:28] So, simply put, Claude Motion turns a prompt into an animation.
+[00:32] So, to find it, you're going to go right into Claude, and you're going to click on artifacts, and then right here at the top, you're going to see two new buttons.
+[00:39] One is dashboard, and the other one is motion.
+[00:42] When you click on motion, this is what you're going to see.
+[00:45] To the left is where you're going to put your prompt, and where you're going to talk to Claude, then on the right is where you're going to start building and editing your video.
+[00:52] So, let's go ahead and jump in and build one.
+[00:54] So, let's say that I want to build a 20-second animated commercial for a bike company.
+[01:00] And I want this to look extremely unique.
+[01:02] And because of that, I'm going to ask Claude to make us a Claude Motion animation, and I'm going to tell it that everything needs to look like it was made out of paper, and it needs to look like
+[01:10] a stop-motion film.
+[01:12] Now, for the prompt, you do want it to be very detailed, and I didn't type all of this in.
+[01:17] Of course, I worked with Claude, I gave it my ideas, we went back and forth, and then it ended up giving me a very detailed prompt for me to use.
+[01:24] And this was based on everything that we talked about.
+[01:26] Now, right underneath the prompt box is where you could choose the model that you want to use.
+[01:30] I am going to stick with Opus 5.5.
+[01:32] I think that's the best model for this, but you could go ahead and change that.
+[01:36] You could also change the effort level if you wanted to, but I like what I have here, so I'm going to hit go.
+[01:41] Now, take a look at the right-hand side.
+[01:42] Claude is starting to lay out the frames at the bottom.
+[01:45] But, if I click this little play button right here, nothing is going to happen, and that's because nothing has been built yet.
+[01:51] This does take a little while to build out, and while this is building out, I think it's really important for us to go over what Claude is actually doing here because Claude Motion is different than AI generated video.
+[02:01] Most video tools that are using AI, they work by generating pixels.
+[02:06] So, when you give it a prompt and you use a tool like SeaDance 2.5, it's going to paint every frame by scratch.
+[02:13] And that's really awesome when you want footage that looks absolutely real.
+[02:17] But, if you want to change one word on the screen, you have to generate the whole clip again.
+[02:21] And sometimes, it's really hard to get that exact same look back.
+[02:25] But, with Motion, Claude is writing code instead of generating pixels.
+[02:29] And that code says exactly where every word goes.
+[02:33] It also says what color it is and what the animation looks like and how long it stays on the screen.
+[02:37] And then that code plays back like a video.
+[02:41] So, what does that mean for you?
+[02:42] Well, that means that every single piece of the video that Claude Motion makes is something that you can change.
+[02:47] So, if a word is wrong, you can just fix the word.
+[02:49] If the scene is too long, you can shorten the scene.
+[02:52] And when you do that, everything else in the video is going to stay exactly how it was before.
+[02:57] And this makes you the editor of the video.
+[02:59] You're going to have Claude do all the heavy lifting as it creates the video, but then you're going to come back in at the end and get the final word on every single frame that it creates.
+[03:08] So, since Claude Motion is creating code, it can't create realistic photos or videos.
+[03:13] What it can do is animate text and shapes and charts and images and everything else that you're seeing on the screen right now.
+[03:19] Okay, so the paper bike video commercial is done.
+[03:22] And take a look.
+[03:23] I think it looks really good.
+[03:24] It builds out the bike piece by piece.
+[03:26] The rider takes it out past the paper mountains and then features drop in on little paper tags and it ends on the bike name and says get out and ride.
+[03:35] This looks really cool.
+[03:36] Now, take a look at the bottom right down here.
+[03:38] There is a button called tweaks.
+[03:41] And when you click on tweaks, it's going to show you every single thing that you can change in the video.
+[03:45] And what you can change depends on where you're at in the video.
+[03:48] For example, right here it says bike name.
+[03:50] Now, I'm going to change that to O'Brien's bike and watch the video.
+[03:54] It is going to change instantly.
+[03:56] Now, anything with text on here works the same way.
+[03:58] As you scroll back through the video, every word on the screen is going to show up right here for you to edit.
+[04:04] If you want it to say 100 speeds instead of 21, you're just going to type in 100 and it updates right there on the screen.
+[04:10] You can also change how many seconds each section has.
+[04:13] You can also change how fast things move.
+[04:15] You can change how many sections that it has.
+[04:18] But, what if there's one thing that you want to change that doesn't have any words on it?
+[04:22] Well, take a look at this little comment button up here.
+[04:25] When you click it, you're able to click on anything in the video.
+[04:28] And in this case, I'm going to click on the sun.
+[04:30] And I'm going to tell it that it's actually supposed to be night time and it's supposed to be lit by the moon.
+[04:36] And so, when I hit enter, you can see on the left Claude is starting to work on that change for me.
+[04:40] It's only working on that particular piece.
+[04:43] And when it's done, we can click play and now you can see that the writing is happening at night and the moon comes up instead of the sun.
+[04:50] But, everything else in the video stayed exactly the same.
+[04:53] So, when you're done editing and you like what you have here, you can share this really easily.
+[04:57] First, you can send it to a specific person right here.
+[05:00] And if you look all the way down at the bottom, you can export it as a GIF or you can export it as a video.
+[05:06] And then you get to pick the resolution, you get to pick the frame rate, and you get to pick the quality, and then you hit export.
+[05:13] And from there, it's going to save right onto your computer.
+[05:15] Now, one thing to think about when it comes to cost, Motion doesn't cost anything extra to have, right?
+[05:20] If you have the plan, then you get it.
+[05:22] But, every animation that you make is going to count towards your plan limits.
+[05:25] And the longer that the animation is and the more complex it is, the more credits it's going to use.
+[05:30] Just makes sense.
+[05:31] Now, back to this paper commercial, I think it looks really good.
+[05:34] But, sometimes you need something to look significantly more premium than what we actually have right here.
+[05:39] And it's easy to do.
+[05:40] But, before I show you how to do that, if this video has been helpful so far, please subscribe and like the the and leave a comment.
+[05:46] It really helps out the channel and it's something that I really appreciate.
+[05:50] But, let's jump into that tool that I use every day and show you how you can make this look significantly more premium.
+[05:56] To make a really good explainer video, you need to blend Claude motion animations with real video and real images.
+[06:03] Now, full disclosure here, I did reach out to Higgs Field to see if they wanted to partner on this video and sponsor it, which they are.
+[06:09] And Higgs Field is the perfect tool and partner for this because I pretty much use them for everything on this channel anyway, which includes all the animations that are in my videos.
+[06:17] Well, let me show you the power of Higgs Field and Claude motion working together before we even jump into anything else.
+[06:22] Take a look at the scene where it's transitioning from paper to real.
+[06:26] We have mixed Claude motion with Higgs Field and now they are working together to create this premium scene.
+[06:32] If you've never heard of Higgs Field before, one thing you should know is that it has every major AI and video model all in one place.
+[06:39] And the reason why I like it so much is because it integrates perfectly into Claude.
+[06:43] And because it integrates perfectly, you can just put a new prompt into Claude motion whenever you're asking it to create a scene and they are going to be mixed together.
+[06:51] Now again, this is a longer prompt.
+[06:53] I worked with Claude to make sure that it's the right prompt for this, but it's basically saying that I want it to make a new paper animation that turns paper into real life and I want it to use
+[07:03] a blend of Higgs Field or Claude motion to make this happen.
+[07:05] So, let's go ahead and click enter and see what we get.
+[07:09] Now, as that's going, just know that Claude is going to ask your permission to use Higgs Field a few times.
+[07:13] And if you've never connected to Higgs Field before, it is really easy to do and let me show you how.
+[07:18] First, you're going to go to Higgs Field's website and click on MCP and MCP is just a way to plug an outside tool into Claude.
+[07:24] And when you click on it, you're going to click on the Claude section.
+[07:27] And then you can copy the MCP address that is right here.
+[07:30] Then when you go back into Claude, you're going to click on customize, then you're going to click on connectors, then you're going to click on add connector, and then pick add custom connector.
+[07:40] And all you have to do is name it Higgs Field and paste in that address right there and hit continue and you're going to authenticate and you'll be done.
+[07:46] Now, because you did that, Claude can now talk to Higgsfield without you ever having to leave the chat.
+[07:51] And Higgsfield can do so much more than just create images and video for your animations.
+[07:55] I really do encourage you to check out the website because it is really impressive and they do give you pre-made prompts that you could use in pretty much any viral AI video that you've seen right now can be
+[08:04] made inside of Higgsfield.
+[08:06] It is pretty cool.
+[08:07] Just play around with it for a little bit and you'll see how cool it is.
+[08:10] But, let's go ahead and check back on our video.
+[08:12] Okay, looks like it's done and take a look at this.
+[08:15] It opens up on Claude motion from paper to real.
+[08:18] Then it goes to a paper phone that turns into a real phone right in front of you.
+[08:22] Then it goes to a rocket lifting off and then paper buildings that are turning into a real city and then a paper laptop that turns into a real one where someone's typing "Make a rocket for me." And then
+[08:33] it finishes with a graph right here.
+[08:36] Every real-looking shot that you saw in this video came from Higgsfield.
+[08:40] And then all of the text and animation that came on top of it was Claude motion.
+[08:43] And because it's still in Claude motion, you can still go back and change any word that you want.
+[08:48] But now you can see the power of blending them together.
+[08:50] Now, Claude motion is still in beta and right now it's only on team and enterprise plans.
+[08:55] If you're on a team plan, then it's already turned on for you.
+[08:57] If you're on an enterprise plan, your admin has to turn it on for you.
+[09:00] But if you're on a pro or max plan, you can't actually use motion yet.
+[09:05] But you still can make some really great animations like this.
+[09:08] It's actually how I've been making animations since my very first video on this channel.
+[09:12] And it's because I use three things: Claude code, Higgsfield, and Remotion.
+[09:17] Remotion is a tool that makes videos out of code, which is the same thing that Claude motion does.
+[09:23] Now, it is free for most people.
+[09:24] If you're a bigger company and you're using it for company work, then you do need a company license, but it's free to use outside of that.
+[09:31] You do need Claude code to run it and Claude code does come with the pro and max plans.
+[09:35] To set it up, it's pretty easy.
+[09:37] You're going to open up Claude, you're going to click on customize, you're going to go to plugins, and you can search for Remotion.
+[09:42] And once you find it, you're just going to click add.
+[09:44] You can also install it directly inside of your terminal, which is what I recommend, and I'll put the steps inside of the video description below.
+[09:51] And then you're just going to ask for what you want, like we've been doing.
+[09:53] For example, you can type in something like build me an animation of a clock tower that is paper and it morphs into a rocket ship, and make sure that you use Remotion.
+[10:02] And take a look at that.
+[10:03] We have a clock tower that turns into a rocket ship and it blasts off.
+[10:06] And just so we're clear here, this was made with Remotion, not Claude Motion.
+[10:11] Now, one of the biggest differences here is that Claude Motion is built right inside of Claude, and then everything is processed in the cloud.
+[10:17] Remotion uses your own computer to process the video, and there is a little bit more of a setup.
+[10:22] Now, it does have its own editor, so if you want to use that, you can, but most of the time when you want to change something, you're asking Claude to change it, which does take a little bit longer.
+[10:31] And when you use Remotion inside of Claude Code, it also works with Higgs Field, so you're good to go there.
+[10:35] And remember, Remotion uses code instead of pixels to create the video, just like Claude Motion.
+[10:41] So, you should give it a try if you don't have Claude Motion yet.
+[10:43] So, that brings us to the end of the video, and remember this, Claude Motion turns your prompt into an animated video right inside of Claude, and you can edit every single piece of it because it's just code.
+[10:53] When you mix in Higgs Field, that's when you get that premium video look.
+[10:57] And remember, Motion is only available on team and enterprise plans right now, so if you're on a pro and Max plan and don't have access to it yet, Remotion or Claude Code will do something very similar.
+[11:07] Now, you don't have to build out a full commercial today, you can start with one small animation, you can change one word on it and see what happens.
+[11:13] It's really easy to use, but it is so powerful.
+[11:16] If you like this video, please like it, subscribe, and leave a comment, and I will see you in the next one.
