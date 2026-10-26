@@ -8,6 +8,7 @@
    Pages
      /                       the homepage plus the Second Brain (index.html, os.html, brain/, views/)
      /fichiers/              the file editor alone (also the Second Brain's Fichiers tab)
+     /bibliotheque/          the asset library alone (also the Second Brain's Bibliothèque tab)
      /widgets                the widget library
      /artifacts/<file>       the ring's balls (the artifacts folder)
    Homepage feeds (GET)
@@ -19,6 +20,7 @@
      /local/files            every file of the workspace with its header (GET)
      /local/files/read /local/files/raw /local/files/search   one file's text, an image, a search in the text (GET)
      /local/files/save       saves one file, then runs systeme/scripts/index.py (POST, local pages only)
+     /local/assets           every image, font and PDF, with its line from _images.md (GET, the Bibliothèque tab)
    Actions (POST, local pages only)
      /api/run                runs a skills deck card through your agent's command (os-config.json "runner")
      /api/apply-comments     the "Apply all comments" runner that review pages call
@@ -170,24 +172,60 @@ const PARTNER_HINTS = new RegExp(CFG.partnerHints || 'sponsor|collab|partner|bra
 const LEAD_HINTS = new RegExp(CFG.leadHints || 'join|member|sign\\s?up|subscri|pricing|enroll|course|coaching|access|billing|refund', 'i');
 const PERSONAL_FROM = new RegExp(CFG.personalFrom || '@(gmail|googlemail|yahoo|outlook|hotmail|icloud|proton)\\.', 'i');
 const jsonFrom = out => { const i = out.indexOf('{'); if (i < 0) throw new Error('pas de JSON renvoyé par la commande e-mail'); return JSON.parse(out.slice(i)); };
+const gwsParams = o => process.platform === 'win32' ? '"' + JSON.stringify(o).replace(/"/g, '\\"') + '"' : JSON.stringify(o);
+const MAIL_CATS = { partenariat: 'partnerships', coaching: 'leads', perso: 'personal', autre: 'other' };
+const AUTO_FROM = /no-?reply|notification|newsletter|mailer-daemon|do-?not-?reply/i;
+function mailRules() {
+  const root = workspaceRoot(); if (!root) return [];
+  try {
+    return fs.readFileSync(path.join(root, 'domaines', 'operations', 'mail-apprentissage.md'), 'utf8').split('\n')
+      .map(l => l.match(/^\|\s*(expediteur|domaine|mot)\s*\|\s*(.+?)\s*\|\s*(partenariat|coaching|perso|autre)\s*\|/i))
+      .filter(Boolean).map(m => ({ type: m[1].toLowerCase(), value: m[2].toLowerCase(), kind: MAIL_CATS[m[3].toLowerCase()] }));
+  } catch (_) { return []; }
+}
+const learnedKind = (rules, addr, subject) => {
+  const dom = addr.split('@')[1] || '', subj = subject.toLowerCase();
+  const r = rules.find(x => (x.type === 'expediteur' && x.value === addr) || (x.type === 'domaine' && x.value === dom) || (x.type === 'mot' && subj.includes(x.value)));
+  return r && r.kind;
+};
+function learnMail(q) {
+  const scope = String(q.scope || ''), cat = String(q.cat || ''), value = String(q.value || '').trim().toLowerCase();
+  if (!['expediteur', 'domaine', 'mot'].includes(scope) || !MAIL_CATS[cat]) throw new Error('règle inconnue');
+  if (!value || value.length > 80 || /[|\n\r]/.test(value)) throw new Error('valeur refusée');
+  const root = workspaceRoot(); if (!root) throw new Error('aucun workspace défini');
+  const f = path.join(root, 'domaines', 'operations', 'mail-apprentissage.md');
+  let txt = fs.readFileSync(f, 'utf8');
+  const line = `| ${scope} | ${value} | ${cat} |`;
+  if (!txt.split('\n').some(l => l.trim().toLowerCase() === line)) {
+    txt = txt.replace(/\n*$/, '\n') + line + '\n';
+    txt = txt.replace(/^maj: .*$/m, 'maj: ' + new Date().toISOString().slice(0, 10));
+    fs.writeFileSync(f, txt);
+  }
+  cache.delete('mail');
+  return { ok: true, rule: line };
+}
 async function getEmail() {
   if (!EMAIL.enabled) return { needsSetup: true };
   const cli = /^[A-Za-z0-9._-]+$/.test(EMAIL.command || 'gws') ? (EMAIL.command || 'gws') : 'gws';
-  const list = jsonFrom(await run(cli, ['gmail', 'users', 'messages', 'list', '--params', '"{\\"userId\\":\\"me\\",\\"q\\":\\"newer_than:1d -category:promotions\\",\\"maxResults\\":40}"']));
+  const list = jsonFrom(await run(cli, ['gmail', 'users', 'messages', 'list', '--params', gwsParams({ userId: 'me', q: 'newer_than:1d -category:promotions', maxResults: 40 })]));
   const ids = (list.messages || []).slice(0, 18).map(m => m.id).filter(id => /^[A-Za-z0-9]+$/.test(id));
-  const rows = [];
+  const rows = [], rules = mailRules(), doubts = [];
   for (const id of ids) {
     try {
-      const m = jsonFrom(await run(cli, ['gmail', 'users', 'messages', 'get', '--params', `"{\\"userId\\":\\"me\\",\\"id\\":\\"${id}\\",\\"format\\":\\"metadata\\"}"`], 25000));
+      const m = jsonFrom(await run(cli, ['gmail', 'users', 'messages', 'get', '--params', gwsParams({ userId: 'me', id, format: 'metadata' })], 25000));
       const h = {}; (m.payload?.headers || []).forEach(x => h[x.name.toLowerCase()] = x.value);
       const subject = h.subject || '(sans objet)', rawFrom = h.from || '';
-      const kind = PARTNER_HINTS.test(subject) ? 'partnerships' : LEAD_HINTS.test(subject) ? 'leads' : PERSONAL_FROM.test(rawFrom) ? 'personal' : 'other';
+      const addr = ((rawFrom.match(/<([^>]+)>/) || [])[1] || rawFrom).trim().toLowerCase();
+      let kind = learnedKind(rules, addr, subject);
+      if (!kind) kind = PARTNER_HINTS.test(subject) ? 'partnerships' : LEAD_HINTS.test(subject) ? 'leads' : PERSONAL_FROM.test(rawFrom) ? 'personal' : 'other';
+      if (!kind || (kind === 'other' && !learnedKind(rules, addr, subject) && !h['list-unsubscribe'] && !AUTO_FROM.test(addr))) doubts.push({ id, subject, from: rawFrom.replace(/"/g, '').trim(), addr });
       rows.push({ id, subject, from: rawFrom.replace(/<.*/, '').replace(/"/g, '').trim(), unread: (m.labelIds || []).includes('UNREAD'), kind, ts: +(m.internalDate || 0), snippet: (m.snippet || '').slice(0, 90) });
     } catch (_) { }
   }
+  try { fs.writeFileSync(path.join(SNAP, 'mail-doutes.json'), JSON.stringify({ fetched: new Date().toISOString(), doubts }, null, 2)); } catch (_) { }
   const count = k => rows.filter(r => r.kind === k).length;
   return { fetched: new Date().toISOString(), total: list.resultSizeEstimate || rows.length, unread: rows.filter(r => r.unread).length,
-    flagged: rows.filter(r => r.kind === 'partnerships' || r.kind === 'leads').slice(0, 6), mix: { partnerships: count('partnerships'), leads: count('leads'), personal: count('personal'), other: count('other') } };
+    flagged: rows.filter(r => r.kind === 'partnerships' || r.kind === 'leads').slice(0, 6), doubts: doubts.length, doubtList: doubts.slice(0, 5).map(d => ({ id: d.id, subject: d.subject, from: d.from.replace(/<.*/, '').trim(), addr: d.addr })), mix: { partnerships: count('partnerships'), leads: count('leads'), personal: count('personal'), other: count('other') } };
 }
 
 /* ---------------------------- STATS (WIRING.md) ---------------------------- */
@@ -624,11 +662,48 @@ async function saveFile({ path: rel, content, base, force }) {
   return { ok: true, path: t.rel, hash, mtime: Math.round(st.mtimeMs), index, content: hash !== sha1(buf) ? after.toString('utf8') : undefined };
 }
 function serveRaw(req, res, rel) {
-  const t = editorTarget(rel), type = IMAGE_TYPES[path.extname(t.rel).toLowerCase()];
-  if (!type) throw httpError(400, 'Seules les images s’affichent ici');
-  if (t.st.size > RAW_MAX) throw httpError(413, 'Image trop lourde pour l’aperçu');
+  const t = editorTarget(rel), type = RAW_TYPES[path.extname(t.rel).toLowerCase()];
+  if (!type) throw httpError(400, 'Seuls les images, les polices et les PDF s’affichent ici');
+  if (t.st.size > RAW_MAX) throw httpError(413, 'Fichier trop lourd pour l’aperçu');
   res.writeHead(200, { 'Content-Type': type, 'Content-Length': t.st.size, 'Cache-Control': 'no-cache', 'X-Content-Type-Options': 'nosniff', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'; sandbox" });
   fs.createReadStream(t.abs).pipe(res);
+}
+
+/* ---------------------------- ASSETS: the library (bibliotheque/) ----------------------------
+   AIOS: the Bibliothèque tab shows every image, font and PDF of the workspace (archives aside), read only.
+   Each one gets its line from the _images.md of its folder (what it shows, where it comes from, what it is for):
+   a table whose first cell names the file between backticks. */
+const ASSET_TYPES = { '.woff2': 'font/woff2', '.woff': 'font/woff', '.ttf': 'font/ttf', '.otf': 'font/otf', '.pdf': 'application/pdf' };
+const RAW_TYPES = { ...IMAGE_TYPES, ...ASSET_TYPES };
+const assetKind = rel => { const ext = path.extname(rel).toLowerCase(); return ext === '.svg' ? 'svg' : IMAGE_TYPES[ext] ? 'image' : ext === '.pdf' ? 'pdf' : ASSET_TYPES[ext] ? 'font' : ''; };
+const imageLines = new Map();
+function readImageIndex(root, rel, f) {
+  let hit = imageLines.get(rel);
+  if (hit && hit.m === f.m && hit.s === f.s) return hit.rows;
+  const rows = {}, dir = rel.split('/').slice(0, -1).join('/');
+  let text = ''; try { text = fs.readFileSync(path.join(root, rel), 'utf8'); } catch (_) { }
+  for (const line of text.split(/\r?\n/)) {
+    const cells = line.trim().replace(/^\||\|$/g, '').split('|').map(c => c.trim());
+    const name = ((cells[0] || '').match(/^`([^`]+)`$/) || [])[1];
+    if (!name || cells.length < 2) continue;
+    rows[(dir ? dir + '/' : '') + name.replace(/^\.\//, '')] = { d: cells[1] || '', o: cells[2] || '', u: cells[3] || '' };
+  }
+  imageLines.set(rel, { m: f.m, s: f.s, rows });
+  return rows;
+}
+function listAssets() {
+  const { root, files, error } = listFiles();
+  if (error) return { error, assets: [] };
+  const lines = {}, assets = [], indexes = [];
+  for (const f of files) if (/(^|\/)_images\.md$/.test(f.p)) { indexes.push(f.p); Object.assign(lines, readImageIndex(root, f.p, f)); }
+  for (const f of files) {
+    const k = assetKind(f.p);
+    if (!k || f.p.startsWith('archives/')) continue;
+    const a = { p: f.p, s: f.s, m: f.m, k }, l = lines[f.p];
+    if (l) Object.assign(a, l);
+    assets.push(a);
+  }
+  return { root, assets, indexes };
 }
 
 /* ---------------------------- THE SECOND BRAIN'S DATA ---------------------------- */
@@ -670,12 +745,12 @@ function needsFirstRefresh() {
 }
 
 /* ---------------------------- static files ----------------------------
-   Only the page files are served: the shell, the homepage, assets/, brain/, views/, fichiers/ and the two
+   Only the page files are served: the shell, the homepage, assets/, brain/, views/, fichiers/, bibliotheque/ and the two
    page data files. Config, snapshots, logs, engine and refresh code are never served. */
 const MIME = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg',
   '.webp': 'image/webp', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.ico': 'image/x-icon', '.gif': 'image/gif', '.mp4': 'video/mp4', '.txt': 'text/plain' };
 const PUBLIC_FILES = new Set(['index.html', 'os.html', 'copy.css', 'copy.js', 'shell-extras.js', 'view-transitions.js', 'widgets.html']);
-const PUBLIC_DIRS = ['assets', 'brain', 'views', 'fichiers'];
+const PUBLIC_DIRS = ['assets', 'brain', 'views', 'fichiers', 'bibliotheque'];
 function publicFile(p2) {
   let rel; try { rel = decodeURIComponent(p2).replace(/^\/+/, ''); } catch (_) { return null; }
   if (!rel || rel.includes('\0') || rel.includes('\\')) return null;
@@ -737,6 +812,7 @@ const server = http.createServer(async (req, res) => {
         if (p2 === '/local/files/raw') return serveRaw(req, res, u.searchParams.get('path'));
       } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); }
     }
+    if (p2 === '/local/assets' && !post) return sendJson(res, listAssets());
     if (p2 === '/data/snapshot.js') return sendScript(res, 'window.COPY_DATA=' + JSON.stringify(routinesLib.calendarData(routineSources.allRoutines())) + ';');
     if (p2 === '/data/arms-usage.js') { const f = path.join(DATA, 'arms-usage.js'); return fs.existsSync(f) ? serveFile(req, res, f) : sendScript(res, 'window.ARMS_USAGE=null;'); }
 
@@ -766,6 +842,10 @@ const server = http.createServer(async (req, res) => {
       return sendJson(res, { job: job.jobId, file }, 200, cors);
     }
     if (post && !isJson(req)) return sendJson(res, { error: 'send JSON (Content-Type: application/json)' }, 415);
+    if (post && p2 === '/api/email-learn') {
+      let q; try { q = JSON.parse(await readBody(req) || '{}'); } catch (e) { return sendJson(res, { error: 'le corps de la requête n’est pas du JSON' }, 400); }
+      try { return sendJson(res, learnMail(q)); } catch (e) { return sendJson(res, { error: e.message }, e.status || 400); }
+    }
     if (post && p2 === '/local/files/save') {
       let q; try { q = JSON.parse(await readBody(req) || '{}'); } catch (e) { return sendJson(res, { error: e.status ? e.message : 'le corps de la requête n’est pas du JSON' }, e.status || 400); }
       try { const r = await saveFile(q); return sendJson(res, r, r.conflict ? 409 : 200); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); }
@@ -810,6 +890,8 @@ const server = http.createServer(async (req, res) => {
     if (p2 === '/widgets' || p2 === '/widgets/') return serveFile(req, res, path.join(KIT, 'widgets.html'));
     if (p2 === '/fichiers') { res.writeHead(302, { Location: '/fichiers/' }); return res.end(); }
     if (p2 === '/fichiers/') return serveFile(req, res, path.join(KIT, 'fichiers', 'index.html'));
+    if (p2 === '/bibliotheque') { res.writeHead(302, { Location: '/bibliotheque/' }); return res.end(); }
+    if (p2 === '/bibliotheque/') return serveFile(req, res, path.join(KIT, 'bibliotheque', 'index.html'));
     if (p2.startsWith('/artifacts/')) {
       let rel; try { rel = decodeURIComponent(p2.slice('/artifacts/'.length)); } catch (_) { rel = null; }
       const f = rel && !rel.startsWith('_trash') ? inside(ARTIFACTS, rel) : null;

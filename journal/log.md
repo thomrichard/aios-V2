@@ -19,3 +19,4 @@ Ajout seul. Format : `- AAAA-MM-JJ · <action> | <sujet>`
 - 2026-10-24 · ajout | skill idees ; le type idee et le champ ressortir ajoutés à chaque installation
 - 2026-10-24 · ajout | l'onglet Fichiers de l'interface : voir, chercher, filtrer et modifier les fichiers du workspace
 - 2026-10-24 · ajout | l'Aperçu de l'onglet Fichiers devient modifiable (barre de mise en forme, raccourcis Markdown)
+- 2026-10-26 · réglage | socle remis à l'état neutre (un workspace personnel y était arrivé par erreur) ; gardés : widget e-mails qui apprend, doutes réglés dans le widget, onglet Bibliothèque

@@ -17,6 +17,7 @@ Tu tournes la nuit, seul : tu ne poses aucune question et tu ne devines rien. Ce
    - en tête, `- [ ] Lu` ;
    - « Rangé cette nuit » : une ligne par élément, avec son lien ;
    - « Questions en attente » : leur nombre, et le lien vers `outbox/questions.md` ;
+   - « Routines » : les lignes `routine` de `journal/log.md` écrites depuis le dernier point du jour, telles quelles ; un échec ou un abandon passe aussi dans « À regarder » ;
    - « À regarder » : les alertes du vérificateur, et les « À définir » d'`AGENTS.md` ;
    - s'il n'y a rien, une seule ligne : « Rien à signaler. »
 6. Ajoute une ligne à `journal/log.md` : `- AAAA-MM-JJ · processus rangement | <n> rangés, <n> questions`.
@@ -28,3 +29,4 @@ Tu tournes la nuit, seul : tu ne poses aucune question et tu ne devines rien. Ce
 
 ## Journal des changements
 - 2026-10-23 · création · vider l'inbox sans deviner, et mettre les questions de côté pour la journée
+- 2026-10-23 · rubrique « Routines » dans le point du jour · les routines directes laissent une ligne dans `journal/log.md`, le point du jour la reprend

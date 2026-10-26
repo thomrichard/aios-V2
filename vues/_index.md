@@ -8,4 +8,4 @@ Une vue par type et par projet, générée depuis les en-têtes : tous les fichi
 |---|---|---|
 | [okr](okr.md) | Les objectifs et résultats clés du trimestre | 1 |
 | [processus](../processus/_index.md) | Une suite de skills qui revient | 2 |
-| [tableau](tableau.md) | Une vue d'ensemble tenue à jour, comme les revenus | 1 |
+| [tableau](tableau.md) | Une vue d'ensemble tenue à jour, comme les revenus | 2 |

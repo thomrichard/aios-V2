@@ -12,6 +12,7 @@ interface/artifacts/_trash/
 interface/snapshots/calendar.json
 interface/snapshots/stats.json
 interface/snapshots/usage-log.jsonl
+interface/snapshots/mail-doutes.json
 interface/.google-creds.json
 interface/.google-calendar-token.json
 interface/node_modules/
