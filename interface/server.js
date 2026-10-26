@@ -8,6 +8,7 @@
    Pages
      /                       the homepage plus the Second Brain (index.html, os.html, brain/, views/)
      /fichiers/              the file editor alone (also the Second Brain's Fichiers tab)
+     /bibliotheque/          the asset library alone (also the Second Brain's Bibliothèque tab)
      /widgets                the widget library
      /artifacts/<file>       the ring's balls (the artifacts folder)
    Homepage feeds (GET)
@@ -19,6 +20,7 @@
      /local/files            every file of the workspace with its header (GET)
      /local/files/read /local/files/raw /local/files/search   one file's text, an image, a search in the text (GET)
      /local/files/save       saves one file, then runs systeme/scripts/index.py (POST, local pages only)
+     /local/assets           every image, font and PDF, with its line from _images.md (GET, the Bibliothèque tab)
    Actions (POST, local pages only)
      /api/run                runs a skills deck card through your agent's command (os-config.json "runner")
      /api/apply-comments     the "Apply all comments" runner that review pages call
@@ -660,11 +662,48 @@ async function saveFile({ path: rel, content, base, force }) {
   return { ok: true, path: t.rel, hash, mtime: Math.round(st.mtimeMs), index, content: hash !== sha1(buf) ? after.toString('utf8') : undefined };
 }
 function serveRaw(req, res, rel) {
-  const t = editorTarget(rel), type = IMAGE_TYPES[path.extname(t.rel).toLowerCase()];
-  if (!type) throw httpError(400, 'Seules les images s’affichent ici');
-  if (t.st.size > RAW_MAX) throw httpError(413, 'Image trop lourde pour l’aperçu');
+  const t = editorTarget(rel), type = RAW_TYPES[path.extname(t.rel).toLowerCase()];
+  if (!type) throw httpError(400, 'Seuls les images, les polices et les PDF s’affichent ici');
+  if (t.st.size > RAW_MAX) throw httpError(413, 'Fichier trop lourd pour l’aperçu');
   res.writeHead(200, { 'Content-Type': type, 'Content-Length': t.st.size, 'Cache-Control': 'no-cache', 'X-Content-Type-Options': 'nosniff', 'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'; sandbox" });
   fs.createReadStream(t.abs).pipe(res);
+}
+
+/* ---------------------------- ASSETS: the library (bibliotheque/) ----------------------------
+   AIOS: the Bibliothèque tab shows every image, font and PDF of the workspace (archives aside), read only.
+   Each one gets its line from the _images.md of its folder (what it shows, where it comes from, what it is for):
+   a table whose first cell names the file between backticks. */
+const ASSET_TYPES = { '.woff2': 'font/woff2', '.woff': 'font/woff', '.ttf': 'font/ttf', '.otf': 'font/otf', '.pdf': 'application/pdf' };
+const RAW_TYPES = { ...IMAGE_TYPES, ...ASSET_TYPES };
+const assetKind = rel => { const ext = path.extname(rel).toLowerCase(); return ext === '.svg' ? 'svg' : IMAGE_TYPES[ext] ? 'image' : ext === '.pdf' ? 'pdf' : ASSET_TYPES[ext] ? 'font' : ''; };
+const imageLines = new Map();
+function readImageIndex(root, rel, f) {
+  let hit = imageLines.get(rel);
+  if (hit && hit.m === f.m && hit.s === f.s) return hit.rows;
+  const rows = {}, dir = rel.split('/').slice(0, -1).join('/');
+  let text = ''; try { text = fs.readFileSync(path.join(root, rel), 'utf8'); } catch (_) { }
+  for (const line of text.split(/\r?\n/)) {
+    const cells = line.trim().replace(/^\||\|$/g, '').split('|').map(c => c.trim());
+    const name = ((cells[0] || '').match(/^`([^`]+)`$/) || [])[1];
+    if (!name || cells.length < 2) continue;
+    rows[(dir ? dir + '/' : '') + name.replace(/^\.\//, '')] = { d: cells[1] || '', o: cells[2] || '', u: cells[3] || '' };
+  }
+  imageLines.set(rel, { m: f.m, s: f.s, rows });
+  return rows;
+}
+function listAssets() {
+  const { root, files, error } = listFiles();
+  if (error) return { error, assets: [] };
+  const lines = {}, assets = [], indexes = [];
+  for (const f of files) if (/(^|\/)_images\.md$/.test(f.p)) { indexes.push(f.p); Object.assign(lines, readImageIndex(root, f.p, f)); }
+  for (const f of files) {
+    const k = assetKind(f.p);
+    if (!k || f.p.startsWith('archives/')) continue;
+    const a = { p: f.p, s: f.s, m: f.m, k }, l = lines[f.p];
+    if (l) Object.assign(a, l);
+    assets.push(a);
+  }
+  return { root, assets, indexes };
 }
 
 /* ---------------------------- THE SECOND BRAIN'S DATA ---------------------------- */
@@ -706,12 +745,12 @@ function needsFirstRefresh() {
 }
 
 /* ---------------------------- static files ----------------------------
-   Only the page files are served: the shell, the homepage, assets/, brain/, views/, fichiers/ and the two
+   Only the page files are served: the shell, the homepage, assets/, brain/, views/, fichiers/, bibliotheque/ and the two
    page data files. Config, snapshots, logs, engine and refresh code are never served. */
 const MIME = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg',
   '.webp': 'image/webp', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.ico': 'image/x-icon', '.gif': 'image/gif', '.mp4': 'video/mp4', '.txt': 'text/plain' };
 const PUBLIC_FILES = new Set(['index.html', 'os.html', 'copy.css', 'copy.js', 'shell-extras.js', 'view-transitions.js', 'widgets.html']);
-const PUBLIC_DIRS = ['assets', 'brain', 'views', 'fichiers'];
+const PUBLIC_DIRS = ['assets', 'brain', 'views', 'fichiers', 'bibliotheque'];
 function publicFile(p2) {
   let rel; try { rel = decodeURIComponent(p2).replace(/^\/+/, ''); } catch (_) { return null; }
   if (!rel || rel.includes('\0') || rel.includes('\\')) return null;
@@ -773,6 +812,7 @@ const server = http.createServer(async (req, res) => {
         if (p2 === '/local/files/raw') return serveRaw(req, res, u.searchParams.get('path'));
       } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); }
     }
+    if (p2 === '/local/assets' && !post) return sendJson(res, listAssets());
     if (p2 === '/data/snapshot.js') return sendScript(res, 'window.COPY_DATA=' + JSON.stringify(routinesLib.calendarData(routineSources.allRoutines())) + ';');
     if (p2 === '/data/arms-usage.js') { const f = path.join(DATA, 'arms-usage.js'); return fs.existsSync(f) ? serveFile(req, res, f) : sendScript(res, 'window.ARMS_USAGE=null;'); }
 
@@ -850,6 +890,8 @@ const server = http.createServer(async (req, res) => {
     if (p2 === '/widgets' || p2 === '/widgets/') return serveFile(req, res, path.join(KIT, 'widgets.html'));
     if (p2 === '/fichiers') { res.writeHead(302, { Location: '/fichiers/' }); return res.end(); }
     if (p2 === '/fichiers/') return serveFile(req, res, path.join(KIT, 'fichiers', 'index.html'));
+    if (p2 === '/bibliotheque') { res.writeHead(302, { Location: '/bibliotheque/' }); return res.end(); }
+    if (p2 === '/bibliotheque/') return serveFile(req, res, path.join(KIT, 'bibliotheque', 'index.html'));
     if (p2.startsWith('/artifacts/')) {
       let rel; try { rel = decodeURIComponent(p2.slice('/artifacts/'.length)); } catch (_) { rel = null; }
       const f = rel && !rel.startsWith('_trash') ? inside(ARTIFACTS, rel) : null;
