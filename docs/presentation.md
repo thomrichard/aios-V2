@@ -256,10 +256,12 @@ Une discussion avec l'agent finit toujours par disparaître. On perd rarement la
 Elle travaille en cinq temps :
 
 1. **L'inventaire.** L'agent relit la session et trie en quatre : les décisions (avec leur pourquoi), les livrables, ce qui n'existe que dans le chat (un texte proposé, une analyse), les sujets ouverts. Il te montre cet inventaire avant d'écrire quoi que ce soit.
-2. **Chaque chose à sa place.** Une décision va dans `journal/decisions.md`, avec ce qu'on a écarté. Ce qui n'existe que dans le chat devient une fiche, rangée par `classer` ; dans le doute, une ligne dans `inbox/capture.md`. Un projet touché est mis à jour. Une préférence durable devient un souvenir. Chaque chantier laisse sa ligne dans `journal/log.md`.
+2. **Chaque chose à sa place.** Une décision de projet va dans la partie « Décisions » de la fiche du projet ; une règle, qui vaut pour tout le workspace, va dans `journal/regles.md`. Les deux gardent ce qu'on a écarté. Ce qui n'existe que dans le chat devient une fiche, rangée par `classer` ; dans le doute, une ligne dans `inbox/capture.md`. Un projet touché est mis à jour. Une préférence durable devient un souvenir. Chaque chantier laisse sa ligne dans `journal/log.md`.
 3. **Chaque sujet ouvert devient une tâche à reprendre** : dans son projet, dans un nouveau projet qu'il propose, ou en ligne de capture que le rangement de nuit rangera.
 4. **Rien ne traîne.** Un livrable promis mais jamais écrit est écrit. Un programme lancé est arrêté ou signalé. Des changements non enregistrés dans Git sont signalés, avec un commit proposé ; jamais d'envoi en ligne sans ton accord. Puis l'agent lance le vérificateur.
 5. **Le récap**, en quelques lignes : ce qui est fait, où c'est écrit, ce qui attend, et la phrase exacte pour reprendre chaque sujet. C'est ce point de reprise que `reprendre` relira à la session suivante. Si tu l'as corrigé pendant la session, il propose `calibrate`.
+
+*Règle ou décision ? Une règle vaut pour tout le workspace et dure ; une décision vaut pour un projet et vit avec lui. Exemple : « rien ne part en ligne sans relecture » serait une règle : une ligne courte dans `AGENTS.md`, et son pourquoi dans `journal/regles.md`. « Le site sera fait avec Astro » est une décision du projet site web, notée dans sa fiche. Ainsi, la fiche d'un projet réunit tout ce qui le concerne.*
 
 Une session longue laisse aussi un bilan dans `journal/clotures/<sujet>-AA-MM.md` : le périmètre, ce qui est fait, les décisions, les propositions non engagées, les limites.
 
