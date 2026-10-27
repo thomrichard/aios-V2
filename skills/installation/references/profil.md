@@ -68,6 +68,6 @@ Rempli avec `grill-me` et la liste `skills/installation/references/questions.md`
 
 ### Q15 · L'adresse de mon dépôt privé, pour la sauvegarde de nuit
 
-## En plus (facultatif) · Décisions déjà prises
+## En plus (facultatif) · Règles déjà fixées
 
-Une ligne par décision, avec son pourquoi. Elles iront dans `journal/decisions.md`.
+Une ligne par règle (ce qui vaut pour tout ton travail), avec son pourquoi. Elles iront dans `journal/regles.md`.

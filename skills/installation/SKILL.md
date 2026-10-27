@@ -14,7 +14,7 @@ description: Installe et personnalise l'AIOS. Reprend le profil déposé dans in
 ## Avec un profil
 - Reprends chaque réponse là où elle fait foi (`references/questions.md`, colonne « Où l'écrire »). Montre ce que tu vas écrire, bloc par bloc, et fais valider.
 - Lance `grill-me` seulement sur les questions sans réponse ou « À définir », avec la liste imposée.
-- La section facultative « Décisions déjà prises » va dans `journal/decisions.md`.
+- La section facultative « Règles déjà fixées » (« Décisions déjà prises » dans un ancien profil) va dans `journal/regles.md`.
 
 ## Sans profil
 - Lance `grill-me` avec la liste imposée `references/questions.md` : chaque bloc devient une branche.
@@ -53,3 +53,4 @@ description: Installe et personnalise l'AIOS. Reprend le profil déposé dans in
 - 2026-10-23 · Q14, le dossier des fichiers lourds · vidéos et sons hors du dépôt, rangés par `ranger.py`
 - 2026-10-24 · Q15, le dépôt privé (distant `prive`) · la sauvegarde de nuit y pousse le travail du jour
 - 2026-10-24 · le type `idee` et le champ `ressortir` pour tout le monde · les envies « un jour, peut-être » ont leur place dès l'installation
+- 2026-10-27 · règles et décisions · une décision vit dans la fiche de son projet, une règle dans journal/regles.md

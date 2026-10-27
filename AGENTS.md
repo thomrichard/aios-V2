@@ -50,6 +50,8 @@ Aucun pour l'instant.
 
 Un projet vit dans `projets/<slug>.md` (gabarit : `systeme/gabarits/projet.md`) ; il apparaît ici tant que son statut n'est pas un statut de fin. On ne l'écrit jamais ici.
 
+Une décision vaut pour un projet : elle vit dans sa fiche, partie « Décisions ». Une règle vaut pour tout le workspace et dure : elle va dans `journal/regles.md`.
+
 ## Où chercher
 
 | Pour… | Lis |
@@ -65,7 +67,8 @@ Un projet vit dans `projets/<slug>.md` (gabarit : `systeme/gabarits/projet.md`) 
 | Un concept, une source | `savoir/_index.md` |
 | Qui fait foi, où va quoi | `systeme/doctrine.md` |
 | Les réglages : domaines, champs d'un en-tête, types et statuts | `systeme/metadonnees.md` |
-| Une décision passée | `journal/decisions.md` |
+| Une décision d'un projet | la partie « Décisions » de sa fiche, `projets/<slug>.md` |
+| Une règle, et pourquoi on travaille ainsi | `journal/regles.md` |
 
 Ordre de recherche : d'abord la carte (ce fichier), puis le routeur, l'index ou la vue. Si ça ne suffit pas, une recherche texte dans le dossier le plus proche, puis dans tout le workspace. Si tu as dû chercher partout, propose d'ajouter la route qui manquait.
 
@@ -96,7 +99,7 @@ Avant de dire « c'est fait », vérifie : relance le test ou relis le fichier. 
 
 ## S'améliorer
 
-- Quand une règle manque, ou quand l'utilisateur te corrige, propose d'ajouter une ligne à ce fichier, au bon endroit. N'écris qu'après son accord, et note le pourquoi dans `journal/decisions.md`.
+- Quand une règle manque, ou quand l'utilisateur te corrige, propose d'ajouter une ligne à ce fichier, au bon endroit. N'écris qu'après son accord, et note le pourquoi dans `journal/regles.md`.
 - Ne réécris jamais ce fichier en entier sans demande. Règles de mise à jour : `systeme/doctrine.md`.
 
 ## Mémoire
@@ -143,4 +146,4 @@ Dans l'ordre : l'outil officiel, une CLI de la communauté, l'API, puis un MCP d
 
 ## En compactant une discussion
 
-Garde les décisions, les gabarits et les chemins des fichiers créés ou modifiés.
+Garde les décisions, les règles, les gabarits et les chemins des fichiers créés ou modifiés.
