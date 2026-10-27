@@ -2,7 +2,7 @@
 
 Les choix qui ont façonné le socle, et leur pourquoi. Une entrée par décision : la date, la décision, pourquoi, ce qu'on a écarté. Ajout seul : une décision qui change s'écrit dans une nouvelle entrée, qui renvoie à l'ancienne.
 
-À ne pas confondre avec `journal/decisions.md`, qui sert à l'utilisateur d'un AIOS installé pour noter ses propres décisions.
+À ne pas confondre avec `journal/regles.md` (l'ancien `journal/decisions.md`) et la partie « Décisions » de chaque projet, qui servent à l'utilisateur d'un AIOS installé pour noter ses propres règles et décisions. Les entrées ci-dessous gardent les chemins de leur date.
 
 ## 2026-10-22 · Un socle neutre et portable
 
@@ -207,3 +207,9 @@ Les choix qui ont façonné le socle, et leur pourquoi. Une entrée par décisio
 - **Pourquoi.** Thomas veut voir et trancher les questions là où il voit ses e-mails, sans passer par un fichier technique.
 - **Écarté.** Mettre les doutes dans `outbox/questions.md` par le rangement de 2 h : plus lent, et les questions sont éloignées du widget.
 
+
+## 2026-10-27 · Règles et décisions
+
+- **Décision.** Deux sortes de décisions. Une décision vaut pour un projet : elle vit dans la fiche du projet, partie « Décisions » (nouvelle partie du gabarit projet). Une règle vaut pour tout le workspace et dure : elle va dans `journal/regles.md`, l'ancien `journal/decisions.md`, renommé. La phrase à retenir : « une règle vaut pour tout le workspace et dure ; une décision vaut pour un projet et vit avec lui ». `AGENTS.md`, la doctrine, les skills `close`, `reprendre`, `calibrate`, `devil` et `installation` suivent ; le profil d'installation a maintenant « Règles déjà fixées ».
+- **Pourquoi.** Une décision de projet n'appartient qu'au projet, et la synthèse d'un projet doit tout réunir au même endroit ; une règle appartient à l'ensemble.
+- **Écarté.** Un seul journal où chaque décision porte le nom de son projet. Les noms « Principes » (trop solennel pour les petits réglages) et « Choix de fonctionnement / Décisions de projet » (trop longs).
