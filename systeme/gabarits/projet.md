@@ -13,5 +13,8 @@ maj: AAAA-MM-JJ
 ## Tâches
 - [ ] <une tâche>
 
+## Décisions
+Ajout seul : `- AAAA-MM-JJ · <la décision> · pourquoi : <…> · écarté : <…>`
+
 ## Fichiers
 - <chemin vers un fichier du projet, rangé dans son domaine>

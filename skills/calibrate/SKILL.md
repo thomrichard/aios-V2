@@ -19,7 +19,7 @@ Une correction ne doit pas revenir : chaque session rend l'agent un peu plus jus
    Rien de générique, rien que la session ne prouve. Une session sans correction : « Rien à calibrer. »
 4. **Attends le choix** (« 1 et 3 », « tout », « tout sauf 2 »), puis applique :
    - une skill : relis-la après coup (60 lignes au plus) et ajoute une ligne à son journal des changements ; coche chaque retour de `feedback.md` traité et complète la fin de sa ligne : `- [x] … · appliqué le AAAA-MM-JJ` ;
-   - `AGENTS.md` : une ligne, au bon endroit, et le pourquoi dans `journal/decisions.md` ;
+   - `AGENTS.md` : une ligne, au bon endroit, et le pourquoi dans `journal/regles.md` ;
    - la mémoire : un fichier, et sa ligne dans `MEMORY.md`.
 5. Lance `python3 systeme/scripts/index.py`, puis `python3 systeme/scripts/verifier.py`. Donne chaque fichier modifié en une ligne, puis ajoute `- AAAA-MM-JJ · calibrate | <n> changements` à `journal/log.md`.
 
@@ -37,3 +37,4 @@ Une correction ne doit pas revenir : chaque session rend l'agent un peu plus jus
 
 ## Journal des changements
 - 2026-10-23 · reprise de calibrate de Jay E | RoboNuggets : traduite, cibles de l'AIOS, retours de note, règle du socle, calibrage léger · qu'une correction ne revienne pas
+- 2026-10-27 · règles et décisions · une décision vit dans la fiche de son projet, une règle dans journal/regles.md

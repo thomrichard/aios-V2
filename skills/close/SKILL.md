@@ -14,7 +14,8 @@ Relis toute la session et trie en quatre, puis montre l'inventaire en 5 à 8 lig
 4. **Les sujets ouverts** : ce qui reste à faire, et avec quoi reprendre.
 
 ## 2. Écrire à sa place
-- Une décision → `journal/decisions.md` (ajout seul : date, décision, pourquoi, ce qu'on a écarté).
+- Une décision d'un projet → la partie « Décisions » de sa fiche (ajout seul : date, décision, pourquoi, ce qu'on a écarté).
+- Une règle, qui vaut pour tout le workspace → `journal/regles.md` (même forme).
 - Ce qui n'existe que dans le chat et vaut d'être gardé → `fiche`, puis `classer`. Dans le doute, une ligne dans `inbox/capture.md`.
 - Un livrable sans en-tête ou mal rangé → `classer`.
 - Un projet touché → `projets/<slug>.md` : statut, prochaine étape, tâches.
@@ -46,3 +47,4 @@ Session longue (plusieurs chantiers, ou de la matière qu'on voudra relire) : é
 
 ## Journal des changements
 - 2026-10-23 · reprise de la skill close de Thomas Richard (classroom « Faire vivre ton AIOS »), adaptée à AIOS v2 : places du socle, sujets ouverts en tâches, bilan des sessions longues · que le chat puisse disparaître sans perte
+- 2026-10-27 · règles et décisions · une décision vit dans la fiche de son projet, une règle dans journal/regles.md

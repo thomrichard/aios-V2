@@ -15,7 +15,8 @@
 | Modèle d'une skill | `systeme/modeles.md` | — |
 | Routine | `systeme/routines.md` | — |
 | Connexion | `systeme/connexions.md` | — |
-| Décision | `journal/decisions.md` | — |
+| Décision d'un projet | la partie « Décisions » de `projets/<slug>.md` | — |
+| Règle (vaut pour tout le workspace) | `journal/regles.md` | la ligne courte dans `AGENTS.md` |
 
 ## Où va quoi
 
@@ -64,7 +65,7 @@ Le socle fournit une base qui marche sans rien changer. Les domaines et les type
 | Objectifs (les cibles de l'année) | la skill `installation` | à chaque revue trimestrielle : l'agent vérifie que les cibles sont toujours vraies face aux OKR, et propose la mise à jour |
 | Carte des domaines | `systeme/scripts/index.py`, depuis `systeme/metadonnees.md` | à chaque lancement du script ; on ne l'écrit jamais à la main |
 | Projets actifs | `systeme/scripts/index.py`, depuis l'en-tête des fichiers de `projets/` | à chaque lancement du script ; on ne l'écrit jamais à la main |
-| Règles, comment tu travailles | l'agent, après accord | quand une règle manque ou qu'une correction revient ; une ligne, au bon endroit, et le pourquoi dans `journal/decisions.md` |
+| Règles, comment tu travailles | l'agent, après accord | quand une règle manque ou qu'une correction revient ; une ligne, au bon endroit, et le pourquoi dans `journal/regles.md` |
 
 - Les cibles de l'année font foi dans `AGENTS.md` ; les OKR du trimestre dans `domaines/operations/okr.md`. On ne recopie pas l'un dans l'autre.
 - Jamais de réécriture complète sans demande.
