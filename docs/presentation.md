@@ -313,7 +313,7 @@ La liste est dans `systeme/routines.md`. Aujourd'hui, la skill du rangement de n
 
 `interface/` contient SM4RT, une page locale tirée de l'Agentic OS v2 de Jay E | RoboNuggets (licence MIT), traduite en français et branchée sur le workspace. Elle s'ouvre à l'adresse `http://localhost:50000` et peut rester allumée en permanence.
 
-On y trouve une page d'accueil, un « second cerveau » qui montre tout le workspace en 3D, et des vues Routines, Skills et Applications. Rien ne s'y écrit à la main : ses domaines, ses routines et ses applications sont recopiés depuis les réglages du workspace. Les changements faits au kit d'origine sont listés dans `interface/MODIFS.md`.
+On y trouve une page d'accueil, un « second cerveau » qui montre tout le workspace en 3D, et des vues Routines et Applications. Rien ne s'y écrit à la main : ses domaines, ses routines et ses applications sont recopiés depuis les réglages du workspace. Les changements faits au kit d'origine sont listés dans `interface/MODIFS.md`.
 
 #### L'onglet Fichiers : lire et retoucher un fichier
 
@@ -350,7 +350,22 @@ La fiche d'un projet a donc de nouvelles parties :
 - **Livrables** : ce que le projet produit, par exemple `- [Le devis](../domaines/clients/devis.md) · à valider` (le chemin part de `projets/`, où vit la fiche). Un livrable est un fichier, qui reste rangé dans son domaine, ou un lien, comme une vidéo en ligne. Ses états : à venir, en cours, à valider, livré.
 - **Sources** : ce qui nourrit le projet.
 
-L'apparence se règle dans l'onglet : nuit, jour ou auto, et quatre couleurs (turquoise, braise, glacier, violet). Tout le style tient dans quelques variables, en haut de `interface/projets/projets.css` : pour habiller son AIOS, on change ces valeurs, et le reste suit.
+L'apparence se règle dans l'onglet : nuit, jour ou auto, et quatre couleurs (turquoise, braise, glacier, violet). Tout le style tient dans quelques variables, en haut de `interface/assets/theme.css`, partagé par les onglets Projets et Skills : pour habiller son AIOS, on change ces valeurs, et le reste suit.
+
+#### L'onglet Skills : le catalogue et l'entretien
+
+L'onglet « Skills » (aussi seul, à l'adresse `http://localhost:50000/competences/`) remplace la vue Skills du kit d'origine. Il a deux vues reliées.
+
+- **Le catalogue.** Une carte par skill, avec une recherche (touche `/`) et deux filtres : par famille, et par origine (celles du socle, celles qui sont à toi). À côté, la fiche de la skill choisie : sa description, ses déclencheurs, ses étapes, où elle sert (les process, les routines), son journal des changements, ses retours en attente, et son usage sur 30 jours (une barre par jour, les tokens par lancement, la dernière fois). On y note aussi un retour : la page l'écrit au bout de `skills/<nom>/feedback.md`, comme `note`. C'est la seule chose que la page écrit.
+- **L'entretien.** Un bouton du catalogue y mène, avec le nombre de choses à voir. Quatre tuiles : à améliorer, à surveiller, au repos, modifiées cette semaine.
+  - **À améliorer** : les skills qui ont des retours en attente. « Appliquer les retours » copie la phrase à donner à l'agent (« applique les retours de classer »).
+  - **À surveiller** : une skill qui coûte au moins cinq fois plus que la médiane par lancement ; une skill très utilisée qui ne sert plus cette semaine ; un `SKILL.md` presque à son plafond de 60 lignes ; une famille absente ou inconnue. « Ça va » la met de côté.
+  - **Au repos** : rien depuis 30 jours. « Garder », ou, pour une skill à toi, « Archiver », qui copie la demande pour l'agent.
+  - **Ce qui a changé** : les journaux des changements des skills, mis bout à bout.
+
+Sans usage mesuré, la page le dit, sans rien estimer.
+
+**Les familles.** Une famille regroupe les skills qui servent à la même chose. Le socle en a cinq : Décider (`align`, `burst`, `devil`, `grill-me`), Ranger (`classer`, `fiche`, `idees`, `rangement`), Sessions (`close`, `reprendre`, `calibrate`, `note`), Créer (`humanizer`, `surprise-me`) et Système (`installation`, `personalise`, `search-connectors`). La liste se règle dans `systeme/metadonnees.md`, et chaque skill écrit la sienne dans l'en-tête de son `SKILL.md`. Le vérificateur signale une skill sans famille, ou avec une famille inconnue.
 
 #### Le widget e-mails : un tri qui apprend
 
@@ -376,6 +391,7 @@ C'est le principe 8 (« dans le doute, l'IA demande ») appliqué à un widget. 
 | Mes routines (horaire, type, plafond) | `systeme/routines.md` | l'interface (vue Routines) |
 | Le modèle d'IA de chaque skill | `systeme/modeles.md` | `lancer.py` |
 | Mes outils branchés | `systeme/connexions.md` | l'interface (vue Applications) |
+| Les familles de skills | `systeme/metadonnees.md` (« Familles de skills ») ; chaque skill écrit la sienne dans son `SKILL.md` | l'onglet Skills (filtre), le vérificateur |
 | L'agent qui lance les routines, le dossier des fichiers lourds | `.env` | `lancer.py`, `ranger.py` |
 | Une préférence, une correction à retenir | `memory/` | l'agent, quand il en a besoin |
 
