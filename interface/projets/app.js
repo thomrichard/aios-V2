@@ -22,7 +22,7 @@
   const MOIS = ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.'];
   const S = {
     liste: [], statuts: [], fin: [], filtre: store.get('filtre', 'vivants'), vue: store.get('vue', 'atelier'),
-    cur: null, lu: null, vuA: null, changes: null, faites: false, toutes: false, form: '', occupe: false
+    cur: null, lu: null, avant: null, vuA: null, changes: null, faites: false, toutes: false, form: '', occupe: false
   };
 
   /* ---------------------------- server ---------------------------- */
@@ -77,11 +77,21 @@
   }
   const propre = s => String(s || '').replace(/[\r\n]+/g, ' ').replace(/\s+·\s+/g, ' - ').trim();
 
-  /* ---------------------------- the last reading of each project ---------------------------- */
+  /* ---------------------------- the last reading of each project ----------------------------
+     Kept with the text you read: what changed since is a comparison of the two texts, so your own saves and
+     what is not in Git yet count right. (A reading kept as a date alone, from before, falls back on git diff.) */
   const lectures = () => store.get('lectures', {});
-  function noteLecture(path, iso) { const l = lectures(); l[path] = iso; store.set('lectures', l); }
+  function noteLecture(path, iso, texte) { const l = lectures(); l[path] = { at: iso, texte }; store.set('lectures', l); }
   /* the reading counts when you leave the project: while you look, what changed stays lit */
-  function finLecture() { if (S.cur && S.vuA) noteLecture(S.cur.path, S.vuA); }
+  function finLecture() { if (S.cur && S.vuA) noteLecture(S.cur.path, S.vuA, S.cur.content); }
+  /* the lines of the text that were not in the text you read (a ticked box is a changed line) */
+  function lignesNeuves(avant, maintenant) {
+    const reste = new Map();
+    for (const l of avant.split('\n')) { const k = l.trim(); if (k) reste.set(k, (reste.get(k) || 0) + 1); }
+    const neuves = [];
+    maintenant.split('\n').forEach((l, i) => { const k = l.trim(); if (!k) return; const n = reste.get(k) || 0; if (n) reste.set(k, n - 1); else neuves.push(i); });
+    return neuves;
+  }
   addEventListener('pagehide', finLecture);
   document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') finLecture(); });
 
@@ -126,7 +136,7 @@
   }
 
   /* ---------------------------- one project ---------------------------- */
-  async function ouvre(path, garder = false) {
+  async function ouvre(path, garder = false, toutLu = false) {
     if (!path) return;
     if (!garder && S.cur && S.cur.path !== path) finLecture();
     const r = await api('/local/projets/lire?path=' + enc(path));
@@ -134,11 +144,15 @@
     const autre = !S.cur || S.cur.path !== r.path;
     S.cur = r; store.set('dernier', r.path);
     if (autre && !garder) {
-      S.lu = lectures()[r.path] || null; S.vuA = new Date().toISOString(); S.faites = false; S.toutes = false; S.form = '';
-      if (!S.lu) noteLecture(r.path, S.vuA);
+      const l = lectures()[r.path];
+      S.lu = !l ? null : typeof l === 'string' ? l : l.at || null; S.avant = l && typeof l.texte === 'string' ? l.texte : null;
+      S.vuA = new Date().toISOString(); S.faites = false; S.toutes = false; S.form = '';
+      if (!l) noteLecture(r.path, S.vuA, r.content);
     }
+    if (toutLu) { S.lu = S.vuA = new Date().toISOString(); S.avant = r.content; noteLecture(r.path, S.lu, r.content); }
     S.changes = null;
-    if (S.lu && r.git) { const c = await api('/local/projets/changements?path=' + enc(r.path) + '&depuis=' + enc(S.lu)); if (!c.error) S.changes = c; }
+    if (S.avant !== null) S.changes = { lignes: lignesNeuves(S.avant, r.content) };
+    else if (S.lu && r.git) { const c = await api('/local/projets/changements?path=' + enc(r.path) + '&depuis=' + enc(S.lu)); if (!c.error) S.changes = c; }
     if (!embedded) history.replaceState(null, '', '#' + enc(r.path));
     dessine();
     dessineListe();
@@ -165,8 +179,11 @@
   }
 
   /* ---------------------------- A: the workshop ---------------------------- */
+  /* every task: those of ## Tâches, and those written under a milestone, which carry its name */
+  const sousTaches = p => p.jalons.flatMap(j => j.taches.map(t => ({ ...t, jalon: j.nom })));
+  const toutes = p => [...p.taches, ...sousTaches(p)];
   function tuiles() {
-    const p = S.cur.projet, h = p.header, av = p.avancement, faites = p.taches.filter(t => t.fait).length, total = p.taches.length;
+    const p = S.cur.projet, h = p.header, av = p.avancement, faites = toutes(p).filter(t => t.fait).length, total = toutes(p).length;
     const aValider = p.livrables.filter(l => l.etat === 'a-valider');
     const ech = jour(h.echeance), n = ech ? ecart(new Date(new Date().setHours(12, 0, 0, 0)), ech) : null;
     const seg = Math.min(total, 12), on = total ? Math.round(seg * faites / total) : 0;
@@ -191,10 +208,10 @@
       const x = pos(jour(j.date)), etat = j.fait ? 'fait' : (j.pct || 0) > 0 ? 'encours' : i === tries.length - 1 ? 'fin' : '';
       const place = i % 2 ? 'bas' : 'haut', bord = x > 90 ? ' droite' : x < 8 ? ' gauche' : '';
       const info = j.fait ? 'fait' : j.pct !== null ? j.pct + ' %' : '';
-      return `<span class="losange ${etat}" style="left:${x}%"></span><button type="button" class="jalon ${place} ${etat}${bord}" data-jalon="${j.ligne}" style="${bord ? '' : 'left:' + x + '%'}" title="Modifier ce jalon"><span class="mono">${esc(court(j.date))}${info ? ' · ' + esc(info.toUpperCase()) : ''}</span>${esc(j.nom)}</button>`;
+      return `<span class="losange ${etat}" style="left:${x}%"></span><button type="button" class="jalon ${place} ${etat}${bord}" data-jalon="${j.ligne}" style="${bord ? '' : 'left:' + x + '%'}" title="${esc(titreJalon(j))}"><span class="mono">${esc(court(j.date))}${info ? ' · ' + esc(info.toUpperCase()) : ''}</span>${esc(j.nom)}</button>`;
     }).join('');
     const xj = pos(auj);
-    const flottants = sans.length ? sans.map(j => `<button type="button" class="flottant" data-jalon="${j.ligne}" title="Donner une date, un avancement">${esc(j.nom)}${j.fait ? ' · fait' : j.pct !== null ? ' · ' + j.pct + ' %' : ''} · dater</button>`).join('') : '<span class="temps-note">Tous les jalons ont une date.</span>';
+    const flottants = sans.length ? sans.map(j => `<button type="button" class="flottant" data-jalon="${j.ligne}" title="${esc(titreJalon(j))}">${esc(j.nom)}${j.fait ? ' · fait' : j.pct !== null ? ' · ' + j.pct + ' %' : ''} · dater</button>`).join('') : '<span class="temps-note">Tous les jalons ont une date.</span>';
     return `<section id="temps" class="panneau trait" aria-label="Ligne du temps">
       <div class="temps-tete"><span class="etiquette">Ligne du temps</span><span class="etiquette">${esc(court(fmt(debut)))} → ${esc(court(fmt(fin)))}${sans.length ? ` · <span style="color:var(--attention)">${sans.length} jalon${sans.length > 1 ? 's' : ''} sans date</span>` : ''}</span></div>
       <div class="temps-defil"><div class="temps-grille">
@@ -208,6 +225,7 @@
       ${ajout}
     </section>`;
   }
+  const titreJalon = j => 'Modifier ce jalon' + (j.taches.length ? ' · ' + j.taches.filter(t => t.fait).length + ' tâche(s) faite(s) sur ' + j.taches.length : '');
   const fmt = d => d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
   function genreTexte(x) { return { md: '[MD]', image: '[IMG]', fichier: '[FIC]', lien: '[LIEN]', video: '[VID]', absent: '[?]', texte: '[—]' }[x.genre] || '[—]'; }
   function lienPlat(x, attr) {
@@ -233,15 +251,15 @@
       : `<button type="button" class="btn petit" data-ouvre-form="decision">Noter une décision</button>`;
   }
   function tachesHtml(liste) {
-    return liste.map(t => `<label class="tache${t.fait ? ' faite' : ''}"><input type="checkbox" data-tache="${t.ligne}"${t.fait ? ' checked' : ''}><span>${inline(t.texte)}</span></label>`).join('');
+    return liste.map(t => `<label class="tache${t.fait ? ' faite' : ''}"><input type="checkbox" data-tache="${t.ligne}"${t.fait ? ' checked' : ''}><span>${inline(t.texte)}</span>${t.jalon ? `<span class="tache-jalon">${esc(t.jalon)}</span>` : ''}</label>`).join('');
   }
   function milieu() {
-    const p = S.cur.projet, h = p.header, ouvertes = p.taches.filter(t => !t.fait), faites = p.taches.filter(t => t.fait);
+    const p = S.cur.projet, h = p.header, ouvertes = toutes(p).filter(t => !t.fait), faites = toutes(p).filter(t => t.fait);
     return `<section class="panneau colonne" aria-label="Ce qui se fait">
       <div class="col-tete"><span class="num">02</span><h2>Atelier</h2><span class="etiquette">la suite · le cadre →</span></div>
       <div class="etape"><span class="etiquette">Prochaine étape</span><p>${h.prochaine_etape ? inline(h.prochaine_etape) : '<span style="opacity:.6">Pas encore écrite</span>'}</p><div class="etape-btns"><button type="button" class="btn primaire petit" data-etape="suite">${h.prochaine_etape ? 'C’est fait, la suite' : 'L’écrire'}</button></div></div>
       <div class="sous-tete"><span class="etiquette">Tâches · ${ouvertes.length} ouverte${ouvertes.length > 1 ? 's' : ''}</span>${faites.length ? `<button type="button" class="btn discret petit mono-btn" data-voir-faites>${S.faites ? 'masquer les faites' : '+ ' + faites.length + ' faite' + (faites.length > 1 ? 's' : '')}</button>` : ''}</div>
-      <div>${tachesHtml(ouvertes)}${S.faites ? tachesHtml(faites) : ''}${!p.taches.length ? '<p class="vide-col">Aucune tâche.</p>' : ''}</div>
+      <div>${tachesHtml(ouvertes)}${S.faites ? tachesHtml(faites) : ''}${!toutes(p).length ? '<p class="vide-col">Aucune tâche.</p>' : ''}</div>
       <label class="ajout"><span aria-hidden="true">+</span><input data-ajout="tache" type="text" placeholder="Ajouter une tâche (Entrée)" aria-label="Ajouter une tâche"></label>
       <div class="sous-tete"><span class="etiquette">Décisions · ${p.decisions.length}</span>${p.decisions.length > 3 ? `<button type="button" class="btn discret petit mono-btn" data-toutes>${S.toutes ? 'les 3 dernières' : 'toutes'}</button>` : ''}</div>
       <div>${decisionsHtml(p.decisions, S.toutes ? 0 : 3) || '<p class="vide-col">Aucune décision notée.</p>'}</div>
@@ -333,7 +351,7 @@
     const doc = `<article id="doc" class="panneau trait">
       ${bande()}
       <div class="etape"><span class="etiquette">Prochaine étape</span><p>${h.prochaine_etape ? inline(h.prochaine_etape) : '<span style="opacity:.6">Pas encore écrite</span>'}</p></div>
-      <section><h2>Tâches</h2>${p.taches.map(t => bloc(t.ligne, tachesHtml([t]))).join('') || '<p class="vide-col">Aucune tâche.</p>'}</section>
+      <section><h2>Tâches</h2>${p.taches.map(t => bloc(t.ligne, tachesHtml([t]))).join('')}${p.jalons.filter(j => j.taches.length).map(j => `<p class="etiquette sous-jalon">Jalon · ${esc(j.nom)} · ${j.pct} %</p>` + j.taches.map(t => bloc(t.ligne, tachesHtml([t]))).join('')).join('')}${!toutes(p).length ? '<p class="vide-col">Aucune tâche.</p>' : ''}</section>
       <section><h2>Décisions</h2>${p.decisions.map(d => bloc(d.ligne, `<div class="doc-decision"><span class="date">${esc(court(d.date) || '—')}</span><span><b>${inline(d.texte)}</b>${d.pourquoi ? `<small>Pourquoi : ${inline(d.pourquoi)}. </small>` : ''}${d.ecarte ? `<small>Écarté : ${inline(d.ecarte)}.</small>` : ''}</span></div>`)).join('') || '<p class="vide-col">Aucune décision notée.</p>'}</section>
       <section><h2>Livrables</h2><div class="doc-livrables">${p.livrables.map(x => `<div class="bloc${neuf(x.ligne) ? ' neuf' : ''}" style="flex:1 1 220px">${livrableHtml(x)}</div>`).join('') || '<p class="vide-col">Pas encore de livrable.</p>'}</div></section>
       <section><h2>Sources</h2>${p.sources.map(x => bloc(x.ligne, lienPlat(x, `data-source="${x.ligne}"`))).join('') || '<p class="vide-col">Pas encore de source.</p>'}</section>
@@ -382,8 +400,7 @@
       if (r.conflict) { toast('La fiche a changé ailleurs entre-temps : je la recharge. Refais ton geste.', 'mal'); await ouvre(S.cur.path, true); return; }
       if (r.error) { toast(r.error, 'mal'); return; }
       /* you are on the page: what you see now counts as read */
-      S.lu = S.vuA = new Date().toISOString(); noteLecture(S.cur.path, S.lu);
-      await ouvre(S.cur.path, true);
+      await ouvre(S.cur.path, true, true);
       await chargeListe();
       if (message) toast(message);
     } finally { S.occupe = false; document.body.classList.remove('charge'); }
@@ -395,9 +412,15 @@
     jalon: (ligne, v) => modifie(L => {
       const m = morceaux(L[ligne]); if (!m) return;
       const autres = m.bits.slice(1).filter(b => !/^\d{1,3}\s*%$/.test(b.trim()) && !DATE_RE.test(b.trim()));
-      const bits = [m.bits[0], ...(!v.fait && v.pct > 0 ? [Math.min(100, Math.round(v.pct)) + ' %'] : []), ...(v.date ? [v.date] : []), ...autres];
+      const bits = [m.bits[0], ...(!v.fait && !v.auto && v.pct > 0 ? [Math.min(100, Math.round(v.pct)) + ' %'] : []), ...(v.date ? [v.date] : []), ...autres];
       L[ligne] = m.avant + '[' + (v.fait ? 'x' : ' ') + '] ' + bits.join(' · ') + m.fin;
     }, 'Jalon mis à jour'),
+    sousTache: (ligne, texte) => modifie(L => {
+      const j = S.cur.projet.jalons.find(x => x.ligne === ligne); if (!j) return;
+      const apres = Math.max(j.ligne, ...j.taches.map(x => x.ligne));
+      const retrait = j.taches.length ? (/^(\s+)/.exec(L[j.taches[0].ligne]) || [, '  '])[1] : '  ';
+      L.splice(apres + 1, 0, avecFin(L[j.ligne], retrait + '- [ ] ' + propre(texte)));
+    }, 'Tâche ajoutée au jalon'),
     decision: (texte, pourquoi, ecarte) => modifie(L => ajouteDans(L, 'decisions', 'Décisions', '- ' + today() + ' · ' + propre(texte) + (pourquoi ? ' · pourquoi : ' + propre(pourquoi) : '') + (ecarte ? ' · écarté : ' + propre(ecarte) : '')), 'Décision notée'),
     etat: (ligne, etat) => modifie(L => {
       const m = morceaux(L[ligne]); if (!m) return;
@@ -431,14 +454,23 @@
   const fermeBulle = () => { $('bulle').hidden = true; };
   function editeJalon(el, ligne) {
     const j = S.cur.projet.jalons.find(x => x.ligne === ligne); if (!j) return;
+    const faites = j.taches.filter(t => t.fait).length;
     bulle(el, `<h3>${esc(j.nom)}</h3>
       <label>Atteint <input type="checkbox" id="b-fait"${j.fait ? ' checked' : ''}></label>
-      <label>Avancement <input class="champ" id="b-pct" type="number" min="0" max="100" step="5" value="${j.fait ? 100 : j.pct ?? 0}"></label>
+      ${j.auto ? `<label>Avancement <span class="mono" title="Calculé avec les tâches du jalon">${j.pct} % · ${faites}/${j.taches.length}</span></label>` : `<label>Avancement <input class="champ" id="b-pct" type="number" min="0" max="100" step="5" value="${j.fait ? 100 : j.pct ?? 0}"></label>`}
       <label>Date <input class="champ" id="b-date" type="date" value="${esc(j.date)}"></label>
+      ${j.taches.length ? `<div class="b-taches">${tachesHtml(j.taches).replace(/data-tache=/g, 'data-b-tache=')}</div>` : ''}
+      <label class="ajout"><span aria-hidden="true">+</span><input id="b-ajout" type="text" placeholder="Une tâche de ce jalon (Entrée)" aria-label="Ajouter une tâche à ce jalon"></label>
       <div class="form-btns"><button type="button" class="btn discret petit" id="b-sans">Sans date</button><button type="button" class="btn primaire petit" id="b-ok">Enregistrer</button></div>`, b => {
-      const go = date => { fermeBulle(); ops.jalon(ligne, { fait: $('b-fait').checked, pct: Number($('b-pct').value) || 0, date }); };
+      const go = date => { fermeBulle(); ops.jalon(ligne, { fait: $('b-fait').checked, pct: j.auto ? 0 : Number($('b-pct').value) || 0, auto: j.auto, date }); };
       $('b-ok').onclick = () => go($('b-date').value); $('b-sans').onclick = () => go('');
-      b.onkeydown = e => { if (e.key === 'Enter') { e.preventDefault(); go($('b-date').value); } };
+      b.onchange = e => { const c = e.target.closest('[data-b-tache]'); if (c) { fermeBulle(); ops.tache(Number(c.dataset.bTache), c.checked); } };
+      b.onkeydown = e => {
+        if (e.key !== 'Enter') return;
+        e.preventDefault();
+        if (e.target.id === 'b-ajout') { const v = e.target.value.trim(); if (v) { fermeBulle(); ops.sousTache(ligne, v); } return; }
+        go($('b-date').value);
+      };
     });
   }
   function editeEtape(el) {
@@ -476,7 +508,7 @@
     const of = t.closest('[data-ouvre-form]'); if (of) { S.form = of.dataset.ouvreForm; dessine(); const f = document.querySelector('[data-form] input'); if (f) f.focus(); return; }
     if (t.closest('[data-annuler]')) { S.form = ''; dessine(); return; }
     const et = t.closest('[data-etape]'); if (et) { editeEtape(et); return; }
-    if (t.closest('#tout-lu')) { S.lu = S.vuA = new Date().toISOString(); noteLecture(S.cur.path, S.lu); S.changes = { lignes: [] }; dessine(); toast('Tout est lu'); }
+    if (t.closest('#tout-lu')) { S.lu = S.vuA = new Date().toISOString(); S.avant = S.cur.content; noteLecture(S.cur.path, S.lu, S.avant); S.changes = { lignes: [] }; dessine(); toast('Tout est lu'); }
   }
   $('atelier').addEventListener('click', clic); $('fiche').addEventListener('click', clic);
   function change(e) {

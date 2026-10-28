@@ -11,7 +11,7 @@ maj: AAAA-MM-JJ
 # <Nom du projet>
 
 ## Jalons
-Les grandes étapes, dans l'ordre : `- [ ] <jalon> · <avancement> % · AAAA-MM-JJ`. Le pourcentage et la date sont facultatifs ; `[x]` quand le jalon est atteint.
+Les grandes étapes, dans l'ordre : `- [ ] <jalon> · <avancement> % · AAAA-MM-JJ`. Le pourcentage et la date sont facultatifs ; `[x]` quand le jalon est atteint. Les tâches d'un jalon s'écrivent en retrait dessous (`  - [ ] <tâche>`) : son avancement se calcule alors tout seul.
 - [ ] <un jalon>
 
 ## Tâches
