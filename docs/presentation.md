@@ -317,7 +317,7 @@ On y trouve une page d'accueil, un « second cerveau » qui montre tout le works
 
 #### L'onglet Fichiers : lire et retoucher un fichier
 
-Le septième onglet, « Fichiers », est un éditeur des fichiers du workspace. On l'ouvre aussi seul, à l'adresse `http://localhost:50000/fichiers/`.
+L'onglet « Fichiers » est un éditeur des fichiers du workspace. On l'ouvre aussi seul, à l'adresse `http://localhost:50000/fichiers/`.
 
 - **À gauche**, tous les fichiers, rangés par dossier, les domaines d'abord. Une recherche cherche dans le nom, le titre et le résumé, puis dans le texte, sans tenir compte des accents. Quatre filtres lisent l'en-tête : type, statut, domaine, projet. *Exemple : le filtre statut sur `a-valider`.*
 - **À droite**, le fichier : en aperçu mis en forme (l'en-tête s'affiche comme une carte), en Markdown coloré, ou les deux côte à côte, qui défilent ensemble. On coche une tâche directement dans l'aperçu. Dans un fichier en lecture seule, un double clic place le curseur sur la bonne ligne du Markdown.
@@ -326,6 +326,23 @@ Le septième onglet, « Fichiers », est un éditeur des fichiers du workspace. 
 - **Les garde-fous.** L'éditeur n'ouvre rien hors du workspace, rien de caché, rien dans `interface/`, rien qui ressemble à un secret. Les fichiers générés (`_index.md`, `vues/`, `outbox/index.html`) et ceux qui ne sont pas en UTF-8 sont en lecture seule. Si un agent ou une routine change le fichier pendant que tu l'as ouvert, il se recharge seul quand tu n'as rien modifié ; sinon, l'enregistrement te demande quelle version garder.
 
 Dans le second cerveau, le bouton « Modifier » de la visionneuse ouvre le fichier dans cet onglet. L'éditeur ne crée, ne renomme et ne supprime aucun fichier : ranger reste le travail de `classer` et du rangement de nuit.
+
+#### L'onglet Projets : un projet à l'usage
+
+L'onglet « Projets » montre chaque projet de `projets/`. On l'ouvre aussi seul, à l'adresse `http://localhost:50000/projets/`. À gauche, la liste des projets, les vivants d'abord. À droite, le projet choisi, en deux vues du même fichier :
+
+- **Atelier**, pour travailler. En haut, quatre tuiles : l'avancement, l'échéance, les tâches, les livrables à valider. Puis la frise des jalons : ceux qui ont une date sur la ligne du temps, les autres à part, qu'on date d'un clic. Puis trois colonnes : ce qui entre (les sources, l'inbox, les fichiers du projet), ce qui se fait (la prochaine étape, les tâches, les décisions), ce qui sort (les livrables, avec leur état et un aperçu).
+- **Fiche**, pour relire. Les parties du fichier, avec ce qui a changé depuis ta dernière lecture surligné. À côté, le fil du projet : son historique dans Git et ses lignes du journal, avec un trait « Tu t'es arrêté ici ». Le trait avance quand tu quittes le projet, ou avec « Tout est lu ».
+
+Chaque geste réécrit une seule ligne de la fiche, avec les mêmes garde-fous que l'onglet Fichiers : cocher une tâche, dater ou avancer un jalon, noter une décision, changer l'état d'un livrable, ajouter une source ou un livrable, changer le statut, l'échéance ou la prochaine étape.
+
+La fiche d'un projet a donc de nouvelles parties :
+
+- **Jalons** : les grandes étapes, par exemple `- [ ] Tournage · 40 % · 2026-12-01`. Le pourcentage et la date sont facultatifs : un jalon peut attendre sa date. `[x]` quand il est atteint.
+- **Livrables** : ce que le projet produit, par exemple `- [Le devis](domaines/clients/devis.md) · à valider`. Un livrable est un fichier, qui reste rangé dans son domaine, ou un lien, comme une vidéo en ligne. Ses états : à venir, en cours, à valider, livré.
+- **Sources** : ce qui nourrit le projet.
+
+L'apparence se règle dans l'onglet : nuit, jour ou auto, et quatre couleurs (turquoise, braise, glacier, violet). Tout le style tient dans quelques variables, en haut de `interface/projets/projets.css` : pour habiller son AIOS, on change ces valeurs, et le reste suit.
 
 #### Le widget e-mails : un tri qui apprend
 
