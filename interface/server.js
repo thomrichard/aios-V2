@@ -9,6 +9,7 @@
      /                       the homepage plus the Second Brain (index.html, os.html, brain/, views/)
      /fichiers/              the file editor alone (also the Second Brain's Fichiers tab)
      /bibliotheque/          the asset library alone (also the Second Brain's Bibliothèque tab)
+     /projets/               the project page alone (also the Second Brain's Projets tab)
      /widgets                the widget library
      /artifacts/<file>       the ring's balls (the artifacts folder)
    Homepage feeds (GET)
@@ -21,6 +22,10 @@
      /local/files/read /local/files/raw /local/files/search   one file's text, an image, a search in the text (GET)
      /local/files/save       saves one file, then runs systeme/scripts/index.py (POST, local pages only)
      /local/assets           every image, font and PDF, with its line from _images.md (GET, the Bibliothèque tab)
+   Project page (the Projets tab, GET; edits go through /local/files/save)
+     /local/projets          every project with its header and progress
+     /local/projets/lire     one project: its text, its parts, its links, its history (Git, journal/log.md)
+     /local/projets/changements   the lines of a project changed since a date (git diff)
    Actions (POST, local pages only)
      /api/run                runs a skills deck card through your agent's command (os-config.json "runner")
      /api/apply-comments     the "Apply all comments" runner that review pages call
@@ -706,6 +711,213 @@ function listAssets() {
   return { root, assets, indexes };
 }
 
+/* ---------------------------- PROJETS: the project page (projets/) ----------------------------
+   AIOS: the Projets tab reads each project file (header type: projet): its header and its parts, ## Jalons,
+   ## Tâches, ## Décisions, ## Livrables and ## Sources (## Fichiers, the part of older files, reads as sources).
+   Every item keeps its line number: the page edits the Markdown there and saves it through /local/files/save,
+   so the same checks apply. The history comes from Git and journal/log.md, the lines changed since a reading
+   from git diff. Without Git, the page simply has no history. */
+const PART_KEYS = [['jalon', 'jalons'], ['tache', 'taches'], ['decision', 'decisions'], ['livrable', 'livrables'], ['source', 'sources'], ['fichier', 'sources']];
+const LIVRABLE_ETATS = { 'a venir': 'a-venir', 'en cours': 'en-cours', 'a valider': 'a-valider', 'livre': 'livre' };
+const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+/* a line of the template still waiting for its text: <un jalon>, [<nom>](<chemin>) */
+const placeholder = s => /^<[^>]*>$/.test(s.trim()) || /\]\(<[^>]*>\)/.test(s) || /^\[<[^>]*>\]/.test(s.trim());
+function splitLink(text) {
+  const m = /^\[([^\]]+)\]\(([^)\s]+)\)\s*(.*)$/.exec(text.trim());
+  if (m) return { nom: m[1].trim(), cible: m[2].trim(), reste: m[3].replace(/^·\s*/, '').trim() };
+  const parts = text.split(/\s+·\s+/), first = parts[0].trim();
+  const looksLike = /^https?:\/\//i.test(first) || /[\\/]|\.[a-z0-9]{1,5}$/i.test(first);
+  return { nom: looksLike ? first.split('/').pop() : first, cible: looksLike ? first : '', reste: parts.slice(1).join(' · ').trim() };
+}
+function parseProject(text) {
+  const lines = text.split('\n').map(l => l.replace(/\r$/, ''));
+  let i = 0, bodyStart = 0;
+  if ((lines[0] || '').trim() === '---') { for (i = 1; i < lines.length && lines[i].trim() !== '---'; i++); bodyStart = Math.min(i + 1, lines.length); }
+  const out = { header: readHeader(text), titre: '', titreLigne: -1, intro: '', parties: [], jalons: [], taches: [], decisions: [], livrables: [], sources: [] };
+  const intro = [];
+  let part = null;
+  for (let n = bodyStart; n < lines.length; n++) {
+    const line = lines[n];
+    const h1 = /^#\s+(.+?)\s*#*\s*$/.exec(line), h2 = /^##\s+(.+?)\s*#*\s*$/.exec(line);
+    if (h1 && !out.titre) { out.titre = h1[1]; out.titreLigne = n; continue; }
+    if (h2) {
+      const name = fold(h2[1]), hit = PART_KEYS.find(([k]) => name.startsWith(k));
+      part = { nom: h2[1], cle: hit ? hit[1] : '', ligne: n, fin: lines.length };
+      if (out.parties.length) out.parties[out.parties.length - 1].fin = n;
+      out.parties.push(part);
+      continue;
+    }
+    if (/^#{3,}\s/.test(line) && part) continue;
+    if (!part) { if (out.titre && line.trim()) intro.push(line.trim()); continue; }
+    const item = /^( ?)[-*+]\s+(?:\[([ xX])\]\s+)?(.*)$/.exec(line);
+    if (!item || !part.cle) continue;
+    const box = item[2], body = item[3].trim();
+    if (!body || placeholder(body)) continue;
+    part.dernier = n;
+    if (part.cle === 'jalons') {
+      const bits = body.split(/\s+·\s+/), j = { ligne: n, nom: bits[0].trim(), fait: box === 'x' || box === 'X', pct: null, date: '' };
+      for (const b of bits.slice(1)) { const t = b.trim(), p = /^(\d{1,3})\s*%$/.exec(t); if (p) j.pct = Math.min(100, Number(p[1])); else if (DATE_RE.test(t)) j.date = t; }
+      if (j.fait) j.pct = 100;
+      out.jalons.push(j);
+    } else if (part.cle === 'taches') {
+      if (box === undefined) continue;
+      out.taches.push({ ligne: n, fait: box === 'x' || box === 'X', texte: body });
+    } else if (part.cle === 'decisions') {
+      const bits = body.split(/\s+·\s+/), d = { ligne: n, date: '', texte: '', pourquoi: '', ecarte: '' }, rest = [];
+      if (DATE_RE.test(bits[0].trim())) d.date = bits.shift().trim();
+      for (const b of bits) {
+        const t = b.trim(), w = /^pourquoi\s*:\s*(.*)$/i.exec(t), e = /^(?:écarté|ecarte|écarte)\s*:\s*(.*)$/i.exec(t);
+        if (w) d.pourquoi = w[1]; else if (e) d.ecarte = e[1]; else rest.push(t);
+      }
+      d.texte = rest.join(' · ');
+      out.decisions.push(d);
+    } else {
+      const l = splitLink(body), bits = l.reste ? l.reste.split(/\s+·\s+/) : [], x = { ligne: n, nom: l.nom, cible: l.cible, etat: '', note: '' }, notes = [];
+      for (const b of bits) { const k = LIVRABLE_ETATS[fold(b.trim())]; if (k && part.cle === 'livrables') x.etat = k; else if (b.trim()) notes.push(b.trim()); }
+      x.note = notes.join(' · ');
+      out[part.cle].push(x);
+    }
+  }
+  out.intro = intro.join(' ');
+  const marks = out.jalons.length ? out.jalons.map(j => j.pct || 0) : null;
+  out.avancement = marks ? Math.round(marks.reduce((a, b) => a + b, 0) / marks.length) : out.taches.length ? Math.round(100 * out.taches.filter(t => t.fait).length / out.taches.length) : null;
+  return out;
+}
+/* the statuses of a project, and the ones that end it, as systeme/metadonnees.md says */
+function projectStatuses(root) {
+  let text = ''; try { text = fs.readFileSync(path.join(root, 'systeme', 'metadonnees.md'), 'utf8'); } catch (_) { }
+  let cols = null;   /* the table of types: the one whose head has Statuts and Fin */
+  for (const line of text.split(/\r?\n/)) {
+    if (!line.trim().startsWith('|')) { cols = null; continue; }
+    const c = line.trim().replace(/^\||\|$/g, '').split('|').map(s => s.trim());
+    if (c.includes('Statuts') && c.includes('Fin')) { cols = { s: c.indexOf('Statuts'), f: c.indexOf('Fin') }; continue; }
+    if (cols && c[0] === 'projet') return { statuts: c[cols.s].split(',').map(s => s.trim()).filter(Boolean), fin: c[cols.f].split(',').map(s => s.trim()).filter(Boolean) };
+  }
+  return { statuts: ['actif', 'bloque', 'clos', 'abandonne'], fin: ['clos', 'abandonne'] };
+}
+const projectCache = new Map();
+function projectOf(root, f) {
+  let hit = projectCache.get(f.p);
+  if (!hit || hit.m !== f.m || hit.s !== f.s) {
+    let text = ''; try { text = fs.readFileSync(path.join(root, f.p), 'utf8'); } catch (_) { }
+    hit = { m: f.m, s: f.s, d: parseProject(text) };
+    projectCache.set(f.p, hit);
+  }
+  return hit.d;
+}
+/* projects live in projets/, as index.py reads them (the template in systeme/gabarits/ is not one) */
+const isProject = f => f.k === 'md' && f.p.startsWith('projets/') && f.h && f.h.type === 'projet' && !/(^|\/)_index\.md$/.test(f.p);
+const slugOf = rel => rel.split('/').pop().replace(/\.md$/i, '');
+function listProjects() {
+  const { root, files, error } = listFiles();
+  if (error) return { error, projets: [] };
+  const projets = files.filter(isProject).map(f => {
+    const d = projectOf(root, f);
+    return {
+      path: f.p, slug: slugOf(f.p), titre: d.titre || f.t || slugOf(f.p), statut: d.header.statut || '', domaine: d.header.domaine || '',
+      echeance: d.header.echeance || '', resume: d.header.resume || '', prochaine: d.header.prochaine_etape || '', maj: d.header.maj || '', m: f.m,
+      avancement: d.avancement, taches: d.taches.length, faites: d.taches.filter(t => t.fait).length, jalons: d.jalons.length,
+      aValider: d.livrables.filter(l => l.etat === 'a-valider').length
+    };
+  });
+  return { root, projets, ...projectStatuses(root) };
+}
+/* a link of the project to a file of the workspace or to the web: what the page shows for it */
+const VIDEO_HOSTS = /(^|\.)(youtube\.com|youtu\.be|vimeo\.com|loom\.com|tiktok\.com|instagram\.com)$/i;
+function plainExcerpt(text, max = 280) {
+  const body = text.replace(/^---\r?\n[\s\S]*?\r?\n---[ \t]*(\r?\n|$)/, '').replace(/^#\s+.*$/m, '');
+  return body.replace(/```[\s\S]*?```/g, ' ').replace(/!\[[^\]]*\]\([^)]*\)/g, ' ').replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/[#>*_`|]/g, ' ').replace(/^\s*[-+]\s+(\[[ xX]\]\s+)?/gm, '').replace(/\s+/g, ' ').trim().slice(0, max);
+}
+function resolveLink(projectRel, cible) {
+  if (!cible) return { genre: 'texte' };
+  if (/^https?:\/\//i.test(cible)) {
+    let host = ''; try { host = new URL(cible).hostname.replace(/^www\./, ''); } catch (_) { }
+    return { genre: VIDEO_HOSTS.test(host) ? 'video' : 'lien', url: cible, hote: host };
+  }
+  const clean = cible.split('#')[0].replace(/^<|>$/g, '');
+  let decoded = clean; try { decoded = decodeURIComponent(clean); } catch (_) { }
+  const tries = [path.posix.normalize(path.posix.join(path.posix.dirname(projectRel), decoded)), path.posix.normalize(decoded.replace(/^\/+/, ''))];
+  for (const rel of tries) {
+    if (rel.startsWith('..')) continue;
+    let t; try { t = editorTarget(rel); } catch (_) { continue; }
+    const kind = kindOf(t.rel), out = { genre: kind === 'image' ? 'image' : kind === 'md' ? 'md' : 'fichier', chemin: t.rel, mtime: Math.round(t.st.mtimeMs) };
+    if (kind === 'md' && t.st.size <= READ_MAX) {
+      const text = fs.readFileSync(t.abs, 'utf8'), h = readHeader(text);
+      out.titre = ((text.replace(/^---\r?\n[\s\S]*?\r?\n---[ \t]*(\r?\n|$)/, '').match(/^#\s+(.+)$/m) || [])[1] || '').trim();
+      out.resume = h.resume || ''; out.extrait = plainExcerpt(text);
+    }
+    return out;
+  }
+  return { genre: 'absent', chemin: decoded };
+}
+function gitRun(root, args, ms = 8000) {
+  return new Promise(ok => execFile('git', ['-C', root, ...args], { timeout: ms, maxBuffer: 8 * 1024 * 1024, windowsHide: true }, (err, stdout) => ok(err ? null : String(stdout))));
+}
+/* the project's history: its commits (the project file and the files it links), what is not committed yet,
+   and the lines of journal/log.md that name it */
+async function projectHistory(root, rel, slug, linked) {
+  const files = [rel, ...linked], fil = [];
+  const inRepo = (await gitRun(root, ['rev-parse', '--is-inside-work-tree'])) !== null;
+  if (inRepo) {
+    const log = await gitRun(root, ['log', '-n', '40', '--date=iso-strict', '--format=%x1e%H%x1f%aI%x1f%an%x1f%s', '--name-only', '--', ...files]);
+    for (const rec of (log || '').split('\x1e').slice(1)) {
+      const [head, ...rest] = rec.split('\n'), [hash, date, auteur, message] = head.split('\x1f');
+      fil.push({ source: 'git', hash: (hash || '').slice(0, 9), date, auteur, message, fichiers: rest.map(s => s.trim()).filter(Boolean) });
+    }
+    const status = await gitRun(root, ['status', '--porcelain', '--', ...files]);
+    const changed = (status || '').split('\n').map(s => s.slice(3).trim()).filter(Boolean);
+    if (changed.length) {
+      let last = 0; for (const c of changed) { try { last = Math.max(last, fs.statSync(path.join(root, c)).mtimeMs); } catch (_) { } }
+      fil.push({ source: 'local', date: new Date(last || Date.now()).toISOString(), auteur: '', message: 'Modifications pas encore enregistrées dans Git', fichiers: changed });
+    }
+  }
+  let journal = ''; try { journal = fs.readFileSync(path.join(root, 'journal', 'log.md'), 'utf8'); } catch (_) { }
+  const word = new RegExp('(^|[^a-z0-9-])' + slug.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '([^a-z0-9-]|$)', 'i');
+  for (const line of journal.split(/\r?\n/)) {
+    const m = /^-\s+(\d{4}-\d{2}-\d{2})\s*·\s*(.+)$/.exec(line.trim());
+    if (m && word.test(m[2])) fil.push({ source: 'journal', date: m[1], auteur: '', message: m[2] });
+  }
+  fil.sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  return { git: inRepo, fil: fil.slice(0, 40) };
+}
+async function readProject(rel) {
+  const t = editorTarget(rel);
+  if (kindOf(t.rel) !== 'md') throw httpError(400, 'Ce n’est pas une fiche Markdown');
+  const doc = readForEditor(t.rel), d = parseProject(doc.content || '');
+  if (d.header.type !== 'projet') throw httpError(400, 'Ce fichier n’est pas un projet (type: projet)');
+  const slug = slugOf(t.rel);
+  for (const x of [...d.livrables, ...d.sources]) Object.assign(x, resolveLink(t.rel, x.cible));
+  const listed = new Set([...d.livrables, ...d.sources].map(x => x.chemin).filter(Boolean));
+  const { files } = listFiles(), lies = [];
+  for (const f of files) {
+    if (f.p === t.rel || listed.has(f.p) || !f.h || f.p.startsWith('archives/')) continue;
+    if (!String(f.h.projet || '').split(',').map(s => s.trim()).includes(slug)) continue;
+    lies.push({ chemin: f.p, titre: f.t || baseNameOf(f.p), type: f.h.type || '', statut: f.h.statut || '', resume: f.h.resume || '', inbox: f.p.startsWith('inbox/'), m: f.m });
+  }
+  const linked = [...listed].filter(p => !generatedFile(p));
+  const history = await projectHistory(t.root, t.rel, slug, linked);
+  return { ...doc, slug, projet: d, lies, ...history, ...projectStatuses(t.root) };
+}
+const baseNameOf = p => p.split('/').pop();
+/* the lines of the project file that changed since a date: git diff against the last commit before it,
+   working copy included. A file born after that date is new from top to bottom. */
+async function projectChanges(rel, since) {
+  const t = editorTarget(rel), when = new Date(String(since || ''));
+  if (isNaN(when)) throw httpError(400, 'Date de lecture illisible');
+  if ((await gitRun(t.root, ['rev-parse', '--is-inside-work-tree'])) === null) return { git: false, lignes: [] };
+  const rev = ((await gitRun(t.root, ['rev-list', '-1', '--before=' + when.toISOString(), 'HEAD', '--', t.rel])) || '').trim();
+  if (!rev) {
+    const born = ((await gitRun(t.root, ['log', '--format=%aI', '--diff-filter=A', '--', t.rel])) || '').trim().split('\n').pop();
+    return born && new Date(born) > when ? { git: true, tout: true, lignes: [] } : { git: true, lignes: [] };
+  }
+  const diff = (await gitRun(t.root, ['diff', '-U0', '--no-color', rev, '--', t.rel])) || '', lignes = [];
+  for (const m of diff.matchAll(/^@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@/gm)) {
+    const start = Number(m[1]), count = m[2] === undefined ? 1 : Number(m[2]);
+    for (let k = 0; k < count; k++) lignes.push(start - 1 + k);
+  }
+  return { git: true, depuis: rev.slice(0, 9), lignes };
+}
+
 /* ---------------------------- THE SECOND BRAIN'S DATA ---------------------------- */
 const FEEDS = { '/api/calendar': () => cached('cal', 120000, getCalendar), '/api/artifacts': async () => getArtifacts(), '/api/routines': () => cached('rt', 60000, getRoutines), '/api/stats': () => cached('stats', 60000, getStats), '/api/email': () => cached('mail', 180000, getEmail) };
 async function boot() {
@@ -750,7 +962,7 @@ function needsFirstRefresh() {
 const MIME = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg',
   '.webp': 'image/webp', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.ico': 'image/x-icon', '.gif': 'image/gif', '.mp4': 'video/mp4', '.txt': 'text/plain' };
 const PUBLIC_FILES = new Set(['index.html', 'os.html', 'copy.css', 'copy.js', 'shell-extras.js', 'view-transitions.js', 'widgets.html']);
-const PUBLIC_DIRS = ['assets', 'brain', 'views', 'fichiers', 'bibliotheque'];
+const PUBLIC_DIRS = ['assets', 'brain', 'views', 'fichiers', 'bibliotheque', 'projets'];
 function publicFile(p2) {
   let rel; try { rel = decodeURIComponent(p2).replace(/^\/+/, ''); } catch (_) { return null; }
   if (!rel || rel.includes('\0') || rel.includes('\\')) return null;
@@ -813,6 +1025,14 @@ const server = http.createServer(async (req, res) => {
       } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); }
     }
     if (p2 === '/local/assets' && !post) return sendJson(res, listAssets());
+    /* ---- the project page ---- */
+    if (p2.startsWith('/local/projets') && !post) {
+      try {
+        if (p2 === '/local/projets') return sendJson(res, listProjects());
+        if (p2 === '/local/projets/lire') return sendJson(res, await readProject(u.searchParams.get('path')));
+        if (p2 === '/local/projets/changements') return sendJson(res, await projectChanges(u.searchParams.get('path'), u.searchParams.get('depuis')));
+      } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); }
+    }
     if (p2 === '/data/snapshot.js') return sendScript(res, 'window.COPY_DATA=' + JSON.stringify(routinesLib.calendarData(routineSources.allRoutines())) + ';');
     if (p2 === '/data/arms-usage.js') { const f = path.join(DATA, 'arms-usage.js'); return fs.existsSync(f) ? serveFile(req, res, f) : sendScript(res, 'window.ARMS_USAGE=null;'); }
 
@@ -891,6 +1111,8 @@ const server = http.createServer(async (req, res) => {
     if (p2 === '/fichiers') { res.writeHead(302, { Location: '/fichiers/' }); return res.end(); }
     if (p2 === '/fichiers/') return serveFile(req, res, path.join(KIT, 'fichiers', 'index.html'));
     if (p2 === '/bibliotheque') { res.writeHead(302, { Location: '/bibliotheque/' }); return res.end(); }
+    if (p2 === '/projets') { res.writeHead(302, { Location: '/projets/' }); return res.end(); }
+    if (p2 === '/projets/') return serveFile(req, res, path.join(KIT, 'projets', 'index.html'));
     if (p2 === '/bibliotheque/') return serveFile(req, res, path.join(KIT, 'bibliotheque', 'index.html'));
     if (p2.startsWith('/artifacts/')) {
       let rel; try { rel = decodeURIComponent(p2.slice('/artifacts/'.length)); } catch (_) { rel = null; }
