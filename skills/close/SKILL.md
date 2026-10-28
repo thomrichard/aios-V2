@@ -18,7 +18,7 @@ Relis toute la session et trie en quatre, puis montre l'inventaire en 5 à 8 lig
 - Une règle, qui vaut pour tout le workspace → `journal/regles.md` (même forme).
 - Ce qui n'existe que dans le chat et vaut d'être gardé → `fiche`, puis `classer`. Dans le doute, une ligne dans `inbox/capture.md`.
 - Un livrable sans en-tête ou mal rangé → `classer`.
-- Un projet touché → `projets/<slug>.md` : statut, prochaine étape, tâches.
+- Un projet touché → `projets/<slug>.md` : statut, prochaine étape, tâches, jalons, livrables.
 - Le journal → une ligne par chantier dans `journal/log.md` : `- AAAA-MM-JJ · <action> | <sujet>` (date : `date +%F`).
 - Un fait durable qu'on ne retrouverait ni dans les fichiers ni dans Git (une préférence, l'état d'un sujet) → `memory/`, et sa ligne dans `MEMORY.md`. Mets à jour un souvenir existant plutôt que d'en créer un double.
 
@@ -48,3 +48,4 @@ Session longue (plusieurs chantiers, ou de la matière qu'on voudra relire) : é
 ## Journal des changements
 - 2026-10-23 · reprise de la skill close de Thomas Richard (classroom « Faire vivre ton AIOS »), adaptée à AIOS v2 : places du socle, sujets ouverts en tâches, bilan des sessions longues · que le chat puisse disparaître sans perte
 - 2026-10-27 · règles et décisions · une décision vit dans la fiche de son projet, une règle dans journal/regles.md
+- 2026-10-28 · jalons et livrables · la page Projets les lit dans la fiche du projet

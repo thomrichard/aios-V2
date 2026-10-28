@@ -132,6 +132,7 @@ Avant de dire « c'est fait », vérifie : relance le test ou relis le fichier. 
 - `interface/` : SM4RT, l'interface tirée de l'Agentic OS v2 de Jay E | RoboNuggets (licence MIT), branchée sur ce workspace. Adresse : `http://localhost:50000`. Toujours allumée : `python3 systeme/scripts/interface.py installer` (une fois) ; `etat` pour vérifier, `retirer` pour l'arrêter.
 - Ses départements, ses routines et ses applications sont générés par `systeme/scripts/index.py` depuis les domaines de `systeme/metadonnees.md`, `systeme/routines.md` et `systeme/connexions.md`. Nos changements au kit : `interface/MODIFS.md`.
 - Onglet Fichiers (ou `http://localhost:50000/fichiers/`) : l'utilisateur y lit et modifie les fichiers du workspace, en Markdown ou directement dans l'aperçu mis en forme. Chaque enregistrement met `maj` à la date du jour et relance `index.py` ; un fichier généré y est en lecture seule.
+- Onglet Projets (ou `http://localhost:50000/projets/`) : chaque projet de `projets/` en deux vues. Atelier : la frise des jalons, puis ce qui entre, ce qui se fait, ce qui sort. Fiche : le fichier, avec ce qui a changé depuis la dernière lecture et l'historique Git. Chaque geste réécrit une ligne de la fiche. Nuit, jour et couleur se règlent dans l'onglet.
 - Pour la modifier ou la réparer : `interface/skills/agenticos/SKILL.md` et les guides de `interface/`.
 
 ## Routines
