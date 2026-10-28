@@ -35,7 +35,7 @@ Chaque clic sur une tuile des micro-apps passe par l'OS, qui écrit une ligne da
 
 | Onglet | Mesuré | Non mesuré |
 |---|---|---|
-| Skills | exécutions, tokens, $ API par skill, sur 7 et 30 jours | chaque skill trouvée, avec l'étiquette « non mesuré » |
+| Skills | exécutions, tokens, $ API par skill, sur 7 et 30 jours, et les exécutions de chaque jour (les barres de sa fiche) | chaque skill trouvée, avec l'étiquette « non mesuré » |
 | Applications | appels par connexion, ouvertures par app locale | connexions avec l'étiquette « non mesuré » |
 | Routines | exécutions, tokens, $ API par routine, sur les 7 derniers jours | « non mesuré » dans la ligne et dans le détail |
 

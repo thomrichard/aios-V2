@@ -1,6 +1,8 @@
 ---
 name: fiche
 description: Écrit une fiche à partir de ce que l'utilisateur donne (texte brut, dictée, note, lien), ou pour décrire un fichier qui ne peut pas porter d'en-tête (PDF, vidéo, son), puis la passe à classer pour la ranger. Déclencheurs : « fais-en une fiche », « note ça », « garde ça », « crée une fiche », une ligne de inbox/capture.md.
+metadata:
+  famille: ranger
 ---
 # fiche
 

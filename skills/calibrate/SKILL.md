@@ -1,6 +1,8 @@
 ---
 name: calibrate
 description: En fin de session, relit la discussion, repère les corrections, les préférences et ce qui a manqué, puis propose au plus 7 changements précis (skills, règles d'AGENTS.md, mémoire, réglages) ; l'utilisateur choisit lesquels appliquer. Reprend aussi les retours mis de côté par note. Déclencheurs : « calibrate », « calibre », « calibre léger », « qu'est-ce qu'on a appris », « mets à jour tes skills », « fais le point de la session ».
+metadata:
+  famille: sessions
 ---
 # calibrate
 

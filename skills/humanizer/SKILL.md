@@ -1,6 +1,8 @@
 ---
 name: humanizer
 description: Repère dans un texte les tics d'écriture qui sentent l'IA (formules creuses, structures répétées, ponctuation et mise en forme de machine) et le réécrit pour qu'il sonne comme son auteur, ou se contente de les nommer. Modes : script, newsletter, post, page. Déclencheurs : « humanizer », « humanise ce texte », « ça sent l'IA », « enlève le style IA », « humanizer liste ».
+metadata:
+  famille: creer
 ---
 # humanizer
 

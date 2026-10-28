@@ -1,6 +1,8 @@
 ---
 name: note
 description: Met de côté un retour sur une skill, sans couper le travail en cours, dans skills/<nom>/feedback.md ; les retours s'appliquent quand l'utilisateur le demande, ou à la prochaine calibrate. Déclencheurs : « note », « note pour <skill> », « retour sur <skill> », « applique les retours de <skill> ».
+metadata:
+  famille: sessions
 ---
 # note
 

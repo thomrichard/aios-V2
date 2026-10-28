@@ -1,6 +1,8 @@
 ---
 name: surprise-me
 description: Pour une création visuelle (page HTML, slide, composant, visuel) qui sort « propre mais banale » : change complètement d'approche, impose au moins trois techniques avancées, puis fait une boucle capture, critique, amélioration avant de montrer le résultat. Déclencheurs : « surprise-me », « surprends-moi », « ose quelque chose », « c'est trop banal », « sors des sentiers battus ».
+metadata:
+  famille: creer
 ---
 # surprise-me
 

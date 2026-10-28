@@ -10,6 +10,7 @@
      /fichiers/              the file editor alone (also the Second Brain's Fichiers tab)
      /bibliotheque/          the asset library alone (also the Second Brain's Bibliothèque tab)
      /projets/               the project page alone (also the Second Brain's Projets tab)
+     /competences/           the skills page alone (also the Second Brain's Skills tab)
      /widgets                the widget library
      /artifacts/<file>       the ring's balls (the artifacts folder)
    Homepage feeds (GET)
@@ -26,6 +27,9 @@
      /local/projets          every project with its header and progress
      /local/projets/lire     one project: its text, its parts, its links, its history (Git, journal/log.md)
      /local/projets/changements   the lines of a project changed since a date (git diff)
+   Skills page (the Skills tab)
+     /local/competences      every skill: its header, family, steps, journal, notes, uses, origin and usage (GET)
+     /local/competences/retour    adds a note to a skill's feedback.md, the line /note writes (POST, local pages only)
    Actions (POST, local pages only)
      /api/run                runs a skills deck card through your agent's command (os-config.json "runner")
      /api/apply-comments     the "Apply all comments" runner that review pages call
@@ -926,6 +930,165 @@ async function projectChanges(rel, since) {
   return { git: true, depuis: rev.slice(0, 9), lignes };
 }
 
+/* ---------------------------- SKILLS: the skills page (competences/) ----------------------------
+   AIOS: the Skills tab reads every skills/<nom>/SKILL.md: its header (name, description with its « Déclencheurs »,
+   and the famille under metadata:), its steps and its ## Journal des changements; then its feedback.md (the notes
+   put aside by /note), the families of systeme/metadonnees.md, where it serves (the steps of processus/*.md, the
+   Skill column of systeme/routines.md), whether it comes from the socle (git ls-tree socle/main, when that remote
+   exists) and its usage (data/arms-usage.json, written by refresh/usage.mjs). Read only, but for one action: a note
+   added to feedback.md, the line /note writes. */
+const SKILL_MAX_LINES = 60;
+const cellsOf = line => line.trim().replace(/^\||\|$/g, '').split('|').map(s => s.trim());
+const isRule = c => /^[-: ]*$/.test(c[0] || '-');
+const unquote = s => s.replace(/`/g, '').trim();
+/* every Markdown table of a file whose first column has this title, end to end: a list of {column: text} */
+function tablesOf(text, first) {
+  const rows = []; let cols = null;
+  for (const line of text.split(/\r?\n/)) {
+    if (!line.trim().startsWith('|')) { cols = null; continue; }
+    const c = cellsOf(line);
+    if (!cols) { cols = c[0] === first ? c : []; continue; }
+    if (cols.length && !isRule(c)) rows.push(Object.fromEntries(cols.map((k, i) => [k, c[i] || ''])));
+  }
+  return rows;
+}
+const readText = f => { try { return fs.readFileSync(f, 'utf8'); } catch (_) { return ''; } };
+function skillFamilies(root) {
+  const seen = new Map();
+  for (const r of tablesOf(readText(path.join(root, 'systeme', 'metadonnees.md')), 'Famille')) {
+    const id = unquote(r.Famille || '');
+    if (id && !/^</.test(id) && !seen.has(id)) seen.set(id, { id, nom: r.Nom || id, couvre: r['Ce qu’elle regroupe'] || r["Ce qu'elle regroupe"] || '' });
+  }
+  return [...seen.values()];
+}
+/* the header of a SKILL.md: name, description, and famille wherever it sits (under metadata: or not) */
+function skillHeader(text) {
+  const lines = text.split(/\r?\n/), h = {};
+  if ((lines[0] || '').trim() !== '---') return h;
+  for (const line of lines.slice(1)) {
+    if (line.trim() === '---') break;
+    const m = /^(\s*)([A-Za-z_-]+):\s*(.*)$/.exec(line);
+    if (!m) continue;
+    const v = m[3].split(' #')[0].trim().replace(/^["']|["']$/g, '');
+    if (!m[1] && (m[2] === 'name' || m[2] === 'description')) h[m[2]] = v;
+    if (m[2] === 'famille') h.famille = v;
+  }
+  return h;
+}
+/* « … Déclencheurs : « a », « b ». » → the text before, and each quoted trigger */
+function splitDescription(desc) {
+  const i = desc.search(/D[ée]clencheurs?\s*:/i);
+  if (i < 0) return { resume: desc, declencheurs: [] };
+  const declencheurs = [...desc.slice(i).matchAll(/«\s*([^»]+?)\s*»/g)].map(m => m[1]);
+  return { resume: desc.slice(0, i).trim(), declencheurs };
+}
+/* the lines of a part (## Titre) of a Markdown text, or null */
+function partOf(body, re) {
+  const lines = body.split(/\r?\n/), out = []; let on = false;
+  for (const line of lines) {
+    if (/^##\s/.test(line)) { if (on) break; on = re.test(line.replace(/^##\s+/, '').trim()); continue; }
+    if (on) out.push(line);
+  }
+  return on || out.length ? out : null;
+}
+/* the steps: the numbered list of ## Étapes; else the parts of the skill (## 1. L'inventaire, ## Noter…), the
+   guard rails, references and journal aside; else its first numbered list */
+const META_PART = /^(garde-fous|r[ée]f[ée]rences?|journal des changements|retours|exemples?|sources?)\b/i;
+function skillSteps(body) {
+  const pick = lines => { const out = []; for (const l of lines) { const m = /^\d+\.\s+(.*)$/.exec(l); if (m) out.push(m[1].trim()); else if (out.length && !/^\s/.test(l) && l.trim()) break; } return out; };
+  const part = partOf(body, /^[ée]tapes\b/i);
+  if (part) return pick(part);
+  const parts = body.split(/\r?\n/).filter(l => /^##\s/.test(l)).map(l => l.replace(/^##\s+(\d+\.\s+)?/, '').trim()).filter(t => !META_PART.test(t));
+  return parts.length >= 2 ? parts : pick(body.split(/\r?\n/));
+}
+const JOURNAL_RE = /^-\s+(\d{4}-\d{2}-\d{2})\s*·\s*(.+)$/;
+function skillJournal(body) {
+  return (partOf(body, /^journal des changements/i) || []).map(l => JOURNAL_RE.exec(l.trim())).filter(Boolean).map(m => {
+    const [quoi, ...pourquoi] = m[2].split(' · ');
+    return { date: m[1], quoi: quoi.trim(), pourquoi: pourquoi.join(' · ').trim() };
+  });
+}
+/* feedback.md: - [ ] AAAA-MM-JJ · <retour> · contexte : <…>   (and - [x] … · appliqué le …, or · écarté : …) */
+function skillNotes(text) {
+  const attente = [], faits = [];
+  text.split(/\r?\n/).forEach((l, ligne) => {
+    const m = /^-\s+\[([ xX])\]\s+(.*)$/.exec(l.trim());
+    if (!m) return;
+    const parts = m[2].split(' · ').map(s => s.trim()), date = DATE_RE.test(parts[0]) ? parts.shift() : '';
+    const contexte = (parts.find(s => /^contexte\s*:/i.test(s)) || '').replace(/^contexte\s*:\s*/i, '');
+    const fin = parts.find(s => /^(appliqué le|écarté)/i.test(s)) || '';
+    const texte = parts.filter(s => !/^contexte\s*:/i.test(s) && s !== fin && s !== 'pour le socle').join(' · ');
+    (m[1] === ' ' ? attente : faits).push({ date, texte, contexte, fin, socle: parts.includes('pour le socle'), ligne });
+  });
+  return { attente, faits };
+}
+/* where each skill serves: the steps of the processes, the routines that launch it */
+function skillUses(root) {
+  const uses = new Map(), add = (id, u) => { if (!uses.has(id)) uses.set(id, []); if (!uses.get(id).some(x => x.chemin === u.chemin && x.nom === u.nom)) uses.get(id).push(u); };
+  let names = []; try { names = fs.readdirSync(path.join(root, 'processus')).filter(n => n.endsWith('.md') && n !== '_index.md'); } catch (_) { }
+  for (const n of names) {
+    const rel = 'processus/' + n, text = readText(path.join(root, rel)), h = readHeader(text);
+    const titre = ((text.replace(/^---\r?\n[\s\S]*?\r?\n---[ \t]*(\r?\n|$)/, '').match(/^#\s+(.+)$/m) || [])[1] || n.slice(0, -3)).trim();
+    for (const line of text.split(/\r?\n/)) {
+      if (!line.trim().startsWith('|')) continue;
+      const c = cellsOf(line);
+      if (c.length < 4 || c[0] === 'Étape' || isRule(c)) continue;
+      for (const s of c[1].split(',').map(unquote)) if (s && s !== '—' && s !== '-') add(s, { genre: 'processus', nom: titre, chemin: rel, statut: h.statut || '' });
+    }
+  }
+  for (const r of tablesOf(readText(path.join(root, 'systeme', 'routines.md')), 'Routine')) {
+    const s = unquote(r.Skill || '');
+    if (s && s !== '—' && s !== '-') add(s, { genre: 'routine', nom: r.Routine, chemin: 'systeme/routines.md', quand: r.Quand || '', etat: r['État'] || '' });
+  }
+  return uses;
+}
+/* the skills of the socle, when the socle remote exists (an installed AIOS): the others are yours */
+async function socleSkills(root) {
+  const out = await gitRun(root, ['ls-tree', '--name-only', 'socle/main', 'skills/']);
+  return out === null ? null : new Set(out.split('\n').map(s => s.trim().replace(/^skills\//, '')).filter(Boolean));
+}
+function skillUsage() {
+  let u = null; try { u = JSON.parse(fs.readFileSync(path.join(DATA, 'arms-usage.json'), 'utf8')); } catch (_) { }
+  const rows = new Map(); if (u && Array.isArray(u.skills)) for (const s of u.skills) rows.set(String(s.id || '').replace(/^\/+/, ''), s);
+  return { mesure: !!(u && u.measured && u.measured.skills), genere: u ? u.generatedAt || null : null, rows };
+}
+async function listSkills() {
+  const root = workspaceRoot();
+  if (!root) return { error: 'Aucun workspace défini (config/workspace.json)', skills: [], familles: [] };
+  let names = []; try { names = fs.readdirSync(path.join(root, 'skills'), { withFileTypes: true }).filter(e => e.isDirectory() && !e.name.startsWith('.')).map(e => e.name).sort(); } catch (_) { }
+  const familles = skillFamilies(root), uses = skillUses(root), socle = await socleSkills(root), usage = skillUsage();
+  const skills = [];
+  for (const id of names) {
+    const rel = 'skills/' + id + '/SKILL.md', abs = path.join(root, rel);
+    let st; try { st = fs.statSync(abs); } catch (_) { continue; }
+    const text = readText(abs), h = skillHeader(text), body = text.replace(/^---\r?\n[\s\S]*?\r?\n---[ \t]*(\r?\n|$)/, '');
+    const notes = skillNotes(readText(path.join(root, 'skills', id, 'feedback.md'))), u = usage.rows.get(id);
+    skills.push({
+      id, nom: h.name || id, chemin: rel, ...splitDescription(h.description || ''), famille: h.famille || '',
+      origine: socle ? (socle.has(id) ? 'socle' : 'perso') : '', etapes: skillSteps(body), journal: skillJournal(body),
+      retours: notes.attente, faits: notes.faits.length, feedback: fs.existsSync(path.join(root, 'skills', id, 'feedback.md')) ? 'skills/' + id + '/feedback.md' : '',
+      sert: uses.get(id) || [], lignes: text.replace(/\n$/, '').split(/\r?\n/).length, plafond: SKILL_MAX_LINES, m: Math.round(st.mtimeMs),
+      usage: u ? { r7: u.runs7 || 0, r30: u.runs30 || 0, tok30: u.tok30 || 0, cout30: u.cost30 || 0, der: u.last || null, jours: u.days || null } : null
+    });
+  }
+  return { root, familles, socle: !!socle, mesure: usage.mesure, genere: usage.genere, skills };
+}
+/* a note on a skill, from the page: the line /note writes, at the end of skills/<nom>/feedback.md */
+function addSkillNote({ id, texte }) {
+  const root = workspaceRoot();
+  if (!root) throw httpError(400, 'Aucun workspace défini (config/workspace.json)');
+  if (!okId(id) || !fs.existsSync(path.join(root, 'skills', id, 'SKILL.md'))) throw httpError(404, 'Skill introuvable');
+  const clean = String(texte || '').replace(/\s+/g, ' ').replace(/ · /g, ', ').trim().slice(0, 500);
+  if (!clean) throw httpError(400, 'Le retour est vide');
+  const rel = 'skills/' + id + '/feedback.md', d = new Date();
+  /* a feedback.md already there gets the editor's checks on its real path (a link never leads outside) */
+  const t = fs.existsSync(path.join(root, rel)) ? editorTarget(rel) : editorTarget(rel, false);
+  const jour = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  const before = readText(t.abs), head = before ? (before.endsWith('\n') ? '' : '\n') : '# Retours · ' + id + '\n\n';
+  fs.appendFileSync(t.abs, head + '- [ ] ' + jour + ' · ' + clean + ' · contexte : noté depuis l’onglet Skills\n');
+  return { ok: true, path: rel };
+}
+
 /* ---------------------------- THE SECOND BRAIN'S DATA ---------------------------- */
 const FEEDS = { '/api/calendar': () => cached('cal', 120000, getCalendar), '/api/artifacts': async () => getArtifacts(), '/api/routines': () => cached('rt', 60000, getRoutines), '/api/stats': () => cached('stats', 60000, getStats), '/api/email': () => cached('mail', 180000, getEmail) };
 async function boot() {
@@ -970,7 +1133,7 @@ function needsFirstRefresh() {
 const MIME = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg',
   '.webp': 'image/webp', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.ico': 'image/x-icon', '.gif': 'image/gif', '.mp4': 'video/mp4', '.txt': 'text/plain' };
 const PUBLIC_FILES = new Set(['index.html', 'os.html', 'copy.css', 'copy.js', 'shell-extras.js', 'view-transitions.js', 'widgets.html']);
-const PUBLIC_DIRS = ['assets', 'brain', 'views', 'fichiers', 'bibliotheque', 'projets'];
+const PUBLIC_DIRS = ['assets', 'brain', 'views', 'fichiers', 'bibliotheque', 'projets', 'competences'];
 function publicFile(p2) {
   let rel; try { rel = decodeURIComponent(p2).replace(/^\/+/, ''); } catch (_) { return null; }
   if (!rel || rel.includes('\0') || rel.includes('\\')) return null;
@@ -1041,6 +1204,8 @@ const server = http.createServer(async (req, res) => {
         if (p2 === '/local/projets/changements') return sendJson(res, await projectChanges(u.searchParams.get('path'), u.searchParams.get('depuis')));
       } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); }
     }
+    /* ---- the skills page ---- */
+    if (p2 === '/local/competences' && !post) { try { return sendJson(res, await listSkills()); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); } }
     if (p2 === '/data/snapshot.js') return sendScript(res, 'window.COPY_DATA=' + JSON.stringify(routinesLib.calendarData(routineSources.allRoutines())) + ';');
     if (p2 === '/data/arms-usage.js') { const f = path.join(DATA, 'arms-usage.js'); return fs.existsSync(f) ? serveFile(req, res, f) : sendScript(res, 'window.ARMS_USAGE=null;'); }
 
@@ -1077,6 +1242,10 @@ const server = http.createServer(async (req, res) => {
     if (post && p2 === '/local/files/save') {
       let q; try { q = JSON.parse(await readBody(req) || '{}'); } catch (e) { return sendJson(res, { error: e.status ? e.message : 'le corps de la requête n’est pas du JSON' }, e.status || 400); }
       try { const r = await saveFile(q); return sendJson(res, r, r.conflict ? 409 : 200); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); }
+    }
+    if (post && p2 === '/local/competences/retour') {
+      let q; try { q = JSON.parse(await readBody(req) || '{}'); } catch (e) { return sendJson(res, { error: e.status ? e.message : 'le corps de la requête n’est pas du JSON' }, e.status || 400); }
+      try { return sendJson(res, addSkillNote(q)); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); }
     }
     if (post && p2 === '/api/run') {
       const { id, model, effort } = JSON.parse(await readBody(req) || '{}');
@@ -1121,6 +1290,8 @@ const server = http.createServer(async (req, res) => {
     if (p2 === '/bibliotheque') { res.writeHead(302, { Location: '/bibliotheque/' }); return res.end(); }
     if (p2 === '/projets') { res.writeHead(302, { Location: '/projets/' }); return res.end(); }
     if (p2 === '/projets/') return serveFile(req, res, path.join(KIT, 'projets', 'index.html'));
+    if (p2 === '/competences') { res.writeHead(302, { Location: '/competences/' }); return res.end(); }
+    if (p2 === '/competences/') return serveFile(req, res, path.join(KIT, 'competences', 'index.html'));
     if (p2 === '/bibliotheque/') return serveFile(req, res, path.join(KIT, 'bibliotheque', 'index.html'));
     if (p2.startsWith('/artifacts/')) {
       let rel; try { rel = decodeURIComponent(p2.slice('/artifacts/'.length)); } catch (_) { rel = null; }

@@ -1,6 +1,8 @@
 ---
 name: idees
 description: Gère les idées « un jour, peut-être », ces envies à creuser un jour, sans engagement. Note une idée sans poser de question, la creuse à la demande, la fait ressortir quand un sujet proche démarre, trie les plus vieilles en un lot, et lance en projet celles qui mûrissent. Déclencheurs : « note cette idée », « j'ai une idée », « un jour j'aimerais », « creuse cette idée », « tri des idées », « lance cette idée ».
+metadata:
+  famille: ranger
 ---
 # idees
 

@@ -1,6 +1,8 @@
 ---
 name: close
 description: Clôture une session pour que le chat puisse disparaître sans rien perdre : fait l'inventaire (décisions, livrables, ce qui n'existe que dans le chat, sujets ouverts), écrit tout à sa place (journal, fiches, projets, mémoire), fait de chaque sujet ouvert une tâche à reprendre, vérifie que rien ne traîne (Git, process lancés), puis donne un récap court. Déclencheurs : « close », « /close », « clôture la session », « on ferme », « range tout avant que je parte ».
+metadata:
+  famille: sessions
 ---
 # close
 

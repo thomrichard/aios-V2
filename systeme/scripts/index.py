@@ -136,6 +136,33 @@ def types_regles():
     return trouves
 
 
+def familles():
+    """Les familles de skills réglées dans systeme/metadonnees.md, celles du socle puis celles du workspace : {famille: nom}."""
+    trouvees = {}
+    for r in tableaux(META, "Famille"):
+        nom = r.get("Famille", "").strip("`")
+        if nom and nom not in trouvees:
+            trouvees[nom] = r.get("Nom", "") or nom
+    return trouvees
+
+
+def famille_de(chemin):
+    """La famille d'une skill : la ligne « famille: » de l'en-tête de son SKILL.md, sous « metadata: » ou non."""
+    try:
+        with open(chemin, encoding="utf-8") as f:
+            lignes = f.read().splitlines()
+    except (OSError, UnicodeDecodeError):
+        return ""
+    if not lignes or lignes[0].strip() != "---":
+        return ""
+    for ligne in lignes[1:]:
+        if ligne.strip() == "---":
+            break
+        if ligne.strip().startswith("famille:"):
+            return ligne.split(":", 1)[1].split(" #", 1)[0].strip().strip("\"'")
+    return ""
+
+
 def chemins():
     """Le chemin réglé de chaque type dans systeme/metadonnees.md : {type: modèle}, sans les types « — »."""
     trouves = {}

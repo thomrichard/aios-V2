@@ -1,6 +1,8 @@
 ---
 name: rangement
 description: Le rangement de nuit (2 h du matin) : archive les vieux points du jour, vide l'inbox avec fiche et classer, met de côté ce qui demande une réponse dans outbox/questions.md, puis écrit le point du jour. Se lance sans discussion (systeme/scripts/lancer.py rangement) ou à la demande. Déclencheurs : « rangement », « range l'inbox », « vide l'inbox », « fais le point du jour ».
+metadata:
+  famille: ranger
 ---
 # rangement
 

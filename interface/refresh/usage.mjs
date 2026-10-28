@@ -43,7 +43,7 @@ sources.push('ouvertures depuis les tuiles de l’OS (' + opens.length + ')');
 const skillList = readJSON(path.join(KIT, 'data', 'skills.json'), []);
 const skillRows = new Map(), skillByNorm = new Map();
 const rowFor = (name, kind, desc) => {
-  if (!skillRows.has(name)) { skillRows.set(name, { name: '/' + name, id: name, kind: kind || 'skill', desc: desc || '', runs7: 0, tok7: 0, cost7: 0, runs30: 0, tok30: 0, cost30: 0, last: 0, subagents30: 0 }); skillByNorm.set(norm(name), name); }
+  if (!skillRows.has(name)) { skillRows.set(name, { name: '/' + name, id: name, kind: kind || 'skill', desc: desc || '', runs7: 0, tok7: 0, cost7: 0, runs30: 0, tok30: 0, cost30: 0, last: 0, subagents30: 0, days: {} }); skillByNorm.set(norm(name), name); }
   return skillRows.get(name);
 };
 for (const s of skillList) rowFor(s.name, s.kind, s.desc);
@@ -61,6 +61,8 @@ const globalSkills = (dir, depth) => {
 if (readerOn('claudeCode')) globalSkills(path.join(os.homedir(), '.claude', 'skills'), 0);
 const addRun = (row, t, tok, cost, sub) => {
   row.runs30++; row.tok30 += tok || 0; row.cost30 += cost || 0; row.subagents30 += sub || 0;
+  // AIOS: the runs of each day, for the 30-day bars of the Skills tab (see MODIFS.md)
+  const day = dayOf(t); row.days[day] = (row.days[day] || 0) + 1;
   if (inWin(t, SHORT)) { row.runs7++; row.tok7 += tok || 0; row.cost7 += cost || 0; }
   if (t > row.last) row.last = t;
 };

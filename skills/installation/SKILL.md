@@ -1,6 +1,8 @@
 ---
 name: installation
 description: Installe et personnalise l'AIOS. Reprend le profil déposé dans inbox/ s'il existe, pose avec grill-me les questions imposées qui restent, remplit AGENTS.md (identité, objectifs, domaines), crée les routeurs, puis vérifie le workspace. À lancer une fois après le clonage, ou pour refaire la personnalisation. Déclencheurs : « installe l'AIOS », « installation », « personnalise mon AIOS ».
+metadata:
+  famille: systeme
 ---
 # installation
 

@@ -1,6 +1,8 @@
 ---
 name: align
 description: Avant une tâche floue ou coûteuse, pose d'un coup quelques questions numérotées à choix (a, b, c) pour viser juste du premier coup ; 3 par défaut, 5 au plus. Aucune trace écrite : on répond, puis on fait. Pour explorer une idée ou lancer un gros projet, c'est grill-me. Déclencheurs : « align », « aligne-toi », « pose-moi N questions avant », « vérifie qu'on vise juste », « /align 3 ».
+metadata:
+  famille: decider
 ---
 # align
 

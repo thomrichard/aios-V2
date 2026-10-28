@@ -1,6 +1,6 @@
 # Métadonnées
 
-Le seul endroit où se règlent les domaines, les champs d'en-tête, les types et leurs statuts. On change une ligne ici, puis `systeme/scripts/index.py` répercute : la carte des domaines d'`AGENTS.md` (que lisent tous les agents), les départements de l'interface. On n'écrit jamais ces copies à la main.
+Le seul endroit où se règlent les domaines, les champs d'en-tête, les types et leurs statuts, et les familles de skills. On change une ligne ici, puis `systeme/scripts/index.py` répercute : la carte des domaines d'`AGENTS.md` (que lisent tous les agents), les départements de l'interface. On n'écrit jamais ces copies à la main.
 
 Avant d'écrire un en-tête, lis ce fichier. `systeme/scripts/verifier.py` signale ce qui s'en écarte : un champ inconnu ou manquant, un type ou un statut hors liste, un domaine inconnu ou sans routeur, une date mal écrite, une carte pas à jour.
 
@@ -56,9 +56,21 @@ Un fichier `a-valider`, ou de type `livrable`, s'affiche dans `outbox/index.html
 | cloture | Le bilan d'une session longue, écrit par la skill `close` | — | — | `journal/clotures/<slug>-<date>.md` |
 | profil | Le profil d'installation, déposé dans `inbox/` | — | — | — |
 
+## Familles de skills
+
+Une famille regroupe les skills qui servent à la même chose : l'onglet Skills de l'interface les filtre par famille. Chaque skill écrit la sienne dans l'en-tête de son `SKILL.md`, sous `metadata:` (`  famille: <famille>`). « Nom » : ce que l'onglet affiche. Sans aucune famille réglée, l'onglet n'en montre pas.
+
+| Famille | Nom | Ce qu'elle regroupe |
+|---|---|---|
+| decider | Décider | Viser juste avant d'agir : questions, variantes, objections, entretien |
+| ranger | Ranger | Faire entrer et ranger ce qui arrive : fiches, classement, idées, rangement |
+| sessions | Sessions | Ouvrir, clore et améliorer une session de travail |
+| creer | Créer | Produire ou retoucher un livrable : texte, page, visuel |
+| systeme | Système | Installer et brancher l'AIOS, adapter une ressource externe |
+
 ## Ce workspace
 
-Tes domaines, tes types et tes champs à toi. La skill `installation` les écrit ici, en partant de `skills/installation/references/catalogue.md` ; ensuite, tu les changes ici. Le socle n'écrit jamais dans cette section.
+Tes domaines, tes types, tes champs et tes familles de skills à toi. La skill `installation` les écrit ici, en partant de `skills/installation/references/catalogue.md` ; ensuite, tu les changes ici. Le socle n'écrit jamais dans cette section.
 
 | Domaine | Ce qu'il couvre |
 |---|---|
@@ -68,3 +80,6 @@ Tes domaines, tes types et tes champs à toi. La skill `installation` les écrit
 
 | Champ | Ce qu'il dit | Format | Obligatoire pour |
 |---|---|---|---|
+
+| Famille | Nom | Ce qu'elle regroupe |
+|---|---|---|

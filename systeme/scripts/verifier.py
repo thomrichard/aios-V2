@@ -11,8 +11,8 @@ import subprocess
 import sys
 
 from index import (DEBUT_CARTE, DEBUT_PROJETS, DOSSIERS, FIN_CARTE, FIN_PROJETS, IGNORES, LOURDS, META,
-                   chemin_attendu, chemins, domaines, les_processus, lire_entete, mots, skills_utilisees, slug_de,
-                   tableaux, types_regles)
+                   chemin_attendu, chemins, domaines, famille_de, familles, les_processus, lire_entete, mots,
+                   skills_utilisees, slug_de, tableaux, types_regles)
 from lancer import dossier_lourds
 
 RACINE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -137,6 +137,22 @@ def controler_domaines():
                                  ("les projets actifs", DEBUT_PROJETS, FIN_PROJETS)):
             if debut not in texte or fin not in texte:
                 avertissements.append(f"AGENTS.md a perdu les balises de {bloc} : ce bloc n'est plus généré")
+
+
+def controler_familles():
+    """Quand des familles de skills sont réglées dans systeme/metadonnees.md, chaque skill en a une, et une connue."""
+    connues = familles()
+    if not connues or not os.path.isdir(chemin("skills")):
+        return
+    for nom in sorted(os.listdir(chemin("skills"))):
+        fichier = chemin("skills", nom, "SKILL.md")
+        if not os.path.exists(fichier):
+            continue
+        famille = famille_de(fichier)
+        if not famille:
+            avertissements.append(f"skills/{nom}/SKILL.md n'a pas de famille (metadata: famille:)")
+        elif famille not in connues:
+            avertissements.append(f"skills/{nom}/SKILL.md : famille « {famille} » absente de systeme/metadonnees.md")
 
 
 REL_META = "systeme/metadonnees.md"
@@ -293,6 +309,7 @@ def main():
     controler_memoire()
     controler_processus()
     controler_domaines()
+    controler_familles()
     controler_entetes()
     controler_lourds()
     controler_plafonds()

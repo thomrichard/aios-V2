@@ -1,6 +1,8 @@
 ---
 name: <nom>
 description: <ce qu'elle fait et quand l'utiliser, avec ses mots déclencheurs>
+metadata:
+  famille: <une famille de systeme/metadonnees.md>
 ---
 # <nom>
 

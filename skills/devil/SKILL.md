@@ -1,6 +1,8 @@
 ---
 name: devil
 description: Joue l'avocat du diable sur un choix, un plan ou un livrable avant de s'engager : N objections sérieuses (3 par défaut), de la plus grave à la moins grave, chacune avec ce qui la lèverait, puis un verdict. Contre la complaisance du modèle. Déclencheurs : « devil », « avocat du diable », « objections », « qu'est-ce qui peut mal tourner », « contre-arguments », « /devil 3 ».
+metadata:
+  famille: decider
 ---
 # devil
 
