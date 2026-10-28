@@ -1,6 +1,8 @@
 ---
 name: grill-me
 description: Interviewe l'utilisateur en profondeur sur un plan, un design ou une idée, ou lui pose une liste de questions imposées (installation), en enregistrant chaque réponse dans une fiche de capture. Plus court : align (quelques questions avant une tâche), devil (des objections sur un choix). Déclencheurs : « grill me », « grille-moi », « cuisine-moi », « challenge mon plan », « stress-teste cette idée », « brainstorm », « session de discovery », « vider ma tête sur [sujet] ».
+metadata:
+  famille: decider
 ---
 # grill-me
 

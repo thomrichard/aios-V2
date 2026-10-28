@@ -1,6 +1,8 @@
 ---
 name: classer
 description: Range un élément en lui donnant les bonnes métadonnées (type, domaine, statut, résumé, projet) ; sa place s'en déduit, et systeme/scripts/ranger.py l'y déplace. Sert pour un fichier de l'inbox, un fichier mal rangé, une fiche qu'on vient d'écrire, et les questions en attente du rangement. Déclencheurs : « classe ça », « range ce fichier », « où va ce fichier », « réponds aux questions du rangement ».
+metadata:
+  famille: ranger
 ---
 # classer
 

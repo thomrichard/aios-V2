@@ -1,6 +1,8 @@
 ---
 name: search-connectors
 description: Cherche comment brancher une application à l'AIOS, dans l'ordre de systeme/connexions.md (outil officiel, CLI, API, MCP de la communauté), compare les options, recommande la plus légère qui couvre le besoin, puis propose de l'installer et de l'inscrire après une vraie lecture. Déclencheurs : « search-connectors », « cherche un connecteur pour <appli> », « comment brancher <appli> », « connecte <appli> ».
+metadata:
+  famille: systeme
 ---
 # search-connectors
 

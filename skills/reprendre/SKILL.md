@@ -1,6 +1,8 @@
 ---
 name: reprendre
 description: Remet une session à niveau sur un projet ou un sujet déjà commencé : retrouve sa fiche, ses décisions, son dernier point de reprise et ses tâches ouvertes, puis donne en quelques lignes où on en est et la prochaine action. L'autre moitié de close. Déclencheurs : « reprendre », « reprends <projet> », « on reprend <sujet> », « où on en était », « onboard ».
+metadata:
+  famille: sessions
 ---
 # reprendre
 

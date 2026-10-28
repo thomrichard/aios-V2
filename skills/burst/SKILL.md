@@ -1,6 +1,8 @@
 ---
 name: burst
 description: Produit d'un coup N variantes vraiment différentes d'un livrable (texte, titre, visuel, page), 3 par défaut, chacune sur un axe annoncé (angle, ton, structure, longueur, style), pour choisir la plus proche de la cible et repartir d'elle. Déclencheurs : « burst », « /burst 3 », « fais-m'en N versions », « donne-moi des variantes ».
+metadata:
+  famille: decider
 ---
 # burst
 

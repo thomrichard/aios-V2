@@ -1,6 +1,8 @@
 ---
 name: personalise
 description: Vérifie qu'une ressource externe (skill, outil, article, repo, prompt, process) est saine et colle au workspace avant de l'installer, puis propose comment l'adapter : où elle vit, quoi renommer, quoi retirer, quoi ajouter, prérequis, validations à demander. Déclencheurs : « personnalise ça », « adapte ça pour moi », « fais que ça colle à l'AIOS », « /personalise [chose] ».
+metadata:
+  famille: systeme
 ---
 # personalise
 
