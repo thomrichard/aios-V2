@@ -332,13 +332,21 @@ Dans le second cerveau, le bouton « Modifier » de la visionneuse ouvre le fich
 L'onglet « Projets » montre chaque projet de `projets/`. On l'ouvre aussi seul, à l'adresse `http://localhost:50000/projets/`. À gauche, la liste des projets, les vivants d'abord. À droite, le projet choisi, en deux vues du même fichier :
 
 - **Atelier**, pour travailler. En haut, quatre tuiles : l'avancement, l'échéance, les tâches, les livrables à valider. Puis la frise des jalons : ceux qui ont une date sur la ligne du temps, les autres à part, qu'on date d'un clic. Puis trois colonnes : ce qui entre (les sources, l'inbox, les fichiers du projet), ce qui se fait (la prochaine étape, les tâches, les décisions), ce qui sort (les livrables, avec leur état et un aperçu).
-- **Fiche**, pour relire. Les parties du fichier, avec ce qui a changé depuis ta dernière lecture surligné. À côté, le fil du projet : son historique dans Git et ses lignes du journal, avec un trait « Tu t'es arrêté ici ». Le trait avance quand tu quittes le projet, ou avec « Tout est lu ».
+- **Fiche**, pour relire. Les parties du fichier, avec ce qui a changé depuis ta dernière lecture surligné. Ton navigateur garde le texte tel que tu l'as lu, et le compare au texte actuel : tes propres gestes ne s'allument pas, et ça marche même sans Git. À côté, le fil du projet : son historique dans Git et ses lignes du journal, avec un trait « Tu t'es arrêté ici ». Le trait avance quand tu quittes le projet, ou avec « Tout est lu ».
 
 Chaque geste réécrit une seule ligne de la fiche, avec les mêmes garde-fous que l'onglet Fichiers : cocher une tâche, dater ou avancer un jalon, noter une décision, changer l'état d'un livrable, ajouter une source ou un livrable, changer le statut, l'échéance ou la prochaine étape.
 
 La fiche d'un projet a donc de nouvelles parties :
 
-- **Jalons** : les grandes étapes, par exemple `- [ ] Tournage · 40 % · 2026-12-01`. Le pourcentage et la date sont facultatifs : un jalon peut attendre sa date. `[x]` quand il est atteint.
+- **Jalons** : les grandes étapes, par exemple `- [ ] Tournage · 40 % · 2026-12-01`. Le pourcentage et la date sont facultatifs : un jalon peut attendre sa date. `[x]` quand il est atteint. Un jalon peut avoir ses tâches, écrites en retrait dessous :
+
+  ```
+  - [ ] Tournage · 2026-12-01
+    - [x] Écrire le script
+    - [ ] Réserver le studio
+  ```
+
+  Son avancement se calcule alors avec elles (ici, 50 %), et le pourcentage écrit à la main ne sert plus. Ces tâches restent de simples cases à cocher, sans statut. Elles s'affichent dans l'Atelier, avec le nom de leur jalon, dans la Fiche, sous « Jalon · Tournage », et dans la petite fenêtre qui s'ouvre d'un clic sur le jalon, où l'on en coche et en ajoute.
 - **Livrables** : ce que le projet produit, par exemple `- [Le devis](../domaines/clients/devis.md) · à valider` (le chemin part de `projets/`, où vit la fiche). Un livrable est un fichier, qui reste rangé dans son domaine, ou un lien, comme une vidéo en ligne. Ses états : à venir, en cours, à valider, livré.
 - **Sources** : ce qui nourrit le projet.
 
