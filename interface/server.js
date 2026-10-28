@@ -749,13 +749,20 @@ function parseProject(text) {
     }
     if (/^#{3,}\s/.test(line) && part) continue;
     if (!part) { if (out.titre && line.trim()) intro.push(line.trim()); continue; }
+    /* a task written indented under a milestone belongs to it: the milestone's progress is then counted */
+    const sous = /^(?:\t| {2,})[-*+]\s+\[([ xX])\]\s+(.*)$/.exec(line);
+    if (sous && part.cle === 'jalons' && out.jalons.length && sous[2].trim() && !placeholder(sous[2])) {
+      out.jalons[out.jalons.length - 1].taches.push({ ligne: n, fait: sous[1] !== ' ', texte: sous[2].trim() });
+      part.dernier = n;
+      continue;
+    }
     const item = /^( ?)[-*+]\s+(?:\[([ xX])\]\s+)?(.*)$/.exec(line);
     if (!item || !part.cle) continue;
     const box = item[2], body = item[3].trim();
     if (!body || placeholder(body)) continue;
     part.dernier = n;
     if (part.cle === 'jalons') {
-      const bits = body.split(/\s+·\s+/), j = { ligne: n, nom: bits[0].trim(), fait: box === 'x' || box === 'X', pct: null, date: '' };
+      const bits = body.split(/\s+·\s+/), j = { ligne: n, nom: bits[0].trim(), fait: box === 'x' || box === 'X', pct: null, date: '', taches: [] };
       for (const b of bits.slice(1)) { const t = b.trim(), p = /^(\d{1,3})\s*%$/.exec(t); if (p) j.pct = Math.min(100, Number(p[1])); else if (DATE_RE.test(t)) j.date = t; }
       if (j.fait) j.pct = 100;
       out.jalons.push(j);
@@ -779,6 +786,7 @@ function parseProject(text) {
     }
   }
   out.intro = intro.join(' ');
+  for (const j of out.jalons) if (j.taches.length) { j.auto = true; j.pct = j.fait ? 100 : Math.round(100 * j.taches.filter(t => t.fait).length / j.taches.length); }
   const marks = out.jalons.length ? out.jalons.map(j => j.pct || 0) : null;
   out.avancement = marks ? Math.round(marks.reduce((a, b) => a + b, 0) / marks.length) : out.taches.length ? Math.round(100 * out.taches.filter(t => t.fait).length / out.taches.length) : null;
   return out;
@@ -816,7 +824,7 @@ function listProjects() {
     return {
       path: f.p, slug: slugOf(f.p), titre: d.titre || f.t || slugOf(f.p), statut: d.header.statut || '', domaine: d.header.domaine || '',
       echeance: d.header.echeance || '', resume: d.header.resume || '', prochaine: d.header.prochaine_etape || '', maj: d.header.maj || '', m: f.m,
-      avancement: d.avancement, taches: d.taches.length, faites: d.taches.filter(t => t.fait).length, jalons: d.jalons.length,
+      avancement: d.avancement, ...(all => ({ taches: all.length, faites: all.filter(t => t.fait).length }))([...d.taches, ...d.jalons.flatMap(j => j.taches)]), jalons: d.jalons.length,
       aValider: d.livrables.filter(l => l.etat === 'a-valider').length
     };
   });

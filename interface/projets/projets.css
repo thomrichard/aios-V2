@@ -204,6 +204,8 @@ h1#titre{margin:0;font:600 38px/1.06 var(--police-titre);letter-spacing:-.03em;o
 .tache{display:flex;align-items:flex-start;gap:10px;min-height:34px;padding:6px 0;font-size:13px;cursor:pointer}
 .tache input{margin-top:2px}
 .tache.faite{color:var(--texte-pale);text-decoration:line-through}
+.tache-jalon{display:inline-block;margin-left:auto;padding-left:8px;font:500 9px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--accent);white-space:nowrap;text-decoration:none}
+.sous-jalon{margin:12px 0 2px}
 .sous-tete{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:4px}
 .decision{display:flex;gap:12px;font-size:13px;padding:6px 0}
 .decision .date{flex:0 0 42px;font:400 11px var(--mono);color:var(--texte-pale);padding-top:2px}
@@ -283,6 +285,10 @@ h1#titre{margin:0;font:600 38px/1.06 var(--police-titre);letter-spacing:-.03em;o
 #bulle h3{margin:0;font:600 15px var(--police-titre)}
 #bulle label{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:13px;color:var(--texte-doux)}
 #bulle .champ{width:130px}
+#bulle .tache{justify-content:flex-start;color:var(--texte)}
+#bulle .tache.faite{color:var(--texte-pale)}
+#bulle .ajout input{width:auto}
+.b-taches{display:flex;flex-direction:column;max-height:200px;overflow:auto;padding-top:6px;border-top:1px solid var(--bord)}
 #toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);z-index:50;padding:10px 16px;border-radius:10px;background:var(--noeud);border:1px solid var(--accent-bord);color:var(--texte);font-size:13px;box-shadow:var(--ombre);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;max-width:calc(100% - 32px)}
 #toast.on{opacity:1;transform:translateX(-50%)}
 #toast.mal{border-color:var(--danger)}
