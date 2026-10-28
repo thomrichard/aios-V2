@@ -339,7 +339,7 @@ Chaque geste réécrit une seule ligne de la fiche, avec les mêmes garde-fous q
 La fiche d'un projet a donc de nouvelles parties :
 
 - **Jalons** : les grandes étapes, par exemple `- [ ] Tournage · 40 % · 2026-12-01`. Le pourcentage et la date sont facultatifs : un jalon peut attendre sa date. `[x]` quand il est atteint.
-- **Livrables** : ce que le projet produit, par exemple `- [Le devis](domaines/clients/devis.md) · à valider`. Un livrable est un fichier, qui reste rangé dans son domaine, ou un lien, comme une vidéo en ligne. Ses états : à venir, en cours, à valider, livré.
+- **Livrables** : ce que le projet produit, par exemple `- [Le devis](../domaines/clients/devis.md) · à valider` (le chemin part de `projets/`, où vit la fiche). Un livrable est un fichier, qui reste rangé dans son domaine, ou un lien, comme une vidéo en ligne. Ses états : à venir, en cours, à valider, livré.
 - **Sources** : ce qui nourrit le projet.
 
 L'apparence se règle dans l'onglet : nuit, jour ou auto, et quatre couleurs (turquoise, braise, glacier, violet). Tout le style tient dans quelques variables, en haut de `interface/projets/projets.css` : pour habiller son AIOS, on change ces valeurs, et le reste suit.
