@@ -3,7 +3,13 @@
    labels turned back to face the screen. --yaw and --pitch are set by the drag. */
 
 html,body{height:100%;overflow:hidden}
-#orbite{display:flex;gap:14px;height:100vh;padding:14px;box-sizing:border-box}
+#orbite{display:flex;flex-direction:column;gap:12px;height:100vh;padding:14px;box-sizing:border-box}
+/* beside the main menu (assets/menu.js); on top, the switch between the brain's two views */
+body.avec-menu>#orbite{flex:1 1 0;min-width:0}
+#barre{display:flex;align-items:center;gap:14px;min-height:38px}
+.bascule{flex:0 0 auto}
+.bascule button{flex:0 0 auto;padding:0 16px}
+.corps{flex:1 1 auto;min-height:0;display:flex;gap:14px}
 #scene{position:relative;flex:1 1 auto;min-width:0;border-radius:var(--rayon);border:1px solid var(--bord);overflow:hidden;perspective:1300px;cursor:grab;user-select:none;-webkit-user-select:none;touch-action:none;
   --yaw:0deg;--pitch:-24deg;--halo:46,230,201;
   background:radial-gradient(60% 55% at 50% 50%,rgba(var(--halo),.16),transparent 70%),radial-gradient(1px 1px at 12% 20%,rgba(255,255,255,.5),transparent),radial-gradient(1px 1px at 78% 12%,rgba(255,255,255,.4),transparent),radial-gradient(1px 1px at 88% 70%,rgba(255,255,255,.35),transparent),radial-gradient(1px 1px at 30% 84%,rgba(255,255,255,.35),transparent),#030607;color:#E6F1EF}
@@ -109,7 +115,8 @@ body.grand .p-lecture::after{display:none}
 
 @media (max-width:900px){
   html,body{height:auto;overflow:auto}
-  #orbite{flex-direction:column;height:auto}
+  #orbite{height:auto}
+  .corps{flex-direction:column}
   #scene{flex:0 0 auto;height:72vh;min-height:460px}
   #panneau,body.grand #panneau{flex:0 0 auto}
   #guide{max-width:70%}

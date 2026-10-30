@@ -93,3 +93,10 @@ mark{background:none;color:var(--accent-ink);font-weight:600}
  #grid{padding:6px 16px 40px}.tiles{grid-template-columns:repeat(auto-fill,minmax(min(var(--tile),42vw),1fr))}
  #viewer{padding:0}.v-in{flex-direction:column;height:100%;border-radius:0;border:0}#v-stage{flex:1 1 50%}#v-side{width:auto;border-left:0;border-top:1px solid #ffffff12;flex:1 1 50%}
 }
+
+/* AIOS: beside the main menu (assets/menu.js, its look from ../assets/theme.css): the menu replaces the top band, and
+   keeps the colours of the other pages rather than this page's orange */
+body.avec-menu #top{display:none}
+body.avec-menu #app,body.avec-menu.embedded #app{inset:0 0 0 var(--menu-larg);min-height:0}
+#menu{--accent:#2EE6C9;--accent-rgb:46,230,201;--accent-doux:rgba(46,230,201,.12);--accent-texte:#02201B;font-family:var(--police)}
+@media (max-width:760px){body.avec-menu #app,body.avec-menu.embedded #app{inset:57px 0 0 0}}

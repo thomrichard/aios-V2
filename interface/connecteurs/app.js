@@ -197,7 +197,7 @@
     let usage;
     if (!c.commandes.length) usage = '<p>Non compté : la colonne Commande de sa ligne est vide. Écris-y le nom du serveur ou de la commande, et l’OS comptera ses appels.</p>';
     else if (!d.mesure) usage = '<p>L’usage n’est pas mesuré : il vient du journal d’usage ou des journaux de session de ton agent (voir <code>interface/USAGE.md</code>).</p>';
-    else if (!u) usage = '<p>Pas encore de ligne d’usage pour lui : actualise les données (l’icône en haut à droite).</p>';
+    else if (!u) usage = '<p>Pas encore de ligne d’usage pour lui : actualise les données (« Actualiser », en bas du menu).</p>';
     else {
       const jours = Object.entries(u.jours || {}).filter(([k, n]) => n > 0 && k >= jourIl(29)).length;
       usage = `${barres(u.jours, false)}<div class="stats">

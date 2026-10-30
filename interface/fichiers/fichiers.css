@@ -186,3 +186,10 @@ button.icon{width:34px;padding:0;display:grid;place-items:center}
  #hl,#src{padding:16px 16px 16vh}.md{padding-left:16px;padding-right:16px}
 }
 @media(max-width:820px){body:not(.has-doc) #side{transform:none;position:relative;width:100%;box-shadow:none}}
+
+/* AIOS: beside the main menu (assets/menu.js, its look from ../assets/theme.css): the menu replaces the top band, and
+   keeps the colours of the other pages rather than this page's orange */
+body.avec-menu #top{display:none}
+body.avec-menu #app,body.avec-menu.embedded #app{inset:0 0 0 var(--menu-larg);min-height:0}
+#menu{--accent:#2EE6C9;--accent-rgb:46,230,201;--accent-doux:rgba(46,230,201,.12);--accent-texte:#02201B;font-family:var(--police)}
+@media (max-width:760px){body.avec-menu #app,body.avec-menu.embedded #app{inset:57px 0 0 0}}

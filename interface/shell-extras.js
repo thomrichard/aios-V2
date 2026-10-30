@@ -136,6 +136,8 @@
     if (views.getAttribute('src')) try { views.contentWindow.location.reload(); } catch {}
     try { document.getElementById('orbite')?.contentWindow?.postMessage({type: 'orbite-copy', action: 'recharge'}, '*'); } catch {}
     try { document.getElementById('disque')?.contentWindow?.postMessage({type: 'disque-copy', action: 'recharge'}, '*'); } catch {}
+    /* the Skills and Connecteurs pages read the usage the refresh just rebuilt */
+    for (const id of ['competences', 'connecteurs']) { const f = document.getElementById(id); if (f?.getAttribute('src')) try { f.contentWindow.location.reload(); } catch {} }
     if (!brain.getAttribute('src')) return;
     // A hidden frame has a 0 px canvas, which the brain cannot draw into while it loads, so on the
     // Routines, Skills and Applications tabs it reloads laid out but invisible, then hides again.

@@ -284,7 +284,7 @@
     if (v === 'dossiers') {
       p.innerHTML = tete(c.routeur || c.index || d.chemin + '/', c.nom, [{ t: c.routeur ? 'domaine' : 'dossier', c: d.couleur }, { t: nbFichiers(d.total) }, { t: pluriel(d.enfants.length, 'index', 'index') }])
         + `<p class="p-resume">${esc(c.resume || 'Ses fichiers sont rangés dans ' + pluriel(d.enfants.length, 'index', 'index') + '. Clique un index pour y entrer.')}</p>`
-        + `<div class="p-liste"><span class="etiquette">Ses index</span>${d.enfants.map((e, i) => ligne({ nom: e.nom, sous: e.resume || (e.semaine ? e.semaine + ' touchés cette semaine' : 'Rien de neuf cette semaine'), n: fmtN(e.n), couleur: d.couleur, attr: `data-enfant="${i}"` })).join('')}</div>`
+        + `<div class="p-liste"><span class="etiquette">Ses index</span>${d.enfants.map((e, i) => ligne({ nom: e.nom, sous: e.resume || (e.semaine ? pluriel(e.semaine, 'touché', 'touchés') + ' cette semaine' : 'Rien de neuf cette semaine'), n: fmtN(e.n), couleur: d.couleur, attr: `data-enfant="${i}"` })).join('')}</div>`
         + (d.liens.length ? `<div class="p-liste"><span class="etiquette">Ses liens vers le reste</span>${d.liens.map((l, i) => ligne({ nom: l.nom, sous: l.chemin, n: pluriel(l.n, 'lien', 'liens'), couleur: l.couleur, attr: `data-lien-i="${i}"` })).join('')}</div>` : '') + actions;
       return;
     }
@@ -348,6 +348,8 @@
     if (m.action === 'recharge' && S.data) va(S.chemin, S.fichiers, '', { groupe: S.groupe, sel: S.sel });
   });
 
+  C.apparence();
+  C.bascule('disque', () => ({ chemin: S.chemin, fichiers: S.fichiers }));
   (async () => {
     const a = lisAdresse(location.hash);
     await va(a.chemin, a.fichiers, 'bas', { par: a.par || S.par, groupe: a.groupe });

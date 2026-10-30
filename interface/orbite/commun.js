@@ -67,5 +67,36 @@ window.SM4RTCommun = (prefixe) => {
       + `<div class="p-actions"><button type="button" class="btn primaire" data-edit="${esc(f.chemin)}">Ouvrir dans Fichiers</button><button type="button" class="btn" data-finder="${esc(f.chemin)}">Ouvrir dans le Finder</button><button type="button" class="btn discret" data-liste>${esc(retour || '← La liste du dossier')}</button></div>`;
     const img = p.querySelector('[data-image]'); if (img) img.src = await image(f.chemin);
   }
-  return { $, embedded, esc, enc, store, api, toast, el, rgb, rgba, fmtN, pluriel, nbFichiers, taille, depuis, dirOf, borne, ouvrirFichier, finder, ligne, tete, fiche, dessineFiche };
+  /* the page's Apparence panel (night, day, colour), opened by the menu's Réglages */
+  function apparence() {
+    const r = $('reglages'), b = $('btn-reglages'); if (!r || !b) return;
+    const marque = () => {
+      const a = window.Apparence ? Apparence.get() : { mode: 'nuit', couleur: 'turquoise' };
+      r.querySelectorAll('[data-mode]').forEach(x => x.setAttribute('aria-pressed', x.dataset.mode === a.mode));
+      r.querySelectorAll('[data-couleur]').forEach(x => x.setAttribute('aria-pressed', x.dataset.couleur === a.couleur));
+    };
+    const ferme = () => { r.hidden = true; b.setAttribute('aria-expanded', false); };
+    b.onclick = () => { r.hidden = !r.hidden; b.setAttribute('aria-expanded', !r.hidden); marque(); };
+    r.addEventListener('click', e => {
+      const x = e.target.closest('button'); if (!x || !window.Apparence) return;
+      if (x.dataset.mode) Apparence.set({ mode: x.dataset.mode }); if (x.dataset.couleur) Apparence.set({ couleur: x.dataset.couleur });
+      marque();
+    });
+    addEventListener('storage', e => { if (e.key === 'sm4rt-apparence') marque(); });
+    addEventListener('pointerdown', e => { if (!r.hidden && !e.target.closest('#reglages,#btn-reglages,#menu-reglages')) ferme(); });
+    /* Escape closes the panel first, before the page goes up a level */
+    addEventListener('keydown', e => { if (e.key === 'Escape' && !r.hidden) { ferme(); e.stopImmediatePropagation(); } }, true);
+  }
+  /* the switch between the brain's two views; the folder you are on goes along */
+  function bascule(ici, place) {
+    const g = $('bascule'); if (!g) return;
+    g.querySelectorAll('[data-vue]').forEach(x => x.setAttribute('aria-pressed', x.dataset.vue === ici));
+    g.addEventListener('click', e => {
+      const x = e.target.closest('[data-vue]'); if (!x || x.dataset.vue === ici) return;
+      const p = place(), v = x.dataset.vue;
+      if (embedded) parent.postMessage({ type: 'sm4rt-menu', vue: v, chemin: p.chemin || '', fichiers: !!p.fichiers }, '*');
+      else location.href = '/' + v + '/' + (p.chemin ? '#' + v + '/' + p.chemin.split('/').map(enc).join('/') + (p.fichiers ? '?fichiers' : '') : '');
+    });
+  }
+  return { $, embedded, esc, enc, store, api, toast, el, rgb, rgba, fmtN, pluriel, nbFichiers, taille, depuis, dirOf, borne, ouvrirFichier, finder, ligne, tete, fiche, dessineFiche, apparence, bascule };
 };

@@ -2,7 +2,7 @@
 
 Les onglets Skills, Connecteurs et Routines dimensionnent chaque élément selon l'usage réel : exécutions de skills, tokens et $ API, exécutions de routines, appels d'apps et ouvertures d'apps locales, sur les 7 et les 30 derniers jours. La règle est simple : ce qui est mesuré affiche son chiffre, ce qui ne l'est pas affiche « non mesuré ». Rien n'est estimé ni inventé.
 
-`node refresh/usage.mjs` calcule les chiffres (l'icône d'actualisation le lance aussi). Il ne lit que des fichiers de cet ordinateur et n'appelle aucun modèle. Trois sources, toutes en option :
+`node refresh/usage.mjs` calcule les chiffres (« Actualiser », en bas du menu de gauche, le lance aussi). Il ne lit que des fichiers de cet ordinateur et n'appelle aucun modèle. Trois sources, toutes en option :
 
 ## 1. Les journaux de session de ton agent (lus pour toi quand un lecteur existe)
 
