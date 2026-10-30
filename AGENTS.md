@@ -24,8 +24,8 @@ Filtre : chaque proposition doit rapprocher d'une de ces cibles. Sinon, dis-le e
 ## Les deux portes
 
 - `inbox/` : ce qui entre. Ce que l'utilisateur dépose, et ce que les routines de capture (veille) rapportent de l'extérieur, avec `source:` dans l'en-tête. Tu n'y déposes jamais tes propres productions ; tu la vides en rangeant.
-- `outbox/` : ce qui sort. Le point du jour dans `outbox/points/AAAA-MM-JJ.md`, les questions en attente dans `outbox/questions.md`, la page `outbox/index.html` (générée). Rien d'autre n'y vit : un livrable reste dans son domaine.
-- Chaque nuit à 2 h, la skill `rangement` vide l'inbox (avec `fiche` et `classer`), range l'outbox et écrit le point du jour. Ce qui demande une réponse attend dans `outbox/questions.md`.
+- `outbox/` : ce qui sort. L'onglet Outbox montre, jour par jour, les fichiers que l'IA a écrits ou modifiés, là où ils sont rangés ; « Valider » les range, et la trace va dans `outbox/ranges.md`. Y vivent aussi le point du jour (`outbox/points/`), les questions en attente (`outbox/questions.md`) et la page `outbox/index.html` (générée). Un livrable reste dans son domaine.
+- Chaque nuit à 2 h, la skill `rangement` vide l'inbox (avec `fiche` et `classer`) et écrit le point du jour. L'outbox, elle, se remplit dans la journée. Ce qui demande une réponse attend dans `outbox/questions.md`.
 - En début de session, si `outbox/questions.md` contient des questions, dis combien en une ligne et propose d'y répondre.
 
 ## Carte des domaines
@@ -134,6 +134,7 @@ Avant de dire « c'est fait », vérifie : relance le test ou relis le fichier. 
 - Onglet Fichiers (ou `http://localhost:50000/fichiers/`) : l'utilisateur y lit et modifie les fichiers du workspace, en Markdown ou directement dans l'aperçu mis en forme. Chaque enregistrement met `maj` à la date du jour et relance `index.py` ; un fichier généré y est en lecture seule.
 - Onglet Projets (ou `http://localhost:50000/projets/`) : chaque projet de `projets/` en deux vues. Atelier : la frise des jalons, puis ce qui entre, ce qui se fait, ce qui sort. Fiche : le fichier, avec ce qui a changé depuis la dernière lecture et l'historique Git. Chaque geste réécrit une ligne de la fiche. Nuit, jour et couleur se règlent dans l'onglet.
 - Onglet Skills (ou `http://localhost:50000/competences/`) : le catalogue des skills, par famille (`metadata: famille:` dans l'en-tête de chaque `SKILL.md`, les familles dans `systeme/metadonnees.md`), avec la fiche de chacune : ce qu'elle fait, quand la lancer, où elle sert, son journal, ses retours et son usage sur 30 jours. De là, l'entretien : retours à appliquer, skills à surveiller, skills au repos. Un retour noté dans l'onglet s'écrit dans `feedback.md`, comme avec `/note`.
+- Onglet Outbox (ou `http://localhost:50000/outbox/`) : ce que l'IA a écrit ou modifié ces 7 derniers jours, par jour, groupé par projet ou par discussion, lu dans les journaux de session de Claude Code et dans Git. Chaque fichier a son aperçu, et « Valider » le sort de l'outbox sans le déplacer (une ligne dans `outbox/ranges.md`).
 - Pour la modifier ou la réparer : `interface/skills/agenticos/SKILL.md` et les guides de `interface/`.
 
 ## Routines

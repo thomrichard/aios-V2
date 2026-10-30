@@ -16,6 +16,7 @@
 | Routine | `systeme/routines.md` | — |
 | Connexion | `systeme/connexions.md` | — |
 | Décision d'un projet | la partie « Décisions » de `projets/<slug>.md` | — |
+| Un fichier validé dans l'onglet Outbox | une ligne dans `outbox/ranges.md` ; le fichier ne bouge pas | — |
 | Règle (vaut pour tout le workspace) | `journal/regles.md` | la ligne courte dans `AGENTS.md` |
 
 ## Où va quoi
@@ -27,6 +28,7 @@ La place exacte d'un fichier se déduit de son en-tête : colonne « Chemin » d
 | Un objet d'un domaine | `domaines/<domaine>/` ; un dossier à lui s'il a plusieurs fichiers |
 | Une production datée (post, newsletter) | `domaines/<domaine>/<slug>-AA-MM.md`, sans dossier par type |
 | Un livrable, texte ou visuel | dans son domaine, jamais dans `outbox/` |
+| Ce qui sort (`outbox/`) | l'onglet Outbox montre, jour par jour, les fichiers que l'IA a écrits ou modifiés, là où ils sont rangés ; « Valider » les range, et la trace va dans `outbox/ranges.md`. Y vivent aussi le point du jour (`outbox/points/`), les questions en attente (`outbox/questions.md`) et la page `outbox/index.html` (générée). Un livrable reste dans son domaine |
 | Un projet | `projets/<slug>.md` ; ses fichiers restent dans leur domaine |
 | Une idée « un jour, peut-être » | dans son domaine, type `idee` (skill `idees`) ; toutes les idées : `vues/idee.md` |
 | Un process (une suite de skills qui revient) | `processus/<slug>.md` ; ses skills restent dans `skills/` |

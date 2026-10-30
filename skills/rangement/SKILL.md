@@ -9,7 +9,7 @@ metadata:
 Tu tournes la nuit, seul : tu ne poses aucune question et tu ne devines rien. Ce qui demande une réponse attend dans `outbox/questions.md`, et l'utilisateur y répond dans la journée.
 
 ## Étapes
-1. **L'outbox.** Déplace dans `archives/outbox/` les points du jour cochés (`- [x] Lu` en tête) ou vieux de plus de 7 jours. Un fichier posé dans `outbox/` par erreur (hors `points/`, `index.html` et `questions.md`) se traite comme un élément de l'inbox.
+1. **L'outbox.** Déplace dans `archives/outbox/` les points du jour cochés (`- [x] Lu` en tête) ou vieux de plus de 7 jours. Un fichier posé dans `outbox/` par erreur (hors `points/`, `index.html`, `questions.md` et `ranges.md`) se traite comme un élément de l'inbox.
 2. **L'inbox.** Pour chaque élément, sauf `capture.md` et ceux qui sont déjà dans `outbox/questions.md` :
    - texte brut, lien, PDF, vidéo, son → `fiche`, puis `classer` ;
    - document texte déjà écrit, image → `classer`.
@@ -32,3 +32,4 @@ Tu tournes la nuit, seul : tu ne poses aucune question et tu ne devines rien. Ce
 ## Journal des changements
 - 2026-10-23 · création · vider l'inbox sans deviner, et mettre les questions de côté pour la journée
 - 2026-10-23 · rubrique « Routines » dans le point du jour · les routines directes laissent une ligne dans `journal/log.md`, le point du jour la reprend
+- 2026-10-30 · `outbox/ranges.md` compte parmi les fichiers qui ont leur place dans `outbox/` · l'onglet Outbox y garde la trace des fichiers validés dans la journée ; la nuit ne le touche pas
