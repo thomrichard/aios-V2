@@ -2,7 +2,7 @@
 
 # SM4RT Agentic OS v2
 
-Ta page d'accueil et ton second cerveau dans une seule page locale : des widgets en direct, un anneau de tout ce que ton agent a construit, et une carte 3D de tout ton workspace, avec ses routines, ses skills et ses apps. Ton agent l'installe et le tient à jour.
+Ton second cerveau dans une seule page locale : elle s'ouvre sur une vue 3D de tout ton workspace, par ses index, avec des onglets pour ses fichiers, ses projets, ses routines, ses skills et ses connecteurs. L'accueil du kit (des widgets en direct et un anneau de tout ce que ton agent a construit) revient avec un réglage. Ton agent l'installe et le tient à jour.
 
 Créé par Jay E chez RoboNuggets. Licence : MIT (voir LICENSE).
 
@@ -12,9 +12,9 @@ Créé par Jay E chez RoboNuggets. Licence : MIT (voir LICENSE).
 2. Décompresse ce dossier où tu veux.
 3. Donne ce README à ton agent et laisse-le faire l'installation ci-dessous. Il fait pointer l'OS vers ton workspace et construit ton second cerveau.
 4. Lance-le avec `node server.js` dans le dossier. Cette seule commande démarre tout, moteur du second cerveau compris.
-5. Ouvre `http://localhost:50000` (le port est `"port"` dans `os-config.json` ; 50200 si tu fais tourner la v1 à côté). Une courte visite guidée (7 étapes) se lance à ta première visite, et l'icône info la rejoue.
+5. Ouvre `http://localhost:50000` (le port est `"port"` dans `os-config.json` ; 50200 si tu fais tourner la v1 à côté). La page s'ouvre sur la vue Orbes 3D. Avec l'accueil du kit (`"accueil": "kit"`), une courte visite guidée (7 étapes) se lance à ta première visite, et l'icône info la rejoue.
 
-Les widgets que tu n'as pas encore connectés affichent une petite note discrète « pas encore branché ». C'est voulu : rien n'est cassé.
+Sur l'accueil du kit, les widgets que tu n'as pas encore connectés affichent une petite note discrète « pas encore branché ». C'est voulu : rien n'est cassé.
 
 ## Laisse ton agent l'installer (recommandé)
 
@@ -53,12 +53,13 @@ Tu installes ce kit pour ton utilisateur, dans son workspace. Respecte ce que tu
 ## Au quotidien
 
 - **Démarrer :** `node server.js`. Il lance le moteur du second cerveau à côté. Arrête les deux avec Ctrl+C.
-- **L'orbe :** clique en son centre pour zoomer dans ton second cerveau. Là, appuie sur `/` pour rechercher n'importe quel fichier par son nom, et sur Retour (ou Échap) pour revenir à l'accueil.
-- **Les sept onglets :** Orbes 3D, Carte 2D, Frise, Routines, Skills, Applications et Fichiers.
+- **L'accueil, la vue Orbes 3D :** `AGENTS.md` au centre, une planète par domaine, puis une par dossier de premier niveau qui a un `_index.md`. Glisse pour tourner, clique une planète pour y entrer, puis un dossier : un fichier n'a son nom que dans son dossier (les 12 plus récents, les autres en poussière). Pour remonter d'un niveau : le bouton « ↑ Revenir à … », l'échelle des niveaux dessous, Échap, ou un clic sur le centre. Le panneau de droite montre ce que tu regardes ; « Agrandir » l'élargit, « Ouvrir dans Fichiers » et « Ouvrir dans le Finder » ouvrent le fichier. Le niveau ouvert reste dans l'adresse (`#orbite/<dossier>`). Appuie sur `/` pour rechercher n'importe quel fichier par son nom. Aussi seule, à l'adresse `/orbite/`.
+- **L'accueil du kit :** mets `"accueil": "kit"` dans `os-config.json` et relance. L'orbe, ses widgets, son anneau et ses micro-apps reviennent : clique au centre de l'orbe pour zoomer dans ton second cerveau, et sur Retour (ou Échap) pour revenir à l'accueil. L'onglet Orbes 3D y montre le globe du kit, un point par fichier. Par défaut : `"orbite"`.
+- **Les onglets :** Orbes 3D, Carte 2D, Frise, Routines, Skills, Connecteurs, Projets, Outbox, Fichiers et Bibliothèque.
 - **Fichiers :** tous les fichiers du workspace à gauche, rangés par dossier (les domaines d'abord), avec une recherche (nom, résumé, puis le texte) et des filtres sur l'en-tête (type, statut, domaine, projet). Un clic ouvre le fichier : Aperçu (mis en forme), Markdown (le texte brut) ou Les deux côte à côte. On écrit dans l'un ou l'autre : dans l'Aperçu, une barre donne titres, gras, italique, lien, listes, tâches et citation, et les habitudes du Markdown marchent en tapant (« # », « - », « 1. », « > », « [] » puis espace) ; seuls les passages touchés sont réécrits en Markdown, le reste du fichier ne bouge pas ; l'en-tête se modifie dans le Markdown ; ⌘ clic ou Ctrl clic ouvre un lien. On enregistre (⌘ S ou Ctrl S) : le champ `maj` prend la date du jour et `systeme/scripts/index.py` repasse. Un fichier changé ailleurs pendant qu'il est ouvert ne s'écrase jamais sans qu'on le demande ; un fichier généré s'ouvre en lecture seule. Aussi seul, à l'adresse `/fichiers/`.
 - **L'icône d'actualisation** (en haut à droite dans le second cerveau) reconstruit la carte, les skills, les routines, les apps et l'usage. Aucun appel au modèle. `node refresh/run.mjs` fait la même chose depuis un terminal.
-- **L'anneau :** chaque page HTML de `artifacts/` est une boule. Survole la boule orange pour voir tous les noms, appuie sur `/` pour rechercher, fais un clic droit sur une boule pour OUVRIR ou RETIRER (les boules retirées vont dans `artifacts/_trash`).
-- **Micro-apps :** chaque tuile ouvre son app si elle tourne sur cet ordinateur, sinon sa page. « Ajouter » donne à ton agent un prompt prêt à l'emploi pour ajouter tes propres apps.
+- **L'anneau** (accueil du kit) **:** chaque page HTML de `artifacts/` est une boule. Survole la boule orange pour voir tous les noms, appuie sur `/` pour rechercher, fais un clic droit sur une boule pour OUVRIR ou RETIRER (les boules retirées vont dans `artifacts/_trash`).
+- **Micro-apps** (accueil du kit) **:** chaque tuile ouvre son app si elle tourne sur cet ordinateur, sinon sa page. « Ajouter » donne à ton agent un prompt prêt à l'emploi pour ajouter tes propres apps.
 - **Ports :** `"port"` et `"brainPort"` dans `os-config.json` (50000 et 50201 par défaut). Si le port est pris, le serveur s'arrête avec un message d'une ligne au lieu de changer de port : modifie `"port"` et relance.
 
 ## Passer de la v1 à la v2
@@ -80,13 +81,14 @@ La v2 est un dossier à part. Ton dossier v1 continue de marcher sur le port 500
 ```
 interface/
   server.js            le serveur de l'OS (node, zéro dépendance) ; lance aussi le moteur
-  os-config.json       ports, deck de skills, lanceur, micro-apps, e-mails
-  index.html           la coque : page d'accueil + second cerveau
-  os.html              la page d'accueil (un seul fichier modifiable)
+  os-config.json       ports, accueil, deck de skills, lanceur, micro-apps, e-mails
+  index.html           la coque : le second cerveau et ses onglets
+  orbite/              la vue Orbes 3D, l'accueil (aussi seule sur /orbite/)
+  os.html              l'accueil du kit, avec "accueil": "kit" (un seul fichier modifiable)
   copy.js, copy.css, shell-extras.js, view-transitions.js   le code de la coque
   widgets.html         la bibliothèque de widgets (/widgets)
   assets/              polices, l'orbe, scripts partagés
-  brain/               les orbes 3D, la carte 2D et la frise du second cerveau (+ leurs données, construites par refresh)
+  brain/               le globe du kit, la carte 2D et la frise du second cerveau (+ leurs données, construites par refresh)
   views/               les onglets Routines, Skills et Applications
   fichiers/            l'onglet Fichiers : l'éditeur des fichiers du workspace (aussi seul sur /fichiers/)
   engine/              le moteur du second cerveau : scan.js (la carte), server.js (recherche, visionneuse de fichiers), brain.js (rappel et classement)

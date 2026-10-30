@@ -13,6 +13,7 @@
      /competences/           the skills page alone (also the Second Brain's Skills tab)
      /connecteurs/           the connectors page alone (also the Second Brain's Connecteurs tab)
      /outbox/                the outbox page alone (also the Second Brain's Outbox tab)
+     /orbite/                the 3D home alone (also the Second Brain's Orbes 3D tab, and the home page)
      /widgets                the widget library
      /artifacts/<file>       the ring's balls (the artifacts folder)
    Homepage feeds (GET)
@@ -37,6 +38,10 @@
    Outbox page (the Outbox tab)
      /local/outbox           the files the agent wrote or changed in the last 7 days, by day, with their sessions, projects and validations (GET)
      /local/outbox/ranger    validates files (a line each in outbox/ranges.md) or puts them back (POST, local pages only)
+   3D home (the Orbes 3D tab, GET, read only)
+     /local/orbite           one level: the map (domains, top folders, skills, connectors) or a folder (its sub-folders, or its files)
+     /local/orbite/fichier   one file for the side panel: header, start, links out and in
+     /data/accueil.js        which home the shell opens: "orbite" (the 3D view) or "kit" (the kit's homepage), os-config.json "accueil"
    Actions (POST, local pages only)
      /api/run                runs a skills deck card through your agent's command (os-config.json "runner")
      /api/apply-comments     the "Apply all comments" runner that review pages call
@@ -61,6 +66,8 @@ let CFG = {};
 try { CFG = JSON.parse(fs.readFileSync(path.join(KIT, 'os-config.json'), 'utf8')); }
 catch (e) { console.error('os-config.json manque ou n’est pas un JSON valide : réglages par défaut utilisés (' + e.message + ')'); }
 const PORT = Number(process.env.PORT) || Number(CFG.port) || 50000;
+/* AIOS: the home page: "orbite" (the 3D view of the indexes, the default) or "kit" (the kit's homepage, os.html) */
+const ACCUEIL = CFG.accueil === 'kit' ? 'kit' : 'orbite';
 const BRAIN_PORT = Number(CFG.brainPort) || 50201;
 const ARTIFACTS = path.resolve(KIT, CFG.artifactsDir || 'artifacts');
 const SNAP = path.join(KIT, 'snapshots'), DATA = path.join(KIT, 'data'), RUNDIR = path.join(KIT, 'os-runs');
@@ -1507,6 +1514,86 @@ function setRanges({ chemins, range }) {
   return job;
 }
 
+/* ---------------------------- ORBITE: the 3D home (orbite/) ----------------------------
+   AIOS: the home page shows the workspace by its indexes, one level at a time. The map: AGENTS.md, the domains of
+   systeme/metadonnees.md and the top folders that keep an _index.md, with the skills and the connectors further out.
+   A folder: its sub-folders, or its files (the 12 most recent named, the others as dust). The server counts, the page
+   draws: no level ever sends the 2,000 files. */
+const ORBITE_HORS = new Set(['archives', 'vues', 'systeme', 'interface', 'outbox', 'skills', 'routers', 'domaines']);
+const ORBITE_COULEURS = ['#2EE6C9', '#B69CFF', '#FBBF24', '#F472B6', '#4DA8FF', '#4ADE80', '#FF7A45', '#67E8F9'];
+const ORBITE_NEUTRE = '#9DB0AC', ORBITE_NOMMES = 12, ORBITE_LISTE = 2000;
+/* the files a level counts: everything but the generated indexes and the image lists */
+const orbiteCompte = f => !/(^|\/)_(index|images)\.md$/.test(f.p);
+function orbiteDomaines(root) {
+  const seen = new Map();
+  for (const r of tablesOf(readText(path.join(root, 'systeme', 'metadonnees.md')), 'Domaine')) {
+    const id = unquote(r.Domaine || '');
+    if (id && !/^</.test(id) && !seen.has(id)) seen.set(id, { id, couvre: r['Ce qu’il couvre'] || r["Ce qu'il couvre"] || '' });
+  }
+  return [...seen.values()];
+}
+function orbiteCouleur(domaines, rel) {
+  const m = /^domaines\/([^/]+)/.exec(rel || ''), i = m ? domaines.findIndex(d => d.id === m[1]) : -1;
+  return i < 0 ? ORBITE_NEUTRE : ORBITE_COULEURS[i % ORBITE_COULEURS.length];
+}
+const orbiteDans = (rel, dir) => rel === dir || rel.startsWith(dir + '/');
+const orbiteParent = rel => rel.split('/').slice(0, -1).join('/');
+/* the breadcrumb: AGENTS.md, then each folder of the path; domaines/ itself is not a level, its domains are */
+function orbiteFil(chemin, fichiers) {
+  const fil = [{ nom: 'AGENTS.md', chemin: '' }], parts = chemin ? chemin.split('/') : [];
+  parts.forEach((p, i) => { const c = parts.slice(0, i + 1).join('/'); if (c !== 'domaines') fil.push({ nom: p, chemin: c }); });
+  if (fichiers) fil.push({ nom: 'fichiers', chemin, fichiers: true });
+  return fil;
+}
+function orbiteNiveau(chemin, seulFichiers) {
+  const { root, files, dirs, error } = listFiles();
+  if (error) return { error, enfants: [] };
+  const domaines = orbiteDomaines(root), compte = files.filter(orbiteCompte);
+  const nb = dir => compte.reduce((a, f) => a + (orbiteDans(f.p, dir) ? 1 : 0), 0);
+  const sousDossiers = dir => dirs.filter(d => orbiteParent(d) === dir && !d.split('/').pop().startsWith('.'));
+  if (!chemin) {
+    const enfants = domaines.map((d, i) => ({ nom: d.id, chemin: 'domaines/' + d.id, couleur: ORBITE_COULEURS[i % ORBITE_COULEURS.length], n: nb('domaines/' + d.id), index: sousDossiers('domaines/' + d.id).length, resume: d.couvre, domaine: true }))
+      .concat(dirs.filter(d => !d.includes('/') && !ORBITE_HORS.has(d) && files.some(f => f.p === d + '/_index.md'))
+        .map(d => ({ nom: d, chemin: d, couleur: ORBITE_NEUTRE, n: nb(d), index: sousDossiers(d).length, resume: '' })).filter(x => x.n > 0));
+    let skills = []; try { skills = fs.readdirSync(path.join(root, 'skills'), { withFileTypes: true }).filter(e => e.isDirectory() && fs.existsSync(path.join(root, 'skills', e.name, 'SKILL.md'))).map(e => e.name).sort(); } catch (_) { }
+    const connecteurs = tablesOf(readText(path.join(root, 'systeme', 'connexions.md')), 'Outil').map(r => unquote(r.Outil || '')).filter(Boolean);
+    return { chemin: '', fil: orbiteFil('', false), mode: 'carte', centre: { nom: 'AGENTS.md', chemin: 'AGENTS.md', n: compte.length, couleur: '#F2FBF9' }, enfants, skills, connecteurs, total: compte.length };
+  }
+  /* a folder of the workspace, under the editor's rules (never the OS folder, never a hidden one) */
+  const clean = String(chemin).replace(/\\/g, '/').replace(/^\/+|\/+$/g, '');
+  if (!dirs.includes(clean)) throw httpError(404, 'Dossier introuvable');
+  const couleur = orbiteCouleur(domaines, clean), dom = /^domaines\/([^/]+)$/.exec(clean), d = dom ? domaines.find(x => x.id === dom[1]) : null;
+  const directs = compte.filter(f => orbiteParent(f.p) === clean).sort((a, b) => b.m - a.m);
+  const sous = sousDossiers(clean);
+  const centre = { nom: clean.split('/').pop(), chemin: clean, n: nb(clean), couleur, index: files.some(f => f.p === clean + '/_index.md') ? clean + '/_index.md' : '', routeur: d ? 'routers/' + d.id + '.md' : '', resume: d ? d.couvre : '' };
+  const fiche = f => ({ nom: f.p.split('/').pop(), chemin: f.p, titre: (f.t || f.p.split('/').pop()).slice(0, 90), resume: f.h && f.h.resume || '', type: f.h && f.h.type || '', taille: f.s, m: f.m, k: f.k });
+  if (seulFichiers || !sous.length) {
+    return { chemin: clean, fichiers: !!seulFichiers, fil: orbiteFil(clean, !!seulFichiers && sous.length > 0), mode: 'fichiers', centre, couleur,
+      nommes: directs.slice(0, ORBITE_NOMMES).map(fiche), reste: Math.max(0, directs.length - ORBITE_NOMMES), liste: directs.slice(0, ORBITE_LISTE).map(fiche), total: directs.length };
+  }
+  const enfants = sous.map(s => ({ nom: s.split('/').pop(), chemin: s, couleur, n: nb(s), index: sousDossiers(s).length, resume: '' })).filter(x => x.n > 0).sort((a, b) => b.n - a.n);
+  if (directs.length) enfants.push({ nom: centre.nom + ' (racine)', chemin: clean, fichiers: true, couleur, n: directs.length, index: 0, resume: 'Les fichiers posés à la racine du dossier' });
+  return { chemin: clean, fil: orbiteFil(clean, false), mode: 'dossiers', centre, couleur, enfants, total: centre.n };
+}
+/* one file, for the panel: its header, its start, its links out (resolved) and in (a text search of its name) */
+function orbiteFichier(rel) {
+  const doc = readForEditor(rel), t = editorTarget(doc.path), h = doc.content ? readHeader(doc.content) : {};
+  const corps = (doc.content || '').replace(/^---\r?\n[\s\S]*?\r?\n---[ \t]*(\r?\n|$)/, '');
+  const titre = ((corps.match(/^#\s+(.+)$/m) || [])[1] || doc.path.split('/').pop()).trim();
+  const dir = orbiteParent(doc.path), sortants = [], vus = new Set();
+  const ajoute = (texte, cible) => {
+    if (!cible || /^[a-z]+:/i.test(cible) || cible.startsWith('#')) return;
+    const parts = (dir + '/' + cible.split('#')[0]).split('/'), out = [];
+    for (const x of parts) { if (!x || x === '.') continue; if (x === '..') out.pop(); else out.push(x); }
+    const c = out.join('/'); if (!c || vus.has(c)) return; vus.add(c);
+    sortants.push({ texte: texte || c.split('/').pop(), chemin: c, existe: fs.existsSync(path.join(t.root, c)) });
+  };
+  for (const m of corps.matchAll(/\[([^\]]*)\]\(([^)\s]+)\)/g)) ajoute(m[1], m[2]);
+  String(h.liens || '').split(',').map(s => s.trim()).filter(Boolean).forEach(c => ajoute(c.split('/').pop(), c.startsWith('/') ? c : path.posix.relative(dir || '.', c)));
+  const nom = doc.path.split('/').pop(), entrants = nom.length > 3 ? searchFiles(nom).results.filter(r => r.p !== doc.path && !generatedFile(r.p)).slice(0, 20).map(r => ({ chemin: r.p, texte: r.text })) : [];
+  return { chemin: doc.path, titre, entete: h, kind: doc.kind, taille: doc.size, m: doc.mtime, extrait: corps.slice(0, 6000), coupe: corps.length > 6000, sortants: sortants.slice(0, 30), entrants };
+}
+
 /* ---------------------------- THE SECOND BRAIN'S DATA ---------------------------- */
 const FEEDS = { '/api/calendar': () => cached('cal', 120000, getCalendar), '/api/artifacts': async () => getArtifacts(), '/api/routines': () => cached('rt', 60000, getRoutines), '/api/stats': () => cached('stats', 60000, getStats), '/api/email': () => cached('mail', 180000, getEmail) };
 async function boot() {
@@ -1551,7 +1638,7 @@ function needsFirstRefresh() {
 const MIME = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg',
   '.webp': 'image/webp', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.ico': 'image/x-icon', '.gif': 'image/gif', '.mp4': 'video/mp4', '.txt': 'text/plain' };
 const PUBLIC_FILES = new Set(['index.html', 'os.html', 'copy.css', 'copy.js', 'shell-extras.js', 'view-transitions.js', 'widgets.html']);
-const PUBLIC_DIRS = ['assets', 'brain', 'views', 'fichiers', 'bibliotheque', 'projets', 'competences', 'connecteurs', 'outbox'];
+const PUBLIC_DIRS = ['assets', 'brain', 'views', 'fichiers', 'bibliotheque', 'projets', 'competences', 'connecteurs', 'outbox', 'orbite'];
 function publicFile(p2) {
   let rel; try { rel = decodeURIComponent(p2).replace(/^\/+/, ''); } catch (_) { return null; }
   if (!rel || rel.includes('\0') || rel.includes('\\')) return null;
@@ -1628,6 +1715,10 @@ const server = http.createServer(async (req, res) => {
     if (p2 === '/local/connecteurs' && !post) { try { return sendJson(res, await listConnecteurs()); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); } }
     /* ---- the outbox page ---- */
     if (p2 === '/local/outbox' && !post) { try { return sendJson(res, await listOutbox()); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); } }
+    /* ---- the 3D home ---- */
+    if (p2 === '/local/orbite' && !post) { try { return sendJson(res, orbiteNiveau(u.searchParams.get('chemin') || '', u.searchParams.get('fichiers') === '1')); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); } }
+    if (p2 === '/local/orbite/fichier' && !post) { try { return sendJson(res, orbiteFichier(u.searchParams.get('chemin'))); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); } }
+    if (p2 === '/data/accueil.js') return sendScript(res, 'window.SM4RT_ACCUEIL=' + JSON.stringify(ACCUEIL) + ';');
     if (p2 === '/data/snapshot.js') return sendScript(res, 'window.COPY_DATA=' + JSON.stringify(routinesLib.calendarData(routineSources.allRoutines())) + ';');
     if (p2 === '/data/arms-usage.js') { const f = path.join(DATA, 'arms-usage.js'); return fs.existsSync(f) ? serveFile(req, res, f) : sendScript(res, 'window.ARMS_USAGE=null;'); }
 
@@ -1721,6 +1812,8 @@ const server = http.createServer(async (req, res) => {
     if (p2 === '/connecteurs') { res.writeHead(302, { Location: '/connecteurs/' }); return res.end(); }
     if (p2 === '/connecteurs/') return serveFile(req, res, path.join(KIT, 'connecteurs', 'index.html'));
     if (p2 === '/outbox') { res.writeHead(302, { Location: '/outbox/' }); return res.end(); }
+    if (p2 === '/orbite') { res.writeHead(302, { Location: '/orbite/' }); return res.end(); }
+    if (p2 === '/orbite/') return serveFile(req, res, path.join(KIT, 'orbite', 'index.html'));
     if (p2 === '/outbox/') return serveFile(req, res, path.join(KIT, 'outbox', 'index.html'));
     if (p2 === '/bibliotheque/') return serveFile(req, res, path.join(KIT, 'bibliotheque', 'index.html'));
     if (p2.startsWith('/artifacts/')) {

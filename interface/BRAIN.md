@@ -9,7 +9,17 @@ Le second cerveau est le monde à l'intérieur de l'orbe : tout ton workspace su
 
 Au centre se trouve **AGENTS md** : le fichier d'instructions que ton agent lit en premier.
 
-Il a six onglets : **Orbes 3D**, **Carte 2D** (dispositions Force, Cercle, Hex et Anneaux), **Frise** (chaque fichier et chaque routine selon sa dernière modification), **Routines**, **Skills** et **Applications**. Appuie sur `/` n'importe où à l'intérieur pour rechercher un fichier par son nom ; Entrée t'y emmène. Clique deux fois sur un fichier (ou sur « Voir ici ») pour le lire dans la visionneuse latérale.
+Ses onglets : **Orbes 3D** (l'accueil, plus bas), **Carte 2D** (dispositions Force, Cercle, Hex et Anneaux), **Frise** (chaque fichier et chaque routine selon sa dernière modification), **Routines**, **Skills**, **Connecteurs**, **Projets**, **Outbox**, **Fichiers** et **Bibliothèque**. Appuie sur `/` n'importe où à l'intérieur pour rechercher un fichier par son nom ; Entrée t'y emmène. Clique deux fois sur un fichier (ou sur « Voir ici ») pour le lire dans la visionneuse latérale.
+
+**L'accueil, la vue Orbes 3D** (`orbite/`). `http://localhost:50000` s'ouvre directement sur elle, avec les onglets en haut. Elle montre les index d'abord, un niveau à la fois :
+
+1. **La carte.** `AGENTS.md` au centre. Autour, une planète par domaine de `systeme/metadonnees.md`, chacun sa couleur dans l'ordre du tableau, puis une planète de couleur neutre par dossier de premier niveau qui a un `_index.md` et des fichiers (jamais `archives/`, `vues/`, `systeme/`, `interface/`, `outbox/`, `skills/` ni `routers/`). La taille suit le nombre de fichiers, une lune par sous-dossier. Plus loin, deux anneaux discrets, sans nom (le nom en survol) : les skills de `skills/`, puis les connecteurs de `systeme/connexions.md`.
+2. **Un domaine ou un dossier.** Ses sous-dossiers en planètes. Les fichiers posés à sa racine en forment une de plus, « <nom> (racine) ».
+3. **Un dossier sans sous-dossier.** Ses 12 fichiers les plus récents, nommés par leur titre (le premier `#`, sinon le nom du fichier) ; les autres font une poussière de 80 points au plus.
+
+Glisse pour tourner ; « ⟲ Recentrer » remet la vue de départ, « Mouvement » arrête la rotation lente. Pour remonter d'un niveau : le bouton « ↑ Revenir à … », l'échelle des niveaux, Échap, ou un clic sur le centre. Le panneau de droite montre ce que tu regardes : la carte, un dossier et ses fichiers, ou un fichier (son début en Markdown, ses liens, « Ouvrir dans Fichiers », « Ouvrir dans le Finder »). Le niveau ouvert reste dans l'adresse (`#orbite/<dossier>`). Le serveur compte et rend un niveau à la fois (`/local/orbite?chemin=<dossier>`, `/local/orbite/fichier?chemin=<fichier>`) : la page ne calcule rien sur tous les fichiers.
+
+Pour retrouver l'accueil du kit (l'orbe, ses widgets, son anneau, ses micro-apps et son zoom d'entrée), mets `"accueil": "kit"` dans `os-config.json` et relance. L'onglet Orbes 3D y redevient le globe du kit, un point par fichier.
 
 Tout se règle dans `config/`. Pour une installation normale, tu ne devrais toucher à aucun code.
 
