@@ -14,6 +14,7 @@
      /connecteurs/           the connectors page alone (also the Second Brain's Connecteurs tab)
      /outbox/                the outbox page alone (also the Second Brain's Outbox tab)
      /orbite/                the 3D home alone (also the Second Brain's Orbes 3D tab, and the home page)
+     /disque/                the rosace alone (also the Second Brain's Disque tab)
      /widgets                the widget library
      /artifacts/<file>       the ring's balls (the artifacts folder)
    Homepage feeds (GET)
@@ -41,6 +42,8 @@
    3D home (the Orbes 3D tab, GET, read only)
      /local/orbite           one level: the map (domains, top folders, skills, connectors) or a folder (its sub-folders, or its files)
      /local/orbite/fichier   one file for the side panel: header, start, links out and in
+   Rosace (the Disque tab, GET, read only)
+     /local/disque           one level: the map (domains, their indexes, the week's activity, the strongest links), a folder (its indexes and their freshness), or an index cut into groups by a header field (par=mois|statut|projet|type|liens|theme|echeance)
      /data/accueil.js        which home the shell opens: "orbite" (the 3D view) or "kit" (the kit's homepage), os-config.json "accueil"
    Actions (POST, local pages only)
      /api/run                runs a skills deck card through your agent's command (os-config.json "runner")
@@ -1594,6 +1597,136 @@ function orbiteFichier(rel) {
   return { chemin: doc.path, titre, entete: h, kind: doc.kind, taille: doc.size, m: doc.mtime, extrait: corps.slice(0, 6000), coupe: corps.length > 6000, sortants: sortants.slice(0, 30), entrants };
 }
 
+/* ---------------------------- DISQUE: the rosace (disque/) ----------------------------
+   AIOS: the same indexes as ORBITE, flat: parts that weigh their files. A level is the map (the domains and their
+   indexes, this week's activity, the strongest links), a folder (its indexes and how fresh they are) or an index, cut
+   into groups by one header field, with every file as a thin slice. The server counts and groups; the page draws. */
+const DISQUE_JOUR = 864e5, DISQUE_NOMS_MOIS = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+const DISQUE_CRITERES = [['mois', 'Mois'], ['statut', 'Statut'], ['projet', 'Projet'], ['type', 'Type'], ['liens', 'Liens'], ['theme', 'Thème'], ['echeance', 'Échéance']];
+const DISQUE_STATUTS = { 'a-valider': 'À valider', 'a-lire': 'À lire', 'a-construire': 'À construire', bloque: 'Bloqué', abandonne: 'Abandonné' };
+const disqueStatut = s => DISQUE_STATUTS[s] || (s.charAt(0).toUpperCase() + s.slice(1)).replace(/-/g, ' ');
+/* a file's date: its header's maj when it is a real date, else the disk's */
+function disqueDate(f) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec((f.h && f.h.maj) || '');
+  return m ? new Date(+m[1], m[2] - 1, +m[3], 12).getTime() : f.m;
+}
+const disquePremier = v => String(v || '').split(',').map(s => s.trim()).filter(Boolean)[0] || '';
+/* where a file's links go (header liens, Markdown links), as folders: read again only when the file changes */
+const disqueLiensCache = new Map();
+function disqueCibles(root, f) {
+  if (f.k !== 'md' || f.s > READ_MAX) return [];
+  let hit = disqueLiensCache.get(f.p);
+  if (!hit || hit.m !== f.m || hit.s !== f.s) {
+    let text = ''; try { text = fs.readFileSync(path.join(root, f.p), 'utf8'); } catch (_) { }
+    const h = readHeader(text), corps = text.replace(/^---\r?\n[\s\S]*?\r?\n---[ \t]*(\r?\n|$)/, ''), dir = orbiteParent(f.p), out = new Set();
+    const resout = (base, cible) => {
+      if (!cible || /^[a-z]+:/i.test(cible) || cible.startsWith('#')) return;
+      const parts = ((cible.startsWith('/') ? '' : base + '/') + decodeURI(cible.split('#')[0])).split('/'), o = [];
+      for (const x of parts) { if (!x || x === '.') continue; if (x === '..') o.pop(); else o.push(x); }
+      if (o.length) out.add(o.join('/'));
+    };
+    for (const m of corps.matchAll(/\[[^\]]*\]\(([^)\s]+)\)/g)) { try { resout(dir, m[1]); } catch (_) { } }
+    String(h.liens || '').split(',').map(s => s.trim()).filter(Boolean).forEach(c => { try { resout('', c); } catch (_) { } });
+    hit = { m: f.m, s: f.s, l: [...out] }; disqueLiensCache.set(f.p, hit);
+  }
+  return hit.l;
+}
+function disqueNiveau(chemin, seulFichiers, par) {
+  const { root, files, dirs, error } = listFiles();
+  if (error) return { error };
+  const domaines = orbiteDomaines(root), compte = files.filter(orbiteCompte), dirSet = new Set(dirs), now = Date.now();
+  const debutMois = new Date(new Date(now).getFullYear(), new Date(now).getMonth(), 1).getTime();
+  const sousDossiers = dir => dirs.filter(d => orbiteParent(d) === dir);
+  const dans = dir => compte.filter(f => orbiteDans(f.p, dir));
+  const fraicheur = fs_ => { let semaine = 0, mois = 0; for (const f of fs_) { const d = disqueDate(f); if (now - d < 7 * DISQUE_JOUR) semaine++; else if (d >= debutMois) mois++; } return { semaine, mois, ancien: fs_.length - semaine - mois }; };
+  /* the folder a link points to: the folder itself, or the one that holds the file; only folders the disc shows */
+  const montre = dir => !!dir && (dir.startsWith('domaines/') || !ORBITE_HORS.has(dir.split('/')[0]));
+  const dossierDe = c => { const v = dirSet.has(c) ? c : orbiteParent(c); return montre(v) ? v : ''; };
+  const resumeIndex = d => { const x = files.find(f => f.p === d + '/_index.md'); return x && x.h && x.h.resume || ''; };
+  /* a folder's parts: its sub-folders that hold files, and its own files as one more part */
+  const partsDe = (dir, couleur) => {
+    const directs = compte.filter(f => orbiteParent(f.p) === dir);
+    const out = sousDossiers(dir).map(s => { const fs_ = dans(s); return { nom: s.split('/').pop(), chemin: s, couleur, n: fs_.length, index: sousDossiers(s).length, resume: resumeIndex(s), ...fraicheur(fs_) }; }).filter(x => x.n > 0).sort((a, b) => b.n - a.n);
+    if (directs.length) out.push({ nom: dir.split('/').pop() + ' (racine)', chemin: dir, fichiers: true, couleur, n: directs.length, index: 0, resume: 'Les fichiers posés à la racine du dossier', ...fraicheur(directs) });
+    return out;
+  };
+  /* links between folders, counted once per file and target folder */
+  const liensEntre = (sources, garde) => {
+    const n = new Map();
+    for (const f of sources) {
+      if (f.g) continue;
+      const de = orbiteParent(f.p);
+      for (const vers of new Set(disqueCibles(root, f).map(dossierDe))) { if (!vers || vers === de || !dirSet.has(vers)) continue; const k = garde(de, vers); if (k) n.set(k, (n.get(k) || 0) + 1); }
+    }
+    return n;
+  };
+  if (!chemin) {
+    const hauts = domaines.map((d, i) => ({ nom: d.id, chemin: 'domaines/' + d.id, couleur: ORBITE_COULEURS[i % ORBITE_COULEURS.length], resume: d.couvre, domaine: true }))
+      .concat(dirs.filter(d => !d.includes('/') && !ORBITE_HORS.has(d) && files.some(f => f.p === d + '/_index.md')).map(d => ({ nom: d, chemin: d, couleur: ORBITE_NEUTRE, resume: '' })));
+    const enfants = hauts.map(x => { const fs_ = dans(x.chemin); return { ...x, n: fs_.length, semaine: fraicheur(fs_).semaine, parts: partsDe(x.chemin, x.couleur) }; }).filter(x => x.n > 0);
+    const paires = liensEntre(compte, (a, b) => a < b ? a + '|' + b : b + '|' + a);
+    const liens = [...paires].sort((a, b) => b[1] - a[1]).slice(0, 5).map(([k, n]) => { const [a, b] = k.split('|'); return { a: { nom: a.split('/').pop(), chemin: a, couleur: orbiteCouleur(domaines, a) }, b: { nom: b.split('/').pop(), chemin: b, couleur: orbiteCouleur(domaines, b) }, n }; });
+    return { chemin: '', fil: orbiteFil('', false), mode: 'carte', centre: { nom: 'AGENTS.md', chemin: 'AGENTS.md' }, enfants, liens, total: compte.length };
+  }
+  const clean = String(chemin).replace(/\\/g, '/').replace(/^\/+|\/+$/g, '');
+  if (!dirSet.has(clean)) throw httpError(404, 'Dossier introuvable');
+  const couleur = orbiteCouleur(domaines, clean), dom = /^domaines\/([^/]+)$/.exec(clean), d = dom ? domaines.find(x => x.id === dom[1]) : null;
+  const centre = { nom: clean.split('/').pop(), chemin: clean, couleur, index: files.some(f => f.p === clean + '/_index.md') ? clean + '/_index.md' : '', routeur: d ? 'routers/' + d.id + '.md' : '', resume: d ? d.couvre : resumeIndex(clean) };
+  if (!seulFichiers && sousDossiers(clean).length) {
+    /* a folder of indexes: its parts, and its links to the rest of the workspace, added up by top folder */
+    const haut = c => c.startsWith('domaines/') ? c.split('/').slice(0, 2).join('/') : c.split('/')[0];
+    const sortants = liensEntre(dans(clean), (de, vers) => orbiteDans(vers, clean) ? '' : haut(vers));
+    const liens = [...sortants].sort((a, b) => b[1] - a[1]).slice(0, 6).map(([c, n]) => ({ nom: c.split('/').pop(), chemin: c, couleur: orbiteCouleur(domaines, c), n }));
+    return { chemin: clean, fil: orbiteFil(clean, false), mode: 'dossiers', centre, couleur, enfants: partsDe(clean, couleur), liens, total: dans(clean).length };
+  }
+  /* an index: its files, each in one group of the chosen cut; only the cuts that make two groups are offered */
+  const directs = compte.filter(f => orbiteParent(f.p) === clean).map(f => ({ f, d: disqueDate(f) })).sort((a, b) => b.d - a.d);
+  /* a status ranks by its place in its type's life; the ones that end it come after all the living ones */
+  const rangStatut = new Map();
+  for (const r of tablesOf(readText(path.join(root, 'systeme', 'metadonnees.md')), 'Type')) {
+    const fin = String(r.Fin || '').split(',').map(s => s.trim());
+    String(r.Statuts || '').split(',').map(s => s.trim()).forEach((s, i) => { if (!s || s === '—') return; const k = (fin.includes(s) ? 100 : 0) + i; if (!rangStatut.has(s) || k < rangStatut.get(s)) rangStatut.set(s, k); });
+  }
+  const annee = new Date(now).getFullYear();
+  const groupe = {
+    mois: ({ d }) => {
+      if (now - d < 7 * DISQUE_JOUR) return ['semaine', 'Cette semaine', 0];
+      if (d >= debutMois) return ['ce-mois', 'Ce mois-ci', 1];
+      const x = new Date(d), age = (annee - x.getFullYear()) * 12 + new Date(now).getMonth() - x.getMonth();
+      if (age > 12) return ['ancien', 'Plus ancien', 99];
+      return [x.getFullYear() + '-' + String(x.getMonth() + 1).padStart(2, '0'), DISQUE_NOMS_MOIS[x.getMonth()] + (x.getFullYear() === annee ? '' : ' ' + x.getFullYear()), 1 + age];
+    },
+    statut: ({ f }) => { const s = f.h && f.h.statut; return s ? [s, disqueStatut(s), rangStatut.has(s) ? rangStatut.get(s) : 150] : ['_', 'Sans statut', 999]; },
+    projet: ({ f }) => { const s = disquePremier(f.h && f.h.projet); return s ? [s, s, null] : ['_', 'Hors projet', 99]; },
+    type: ({ f }) => { const s = f.h && f.h.type; return s ? [s, s, null] : ['_', 'Sans type', 99]; },
+    liens: ({ f }) => {
+      const n = new Map(); for (const c of disqueCibles(root, f)) { const v = dossierDe(c); if (v && v !== clean && dirSet.has(v)) n.set(v, (n.get(v) || 0) + 1); }
+      const top = [...n].sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1))[0];
+      return top ? [top[0], top[0].split('/').pop(), null, orbiteCouleur(domaines, top[0])] : ['_', 'Sans lien', 99];
+    },
+    theme: ({ f }) => { const s = disquePremier(f.h && f.h.themes); return s ? [s.toLowerCase(), s, null] : ['_', 'Sans thème', 99]; },
+    echeance: ({ f }) => {
+      const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec((f.h && f.h.echeance) || ''); if (!m) return ['_', 'Sans échéance', 99];
+      const e = new Date(+m[1], m[2] - 1, +m[3], 23, 59).getTime(), x = new Date(e);
+      return e < now ? ['retard', 'En retard', 0] : e - now < 7 * DISQUE_JOUR ? ['semaine', 'Cette semaine', 1] : x.getMonth() === new Date(now).getMonth() && x.getFullYear() === annee ? ['mois', 'Ce mois-ci', 2] : ['plus-tard', 'Plus tard', 3];
+    }
+  };
+  const cuts = DISQUE_CRITERES.map(([id, nom]) => {
+    const g = new Map();
+    directs.forEach(x => { const [k, n, rang, c] = groupe[id](x); if (!g.has(k)) g.set(k, { id: k, nom: n, rang, couleur: c || '', n: 0 }); g.get(k).n++; });
+    /* fixed orders where there is one (time, life of a status); else the biggest group first, the "without" last */
+    const groupes = [...g.values()].sort((a, b) => (a.rang ?? (a.id === '_' ? 99 : 50)) - (b.rang ?? (b.id === '_' ? 99 : 50)) || b.n - a.n);
+    return { id, nom, groupes };
+  });
+  const utiles = cuts.filter(c => c.id === 'mois' || c.groupes.length >= 2), choix = utiles.find(c => c.id === par) || utiles[0];
+  const ordre = new Map(choix.groupes.map((g, i) => [g.id, i]));
+  const fichiers = directs.map(x => ({ x, g: groupe[choix.id](x)[0] })).sort((a, b) => ordre.get(a.g) - ordre.get(b.g) || b.x.d - a.x.d).slice(0, ORBITE_LISTE)
+    .map(({ x, g }) => ({ chemin: x.f.p, titre: (x.f.t || x.f.p.split('/').pop()).slice(0, 90), resume: x.f.h && x.f.h.resume || '', taille: x.f.s, d: x.d, g }));
+  const racine = !!seulFichiers && sousDossiers(clean).length > 0;
+  return { chemin: clean, fichiers: racine, fil: orbiteFil(clean, racine), mode: 'index', centre, couleur, total: directs.length,
+    par: choix.id, criteres: utiles.map(c => ({ id: c.id, nom: c.nom, n: c.groupes.length })), inutiles: cuts.filter(c => !utiles.includes(c)).map(c => c.nom), groupes: choix.groupes.map(({ rang, ...g }) => g), liste: fichiers };
+}
+
 /* ---------------------------- THE SECOND BRAIN'S DATA ---------------------------- */
 const FEEDS = { '/api/calendar': () => cached('cal', 120000, getCalendar), '/api/artifacts': async () => getArtifacts(), '/api/routines': () => cached('rt', 60000, getRoutines), '/api/stats': () => cached('stats', 60000, getStats), '/api/email': () => cached('mail', 180000, getEmail) };
 async function boot() {
@@ -1638,7 +1771,7 @@ function needsFirstRefresh() {
 const MIME = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg',
   '.webp': 'image/webp', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.ico': 'image/x-icon', '.gif': 'image/gif', '.mp4': 'video/mp4', '.txt': 'text/plain' };
 const PUBLIC_FILES = new Set(['index.html', 'os.html', 'copy.css', 'copy.js', 'shell-extras.js', 'view-transitions.js', 'widgets.html']);
-const PUBLIC_DIRS = ['assets', 'brain', 'views', 'fichiers', 'bibliotheque', 'projets', 'competences', 'connecteurs', 'outbox', 'orbite'];
+const PUBLIC_DIRS = ['assets', 'brain', 'views', 'fichiers', 'bibliotheque', 'projets', 'competences', 'connecteurs', 'outbox', 'orbite', 'disque'];
 function publicFile(p2) {
   let rel; try { rel = decodeURIComponent(p2).replace(/^\/+/, ''); } catch (_) { return null; }
   if (!rel || rel.includes('\0') || rel.includes('\\')) return null;
@@ -1718,6 +1851,7 @@ const server = http.createServer(async (req, res) => {
     /* ---- the 3D home ---- */
     if (p2 === '/local/orbite' && !post) { try { return sendJson(res, orbiteNiveau(u.searchParams.get('chemin') || '', u.searchParams.get('fichiers') === '1')); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); } }
     if (p2 === '/local/orbite/fichier' && !post) { try { return sendJson(res, orbiteFichier(u.searchParams.get('chemin'))); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); } }
+    if (p2 === '/local/disque' && !post) { try { return sendJson(res, disqueNiveau(u.searchParams.get('chemin') || '', u.searchParams.get('fichiers') === '1', u.searchParams.get('par') || '')); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); } }
     if (p2 === '/data/accueil.js') return sendScript(res, 'window.SM4RT_ACCUEIL=' + JSON.stringify(ACCUEIL) + ';');
     if (p2 === '/data/snapshot.js') return sendScript(res, 'window.COPY_DATA=' + JSON.stringify(routinesLib.calendarData(routineSources.allRoutines())) + ';');
     if (p2 === '/data/arms-usage.js') { const f = path.join(DATA, 'arms-usage.js'); return fs.existsSync(f) ? serveFile(req, res, f) : sendScript(res, 'window.ARMS_USAGE=null;'); }
@@ -1814,6 +1948,8 @@ const server = http.createServer(async (req, res) => {
     if (p2 === '/outbox') { res.writeHead(302, { Location: '/outbox/' }); return res.end(); }
     if (p2 === '/orbite') { res.writeHead(302, { Location: '/orbite/' }); return res.end(); }
     if (p2 === '/orbite/') return serveFile(req, res, path.join(KIT, 'orbite', 'index.html'));
+    if (p2 === '/disque') { res.writeHead(302, { Location: '/disque/' }); return res.end(); }
+    if (p2 === '/disque/') return serveFile(req, res, path.join(KIT, 'disque', 'index.html'));
     if (p2 === '/outbox/') return serveFile(req, res, path.join(KIT, 'outbox', 'index.html'));
     if (p2 === '/bibliotheque/') return serveFile(req, res, path.join(KIT, 'bibliotheque', 'index.html'));
     if (p2.startsWith('/artifacts/')) {

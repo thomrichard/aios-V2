@@ -1,0 +1,51 @@
+/* SM4RT Disque: the rosace. It reads on top of ../orbite/orbite.css (the layout, the night sky, the guide, the panel,
+   the legend): only the flat disc and its corner boxes live here. The rings are conic gradients cut into crowns by a
+   mask; one transparent circle on top catches the clicks and the hovering for the whole disc. */
+
+.disque #scene{perspective:none;cursor:default}
+/* the guide stays narrow, out of the disc's way; the parts carry their own names, so no legend */
+.disque #guide{max-width:min(34%,330px)}
+.disque #legende{display:none}
+.disque-monde{position:absolute;width:0;height:0}
+.disque-monde.bas{animation:emerge .75s cubic-bezier(.2,.7,.2,1) both}
+.disque-monde.haut{animation:recule .75s cubic-bezier(.2,.7,.2,1) both}
+.disque-cible{position:absolute;border-radius:50%}
+.disque-cible.vise{cursor:pointer}
+.calques{position:absolute;left:0;top:0;width:0;height:0;pointer-events:none}
+.couronne{position:absolute;border-radius:50%}
+.disque .etq{position:absolute;max-width:210px;padding:2px 7px;border:0;border-radius:6px;background:rgba(3,6,7,.72);color:#F2FBF9;font:600 12px var(--police-titre);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;pointer-events:none}
+.disque .etq.index{font:500 11px var(--mono);color:#9DB0AC;background:transparent}
+.disque .etq.index.on{color:#E6F1EF;background:rgba(3,6,7,.75)}
+.disque .etq.pale{font:500 11px var(--mono);color:#82968F;background:transparent}
+.disque .etq.mono{font:600 12px var(--mono)}
+.disque .etq.fichier{font:600 12px var(--police);color:#fff}
+.rayon{position:absolute;height:16px;line-height:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rayon span{font:400 11px var(--police);color:#9DB0AC;pointer-events:auto;cursor:pointer}
+.rayon span:hover,.rayon.on span{color:#E6F1EF}
+.rayon.on span{font-weight:600}
+.rayon.groupe span{font:500 10px var(--mono);color:#82968F}
+.point{position:absolute;border-radius:50%}
+.disque-centre{position:absolute;box-sizing:border-box;padding:6px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;text-align:center;color:#fff;pointer-events:auto;cursor:n-resize}
+.disque-centre.carte{cursor:default}
+.disque-centre b{max-width:100%;font:600 14px var(--police-titre);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.disque-centre small{font:400 10px var(--mono);color:rgba(255,255,255,.78)}
+.disque-centre:focus-visible{outline:2px solid #fff;outline-offset:4px}
+
+/* a label lets the pointer through to its part (the disc finds the part); the keyboard still reaches it */
+.disque .etq:focus-visible{outline:2px solid #fff;outline-offset:2px}
+
+/* the corner: what the pointer is on, then the cut */
+#survol{position:absolute;right:16px;top:14px;z-index:7;max-width:46%;padding:7px 12px;border-radius:8px;border:1px solid rgba(148,226,213,.27);background:rgba(3,6,7,.82);font:500 12px var(--mono);color:#E6F1EF;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;pointer-events:none}
+#cote{position:absolute;right:16px;top:56px;z-index:6;display:flex;flex-direction:column;gap:10px;width:236px}
+.cadre{display:flex;flex-direction:column;gap:6px;padding:10px 12px;border-radius:10px;background:rgba(3,6,7,.78);border:1px solid rgba(148,226,213,.2)}
+.cadre .etiquette{color:#82968F}
+#decoupes{display:flex;flex-wrap:wrap;gap:6px}
+#decoupes button{min-height:28px;padding:0 10px;border-radius:9999px;border:1px solid rgba(148,226,213,.27);background:transparent;color:#9DB0AC;font:500 12px var(--police);cursor:pointer}
+#decoupes button[aria-pressed=true]{border-color:rgba(var(--accent-rgb),.7);background:rgba(var(--accent-rgb),.14);color:var(--accent)}
+#decoupe-note{margin:0;font-size:11px;color:#82968F}
+
+@media (max-width:900px){
+  #cote{width:200px}
+  #survol{max-width:calc(100% - 32px)}
+}
+@media (prefers-reduced-motion:reduce){.disque-monde.bas,.disque-monde.haut{animation:none}}

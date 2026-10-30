@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr" data-mode="nuit" data-couleur="turquoise"><head><meta charset="utf-8"><script src="../assets/token.js"></script><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; connect-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; frame-src 'none'; form-action 'none'; object-src 'none'; base-uri 'none'"><title>SM4RT Disque</title><link rel="icon" href="../assets/sm4rt-hex.svg"><script src="../assets/apparence.js"></script><link rel="stylesheet" href="../assets/theme.css"><link rel="stylesheet" href="../orbite/orbite.css"><link rel="stylesheet" href="disque.css"></head>
+<body>
+<main id="orbite" class="disque">
+ <section id="scene" aria-label="Ton AIOS à plat : clique une part pour zoomer dessus">
+  <div id="vide" hidden><p class="etiquette">Disque</p><h1 id="vide-titre">Chargement…</h1><p id="vide-texte"></p></div>
+  <div id="disque-hote"></div>
+  <div id="guide">
+   <button type="button" id="monter" class="monter" hidden title="Échap marche aussi"><span aria-hidden="true">↑</span><span id="monter-texte">Revenir</span><kbd>Échap</kbd></button>
+   <div class="niveau"><span class="etiquette" id="niveau-nom"></span><h1 id="niveau-titre"></h1><p id="niveau-aide"></p></div>
+   <nav id="echelle" aria-label="Les niveaux"></nav>
+  </div>
+  <div id="survol" hidden></div>
+  <div id="cote">
+   <div id="decoupe" class="cadre" hidden><span class="etiquette">Découper par</span><div id="decoupes" role="group" aria-label="Découper par"></div><p id="decoupe-note" hidden></p></div>
+  </div>
+  <div id="legende"></div>
+ </section>
+ <aside id="panneau" class="panneau trait" aria-label="Ce que tu regardes" aria-live="polite"></aside>
+</main>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="../brain/vendor/marked.min.js"></script><script src="../orbite/commun.js"></script><script src="app.js"></script>
+</body></html>
