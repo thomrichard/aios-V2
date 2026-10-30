@@ -22,7 +22,7 @@
   const MOIS = ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.'];
   const S = {
     liste: [], statuts: [], fin: [], filtre: store.get('filtre', 'vivants'), vue: store.get('vue', 'atelier'),
-    cur: null, lu: null, avant: null, vuA: null, changes: null, faites: false, toutes: false, form: '', occupe: false
+    cur: null, lu: null, avant: null, vuA: null, changes: null, faites: false, toutes: false, form: '', occupe: false, reprise: ''
   };
 
   /* ---------------------------- server ---------------------------- */
@@ -164,6 +164,7 @@
     $('atelier').hidden = S.vue !== 'atelier'; $('fiche').hidden = S.vue !== 'fiche';
     document.querySelectorAll('#vues button').forEach(b => b.setAttribute('aria-pressed', b.dataset.vue === S.vue));
     if (S.vue === 'atelier') dessineAtelier(); else dessineFiche();
+    if (S.reprise) { const i = $(S.vue).querySelector(`[data-ajout="${S.reprise}"]`); S.reprise = ''; if (i) i.focus(); }
   }
   function dessineTete() {
     const c = S.cur, p = c.projet, h = p.header;
@@ -335,7 +336,7 @@
     if (!js.length) return '';
     return `<div class="bande"><div class="sous-tete"><span class="etiquette">Jalons</span><span class="etiquette" style="color:var(--accent)">${S.cur.projet.avancement ?? 0} %</span></div>
       <div class="bande-barres" aria-hidden="true">${js.map(j => `<i class="${j.fait ? 'fait' : ''}${neuf(j.ligne) ? ' neuf' : ''}"><b style="width:${j.fait ? 100 : j.pct || 0}%"></b></i>`).join('')}</div>
-      <div class="bande-noms">${js.map(j => `<span class="${j.fait ? 'fait' : (j.pct || 0) > 0 ? 'encours' : ''}${neuf(j.ligne) ? ' neuf' : ''}">${esc(j.nom.toUpperCase())}${j.fait ? ' ✓' : ''}${j.date ? ' · ' + esc(court(j.date)) : ''}</span>`).join('')}</div></div>`;
+      <div class="bande-noms">${js.map(j => `<button type="button" class="${j.fait ? 'fait' : (j.pct || 0) > 0 ? 'encours' : ''}${neuf(j.ligne) ? ' neuf' : ''}" data-jalon="${j.ligne}" title="Modifier ce jalon">${esc(j.nom.toUpperCase())}${j.fait ? ' ✓' : ''}${j.date ? ' · ' + esc(court(j.date)) : ''}</button>`).join('')}</div></div>`;
   }
   function libres() {
     /* the parts this page does not know: shown as written */
@@ -346,17 +347,18 @@
       return `<section><h2>${esc(x.nom)}</h2><div class="bloc md-libre${touche ? ' neuf' : ''}">${html}</div></section>`;
     }).join('');
   }
+  /* a « + » line, as in the Atelier: Enter writes it in the file */
+  const plus = (genre, texte, aria) => `<label class="ajout"><span aria-hidden="true">+</span><input data-ajout="${genre}" type="text" placeholder="${texte} (Entrée)" aria-label="${aria}"></label>`;
   function dessineFiche() {
     const p = S.cur.projet, h = p.header;
     const doc = `<article id="doc" class="panneau trait">
-      ${bande()}
-      <div class="etape"><span class="etiquette">Prochaine étape</span><p>${h.prochaine_etape ? inline(h.prochaine_etape) : '<span style="opacity:.6">Pas encore écrite</span>'}</p></div>
-      <section><h2>Tâches</h2>${p.taches.map(t => bloc(t.ligne, tachesHtml([t]))).join('')}${p.jalons.filter(j => j.taches.length).map(j => `<p class="etiquette sous-jalon">Jalon · ${esc(j.nom)} · ${j.pct} %</p>` + j.taches.map(t => bloc(t.ligne, tachesHtml([t]))).join('')).join('')}${!toutes(p).length ? '<p class="vide-col">Aucune tâche.</p>' : ''}</section>
-      <section><h2>Décisions</h2>${p.decisions.map(d => bloc(d.ligne, `<div class="doc-decision"><span class="date">${esc(court(d.date) || '—')}</span><span><b>${inline(d.texte)}</b>${d.pourquoi ? `<small>Pourquoi : ${inline(d.pourquoi)}. </small>` : ''}${d.ecarte ? `<small>Écarté : ${inline(d.ecarte)}.</small>` : ''}</span></div>`)).join('') || '<p class="vide-col">Aucune décision notée.</p>'}</section>
-      <section><h2>Livrables</h2><div class="doc-livrables">${p.livrables.map(x => `<div class="bloc${neuf(x.ligne) ? ' neuf' : ''}" style="flex:1 1 220px">${livrableHtml(x)}</div>`).join('') || '<p class="vide-col">Pas encore de livrable.</p>'}</div></section>
-      <section><h2>Sources</h2>${p.sources.map(x => bloc(x.ligne, lienPlat(x, `data-source="${x.ligne}"`))).join('') || '<p class="vide-col">Pas encore de source.</p>'}</section>
+      <section class="doc-jalons">${bande() || '<span class="etiquette">Jalons</span>'}${plus('jalon', 'Ajouter un jalon', 'Ajouter un jalon')}</section>
+      <div class="etape"><span class="etiquette">Prochaine étape</span><p>${h.prochaine_etape ? inline(h.prochaine_etape) : '<span style="opacity:.6">Pas encore écrite</span>'}</p><div class="etape-btns"><button type="button" class="btn primaire petit" data-etape="suite">${h.prochaine_etape ? 'C’est fait, la suite' : 'L’écrire'}</button></div></div>
+      <section><h2>Tâches</h2>${p.taches.map(t => bloc(t.ligne, tachesHtml([t]))).join('')}${p.jalons.filter(j => j.taches.length).map(j => `<p class="etiquette sous-jalon">Jalon · ${esc(j.nom)} · ${j.pct} %</p>` + j.taches.map(t => bloc(t.ligne, tachesHtml([t]))).join('')).join('')}${!toutes(p).length ? '<p class="vide-col">Aucune tâche.</p>' : ''}${plus('tache', 'Ajouter une tâche', 'Ajouter une tâche')}</section>
+      <section><h2>Décisions</h2>${p.decisions.map(d => bloc(d.ligne, `<div class="doc-decision"><span class="date">${esc(court(d.date) || '—')}</span><span><b>${inline(d.texte)}</b>${d.pourquoi ? `<small>Pourquoi : ${inline(d.pourquoi)}. </small>` : ''}${d.ecarte ? `<small>Écarté : ${inline(d.ecarte)}.</small>` : ''}</span></div>`)).join('') || '<p class="vide-col">Aucune décision notée.</p>'}${formDecision()}</section>
+      <section><h2>Livrables</h2><div class="doc-livrables">${p.livrables.map(x => `<div class="bloc${neuf(x.ligne) ? ' neuf' : ''}" style="flex:1 1 220px">${livrableHtml(x)}</div>`).join('') || '<p class="vide-col">Pas encore de livrable.</p>'}</div>${plus('livrable', 'Un fichier, un lien ou un nom', 'Ajouter un livrable')}</section>
+      <section><h2>Sources</h2>${p.sources.map(x => bloc(x.ligne, lienPlat(x, `data-source="${x.ligne}"`))).join('') || '<p class="vide-col">Pas encore de source.</p>'}${plus('source', 'Colle un lien ou un chemin', 'Ajouter une source')}</section>
       ${libres()}
-      <form class="ajout-rapide" data-form="rapide"><select name="genre" aria-label="Quoi ajouter"><option value="tache">Tâche</option><option value="decision">Décision</option><option value="livrable">Livrable</option><option value="source">Source</option><option value="jalon">Jalon</option></select><input class="champ" name="texte" placeholder="Écris, puis Entrée" aria-label="Le texte à ajouter"><button class="btn primaire">Ajouter</button></form>
     </article>`;
     $('fiche').innerHTML = `<div class="fiche-grille">${doc}${filHtml()}</div>`;
     images($('fiche'));
@@ -522,6 +524,7 @@
     if (e.key !== 'Enter' || !t.dataset || !t.dataset.ajout) return;
     e.preventDefault();
     const v = t.value.trim(); if (!v) return;
+    S.reprise = t.dataset.ajout;
     ({ tache: ops.ajouteTache, jalon: ops.ajouteJalon, source: x => ops.lien('sources', x), livrable: x => ops.lien('livrables', x) })[t.dataset.ajout](v);
   }
   $('atelier').addEventListener('keydown', touche); $('fiche').addEventListener('keydown', touche);
@@ -529,10 +532,7 @@
     const f = e.target.closest('form[data-form]'); if (!f) return;
     e.preventDefault();
     const d = Object.fromEntries(new FormData(f));
-    if (f.dataset.form === 'decision') { if (!propre(d.texte)) return; S.form = ''; ops.decision(d.texte, d.pourquoi, d.ecarte); return; }
-    const v = propre(d.texte); if (!v) return;
-    if (d.genre === 'tache') ops.ajouteTache(v); else if (d.genre === 'jalon') ops.ajouteJalon(v); else if (d.genre === 'decision') ops.decision(v, '', '');
-    else ops.lien(d.genre === 'livrable' ? 'livrables' : 'sources', v);
+    if (f.dataset.form === 'decision') { if (!propre(d.texte)) return; S.form = ''; ops.decision(d.texte, d.pourquoi, d.ecarte); }
   }
   $('atelier').addEventListener('submit', envoi); $('fiche').addEventListener('submit', envoi);
 

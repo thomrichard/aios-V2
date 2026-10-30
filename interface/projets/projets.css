@@ -139,7 +139,8 @@ h1#titre{margin:0;font:600 38px/1.06 var(--police-titre);letter-spacing:-.03em;o
 .bande-barres i b{position:absolute;inset:0 auto 0 0;background:var(--accent)}
 .bande-barres i.fait b{background:var(--ok);box-shadow:0 0 10px rgba(var(--ok-rgb),.4)}
 .bande-noms{display:flex;gap:4px;font:400 10px var(--mono);letter-spacing:.06em;color:var(--texte-pale)}
-.bande-noms span{flex:1;min-width:0;overflow-wrap:anywhere}
+.bande-noms button{flex:1;min-width:0;overflow-wrap:anywhere;padding:0;border:0;background:none;font:inherit;letter-spacing:inherit;color:inherit;text-align:left;cursor:pointer}
+.bande-noms button:hover{color:var(--texte)}
 .bande-noms .fait{color:var(--ok)}.bande-noms .encours{color:var(--accent)}
 .bande-noms .neuf{color:var(--accent);font-weight:600}.bande-noms .neuf::after{content:" · nouveau";font-size:9px}
 .bande-barres i.neuf{box-shadow:0 0 0 1px var(--accent)}
@@ -156,9 +157,8 @@ h1#titre{margin:0;font:600 38px/1.06 var(--police-titre);letter-spacing:-.03em;o
 .doc-livrables .livrable{flex:1 1 220px}
 .md-libre{color:var(--texte-doux)}
 .md-libre p{margin:.4em 0}
-.ajout-rapide{display:flex;flex-wrap:wrap;gap:8px;padding:12px;border-radius:10px;border:1px dashed var(--bord-fort)}
-.ajout-rapide select{min-height:38px;border-radius:var(--rayon-petit);border:1px solid var(--bord-fort);background:var(--code-fond);color:var(--texte);padding:0 10px}
-.ajout-rapide input{flex:1 1 220px}
+/* each part of the file has its « + », as in the Atelier */
+#doc section>.ajout,#doc section>.form,#doc section>[data-ouvre-form]{margin-top:10px}
 #fil{flex:1 1 320px;min-width:0;padding:18px;display:flex;flex-direction:column;gap:4px;background:linear-gradient(180deg,var(--code-fond),var(--panneau-bas))}
 .fil-tete{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-bottom:10px}
 .fil-tete h2{margin:0;font:600 17px var(--police-titre);white-space:nowrap}
