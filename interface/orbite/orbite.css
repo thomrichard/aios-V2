@@ -1,0 +1,119 @@
+/* SM4RT Orbes 3D: the home page. The look (variables, night and day) lives in ../assets/theme.css; the scene itself
+   stays a night sky in both modes, the panel follows the mode. The 3D is CSS: a perspective, preserve-3d layers, and
+   labels turned back to face the screen. --yaw and --pitch are set by the drag. */
+
+html,body{height:100%;overflow:hidden}
+#orbite{display:flex;gap:14px;height:100vh;padding:14px;box-sizing:border-box}
+#scene{position:relative;flex:1 1 auto;min-width:0;border-radius:var(--rayon);border:1px solid var(--bord);overflow:hidden;perspective:1300px;cursor:grab;user-select:none;-webkit-user-select:none;touch-action:none;
+  --yaw:0deg;--pitch:-24deg;--halo:46,230,201;
+  background:radial-gradient(60% 55% at 50% 50%,rgba(var(--halo),.16),transparent 70%),radial-gradient(1px 1px at 12% 20%,rgba(255,255,255,.5),transparent),radial-gradient(1px 1px at 78% 12%,rgba(255,255,255,.4),transparent),radial-gradient(1px 1px at 88% 70%,rgba(255,255,255,.35),transparent),radial-gradient(1px 1px at 30% 84%,rgba(255,255,255,.35),transparent),#030607;color:#E6F1EF}
+#scene.glisse{cursor:grabbing}
+#vide{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:24px;color:#9DB0AC;z-index:7}
+#vide h1{margin:0;font:600 26px var(--police-titre);color:#E6F1EF}
+
+/* ---------------------------- the 3D ---------------------------- */
+.monde{position:absolute;left:50%;top:54%;width:0;height:0;transform-style:preserve-3d}
+.monde.bas{animation:emerge .9s cubic-bezier(.2,.7,.2,1) both}
+.monde.haut{animation:recule .9s cubic-bezier(.2,.7,.2,1) both}
+@keyframes emerge{from{transform:scale(.18)}to{transform:scale(1)}}
+@keyframes recule{from{transform:scale(2.6)}to{transform:scale(1)}}
+.manuel,.auto{position:absolute;left:0;top:0;width:0;height:0;transform-style:preserve-3d}
+.manuel{transform:rotateX(var(--pitch)) rotateY(var(--yaw))}
+.auto{animation:tourneY 150s linear infinite}
+.contre{transform-style:preserve-3d;animation:contreY 150s linear infinite}
+#scene.fixe .auto,#scene.fixe .contre{animation-play-state:paused}
+@keyframes tourneY{from{transform:rotateY(0deg)}to{transform:rotateY(360deg)}}
+@keyframes contreY{from{transform:rotateY(0deg)}to{transform:rotateY(-360deg)}}
+.anneau{position:absolute;box-sizing:border-box;border-radius:50%;border:1px solid;transform:rotateX(90deg);pointer-events:none}
+.noeud{position:absolute;left:0;top:0;transform-style:preserve-3d}
+.face{transform-style:preserve-3d;transform:rotateY(calc(var(--yaw) * -1)) rotateX(calc(var(--pitch) * -1))}
+/* the glow needs room inside the node's own box, or the 3D layer cuts it into a square: hence the padding */
+.astre{position:absolute;left:0;top:0;display:flex;flex-direction:column;align-items:center;gap:6px;border:0;background:transparent;color:inherit;font:inherit;cursor:pointer}
+.astre[disabled]{cursor:default}
+.boule{position:relative;display:block;border-radius:50%}
+.lune{position:absolute;width:7px;height:7px;margin:-3.5px;border-radius:50%;opacity:.85}
+.nom{display:flex;flex-direction:column;align-items:center;gap:1px;padding:2px 7px;border-radius:6px;background:rgba(3,6,7,.6);white-space:nowrap;max-width:220px}
+.nom b{font:600 13px var(--police-titre);color:#E6F1EF;overflow:hidden;text-overflow:ellipsis;max-width:210px}
+.nom small{font:400 10px var(--mono);color:#82968F}
+.astre.fichier .nom b{font:400 11px var(--police);color:#C9D7D4}
+.astre.fichier.choisi .nom b{font-weight:600;color:#fff}
+.astre.centre .nom b{font-size:16px}
+.astre:focus-visible .boule{outline:2px solid #fff;outline-offset:4px}
+
+/* ---------------------------- the guide, top left ---------------------------- */
+#guide{position:absolute;left:16px;top:14px;z-index:6;display:flex;flex-direction:column;gap:10px;max-width:44%;cursor:auto}
+.monter{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:0 16px 0 14px;border-radius:12px;border:1px solid rgba(var(--accent-rgb),.6);background:rgba(var(--accent-rgb),.14);color:#E6F1EF;font:600 15px var(--police-titre);box-shadow:0 0 30px rgba(var(--accent-rgb),.15)}
+.monter span:first-child{font-size:18px;color:var(--accent)}
+.monter kbd{margin-left:2px;padding:1px 6px;border-radius:4px;border:1px solid rgba(148,226,213,.3);font:500 10px var(--mono);color:#82968F}
+.niveau{display:flex;flex-direction:column;gap:4px}
+.niveau .etiquette{color:#82968F}
+.niveau h1{margin:0;font:600 20px var(--police-titre);color:#E6F1EF}
+.niveau p{margin:0;font-size:12px;color:#9DB0AC}
+#echelle{display:flex;flex-direction:column;margin-top:2px}
+#echelle button{display:flex;align-items:center;gap:10px;min-height:32px;padding:0 10px 0 0;border:0;background:transparent;color:#82968F;font:400 13px var(--police);text-align:left}
+#echelle button[aria-current=step]{color:#E6F1EF;font-weight:600;cursor:default}
+#echelle button:disabled{cursor:default}
+#echelle .pt{flex:0 0 22px;display:flex;justify-content:center}
+#echelle .pt i{display:block;width:10px;height:10px;border-radius:50%;border:2px solid currentColor;box-sizing:border-box}
+#echelle button[aria-current=step] .pt i{width:14px;height:14px;background:currentColor}
+#echelle .num{font:500 10px var(--mono);color:#82968F}
+#outils{position:absolute;right:16px;top:14px;z-index:6;display:flex;gap:8px;cursor:auto}
+.outil{min-height:32px;padding:0 12px;border-radius:8px;border:1px solid rgba(148,226,213,.27);background:rgba(3,6,7,.7);color:#9DB0AC;font:500 11px var(--mono);letter-spacing:.06em}
+.outil:hover{color:#E6F1EF}
+#legende{position:absolute;left:16px;bottom:14px;z-index:5;display:flex;flex-wrap:wrap;gap:6px 12px;max-width:70%;padding:8px 12px;border-radius:10px;background:rgba(3,6,7,.7);border:1px solid rgba(148,226,213,.13);font:400 11px var(--mono);color:#9DB0AC;cursor:auto}
+#legende span{display:inline-flex;align-items:center;gap:6px}
+#legende i{width:7px;height:7px;border-radius:50%}
+#legende .aide{color:#82968F}
+
+/* ---------------------------- the panel ---------------------------- */
+#panneau{flex:0 0 380px;min-width:0;box-sizing:border-box;padding:22px;display:flex;flex-direction:column;gap:14px;overflow:auto;transition:flex-basis .25s}
+body.grand #panneau{flex-basis:620px}
+.p-tete{display:flex;align-items:flex-start;gap:10px}
+.p-tete > div{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px}
+.p-chemin{font:500 10px var(--mono);letter-spacing:.06em;color:var(--texte-pale);overflow-wrap:anywhere}
+.p-titre{margin:0;font:600 24px/1.15 var(--police-titre);letter-spacing:-.02em;overflow-wrap:anywhere}
+.p-puces{display:flex;flex-wrap:wrap;gap:6px}
+.p-puces .pastille i{width:6px;height:6px;border-radius:50%;display:inline-block}
+.p-resume{margin:0;font-size:14px;line-height:1.55;color:var(--texte-doux)}
+.p-liste{display:flex;flex-direction:column;gap:4px}
+.p-ligne{display:flex;align-items:center;gap:10px;width:100%;padding:9px 10px;border-radius:8px;border:1px solid var(--bord);background:var(--code-fond);color:var(--texte);text-align:left}
+.p-ligne:hover{border-color:var(--accent-bord)}
+.p-ligne i{flex:0 0 8px;height:8px;border-radius:50%}
+.p-ligne span{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.p-ligne b{font:500 13px var(--mono);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.p-ligne small{font-size:12px;color:var(--texte-pale);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.p-ligne em{font:normal 400 11px var(--mono);color:var(--texte-pale)}
+.p-ligne .fl{color:var(--accent)}
+.p-ligne[aria-current=true]{border-color:var(--accent-bord);background:var(--accent-doux)}
+.p-reste{padding:4px 10px;font:400 11px var(--mono);color:var(--texte-pale)}
+.p-lecture{position:relative;max-height:320px;overflow:hidden;padding:14px 16px;border-radius:12px;background:var(--code-fond);border:1px solid var(--bord);font-size:14px;line-height:1.55;color:var(--texte-doux);overflow-wrap:anywhere}
+body.grand .p-lecture{max-height:none;overflow:visible}
+.p-lecture::after{content:"";position:absolute;left:0;right:0;bottom:0;height:56px;background:linear-gradient(180deg,transparent,var(--panneau-bas))}
+body.grand .p-lecture::after{display:none}
+.p-lecture h1,.p-lecture h2,.p-lecture h3{margin:.6em 0 .3em;font:600 15px var(--police-titre);color:var(--texte)}
+.p-lecture h1{font-size:17px}
+.p-lecture p,.p-lecture ul,.p-lecture ol{margin:.4em 0}
+.p-lecture code{font:12.5px var(--mono);padding:1px 5px;border-radius:4px;background:var(--surface-2)}
+.p-lecture pre{white-space:pre-wrap;font:12px var(--mono)}
+.p-lecture table{border-collapse:collapse;font-size:12px}
+.p-lecture td,.p-lecture th{border:1px solid var(--bord);padding:3px 6px}
+.p-lecture img{max-width:100%;border-radius:8px}
+.p-image{max-width:100%;border-radius:10px;border:1px solid var(--bord)}
+.p-liens{display:flex;flex-direction:column;gap:6px}
+.p-liens div{display:flex;flex-wrap:wrap;gap:6px}
+.p-lien{padding:4px 9px;border-radius:9999px;border:0;background:var(--surface-2);font:400 11px var(--mono);color:var(--accent);max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.p-lien.absent{color:var(--texte-pale);text-decoration:line-through}
+.p-actions{margin-top:auto;display:flex;flex-wrap:wrap;gap:8px;padding-top:6px}
+.p-actions .btn{flex:1 1 140px}
+.p-actions .btn.primaire{flex-basis:100%}
+
+@media (max-width:900px){
+  html,body{height:auto;overflow:auto}
+  #orbite{flex-direction:column;height:auto}
+  #scene{flex:0 0 auto;height:72vh;min-height:460px}
+  #panneau,body.grand #panneau{flex:0 0 auto}
+  #guide{max-width:70%}
+  .monter{min-height:40px;font-size:14px}
+  #legende{max-width:calc(100% - 32px)}
+}
+@media (prefers-reduced-motion:reduce){.monde.bas,.monde.haut{animation:none}.auto,.contre{animation:none}}
