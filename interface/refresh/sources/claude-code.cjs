@@ -212,4 +212,108 @@ function sessionUsage(days = 30) {
   };
 }
 
-module.exports = { scheduledTasks, sessionUsage, taskRoutineId };
+/* ---------- the files the agent wrote (the Outbox tab) ----------
+   For each session of the last `days` days: its title, the skills it launched, and every file written by Write, Edit,
+   MultiEdit or NotebookEdit (path, time, tool). Of the talk itself only paths, times and titles are kept, plus the
+   first 60 characters of the first request when the log has no title. A session file is read again only when it
+   changes (size or date); the result is kept in data/outbox-cache.json. Null when there are no such logs here. */
+const WRITE_TOOLS = new Set(['Write', 'Edit', 'MultiEdit', 'NotebookEdit']);
+const WRITES_CACHE = path.join(KIT, 'data', 'outbox-cache.json');
+const WRITES_VERSION = 1;
+const short60 = s => { const t = String(s || '').replace(/\s+/g, ' ').trim(); return t.length > 60 ? t.slice(0, 59).trimEnd() + '…' : t; };
+/* the first real request of a session: not a tool result, not a system note; a slash command reads as "/name args" */
+function requestText(u) {
+  const c = u.message && u.message.content;
+  let t = typeof c === 'string' ? c : Array.isArray(c) ? c.filter(x => x && x.type === 'text').map(x => x.text).join(' ') : '';
+  const cmd = /<command-name>\/?([^<\s]+)<\/command-name>/.exec(t);
+  if (cmd) { const args = /<command-args>([^<]*)<\/command-args>/.exec(t); return short60('/' + cmd[1] + (args && args[1].trim() ? ' ' + args[1].trim() : '')); }
+  t = t.replace(/<[a-z-]+>[\s\S]*?<\/[a-z-]+>/g, ' ');
+  if (/^\s*(Caveat:|\[Request interrupted)/.test(t)) return '';
+  return short60(t);
+}
+function summarizeWrites(file) {
+  const text = fs.readFileSync(file, 'utf8');
+  const s = { first: 0, last: 0, title: '', ask: '', skills: [], writes: [] };
+  const titles = { custom: '', ai: '', summary: '' }, byId = new Map();
+  const addSkill = n => { n = String(n || '').trim().replace(/^\/+/, ''); if (n && !s.skills.includes(n)) s.skills.push(n); };
+  let i = 0;
+  while (i < text.length) {
+    let j = text.indexOf('\n', i); if (j < 0) j = text.length;
+    const line = text.slice(i, j); i = j + 1;
+    if (line.length < 20) continue;
+    const isA = line.includes('"type":"assistant"'), isU = !isA && line.includes('"type":"user"');
+    if (!isA && !isU) {
+      const kind = line.includes('"type":"custom-title"') ? 'custom' : line.includes('"type":"ai-title"') ? 'ai' : line.includes('"type":"summary"') ? 'summary' : '';
+      if (kind) { try { const o = JSON.parse(line), v = o.customTitle || o.aiTitle || o.title || o.summary; if (typeof v === 'string' && v.trim()) titles[kind] = short60(v); } catch { } }
+      continue;
+    }
+    const ms = tsOf(line); if (!(ms > 0)) continue;
+    if (!s.first || ms < s.first) s.first = ms; if (ms > s.last) s.last = ms;
+    if (isA) {
+      if (!line.includes('"tool_use"')) continue;
+      let a; try { a = JSON.parse(line); } catch { continue; }
+      for (const b of (a.message && Array.isArray(a.message.content)) ? a.message.content : []) {
+        if (!b || b.type !== 'tool_use') continue;
+        if (b.name === 'Skill' && b.input) { addSkill(b.input.skill); continue; }
+        if (!WRITE_TOOLS.has(b.name) || !b.input) continue;
+        const p = b.input.file_path || b.input.notebook_path;
+        if (typeof p !== 'string' || !p) continue;
+        const w = [p, ms, b.name]; s.writes.push(w); if (b.id) byId.set(b.id, w);
+      }
+      continue;
+    }
+    // user lines: the failed writes, the skills that loaded, the first request
+    if (line.includes('"is_error":true') && line.includes('"tool_result"')) {
+      let u; try { u = JSON.parse(line); } catch { continue; }
+      for (const b of (u.message && Array.isArray(u.message.content)) ? u.message.content : []) {
+        if (b && b.type === 'tool_result' && b.is_error && byId.has(b.tool_use_id)) { const w = byId.get(b.tool_use_id); s.writes.splice(s.writes.indexOf(w), 1); byId.delete(b.tool_use_id); }
+      }
+      continue;
+    }
+    const load = line.includes('Base directory for this skill'), ask = !s.ask && !line.includes('"tool_result"') && !line.includes('"isMeta":true');
+    if (!load && !ask) continue;
+    let u; try { u = JSON.parse(line); } catch { continue; }
+    if (load) {
+      const c = u.message && u.message.content;
+      for (const t of typeof c === 'string' ? [c] : Array.isArray(c) ? c.filter(x => x && x.type === 'text').map(x => x.text) : []) { const m = SKILL_LOAD.exec(t); if (m) addSkill(path.basename(m[1].trim().replace(/[\\/]+$/, ''))); }
+    } else s.ask = requestText(u);
+  }
+  s.title = titles.custom || titles.ai || titles.summary || s.ask;
+  delete s.ask;
+  return s;
+}
+function sessionWrites(days = 7) {
+  let projects; try { projects = fs.readdirSync(PROJECTS); } catch { return null; }
+  const cutoff = Date.now() - days * 864e5, files = [];
+  for (const proj of projects) {
+    const dir = path.join(PROJECTS, proj); let list; try { list = fs.readdirSync(dir, { withFileTypes: true }); } catch { continue; }
+    for (const e of list) {
+      if (e.isFile() && e.name.endsWith('.jsonl')) files.push({ file: path.join(dir, e.name), session: e.name.slice(0, -6), proj, sub: false });
+      if (e.isDirectory()) { const subdir = path.join(dir, e.name, 'subagents'); try { for (const f of fs.readdirSync(subdir)) if (f.endsWith('.jsonl')) files.push({ file: path.join(subdir, f), session: e.name, proj, sub: true }); } catch { } }
+    }
+  }
+  let cache = { v: WRITES_VERSION, files: {} };
+  try { const c = JSON.parse(fs.readFileSync(WRITES_CACHE, 'utf8')); if (c.v === WRITES_VERSION) cache = c; } catch { }
+  const next = { v: WRITES_VERSION, files: {} }, bySession = new Map();
+  for (const f of files) {
+    let st; try { st = fs.statSync(f.file); } catch { continue; }
+    if (st.mtimeMs < cutoff) continue;
+    const hit = cache.files[f.file];
+    let s;
+    if (hit && hit.size === st.size && hit.mtime === st.mtimeMs) s = hit.s;
+    else { try { s = summarizeWrites(f.file); } catch { continue; } }
+    next.files[f.file] = { size: st.size, mtime: st.mtimeMs, s };
+    const key = f.proj + '/' + f.session;
+    let g = bySession.get(key);
+    if (!g) bySession.set(key, g = { id: f.session, proj: f.proj, titre: '', debut: 0, fin: 0, skills: [], writes: [] });
+    if (!f.sub) { g.titre = s.title; g.debut = g.debut ? Math.min(g.debut, s.first || g.debut) : s.first; }
+    else if (!g.debut) g.debut = s.first;
+    g.fin = Math.max(g.fin, s.last);
+    for (const k of s.skills) if (!g.skills.includes(k)) g.skills.push(k);
+    for (const [p, t, tool] of s.writes) if (t >= cutoff) g.writes.push({ p, t, tool });
+  }
+  try { fs.mkdirSync(path.dirname(WRITES_CACHE), { recursive: true }); fs.writeFileSync(WRITES_CACHE, JSON.stringify(next)); } catch { }
+  return [...bySession.values()].filter(g => g.writes.length).sort((a, b) => a.debut - b.debut);
+}
+
+module.exports = { scheduledTasks, sessionUsage, sessionWrites, taskRoutineId };

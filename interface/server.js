@@ -12,6 +12,7 @@
      /projets/               the project page alone (also the Second Brain's Projets tab)
      /competences/           the skills page alone (also the Second Brain's Skills tab)
      /connecteurs/           the connectors page alone (also the Second Brain's Connecteurs tab)
+     /outbox/                the outbox page alone (also the Second Brain's Outbox tab)
      /widgets                the widget library
      /artifacts/<file>       the ring's balls (the artifacts folder)
    Homepage feeds (GET)
@@ -33,10 +34,13 @@
      /local/competences/retour    adds a note to a skill's feedback.md, the line /note writes (POST, local pages only)
    Connectors page (the Connecteurs tab, GET, read only)
      /local/connecteurs      every line of systeme/connexions.md with its usage and where it serves, the MCP servers called but not listed, and the Git history of the table
+   Outbox page (the Outbox tab)
+     /local/outbox           the files the agent wrote or changed in the last 7 days, by day, with their sessions, projects and validations (GET)
+     /local/outbox/ranger    validates files (a line each in outbox/ranges.md) or puts them back (POST, local pages only)
    Actions (POST, local pages only)
      /api/run                runs a skills deck card through your agent's command (os-config.json "runner")
      /api/apply-comments     the "Apply all comments" runner that review pages call
-     /api/open               opens a link, or a file inside your workspace, on this computer
+     /api/open               opens a link, or a file inside your workspace, on this computer (reveal: shows it in the file manager)
      /api/app-open           a Micro Apps tile click: logs the open, says where to go
      /api/artifact-remove    right-click REMOVE on a ball (moves it to artifacts/_trash)
      /local/refresh          rebuilds the Second Brain's data (no model calls)
@@ -498,10 +502,10 @@ function applyPrompt({ page, file, notes, title, comments }) {
    Program files (.exe, .bat, scripts and the like) are never opened. No shell is involved. */
 const EXEC_EXT = /\.(exe|bat|cmd|com|ps1|psm1|vbs|vbe|js|jse|wsf|wsh|msi|msp|scr|pif|lnk|reg|hta|cpl|jar|sh|bash|zsh|command|app|py|pyw|rb|pl|appref-ms)$/i;
 function workspaceRoot() { try { return scan.resolveRoot(scan.workspaceConfig()); } catch (_) { return null; } }
-function openTarget(target) {
+function openTarget(target, reveal = false) {
   let t = String(target || '').trim();
   if (!t) throw new Error('aucune cible');
-  if (/^https?:\/\//i.test(t)) { new URL(t); return launch(t); }
+  if (/^https?:\/\//i.test(t)) { if (reveal) throw new Error('un lien ne se montre pas dans le Finder'); new URL(t); return launch(t); }
   if (/^file:\/\//i.test(t)) t = decodeURIComponent(new URL(t).pathname).replace(/^\/([A-Za-z]:)/, '$1');
   const root = workspaceRoot();
   const abs = path.isAbsolute(t) ? path.resolve(t) : root ? path.resolve(root, t) : null;
@@ -509,11 +513,14 @@ function openTarget(target) {
   const allowed = [root, KIT, ARTIFACTS].filter(Boolean).some(r => abs === r || abs.startsWith(r + path.sep));
   if (!allowed) throw new Error('seuls les fichiers de ton workspace, du dossier de l’OS ou du dossier des livrables s’ouvrent d’ici');
   if (!fs.existsSync(abs)) throw new Error('introuvable');
-  if (EXEC_EXT.test(abs)) throw new Error('les programmes ne s’ouvrent pas depuis l’OS');
-  return launch(abs);
+  /* showing a program in its folder runs nothing, so only opening it is refused */
+  if (!reveal && EXEC_EXT.test(abs)) throw new Error('les programmes ne s’ouvrent pas depuis l’OS');
+  return launch(abs, reveal);
 }
-function launch(t) {
-  const [cmd, args] = process.platform === 'win32' ? ['explorer.exe', [t.replace(/\//g, /^https?:/i.test(t) ? '/' : '\\')]] : process.platform === 'darwin' ? ['open', [t]] : ['xdg-open', [t]];
+function launch(t, reveal = false) {
+  /* reveal: the file selected in its folder (Finder, Explorer); on Linux there is no standard way to select, so the folder opens */
+  const [cmd, args] = reveal ? (process.platform === 'win32' ? ['explorer.exe', ['/select,' + t.replace(/\//g, '\\')]] : process.platform === 'darwin' ? ['open', ['-R', t]] : ['xdg-open', [path.dirname(t)]])
+    : process.platform === 'win32' ? ['explorer.exe', [t.replace(/\//g, /^https?:/i.test(t) ? '/' : '\\')]] : process.platform === 'darwin' ? ['open', [t]] : ['xdg-open', [t]];
   spawn(cmd, args, { detached: true, stdio: 'ignore', windowsHide: false }).on('error', () => { }).unref();
   return t;
 }
@@ -1212,6 +1219,294 @@ async function listConnecteurs() {
   };
 }
 
+/* ---------------------------- OUTBOX: the outbox page (outbox/) ----------------------------
+   AIOS: the Outbox tab shows, day by day (the last 7), the files the agent wrote or changed, where they are filed.
+   Nothing moves. Two sources: the session logs of Claude Code (refresh/sources/claude-code.cjs: Write, Edit, MultiEdit,
+   NotebookEdit, with the title and the skills of each session) and Git (commits and git status), whose files no session
+   covers go to « Hors discussion ». Of the talk, only paths, times and titles leave the logs; nothing leaves this computer.
+   « Valider » writes one line per file in outbox/ranges.md (POST /local/outbox/ranger); « Remettre » takes it away.
+   A file touched again after its validation is back in « À ranger »: the line is older than its last change. */
+const claudeCode = require('./refresh/sources/claude-code.cjs');
+const OUTBOX_DAYS = 7, RANGES_REL = 'outbox/ranges.md', GIT_COMMIT_MAX = 200, GIT_STATUS_MAX = 5000;
+const pad2 = n => String(n).padStart(2, '0');
+const dayKey = d => d.getFullYear() + '-' + pad2(d.getMonth() + 1) + '-' + pad2(d.getDate());
+const startOfDay = key => { const [y, m, d] = key.split('-').map(Number); return new Date(y, m - 1, d).getTime(); };
+/* the files refresh/brain.mjs rewrites at each refresh: not the agent's work */
+const KIT_GENERATED = new Set(['interface/brain/snapshot.js', 'interface/brain/snapshot-expansions.js', 'interface/brain/_icons.js', 'interface/brain/map-layouts.js', 'interface/assets/home-orb-mini.js']);
+/* what the page never lists: hidden folders, caches, the OS's own data, generated files, secrets, and the outbox itself */
+const outboxSkip = rel => rel.split('/').some(s => s.startsWith('.') || FILES_SKIP.has(s)) || rel.startsWith('interface/data/') || rel.startsWith('outbox/')
+  || rel.startsWith('vues/') || generatedFile(rel) || KIT_GENERATED.has(rel) || scan.isSecret(rel);
+function relInRoot(roots, abs) {
+  const a = String(abs).replace(/\\/g, '/'), folded = process.platform === 'win32' || process.platform === 'darwin';
+  for (const r of roots) {
+    const base = r.replace(/\\/g, '/').replace(/\/+$/, '');
+    if ((folded ? a.toLowerCase() : a).startsWith((folded ? base.toLowerCase() : base) + '/')) {
+      const rel = path.posix.normalize(a.slice(base.length + 1));
+      return rel === '.' || rel.startsWith('../') || rel === '..' ? null : rel;
+    }
+  }
+  return null;
+}
+const OUTBOX_GENRES = [['page', /\.(html?|xhtml)$/i], ['visuel', /\.(png|jpe?g|gif|webp|svg|avif|bmp|ico|pdf)$/i], ['donnees', /\.(jsonl?|csv|tsv|ya?ml|toml|xml|xlsx?|sql|ics)$/i]];
+const genreOf = rel => (OUTBOX_GENRES.find(([, re]) => re.test(rel)) || ['texte'])[0];
+
+/* what Git saw of the window: commits (with the files they touch), what is tracked, when each file was added, and the working tree */
+async function outboxGit(root, since) {
+  const inside_ = ((await gitRun(root, ['rev-parse', '--is-inside-work-tree'])) || '').trim() === 'true';
+  if (!inside_) return { git: false };
+  const prefix = ((await gitRun(root, ['rev-parse', '--show-prefix'])) || '').trim();
+  const rel = p => prefix ? (p.startsWith(prefix) ? p.slice(prefix.length) : null) : p;
+  const flags = ['-c', 'core.quotepath=false'];
+  const [log, ls, status] = await Promise.all([
+    gitRun(root, [...flags, 'log', '--since=' + new Date(since).toISOString(), '--no-renames', '--name-status', '--format=%x1e%aI', '--', '.'], 20000),
+    gitRun(root, [...flags, 'ls-files', '-z', '--', '.'], 20000),
+    gitRun(root, [...flags, 'status', '--porcelain', '-z', '--untracked-files=all', '--', '.'], 20000)
+  ]);
+  const commits = [], tracked = new Set(), adds = new Map(), dirty = [];
+  for (const rec of (log || '').split('\x1e').slice(1)) {
+    const lines = rec.split('\n').map(l => l.replace(/\r$/, '')), t = Date.parse(lines[0]);
+    if (!(t > 0)) continue;
+    const files = [];
+    for (const l of lines.slice(1)) {
+      const m = /^([AMDTUXB])\t(.+)$/.exec(l); if (!m) continue;
+      const p = rel(m[2]); if (p) files.push({ p, st: m[1] });
+    }
+    /* a commit that touches hundreds of files is an import or a merge, not work done by hand */
+    if (files.length && files.length <= GIT_COMMIT_MAX) commits.push({ t, files });
+    for (const f of files) if (f.st === 'A' && (!adds.has(f.p) || adds.get(f.p) > t)) adds.set(f.p, t);
+  }
+  for (const p of (ls || '').split('\0')) { const r = p && rel(p); if (r) tracked.add(r); }
+  const toks = (status || '').split('\0');
+  for (let i = 0; i < toks.length && dirty.length < GIT_STATUS_MAX; i++) {
+    const m = /^(.)(.) (.+)$/.exec(toks[i]); if (!m) continue;
+    if (m[1] === 'R' || m[1] === 'C') i++;
+    if (m[1] === 'D' || m[2] === 'D') continue;
+    const p = rel(m[3]); if (p) dirty.push({ p, st: m[1] === '?' ? '?' : 'M' });
+  }
+  return { git: true, commits, tracked, adds, dirty };
+}
+
+/* projects: the slug and title of each project of projets/, the files each cites in Livrables or Sources, and the folders it cites */
+let projectIndexCache = null;
+function projectWalk(root, dir, out) {
+  let entries; try { entries = fs.readdirSync(path.join(root, dir), { withFileTypes: true }); } catch (_) { return out; }
+  for (const e of entries) {
+    if (e.name.startsWith('.') || e.isSymbolicLink()) continue;
+    const rel = dir + '/' + e.name;
+    if (e.isDirectory()) projectWalk(root, rel, out);
+    else if (e.isFile() && /\.md$/i.test(e.name) && e.name !== '_index.md') { try { const st = fs.statSync(path.join(root, rel)); out.push({ p: rel, m: Math.round(st.mtimeMs), s: st.size }); } catch (_) { } }
+  }
+  return out;
+}
+function dirLink(root, projectRel, cible) {
+  if (!cible || /^https?:\/\//i.test(cible)) return null;
+  let c = cible.split('#')[0].replace(/^<|>$/g, ''); try { c = decodeURIComponent(c); } catch (_) { }
+  for (const rel of [path.posix.normalize(path.posix.join(path.posix.dirname(projectRel), c)), path.posix.normalize(c.replace(/^\/+/, ''))]) {
+    if (rel.startsWith('..') || rel === '.') continue;
+    const abs = inside(root, rel); try { if (abs && fs.statSync(abs).isDirectory()) return rel.replace(/\/+$/, '') + '/'; } catch (_) { }
+  }
+  return null;
+}
+function outboxProjects(root) {
+  const files = projectWalk(root, 'projets', []).sort((a, b) => a.p.localeCompare(b.p)), sig = files.map(f => f.p + f.m + f.s).join('|');
+  if (projectIndexCache && projectIndexCache.sig === sig && Date.now() - projectIndexCache.at < 30000) return projectIndexCache.idx;
+  const idx = { bySlug: new Map(), byPath: new Map(), cites: new Map(), dirs: [] };
+  for (const f of files) {
+    const d = projectOf(root, f); if (d.header.type !== 'projet') continue;
+    const slug = slugOf(f.p);
+    idx.bySlug.set(slug, { slug, titre: d.titre || slug, path: f.p }); idx.byPath.set(f.p, slug);
+    for (const x of [...d.livrables, ...d.sources]) {
+      if (!x.cible) continue;
+      const r = resolveLink(f.p, x.cible);
+      if (r.chemin && r.genre !== 'absent') { if (!idx.cites.has(r.chemin)) idx.cites.set(r.chemin, slug); continue; }
+      const dir = dirLink(root, f.p, x.cible); if (dir) idx.dirs.push({ prefix: dir, slug });
+    }
+  }
+  idx.dirs.sort((a, b) => b.prefix.length - a.prefix.length);
+  projectIndexCache = { sig, at: Date.now(), idx };
+  return idx;
+}
+/* the project of a file: the projet: field of its header, else a project that cites it, else none */
+function projectOfFile(idx, rel, header) {
+  const named = String(header.projet || '').split(',').map(s => s.trim()).filter(Boolean);
+  if (named.length) return named.find(n => idx.bySlug.has(n)) || named[0];
+  return idx.byPath.get(rel) || idx.cites.get(rel) || (idx.dirs.find(d => rel.startsWith(d.prefix)) || {}).slug || '';
+}
+
+/* what the right side shows of a file: its title and first lines (text), its <title> (page); a picture is fetched by the page */
+const previewCache = new Map();
+function outboxPreview(abs, rel, genre, st) {
+  const key = rel, hit = previewCache.get(key);
+  if (hit && hit.m === st.mtimeMs && hit.s === st.size) return hit.v;
+  const v = { titre: '', apercu: [] };
+  const kind = kindOf(rel);
+  if ((kind === 'md' || kind === 'text') && st.size > 0) {
+    let text = ''; try { const fd = fs.openSync(abs, 'r'); try { const buf = Buffer.alloc(Math.min(st.size, 24 * 1024)); text = buf.toString('utf8', 0, fs.readSync(fd, buf, 0, buf.length, 0)); } finally { fs.closeSync(fd); } } catch (_) { }
+    if (genre === 'page') {
+      const t = /<title[^>]*>([\s\S]*?)<\/title>/i.exec(text);
+      v.titre = t ? t[1].replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#0?39;/g, "'").replace(/\s+/g, ' ').trim().slice(0, 160) : '';
+    } else {
+      if (kind === 'md') v.header = readHeader(text);
+      const body = kind === 'md' ? text.replace(/^---\r?\n[\s\S]*?\r?\n---[ \t]*(\r?\n|$)/, '') : text;
+      const lines = body.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+      const h1 = kind === 'md' ? lines.findIndex(l => /^#\s+\S/.test(l)) : -1;
+      if (h1 >= 0) { v.titre = lines[h1].replace(/^#\s+/, '').replace(/\s*#+$/, '').slice(0, 160); lines.splice(h1, 1); }
+      v.apercu = lines.slice(0, 8).map(l => l.replace(/^#{1,6}\s+/, '').slice(0, 180));
+    }
+  }
+  previewCache.set(key, { m: st.mtimeMs, s: st.size, v });
+  if (previewCache.size > 2000) previewCache.delete(previewCache.keys().next().value);
+  return v;
+}
+
+function readRanges(root) {
+  const out = new Map(), text = readText(path.join(root, RANGES_REL));
+  for (const line of text.split(/\r?\n/)) {
+    const m = /^-\s+(\d{4})-(\d{2})-(\d{2})\s+(\d{2}):(\d{2})\s+·\s+(.+?)\s*$/.exec(line);
+    if (m) out.set(m[6], new Date(+m[1], +m[2] - 1, +m[3], +m[4], +m[5]).getTime());
+  }
+  return out;
+}
+function countQuestions(root) {
+  return readText(path.join(root, 'outbox', 'questions.md')).split(/\r?\n/).filter(l => /^\s*[-*]\s+\S/.test(l)).length;
+}
+
+async function listOutbox() {
+  const root = workspaceRoot();
+  if (!root) return { error: 'Aucun workspace défini (config/workspace.json)', entrees: [], jours: [] };
+  let realRoot = root; try { realRoot = fs.realpathSync.native(root); } catch (_) { }
+  const roots = [...new Set([root, realRoot])], now = new Date(), today = dayKey(now);
+  const jours = Array.from({ length: OUTBOX_DAYS }, (_, i) => dayKey(new Date(now.getFullYear(), now.getMonth(), now.getDate() - i)));
+  const winStart = startOfDay(jours[jours.length - 1]), nextDay = key => { const [y, m, d] = key.split('-').map(Number); return startOfDay(dayKey(new Date(y, m - 1, d + 1))); };
+  const dayOf = t => dayKey(new Date(t));
+
+  /* 1. the session logs */
+  const journaux = { etat: 'ok', sessions: 0 };
+  let sessions = [];
+  if (!routineSources.readerOn('claudeCode')) journaux.etat = 'eteint';
+  else {
+    let r = null; try { r = claudeCode.sessionWrites(OUTBOX_DAYS + 1); } catch (e) { console.error('journaux de session :', e.message); }
+    if (r === null) journaux.etat = 'absent'; else sessions = r;
+  }
+  const exists = new Map();   /* rel -> stat of the file as it is now, or null */
+  const statOf = rel => {
+    if (exists.has(rel)) return exists.get(rel);
+    let st = null;
+    try {
+      const abs = path.join(root, rel), real = fs.realpathSync.native(abs);
+      if (real.startsWith(realRoot + path.sep)) { const s = fs.statSync(real); if (s.isFile()) st = s; }
+    } catch (_) { }
+    exists.set(rel, st); return st;
+  };
+  const traces = new Map(), sessionInfo = {};
+  for (const g of sessions) {
+    let used = false;
+    for (const w of g.writes) {
+      if (w.t < winStart) continue;
+      const rel = relInRoot(roots, w.p); if (!rel || outboxSkip(rel) || !statOf(rel)) continue;
+      if (!traces.has(rel)) traces.set(rel, []);
+      traces.get(rel).push({ t: w.t, tool: w.tool, sid: g.id }); used = true;
+    }
+    if (used) { sessionInfo[g.id] = { titre: g.titre || 'Discussion sans titre', debut: g.debut, fin: g.fin, skills: g.skills }; journaux.sessions++; }
+  }
+  for (const list of traces.values()) list.sort((a, b) => a.t - b.t);
+
+  /* 2. Git */
+  const g = await outboxGit(root, winStart);
+  const adds = g.adds || new Map(), tracked = g.tracked || new Set();
+  const covered = (rel, t) => (traces.get(rel) || []).some(x => x.t >= t - 864e5 && x.t <= t + 60000);
+  const found = new Map();   /* rel|day -> entry */
+  const keep = (rel, t, sid) => {
+    const key = rel + '|' + dayOf(t), e = found.get(key);
+    if (!e) found.set(key, { p: rel, jour: dayOf(t), t, s: sid });
+    else if (t > e.t) { e.t = t; e.s = sid; }
+  };
+  for (const [rel, list] of traces) for (const x of list) keep(rel, x.t, x.sid);
+  if (g.git) {
+    for (const c of g.commits) {
+      if (c.t < winStart) continue;
+      for (const f of c.files) {
+        if (f.st === 'D' || outboxSkip(f.p) || !statOf(f.p) || covered(f.p, c.t)) continue;
+        keep(f.p, c.t, '');
+      }
+    }
+    for (const f of g.dirty) {
+      if (outboxSkip(f.p)) continue;
+      const st = statOf(f.p); if (!st || st.mtimeMs < winStart || covered(f.p, st.mtimeMs)) continue;
+      keep(f.p, st.mtimeMs, '');
+    }
+  }
+
+  /* 3. new or changed that day */
+  const etatDe = (rel, jour) => {
+    const d0 = startOfDay(jour), d1 = nextDay(jour), add = adds.get(rel), list = traces.get(rel) || [];
+    if (add !== undefined ? add < d0 : tracked.has(rel)) return 'modifie';   /* Git knew it before that day */
+    if (list.some(x => x.t < d0)) return 'modifie';                             /* an earlier session wrote it already */
+    if (add !== undefined && add < d1) return 'nouveau';                        /* added to Git that very day */
+    if (list.length) return list[0].tool === 'Write' ? 'nouveau' : 'modifie';   /* its first trace made it, or only changed it */
+    return 'nouveau';                                                           /* only Git's working tree knows it: new to Git */
+  };
+
+  /* 4. the file cards, the projects, what is already validated */
+  const idx = outboxProjects(root), ranges = readRanges(root), fichiers = {}, projets = {};
+  const entrees = [...found.values()].filter(e => jours.includes(e.jour)).sort((a, b) => b.t - a.t).map(e => {
+    const st = statOf(e.p);
+    if (!fichiers[e.p]) {
+      const genre = genreOf(e.p), pv = outboxPreview(path.join(root, e.p), e.p, genre, st);
+      const slug = projectOfFile(idx, e.p, pv.header || {}), pr = idx.bySlug.get(slug);
+      if (slug) projets[slug] = pr ? { titre: pr.titre, path: pr.path } : { titre: slug, path: '' };
+      const abs = path.join(root, e.p);
+      fichiers[e.p] = { genre, taille: st.size, m: Math.round(st.mtimeMs), titre: pv.titre || path.posix.basename(e.p), apercu: pv.apercu, projet: slug, dossier: path.posix.dirname(e.p) === '.' ? '' : path.posix.dirname(e.p) + '/', abs, ouvrable: !(abs === KIT || abs.startsWith(KIT + path.sep)) };
+    }
+    const at = ranges.get(e.p);
+    return { p: e.p, jour: e.jour, t: e.t, etat: etatDe(e.p, e.jour), s: e.s, range: at !== undefined && Math.floor(e.t / 60000) * 60000 <= at };
+  });
+  return { root, aujourdhui: today, jours, journaux, git: !!g.git, entrees, fichiers, sessions: sessionInfo, projets, questions: countQuestions(root) };
+}
+
+/* « Valider » adds a line to outbox/ranges.md for each file, « Remettre » takes it away. The file is written beside, then put in place. */
+let rangesChain = Promise.resolve();
+function setRanges({ chemins, range }) {
+  const root = workspaceRoot();
+  if (!root) throw httpError(400, 'Aucun workspace défini (config/workspace.json)');
+  if (!Array.isArray(chemins) || !chemins.length || chemins.length > 500) throw httpError(400, 'Aucun fichier à ranger');
+  if (typeof range !== 'boolean') throw httpError(400, 'Dis si tu ranges ou si tu remets');
+  const rels = [...new Set(chemins.map(c => {
+    const raw = typeof c === 'string' ? c.replace(/\\/g, '/') : '', norm = path.posix.normalize(raw);
+    const abs = inside(root, norm);
+    /* the page sends paths relative to the workspace: an absolute one is refused, never trimmed into another path */
+    if (!raw || raw.startsWith('/') || /^[A-Za-z]:\//.test(raw) || !abs || abs === root || norm === '.' || norm.startsWith('..') || /[\r\n\0]/.test(norm) || norm.split('/').some(s => s.startsWith('.')) || scan.isSecret(norm) || norm.startsWith('outbox/'))
+      throw httpError(400, 'Ce chemin n’est pas un fichier du workspace');
+    return norm;
+  }))];
+  const file = path.join(root, RANGES_REL), dir = path.dirname(file);
+  fs.mkdirSync(dir, { recursive: true });
+  let realRoot = root; try { realRoot = fs.realpathSync.native(root); } catch (_) { }
+  if (!fs.realpathSync.native(dir).startsWith(realRoot + path.sep)) throw httpError(403, 'Le dossier outbox/ mène hors du workspace');
+  let st = null; try { st = fs.lstatSync(file); } catch (_) { }
+  if (st && !st.isFile()) throw httpError(403, 'outbox/ranges.md n’est pas un fichier ordinaire');
+  const job = rangesChain.then(() => {
+    const before = st ? readText(file) : '';
+    const head = '# Fichiers rangés\n\nCe que tu as validé dans l’onglet Outbox : chaque fichier reste où il est, cette liste n’en garde que la trace. Une ligne par fichier : `- AAAA-MM-JJ HH:MM · <chemin>`. « Remettre dans l’outbox » retire la ligne.\n\n';
+    const gone = new Set(rels), kept = [];
+    for (const line of (before || head).split(/\r?\n/)) {
+      const m = /^-\s+\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}\s+·\s+(.+?)\s*$/.exec(line);
+      if (!(m && gone.has(m[1]))) kept.push(line);
+    }
+    while (kept.length && kept[kept.length - 1] === '') kept.pop();
+    const n = new Date(), stamp = dayKey(n) + ' ' + pad2(n.getHours()) + ':' + pad2(n.getMinutes());
+    const isEntry = l => /^-\s+\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}\s+·\s+/.test(l);
+    if (range && kept.length && !isEntry(kept[kept.length - 1])) kept.push('');
+    const lines = kept.concat(range ? rels.map(p => '- ' + stamp + ' · ' + p) : []);
+    const tmp = path.join(dir, '.ranges.md.' + process.pid + '.tmp');
+    fs.writeFileSync(tmp, lines.join('\n') + '\n', { mode: st ? st.mode & 0o777 : 0o644 });
+    try { fs.renameSync(tmp, file); } catch (e) { try { fs.unlinkSync(tmp); } catch (_) { } throw e; }
+    return { ok: true, chemins: rels, range };
+  });
+  rangesChain = job.catch(() => { });
+  return job;
+}
+
 /* ---------------------------- THE SECOND BRAIN'S DATA ---------------------------- */
 const FEEDS = { '/api/calendar': () => cached('cal', 120000, getCalendar), '/api/artifacts': async () => getArtifacts(), '/api/routines': () => cached('rt', 60000, getRoutines), '/api/stats': () => cached('stats', 60000, getStats), '/api/email': () => cached('mail', 180000, getEmail) };
 async function boot() {
@@ -1256,7 +1551,7 @@ function needsFirstRefresh() {
 const MIME = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg',
   '.webp': 'image/webp', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.ico': 'image/x-icon', '.gif': 'image/gif', '.mp4': 'video/mp4', '.txt': 'text/plain' };
 const PUBLIC_FILES = new Set(['index.html', 'os.html', 'copy.css', 'copy.js', 'shell-extras.js', 'view-transitions.js', 'widgets.html']);
-const PUBLIC_DIRS = ['assets', 'brain', 'views', 'fichiers', 'bibliotheque', 'projets', 'competences', 'connecteurs'];
+const PUBLIC_DIRS = ['assets', 'brain', 'views', 'fichiers', 'bibliotheque', 'projets', 'competences', 'connecteurs', 'outbox'];
 function publicFile(p2) {
   let rel; try { rel = decodeURIComponent(p2).replace(/^\/+/, ''); } catch (_) { return null; }
   if (!rel || rel.includes('\0') || rel.includes('\\')) return null;
@@ -1331,6 +1626,8 @@ const server = http.createServer(async (req, res) => {
     if (p2 === '/local/competences' && !post) { try { return sendJson(res, await listSkills()); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); } }
     /* ---- the connectors page ---- */
     if (p2 === '/local/connecteurs' && !post) { try { return sendJson(res, await listConnecteurs()); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); } }
+    /* ---- the outbox page ---- */
+    if (p2 === '/local/outbox' && !post) { try { return sendJson(res, await listOutbox()); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); } }
     if (p2 === '/data/snapshot.js') return sendScript(res, 'window.COPY_DATA=' + JSON.stringify(routinesLib.calendarData(routineSources.allRoutines())) + ';');
     if (p2 === '/data/arms-usage.js') { const f = path.join(DATA, 'arms-usage.js'); return fs.existsSync(f) ? serveFile(req, res, f) : sendScript(res, 'window.ARMS_USAGE=null;'); }
 
@@ -1368,6 +1665,10 @@ const server = http.createServer(async (req, res) => {
       let q; try { q = JSON.parse(await readBody(req) || '{}'); } catch (e) { return sendJson(res, { error: e.status ? e.message : 'le corps de la requête n’est pas du JSON' }, e.status || 400); }
       try { const r = await saveFile(q); return sendJson(res, r, r.conflict ? 409 : 200); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); }
     }
+    if (post && p2 === '/local/outbox/ranger') {
+      let q; try { q = JSON.parse(await readBody(req) || '{}'); } catch (e) { return sendJson(res, { error: e.status ? e.message : 'le corps de la requête n’est pas du JSON' }, e.status || 400); }
+      try { return sendJson(res, await setRanges(q)); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); }
+    }
     if (post && p2 === '/local/competences/retour') {
       let q; try { q = JSON.parse(await readBody(req) || '{}'); } catch (e) { return sendJson(res, { error: e.status ? e.message : 'le corps de la requête n’est pas du JSON' }, e.status || 400); }
       try { return sendJson(res, addSkillNote(q)); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); }
@@ -1382,8 +1683,8 @@ const server = http.createServer(async (req, res) => {
       return sendJson(res, { job: startJob({ id: skill.id, model, effort, prompt, skillId: skill.id }).jobId });
     }
     if (post && p2 === '/api/open') {
-      const { target, path: rel } = JSON.parse(await readBody(req) || '{}');
-      try { return sendJson(res, { opened: openTarget(target || rel) }); } catch (e) { return sendJson(res, { error: e.message }, 400); }
+      const { target, path: rel, reveal } = JSON.parse(await readBody(req) || '{}');
+      try { return sendJson(res, { opened: openTarget(target || rel, reveal === true) }); } catch (e) { return sendJson(res, { error: e.message }, 400); }
     }
     if (post && p2 === '/api/app-open') {
       const { id } = JSON.parse(await readBody(req) || '{}');
@@ -1419,6 +1720,8 @@ const server = http.createServer(async (req, res) => {
     if (p2 === '/competences/') return serveFile(req, res, path.join(KIT, 'competences', 'index.html'));
     if (p2 === '/connecteurs') { res.writeHead(302, { Location: '/connecteurs/' }); return res.end(); }
     if (p2 === '/connecteurs/') return serveFile(req, res, path.join(KIT, 'connecteurs', 'index.html'));
+    if (p2 === '/outbox') { res.writeHead(302, { Location: '/outbox/' }); return res.end(); }
+    if (p2 === '/outbox/') return serveFile(req, res, path.join(KIT, 'outbox', 'index.html'));
     if (p2 === '/bibliotheque/') return serveFile(req, res, path.join(KIT, 'bibliotheque', 'index.html'));
     if (p2.startsWith('/artifacts/')) {
       let rel; try { rel = decodeURIComponent(p2.slice('/artifacts/'.length)); } catch (_) { rel = null; }
