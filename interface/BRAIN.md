@@ -9,7 +9,7 @@ Le second cerveau est le monde à l'intérieur de l'orbe : tout ton workspace su
 
 Au centre se trouve **AGENTS md** : le fichier d'instructions que ton agent lit en premier.
 
-Ses onglets : **Orbes 3D** (l'accueil, plus bas), **Carte 2D** (dispositions Force, Cercle, Hex et Anneaux), **Frise** (chaque fichier et chaque routine selon sa dernière modification), **Routines**, **Skills**, **Connecteurs**, **Projets**, **Outbox**, **Fichiers** et **Bibliothèque**. Appuie sur `/` n'importe où à l'intérieur pour rechercher un fichier par son nom ; Entrée t'y emmène. Clique deux fois sur un fichier (ou sur « Voir ici ») pour le lire dans la visionneuse latérale.
+Ses onglets : **Orbes 3D** (l'accueil, plus bas), **Disque** (la rosace, plus bas), **Carte 2D** (dispositions Force, Cercle, Hex et Anneaux), **Frise** (chaque fichier et chaque routine selon sa dernière modification), **Routines**, **Skills**, **Connecteurs**, **Projets**, **Outbox**, **Fichiers** et **Bibliothèque**. Appuie sur `/` n'importe où à l'intérieur pour rechercher un fichier par son nom ; Entrée t'y emmène. Clique deux fois sur un fichier (ou sur « Voir ici ») pour le lire dans la visionneuse latérale.
 
 **L'accueil, la vue Orbes 3D** (`orbite/`). `http://localhost:50000` s'ouvre directement sur elle, avec les onglets en haut. Elle montre les index d'abord, un niveau à la fois :
 
@@ -20,6 +20,15 @@ Ses onglets : **Orbes 3D** (l'accueil, plus bas), **Carte 2D** (dispositions For
 Glisse pour tourner ; « ⟲ Recentrer » remet la vue de départ, « Mouvement » arrête la rotation lente. Pour remonter d'un niveau : le bouton « ↑ Revenir à … », l'échelle des niveaux, Échap, ou un clic sur le centre. Le panneau de droite montre ce que tu regardes : la carte, un dossier et ses fichiers, ou un fichier (son début en Markdown, ses liens, « Ouvrir dans Fichiers », « Ouvrir dans le Finder »). Le niveau ouvert reste dans l'adresse (`#orbite/<dossier>`). Le serveur compte et rend un niveau à la fois (`/local/orbite?chemin=<dossier>`, `/local/orbite/fichier?chemin=<fichier>`) : la page ne calcule rien sur tous les fichiers.
 
 Pour retrouver l'accueil du kit (l'orbe, ses widgets, son anneau, ses micro-apps et son zoom d'entrée), mets `"accueil": "kit"` dans `os-config.json` et relance. L'onglet Orbes 3D y redevient le globe du kit, un point par fichier.
+
+**Le Disque** (`disque/`). Les mêmes index, à plat, en parts : chaque part pèse son nombre de fichiers.
+
+1. **La carte.** `AGENTS.md` au centre, un anneau de domaines (et des dossiers de premier niveau qui ont un `_index.md`, comme dans les Orbes 3D), un anneau de leurs index, et au bord l'activité de la semaine. Le panneau donne aussi les liens les plus forts : les paires d'index dont les fichiers se citent le plus.
+2. **Un domaine ou un dossier.** Ses index, et dehors leur fraîcheur : cette semaine, ce mois-ci, plus ancien. Les fichiers posés à sa racine forment une part de plus.
+3. **Un index.** Dedans, ses groupes ; dehors, une fine tranche par fichier, tous ses fichiers. « Découper par » choisit les groupes, d'après l'en-tête : Mois (`maj`), Statut (dans l'ordre de vie de son type), Projet, Type, Liens (l'index que le fichier cite le plus), Thème (le champ `themes`) ou Échéance. Seuls les découpages qui font au moins deux groupes s'affichent ; le choix reste dans le navigateur.
+4. **Un groupe.** Tous ses fichiers, nommés (les 60 plus récents ; le reste dans le panneau). Les autres groupes attendent dans le coin en haut à gauche.
+
+On remonte comme dans les Orbes 3D. Le serveur compte et groupe un niveau à la fois (`/local/disque?chemin=<dossier>&par=<découpage>`) ; la page dessine les anneaux en dégradés coniques.
 
 Tout se règle dans `config/`. Pour une installation normale, tu ne devrais toucher à aucun code.
 

@@ -29,6 +29,7 @@ Obligatoire pour : `tous`, `tous sauf <types>`, une liste de types, ou `aucun`.
 | cree | Sa date de naissance | date | tous |
 | maj | Sa dernière retouche | date | tous |
 | liens | Les fichiers liés | liste | aucun |
+| themes | Les sujets qu'il traite, pour le découper par thème dans le Disque | liste | aucun |
 | source | D'où vient une capture (veille, e-mail, lien) | texte | aucun |
 | fichier | La vidéo ou le son que la fiche décrit, dans le dossier des fichiers lourds (écrit par `ranger.py`) | liste | aucun |
 | echeance | La date de fin visée | date | aucun |

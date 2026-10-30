@@ -91,6 +91,8 @@
   async function pick(x) {
     if (!x) return;
     const path = x.path, state = window.UnifiedCopy?.state() || {};
+    /* the Disque opens the file in its index, its slice chosen, and reads it in its panel */
+    if (state.view === 'disque' && window.UnifiedCopy?.disque) { close(); input.value = ''; input.blur(); window.UnifiedCopy.disque(x.type === 'dir' ? null : path, x.type === 'dir' ? path : null); return; }
     /* the 3D home opens the file in its folder, and reads it in its panel */
     if (orbite && window.UnifiedCopy?.orbite && (state.view === 'orbs' || !graphViews.includes(state.view))) { close(); input.value = ''; input.blur(); window.UnifiedCopy.orbite(x.type === 'dir' ? null : path, x.type === 'dir' ? path : null); return; }
     if (!graphViews.includes(state.view)) { window.UnifiedCopy?.select('orbs'); await new Promise(ok => setTimeout(ok, 900)); }
@@ -133,6 +135,7 @@
     const state = window.UnifiedCopy?.state() || {}, view = state.view || 'orbs', layout = document.querySelector('[data-layout][aria-pressed="true"]')?.dataset.layout;
     if (views.getAttribute('src')) try { views.contentWindow.location.reload(); } catch {}
     try { document.getElementById('orbite')?.contentWindow?.postMessage({type: 'orbite-copy', action: 'recharge'}, '*'); } catch {}
+    try { document.getElementById('disque')?.contentWindow?.postMessage({type: 'disque-copy', action: 'recharge'}, '*'); } catch {}
     if (!brain.getAttribute('src')) return;
     // A hidden frame has a 0 px canvas, which the brain cannot draw into while it loads, so on the
     // Routines, Skills and Applications tabs it reloads laid out but invisible, then hides again.
