@@ -1,16 +1,15 @@
 <!doctype html>
-<html lang="fr"><head><meta charset="utf-8"><script src="../assets/token.js"></script><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; connect-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; frame-src 'none'; form-action 'none'; object-src 'none'; base-uri 'none'"><title>SM4RT Fichiers</title><link rel="icon" href="../assets/sm4rt-hex.svg"><link rel="stylesheet" href="../assets/theme.css"><link rel="stylesheet" href="fichiers.css"><link rel="stylesheet" href="../assets/hex-cursor.css"></head>
+<html lang="fr"><head><meta charset="utf-8"><script src="../assets/token.js"></script><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; connect-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; frame-src 'none'; form-action 'none'; object-src 'none'; base-uri 'none'"><title>SM4RT Fichiers</title><link rel="icon" href="../assets/sm4rt-hex.svg"><script src="../assets/apparence.js"></script><link rel="stylesheet" href="../assets/theme.css"><link rel="stylesheet" href="fichiers.css"></head>
 <body data-page="fichiers">
 <script src="../assets/menu.js"></script>
 <header id="top"><div class="brand"><svg viewBox="0 0 48 48" width="28" height="28" fill="none" stroke="#ff6b1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 6l18 10v16L24 42 6 32V16Z"/><path d="M24 6v16l18 10" opacity="0.5"/><path d="M24 22L6 32" opacity="0.5"/></svg><span class="b-sm4rt">SM4RT</span><span class="b-product">FICHIERS</span></div><a id="home" href="/">← Retour à l’OS</a></header>
 <div id="app">
  <aside id="side" aria-label="Fichiers du workspace">
-  <div id="search"><svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="m13.2 13.2 3.8 3.8"/></svg><input id="q" type="search" placeholder="Rechercher un fichier… ( / )" autocomplete="off" spellcheck="false" aria-label="Rechercher un fichier, par son nom, son résumé ou son texte" aria-controls="tree"></div>
+  <div id="side-titre"><h1>Fichiers</h1><span id="total"></span></div>
+  <div id="search"><svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="m13.2 13.2 3.8 3.8"/></svg><input id="q" type="search" placeholder="Un nom, un mot, un projet…" autocomplete="off" spellcheck="false" aria-label="Rechercher un fichier, par son nom, son résumé ou son texte" aria-controls="tree"></div>
   <div id="filters" aria-label="Filtres sur l’en-tête">
-   <select id="f-type" data-field="type" aria-label="Type"></select>
-   <select id="f-statut" data-field="statut" aria-label="Statut"></select>
-   <select id="f-domaine" data-field="domaine" aria-label="Domaine"></select>
-   <select id="f-projet" data-field="projet" aria-label="Projet"></select>
+   <span class="etiquette">Type</span><div class="puces" id="f-type" data-field="type" role="group" aria-label="Type"></div>
+   <span class="etiquette">Statut</span><div class="puces" id="f-statut" data-field="statut" role="group" aria-label="Statut"></div>
   </div>
   <div id="side-info"><span id="count"></span><button id="clear" type="button" hidden>Effacer</button></div>
   <div id="tree" role="tree" aria-label="Fichiers, par dossier"></div>
@@ -24,9 +23,12 @@
     <div class="doc-id"><div id="crumbs"></div><div class="doc-line"><span id="doc-name"></span><span id="dirty" title="Modifications non enregistrées" hidden>●</span><span id="doc-state"></span></div></div>
     <div class="tools">
      <div id="modes" class="seg" role="group" aria-label="Affichage"><button type="button" data-mode="preview" aria-pressed="false" title="La mise en forme">Aperçu</button><button type="button" data-mode="source" aria-pressed="false" title="Le texte brut, à modifier">Markdown</button><button type="button" data-mode="split" aria-pressed="false" title="Le Markdown à gauche, la mise en forme à droite">Les deux</button></div>
-     <button id="copy-path" class="icon" type="button" title="Copier le chemin" aria-label="Copier le chemin"><svg viewBox="0 0 20 20" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><rect x="7" y="7" width="9" height="10" rx="1.5"/><path d="M4 13V4.5A1.5 1.5 0 0 1 5.5 3H12"/></svg></button>
-     <button id="open-device" class="icon" type="button" title="Ouvrir avec l’application de l’ordinateur" aria-label="Ouvrir avec l’application de l’ordinateur"><svg viewBox="0 0 20 20" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 3h6v6M17 3l-8 8"/><path d="M15 12v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h4"/></svg></button>
-     <button id="save" type="button" disabled title="Enregistrer (⌘ S ou Ctrl S)">Enregistrer</button>
+     <button id="copy-path" type="button" title="Copier le chemin complet du fichier">Copier le chemin</button>
+     <button id="open-device" type="button" title="Montrer le fichier dans le Finder">Ouvrir dans le Finder</button>
+     <button id="edit" type="button" class="primary" hidden title="Écrire dans la fiche"><svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17h3.5L16 7.5 12.5 4 3 13.5z"/><path d="M11 5.5 14.5 9"/></svg>Modifier la fiche</button>
+     <button id="cancel" type="button" hidden title="Laisser la fiche comme elle était">Annuler</button>
+     <button id="save" type="button" disabled hidden title="Enregistrer (⌘ S ou Ctrl S)">Enregistrer</button>
+     <button id="done" type="button" class="primary" hidden title="Enregistrer et revenir à la lecture">Terminé</button>
     </div>
    </header>
    <div id="banner" role="status" hidden></div>
