@@ -46,6 +46,6 @@ body[data-view=skills] #zoom,body[data-view=apps] #zoom{display:none!important}
 
 /* AIOS: the Fichiers tab, the file editor (fichiers/). It has its own search box, and nothing to zoom. */
 /* AIOS: the Bibliothèque tab, the asset library (bibliotheque/), the same way. */
-/* AIOS: the Projets tab, the project page (projets/), and the Skills tab, the skills page (competences/), the same way. */
-#files,#assets,#projects,#competences{z-index:3;display:none;top:var(--chrome-bottom,64px);height:calc(100% - var(--chrome-bottom,64px))}
-body[data-view=files] #file-search,body[data-view=files] #zoom,body[data-view=assets] #file-search,body[data-view=assets] #zoom,body[data-view=projects] #file-search,body[data-view=projects] #zoom,body[data-view=skills] #file-search{display:none!important}
+/* AIOS: the Projets tab, the project page (projets/), the Skills tab, the skills page (competences/), and the Outbox tab, the outbox page (outbox/), the same way. */
+#files,#assets,#projects,#competences,#outbox{z-index:3;display:none;top:var(--chrome-bottom,64px);height:calc(100% - var(--chrome-bottom,64px))}
+body[data-view=files] #file-search,body[data-view=files] #zoom,body[data-view=assets] #file-search,body[data-view=assets] #zoom,body[data-view=projects] #file-search,body[data-view=projects] #zoom,body[data-view=skills] #file-search,body[data-view=outbox] #file-search,body[data-view=outbox] #zoom{display:none!important}

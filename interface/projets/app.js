@@ -590,7 +590,19 @@
     if (st.hash && st.hash !== S.cur.hash) await ouvre(S.cur.path, true);
   }
   addEventListener('focus', rafraichit);
-  addEventListener('message', e => { if (e.source === parent && e.data && e.data.type === 'projets-copy' && e.data.action === 'shown') rafraichit(); });
+  addEventListener('message', async e => {
+    if (e.source !== parent || !e.data || e.data.type !== 'projets-copy') return;
+    if (e.data.action === 'shown') rafraichit();
+    /* the Outbox tab sends you to a project: the list is read again, as the project may be new, and a finished one shows too */
+    if (e.data.action === 'open' && typeof e.data.path === 'string') {
+      frais = Date.now();
+      if (!(await chargeListe())) return;
+      const p = S.liste.find(x => x.path === e.data.path);
+      if (!p) { toast('Ce projet n’existe plus dans projets/', 'mal'); return; }
+      if (!vivant(p) && S.filtre !== 'tous') { S.filtre = 'tous'; store.set('filtre', S.filtre); dessineListe(); }
+      await ouvre(p.path);
+    }
+  });
 
   (async () => {
     plie(!!store.get('replie', false));
