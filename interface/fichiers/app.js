@@ -1,7 +1,8 @@
-/* SM4RT file editor: the Second Brain's Fichiers tab, or /fichiers/ on its own.
-   Left: every file of the workspace, folder by folder with the domains first, a search box (name, title,
-   summary, then the text itself) and filters on the header fields. Right: the open file, styled, as
-   Markdown, or both side by side; both can be written in. A save goes to /local/files/save, which refuses a file that changed on
+/* SM4RT file editor: the Fichiers tab, or /fichiers/ on its own.
+   Left: every file of the workspace, folder by folder with the domains first, each with its title and one line of
+   summary (a SKILL.md says which skill it is), a search box (name, title, summary, then the text itself) and chips
+   on the type and the status. Right: the open file, read styled; « Modifier la fiche » writes in it, styled, as
+   Markdown, or both side by side, the formatting bar staying at the top of the screen. A save goes to /local/files/save, which refuses a file that changed on
    disk since it was opened, then runs systeme/scripts/index.py so the indexes and views follow. */
 (() => {
   'use strict';
@@ -19,7 +20,7 @@
   };
   /* the top folders: the domains first, then the two doors, then the rest */
   const ORDER = ['domaines', 'projets', 'processus', 'inbox', 'outbox', 'journal', 'savoir', 'bibliotheques', 'memory', 'skills', 'routers', 'vues', 'systeme', 'docs', 'archives'];
-  const FIELDS = { type: 'Tous les types', statut: 'Tous les statuts', domaine: 'Tous les domaines', projet: 'Tous les projets' };
+  const FIELDS = { type: 'Tous', statut: 'Tous' };
   const BIG = 250 * 1024;   /* above this, no colours under the text box: typing stays instant */
   const ICONS = {
     dir: '<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><path d="M2 4.5A1.5 1.5 0 0 1 3.5 3h3l1.5 1.6h4.5A1.5 1.5 0 0 1 14 6.1v5.4a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 11.5z"/></svg>',
@@ -34,7 +35,7 @@
     files: [], byPath: new Map(), dirs: new Set(), root: '', sig: '', loaded: false,
     open: new Set(store.get('open', null) || ['domaines']), firstVisit: store.get('open', null) === null,
     q: '', filters: { type: '', statut: '', domaine: '', projet: '' }, hits: null, hitsFor: '',
-    results: [], sel: -1, doc: null, mode: store.get('mode', 'split'), saving: false, blobs: new Map()
+    results: [], sel: -1, doc: null, mode: store.get('mode', 'preview'), edition: false, saving: false, blobs: new Map()
   };
   const src = $('src'), hl = $('hl'), pv = $('preview'), pvPane = $('preview-pane');
 
@@ -110,6 +111,10 @@
     if (own && !list.includes(own[1])) list.push(own[1]);
     return list;
   };
+  /* what a file says: its title (its first # heading, else a skill's name) and its summary (resume, else description) */
+  const titreDe = f => String(f.t || metaOf(f).name || '').trim() || baseName(f.p);
+  const resumeDe = f => { const m = metaOf(f); return String(m.resume || m.description || '').trim(); };
+  const autreNom = (titre, nom) => fold(titre) !== fold(nom) && fold(titre) !== fold(nom.replace(/\.[^.]+$/, ''));
   const filtering = () => Object.values(S.filters).some(Boolean);
   function passes(f, skip) {
     const m = metaOf(f);
@@ -132,18 +137,17 @@
     if (S.doc && !S.byPath.has(S.doc.path)) checkDisk();
   }
   function paintFilters() {
-    for (const [field, all] of Object.entries(FIELDS)) {
-      const sel = $('f-' + field), counts = new Map();
+    for (const [field, tous] of Object.entries(FIELDS)) {
+      const box = $('f-' + field), counts = new Map(); let total = 0;
       for (const f of S.files) {
         if (!passes(f, field)) continue;
-        const values = field === 'projet' ? projetsOf(f) : [metaOf(f)[field]].filter(Boolean);
-        for (const v of values) counts.set(v, (counts.get(v) || 0) + 1);
+        total++;
+        const v = metaOf(f)[field]; if (v && !v.startsWith('<')) counts.set(v, (counts.get(v) || 0) + 1);   /* not a template's placeholder */
       }
       const now = S.filters[field];
       if (now && !counts.has(now)) counts.set(now, 0);
-      const opts = [...counts].sort((a, b) => a[0].localeCompare(b[0], 'fr'));
-      sel.innerHTML = `<option value="">${all}</option>` + opts.map(([v, n]) => `<option value="${esc(v)}">${esc(v)} (${n})</option>`).join('');
-      sel.value = now; sel.classList.toggle('on', !!now); sel.disabled = !opts.length && !now;
+      const opts = [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'fr'));
+      box.innerHTML = [['', tous, total], ...opts.map(([v, n]) => [v, v, n])].map(([v, lib, n]) => `<button type="button" data-value="${esc(v)}" aria-pressed="${now === v}">${esc(lib)}<span>${n}</span></button>`).join('');
     }
   }
   function sortDirs(a, b, depth) {
@@ -173,11 +177,12 @@
     return root;
   }
   function fileRow(f, depth, extra = '') {
-    const m = metaOf(f), name = baseName(f.p), dot = name.lastIndexOf('.'), stem = dot > 0 ? name.slice(0, dot) : name, ext = dot > 0 ? name.slice(dot) : '';
-    const tip = [f.t, m.resume, f.p].filter(Boolean).join('\n');
+    const m = metaOf(f), nom = baseName(f.p), titre = titreDe(f), resume = resumeDe(f);
+    const tip = [titre, resume, f.p].filter(Boolean).join('\n');
     const on = S.doc?.path === f.p;
     return `<div class="row file k-${f.k}${f.g ? ' gen' : ''}${on ? ' on' : ''}" role="treeitem" tabindex="${on ? 0 : -1}" aria-selected="${on}" data-file="${esc(f.p)}" style="--d:${depth}" title="${esc(tip)}">`
-      + `<span class="ic">${ICONS[f.k] || ICONS.other}</span><span class="nm">${esc(stem)}<span class="ext">${esc(ext)}</span>${extra}</span>`
+      + `<span class="ic">${ICONS[f.k] || ICONS.other}</span><span class="txt"><span class="l1"><span class="tt">${esc(titre)}${extra}</span>${autreNom(titre, nom) ? `<span class="fn">${esc(nom)}</span>` : ''}</span>`
+      + (resume ? `<span class="rs">${esc(resume)}</span>` : '') + '</span>'
       + (m.statut ? `<span class="st st-${esc(m.statut)}">${esc(m.statut)}</span>` : '') + (on && dirty() ? '<span class="dot" title="Non enregistré">●</span>' : '') + '</div>';
   }
   function paintTree() {
@@ -193,7 +198,8 @@
     };
     walk(tree, 0);
     $('tree').innerHTML = rows.join('') || '<p class="side-note">Aucun fichier ne passe ces filtres.</p>';
-    $('count').textContent = filtered ? `${files.length} fichier${files.length > 1 ? 's' : ''} sur ${S.files.length}` : `${S.files.length} fichiers`;
+    $('count').textContent = filtered ? `${files.length} fichier${files.length > 1 ? 's' : ''} sur ${S.files.length}` : 'Par dossier';
+    $('total').textContent = S.files.length + ' fichiers';
     $('clear').hidden = !filtered;
     if (!$('tree').querySelector('[tabindex="0"]')) $('tree').querySelector('.row')?.setAttribute('tabindex', '0');
   }
@@ -239,10 +245,11 @@
     S.sel = Math.min(Math.max(S.sel, 0), S.results.length - 1);
     const rows = S.results.map((r, i) => {
       const f = r.f, m = metaOf(f), dir = dirOf(f.p);
-      const sub = r.hit ? `<span class="snip">${mark(r.hit.text, terms)}</span>` : m.resume ? `<span class="snip">${mark(m.resume, terms)}</span>` : '';
+      const resume = resumeDe(f), sub = r.hit && !resume ? `<span class="snip">${mark(r.hit.text, terms)}</span>` : resume ? `<span class="snip">${mark(resume, terms)}</span>` + (r.hit ? `<span class="snip">« ${mark(r.hit.text, terms)} »</span>` : '') : '';
+      const nom = baseName(f.p), titre = titreDe(f);
       return `<div class="res k-${f.k}${f.g ? ' gen' : ''}${i === S.sel ? ' sel' : ''}${S.doc?.path === f.p ? ' on' : ''}" role="option" aria-selected="${i === S.sel}" data-i="${i}" title="${esc(f.p)}">`
-        + `<span class="ic">${ICONS[f.k] || ICONS.other}</span><span class="txt"><span class="r1"><span class="nm">${mark(baseName(f.p), terms)}</span>${m.statut ? `<span class="st st-${esc(m.statut)}">${esc(m.statut)}</span>` : ''}</span>`
-        + `<span class="r2">${esc(dir || 'racine')}${r.hit ? ` · ligne ${r.hit.line}${r.hit.n > 1 ? ` · ${r.hit.n} fois` : ''}` : ''}</span>${sub}</span></div>`;
+        + `<span class="ic">${ICONS[f.k] || ICONS.other}</span><span class="txt"><span class="r1"><span class="nm">${mark(titre, terms)}</span>${autreNom(titre, nom) ? `<span class="fn">${mark(nom, terms)}</span>` : ''}<span style="flex:1"></span>${m.statut ? `<span class="st st-${esc(m.statut)}">${esc(m.statut)}</span>` : ''}</span>`
+        + `${sub}<span class="r2">${esc(dir || 'racine')} · ${ago(f.m)}${r.hit ? ` · ligne ${r.hit.line}${r.hit.n > 1 ? ` · ${r.hit.n} fois` : ''}` : ''}</span></span></div>`;
     });
     const waiting = S.q.length >= 2 && S.hitsFor !== S.q;
     $('tree').innerHTML = rows.join('') + (waiting ? '<p class="side-note">Recherche dans le texte…</p>' : rows.length ? '' : `<p class="side-note">Rien ne correspond à « ${esc(S.q)} »${filtering() ? ' avec ces filtres' : ''}.</p>`);
@@ -267,7 +274,7 @@
   function paintRecent() {
     const recent = S.files.filter(f => !f.g && (f.k === 'md' || f.k === 'text')).sort((a, b) => b.m - a.m).slice(0, 8);
     $('recent-title').hidden = !recent.length;
-    $('recent').innerHTML = recent.map(f => `<button type="button" class="recent" data-file="${esc(f.p)}"><span class="ic">${ICONS[f.k]}</span><span class="txt"><span class="nm">${esc(baseName(f.p))}</span><span class="r2">${esc(dirOf(f.p) || 'racine')}</span></span><span class="when">${ago(f.m)}</span></button>`).join('');
+    $('recent').innerHTML = recent.map(f => `<button type="button" class="recent" data-file="${esc(f.p)}"><span class="ic">${ICONS[f.k]}</span><span class="txt"><span class="nm">${esc(titreDe(f))}</span>${resumeDe(f) ? `<span class="rs">${esc(resumeDe(f))}</span>` : ''}<span class="r2">${esc(f.p)}</span></span><span class="when">${ago(f.m)}</span></button>`).join('');
   }
 
   /* ---------------------------- the open file ---------------------------- */
@@ -275,7 +282,7 @@
   function lineEnds(doc, text) { if (text === undefined) return; doc.eol = /\r\n/.test(text) ? '\r\n' : '\n'; doc.content = doc.saved = text.replace(/\r\n?/g, '\n'); }
   const textDoc = () => S.doc && (S.doc.kind === 'md' || S.doc.kind === 'text') && !S.doc.tooBig && S.doc.content !== undefined;
   const dirty = () => textDoc() && (S.pvPending || src.value !== S.doc.saved);
-  const modeNow = () => !S.doc ? '' : S.doc.kind === 'md' && !S.doc.tooBig ? S.mode : S.doc.kind === 'text' && !S.doc.tooBig ? 'source' : 'other';
+  const modeNow = () => !S.doc ? '' : S.doc.kind === 'md' && !S.doc.tooBig ? (S.edition ? S.mode : 'preview') : S.doc.kind === 'text' && !S.doc.tooBig ? 'source' : 'other';
   async function leaveDoc() {
     pullNow();
     if (!dirty()) return true;
@@ -289,7 +296,7 @@
     S.pvPending = false; clearTimeout(pullTimer);
     const d = await api('/local/files/read?path=' + encodeURIComponent(p));
     if (d.error) { toast(d.error, 'bad'); return; }
-    S.doc = { ...d, gone: false, changed: false };
+    S.doc = { ...d, gone: false, changed: false }; S.edition = !!opts.edit;
     lineEnds(S.doc, d.content);
     store.set('last', p);
     showDoc();
@@ -306,15 +313,28 @@
     $('empty').hidden = true; $('doc').hidden = false; document.body.classList.add('has-doc');
     $('doc-name').textContent = baseName(d.path);
     $('crumbs').innerHTML = crumbs(d.path);
-    $('modes').hidden = d.kind !== 'md' || !!d.tooBig;
-    $('save').hidden = !textDoc() || !d.editable;
     resetPanes();
     if (textDoc()) {
-      src.readOnly = !d.editable;
+      src.readOnly = !d.editable || !S.edition;
       setText(d.content);
       src.scrollTop = 0; pvPane.scrollTop = 0;
     } else { src.value = ''; paintOther(); }
-    paintMode(); paintState(); paintBanner(); syncEditable();
+    paintMode(); paintState(); paintBanner(); syncEditable(); paintEdition();
+  }
+  /* reading, or writing: the buttons of the head follow */
+  function paintEdition() {
+    const d = S.doc, ecrit = !!d && textDoc() && d.editable;
+    $('edit').hidden = !ecrit || S.edition;
+    $('modes').hidden = !S.edition || d.kind !== 'md' || !!d.tooBig;
+    $('save').hidden = $('cancel').hidden = $('done').hidden = !ecrit || !S.edition;
+    /* while writing, the head keeps to what writing needs */
+    $('copy-path').hidden = $('open-device').hidden = S.edition;
+  }
+  function ecrire(on) {
+    S.edition = on;
+    if (textDoc()) src.readOnly = !S.doc.editable || !on;
+    paintMode(); paintEdition(); paintState();
+    if (on) { if (modeNow() === 'source') src.focus({ preventScroll: true }); else pv.focus({ preventScroll: true }); }
   }
   function paintOther() {
     const d = S.doc;
@@ -456,7 +476,7 @@
     mo.takeRecords(); dirtyBlocks.clear();
     MD.number(pv);
     const boxes = MD.tasks(text), inputs = pv.querySelectorAll('input[data-task]');
-    const canTick = S.doc.editable && (boxes.length === inputs.length || pvEditable());
+    const canTick = S.doc.editable && S.edition && (boxes.length === inputs.length || pvEditable());
     inputs.forEach(box => { box.disabled = !canTick; box.title = canTick ? 'Cocher dans le fichier' : ''; });
     pv.querySelectorAll('img[data-src]:not([data-done])').forEach(img => {
       img.dataset.done = 1;
@@ -539,7 +559,7 @@
   }
   mo.observe(pv, { childList: true, characterData: true, subtree: true });
   let pullTimer = 0;
-  const pvEditable = () => textDoc() && S.doc.kind === 'md' && S.doc.editable && (modeNow() === 'preview' || modeNow() === 'split');
+  const pvEditable = () => textDoc() && S.doc.kind === 'md' && S.doc.editable && S.edition && (modeNow() === 'preview' || modeNow() === 'split');
   function syncEditable() {
     const on = !!pvEditable();
     pv.contentEditable = on ? 'true' : 'false';
@@ -830,12 +850,24 @@
     if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); if (!S.results.length) return; S.sel = (S.sel + (e.key === 'ArrowDown' ? 1 : -1) + S.results.length) % S.results.length; paintResults(); }
     if (e.key === 'Enter' && S.results[S.sel]) { e.preventDefault(); const r = S.results[S.sel]; openFile(r.f.p, { line: r.hit?.line || r.line }); }
   });
-  $('filters').addEventListener('change', e => {
-    const field = e.target.dataset.field; if (!field) return;
-    S.filters[field] = e.target.value;
+  $('filters').addEventListener('click', e => {
+    const b = e.target.closest('button[data-value]'), field = b && b.parentElement.dataset.field; if (!field) return;
+    S.filters[field] = b.getAttribute('aria-pressed') === 'true' ? '' : b.dataset.value;
     if (field === 'type') S.filters.statut = '';
     paintFilters(); paintSide();
   });
+  $('edit').onclick = () => ecrire(true);
+  /* Terminé saves, then goes back to reading; Annuler drops what was written since the last save */
+  $('done').onclick = async () => { pullNow(); if (dirty() && !(await save())) return; ecrire(false); };
+  $('cancel').onclick = async () => {
+    pullNow();
+    if (dirty()) {
+      const k = await ask('Annuler les modifications ?', 'Ce que tu as écrit depuis le dernier enregistrement sera perdu.', [['keep', 'Continuer à écrire'], ['drop', 'Annuler les modifications', 'primary']]);
+      if (k !== 'drop') return;
+      S.pvPending = false; S.pvTouched = true; setText(S.doc.saved);
+    }
+    ecrire(false);
+  };
   $('clear').onclick = clearSearch;
   $('modes').addEventListener('click', e => { const b = e.target.closest('[data-mode]'); if (b) setMode(b.dataset.mode); });
   $('save').onclick = () => save();
@@ -854,7 +886,11 @@
     const r = await post('/api/open', { path: S.doc.path });
     toast(r.error ? 'Impossible de l’ouvrir : ' + r.error : 'Ouvert sur l’ordinateur', r.error ? 'bad' : '');
   }
-  $('open-device').onclick = openOnDevice;
+  $('open-device').onclick = async () => {
+    if (!S.doc) return;
+    const r = await post('/api/open', { path: S.doc.path, reveal: true });
+    toast(r.error ? 'Impossible de le montrer : ' + r.error : 'Montré dans le Finder', r.error ? 'bad' : '');
+  };
   pv.addEventListener('click', e => { if (e.target.closest('[data-act="device"]')) openOnDevice(); });
   addEventListener('keydown', e => {
     const k = e.key.toLowerCase();
