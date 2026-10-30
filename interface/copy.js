@@ -50,6 +50,7 @@ addEventListener('message',e=>{const m=e.data||{};if(e.source===os.contentWindow
   if(e.source===outboxPage.contentWindow){if(m.type==='outbox-copy-ready'){outboxReady=true;if(view==='outbox')outboxSend({action:'shown'})}if(m.type==='outbox-copy-back')go(0);if(m.type==='outbox-copy-edit'&&m.path)editFile(m.path);if(m.type==='outbox-copy-project'&&m.path)openProject(m.path)}
   if(e.source===skillsPage.contentWindow){if(m.type==='competences-copy-ready'){skillsReady=true;if(view==='skills')skillsSend({action:'shown'})}if(m.type==='competences-copy-back')go(0);if(m.type==='competences-copy-edit'&&m.path)editFile(m.path)}
   if(e.source===connectorsPage.contentWindow){if(m.type==='connecteurs-copy-ready'){connectorsReady=true;if(view==='connecteurs')connectorsSend({action:'shown'})}if(m.type==='connecteurs-copy-back')go(0);if(m.type==='connecteurs-copy-edit'&&m.path)editFile(m.path)}
+  if(m.type==='sm4rt-menu'&&progress===1&&[files,assets,projects,skillsPage,connectorsPage,outboxPage].some(f=>f.contentWindow===e.source)){const to={accueil:'home',projets:'projects',skills:'skills',connecteurs:'connecteurs',fichiers:'files',outbox:'outbox',cerveau:'orbs'}[m.vue];if(to==='home')go(0);else if(to)setView(to)}
   if(e.source===brain.contentWindow&&m.type==='brain-copy-edit'&&m.path)editFile(m.path)});
 // AIOS: "Modifier" in the brain's viewer, or a search result, opens the file in the Fichiers tab
 function editFile(path){if(progress!==1)return;setView('files');filesSend({action:'open',path:String(path)})}

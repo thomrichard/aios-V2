@@ -97,6 +97,7 @@
       return `<button type="button" class="puce" data-jour="${j}" aria-pressed="${j === S.jour}">${esc(nomJour(j))}<span class="n">${esc(dateCourte(j))} · ${n} à ranger</span></button>`;
     }).join('');
     const nA = du.filter(e => !e.range).length;
+    dispatchEvent(new CustomEvent('sm4rt:outbox', { detail: d.entrees.filter(e => !e.range).length }));
     document.querySelectorAll('#grouper button').forEach(b => b.setAttribute('aria-pressed', b.dataset.grp === S.grp));
     document.querySelectorAll('#vues button').forEach(b => { b.setAttribute('aria-pressed', b.dataset.vue === S.vue); b.textContent = (b.dataset.vue === 'ranger' ? 'À ranger · ' + nA : 'Rangés · ' + (du.length - nA)); });
     const x = choisi(); S.sel = x ? cle(x) : '';
