@@ -16,7 +16,7 @@
 | Routine | `systeme/routines.md` | — |
 | Connexion | `systeme/connexions.md` | — |
 | Décision d'un projet | la partie « Décisions » de `projets/<slug>.md` | — |
-| Un fichier validé dans l'onglet Outbox | une ligne dans `outbox/ranges.md` ; le fichier ne bouge pas | — |
+| Un fichier validé dans l'onglet Outbox, ou par la validation de nuit après 3 jours | son statut de fin (`clos`) et `maj` dans son en-tête ; le fichier ne bouge pas | — |
 | Règle (vaut pour tout le workspace) | `journal/regles.md` | la ligne courte dans `AGENTS.md` |
 
 ## Où va quoi
@@ -28,7 +28,7 @@ La place exacte d'un fichier se déduit de son en-tête : colonne « Chemin » d
 | Un objet d'un domaine | `domaines/<domaine>/` ; un dossier à lui s'il a plusieurs fichiers |
 | Une production datée (post, newsletter) | `domaines/<domaine>/<slug>-AA-MM.md`, sans dossier par type |
 | Un livrable, texte ou visuel | dans son domaine, jamais dans `outbox/` |
-| Ce qui sort (`outbox/`) | l'onglet Outbox montre, jour par jour, les fichiers que l'IA a écrits ou modifiés, là où ils sont rangés ; « Valider » les range, et la trace va dans `outbox/ranges.md`. Y vivent aussi le point du jour (`outbox/points/`), les questions en attente (`outbox/questions.md`) et la page `outbox/index.html` (générée). Un livrable reste dans son domaine |
+| Ce qui sort (`outbox/`) | l'onglet Outbox montre ce qui attend ta validation : les fichiers en `a-valider`, là où ils sont rangés ; « Valider » leur donne leur statut de fin. Y vivent aussi le point du jour (`outbox/points/`), les questions en attente (`outbox/questions.md`) et la page `outbox/index.html` (générée). Un livrable reste dans son domaine |
 | Un projet | `projets/<slug>.md` ; ses fichiers restent dans leur domaine |
 | Une idée « un jour, peut-être » | dans son domaine, type `idee` (skill `idees`) ; toutes les idées : `vues/idee.md` |
 | Un process (une suite de skills qui revient) | `processus/<slug>.md` ; ses skills restent dans `skills/` |
@@ -41,7 +41,7 @@ La place exacte d'un fichier se déduit de son en-tête : colonne « Chemin » d
 | Une question du rangement qui attend ta réponse | `outbox/questions.md` ; l'élément attend dans l'inbox |
 | Un profil d'installation | `inbox/`, puis `archives/inbox/` une fois installé |
 | Un entretien (`grill-me`) | `journal/entretiens/<sujet>-AA-MM.md` |
-| Le bilan d'une session longue (`close`) | `journal/clotures/<sujet>-AA-MM.md` |
+| Le bilan d'une session (`bilan`) | `journal/clotures/<sujet>-AA-MM.md` |
 | Le code d'un tiers (l'interface de Jay) | `interface/`, avec sa licence ; il garde ses propres règles (pas d'en-tête, pas d'`_index.md`) |
 | Un élément de l'inbox déjà traité | `archives/inbox/AAAA-MM/` |
 | Un point du jour coché ou vieux de plus de 7 jours | `archives/outbox/` |

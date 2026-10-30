@@ -1,12 +1,14 @@
 ---
-name: close
-description: Clôture une session pour que le chat puisse disparaître sans rien perdre : fait l'inventaire (décisions, livrables, ce qui n'existe que dans le chat, sujets ouverts), écrit tout à sa place (journal, fiches, projets, mémoire), fait de chaque sujet ouvert une tâche à reprendre, vérifie que rien ne traîne (Git, process lancés), puis donne un récap court. Déclencheurs : « close », « /close », « clôture la session », « on ferme », « range tout avant que je parte ».
+name: bilan
+description: Clôt une session et écrit son bilan à valider : fait l'inventaire (décisions, livrables, ce qui n'existe que dans le chat, sujets ouverts), écrit tout à sa place (journal, fiches, projets, mémoire), fait de chaque sujet ouvert une tâche à reprendre, vérifie que rien ne traîne (Git, process lancés), puis écrit le bilan dans journal/clotures/ (statut a-valider), qui attend dans l'Outbox. Pour clore sans bilan : fermer. Déclencheurs : « bilan », « /bilan », « fais le bilan », « clôture la session », « close » (son ancien nom).
 metadata:
   famille: sessions
 ---
-# close
+# bilan
 
-Après `close`, le chat peut disparaître sans aucune perte : ce qui a de la valeur vit sur le disque, le reste est jetable. On perd rarement la décision ; on perd le chemin : les options écartées, et pourquoi.
+Après `bilan`, le chat peut disparaître sans aucune perte : ce qui a de la valeur vit sur le disque, le reste est jetable. On perd rarement la décision ; on perd le chemin : les options écartées, et pourquoi. Le bilan, lui, attend dans l'Outbox que l'utilisateur le relise et le valide.
+
+`fermer` fait les parties 1 à 4, sans bilan : rien n'attend dans l'Outbox.
 
 ## 1. L'inventaire
 Relis toute la session et trie en quatre, puis montre l'inventaire en 5 à 8 lignes avant d'écrire :
@@ -33,21 +35,23 @@ Relis toute la session et trie en quatre, puis montre l'inventaire en 5 à 8 lig
 - Un livrable promis dans le chat mais jamais écrit → écris-le maintenant.
 - Un process lancé (serveur, rendu, script) → arrête-le, ou signale-le.
 - `git status` : des changements non commités → signale-les et propose un commit. Jamais de push sans accord.
-- Lance `python3 systeme/scripts/index.py`, puis `python3 systeme/scripts/verifier.py`, jusqu'à « Tout est en ordre ».
 
-## 5. Le récap
-En 5 à 10 lignes : **Fait** · **Écrit où** (les chemins) · **En attente** · **Point de reprise** (la phrase exacte pour reprendre chaque sujet ouvert, que `reprendre` relira). Si l'utilisateur t'a corrigé pendant la session, propose `calibrate`.
+## 5. Le bilan, puis le récap
+Écris le bilan dans `journal/clotures/<sujet>-AA-MM.md`, avec un en-tête de type `cloture` et `statut: a-valider` (gabarit : `systeme/gabarits/fiche.md`). Ses parties : **Périmètre** · **Réalisé** · **Décisions** · **Écrit où** (les chemins) · **Propositions non engagées** · **Limites** · **Point de reprise** (la phrase exacte pour reprendre chaque sujet ouvert, que `reprendre` relira). Il attend dans l'Outbox ; « Valider » le passe à `clos`.
 
-Session longue (plusieurs chantiers, ou de la matière qu'on voudra relire) : écris aussi le bilan dans `journal/clotures/<sujet>-AA-MM.md` (type `cloture`) : périmètre, réalisé, décisions, propositions non engagées, limites.
+Puis lance `python3 systeme/scripts/index.py`, puis `python3 systeme/scripts/verifier.py`, jusqu'à « Tout est en ordre ».
+
+Le récap, dans le chat, en 5 à 10 lignes : **Fait** · **Écrit où** · **En attente** · **Point de reprise**, et le chemin du bilan. Si l'utilisateur t'a corrigé pendant la session, propose `calibrate`.
 
 ## Garde-fous
 - Ne rien inventer : entre « décidé » et « exploré », dans le doute, écris « exploré ».
 - Les journaux s'écrivent en ajout seul : ne réécris jamais une entrée.
 - Ne touche pas aux règles d'`AGENTS.md` ni aux skills : c'est le travail de `calibrate`.
-- Session sans production (une question, une réponse) : dis-le en une ligne, ne crée rien.
+- Session sans production (une question, une réponse) : dis-le en une ligne, n'écris pas de bilan, et propose `fermer` la prochaine fois.
 - Jamais dans une routine : il faut la session.
 
 ## Journal des changements
 - 2026-10-23 · reprise de la skill close de Thomas Richard (classroom « Faire vivre ton AIOS »), adaptée à AIOS v2 : places du socle, sujets ouverts en tâches, bilan des sessions longues · que le chat puisse disparaître sans perte
 - 2026-10-27 · règles et décisions · une décision vit dans la fiche de son projet, une règle dans journal/regles.md
 - 2026-10-28 · jalons et livrables · la page Projets les lit dans la fiche du projet
+- 2026-10-30 · close devient bilan ; le bilan s'écrit toujours, en a-valider, et attend dans l'Outbox ; fermer clôt sans bilan · l'Outbox ne montre plus que ce qui attend une validation

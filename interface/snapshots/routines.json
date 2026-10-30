@@ -33,6 +33,14 @@
       "cron": "0 1 * * 0,4"
     },
     {
+      "id": "validation-de-nuit",
+      "name": "Validation de nuit",
+      "source": "planificateur",
+      "desc": "chaque nuit, 1 h · sans IA · directe, passive : valide seul ce qui attend dans l'Outbox depuis plus de 3 jours (statut de fin, le fichier ne bouge pas)",
+      "status": "paused",
+      "cron": "0 1 * * *"
+    },
+    {
       "id": "sauvegarde-de-nuit",
       "name": "Sauvegarde de nuit",
       "source": "planificateur",
