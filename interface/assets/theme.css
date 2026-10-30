@@ -117,4 +117,40 @@ body.replie #reglages{left:12px}
   #main{padding:18px 16px 48px}
   #reglages{left:16px;right:16px;width:auto;bottom:16px}
 }
+/* ---------------------------- the main menu (assets/menu.js) ----------------------------
+   On the left of Projets, Skills, Connecteurs and Outbox. It folds to a narrow rail (body.menu-replie); the pages' own
+   Apparence button gives way to its Réglages, and the Apparence panel opens beside it. */
+body.avec-menu{display:flex;min-height:100vh;--menu-larg:232px}
+body.avec-menu.menu-replie{--menu-larg:72px}
+body.avec-menu>#main,body.avec-menu>#app{flex:1 1 0;min-width:0}
+#menu{flex:0 0 var(--menu-larg);width:var(--menu-larg);position:sticky;top:0;align-self:flex-start;height:100vh;z-index:20;display:flex;flex-direction:column;gap:22px;padding:18px 12px;background:var(--rail-fond);border-right:1px solid var(--bord);overflow:hidden;transition:flex-basis .18s,width .18s}
+#menu .marque-texte a{display:none}
+.menu-etat{display:flex;align-items:center;gap:6px;font:400 10px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--texte-pale)}
+.menu-etat i{width:6px;height:6px;border-radius:50%;background:var(--ok);box-shadow:0 0 8px var(--ok)}
+.menu-etat.hors i{background:var(--attention);box-shadow:0 0 8px var(--attention)}
+.menu-liste{display:flex;flex-direction:column;gap:2px}
+#menu .rail-btn{position:relative;text-decoration:none;width:100%}
+#menu .rail-btn:hover{text-decoration:none}
+#menu .rail-btn[aria-current=page]{background:var(--accent-doux);color:var(--accent);font-weight:500;box-shadow:inset 2px 0 0 var(--accent)}
+.menu-bas{margin-top:auto}
+.menu-badge{margin-left:auto;font:500 10px var(--mono);padding:2px 7px;border-radius:4px;background:var(--accent);color:var(--accent-texte);box-shadow:var(--lueur)}
+body.menu-replie .menu-badge{position:absolute;top:4px;right:4px;margin:0;padding:1px 4px;font-size:9px}
+body.menu-replie #menu .marque-texte,body.menu-replie #menu .rail-libelle{display:none}
+body.menu-replie #menu .rail-btn{justify-content:center;padding:0}
+/* the pages' own Apparence button gives way to Réglages, and its panel opens beside the menu */
+body.avec-menu #btn-reglages{display:none}
+body.avec-menu #rail .logo{display:none}
+body.avec-menu #reglages{left:calc(var(--menu-larg) + 12px);right:auto;top:auto;bottom:16px;width:248px}
+@media (max-width:760px){
+  body.avec-menu{flex-direction:column}
+  body.avec-menu>#main,body.avec-menu>#app{flex:1 1 auto;width:100%}
+  #menu{position:static;align-self:stretch;width:auto;height:auto;flex:none;flex-direction:row;align-items:center;gap:6px;padding:8px 10px;border-right:0;border-bottom:1px solid var(--bord);overflow-x:auto}
+  #menu .marque,#menu #menu-replier{display:none}
+  .menu-liste{flex-direction:row;gap:2px}
+  .menu-bas{margin:0 0 0 auto;padding:0;border:0}
+  #menu .rail-btn{width:auto;flex:0 0 auto;padding:0 10px;min-width:40px;justify-content:center}
+  #menu .rail-libelle{display:none}
+  .menu-badge{position:absolute;top:2px;right:2px;margin:0;padding:1px 4px;font-size:9px}
+  body.avec-menu #reglages{left:16px;right:16px;width:auto}
+}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
