@@ -11,6 +11,7 @@
      /bibliotheque/          the asset library alone (also the Second Brain's Bibliothèque tab)
      /projets/               the project page alone (also the Second Brain's Projets tab)
      /competences/           the skills page alone (also the Second Brain's Skills tab)
+     /connecteurs/           the connectors page alone (also the Second Brain's Connecteurs tab)
      /widgets                the widget library
      /artifacts/<file>       the ring's balls (the artifacts folder)
    Homepage feeds (GET)
@@ -30,6 +31,8 @@
    Skills page (the Skills tab)
      /local/competences      every skill: its header, family, steps, journal, notes, uses, origin and usage (GET)
      /local/competences/retour    adds a note to a skill's feedback.md, the line /note writes (POST, local pages only)
+   Connectors page (the Connecteurs tab, GET, read only)
+     /local/connecteurs      every line of systeme/connexions.md with its usage and where it serves, the MCP servers called but not listed, and the Git history of the table
    Actions (POST, local pages only)
      /api/run                runs a skills deck card through your agent's command (os-config.json "runner")
      /api/apply-comments     the "Apply all comments" runner that review pages call
@@ -1089,6 +1092,126 @@ function addSkillNote({ id, texte }) {
   return { ok: true, path: rel };
 }
 
+/* ---------------------------- CONNECTEURS: the connectors page (connecteurs/) ----------------------------
+   AIOS: the Connecteurs tab reads the table of systeme/connexions.md (Outil | Méthode | Pourquoi | Agents | Testé le |
+   Commande) with the line number of each tool, their usage (data/arms-usage.json, written by refresh/usage.mjs: the
+   « apps » rows with their days, and « horsListe », the MCP servers called but listed nowhere), where each tool serves
+   (the SKILL.md of each skill, systeme/routines.md, the files of processus/) and the Git history of the table. Read only: nothing is
+   written, a gesture the page cannot do is copied as a request for the agent. The .env is never read. */
+const CX_METHODES = { 'outil officiel': ['officiel', 1], officiel: ['officiel', 1], cli: ['cli', 2], api: ['api', 3], mcp: ['mcp', 4] };
+const CX_FILE = 'systeme/connexions.md';
+const foldTxt = s => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').trim();
+const noneCell = s => !s || s === '—' || s === '-';
+/* the same id as systeme/scripts/index.py gives a tool in config/apps.json */
+const appIdOf = outil => 'app:' + String(outil).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+const normName = s => String(s || '').toLowerCase().replace(/^\/+/, '').replace(/[^a-z0-9]/g, '');
+function cxDate(s) {
+  const t = String(s || '').trim(); let iso = '';
+  if (DATE_RE.test(t)) iso = t;
+  else { const m = /^(\d{1,2})[/.](\d{1,2})[/.](\d{4})$/.exec(t); if (m) iso = m[3] + '-' + m[2].padStart(2, '0') + '-' + m[1].padStart(2, '0'); }
+  return iso && !isNaN(Date.parse(iso)) ? iso : '';
+}
+/* the first table whose first column is « Outil », like index.py reads it, each row with its line in the file */
+function connexionsRows(text) {
+  const lines = text.split(/\r?\n/), rows = []; let cols = null;
+  for (let i = 0; i < lines.length; i++) {
+    if (!lines[i].startsWith('|')) { if (cols) break; continue; }
+    const c = cellsOf(lines[i]);
+    if (!cols) { if (c[0] === 'Outil') cols = c; continue; }
+    if (isRule(c)) continue;
+    const r = Object.fromEntries(cols.map((k, j) => [k, c[j] || '']));
+    if (unquote(r.Outil || '')) rows.push({ ligne: i + 1, r });
+  }
+  return { cols: cols || ['Outil', 'Méthode', 'Pourquoi', 'Agents', 'Testé le', 'Commande'], rows };
+}
+function connectorUsage() {
+  let u = null; try { u = JSON.parse(fs.readFileSync(path.join(DATA, 'arms-usage.json'), 'utf8')); } catch (_) { }
+  const rows = new Map(); if (u && Array.isArray(u.apps)) for (const a of u.apps) rows.set(String(a.id || ''), a);
+  return { mesure: !!(u && u.measured && u.measured.apps), genere: u ? u.generatedAt || null : null, rows, horsListe: u && Array.isArray(u.horsListe) ? u.horsListe : [] };
+}
+/* where each tool serves: its name or one of its command names, as a whole word, in the skills, the routines and the processes */
+function connectorCorpus(root) {
+  const out = [];
+  let skills = []; try { skills = fs.readdirSync(path.join(root, 'skills'), { withFileTypes: true }).filter(e => e.isDirectory() && !e.name.startsWith('.')).map(e => e.name).sort(); } catch (_) { }
+  for (const id of skills) { const rel = 'skills/' + id + '/SKILL.md', text = readText(path.join(root, rel)); if (text) out.push({ genre: 'skill', nom: id, chemin: rel, text }); }
+  const routines = readText(path.join(root, 'systeme', 'routines.md')); let prose = [];
+  if (routines) {
+    let inTable = false;
+    for (const line of routines.split(/\r?\n/)) {
+      if (line.startsWith('|')) {
+        const c = cellsOf(line); if (c[0] === 'Routine') { inTable = true; continue; }
+        if (inTable && !isRule(c)) out.push({ genre: 'routine', nom: c[0], chemin: 'systeme/routines.md', text: line });
+      } else { inTable = false; prose.push(line); }
+    }
+    out.push({ genre: 'routine', nom: 'systeme/routines.md', chemin: 'systeme/routines.md', text: prose.join('\n'), note: true });
+  }
+  let names = []; try { names = fs.readdirSync(path.join(root, 'processus')).filter(n => n.endsWith('.md') && n !== '_index.md').sort(); } catch (_) { }
+  for (const n of names) {
+    const rel = 'processus/' + n, text = readText(path.join(root, rel));
+    const titre = ((text.replace(/^---\r?\n[\s\S]*?\r?\n---[ \t]*(\r?\n|$)/, '').match(/^#\s+(.+)$/m) || [])[1] || n.slice(0, -3)).trim();
+    out.push({ genre: 'processus', nom: titre, chemin: rel, text });
+  }
+  return out;
+}
+const wordRe = name => new RegExp('(?<![\\p{L}\\p{N}_]|[\\p{L}\\p{N}_]-)' + name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?![\\p{L}\\p{N}_]|-[\\p{L}\\p{N}_])', 'iu');
+function connectorServes(corpus, names) {
+  const res = [...new Set(names.map(n => n.trim()).filter(n => n.length >= 2))].map(wordRe), out = [];
+  for (const item of corpus) if (res.some(re => re.test(item.text))) out.push({ genre: item.genre, nom: item.nom, chemin: item.chemin });
+  return out;
+}
+/* the history of the table: for each commit, the tools whose line was added, changed or removed */
+async function connectorChanges(root, cols) {
+  const out = await gitRun(root, ['log', '-n', '40', '-p', '-U0', '--no-color', '--no-ext-diff', '--date=short', '--format=%x1e%h%x1f%ad%x1f%s', '--', CX_FILE], 12000);
+  if (out === null) return { git: false, commits: [] };
+  const commits = [], cut = s => s.length > 90 ? s.slice(0, 89) + '…' : s;
+  for (const rec of out.split('\x1e').slice(1)) {
+    const [head, ...body] = rec.split('\n'), [hash, date, sujet] = head.split('\x1f'), tools = new Map();
+    for (const line of body) {
+      const m = /^([+-])\|/.exec(line); if (!m) continue;
+      const c = cellsOf(line.slice(1)); if (c[0] === 'Outil' || isRule(c)) continue;
+      const nom = unquote(c[0]); if (!nom) continue;
+      const t = tools.get(nom) || tools.set(nom, {}).get(nom);
+      t[m[1] === '+' ? 'apres' : 'avant'] = Object.fromEntries(cols.map((k, j) => [k, unquote(c[j] || '')]));
+    }
+    const items = [];
+    for (const [outil, t] of tools) {
+      if (t.apres && !t.avant) items.push({ outil, quoi: 'ajouté', methode: t.apres['Méthode'] || '' });
+      else if (t.avant && !t.apres) items.push({ outil, quoi: 'retiré' });
+      else {
+        const diff = cols.filter(k => k !== 'Outil' && (t.avant[k] || '') !== (t.apres[k] || '')).map(k => ({ col: k, avant: cut(t.avant[k] || ''), apres: cut(t.apres[k] || '') }));
+        if (diff.length) items.push({ outil, quoi: 'modifié', cols: diff });
+      }
+    }
+    if (items.length) commits.push({ hash, date, sujet, items });
+  }
+  return { git: true, commits };
+}
+async function listConnecteurs() {
+  const root = workspaceRoot();
+  if (!root) return { error: 'Aucun workspace défini (config/workspace.json)', connecteurs: [], horsListe: [] };
+  const { cols, rows } = connexionsRows(readText(path.join(root, CX_FILE))), usage = connectorUsage(), corpus = connectorCorpus(root);
+  const connecteurs = rows.map(({ ligne, r }) => {
+    const nom = unquote(r.Outil), brut = unquote(r['Méthode'] || ''), m = CX_METHODES[foldTxt(brut)] || ['autre', 0];
+    const commandes = (r.Commande || '').split(',').map(unquote).filter(n => !noneCell(n));
+    const agents = [...new Set((r.Agents || '').split(/[,;/·]|\s+et\s+/i).map(s => foldTxt(unquote(s)).split(/\s+/)[0]).filter(s => s && !noneCell(s)))];
+    const u = usage.rows.get(appIdOf(nom));
+    return {
+      id: appIdOf(nom).slice(4), ligne, nom, methode: m[0], methodeBrut: brut, poids: m[1], pourquoi: r.Pourquoi || '', agents, teste: cxDate(r['Testé le']), testeBrut: r['Testé le'] || '', commandes,
+      /* a tool with no command is not counted, whatever the log holds */
+      usage: commandes.length && usage.mesure && u ? { a7: u.calls7 || 0, a30: u.calls30 || 0, der: u.last || null, jours: u.days || {} } : null,
+      sert: connectorServes(corpus, [nom, ...commandes])
+    };
+  });
+  /* the file may have changed since the last refresh: a server is « off the list » only if no line covers it now */
+  const couvert = s => connecteurs.some(c => c.commandes.some(n => normName(n) === normName(s)) || c.id.replace(/-/g, '') === normName(s));
+  const horsListe = usage.mesure ? usage.horsListe.filter(h => h && h.serveur && !couvert(h.serveur)).map(h => ({ serveur: String(h.serveur), a7: h.calls7 || 0, a30: h.calls30 || 0, der: h.last || null, jours: h.days || {} })) : [];
+  const tests = connecteurs.map(c => c.teste).filter(Boolean).sort();
+  return {
+    root, chemin: CX_FILE, existe: fs.existsSync(path.join(root, CX_FILE)), mesure: usage.mesure, genere: usage.genere, connecteurs, horsListe,
+    dernierTest: tests.length ? tests[tests.length - 1] : null, changements: await connectorChanges(root, cols)
+  };
+}
+
 /* ---------------------------- THE SECOND BRAIN'S DATA ---------------------------- */
 const FEEDS = { '/api/calendar': () => cached('cal', 120000, getCalendar), '/api/artifacts': async () => getArtifacts(), '/api/routines': () => cached('rt', 60000, getRoutines), '/api/stats': () => cached('stats', 60000, getStats), '/api/email': () => cached('mail', 180000, getEmail) };
 async function boot() {
@@ -1133,7 +1256,7 @@ function needsFirstRefresh() {
 const MIME = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg',
   '.webp': 'image/webp', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.ico': 'image/x-icon', '.gif': 'image/gif', '.mp4': 'video/mp4', '.txt': 'text/plain' };
 const PUBLIC_FILES = new Set(['index.html', 'os.html', 'copy.css', 'copy.js', 'shell-extras.js', 'view-transitions.js', 'widgets.html']);
-const PUBLIC_DIRS = ['assets', 'brain', 'views', 'fichiers', 'bibliotheque', 'projets', 'competences'];
+const PUBLIC_DIRS = ['assets', 'brain', 'views', 'fichiers', 'bibliotheque', 'projets', 'competences', 'connecteurs'];
 function publicFile(p2) {
   let rel; try { rel = decodeURIComponent(p2).replace(/^\/+/, ''); } catch (_) { return null; }
   if (!rel || rel.includes('\0') || rel.includes('\\')) return null;
@@ -1206,6 +1329,8 @@ const server = http.createServer(async (req, res) => {
     }
     /* ---- the skills page ---- */
     if (p2 === '/local/competences' && !post) { try { return sendJson(res, await listSkills()); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); } }
+    /* ---- the connectors page ---- */
+    if (p2 === '/local/connecteurs' && !post) { try { return sendJson(res, await listConnecteurs()); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); } }
     if (p2 === '/data/snapshot.js') return sendScript(res, 'window.COPY_DATA=' + JSON.stringify(routinesLib.calendarData(routineSources.allRoutines())) + ';');
     if (p2 === '/data/arms-usage.js') { const f = path.join(DATA, 'arms-usage.js'); return fs.existsSync(f) ? serveFile(req, res, f) : sendScript(res, 'window.ARMS_USAGE=null;'); }
 
@@ -1292,6 +1417,8 @@ const server = http.createServer(async (req, res) => {
     if (p2 === '/projets/') return serveFile(req, res, path.join(KIT, 'projets', 'index.html'));
     if (p2 === '/competences') { res.writeHead(302, { Location: '/competences/' }); return res.end(); }
     if (p2 === '/competences/') return serveFile(req, res, path.join(KIT, 'competences', 'index.html'));
+    if (p2 === '/connecteurs') { res.writeHead(302, { Location: '/connecteurs/' }); return res.end(); }
+    if (p2 === '/connecteurs/') return serveFile(req, res, path.join(KIT, 'connecteurs', 'index.html'));
     if (p2 === '/bibliotheque/') return serveFile(req, res, path.join(KIT, 'bibliotheque', 'index.html'));
     if (p2.startsWith('/artifacts/')) {
       let rel; try { rel = decodeURIComponent(p2.slice('/artifacts/'.length)); } catch (_) { rel = null; }

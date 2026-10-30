@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr" data-mode="nuit" data-couleur="turquoise"><head><meta charset="utf-8"><script src="../assets/token.js"></script><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; connect-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; frame-src 'none'; form-action 'none'; object-src 'none'; base-uri 'none'"><title>SM4RT Connecteurs</title><link rel="icon" href="../assets/sm4rt-hex.svg"><script src="../assets/apparence.js"></script><link rel="stylesheet" href="../assets/theme.css"><link rel="stylesheet" href="connecteurs.css"></head>
+<body>
+<main id="main">
+ <div class="barre">
+  <nav class="fil-ariane etiquette" aria-label="Où tu es"><a id="vers-catalogue" href="#">Connecteurs</a><span aria-hidden="true">/</span><span id="ici">catalogue</span></nav>
+  <div class="barre-d">
+   <span id="source" class="source">lu dans systeme/connexions.md</span>
+   <a id="retour" class="btn discret petit" href="/">← Retour à l’OS</a>
+   <button type="button" class="btn discret petit" id="btn-reglages" aria-expanded="false" aria-controls="reglages" title="Apparence : nuit ou jour, et la couleur"><svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="2.6"/><path d="M10 2.5v2M10 15.5v2M2.5 10h2M15.5 10h2M4.7 4.7l1.4 1.4M13.9 13.9l1.4 1.4M4.7 15.3l1.4-1.4M13.9 6.1l1.4-1.4"/></svg>Apparence</button>
+  </div>
+ </div>
+ <div id="vide"><p class="etiquette">Connecteurs</p><h1 id="vide-titre">Chargement…</h1><p id="vide-texte"></p></div>
+
+ <section id="catalogue" aria-label="Catalogue" hidden>
+  <header class="tete">
+   <div class="tete-g"><h1>Tes connecteurs</h1><p id="compte"></p></div>
+   <div class="tete-d">
+    <label class="cherche"><svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="m13.2 13.2 3.8 3.8"/></svg><input id="cherche" type="search" placeholder="Un outil, une commande…" aria-label="Chercher un connecteur" autocomplete="off" spellcheck="false"><kbd aria-hidden="true">/</kbd></label>
+    <button type="button" class="btn" id="brancher" data-copier="/search-connectors" title="Copie /search-connectors pour ton agent : il cherche le plus léger qui marche">+ Brancher un outil</button>
+    <button type="button" class="btn" id="vers-entretien" title="Ce qu’il faut retester, ce qui mérite un œil, ce qui ne sert plus">Entretien<span id="badge" class="compteur" hidden></span><span aria-hidden="true">→</span></button>
+   </div>
+  </header>
+  <div class="filtres" id="filtres">
+   <div id="methodes" class="puces" role="group" aria-label="Méthode"></div>
+   <span class="ressort"></span>
+   <div id="agents" class="seg" role="group" aria-label="Agent" hidden></div>
+  </div>
+  <div class="corps">
+   <div id="cartes" class="cartes"></div>
+   <aside id="detail" class="panneau trait" aria-label="La fiche du connecteur" aria-live="polite"></aside>
+  </div>
+ </section>
+
+ <section id="entretien" aria-label="Entretien" hidden>
+  <header class="tete">
+   <div class="tete-g"><h1>L’entretien de tes connecteurs</h1><p>Ce qu’il faut retester, ce qui mérite un œil, ce qui ne sert plus.</p></div>
+   <div class="tete-d" id="dernier"></div>
+  </header>
+  <p id="sans-usage" class="avis" hidden></p>
+  <div id="tuiles" class="tuiles"></div>
+  <div class="colonnes">
+   <section id="retester" class="col retester" aria-label="À retester"></section>
+   <section id="surveiller" class="col surveiller" aria-label="À surveiller"></section>
+   <section id="retirer" class="col retirer" aria-label="À retirer"></section>
+  </div>
+  <section id="changements" class="panneau trait" aria-label="Ce qui a changé"></section>
+ </section>
+</main>
+<section id="reglages" class="panneau trait" aria-label="Apparence" hidden>
+ <span class="etiquette">Mode</span>
+ <div class="seg" role="group" aria-label="Mode"><button type="button" data-mode="nuit" aria-pressed="false">Nuit</button><button type="button" data-mode="jour" aria-pressed="false">Jour</button><button type="button" data-mode="auto" aria-pressed="false">Auto</button></div>
+ <span class="etiquette">Couleur</span>
+ <div class="teintes" role="group" aria-label="Couleur"><button type="button" class="teinte" data-couleur="turquoise" style="background:#2EE6C9" aria-pressed="false" aria-label="Turquoise" title="Turquoise"></button><button type="button" class="teinte" data-couleur="braise" style="background:#FF7A45" aria-pressed="false" aria-label="Braise" title="Braise"></button><button type="button" class="teinte" data-couleur="glacier" style="background:#4DA8FF" aria-pressed="false" aria-label="Glacier" title="Glacier"></button><button type="button" class="teinte" data-couleur="violet" style="background:#A594FF" aria-pressed="false" aria-label="Violet" title="Violet"></button></div>
+</section>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body></html>
