@@ -133,7 +133,7 @@ button.icon{width:34px;padding:0;display:grid;place-items:center}
 #hl .code{color:var(--ok)}#hl .c{color:var(--attention)}#hl .b{color:var(--texte)}#hl .i{color:var(--texte)}#hl .a{color:var(--accent-2)}#hl .u{color:var(--accent-2)}
 
 /* ---------- the styled view ---------- */
-.md{max-width:780px;margin:0 auto;padding:30px max(28px,4%) 45vh;font-size:15px;line-height:1.7;color:var(--texte-doux)}
+.md{padding:30px max(28px,4%) 45vh;font-size:15px;line-height:1.7;color:var(--texte-doux)}
 #panes[data-mode=split] .md{padding-left:32px;padding-right:32px}
 .md .blk{position:relative}
 .md h1,.md h2,.md h3,.md h4,.md h5,.md h6{color:var(--texte);font-family:var(--police-titre);line-height:1.3;margin:1.5em 0 .5em;scroll-margin-top:60px}

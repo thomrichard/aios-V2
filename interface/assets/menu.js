@@ -50,6 +50,8 @@
   }
   plie(!!store.get('replie', false));
   document.getElementById('menu-replier').onclick = () => plie(!document.body.classList.contains('menu-replie'));
+  /* the shell's other tabs, already open, follow a fold made here */
+  addEventListener('storage', e => { if (e.key === 'sm4rt-menu:replie') plie(e.newValue === 'true'); });
 
   /* a click: the shell changes tab, or the page links to the other */
   nav.addEventListener('click', e => {

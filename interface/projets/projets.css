@@ -23,7 +23,7 @@ body.replie .proj-point{position:absolute;top:-2px;right:-2px}
 .proj-bas{display:flex;align-items:center;gap:8px;padding-left:16px;font:400 10px var(--mono);letter-spacing:.06em;color:var(--texte-pale)}
 .proj-barre{flex:1;height:4px;border-radius:2px;background:var(--surface-2);overflow:hidden}
 .proj-barre i{display:block;height:100%;background:var(--accent)}
-body.replie .marque-texte,body.replie #filtre,body.replie .groupe,body.replie .proj-nom,body.replie .proj-bas,body.replie .rail-libelle{display:none}
+body.replie #rail .marque-texte,body.replie #filtre,body.replie .groupe,body.replie .proj-nom,body.replie .proj-bas,body.replie #rail .rail-libelle{display:none}
 body.replie .proj{align-items:center;padding:12px 0}
 body.replie .proj-haut{justify-content:center}
 
@@ -131,7 +131,7 @@ h1#titre{margin:0;font:600 38px/1.06 var(--police-titre);letter-spacing:-.03em;o
 
 /* ---------------------------- B: the file ---------------------------- */
 .fiche-grille{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start}
-#doc{flex:999 1 560px;min-width:0;max-width:820px;padding:36px 44px;display:flex;flex-direction:column;gap:26px}
+#doc{flex:999 1 560px;min-width:0;padding:36px 44px;display:flex;flex-direction:column;gap:26px}
 #doc h2{margin:0 0 6px;font:600 22px var(--police-titre);letter-spacing:-.01em}
 .bande{display:flex;flex-direction:column;gap:8px}
 .bande-barres{display:flex;gap:4px;height:6px}
