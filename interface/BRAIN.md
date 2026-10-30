@@ -9,7 +9,7 @@ Le second cerveau est le monde à l'intérieur de l'orbe : tout ton workspace su
 
 Au centre se trouve **AGENTS md** : le fichier d'instructions que ton agent lit en premier.
 
-Ses onglets : **Orbes 3D** (l'accueil, plus bas), **Disque** (la rosace, plus bas), **Carte 2D** (dispositions Force, Cercle, Hex et Anneaux), **Frise** (chaque fichier et chaque routine selon sa dernière modification), **Routines**, **Skills**, **Connecteurs**, **Projets**, **Outbox**, **Fichiers** et **Bibliothèque**. Appuie sur `/` n'importe où à l'intérieur pour rechercher un fichier par son nom ; Entrée t'y emmène. Clique deux fois sur un fichier (ou sur « Voir ici ») pour le lire dans la visionneuse latérale.
+On l'ouvre par « Accueil » dans le menu de gauche : **Orbes 3D** (l'accueil, plus bas) et **Disque** (la rosace, plus bas), avec la bascule « Orbes 3D · Disque » en haut de la page. Avec l'accueil du kit (`"accueil": "kit"`) seulement, ses onglets du kit reviennent : **Carte 2D** (dispositions Force, Cercle, Hex et Anneaux), **Frise** (chaque fichier et chaque routine selon sa dernière modification), **Routines**, **Skills**, **Connecteurs**, **Projets**, **Outbox**, **Fichiers** et **Bibliothèque**. Appuie sur `/` n'importe où à l'intérieur pour rechercher un fichier par son nom ; Entrée t'y emmène. Clique deux fois sur un fichier (ou sur « Voir ici ») pour le lire dans la visionneuse latérale.
 
 **L'accueil, la vue Orbes 3D** (`orbite/`). `http://localhost:50000` s'ouvre directement sur elle, avec les onglets en haut. Elle montre les index d'abord, un niveau à la fois :
 
@@ -127,7 +127,7 @@ Il lit `memoryDir` et `memoryIndex` dans `workspace.json` et n'appelle jamais de
 
 ## Dépannage
 
-- **La carte est vide :** `root` est vide ou faux. Corrige-le, puis appuie sur l'icône d'actualisation.
+- **La carte est vide :** `root` est vide ou faux. Corrige-le, puis appuie sur « Actualiser », en bas du menu de gauche.
 - **La recherche dit qu'elle ne répond pas :** le moteur scanne encore un gros workspace, ou `brainPort` est pris. Surveille le terminal où tourne `node server.js`.
 - **Un fichier ne s'ouvre pas dans la visionneuse :** il est binaire, fait plus de 500 Ko, est hors du workspace, ou son nom ressemble à un secret. Tout ça est voulu.
 - **Trop de nœuds :** retire des dossiers de `visibleRoots` ; ils se replient chacun en un seul nœud.

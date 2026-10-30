@@ -1,7 +1,10 @@
 <!doctype html>
 <html lang="fr" data-mode="nuit" data-couleur="turquoise"><head><meta charset="utf-8"><script src="../assets/token.js"></script><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; connect-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; frame-src 'none'; form-action 'none'; object-src 'none'; base-uri 'none'"><title>SM4RT Orbes 3D</title><link rel="icon" href="../assets/sm4rt-hex.svg"><script src="../assets/apparence.js"></script><link rel="stylesheet" href="../assets/theme.css"><link rel="stylesheet" href="orbite.css"></head>
-<body>
+<body data-page="accueil">
+<script src="../assets/menu.js"></script>
 <main id="orbite">
+ <header id="barre"><span class="etiquette">Second cerveau</span><div class="seg bascule" id="bascule" role="group" aria-label="La vue"><button type="button" data-vue="orbite" aria-pressed="false">Orbes 3D</button><button type="button" data-vue="disque" aria-pressed="false">Disque</button></div></header>
+ <div class="corps">
  <section id="scene" aria-label="Ton AIOS en 3D : glisse pour tourner">
   <div id="vide" hidden><p class="etiquette">Orbes 3D</p><h1 id="vide-titre">Chargement…</h1><p id="vide-texte"></p></div>
   <div id="monde-hote"></div>
@@ -17,7 +20,15 @@
   <div id="legende"></div>
  </section>
  <aside id="panneau" class="panneau trait" aria-label="Ce que tu regardes" aria-live="polite"></aside>
+ </div>
 </main>
+<button type="button" id="btn-reglages" hidden aria-expanded="false" aria-controls="reglages">Apparence</button>
+<section id="reglages" class="panneau trait" aria-label="Apparence" hidden>
+ <span class="etiquette">Mode</span>
+ <div class="seg" role="group" aria-label="Mode"><button type="button" data-mode="nuit" aria-pressed="false">Nuit</button><button type="button" data-mode="jour" aria-pressed="false">Jour</button><button type="button" data-mode="auto" aria-pressed="false">Auto</button></div>
+ <span class="etiquette">Couleur</span>
+ <div class="teintes" role="group" aria-label="Couleur"><button type="button" class="teinte" data-couleur="turquoise" style="background:#2EE6C9" aria-pressed="false" aria-label="Turquoise" title="Turquoise"></button><button type="button" class="teinte" data-couleur="braise" style="background:#FF7A45" aria-pressed="false" aria-label="Braise" title="Braise"></button><button type="button" class="teinte" data-couleur="glacier" style="background:#4DA8FF" aria-pressed="false" aria-label="Glacier" title="Glacier"></button><button type="button" class="teinte" data-couleur="violet" style="background:#A594FF" aria-pressed="false" aria-label="Violet" title="Violet"></button></div>
+</section>
 <div id="toast" role="status" aria-live="polite"></div>
 <script src="../brain/vendor/marked.min.js"></script><script src="commun.js"></script><script src="app.js"></script>
 </body></html>

@@ -233,6 +233,8 @@
     if (m.action === 'recharge' && S.data) va(S.chemin, S.fichiers, '', S.sel);
   });
 
+  C.apparence();
+  C.bascule('orbite', () => ({ chemin: S.chemin, fichiers: S.fichiers }));
   (async () => {
     marqueMouvement(); applique();
     const a = lisAdresse(location.hash);

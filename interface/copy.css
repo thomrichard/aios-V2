@@ -55,3 +55,6 @@ body[data-view=files] #file-search,body[data-view=files] #zoom,body[data-view=as
 /* AIOS: the Orbes 3D tab, the home page (orbite/): a frame like the others; it turns with its own buttons, so no zoom here */
 body.accueil-orbite[data-view=orbs] #zoom{display:none!important}
 body[data-view=disque] #zoom{display:none!important}
+/* AIOS: with the 3D home, no top band: the pages fill the window, each with its left menu */
+body.accueil-orbite #controls,body.accueil-orbite #zoom{display:none!important}
+body.accueil-orbite #files,body.accueil-orbite #assets,body.accueil-orbite #projects,body.accueil-orbite #competences,body.accueil-orbite #connecteurs,body.accueil-orbite #outbox,body.accueil-orbite #orbite,body.accueil-orbite #disque{top:0;height:100%}

@@ -1,6 +1,7 @@
-/* SM4RT menu: the left menu shared by the pages of the socle (Projets, Skills, Connecteurs, Outbox). A page asks for it
-   with <body data-page="projets"> and this script, nothing else. It folds to a narrow rail (kept in this browser, the
-   same for every page), marks the page you are on, and shows how many files wait in the Outbox. In the Second Brain's
+/* SM4RT menu: the left menu shared by every page of the socle (the home and its Orbes 3D and Disque, Projets, Skills,
+   Connecteurs, Fichiers, Bibliothèque, Outbox). A page asks for it with <body data-page="projets"> and this script,
+   nothing else. It folds to a narrow rail (kept in this browser, the same for every page), marks the page you are on,
+   shows how many files wait in the Outbox, and refreshes the data (routines, skills, connectors, usage). In the shell's
    frames, a click asks the shell to change tab (message sm4rt-menu); on its own, a page links to the others. */
 (() => {
   'use strict';
@@ -12,16 +13,16 @@
     set(k, v) { try { localStorage.setItem('sm4rt-menu:' + k, JSON.stringify(v)); } catch (_) { } }
   };
   const svg = d => `<svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
-  /* id, label, address on its own, icon; the Second Brain only exists inside the shell */
+  /* id, label, address on its own, icon */
   const ITEMS = [
     ['accueil', 'Accueil', '/', '<path d="M3 10.5 10 4l7 6.5V17a1 1 0 0 1-1 1h-4v-5H8v5H4a1 1 0 0 1-1-1z"/>'],
     ['projets', 'Projets', '/projets/', '<rect x="3" y="3" width="14" height="14" rx="3"/><path d="M7 7v6M10 7v3M13 7v5"/>'],
     ['skills', 'Skills', '/competences/', '<path d="M11 2 4 11h5l-1 7 7-9h-5l1-7z"/>'],
     ['connecteurs', 'Connecteurs', '/connecteurs/', '<path d="M7.5 2.5v4M12.5 2.5v4M5 6.5h10v3a5 5 0 0 1-10 0z"/><path d="M10 14.5v3"/>'],
     ['fichiers', 'Fichiers', '/fichiers/', '<path d="M5 2.5h6.5L15 6v11.5H5z"/><path d="M11 2.5V6h4M8 10h4M8 13h4"/>'],
-    ['outbox', 'Outbox', '/outbox/', '<path d="M3 12v4a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-4"/><path d="M10 13V3M6 7l4-4 4 4"/>'],
-    ['cerveau', 'Second cerveau', null, '<circle cx="5" cy="6" r="2"/><circle cx="15" cy="5" r="2"/><circle cx="11" cy="15" r="2"/><path d="M6.8 7.2 9.9 13.3M14.4 6.9 11.6 13.1M7 5.8l6-.6"/>']
-  ].filter(i => embedded || i[2]);
+    ['bibliotheque', 'Bibliothèque', '/bibliotheque/', '<rect x="3" y="4" width="14" height="12" rx="2"/><circle cx="7.5" cy="8.5" r="1.5"/><path d="m3.5 14.5 4.5-4 3 3 2-2 3.5 3"/>'],
+    ['outbox', 'Outbox', '/outbox/', '<path d="M3 12v4a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-4"/><path d="M10 13V3M6 7l4-4 4 4"/>']
+  ];
   const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
   const nav = document.createElement('nav');
@@ -33,6 +34,7 @@
     }).join('')}</div>
     <div class="rail-bas menu-bas">
       <button type="button" class="rail-btn" id="menu-reglages" aria-expanded="false" title="Apparence : nuit ou jour, et la couleur">${svg('<circle cx="10" cy="10" r="2.6"/><path d="M10 2.5v2M10 15.5v2M2.5 10h2M15.5 10h2M4.7 4.7l1.4 1.4M13.9 13.9l1.4 1.4M4.7 15.3l1.4-1.4M13.9 6.1l1.4-1.4"/>')}<span class="rail-libelle menu-libelle">Réglages</span></button>
+      <button type="button" class="rail-btn" id="menu-actualiser" title="Actualiser les données : routines, skills, connecteurs et usage (sans appel au modèle)">${svg('<path d="M16 10a6 6 0 1 1-1.8-4.3"/><path d="M16 3.5v3.2h-3.2"/>')}<span class="rail-libelle menu-libelle" id="menu-actualiser-texte">Actualiser</span></button>
       <button type="button" class="rail-btn" id="menu-replier" aria-expanded="true" title="Replier le menu">${svg('<path id="menu-ico" d="M11 5 6 10l5 5M15 5l-5 5 5 5"/>')}<span class="rail-libelle menu-libelle" id="menu-replier-texte">Replier</span></button>
     </div>`;
   document.body.classList.add('avec-menu');
@@ -56,14 +58,27 @@
     if (embedded) { e.preventDefault(); parent.postMessage({ type: 'sm4rt-menu', vue: a.dataset.menu }, '*'); }
   });
 
-  /* Réglages opens the page's own Apparence panel; its pointerdown must not close the panel just before the click reopens it */
+  /* Réglages opens the page's own Apparence panel (a page without one has no Réglages); its pointerdown must not close
+     the panel just before the click reopens it */
   const reglages = document.getElementById('menu-reglages');
+  const sansReglages = () => { reglages.hidden = !document.getElementById('btn-reglages'); };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', sansReglages); else sansReglages();
   reglages.addEventListener('pointerdown', e => e.stopPropagation());
   reglages.addEventListener('click', () => {
     const b = document.getElementById('btn-reglages'); if (b) b.click();
     const p = document.getElementById('reglages'); reglages.setAttribute('aria-expanded', !!p && !p.hidden);
   });
   addEventListener('pointerdown', () => reglages.setAttribute('aria-expanded', 'false'));
+
+  /* Actualiser: in the shell, the shell rebuilds the data and reloads its frames; on its own, the page reloads */
+  const actualiser = document.getElementById('menu-actualiser');
+  actualiser.addEventListener('click', async () => {
+    if (embedded) { parent.postMessage({ type: 'sm4rt-menu', vue: 'actualiser' }, '*'); return; }
+    if (actualiser.getAttribute('aria-busy') === 'true') return;
+    actualiser.setAttribute('aria-busy', 'true'); document.getElementById('menu-actualiser-texte').textContent = 'Actualisation…';
+    try { const r = await fetch('/local/refresh', { method: 'POST' }), d = await r.json(); if (!d.ok) throw 0; location.reload(); }
+    catch (_) { actualiser.removeAttribute('aria-busy'); document.getElementById('menu-actualiser-texte').textContent = 'Échec : réessayer'; }
+  });
 
   /* the Outbox badge: the files still to file, kept 60 s so that moving between pages costs nothing */
   const badge = n => {

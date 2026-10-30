@@ -118,7 +118,7 @@ body.replie #reglages{left:12px}
   #reglages{left:16px;right:16px;width:auto;bottom:16px}
 }
 /* ---------------------------- the main menu (assets/menu.js) ----------------------------
-   On the left of Projets, Skills, Connecteurs and Outbox. It folds to a narrow rail (body.menu-replie); the pages' own
+   On the left of every page of the socle. It folds to a narrow rail (body.menu-replie); the pages' own
    Apparence button gives way to its Réglages, and the Apparence panel opens beside it. */
 body.avec-menu{display:flex;min-height:100vh;--menu-larg:232px}
 body.avec-menu.menu-replie{--menu-larg:72px}
@@ -147,7 +147,7 @@ body.avec-menu #reglages{left:calc(var(--menu-larg) + 12px);right:auto;top:auto;
   #menu{position:static;align-self:stretch;width:auto;height:auto;flex:none;flex-direction:row;align-items:center;gap:6px;padding:8px 10px;border-right:0;border-bottom:1px solid var(--bord);overflow-x:auto}
   #menu .marque,#menu #menu-replier{display:none}
   .menu-liste{flex-direction:row;gap:2px}
-  .menu-bas{margin:0 0 0 auto;padding:0;border:0}
+  .menu-bas{margin:0 0 0 auto;padding:0;border:0;flex-direction:row}
   #menu .rail-btn{width:auto;flex:0 0 auto;padding:0 10px;min-width:40px;justify-content:center}
   #menu .rail-libelle{display:none}
   .menu-badge{position:absolute;top:2px;right:2px;margin:0;padding:1px 4px;font-size:9px}
