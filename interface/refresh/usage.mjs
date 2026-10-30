@@ -106,16 +106,31 @@ const appCfg = readJSON(path.join(KIT, 'config', 'apps.json'), { apps: [] }).app
 const appRows = appCfg.map(a => ({ id: a.id, label: a.label || a.id, kind: a.kind || 'mcp', group: ['cli', 'api', 'app'].includes(a.kind) ? 'tool' : 'connector', desc: a.desc || '', status: a.status || '', iconSlug: a.iconSlug || '', days: {}, match: a }));
 let appsMeasured = false;
 const bump = (row, days) => { for (const [d, n] of Object.entries(days)) row.days[d] = (row.days[d] || 0) + n; };
+// AIOS: does this line of connexions.md cover this MCP server? "mcp" may list several server names, for one service plugged in
+// twice; a line without "mcp" is covered by the server of the same name as the tool, or the one its "command" names (see MODIFS.md)
+const covers = (row, server) => {
+  const m = row.match;
+  if (m.mcp) return [].concat(m.mcp).some(x => norm(x) === norm(server));
+  return norm(row.id.replace(/^app:/, '')) === norm(server) || (!!m.command && norm(m.command) === norm(server));
+};
+const horsListe = [];
 if (sessions) {
   appsMeasured = true;
   for (const [k, days] of Object.entries(sessions.toolDays)) {
-    // AIOS: "mcp" may list several server names, for one service plugged in twice (see MODIFS.md)
-    if (k.startsWith('m:')) { const server = k.slice(2); for (const row of appRows) { const m = row.match; if ((m.mcp && [].concat(m.mcp).some(x => norm(x) === norm(server))) || (!m.mcp && norm(row.id.replace(/^app:/, '')) === norm(server))) bump(row, days); } }
+    if (k.startsWith('m:')) {
+      const server = k.slice(2), rows = appRows.filter(row => covers(row, server));
+      for (const row of rows) bump(row, days);
+      // AIOS: a server called in the session logs that no line covers: shown by the Connecteurs tab as "hors liste"
+      if (!rows.length) horsListe.push({ serveur: server, days });
+    }
     if (k.startsWith('w:')) { const word = k.slice(2); for (const row of appRows) if (row.match.command && String(row.match.command).toLowerCase() === word) bump(row, days); }
   }
 }
 for (const e of log.filter(e => e.kind === 'app')) { appsMeasured = true; const row = appRows.find(r => norm(r.id) === norm(e.name) || norm(r.id.replace(/^app:/, '')) === norm(e.name) || norm(r.label) === norm(e.name)); if (row) { const d = dayOf(e.t); row.days[d] = (row.days[d] || 0) + (+e.calls || 1); } }
-const appsOut = appRows.map(a => ({ id: a.id, label: a.label, kind: a.kind, group: a.group, desc: a.desc, status: a.status, iconSlug: a.iconSlug, calls7: sumDays(a.days, SHORT), calls30: sumDays(a.days, LONG), last: lastDay(a.days) }));
+// AIOS: the calls of each day over the last 30 days (field days), for the bars of the Connecteurs tab (see MODIFS.md)
+const inLong = days => Object.fromEntries(Object.entries(days).filter(([d]) => d >= dayCut(LONG)));
+const appsOut = appRows.map(a => ({ id: a.id, label: a.label, kind: a.kind, group: a.group, desc: a.desc, status: a.status, iconSlug: a.iconSlug, calls7: sumDays(a.days, SHORT), calls30: sumDays(a.days, LONG), last: lastDay(a.days), days: inLong(a.days) }));
+const horsListeOut = horsListe.map(h => ({ serveur: h.serveur, calls7: sumDays(h.days, SHORT), calls30: sumDays(h.days, LONG), last: lastDay(h.days), days: inLong(h.days) })).filter(h => h.calls30 > 0).sort((a, b) => b.calls30 - a.calls30 || a.serveur.localeCompare(b.serveur));
 const local = apps.list().map(a => {
   const days = {}, agentDays = {};
   for (const o of opens) if (o.app === a.id) { const d = dayOf(o.t); days[d] = (days[d] || 0) + 1; }
@@ -142,7 +157,7 @@ const out = {
     tokens: 'Les tokens sont comptés tels que ton agent les a notés. Chaque appel au modèle compte une fois.',
     apps: 'Tes connexions : les appels notés dans ton journal d’usage ou tes journaux de session. Apps locales : les ouvertures depuis les tuiles de l’OS.',
   },
-  totals, skills, routines, apps: appsOut, sm4rt: local,
+  totals, skills, routines, apps: appsOut, horsListe: horsListeOut, sm4rt: local,
 };
 fs.writeFileSync(path.join(KIT, 'data', 'arms-usage.json'), JSON.stringify(out, null, 1));
 fs.writeFileSync(path.join(KIT, 'data', 'arms-usage.js'), 'window.ARMS_USAGE=' + JSON.stringify(out) + ';\n');

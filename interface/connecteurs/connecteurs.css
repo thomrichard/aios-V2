@@ -1,0 +1,176 @@
+/* SM4RT Connecteurs: what is proper to the connectors page. The look (variables, night and day, colours) and the shared
+   pieces (buttons, Apparence, toast) live in ../assets/theme.css, shared with the Projets and Skills pages.
+   --m is the colour of a connector's method: official tool green, CLI accent, API amber, MCP violet. */
+
+#main{max-width:1560px;margin:0 auto}
+.barre{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
+.barre-d{display:flex;flex-wrap:wrap;gap:4px;align-items:center}
+.source{margin-right:8px;font:400 11px var(--mono);color:var(--texte-pale)}
+.fil-ariane{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.fil-ariane a{color:var(--texte-doux)}
+#ici{color:var(--texte-doux)}
+#reglages{left:auto;right:24px;top:56px;bottom:auto}
+#vide{margin:12vh auto;max-width:520px;text-align:center;display:flex;flex-direction:column;gap:12px;align-items:center;color:var(--texte-doux)}
+#vide h1{margin:0;font:600 30px var(--police-titre);color:var(--texte)}
+#catalogue,#entretien{display:flex;flex-direction:column;gap:20px}
+.tete{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 24px}
+.tete-g{display:flex;flex-direction:column;gap:10px;min-width:0}
+.tete h1{margin:0;font:600 40px/1.05 var(--police-titre);letter-spacing:-.03em}
+.tete p{margin:0;font-size:15px;color:var(--texte-doux)}
+.tete-d{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.tete-d .btn{min-height:44px}
+.tete-d .btn.primaire{min-height:40px}
+.tete-d .etiquette{text-transform:none;letter-spacing:0;font-size:12px}
+code{font:12.5px var(--mono);padding:1px 5px;border-radius:4px;background:var(--code-fond)}
+.avis{margin:0;padding:12px 16px;border-radius:var(--rayon-petit);border:1px dashed var(--bord-fort);font-size:13px;color:var(--texte-doux)}
+
+/* ---------------------------- the catalogue ---------------------------- */
+.cherche{display:flex;align-items:center;gap:10px;flex:1 1 300px;width:380px;max-width:100%;min-height:44px;padding:0 14px;border-radius:var(--rayon-petit);border:1px solid var(--bord-fort);background:var(--code-fond)}
+.cherche:focus-within{border-color:var(--accent)}
+.cherche svg{flex:0 0 auto;color:var(--accent)}
+.cherche input{flex:1;min-width:0;border:0;outline:0;background:transparent;color:var(--texte);font:14px var(--police)}
+.cherche input::placeholder{color:var(--texte-pale)}
+.cherche kbd{font:11px var(--mono);padding:1px 6px;border-radius:4px;border:1px solid var(--bord-fort);color:var(--texte-pale)}
+.compteur{display:inline-grid;place-items:center;min-width:20px;height:20px;padding:0 6px;border-radius:10px;background:var(--attention-doux);color:var(--attention);font:600 11px var(--mono)}
+.filtres{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.ressort{flex:1}
+.puces{display:flex;flex-wrap:wrap;gap:8px}
+.puce{display:inline-flex;align-items:center;gap:8px;min-height:34px;padding:0 12px;border-radius:9999px;border:1px solid var(--bord);background:transparent;color:var(--texte);font:500 13px var(--police)}
+.puce:hover{border-color:var(--bord-fort)}
+.puce[aria-pressed=true]{background:var(--accent-doux);border-color:var(--accent-bord)}
+.puce .n{font:500 11px var(--mono);color:var(--texte-pale)}
+.pt{flex:0 0 8px;width:8px;height:8px;border-radius:50%;background:var(--m,var(--texte-pale))}
+#agents button{min-height:30px;font-size:10px}
+.corps{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start}
+.cartes{flex:2 1 560px;min-width:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.carte{display:flex;flex-direction:column;gap:10px;padding:16px;min-height:188px;border-radius:var(--rayon);border:1px solid var(--bord);background:linear-gradient(180deg,var(--panneau-haut),var(--panneau-bas));color:var(--texte);text-align:left}
+.carte:hover{border-color:var(--bord-fort)}
+.carte[aria-pressed=true]{border-color:var(--accent-bord);background:linear-gradient(180deg,rgba(var(--accent-rgb),.12),rgba(var(--accent-rgb),.03));box-shadow:var(--lueur-douce)}
+.carte-haut{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;width:100%;min-height:18px}
+.carte-haut .etiquette{font-size:10px;white-space:nowrap}
+.pips{display:flex;gap:2px}
+.pips i{width:8px;height:4px;border-radius:1px;background:var(--surface-2)}
+.pips i.on{background:var(--m)}
+.badges{margin-left:auto;display:flex;gap:6px}
+.badge{padding:1px 7px;border-radius:4px;border:1px solid var(--bord-fort);font:500 9px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--texte-pale);white-space:nowrap}
+.badge.attention{color:var(--attention);border-color:rgba(var(--attention-rgb),.45)}
+.carte-nom{font:600 19px var(--police-titre);letter-spacing:-.01em;overflow-wrap:anywhere}
+.carte-texte{font-size:14px;line-height:1.4;color:var(--texte-doux);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.commandes{display:flex;flex-wrap:wrap;gap:5px}
+.commandes span{padding:3px 8px;border-radius:6px;background:var(--surface-2);font:400 11px var(--mono);color:var(--accent);overflow-wrap:anywhere}
+.commandes span.aucune{background:transparent;border:1px dashed var(--bord-fort);color:var(--texte-pale)}
+.carte-bas{margin-top:auto;display:flex;flex-direction:column;gap:6px;width:100%}
+.carte-appels{display:flex;align-items:center;gap:10px;font:400 11px var(--mono);color:var(--texte-pale);white-space:nowrap}
+.carte-teste{font:400 10px var(--mono);letter-spacing:.04em;color:var(--texte-pale)}
+.carte-teste.vieux{color:var(--attention)}
+.jauge{flex:1;height:4px;border-radius:2px;background:var(--surface-2);overflow:hidden}
+.jauge i{display:block;height:100%;background:var(--accent)}
+.rien{grid-column:1/-1;padding:32px;text-align:center;color:var(--texte-doux);border:1px dashed var(--bord-fort);border-radius:var(--rayon);display:flex;flex-direction:column;gap:12px;align-items:center}
+.rien p{margin:0;max-width:520px}
+.rien h2{margin:0;font:600 20px var(--police-titre);color:var(--texte)}
+
+/* the sheet of the connector */
+#detail{flex:1 1 360px;min-width:0;padding:22px;display:flex;flex-direction:column;gap:18px;position:sticky;top:16px;max-height:calc(100vh - 32px);overflow:auto}
+.d-tete{display:flex;flex-direction:column;gap:8px}
+.d-nom{font:600 30px/1.1 var(--police-titre);letter-spacing:-.02em;overflow-wrap:anywhere}
+.d-cmd{font:500 13px var(--mono);color:var(--texte-pale);overflow-wrap:anywhere}
+.d-cmd b{font-weight:500;color:var(--accent)}
+.d-resume{margin:0;font-size:15px;line-height:1.5}
+.d-puces{display:flex;flex-wrap:wrap;gap:8px;margin-top:2px}
+.bloc{display:flex;flex-direction:column;gap:8px}
+.bloc h2{margin:0;font:600 15px var(--police-titre)}
+.bloc ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.bloc li{display:flex;gap:10px;font-size:14px;color:var(--texte-doux);line-height:1.45}
+.bloc li .chevron{flex:0 0 auto;font:500 11px var(--mono);color:var(--accent);padding-top:3px}
+.bloc li .genre{flex:0 0 62px;font:500 10px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--texte-pale);padding-top:3px}
+.bloc li .pale{color:var(--texte-pale)}
+.bloc p{margin:0;font-size:14px;color:var(--texte-doux)}
+.usage{gap:10px;padding:14px;border-radius:12px;background:var(--code-fond);border:1px solid var(--bord)}
+.usage-tete{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.barres{display:flex;align-items:flex-end;gap:3px;height:52px;padding-bottom:2px;border-bottom:1px solid var(--bord)}
+.barres i{flex:1;min-height:2px;border-radius:2px 2px 0 0;background:rgba(var(--accent-rgb),.35)}
+.barres i.semaine{background:var(--accent)}
+.barres.mini{height:30px;gap:2px;border:0}
+.barres.mini i{border-radius:1px;background:rgba(var(--accent-rgb),.55)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.stat{padding:9px 11px;border-radius:8px;background:var(--surface-2);display:flex;flex-direction:column;gap:2px}
+.stat .etiquette{font-size:10px;letter-spacing:.1em}
+.stat b{font:500 17px var(--police-titre)}
+.stat b.ok{color:var(--ok)}
+.stat b.attention{color:var(--attention)}
+.encart{display:flex;flex-direction:column;gap:8px;padding:12px;border-radius:10px;border:1px solid var(--bord)}
+.encart .etiquette{letter-spacing:.12em}
+.encart p{margin:0;font-size:13px;line-height:1.5;color:var(--texte-doux)}
+.encart.ok{background:rgba(var(--ok-rgb),.06);border-color:rgba(var(--ok-rgb),.22)}
+.encart.ok .etiquette{color:var(--ok)}
+.encart.vieux{background:rgba(var(--attention-rgb),.06);border-color:rgba(var(--attention-rgb),.25)}
+.encart.vieux .etiquette{color:var(--attention)}
+.encart.leger{background:color-mix(in srgb,var(--agent) 11%,transparent);border-color:color-mix(in srgb,var(--agent) 32%,transparent)}
+.encart.leger .etiquette{color:var(--agent)}
+.encart.leger .btn{align-self:flex-start;min-height:32px;font:500 12px var(--mono);color:var(--agent);border-color:currentColor}
+.d-actions{display:flex;flex-wrap:wrap;gap:8px}
+.d-actions .btn{flex:1 1 120px}
+.d-actions .btn.primaire{flex-basis:100%}
+
+/* ---------------------------- the upkeep ---------------------------- */
+.tuiles{display:flex;flex-wrap:wrap;gap:14px}
+.tuile{flex:1 1 190px;padding:16px 18px;border-radius:var(--rayon);background:linear-gradient(180deg,var(--panneau-haut),var(--panneau-bas));border:1px solid var(--bord);display:flex;align-items:center;gap:14px}
+.tuile.attention{border-color:rgba(var(--attention-rgb),.3)}
+.tuile .grand{font:300 42px/1 var(--police-titre)}
+.tuile .t-texte{display:flex;flex-direction:column;gap:2px}
+.tuile .t-texte span:last-child{font-size:12px;color:var(--texte-doux)}
+.colonnes{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-start}
+.col{flex:1 1 300px;min-width:0;padding:18px;border-radius:var(--rayon);display:flex;flex-direction:column;gap:12px;border:1px solid var(--bord);background:linear-gradient(180deg,var(--panneau-haut),var(--panneau-bas))}
+.col.retester{background:linear-gradient(180deg,rgba(var(--attention-rgb),.06),var(--panneau-bas));border-color:rgba(var(--attention-rgb),.25)}
+.col.retirer{background:transparent;border-style:dashed;border-color:var(--bord-fort)}
+.col-tete{display:flex;align-items:baseline;gap:10px}
+.col-tete .num{font:500 12px var(--mono);color:var(--accent)}
+.retester .col-tete .num{color:var(--attention)}
+.retirer .col-tete .num{color:var(--texte-pale)}
+.col-tete h2{margin:0;font:600 19px var(--police-titre)}
+.col-tete .etiquette{margin-left:auto;font-size:10px;text-align:right}
+.regle{margin:0;font-size:12px;line-height:1.5;color:var(--texte-pale)}
+.fiche-e{padding:14px;border-radius:12px;background:var(--code-fond);border:1px solid var(--bord);display:flex;flex-direction:column;gap:10px}
+.fiche-e.attention{border-color:rgba(var(--attention-rgb),.3)}
+.fiche-e.pale{opacity:.5}
+.fiche-e-tete{display:flex;align-items:center;gap:8px}
+.lien-cx{padding:0;border:0;background:transparent;font:600 16px var(--police-titre);color:var(--texte);text-align:left}
+button.lien-cx:hover{text-decoration:underline;color:var(--accent)}
+.retirer .lien-cx{color:var(--texte-doux)}
+.fiche-e-tete .droite{margin-left:auto;display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end;font:400 11px var(--mono);color:var(--texte-pale);text-align:right}
+.fiche-e p{margin:0;font-size:13px;line-height:1.45;color:var(--texte-doux)}
+.fiche-e p.pale{color:var(--texte-pale)}
+.fiche-e .actions{display:flex;flex-wrap:wrap;gap:8px}
+.fiche-e .actions .btn{min-height:32px;font-size:12px}
+.fiche-e .actions .btn.primaire{flex:1}
+.fiche-e .actions .btn.pas-flex{flex:0 0 auto}
+.copie{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font:400 12px var(--mono);color:var(--ok)}
+.copie button{margin-left:auto;min-height:26px;padding:0;border:0;background:transparent;color:var(--texte-pale);font:400 11px var(--mono);text-decoration:underline}
+.vide-col{margin:0;font-size:13px;line-height:1.5;color:var(--texte-doux)}
+#changements{padding:20px 22px;display:flex;flex-direction:column;gap:2px;background:var(--code-fond)}
+.ch-tete{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px;margin-bottom:8px}
+.ch-tete h2{margin:0;font:600 17px var(--police-titre)}
+.ch-tete span{font:400 11px var(--mono);color:var(--texte-pale)}
+.ch{display:grid;grid-template-columns:18px 64px minmax(0,1fr);gap:10px;align-items:baseline;padding:6px 0;font:400 12px var(--mono)}
+.ch .chevron{color:var(--accent)}
+.ch .date{color:var(--texte-pale)}
+.ch .quoi{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline}
+.ch .quoi .lien-cx{font:400 12px var(--mono);color:var(--texte)}
+.ch .quoi span{font:400 13px var(--police);color:var(--texte-doux)}
+
+@media (max-width:900px){
+  #detail{position:static;max-height:none;flex-basis:100%}
+}
+@media (max-width:760px){
+  .tete h1{font-size:30px}
+  .cherche{width:100%;flex-basis:100%}
+  .tete-d{width:100%}
+  .cartes{grid-template-columns:1fr}
+  .carte{min-height:0}
+  .source{display:none}
+  #agents{width:100%}
+  #reglages{left:16px;right:16px;top:auto;bottom:16px}
+  .ch{grid-template-columns:14px 52px minmax(0,1fr)}
+  .col-tete{flex-wrap:wrap}
+  .col-tete .etiquette{flex-basis:100%;margin-left:0;text-align:left}
+}
