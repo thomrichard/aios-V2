@@ -2,7 +2,6 @@
    pieces (buttons, Apparence, toast) live in ../assets/theme.css, shared with the Projets and Skills pages.
    --m is the colour of a connector's method: official tool green, CLI accent, API amber, MCP violet. */
 
-#main{max-width:1560px;margin:0 auto}
 .barre{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
 .barre-d{display:flex;flex-wrap:wrap;gap:4px;align-items:center}
 .source{margin-right:8px;font:400 11px var(--mono);color:var(--texte-pale)}

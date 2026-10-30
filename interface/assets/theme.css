@@ -90,7 +90,7 @@ body.replie #rail{--rail:72px}
 .marque-texte{display:flex;flex-direction:column;gap:2px;white-space:nowrap;overflow:hidden}
 .marque-texte b{font:500 12px var(--mono);letter-spacing:.14em;text-transform:uppercase}
 .marque-texte a{font:400 11px var(--police);color:var(--texte-pale)}
-body.replie .marque-texte,body.replie .rail-libelle{display:none}
+body.replie #rail .marque-texte,body.replie #rail .rail-libelle{display:none}
 .rail-bas{display:flex;flex-direction:column;gap:2px;padding-top:12px;border-top:1px solid var(--bord)}
 .rail-btn{display:flex;align-items:center;gap:12px;min-height:40px;padding:0 12px;border:0;border-radius:var(--rayon-petit);background:transparent;color:var(--texte-doux);font:400 13px var(--police);white-space:nowrap}
 .rail-btn:hover{background:var(--surface-2);color:var(--texte)}

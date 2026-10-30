@@ -1,7 +1,6 @@
 /* SM4RT Skills: what is proper to the skills page. The look (variables, night and day, colours) and the shared
    pieces (buttons, Apparence, toast) live in ../assets/theme.css, shared with the Projets page. */
 
-#main{max-width:1560px;margin:0 auto}
 .barre{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
 .barre-d{display:flex;gap:4px;align-items:center}
 .fil-ariane{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
