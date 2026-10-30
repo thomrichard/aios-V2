@@ -18,8 +18,9 @@ Pilotage (OKR, revue hebdo, revenus), admin et finances, et l'AIOS comme outil d
 - `calibrate` : en fin de session, proposer les corrections à garder (skills, règles, mémoire, réglages)
 - `align` : quelques questions à choix avant une tâche floue (`grill-me` pour explorer et décider)
 - `devil` : des objections sérieuses sur un choix, avant de s'engager
-- `close` : clôturer une session sans rien perdre (inventaire, tout écrit à sa place, sujets ouverts en tâches, récap)
-- `reprendre` : se remettre à niveau sur un projet ou un sujet déjà commencé (l'autre moitié de `close`)
+- `bilan` : clore une session sans rien perdre (inventaire, tout écrit à sa place, sujets ouverts en tâches) et écrire son bilan, qui attend dans l'Outbox
+- `fermer` : clore une session ordinaire de la même façon, sans bilan à valider
+- `reprendre` : se remettre à niveau sur un projet ou un sujet déjà commencé (l'autre moitié de `bilan` et de `fermer`)
 - `search-connectors` : chercher comment brancher une application, dans l'ordre de `systeme/connexions.md`
 - `burst` : N variantes d'un livrable, pour choisir la plus proche de la cible
 - `humanizer` : retirer d'un texte les tics d'écriture qui sentent l'IA

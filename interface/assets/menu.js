@@ -1,7 +1,7 @@
 /* SM4RT menu: the left menu shared by every page of the socle (the home and its Orbes 3D and Disque, Projets, Skills,
    Connecteurs, Fichiers, Bibliothèque, Outbox). A page asks for it with <body data-page="projets"> and this script,
    nothing else. It folds to a narrow rail (kept in this browser, the same for every page), marks the page you are on,
-   shows how many files wait in the Outbox, and refreshes the data (routines, skills, connectors, usage). In the shell's
+   shows how many files wait for your validation in the Outbox, and refreshes the data (routines, skills, connectors, usage). In the shell's
    frames, a click asks the shell to change tab (message sm4rt-menu); on its own, a page links to the others. */
 (() => {
   'use strict';
@@ -82,10 +82,10 @@
     catch (_) { actualiser.removeAttribute('aria-busy'); document.getElementById('menu-actualiser-texte').textContent = 'Échec : réessayer'; }
   });
 
-  /* the Outbox badge: the files still to file, kept 60 s so that moving between pages costs nothing */
+  /* the Outbox badge: the files that wait for your validation, kept 60 s so that moving between pages costs nothing */
   const badge = n => {
     const b = document.getElementById('menu-badge'); if (!b) return;
-    b.hidden = !(n > 0); b.textContent = String(n).padStart(2, '0'); b.title = n + (n > 1 ? ' fichiers à ranger' : ' fichier à ranger');
+    b.hidden = !(n > 0); b.textContent = String(n).padStart(2, '0'); b.title = n + (n > 1 ? ' fichiers à valider' : ' fichier à valider');
   };
   async function compteOutbox() {
     let c = null; try { c = JSON.parse(sessionStorage.getItem('sm4rt-menu:outbox') || 'null'); } catch (_) { }
@@ -93,7 +93,7 @@
     try {
       const r = await fetch('/local/outbox', { cache: 'no-store' }), d = await r.json();
       if (!r.ok || !Array.isArray(d.entrees)) return;
-      const n = d.entrees.filter(e => !e.range).length;
+      const n = d.entrees.length;
       try { sessionStorage.setItem('sm4rt-menu:outbox', JSON.stringify({ t: Date.now(), n })); } catch (_) { }
       badge(n);
     } catch (_) { }

@@ -12,6 +12,7 @@ Un Mac qui dort ne lance rien : la routine part au réveil. `systeme/scripts/int
 | Rangement de nuit | `rangement` | — | chaque nuit, 2 h | `0 2 * * *` | active : le point du jour | 20 éléments par nuit | à construire |
 | Veille (exemple) | `veille` | — | lundi, 1 h | `0 1 * * 1` | passive | à fixer | à construire |
 | Fiches YouTube | — | `python3 systeme/scripts/youtube.py fiches --maj && python3 systeme/scripts/index.py` | dimanche et jeudi, 1 h | `0 1 * * 0,4` | exemple · directe, passive : met à jour les fiches vidéo de `domaines/contenu/` | sans IA | à construire |
+| Validation de nuit | — | `python3 systeme/scripts/valider.py --jours 3 && python3 systeme/scripts/index.py` | chaque nuit, 1 h | `0 1 * * *` | directe, passive : valide seul ce qui attend dans l'Outbox depuis plus de 3 jours (statut de fin, le fichier ne bouge pas) | sans IA | à construire |
 | Sauvegarde de nuit | — | `git add -A; git commit -q -m "Sauvegarde de nuit"; git push -q prive main` | chaque nuit, 3 h | `0 3 * * *` | directe, passive : envoie le travail du jour vers prive | sans IA | à construire |
 | Audit | `audit` | — | le 1er du mois, 1 h | `0 1 1 * *` | passive | à fixer | à construire |
 

@@ -1,12 +1,12 @@
 ---
 name: reprendre
-description: Remet une session à niveau sur un projet ou un sujet déjà commencé : retrouve sa fiche, ses décisions, son dernier point de reprise et ses tâches ouvertes, puis donne en quelques lignes où on en est et la prochaine action. L'autre moitié de close. Déclencheurs : « reprendre », « reprends <projet> », « on reprend <sujet> », « où on en était », « onboard ».
+description: Remet une session à niveau sur un projet ou un sujet déjà commencé : retrouve sa fiche, ses décisions, son dernier point de reprise et ses tâches ouvertes, puis donne en quelques lignes où on en est et la prochaine action. L'autre moitié de bilan et de fermer. Déclencheurs : « reprendre », « reprends <projet> », « on reprend <sujet> », « où on en était », « onboard ».
 metadata:
   famille: sessions
 ---
 # reprendre
 
-`close` écrit le point de reprise ; `reprendre` le relit. Une nouvelle session, ou une session lancée en parallèle, se met à niveau en une minute, sans tout réexpliquer.
+`bilan` ou `fermer` écrit le point de reprise ; `reprendre` le relit. Une nouvelle session, ou une session lancée en parallèle, se met à niveau en une minute, sans tout réexpliquer.
 
 ## Étapes
 1. **Trouve le sujet**, dans cet ordre, et arrête-toi dès qu'il est trouvé :
@@ -26,12 +26,13 @@ metadata:
 
 ## Garde-fous
 - Ne refais pas une décision déjà prise : si quelque chose semble la contredire, signale-le, sans la changer.
-- N'écris rien pendant la reprise : on lit. Ce qui change ensuite se range au fil du travail, puis avec `close`.
+- N'écris rien pendant la reprise : on lit. Ce qui change ensuite se range au fil du travail, puis avec `bilan` ou `fermer`.
 - Deux sauts au plus pour trouver le sujet. S'il a fallu chercher partout, propose d'ajouter la route qui manquait.
 
 ## Références
-- D'après la skill `onboard` de Jay E | RoboNuggets (vidéo R62) : son fichier n'est pas public, celle-ci est réécrite pour l'AIOS, sur les projets et les points de reprise de `close`.
+- D'après la skill `onboard` de Jay E | RoboNuggets (vidéo R62) : son fichier n'est pas public, celle-ci est réécrite pour l'AIOS, sur les projets et les points de reprise de `bilan` et `fermer`.
 
 ## Journal des changements
 - 2026-10-23 · création · se remettre à niveau sans tout réexpliquer ; l'autre moitié de close
 - 2026-10-27 · règles et décisions · une décision vit dans la fiche de son projet, une règle dans journal/regles.md
+- 2026-10-30 · close devient bilan et fermer · les deux écrivent le point de reprise

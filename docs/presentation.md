@@ -182,7 +182,7 @@ flowchart LR
     A --> B[burst<br/>plusieurs versions]
     B --> D[devil<br/>les objections]
     D --> H[humanizer<br/>la voix de l'auteur]
-    H --> C[close<br/>rien ne se perd]
+    H --> C[bilan ou fermer<br/>rien ne se perd]
     C --> K[calibrate<br/>l'agent apprend]
     C -. "le point de reprise" .-> R
 ```
@@ -196,14 +196,15 @@ flowchart LR
 | `devil` | avant de s'engager sur un choix ou un livrable | des objections sérieuses, puis un verdict | non |
 | `humanizer` | avant de publier un texte écrit avec l'IA | retire les tics d'écriture « IA », garde la voix de l'auteur | le texte, si tu le demandes |
 | `idees` | quand une envie « un jour, peut-être » passe | la note sans question, la fait ressortir au bon moment, la lance en projet | oui, une fiche `idee` |
-| `close` | en fin de session | range tout ce qui compte, écrit le point de reprise | oui |
+| `bilan` | en fin de session, quand elle mérite d'être relue | range tout ce qui compte, écrit le point de reprise et un bilan à valider, qui attend dans l'Outbox | oui |
+| `fermer` | en fin de session ordinaire | range tout ce qui compte, écrit le point de reprise, sans bilan | oui |
 | `calibrate` | en fin de session, après des corrections | propose de faire apprendre l'agent | oui, après ton choix |
 
 ### reprendre : se remettre à niveau en une minute
 
 Une nouvelle session ne sait rien de la veille. Tu dis « reprends le site web ». L'agent cherche le sujet (les projets actifs, le routeur du domaine, le journal, les bilans de clôture), lit l'essentiel, puis te donne le point en quelques lignes : où on en est, ce qui est décidé (et ce qu'on a écarté), ce qui reste ouvert, et une seule prochaine action. Il n'écrit rien : il lit.
 
-C'est l'autre moitié de `close` : `close` écrit le point de reprise, `reprendre` le relit. Le fichier du projet (`projets/<slug>.md`) sert de dossier partagé entre les sessions, même lancées en parallèle.
+C'est l'autre moitié de `bilan` et de `fermer` : elles écrivent le point de reprise, `reprendre` le relit. Le fichier du projet (`projets/<slug>.md`) sert de dossier partagé entre les sessions, même lancées en parallèle.
 
 ### align : viser juste du premier coup
 
@@ -249,27 +250,26 @@ Le but n'est pas de tromper un détecteur : c'est que le texte sonne comme toi, 
 
 `reprendre`, `align`, `burst`, `surprise-me`, `devil` et `humanizer` sont réécrites d'après ce que Jay E | RoboNuggets montre de ses skills en vidéo : ses fichiers ne sont pas publics. `reprendre` s'appelle `onboard` chez lui.
 
-## La fin de session : close, puis calibrate
+## La fin de session : bilan ou fermer, puis calibrate
 
-Une discussion avec l'agent finit toujours par disparaître. On perd rarement la décision ; on perd le chemin : les options écartées, et pourquoi. `close` règle ça : après elle, le chat peut disparaître sans rien perdre. Tu dis « close », ou « on ferme ».
+Une discussion avec l'agent finit toujours par disparaître. On perd rarement la décision ; on perd le chemin : les options écartées, et pourquoi. `bilan` et `fermer` règlent ça : après elles, le chat peut disparaître sans rien perdre. Tu dis « bilan » quand la session mérite d'être relue : elle laisse un bilan à valider. Tu dis « fermer » pour une session ordinaire : tout est rangé, rien n'est à valider.
 
-Elle travaille en cinq temps :
+`bilan` travaille en cinq temps ; `fermer` fait les quatre premiers :
 
 1. **L'inventaire.** L'agent relit la session et trie en quatre : les décisions (avec leur pourquoi), les livrables, ce qui n'existe que dans le chat (un texte proposé, une analyse), les sujets ouverts. Il te montre cet inventaire avant d'écrire quoi que ce soit.
 2. **Chaque chose à sa place.** Une décision de projet va dans la partie « Décisions » de la fiche du projet ; une règle, qui vaut pour tout le workspace, va dans `journal/regles.md`. Les deux gardent ce qu'on a écarté. Ce qui n'existe que dans le chat devient une fiche, rangée par `classer` ; dans le doute, une ligne dans `inbox/capture.md`. Un projet touché est mis à jour. Une préférence durable devient un souvenir. Chaque chantier laisse sa ligne dans `journal/log.md`.
 3. **Chaque sujet ouvert devient une tâche à reprendre** : dans son projet, dans un nouveau projet qu'il propose, ou en ligne de capture que le rangement de nuit rangera.
-4. **Rien ne traîne.** Un livrable promis mais jamais écrit est écrit. Un programme lancé est arrêté ou signalé. Des changements non enregistrés dans Git sont signalés, avec un commit proposé ; jamais d'envoi en ligne sans ton accord. Puis l'agent lance le vérificateur.
-5. **Le récap**, en quelques lignes : ce qui est fait, où c'est écrit, ce qui attend, et la phrase exacte pour reprendre chaque sujet. C'est ce point de reprise que `reprendre` relira à la session suivante. Si tu l'as corrigé pendant la session, il propose `calibrate`.
+4. **Rien ne traîne.** Un livrable promis mais jamais écrit est écrit. Un programme lancé est arrêté ou signalé. Des changements non enregistrés dans Git sont signalés, avec un commit proposé ; jamais d'envoi en ligne sans ton accord. 
+5. **Le bilan, puis le récap.** Le bilan va dans `journal/clotures/<sujet>-AA-MM.md`, en `a-valider` : le périmètre, ce qui est fait, les décisions, les propositions non engagées, les limites. Il attend dans l'Outbox jusqu'à ce que tu le valides. Puis l'agent lance le vérificateur, et donne le récap en quelques lignes : ce qui est fait, où c'est écrit, ce qui attend, et la phrase exacte pour reprendre chaque sujet. C'est ce point de reprise que `reprendre` relira à la session suivante. Si tu l'as corrigé pendant la session, il propose `calibrate`.
 
 *Règle ou décision ? Une règle vaut pour tout le workspace et dure ; une décision vaut pour un projet et vit avec lui. Exemple : « rien ne part en ligne sans relecture » serait une règle : une ligne courte dans `AGENTS.md`, et son pourquoi dans `journal/regles.md`. « Le site sera fait avec Astro » est une décision du projet site web, notée dans sa fiche. Ainsi, la fiche d'un projet réunit tout ce qui le concerne.*
 
-Une session longue laisse aussi un bilan dans `journal/clotures/<sujet>-AA-MM.md` : le périmètre, ce qui est fait, les décisions, les propositions non engagées, les limites.
 
-Les deux skills se partagent le travail : `close` garde le **contenu** de la session ; `calibrate` (plus bas) fait **apprendre l'agent** (ses règles, ses skills). `close` ne touche jamais aux règles ni aux skills.
+Le travail se partage : `bilan` et `fermer` gardent le **contenu** de la session ; `calibrate` (plus bas) fait **apprendre l'agent** (ses règles, ses skills). Elles ne touchent jamais aux règles ni aux skills.
 
-*Un essai réel, en deux temps : une session de travail sur un projet de site web, puis « close ». Le choix d'Astro a été noté, avec son pourquoi et les options écartées. Le projet a été mis à jour, et la liste des projets actifs d'`AGENTS.md` a suivi. L'accroche rédigée dans le chat a été gardée. La préférence « phrases courtes » est devenue un souvenir. Un commit a été proposé, pas fait. Le récap a donné une phrase de reprise par sujet.*
+*Un essai réel, en deux temps : une session de travail sur un projet de site web, puis « close » (aujourd'hui « bilan »). Le choix d'Astro a été noté, avec son pourquoi et les options écartées. Le projet a été mis à jour, et la liste des projets actifs d'`AGENTS.md` a suivi. L'accroche rédigée dans le chat a été gardée. La préférence « phrases courtes » est devenue un souvenir. Un commit a été proposé, pas fait. Le récap a donné une phrase de reprise par sujet.*
 
-`close` est reprise de la skill close de Thomas (classroom « Faire vivre ton AIOS »), adaptée à AIOS v2.
+`bilan` est reprise de la skill close de Thomas (classroom « Faire vivre ton AIOS »), adaptée à AIOS v2.
 
 ## Comment l'AIOS s'améliore
 
@@ -365,7 +365,7 @@ L'onglet « Skills » (aussi seul, à l'adresse `http://localhost:50000/competen
 
 Sans usage mesuré, la page le dit, sans rien estimer.
 
-**Les familles.** Une famille regroupe les skills qui servent à la même chose. Le socle en a cinq : Décider (`align`, `burst`, `devil`, `grill-me`), Ranger (`classer`, `fiche`, `idees`, `rangement`), Sessions (`close`, `reprendre`, `calibrate`, `note`), Créer (`humanizer`, `surprise-me`) et Système (`installation`, `personalise`, `search-connectors`). La liste se règle dans `systeme/metadonnees.md`, et chaque skill écrit la sienne dans l'en-tête de son `SKILL.md`. Le vérificateur signale une skill sans famille, ou avec une famille inconnue.
+**Les familles.** Une famille regroupe les skills qui servent à la même chose. Le socle en a cinq : Décider (`align`, `burst`, `devil`, `grill-me`), Ranger (`classer`, `fiche`, `idees`, `rangement`), Sessions (`bilan`, `fermer`, `reprendre`, `calibrate`, `note`), Créer (`humanizer`, `surprise-me`) et Système (`installation`, `personalise`, `search-connectors`). La liste se règle dans `systeme/metadonnees.md`, et chaque skill écrit la sienne dans l'en-tête de son `SKILL.md`. Le vérificateur signale une skill sans famille, ou avec une famille inconnue.
 
 #### Le widget e-mails : un tri qui apprend
 

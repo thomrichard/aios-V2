@@ -15,7 +15,7 @@ Voir plusieurs options à la fois aide à choisir, et on repart de la plus proch
    - Un texte : dans la discussion, `A`, `B`, `C`, chacune précédée de son axe.
    - Un visuel ou une page : une seule page HTML qui les montre côte à côte, chacune avec sa lettre.
 4. **Demande le choix** : « B », « A avec la fin de C », ou « burst sur B » pour varier encore à partir d'elle.
-5. **La version retenue** se range comme tout livrable (`classer`). Les autres restent dans la discussion : `close` les notera comme écartées si elles ont compté.
+5. **La version retenue** se range comme tout livrable (`classer`). Les autres restent dans la discussion : `bilan` ou `fermer` les noteront comme écartées si elles ont compté.
 
 ## Garde-fous
 - Pas de quasi-doublons : si deux variantes se ressemblent, remplace l'une par un autre axe.
