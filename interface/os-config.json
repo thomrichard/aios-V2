@@ -1,5 +1,6 @@
 {
   "port": 50000,
+  "accueil": "orbite",
   "brainPort": 50201,
   "artifactsDir": "artifacts",
   "allowNullOrigin": false,
