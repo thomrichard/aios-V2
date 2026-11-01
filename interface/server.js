@@ -39,6 +39,8 @@
    Outbox page (the Outbox tab)
      /local/outbox           the files that wait for your validation (statut: a-valider), with the file each fiche describes (GET)
      /local/outbox/valider   validates files: their type's end status and maj today in the header (POST, local pages only)
+     /local/reglages         the tables of systeme/metadonnees.md, the socle's and this workspace's, and how much each is used (GET)
+     /local/reglages/appliquer  applies the settings page's gestures: tables, headers, skills, domain folders (POST, local pages only)
    3D home (the Orbes 3D tab, GET, read only)
      /local/orbite           one level: the map (domains, top folders, skills, connectors) or a folder (its sub-folders, or its files)
      /local/orbite/fichier   one file for the side panel: header, start, links out and in
@@ -1361,6 +1363,244 @@ async function validerOutbox({ chemins }) {
   return { ok: true, chemins: faits, index };
 }
 
+/* ---------------------------- REGLAGES: the settings page (reglages/) ----------------------------
+   AIOS: the Réglages tab reads systeme/metadonnees.md (the socle's tables, read only, and those of « Ce workspace »),
+   with how much each domain, type, status, field and skill family is used, then applies a list of gestures. It rewrites
+   the tables of « Ce workspace », the headers that use what changed, the famille of the skills, and the folder and the
+   router of a domain (what goes away goes to archives/: nothing is deleted). Then index.py and verifier.py. In a Git
+   workspace, a commit before (what the touched files held) and one after, on those paths only, so that one revert
+   undoes it. */
+const META_REL = 'systeme/metadonnees.md';
+const REGLAGES_HORS = ['archives/', 'interface/', 'systeme/gabarits/', 'skills/'];
+const REGLAGES_FORMATS = ['texte', 'date', 'liste', 'type', 'statut', 'domaine', 'projet'];
+const KINDS = { domaines: 'Domaine', types: 'Type', champs: 'Champ', familles: 'Famille' };
+const mots = s => String(s || '').split(',').map(x => x.trim()).filter(x => x && x !== '—');
+const slugDe = (s, sep = '-') => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, sep).replace(new RegExp('^' + sep + '+|' + sep + '+$', 'g'), '');
+/* the rows of a table, as objects; the columns a table of each kind writes back */
+const versObjet = {
+  Domaine: c => ({ nom: unquote(c[0]), desc: c[1] || '' }),
+  Type: c => ({ nom: unquote(c[0]), desc: c[1] || '', statuts: mots(c[2]), fin: mots(c[3]), chemin: unquote(c[4] || '') }),
+  Champ: c => ({ nom: unquote(c[0]), desc: c[1] || '', format: unquote(c[2] || 'texte'), oblig: c[3] || 'aucun' }),
+  Famille: c => ({ id: unquote(c[0]), nom: c[1] || '', desc: c[2] || '' })
+};
+const versLigne = {
+  Domaine: o => [o.nom, o.desc],
+  Type: o => [o.nom, o.desc, o.statuts.join(', ') || '—', o.fin.join(', ') || '—', o.chemin ? '`' + o.chemin + '`' : '—'],
+  Champ: o => [o.nom, o.desc, o.format, o.oblig],
+  Famille: o => [o.id, o.nom, o.desc]
+};
+const cle = (kind, o) => kind === 'Famille' ? o.id : o.nom;
+function lireMeta(root) {
+  const text = readText(path.join(root, META_REL)), lines = text.split('\n');
+  const w = lines.findIndex(l => /^##\s+Ce workspace\s*$/.test(l.replace(/\r$/, '').trim()));
+  const tables = []; let cur = null;
+  lines.forEach((line, i) => {
+    const l = line.replace(/\r$/, '');
+    if (!l.trim().startsWith('|')) { cur = null; return; }
+    const c = cellsOf(l);
+    if (!cur) { cur = { kind: c[0], head: i, rule: -1, rows: [], socle: w < 0 || i < w }; tables.push(cur); return; }
+    if (cur.rule < 0 && isRule(c)) { cur.rule = i; return; }
+    const o = versObjet[cur.kind] ? versObjet[cur.kind](c) : null;
+    if (o && cle(cur.kind, o) && !/^</.test(cle(cur.kind, o))) cur.rows.push({ i, o });
+  });
+  return { text, lines, w, tables, eol: /\r\n/.test(text) ? '\r\n' : '\n' };
+}
+function modeleReglages(m) {
+  const out = { socle: {}, tes: {} };
+  for (const [liste, kind] of Object.entries(KINDS)) {
+    out.socle[liste] = m.tables.filter(t => t.kind === kind && t.socle).flatMap(t => t.rows.map(r => r.o));
+    out.tes[liste] = m.tables.filter(t => t.kind === kind && !t.socle).flatMap(t => t.rows.map(r => r.o));
+  }
+  return out;
+}
+/* the famille of each skill, read in its SKILL.md */
+function famillesDesSkills(root) {
+  const out = [];
+  let dirs = []; try { dirs = fs.readdirSync(path.join(root, 'skills'), { withFileTypes: true }).filter(d => d.isDirectory()); } catch (_) { }
+  for (const d of dirs) { const rel = 'skills/' + d.name + '/SKILL.md', h = skillHeader(readText(path.join(root, rel))); if (h.famille) out.push({ rel, skill: d.name, famille: h.famille }); }
+  return out;
+}
+function lireReglages() {
+  const root = workspaceRoot();
+  if (!root) return { error: 'Aucun workspace défini (config/workspace.json)' };
+  const m = lireMeta(root), mod = modeleReglages(m), usage = { domaines: {}, types: {}, statuts: {}, champs: {}, familles: {} };
+  for (const f of listFiles().files) {
+    if (!f.h || f.g || REGLAGES_HORS.some(h => f.p.startsWith(h))) continue;
+    const h = f.h, inc = (o, k) => { if (k) o[k] = (o[k] || 0) + 1; };
+    inc(usage.domaines, h.domaine); inc(usage.types, h.type); if (h.type && h.statut) inc(usage.statuts, h.type + '|' + h.statut);
+    Object.keys(h).forEach(k => inc(usage.champs, k));
+  }
+  for (const s of famillesDesSkills(root)) { (usage.familles[s.famille] = usage.familles[s.famille] || []).push(s.skill); }
+  return { root, workspace: m.w >= 0, ...mod, usage, formats: REGLAGES_FORMATS };
+}
+
+/* a header, line by line: get, set (added at the end when missing), rename a key, remove a key */
+function enTeteDe(text) {
+  const L = text.split('\n');
+  if ((L[0] || '').replace(/\r$/, '').trim() !== '---') return null;
+  let fin = 1; while (fin < L.length && L[fin].replace(/\r$/, '').trim() !== '---') fin++;
+  if (fin >= L.length) return null;
+  const cr = l => /\r$/.test(l) ? '\r' : '', at = k => { for (let i = 1; i < fin; i++) if (new RegExp('^' + k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\s*:').test(L[i])) return i; return -1; };
+  return {
+    get: k => { const i = at(k); return i < 0 ? undefined : L[i].replace(/\r$/, '').slice(L[i].indexOf(':') + 1).split(' #')[0].trim().replace(/^["']|["']$/g, ''); },
+    set: (k, v) => { const i = at(k); if (i >= 0) L[i] = k + ': ' + v + cr(L[i]); else { L.splice(fin, 0, k + ': ' + v + cr(L[0])); fin++; } },
+    renomme: (k, v) => { const i = at(k); if (i >= 0) L[i] = v + L[i].slice(L[i].indexOf(':')); },
+    retire: k => { const i = at(k); if (i >= 0) { L.splice(i, 1); fin--; } },
+    texte: () => L.join('\n')
+  };
+}
+const ecrireSur = (abs, text) => {
+  const st = fs.statSync(abs), tmp = path.join(path.dirname(abs), '.' + path.basename(abs) + '.' + process.pid + '.tmp');
+  fs.writeFileSync(tmp, text, { mode: st.mode & 0o777 });
+  try { fs.renameSync(tmp, abs); } catch (e) { try { fs.unlinkSync(tmp); } catch (_) { } throw e; }
+};
+/* a free place: archives/routers/x.md, then archives/routers/x-2.md… */
+function placeLibre(root, rel) {
+  const ext = path.posix.extname(rel), base = ext ? rel.slice(0, -ext.length) : rel;
+  for (let n = 1; ; n++) { const r = n === 1 ? rel : base + '-' + n + ext; if (!fs.existsSync(path.join(root, r))) return r; }
+}
+
+let reglagesChain = Promise.resolve();
+function appliquerReglages(body) { const job = reglagesChain.then(() => appliquer(body)); reglagesChain = job.catch(() => { }); return job; }
+async function appliquer({ ops }) {
+  const root = workspaceRoot();
+  if (!root) throw httpError(400, 'Aucun workspace défini (config/workspace.json)');
+  if (!Array.isArray(ops) || !ops.length || ops.length > 100) throw httpError(400, 'Aucun changement à enregistrer');
+  const m = lireMeta(root);
+  if (m.w < 0) throw httpError(400, 'La section « Ce workspace » manque dans systeme/metadonnees.md');
+  const mod = modeleReglages(m), tes = mod.tes, soc = mod.socle;
+  for (const kind of Object.values(KINDS)) if (!m.tables.some(t => t.kind === kind && !t.socle)) throw httpError(400, 'Le tableau « ' + kind + ' » manque dans la section « Ce workspace »');
+  const tousTypes = () => [...soc.types, ...tes.types], typeDe = n => tousTypes().find(t => t.nom === n);
+  const tousStatuts = () => new Set(tousTypes().flatMap(t => t.statuts));
+  const mien = (liste, k) => { const x = tes[liste].find(o => cle(KINDS[liste], o) === k); if (!x) throw httpError(400, soc[liste].some(o => cle(KINDS[liste], o) === k) ? '« ' + k + ' » vient du socle : il ne se modifie pas ici' : '« ' + k + ' » est introuvable'); return x; };
+  const nomLibre = (n, quoi) => {
+    if (!n) throw httpError(400, 'Il manque un nom');
+    if (quoi === 'type' && (typeDe(n) || tousStatuts().has(n))) throw httpError(400, '« ' + n + ' » est déjà un type ou un statut');
+    if (quoi === 'statut' && typeDe(n)) throw httpError(400, '« ' + n + ' » est déjà un type : un mot est soit un type, soit un statut');
+  };
+  const entetes = [], skills = [], domaines = [], resume = [];
+  for (const o of ops) {
+    const k = o && o.k;
+    if (k === 'st+' || k === 'st~' || k === 'st<>' || k === 'stF' || k === 'st-') {
+      const t = mien('types', o.type), s = k === 'st~' ? o.de : o.nom;
+      if (k !== 'st+' && !t.statuts.includes(s)) throw httpError(400, '« ' + s + ' » n’est pas un statut de ' + t.nom);
+      if (k === 'st+') { const n = slugDe(o.nom); nomLibre(n, 'statut'); if (t.statuts.includes(n)) throw httpError(400, t.nom + ' a déjà « ' + n + ' »'); const at = t.statuts.findIndex(x => t.fin.includes(x)); t.statuts.splice(at < 0 ? t.statuts.length : at, 0, n); resume.push(t.nom + ' : + ' + n); }
+      if (k === 'st~') { const n = slugDe(o.vers); nomLibre(n, 'statut'); if (t.statuts.includes(n)) throw httpError(400, t.nom + ' a déjà « ' + n + ' »'); t.statuts = t.statuts.map(x => x === s ? n : x); t.fin = t.fin.map(x => x === s ? n : x); entetes.push(h => { if (h.get('type') === t.nom && h.get('statut') === s) h.set('statut', n); }); resume.push(t.nom + ' : ' + s + ' → ' + n); }
+      if (k === 'st<>') { const i = t.statuts.indexOf(s), j = i + (o.sens < 0 ? -1 : 1); if (j >= 0 && j < t.statuts.length) { t.statuts[i] = t.statuts[j]; t.statuts[j] = s; } }
+      if (k === 'stF') { t.fin = t.fin.includes(s) ? t.fin.filter(x => x !== s) : [...t.fin, s]; }
+      if (k === 'st-') { const v = o.vers || ''; if (v && !t.statuts.includes(v)) throw httpError(400, '« ' + v + ' » n’est pas un statut de ' + t.nom); t.statuts = t.statuts.filter(x => x !== s); t.fin = t.fin.filter(x => x !== s);
+        entetes.push(h => { if (h.get('type') === t.nom && h.get('statut') === s) { if (!v) throw httpError(400, 'Des fichiers ont encore « ' + s + ' » : dis où ils vont'); h.set('statut', v); } }); resume.push(t.nom + ' : − ' + s); }
+    } else if (k === 'ty+') {
+      const n = slugDe(o.nom), st = mots((o.statuts || []).join(',')).map(x => slugDe(x)).filter(Boolean);
+      nomLibre(n, 'type'); if (!st.length) throw httpError(400, 'Un type a au moins un statut');
+      st.forEach(x => nomLibre(x, 'statut'));
+      const fin = (o.fin || []).map(x => slugDe(x)).filter(x => st.includes(x));
+      tes.types.push({ nom: n, desc: String(o.desc || '').trim(), statuts: st, fin: fin.length ? fin : [st[st.length - 1]], chemin: String(o.chemin || 'domaines/<domaine>/<slug>.md').trim() }); resume.push('+ type ' + n);
+    } else if (k === 'ty~') {
+      const t = mien('types', o.de), n = slugDe(o.vers || o.de);
+      if (n !== t.nom) { nomLibre(n, 'type'); const de = t.nom; entetes.push(h => { if (h.get('type') === de) h.set('type', n); }); resume.push('type ' + de + ' → ' + n); }
+      t.nom = n; if (o.desc !== undefined) t.desc = String(o.desc).trim(); if (o.chemin !== undefined) t.chemin = String(o.chemin).trim();
+    } else if (k === 'ty-') {
+      const t = mien('types', o.nom), v = o.vers ? typeDe(o.vers) : null;
+      if (o.vers && (!v || v.nom === t.nom)) throw httpError(400, '« ' + o.vers + ' » n’est pas un autre type');
+      tes.types.splice(tes.types.indexOf(t), 1);
+      entetes.push(h => { if (h.get('type') !== t.nom) return; if (!v) throw httpError(400, 'Des fichiers sont encore des « ' + t.nom + ' » : dis ce qu’ils deviennent'); h.set('type', v.nom); if (!v.statuts.length) h.retire('statut'); else if (!v.statuts.includes(h.get('statut'))) h.set('statut', v.statuts[0]); });
+      resume.push('− type ' + t.nom);
+    } else if (k === 'li+' || k === 'li~' || k === 'li-') {
+      const liste = o.liste, kind = KINDS[liste];
+      if (!['domaines', 'champs', 'familles'].includes(liste)) throw httpError(400, 'Liste inconnue');
+      const nomDe = s => liste === 'champs' ? slugDe(s, '_') : slugDe(s), existe = n => [...soc[liste], ...tes[liste]].some(x => cle(kind, x) === n);
+      if (k === 'li+') {
+        const n = nomDe(o.nom); if (!n) throw httpError(400, 'Il manque un nom'); if (existe(n)) throw httpError(400, '« ' + n + ' » existe déjà');
+        if (liste === 'domaines') { tes.domaines.push({ nom: n, desc: String(o.desc || '').trim() }); domaines.push({ k: '+', nom: n, desc: String(o.desc || '').trim() }); }
+        if (liste === 'champs') { const f = REGLAGES_FORMATS.includes(o.format) ? o.format : 'texte'; tes.champs.push({ nom: n, desc: String(o.desc || '').trim(), format: f, oblig: String(o.oblig || 'aucun').trim() || 'aucun' }); }
+        if (liste === 'familles') tes.familles.push({ id: n, nom: String(o.nom).trim(), desc: String(o.desc || '').trim() });
+        resume.push('+ ' + kind.toLowerCase() + ' ' + n);
+      }
+      if (k === 'li~') {
+        const x = mien(liste, o.de), de = cle(kind, x);
+        if (o.desc !== undefined) x.desc = String(o.desc).trim();
+        if (liste === 'familles') { if (o.vers) x.nom = String(o.vers).trim(); }
+        else {
+          const n = nomDe(o.vers || de);
+          if (n !== de) { if (existe(n)) throw httpError(400, '« ' + n + ' » existe déjà'); x.nom = n;
+            if (liste === 'domaines') { entetes.push(h => { if (h.get('domaine') === de) h.set('domaine', n); }); domaines.push({ k: '~', de, nom: n }); }
+            if (liste === 'champs') entetes.push(h => { if (h.get(de) !== undefined) h.renomme(de, n); });
+            resume.push(kind.toLowerCase() + ' ' + de + ' → ' + n); }
+          if (liste === 'champs') { if (REGLAGES_FORMATS.includes(o.format)) x.format = o.format; if (o.oblig) x.oblig = String(o.oblig).trim(); }
+        }
+      }
+      if (k === 'li-') {
+        const x = mien(liste, o.nom), n = cle(kind, x), v = o.vers || '';
+        tes[liste].splice(tes[liste].indexOf(x), 1);
+        if (liste === 'domaines') { if (v && !existe(v)) throw httpError(400, '« ' + v + ' » n’est pas un domaine'); entetes.push(h => { if (h.get('domaine') !== n) return; if (!v) throw httpError(400, 'Des fichiers sont encore dans « ' + n + ' » : dis où ils vont'); h.set('domaine', v); }); domaines.push({ k: '-', nom: n, vers: v }); }
+        if (liste === 'champs') entetes.push(h => { if (h.get(n) === undefined) return; if (!o.retirer) throw httpError(400, 'Des fichiers ont encore le champ « ' + n + ' »'); h.retire(n); });
+        if (liste === 'familles') { if (v && !existe(v)) throw httpError(400, '« ' + v + ' » n’est pas une famille'); skills.push({ de: n, vers: v }); }
+        resume.push('− ' + kind.toLowerCase() + ' ' + n);
+      }
+    } else throw httpError(400, 'Geste inconnu');
+  }
+
+  /* everything in memory first: a refused gesture writes nothing */
+  const ecrits = new Map();
+  if (entetes.length) for (const f of listFiles().files) {
+    if (!f.h || f.g || REGLAGES_HORS.some(h => f.p.startsWith(h))) continue;
+    const abs = path.join(root, f.p), avant = readText(abs), h = enTeteDe(avant); if (!h) continue;
+    entetes.forEach(fn => fn(h));
+    if (h.texte() !== avant) ecrits.set(f.p, h.texte());
+  }
+  if (skills.length) for (const s of famillesDesSkills(root)) {
+    const abs = path.join(root, s.rel), avant = readText(abs);
+    let txt = avant;
+    for (const r of skills) if (s.famille === r.de) txt = r.vers ? txt.replace(/^(\s*famille:\s*)\S+/m, '$1' + r.vers) : txt.replace(/^\s*famille:\s*\S+\r?\n/m, '');
+    if (txt !== avant) ecrits.set(s.rel, txt);
+  }
+  /* the tables of « Ce workspace », written back in place */
+  const L = m.lines.slice(), eolDe = i => /\r$/.test(L[i] || '') ? '\r' : '';
+  const tablesTes = m.tables.filter(t => !t.socle).sort((a, b) => b.head - a.head);
+  for (const t of tablesTes) {
+    const liste = Object.keys(KINDS).find(l => KINDS[l] === t.kind); if (!liste) continue;
+    const debut = (t.rule >= 0 ? t.rule : t.head) + 1, n = t.rows.length ? t.rows[t.rows.length - 1].i - debut + 1 : 0;
+    const premier = m.tables.find(x => !x.socle && x.kind === t.kind) === t;
+    const lignes = premier ? tes[liste].map(o => '| ' + versLigne[t.kind](o).join(' | ') + ' |' + eolDe(t.head)) : [];
+    L.splice(debut, n, ...lignes);
+  }
+  ecrits.set(META_REL, L.join('\n'));
+
+  /* the paths this touches, for the two commits */
+  const chemins = new Set(ecrits.keys()), apres = new Set(chemins), deplacements = [];
+  for (const d of domaines) {
+    if (d.k === '+') { const r = 'routers/' + d.nom + '.md'; if (!fs.existsSync(path.join(root, r))) deplacements.push({ cree: r, texte: readText(path.join(root, 'systeme', 'gabarits', 'routeur.md')).replace(/<domaine>/g, d.nom).replace(/<Ce que couvre le domaine, en une phrase\.>/, d.desc || 'À écrire.') }); deplacements.push({ dossier: 'domaines/' + d.nom }); apres.add(r); apres.add('domaines/' + d.nom); }
+    if (d.k === '~') { for (const [a, b] of [['domaines/' + d.de, 'domaines/' + d.nom], ['routers/' + d.de + '.md', 'routers/' + d.nom + '.md']]) if (fs.existsSync(path.join(root, a))) { if (fs.existsSync(path.join(root, b))) throw httpError(400, b + ' existe déjà'); deplacements.push({ de: a, vers: b }); chemins.add(a); apres.add(a); apres.add(b); } }
+    if (d.k === '-') { const pairs = [['domaines/' + d.nom, d.vers ? placeLibre(root, 'domaines/' + d.vers + '/' + d.nom) : placeLibre(root, 'archives/domaines/' + d.nom)], ['routers/' + d.nom + '.md', placeLibre(root, 'archives/routers/' + d.nom + '.md')]];
+      for (const [a, b] of pairs) if (fs.existsSync(path.join(root, a))) { deplacements.push({ de: a, vers: b }); chemins.add(a); apres.add(a); apres.add(b); } }
+  }
+  const git = (await gitRun(root, ['rev-parse', '--is-inside-work-tree'])) !== null;
+  const commit = async (liste, message) => {
+    const connus = [];
+    for (const p of liste) if (fs.existsSync(path.join(root, p)) || ((await gitRun(root, ['ls-files', '--', p])) || '').trim()) connus.push(p);
+    if (!connus.length) return null;
+    await gitRun(root, ['add', '-A', '--', ...connus]);
+    if ((await gitRun(root, ['diff', '--cached', '--quiet', '--', ...connus])) !== null) return null;
+    const r = await gitRun(root, ['commit', '-q', '-m', message, '--', ...connus], 20000);
+    return r === null ? null : ((await gitRun(root, ['rev-parse', '--short', 'HEAD'])) || '').trim();
+  };
+  const commits = [];
+  if (git) { const c = await commit([...chemins], 'Réglages : état avant les changements'); if (c) commits.push(c); }
+
+  /* now write: the files, then the folders */
+  for (const [rel, txt] of ecrits) ecrireSur(path.join(root, rel), txt);
+  for (const d of deplacements) {
+    if (d.cree) { fs.mkdirSync(path.dirname(path.join(root, d.cree)), { recursive: true }); fs.writeFileSync(path.join(root, d.cree), d.texte); }
+    else if (d.dossier) fs.mkdirSync(path.join(root, d.dossier), { recursive: true });
+    else { fs.mkdirSync(path.dirname(path.join(root, d.vers)), { recursive: true }); fs.renameSync(path.join(root, d.de), path.join(root, d.vers)); }
+  }
+  const index = await runIndex(root);
+  const verif = await new Promise(ok => execFile(process.platform === 'win32' ? 'python' : 'python3', [path.join(root, 'systeme', 'scripts', 'verifier.py')], { cwd: root, timeout: 60000, windowsHide: true }, (err, out) => ok(String(out || '').trim().split('\n').filter(Boolean).slice(-6))));
+  if (git) { const c = await commit([...apres, 'AGENTS.md', 'vues', ...[...apres].filter(p => p.startsWith('domaines/')).map(p => p.split('/').slice(0, 2).join('/') + '/_index.md')], 'Réglages : ' + resume.slice(0, 6).join(' ; ') + (resume.length > 6 ? ' ; …' : '')); if (c) commits.push(c); }
+  return { ok: true, fichiers: [...ecrits.keys()].filter(p => p !== META_REL).length, deplacements: deplacements.filter(d => d.de).map(d => d.de + ' → ' + d.vers), crees: deplacements.filter(d => d.cree).map(d => d.cree), index, verifier: verif, commits };
+}
+
 /* ---------------------------- ORBITE: the 3D home (orbite/) ----------------------------
    AIOS: the home page shows the workspace by its indexes, one level at a time. The map: AGENTS.md, the domains of
    systeme/metadonnees.md and the top folders that keep an _index.md, with the skills and the connectors further out.
@@ -1615,7 +1855,7 @@ function needsFirstRefresh() {
 const MIME = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg',
   '.webp': 'image/webp', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.ico': 'image/x-icon', '.gif': 'image/gif', '.mp4': 'video/mp4', '.txt': 'text/plain' };
 const PUBLIC_FILES = new Set(['index.html', 'os.html', 'copy.css', 'copy.js', 'shell-extras.js', 'view-transitions.js', 'widgets.html']);
-const PUBLIC_DIRS = ['assets', 'brain', 'views', 'fichiers', 'bibliotheque', 'projets', 'competences', 'connecteurs', 'outbox', 'orbite', 'disque'];
+const PUBLIC_DIRS = ['assets', 'brain', 'views', 'fichiers', 'bibliotheque', 'projets', 'competences', 'connecteurs', 'outbox', 'reglages', 'orbite', 'disque'];
 function publicFile(p2) {
   let rel; try { rel = decodeURIComponent(p2).replace(/^\/+/, ''); } catch (_) { return null; }
   if (!rel || rel.includes('\0') || rel.includes('\\')) return null;
@@ -1691,6 +1931,7 @@ const server = http.createServer(async (req, res) => {
     /* ---- the connectors page ---- */
     if (p2 === '/local/connecteurs' && !post) { try { return sendJson(res, await listConnecteurs()); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); } }
     /* ---- the outbox page ---- */
+    if (p2 === '/local/reglages' && !post) { try { return sendJson(res, lireReglages()); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); } }
     if (p2 === '/local/outbox' && !post) { try { return sendJson(res, await listOutbox()); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); } }
     /* ---- the 3D home ---- */
     if (p2 === '/local/orbite' && !post) { try { return sendJson(res, orbiteNiveau(u.searchParams.get('chemin') || '', u.searchParams.get('fichiers') === '1')); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); } }
@@ -1733,6 +1974,10 @@ const server = http.createServer(async (req, res) => {
     if (post && p2 === '/local/files/save') {
       let q; try { q = JSON.parse(await readBody(req) || '{}'); } catch (e) { return sendJson(res, { error: e.status ? e.message : 'le corps de la requête n’est pas du JSON' }, e.status || 400); }
       try { const r = await saveFile(q); return sendJson(res, r, r.conflict ? 409 : 200); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); }
+    }
+    if (post && p2 === '/local/reglages/appliquer') {
+      let q; try { q = JSON.parse(await readBody(req) || '{}'); } catch (e) { return sendJson(res, { error: e.status ? e.message : 'le corps de la requête n’est pas du JSON' }, e.status || 400); }
+      try { return sendJson(res, await appliquerReglages(q)); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); }
     }
     if (post && p2 === '/local/outbox/valider') {
       let q; try { q = JSON.parse(await readBody(req) || '{}'); } catch (e) { return sendJson(res, { error: e.status ? e.message : 'le corps de la requête n’est pas du JSON' }, e.status || 400); }
@@ -1795,6 +2040,7 @@ const server = http.createServer(async (req, res) => {
     if (p2 === '/disque') { res.writeHead(302, { Location: '/disque/' }); return res.end(); }
     if (p2 === '/disque/') return serveFile(req, res, path.join(KIT, 'disque', 'index.html'));
     if (p2 === '/outbox/') return serveFile(req, res, path.join(KIT, 'outbox', 'index.html'));
+    if (p2 === '/reglages/') return serveFile(req, res, path.join(KIT, 'reglages', 'index.html'));
     if (p2 === '/bibliotheque/') return serveFile(req, res, path.join(KIT, 'bibliotheque', 'index.html'));
     if (p2.startsWith('/artifacts/')) {
       let rel; try { rel = decodeURIComponent(p2.slice('/artifacts/'.length)); } catch (_) { rel = null; }

@@ -386,7 +386,7 @@ C'est le principe 8 (« dans le doute, l'IA demande ») appliqué à un widget. 
 | Je veux régler… | Où | Ce qui suit tout seul |
 |---|---|---|
 | Qui je suis, mon agent, le ton, mes objectifs de l'année | `AGENTS.md` (sections Qui et Objectifs) | tous les agents, à chaque échange |
-| Mes domaines, mes types, leurs statuts, leur place, les champs d'en-tête | `systeme/metadonnees.md` | la carte d'`AGENTS.md`, l'interface, le vérificateur, le rangement |
+| Mes domaines, mes types, leurs statuts, leur place, les champs d'en-tête | `systeme/metadonnees.md`, ou l'onglet Réglages de l'interface | la carte d'`AGENTS.md`, l'interface, le vérificateur, le rangement |
 | Mes projets | un fichier par projet dans `projets/` | la liste des projets actifs d'`AGENTS.md` |
 | Mes routines (horaire, type, plafond) | `systeme/routines.md` | l'interface (vue Routines) |
 | Le modèle d'IA de chaque skill | `systeme/modeles.md` | `lancer.py` |

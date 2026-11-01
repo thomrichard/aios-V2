@@ -1,6 +1,6 @@
 # Métadonnées
 
-Le seul endroit où se règlent les domaines, les champs d'en-tête, les types et leurs statuts, et les familles de skills. On change une ligne ici, puis `systeme/scripts/index.py` répercute : la carte des domaines d'`AGENTS.md` (que lisent tous les agents), les départements de l'interface. On n'écrit jamais ces copies à la main.
+Le seul endroit où se règlent les domaines, les champs d'en-tête, les types et leurs statuts, et les familles de skills. On change une ligne ici, ou dans l'onglet Réglages de l'interface, puis `systeme/scripts/index.py` répercute : la carte des domaines d'`AGENTS.md` (que lisent tous les agents), les départements de l'interface. On n'écrit jamais ces copies à la main.
 
 Avant d'écrire un en-tête, lis ce fichier. `systeme/scripts/verifier.py` signale ce qui s'en écarte : un champ inconnu ou manquant, un type ou un statut hors liste, un domaine inconnu ou sans routeur, une date mal écrite, une carte pas à jour.
 
