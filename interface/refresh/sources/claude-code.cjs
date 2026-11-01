@@ -316,4 +316,4 @@ function sessionWrites(days = 7) {
   return [...bySession.values()].filter(g => g.writes.length).sort((a, b) => a.debut - b.debut);
 }
 
-module.exports = { scheduledTasks, sessionUsage, sessionWrites, taskRoutineId };
+module.exports = { scheduledTasks, sessionUsage, sessionWrites, taskRoutineId, cost };

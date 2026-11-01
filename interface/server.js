@@ -39,6 +39,8 @@
    Outbox page (the Outbox tab)
      /local/outbox           the files that wait for your validation (statut: a-valider), with the file each fiche describes (GET)
      /local/outbox/valider   validates files: their type's end status and maj today in the header (POST, local pages only)
+     /local/routines         the routines of systeme/routines.md, their levels and models, and their passages from journal/routines.jsonl (GET)
+     /local/routines/regler  writes a routine's time, state or ceiling in systeme/routines.md, its level in systeme/modeles.md (POST, local pages only)
      /local/reglages         the tables of systeme/metadonnees.md, the socle's and this workspace's, and how much each is used (GET)
      /local/reglages/appliquer  applies the settings page's gestures: tables, headers, skills, domain folders (POST, local pages only)
    3D home (the Orbes 3D tab, GET, read only)
@@ -84,6 +86,7 @@ const routinesLib = require('./refresh/lib/routines.cjs');
 const routineSources = require('./refresh/lib/sources.cjs');
 const microApps = require('./refresh/lib/apps.cjs');
 const scan = require('./engine/scan.js');
+const { cost: coutClaude } = require('./refresh/sources/claude-code.cjs');
 
 /* ---------------------------- security helpers ----------------------------
    Every request must name this computer in its Host header, which stops DNS-rebinding pages.
@@ -1601,6 +1604,93 @@ async function appliquer({ ops }) {
   return { ok: true, fichiers: [...ecrits.keys()].filter(p => p !== META_REL).length, deplacements: deplacements.filter(d => d.de).map(d => d.de + ' → ' + d.vers), crees: deplacements.filter(d => d.cree).map(d => d.cree), index, verifier: verif, commits };
 }
 
+/* ---------------------------- ROUTINES: the routines page (routines/) ----------------------------
+   AIOS: the Routines tab reads systeme/routines.md (what runs, when, its type, its ceiling, its state),
+   systeme/modeles.md (the level of each skill, the model of each level) and journal/routines.jsonl, the line
+   systeme/scripts/lancer.py writes at each passage (start, end, exit code, agent, model, the end of its output and,
+   for claude, its tokens and cost at API rates). The page draws the health and the planning; the cron is expanded
+   there. A change of time, state, ceiling or level is written back in those two files (POST /local/routines/regler). */
+const ROUTINES_REL = 'systeme/routines.md', MODELES_REL = 'systeme/modeles.md', PASSAGES_REL = 'journal/routines.jsonl';
+const ROUTINE_ETATS = ['à construire', 'en place', 'en pause', 'à la demande'];
+/* the same key as lancer.py: the skill, or the routine's name in lowercase, without accents, with dashes */
+const cleRoutine = (r) => r.skill || String(r.nom).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+/* one value of .env, read as lancer.py reads it: only that line is used */
+function envValeur(root, cle) { const m = new RegExp('^[ \\t]*' + cle + '[ \\t]*=(.*)$', 'm').exec(readText(path.join(root, '.env'))); return m ? m[1].trim().replace(/^["']|["']$/g, '') : ''; }
+function lireModeles(root) {
+  const t = readText(path.join(root, MODELES_REL)), niveaux = {}, parNiveau = {};
+  for (const r of tablesOf(t, 'Skill')) if (r.Skill) niveaux[unquote(r.Skill)] = unquote(r.Niveau || 'moyen');
+  for (const r of tablesOf(t, 'Niveau')) { const n = unquote(r.Niveau || ''); if (n) parNiveau[n] = Object.fromEntries(Object.entries(r).filter(([k]) => k !== 'Niveau').map(([k, v]) => [k, /^à remplir/.test(v) ? '' : unquote(v)])); }
+  return { niveaux, parNiveau };
+}
+function lireRoutines() {
+  const root = workspaceRoot();
+  if (!root) return { error: 'Aucun workspace défini (config/workspace.json)' };
+  const agent = envValeur(root, 'AGENT') || 'claude', M = lireModeles(root);
+  const skills = new Set(); try { for (const d of fs.readdirSync(path.join(root, 'skills'), { withFileTypes: true })) if (d.isDirectory()) skills.add(d.name); } catch (_) { }
+  const routines = tablesOf(readText(path.join(root, ROUTINES_REL)), 'Routine').filter((r) => r.Routine && !/^</.test(r.Routine)).map((r) => {
+    const skill = unquote(r.Skill || '').replace(/^—$|^-$/, ''), commande = unquote(r.Commande || '').replace(/^—$|^-$/, ''), plafond = r['Plafond par semaine'] || '';
+    const o = { nom: r.Routine, skill, commande, directe: !skill && !!commande, quand: r.Quand || '', cron: unquote(r.Cron || ''), type: r.Type || '', plafond, etat: unquote(r['État'] || ''),
+      budget: (/(\d+(?:[.,]\d+)?)\s*\$/.exec(plafond) || [])[1] ? +String(/(\d+(?:[.,]\d+)?)\s*\$/.exec(plafond)[1]).replace(',', '.') : null };
+    o.cle = cleRoutine(o);
+    if (skill) {
+      const texte = readText(path.join(root, 'skills', skill, 'SKILL.md')), h = skillHeader(texte), corps = texte.replace(/^---[\s\S]*?\n---/, '');
+      o.but = splitDescription(h.description || '').resume.replace(/\s+/g, ' ').trim();
+      o.appelle = [...new Set([...corps.matchAll(/`([a-z0-9-]+)`/g)].map((m) => m[1]).filter((n) => n !== skill && skills.has(n)))];
+      o.niveau = M.niveaux[skill] || 'moyen'; o.modele = (M.parNiveau[o.niveau] || {})[agent] || '';
+      o.existe = skills.has(skill);
+    }
+    return o;
+  });
+  /* the passages of the last 35 days, newest last */
+  const depuis = Date.now() - 35 * 864e5, passages = [];
+  for (const l of readText(path.join(root, PASSAGES_REL)).split('\n')) { if (!l.trim()) continue; try { const p = JSON.parse(l); if (Date.parse(p.debut) >= depuis) passages.push(p); } catch (_) { } }
+  /* the price of a million input tokens for each model the levels name (Claude's API rates; 0 when unknown), so the page
+     can say what a passage would cost on another level, if its tokens stay the same */
+  const prix = {}; for (const l of Object.values(M.parNiveau)) for (const m of Object.values(l)) if (m && !(m in prix)) prix[m] = coutClaude(m, { input_tokens: 1e6 });
+  return { root, agent, routines, passages, parNiveau: M.parNiveau, prix, etats: ROUTINE_ETATS, maintenant: new Date().toISOString() };
+}
+/* a cell of a Markdown table row, rewritten in place: the row is found by its key, the column by its title */
+function reecrireLigne(text, premiere, trouve, change) {
+  const L = text.split('\n'); let cols = null, regle = false, derniere = -1;
+  for (let i = 0; i < L.length; i++) {
+    const l = L[i].replace(/\r$/, '');
+    if (!l.trim().startsWith('|')) { if (cols && regle) break; cols = null; regle = false; continue; }
+    const c = cellsOf(l);
+    if (!cols) { if (c[0] === premiere) cols = c; continue; }
+    if (!regle) { regle = true; continue; }
+    derniere = i;
+    const row = Object.fromEntries(cols.map((k, j) => [k, c[j] || '']));
+    if (trouve(row)) { change(row); L[i] = '| ' + cols.map((k) => row[k]).join(' | ') + ' |' + (/\r$/.test(L[i]) ? '\r' : ''); return { texte: L.join('\n'), fait: true }; }
+  }
+  return { texte: text, fait: false, cols, derniere, L };
+}
+function reglerRoutine({ cle, cron, etat, plafond, niveau }) {
+  const root = workspaceRoot();
+  if (!root) throw httpError(400, 'Aucun workspace défini (config/workspace.json)');
+  const r = lireRoutines().routines.find((x) => x.cle === cle);
+  if (!r) throw httpError(404, 'Routine introuvable dans systeme/routines.md');
+  if (cron !== undefined && !/^\s*([0-9*/,-]+\s+){4}[0-9*/,-]+\s*$/.test(cron)) throw httpError(400, 'Un horaire cron a cinq champs : minute, heure, jour, mois, jour de la semaine');
+  if (etat !== undefined && !ROUTINE_ETATS.includes(etat)) throw httpError(400, 'État inconnu');
+  if (plafond !== undefined && /[|\n]/.test(plafond)) throw httpError(400, 'Pas de « | » dans un plafond : il casserait le tableau');
+  if (niveau !== undefined && (!r.skill || !['petit', 'moyen', 'grand'].includes(niveau))) throw httpError(400, 'Le niveau va de petit à grand, et seulement pour une routine qui lance une skill');
+  if (cron !== undefined || etat !== undefined || plafond !== undefined) {
+    const f = path.join(root, ROUTINES_REL), res = reecrireLigne(readText(f), 'Routine', (row) => row.Routine === r.nom, (row) => {
+      if (cron !== undefined) row.Cron = '`' + cron.trim().replace(/\s+/g, ' ') + '`';
+      if (etat !== undefined) row['État'] = etat;
+      if (plafond !== undefined) row['Plafond par semaine'] = plafond.trim() || '—';
+    });
+    if (!res.fait) throw httpError(400, 'La ligne de la routine est introuvable');
+    ecrireSur(f, res.texte);
+  }
+  if (niveau !== undefined) {
+    const f = path.join(root, MODELES_REL), res = reecrireLigne(readText(f), 'Skill', (row) => unquote(row.Skill) === r.skill, (row) => { row.Niveau = niveau; });
+    if (res.fait) ecrireSur(f, res.texte);
+    else if (res.cols && res.derniere >= 0) { res.L.splice(res.derniere + 1, 0, '| ' + res.cols.map((k) => k === 'Skill' ? r.skill : k === 'Niveau' ? niveau : 'moyen').join(' | ') + ' |'); ecrireSur(f, res.L.join('\n')); }
+    else throw httpError(400, 'Le tableau « Niveau de chaque skill » est introuvable dans systeme/modeles.md');
+  }
+  return lireRoutines();
+}
+
 /* ---------------------------- ORBITE: the 3D home (orbite/) ----------------------------
    AIOS: the home page shows the workspace by its indexes, one level at a time. The map: AGENTS.md, the domains of
    systeme/metadonnees.md and the top folders that keep an _index.md, with the skills and the connectors further out.
@@ -1855,7 +1945,7 @@ function needsFirstRefresh() {
 const MIME = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg',
   '.webp': 'image/webp', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.ico': 'image/x-icon', '.gif': 'image/gif', '.mp4': 'video/mp4', '.txt': 'text/plain' };
 const PUBLIC_FILES = new Set(['index.html', 'os.html', 'copy.css', 'copy.js', 'shell-extras.js', 'view-transitions.js', 'widgets.html']);
-const PUBLIC_DIRS = ['assets', 'brain', 'views', 'fichiers', 'bibliotheque', 'projets', 'competences', 'connecteurs', 'outbox', 'reglages', 'orbite', 'disque'];
+const PUBLIC_DIRS = ['assets', 'brain', 'views', 'fichiers', 'bibliotheque', 'projets', 'competences', 'connecteurs', 'outbox', 'reglages', 'routines', 'orbite', 'disque'];
 function publicFile(p2) {
   let rel; try { rel = decodeURIComponent(p2).replace(/^\/+/, ''); } catch (_) { return null; }
   if (!rel || rel.includes('\0') || rel.includes('\\')) return null;
@@ -1931,6 +2021,7 @@ const server = http.createServer(async (req, res) => {
     /* ---- the connectors page ---- */
     if (p2 === '/local/connecteurs' && !post) { try { return sendJson(res, await listConnecteurs()); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); } }
     /* ---- the outbox page ---- */
+    if (p2 === '/local/routines' && !post) { try { return sendJson(res, lireRoutines()); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); } }
     if (p2 === '/local/reglages' && !post) { try { return sendJson(res, lireReglages()); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); } }
     if (p2 === '/local/outbox' && !post) { try { return sendJson(res, await listOutbox()); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); } }
     /* ---- the 3D home ---- */
@@ -1974,6 +2065,10 @@ const server = http.createServer(async (req, res) => {
     if (post && p2 === '/local/files/save') {
       let q; try { q = JSON.parse(await readBody(req) || '{}'); } catch (e) { return sendJson(res, { error: e.status ? e.message : 'le corps de la requête n’est pas du JSON' }, e.status || 400); }
       try { const r = await saveFile(q); return sendJson(res, r, r.conflict ? 409 : 200); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); }
+    }
+    if (post && p2 === '/local/routines/regler') {
+      let q; try { q = JSON.parse(await readBody(req) || '{}'); } catch (e) { return sendJson(res, { error: e.status ? e.message : 'le corps de la requête n’est pas du JSON' }, e.status || 400); }
+      try { return sendJson(res, reglerRoutine(q)); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); }
     }
     if (post && p2 === '/local/reglages/appliquer') {
       let q; try { q = JSON.parse(await readBody(req) || '{}'); } catch (e) { return sendJson(res, { error: e.status ? e.message : 'le corps de la requête n’est pas du JSON' }, e.status || 400); }
@@ -2041,6 +2136,7 @@ const server = http.createServer(async (req, res) => {
     if (p2 === '/disque/') return serveFile(req, res, path.join(KIT, 'disque', 'index.html'));
     if (p2 === '/outbox/') return serveFile(req, res, path.join(KIT, 'outbox', 'index.html'));
     if (p2 === '/reglages/') return serveFile(req, res, path.join(KIT, 'reglages', 'index.html'));
+    if (p2 === '/routines/') return serveFile(req, res, path.join(KIT, 'routines', 'index.html'));
     if (p2 === '/bibliotheque/') return serveFile(req, res, path.join(KIT, 'bibliotheque', 'index.html'));
     if (p2.startsWith('/artifacts/')) {
       let rel; try { rel = decodeURIComponent(p2.slice('/artifacts/'.length)); } catch (_) { rel = null; }

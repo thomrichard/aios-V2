@@ -47,7 +47,7 @@ body[data-view=skills] #zoom,body[data-view=connecteurs] #zoom{display:none!impo
 /* AIOS: the Fichiers tab, the file editor (fichiers/). It has its own search box, and nothing to zoom. */
 /* AIOS: the Bibliothèque tab, the asset library (bibliotheque/), the same way. */
 /* AIOS: the Projets tab, the project page (projets/), the Skills tab, the skills page (competences/), the Connecteurs tab, the connectors page (connecteurs/), and the Outbox tab, the outbox page (outbox/), the same way. */
-#files,#assets,#projects,#competences,#connecteurs,#outbox,#reglages,#orbite,#disque{z-index:3;display:none;top:var(--chrome-bottom,64px);height:calc(100% - var(--chrome-bottom,64px))}
+#files,#assets,#projects,#competences,#connecteurs,#outbox,#reglages,#routines,#orbite,#disque{z-index:3;display:none;top:var(--chrome-bottom,64px);height:calc(100% - var(--chrome-bottom,64px))}
 body[data-view=files] #file-search,body[data-view=files] #zoom,body[data-view=assets] #file-search,body[data-view=assets] #zoom,body[data-view=projects] #file-search,body[data-view=projects] #zoom,body[data-view=skills] #file-search,body[data-view=connecteurs] #file-search,body[data-view=outbox] #file-search,body[data-view=outbox] #zoom{display:none!important}
 
 /* AIOS: ten tabs no longer fit on one line between 761 and 1100 px: they wrap instead of leaving the screen. */
@@ -57,4 +57,4 @@ body.accueil-orbite[data-view=orbs] #zoom{display:none!important}
 body[data-view=disque] #zoom{display:none!important}
 /* AIOS: with the 3D home, no top band: the pages fill the window, each with its left menu */
 body.accueil-orbite #controls,body.accueil-orbite #zoom{display:none!important}
-body.accueil-orbite #files,body.accueil-orbite #assets,body.accueil-orbite #projects,body.accueil-orbite #competences,body.accueil-orbite #connecteurs,body.accueil-orbite #outbox,body.accueil-orbite #reglages,body.accueil-orbite #orbite,body.accueil-orbite #disque{top:0;height:100%}
+body.accueil-orbite #files,body.accueil-orbite #assets,body.accueil-orbite #projects,body.accueil-orbite #competences,body.accueil-orbite #connecteurs,body.accueil-orbite #outbox,body.accueil-orbite #reglages,body.accueil-orbite #routines,body.accueil-orbite #orbite,body.accueil-orbite #disque{top:0;height:100%}

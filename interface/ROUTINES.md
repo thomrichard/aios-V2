@@ -2,6 +2,8 @@
 
 Les routines s'affichent à trois endroits : le widget ROUTINES de la page d'accueil (les déclenchements du jour, avec un compte à rebours jusqu'au prochain), l'onglet Routines du second cerveau (une semaine du lundi au dimanche, avec chaque déclenchement), et le cercle doré des cartes 3D et 2D.
 
+Dans l'AIOS, l'onglet Routines du menu est une autre page (`routines/`, voir `MODIFS.md`, point 31) : elle lit `systeme/routines.md`, `systeme/modeles.md` et `journal/routines.jsonl`, pas ce fichier. Elle montre la santé et le coût de chaque routine (les passages notés par `systeme/scripts/lancer.py`, avec les tokens et le coût de claude) et leur planning (jour, semaine, mois). Ce qui suit vaut pour le widget, la carte et l'accueil du kit.
+
 Elles viennent de deux types de sources.
 
 ## 1. Le planificateur de ton agent (lu pour toi quand un lecteur existe)
