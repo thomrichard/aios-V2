@@ -16,7 +16,7 @@ Un Mac qui dort ne lance rien : la routine part au réveil. `systeme/scripts/int
 | Sauvegarde de nuit | — | `git add -A; git commit -q -m "Sauvegarde de nuit"; git push -q prive main` | chaque nuit, 3 h | `0 3 * * *` | directe, passive : envoie le travail du jour vers prive | sans IA | à construire |
 | Audit | `audit` | — | le 1er du mois, 1 h | `0 1 1 * *` | passive | à fixer | à construire |
 
-État : `à construire`, `en place` ou `à la demande`. La colonne Cron sert au planificateur et à l'interface (`interface/snapshots/routines.json`, générée).
+État : `à construire`, `en place`, `en pause` (lancer.py ne lance rien) ou `à la demande`. Chaque passage laisse une ligne dans `journal/routines.jsonl` (début, fin, code, agent, modèle, fin de la sortie ; pour claude, tokens et coût au tarif de l'API) : l'onglet Routines de l'interface la lit. La colonne Cron sert au planificateur et à l'interface (`interface/snapshots/routines.json`, générée).
 
 Les routines passives tournent à 1 h, pour que le point du jour de 2 h reprenne leurs résultats.
 Une routine directe peut laisser une ligne dans `journal/log.md` : `- AAAA-MM-JJ · routine <routine> | <résumé>`. Le point du jour la reprend.
