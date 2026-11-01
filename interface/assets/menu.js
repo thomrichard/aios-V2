@@ -1,5 +1,5 @@
 /* SM4RT menu: the left menu shared by every page of the socle (the home and its Orbes 3D and Disque, Projets, Skills,
-   Connecteurs, Fichiers, Bibliothèque, Outbox). A page asks for it with <body data-page="projets"> and this script,
+   Connecteurs, Fichiers, Bibliothèque, Outbox, and Réglages at the bottom). A page asks for it with <body data-page="projets"> and this script,
    nothing else. It folds to a narrow rail (kept in this browser, the same for every page), marks the page you are on,
    shows how many files wait for your validation in the Outbox, and refreshes the data (routines, skills, connectors, usage). In the shell's
    frames, a click asks the shell to change tab (message sm4rt-menu); on its own, a page links to the others. */
@@ -33,7 +33,7 @@
       return `<a class="rail-btn menu-lien" data-menu="${i[0]}" href="${i[2] || '/'}"${on ? ' aria-current="page"' : ''} title="${esc(i[1])}">${svg(i[3])}<span class="rail-libelle menu-libelle">${esc(i[1])}</span>${i[0] === 'outbox' ? '<span class="menu-badge" id="menu-badge" hidden></span>' : ''}</a>`;
     }).join('')}</div>
     <div class="rail-bas menu-bas">
-      <button type="button" class="rail-btn" id="menu-reglages" aria-expanded="false" title="Apparence : nuit ou jour, et la couleur">${svg('<circle cx="10" cy="10" r="2.6"/><path d="M10 2.5v2M10 15.5v2M2.5 10h2M15.5 10h2M4.7 4.7l1.4 1.4M13.9 13.9l1.4 1.4M4.7 15.3l1.4-1.4M13.9 6.1l1.4-1.4"/>')}<span class="rail-libelle menu-libelle">Réglages</span></button>
+      <a class="rail-btn menu-lien" data-menu="reglages" id="menu-reglages" href="/reglages/"${page === 'reglages' ? ' aria-current="page"' : ''} title="Réglages : affichage, domaines, types et statuts, champs, familles de skills">${svg('<circle cx="10" cy="10" r="2.6"/><path d="M10 2.5v2M10 15.5v2M2.5 10h2M15.5 10h2M4.7 4.7l1.4 1.4M13.9 13.9l1.4 1.4M4.7 15.3l1.4-1.4M13.9 6.1l1.4-1.4"/>')}<span class="rail-libelle menu-libelle">Réglages</span></a>
       <button type="button" class="rail-btn" id="menu-actualiser" title="Actualiser les données : routines, skills, connecteurs et usage (sans appel au modèle)">${svg('<path d="M16 10a6 6 0 1 1-1.8-4.3"/><path d="M16 3.5v3.2h-3.2"/>')}<span class="rail-libelle menu-libelle" id="menu-actualiser-texte">Actualiser</span></button>
       <button type="button" class="rail-btn" id="menu-replier" aria-expanded="true" title="Replier le menu">${svg('<path id="menu-ico" d="M11 5 6 10l5 5M15 5l-5 5 5 5"/>')}<span class="rail-libelle menu-libelle" id="menu-replier-texte">Replier</span></button>
     </div>`;
@@ -59,18 +59,6 @@
     if (a.getAttribute('aria-current') === 'page') { e.preventDefault(); return; }
     if (embedded) { e.preventDefault(); parent.postMessage({ type: 'sm4rt-menu', vue: a.dataset.menu }, '*'); }
   });
-
-  /* Réglages opens the page's own Apparence panel (a page without one has no Réglages); its pointerdown must not close
-     the panel just before the click reopens it */
-  const reglages = document.getElementById('menu-reglages');
-  const sansReglages = () => { reglages.hidden = !document.getElementById('btn-reglages'); };
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', sansReglages); else sansReglages();
-  reglages.addEventListener('pointerdown', e => e.stopPropagation());
-  reglages.addEventListener('click', () => {
-    const b = document.getElementById('btn-reglages'); if (b) b.click();
-    const p = document.getElementById('reglages'); reglages.setAttribute('aria-expanded', !!p && !p.hidden);
-  });
-  addEventListener('pointerdown', () => reglages.setAttribute('aria-expanded', 'false'));
 
   /* Actualiser: in the shell, the shell rebuilds the data and reloads its frames; on its own, the page reloads */
   const actualiser = document.getElementById('menu-actualiser');
