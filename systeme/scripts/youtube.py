@@ -10,7 +10,10 @@ Usage : python3 systeme/scripts/youtube.py connecter --client <client_secret.jso
           une fiche par vidéo longue publique : infos, stats (7 et 30 premiers jours, total), liens entre
           vidéos, description, transcription par chapitre. Les transcriptions viennent de yt-dlp, gardées
           dans T (par défaut un dossier temporaire). Sans --maj, une fiche existante n'est pas réécrite.
-          Avec --maj, elle garde sa transcription et sa section « ## Notes » écrite à la main.
+          Avec --maj, elle garde sa transcription, les champs de son en-tête et ses sections écrites à la main.
+          Une fiche de type video pas encore publiée (de l'idée au montage) devient la fiche de la vidéo,
+          sans --maj, si elle a la ligne « - Vidéo : <lien> » ou si son titre « # » est celui de la vidéo :
+          elle passe en publie et garde tout ce qu'elle avait.
 """
 import argparse
 import base64
@@ -317,6 +320,32 @@ def sections(chemin):
     return trouvees
 
 
+def fiche_existante(chemin):
+    """Ce qu'une fiche existante garde quand le script la réécrit : son en-tête [(champ, ligne)], son titre,
+    et le texte entre son titre et sa première section."""
+    entete, titre, intro = [], "", []
+    if not os.path.exists(chemin):
+        return entete, titre, intro
+    lignes = open(chemin, encoding="utf-8").read().splitlines()
+    corps = lignes
+    if lignes and lignes[0] == "---" and "---" in lignes[1:]:
+        fin = lignes.index("---", 1)
+        entete = [(l.split(":", 1)[0].strip(), l) for l in lignes[1:fin] if ":" in l]
+        corps = lignes[fin + 1:]
+    for ligne in corps:
+        if ligne.startswith("## "):
+            break
+        if ligne.startswith("# ") and not titre:
+            titre = ligne[2:].strip()
+        elif titre:
+            intro.append(ligne)
+    while intro and not intro[0].strip():
+        intro.pop(0)
+    while intro and not intro[-1].strip():
+        intro.pop()
+    return entete, titre, intro
+
+
 def horodatage(s):
     s = int(s)
     return f"{s // 3600}:{s % 3600 // 60:02d}:{s % 60:02d}" if s >= 3600 else f"{s // 60}:{s % 60:02d}"
@@ -372,18 +401,37 @@ def fiches(dossier, dossier_transcriptions, maj, essai):
     dernier_jour = max((datetime.date.fromisoformat(l["day"]) for l in jours), default=aujourd_hui - datetime.timedelta(days=3))
 
     # Noms des fiches : celles qui existent déjà gardent le leur, et leur date de naissance (cree).
-    # Le dossier n'est pas réservé aux vidéos : seule une fiche de type video compte.
-    existantes, nees = {}, {}
+    # Le dossier n'est pas réservé aux vidéos : seule une fiche de type video compte. Une fiche se reconnaît
+    # à sa ligne « - Vidéo : <lien> » ; une fiche pas encore publiée, aussi à son titre « # ».
+    existantes, nees, a_completer, par_titre = {}, {}, set(), {}
     if os.path.isdir(dossier):
         for nom in os.listdir(dossier):
             if nom.endswith(".md") and not nom.startswith("_"):
                 texte = open(os.path.join(dossier, nom), encoding="utf-8").read()
-                m = re.search(r"watch\?v=([A-Za-z0-9_-]{11})", texte)
-                if m and re.search(r"^type: video$", texte, re.M):
-                    existantes[m.group(1)] = nom
-                    c = re.search(r"^cree: (\d{4}-\d{2}-\d{2})$", texte, re.M)
-                    if c:
-                        nees[m.group(1)] = c.group(1)
+                if not re.search(r"^type: video$", texte, re.M):
+                    continue
+                statut = re.search(r"^statut: (\S+)$", texte, re.M)
+                en_cours = not statut or statut.group(1) not in ("publie", "abandonne")
+                m = re.search(r"^- Vidéo : https://www\.youtube\.com/watch\?v=([A-Za-z0-9_-]{11})", texte, re.M)
+                if not m:
+                    h1 = re.search(r"^# (.+)$", texte, re.M)
+                    if en_cours and h1:
+                        par_titre[slug(h1.group(1))] = nom
+                    continue
+                existantes[m.group(1)] = nom
+                if en_cours:
+                    a_completer.add(m.group(1))
+                c = re.search(r"^cree: (\d{4}-\d{2}-\d{2})$", texte, re.M)
+                if c:
+                    nees[m.group(1)] = c.group(1)
+    for v in videos:
+        nom = par_titre.get(slug(v["snippet"]["title"]))
+        if nom and v["id"] not in existantes:
+            existantes[v["id"]] = nom
+            a_completer.add(v["id"])
+            c = re.search(r"^cree: (\d{4}-\d{2}-\d{2})$", open(os.path.join(dossier, nom), encoding="utf-8").read(), re.M)
+            if c:
+                nees[v["id"]] = c.group(1)
     noms = {}
     for v in videos:
         sortie = v["snippet"]["publishedAt"]
@@ -409,7 +457,7 @@ def fiches(dossier, dossier_transcriptions, maj, essai):
     for v in videos:
         vid, sn = v["id"], v["snippet"]
         chemin = os.path.join(dossier, noms[vid])
-        if os.path.exists(chemin) and not maj:
+        if os.path.exists(chemin) and not maj and vid not in a_completer:
             sautees += 1
             continue
         description = sn.get("description", "")
@@ -421,8 +469,14 @@ def fiches(dossier, dossier_transcriptions, maj, essai):
         cibles = [c for c in cite[vid] if c != vid]
         liees = [noms[c] for c in cibles if c in noms] + [noms[s] for s in citee_par.get(vid, []) if s in noms]
 
+        # L'en-tête : le script écrit ses champs, garde les autres (projet, objectif, score…) et ajoute ses liens aux anciens.
+        ancien, _, intro = fiche_existante(chemin)
+        geres = ("type", "resume", "statut", "domaine", "cree", "maj", "liens")
+        garde = [ligne for champ, ligne in ancien if champ not in geres]
+        anciens_liens = next((ligne.split(":", 1)[1].strip().strip("[]") for champ, ligne in ancien if champ == "liens"), "")
+        liees = [x.strip() for x in anciens_liens.split(",") if x.strip()] + liees
         l = ["---", "type: video", f"resume: {resume(description, sn['title'], communes)}", "statut: publie", f"domaine: {domaine}",
-             f"cree: {nees.get(vid, publiee)}", f"maj: {aujourd_hui}", f"liens: [{', '.join(dict.fromkeys(liees))}]", "---", f"# {sn['title']}", "",
+             *garde, f"cree: {nees.get(vid, publiee)}", f"maj: {aujourd_hui}", f"liens: [{', '.join(dict.fromkeys(liees))}]", "---", f"# {sn['title']}", "",
              f"- Vidéo : https://www.youtube.com/watch?v={vid}", f"- Miniature : {miniature}",
              f"- Publiée le : {publiee}", f"- Durée : {duree(secondes(v['contentDetails']['duration']))}"]
         if playlists.get(vid):
@@ -431,9 +485,18 @@ def fiches(dossier, dossier_transcriptions, maj, essai):
         if sn.get("tags"):
             l.append("- Tags : " + ", ".join(sn["tags"]))
 
+        # Ce qui a été écrit à la main, avant la sortie ou après, est gardé : le texte sous le titre, et chaque section
+        # que le script n'écrit pas (Notes, l'histoire de la vidéo de l'idée au montage…).
+        generees = ("- Vidéo :", "- Miniature :", "- Publiée le :", "- Durée :", "- Playlists :", "- Tags :")
+        intro = [x for x in intro if not x.startswith(generees)]
+        while intro and not intro[0].strip():
+            intro.pop(0)
+        if intro:
+            l += ["", *intro]
         anciennes = sections(chemin)
-        if anciennes.get("Notes"):
-            l += ["", "## Notes", "", *anciennes["Notes"]]
+        for titre, lignes in anciennes.items():
+            if titre not in ("Stats", "Liens", "Description", "Transcription") and lignes:
+                l += ["", f"## {titre}", "", *lignes]
 
         l += ["", "## Stats", "", f"YouTube Analytics, données jusqu'au {dernier_jour}. Revenus estimés en dollars US. "
               "Depuis le 27 août 2026, YouTube compte une vue dès la première image : pour comparer avant et après, "
