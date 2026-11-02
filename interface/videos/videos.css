@@ -1,0 +1,103 @@
+/* SM4RT Vidéos: what is proper to the videos page. The look and the frame live in ../assets/theme.css. */
+.onglets{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.onglets a{padding:7px 14px;border-radius:var(--rayon-petit);border:1px solid var(--bord);color:var(--texte-doux);font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.onglets a:hover{text-decoration:none;color:var(--texte)}
+.onglets a[aria-current=page]{background:var(--accent-doux);border-color:var(--accent-bord);color:var(--accent)}
+.onglets .btn{margin-left:auto}
+#vue{display:flex;flex-direction:column;gap:20px;min-width:0}
+.attente{color:var(--texte-doux)}
+.tete{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 24px}
+.tete-g{flex:1 1 320px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.tete h1{margin:0;font:600 38px/1.06 var(--police-titre);letter-spacing:-.03em;overflow-wrap:anywhere}
+.tete p{margin:0;color:var(--texte-doux)}
+.seg-f{display:flex;flex-wrap:wrap;padding:3px;gap:2px;border-radius:9px;border:1px solid var(--bord-fort)}
+.seg-f button{min-height:36px;padding:0 12px;border:0;border-radius:7px;background:transparent;color:var(--texte-doux);font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.seg-f button[aria-pressed=true]{background:var(--accent-doux);color:var(--accent)}
+.note-rapide{display:flex;align-items:center;gap:10px;min-height:52px;padding:0 8px 0 16px;border-radius:10px;border:1px dashed var(--bord-fort)}
+.note-rapide:focus-within{border-color:var(--accent);border-style:solid}
+.note-rapide>span{font:500 18px var(--mono);color:var(--accent)}
+.note-rapide input{flex:1;min-width:0;height:44px;border:0;background:transparent;outline:0;font-size:15px}
+.sous-vues{display:flex;gap:18px;border-bottom:1px solid var(--bord)}
+.sous-vues button{min-height:44px;padding:0 2px;border:0;border-bottom:2px solid transparent;margin-bottom:-1px;background:transparent;color:var(--texte-pale);font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.sous-vues button[aria-pressed=true]{color:var(--texte);border-bottom-color:var(--accent)}
+.boite{overflow-x:auto}
+.grille{min-width:860px;display:grid;grid-template-columns:40px minmax(0,1fr) 92px 72px 72px 60px auto}
+.grille>*{display:flex;align-items:center;padding:12px 10px;min-width:0;border-bottom:1px solid var(--bord)}
+.grille>.haut{border-bottom-color:var(--bord-fort)}
+.grille>.fort{background:var(--accent-doux)}
+.rang,.chiffre{font:400 13px var(--mono);color:var(--texte-doux)}
+.chiffre.moi{color:var(--agent)}
+.score{justify-content:flex-end;font:400 24px/1 var(--police-titre);letter-spacing:-.02em}
+.score.fort-s{font-weight:600;color:var(--accent)}
+.score.vide{color:var(--texte-pale)}
+.grille>.idee{flex-direction:column;align-items:flex-start;justify-content:center;gap:6px}
+.lien-fiche{border:0;padding:0;background:transparent;text-align:left;font-weight:600;font-size:14px;line-height:1.35;color:var(--texte);overflow-wrap:anywhere}
+.lien-fiche:hover{color:var(--accent)}
+.puces{display:flex;flex-wrap:wrap;gap:6px}
+.actions{display:flex;gap:6px;justify-content:flex-end}
+.btn.danger{color:var(--danger)}
+.vide{padding:28px 18px;text-align:center;color:var(--texte-pale);margin:0}
+.ecartee{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:14px 18px;border-bottom:1px solid var(--bord)}
+.ecartee:last-child{border-bottom:0}
+.ecartee>div{flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:4px}
+.ecartee small{font-size:13px;color:var(--texte-pale)}
+.aide{margin:0;font-size:13px;color:var(--texte-pale)}
+.compteur{display:flex;flex-direction:column;gap:4px;padding:12px 18px;border-radius:12px;border:1px solid var(--bord)}
+.compteur b{font:300 28px/1 var(--police-titre)}
+.compteur small{font-size:14px;color:var(--texte-doux)}
+.compteur.trop{border-color:rgba(var(--attention-rgb),.45)}
+.compteur.trop .etiquette{color:var(--attention)}
+.tableau{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(160px,1fr);gap:12px;align-items:start;overflow-x:auto;padding-bottom:8px}
+.colonne{padding:12px;display:flex;flex-direction:column;gap:10px;min-height:220px}
+.colonne-haut{display:flex;justify-content:space-between;padding:2px}
+.colonne-haut .etiquette:first-child{color:var(--texte)}
+.colonne.pause .colonne-haut .etiquette:first-child{color:var(--attention)}
+.colonne.finie .colonne-haut .etiquette:first-child{color:var(--ok)}
+.carte{display:flex;flex-direction:column;gap:10px;padding:12px;border-radius:10px;background:var(--noeud);border:1px solid var(--bord)}
+.colonne.pause .carte{border-color:rgba(var(--attention-rgb),.35)}
+.carte small{font-size:12px;color:var(--texte-doux)}
+.champ-l{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--texte-doux);min-width:0}
+.champ-l .champ{width:100%;font:500 13px var(--mono)}
+.vide-col{margin:0;padding:18px 10px;border-radius:10px;border:1px dashed var(--bord-fort);text-align:center;font-size:13px;color:var(--texte-pale)}
+.sorties{padding:18px 20px;display:flex;flex-direction:column;gap:8px}
+.sortie{display:grid;grid-template-columns:100px minmax(0,1fr) auto;gap:14px;align-items:center;padding-top:8px;border-top:1px solid var(--bord);font-size:14px}
+.sortie .btn-l{border:0;padding:0;background:transparent;text-align:left;color:var(--texte)}
+.sortie .btn-l:hover{color:var(--accent)}
+.etapes{margin:0;padding:0;list-style:none;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:6px;overflow-x:auto}
+.etapes li{display:flex;flex-direction:column;gap:8px;min-width:76px}
+.etapes i{display:block;height:4px;border-radius:2px;background:var(--surface-2)}
+.etapes .fait i{background:var(--accent)}
+.etapes .ici i{background:var(--accent);box-shadow:var(--lueur)}
+.etapes .ici .etiquette{color:var(--accent)}
+.fiche{display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start}
+.fiche-texte{flex:999 1 520px;min-width:0;display:flex;flex-direction:column;gap:14px}
+.fiche-cote{flex:1 1 290px;min-width:0;display:flex;flex-direction:column;gap:14px}
+.bloc{padding:18px 20px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.bloc h2{margin:0;font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.bloc.pause{border-color:rgba(var(--attention-rgb),.35)}
+.bloc.pause h2{color:var(--attention)}
+.md{color:var(--texte-doux);font-size:14px;overflow-x:auto;overflow-wrap:anywhere}
+.md>:first-child{margin-top:0}.md>:last-child{margin-bottom:0}
+.md h3{font-size:14px;color:var(--texte);margin:14px 0 4px}
+.md strong{color:var(--texte)}
+.md code{font:400 12px var(--mono);background:var(--code-fond);padding:1px 5px;border-radius:5px}
+.md pre{white-space:pre-wrap;font:400 12px var(--mono);background:var(--code-fond);padding:10px;border-radius:8px}
+.md table{border-collapse:collapse;width:100%;font-size:13px}
+.md td,.md th{padding:5px 8px;border-bottom:1px solid var(--bord);text-align:left}
+details.bloc>summary{cursor:pointer;font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--texte-doux);min-height:24px}
+.deux{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.mesures{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.mesures div{display:flex;flex-direction:column;gap:2px;font-size:11px;color:var(--texte-pale)}
+.mesures b{font:400 15px var(--mono);color:var(--texte)}
+.mesures .s,.mesures .s b{color:var(--accent);font-weight:600}
+.lien-l{display:flex;flex-direction:column;gap:2px;width:100%;padding:10px 12px;border:0;border-radius:8px;background:var(--noeud);color:var(--texte);font-size:14px;text-align:left;overflow-wrap:anywhere}
+.lien-l:hover{color:var(--accent);text-decoration:none}
+.lien-l .etiquette{font-size:10px}
+.histo{display:grid;grid-template-columns:82px minmax(0,1fr);gap:6px 10px;font-size:13px;color:var(--texte-doux)}
+.histo span:nth-child(odd){font-family:var(--mono);color:var(--texte-pale)}
+#ecarter{width:min(440px,calc(100vw - 32px));padding:22px;border-radius:var(--rayon);border:1px solid var(--bord-fort);background:var(--fond);color:var(--texte)}
+#ecarter::backdrop{background:rgba(0,0,0,.55)}
+#ecarter h2{margin:0 0 6px;font:600 20px var(--police-titre)}
+#ecarter p{margin:0 0 14px;color:var(--texte-doux);font-size:14px}
+#ecarter-raisons{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+@media (max-width:760px){.tete h1{font-size:30px}.sortie{grid-template-columns:82px minmax(0,1fr)}.sortie .pastille{display:none}}

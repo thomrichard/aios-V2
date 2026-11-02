@@ -27,7 +27,7 @@ Explique chaque mot en une phrase, avec un exemple :
 
 | Type | Ce que c'est | Statuts | Fin | Chemin |
 |---|---|---|---|---|
-| video | Une vidéo, du sujet à la mise en ligne | sujet, en-cours, a-valider, publie | publie | `domaines/<domaine>/<slug>-<date>.md` |
+| video | Une vidéo, de l'idée aux stats à 30 jours : une seule fiche, seul son statut avance | sujet, retenu, titre, ecriture, tournage, montage, en-pause, publie, abandonne | publie, abandonne | `domaines/<domaine>/<slug>-<date>.md` |
 | post | Un post sur un réseau social | sujet, en-cours, a-valider, publie | publie | `domaines/<domaine>/<slug>-<date>.md` |
 | newsletter | Une édition de la newsletter | sujet, en-cours, a-valider, publie | publie | `domaines/<domaine>/<slug>-<date>.md` |
 | proposition | Une proposition commerciale | en-cours, envoyee, signee, refusee | signee, refusee | `domaines/<domaine>/<slug>.md` |
@@ -36,6 +36,18 @@ Explique chaque mot en une phrase, avec un exemple :
 | evenement | Un atelier, un live, une rencontre | prevu, passe | passe | `domaines/<domaine>/<slug>-<date>.md` |
 | annonce | Un message à la communauté | sujet, en-cours, publie | publie | `domaines/<domaine>/<slug>-<date>.md` |
 | note | Une note perso qui dure | en-cours, clos | clos | `domaines/<domaine>/<slug>.md` |
+
+Avec le type `video`, propose aussi ces champs : ils notent une vidéo dans l'onglet Vidéos. Le score se calcule si le domaine a un fichier `score-videos.md` (les poids).
+
+| Champ | Ce qu'il dit | Format | Obligatoire pour |
+|---|---|---|---|
+| objectif | Ce que sert une vidéo | texte | aucun |
+| affinite | L'envie de faire cette vidéo, de 1 à 5 | texte | aucun |
+| preparation | Ce qu'on maîtrise déjà du sujet et la matière prête, de 1 à 5 | texte | aucun |
+| potentiel | La demande et la concurrence mesurées par un outil, de 0 à 100 | texte | aucun |
+| preuve | Le sujet a marché ailleurs, de 0 à 100 | texte | aucun |
+| effort | Les heures estimées, du script à l'export | texte | aucun |
+| score | La note d'une vidéo, calculée par un script, jamais écrite à la main | texte | aucun |
 
 ## Pour tout le monde : les idées
 
