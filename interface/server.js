@@ -13,6 +13,7 @@
      /competences/           the skills page alone (also the Second Brain's Skills tab)
      /connecteurs/           the connectors page alone (also the Second Brain's Connecteurs tab)
      /outbox/                the outbox page alone (also the Second Brain's Outbox tab)
+     /videos/                the videos page alone (also the Second Brain's Vidéos tab)
      /orbite/                the 3D home alone (also the Second Brain's Orbes 3D tab, and the home page)
      /disque/                the rosace alone (also the Second Brain's Disque tab)
      /widgets                the widget library
@@ -39,6 +40,8 @@
    Outbox page (the Outbox tab)
      /local/outbox           the files that wait for your validation (statut: a-valider), with the file each fiche describes (GET)
      /local/outbox/valider   validates files: their type's end status and maj today in the header (POST, local pages only)
+     /local/videos           every file of type video: its header, plus the statuses and objectives (GET; /local/videos/lire: one file)
+     /local/videos/creer /local/videos/regler /local/videos/archiver   note an idea, write fields, move one set aside to archives/ (POST, local pages only)
      /local/routines         the routines of systeme/routines.md, their levels and models, and their passages from journal/routines.jsonl (GET)
      /local/routines/regler  writes a routine's time, state or ceiling in systeme/routines.md, its level in systeme/modeles.md (POST, local pages only)
      /local/reglages         the tables of systeme/metadonnees.md, the socle's and this workspace's, and how much each is used (GET)
@@ -1366,6 +1369,133 @@ async function validerOutbox({ chemins }) {
   return { ok: true, chemins: faits, index };
 }
 
+/* ---------------------------- VIDEOS: the videos page (videos/) ----------------------------
+   AIOS: every file whose header says type: video, from the first idea to the stats. The page keeps nothing of its own:
+   it reads the headers, and each gesture writes one field back (POST /local/videos/regler). The statuses come from
+   systeme/metadonnees.md, the objectives from domaines/<domaine>/score-videos.md; index.py rewrites the score. A video
+   set aside keeps its file, its status (abandonne) and why, in a « ## Écartée » section; « Archiver » moves it to
+   archives/, nothing is deleted. publie is only ever written by systeme/scripts/youtube.py, which recognises a video
+   still in progress: set by hand, it would make a second file at the release. */
+const VIDEOS_HORS = ['archives/', 'systeme/', 'skills/', 'interface/'];
+const VIDEO_ECARTEE = 'Écartée';
+function videoRegles(root) {
+  const row = tablesOf(readText(path.join(root, 'systeme', 'metadonnees.md')), 'Type').find(r => r.Type.replace(/`/g, '') === 'video');
+  const liste = s => String(s || '').split(',').map(x => x.trim()).filter(x => x && x !== '—');
+  const statuts = row ? liste(row.Statuts) : [], fins = row ? liste(row.Fin) : [];
+  let objectifs = [];
+  try {
+    for (const d of fs.readdirSync(path.join(root, 'domaines'))) {
+      const rows = tablesOf(readText(path.join(root, 'domaines', d, 'score-videos.md')), 'Objectif');
+      if (rows.length) { objectifs = rows.map(r => r.Objectif); break; }
+    }
+  } catch (_) { }
+  return { statuts, fins, objectifs };
+}
+/* the lines of one « ## » section of a fiche, without the blanks */
+function sectionDe(text, titre) {
+  const L = text.split(/\r?\n/), i = L.findIndex(l => l.trim() === '## ' + titre);
+  if (i < 0) return [];
+  const out = [];
+  for (let k = i + 1; k < L.length && !L[k].startsWith('## '); k++) if (L[k].trim()) out.push(L[k].trim());
+  return out;
+}
+function listVideos() {
+  const root = workspaceRoot();
+  if (!root) return { error: 'Aucun workspace défini (config/workspace.json)' };
+  const regles = videoRegles(root), videos = [];
+  for (const f of listFiles().files) {
+    if (!f.h || f.h.type !== 'video' || f.g || VIDEOS_HORS.some(h => f.p.startsWith(h))) continue;
+    const h = f.h, v = { chemin: f.p, titre: f.t || path.basename(f.p, '.md'), resume: h.resume || '', statut: h.statut || '', objectif: h.objectif || '', affinite: h.affinite || '', preparation: h.preparation || '', potentiel: h.potentiel || '', preuve: h.preuve || '', effort: h.effort || '', score: h.score || '', echeance: h.echeance || '', projet: h.projet || '', cree: h.cree || '', maj: h.maj || '' };
+    if (regles.fins.includes(v.statut)) {
+      const text = readText(path.join(root, f.p)), sortie = /^- Publiée le : (\d{4}-\d{2}-\d{2})$/m.exec(text);
+      if (sortie) v.sortie = sortie[1];
+      if (v.statut !== 'publie') v.pourquoi = sectionDe(text, VIDEO_ECARTEE).pop() || '';
+    }
+    videos.push(v);
+  }
+  return { videos, ...regles, aujourdhui: dayKey(new Date()) };
+}
+function cibleVideo(chemin) {
+  const t = editorTarget(chemin);
+  if (kindOf(t.rel) !== 'md' || generatedFile(t.rel)) throw httpError(400, 'Ce n’est pas une fiche vidéo');
+  const text = fs.readFileSync(t.abs, 'utf8'), h = readHeader(text);
+  if (h.type !== 'video') throw httpError(400, 'Ce n’est pas une fiche vidéo');
+  return { ...t, text, h };
+}
+async function lireVideo(chemin) {
+  const t = cibleVideo(chemin), body = t.text.replace(/^---\r?\n[\s\S]*?\r?\n---[ \t]*(\r?\n|$)/, '');
+  const log = await gitRun(t.root, ['log', '-n', '12', '--date=short', '--format=%ad%x1f%s', '--', t.rel]);
+  const historique = (log || '').split('\n').filter(Boolean).map(l => { const [date, sujet] = l.split('\x1f'); return { date, sujet }; });
+  return { chemin: t.rel, entete: t.h, corps: body, historique, ...videoRegles(t.root), aujourdhui: dayKey(new Date()) };
+}
+async function creerVideo({ titre }) {
+  const nom = String(titre || '').trim();
+  if (nom.length < 3 || nom.length > 160 || /[\r\n]/.test(nom)) throw httpError(400, 'Une idée tient en une ligne, de 3 à 160 caractères');
+  const root = workspaceRoot();
+  if (!root) throw httpError(400, 'Aucun workspace défini (config/workspace.json)');
+  const regles = videoRegles(root);
+  if (!regles.statuts.length) throw httpError(400, 'Le type video n’est pas dans systeme/metadonnees.md');
+  const slug = nom.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 60).replace(/^-+|-+$/g, '');
+  if (!slug) throw httpError(400, 'Ce titre ne donne pas de nom de fichier');
+  const voisine = listFiles().files.find(f => f.h && f.h.type === 'video' && f.h.domaine && !VIDEOS_HORS.some(h => f.p.startsWith(h)));
+  const domaine = voisine ? voisine.h.domaine : 'contenu', today = dayKey(new Date());
+  const rel = 'domaines/' + domaine + '/' + slug + '-' + today.slice(2, 7) + '.md', t = editorTarget(rel, false);
+  if (fs.existsSync(t.abs)) throw httpError(409, 'Une fiche porte déjà ce nom : ' + rel);
+  const ligne = nom.replace(/\s+#/g, ' ');
+  fs.mkdirSync(path.dirname(t.abs), { recursive: true });
+  fs.writeFileSync(t.abs, ['---', 'type: video', 'resume: ' + ligne, 'statut: ' + regles.statuts[0], 'domaine: ' + domaine, 'cree: ' + today, 'maj: ' + today, 'liens: []', '---', '# ' + nom, ''].join('\n'));
+  return { ok: true, chemin: t.rel, index: await runIndex(root) };
+}
+async function reglerVideo({ chemin, champs, pourquoi }) {
+  const t = cibleVideo(chemin), regles = videoRegles(t.root);
+  if (!champs || typeof champs !== 'object') throw httpError(400, 'Rien à écrire');
+  const note = (k, v) => { if (!/^[1-5]$/.test(v)) throw httpError(400, k + ' : une note de 1 à 5'); };
+  const VERIF = {
+    statut: v => { if (!regles.statuts.includes(v)) throw httpError(400, 'Statut inconnu : ' + v); if (v === 'publie') throw httpError(400, 'publie s’écrit tout seul à la sortie, avec le lien de la vidéo'); },
+    objectif: v => { if (regles.objectifs.length && !regles.objectifs.includes(v)) throw httpError(400, 'Objectif inconnu : ' + v); },
+    affinite: v => note('affinite', v), preparation: v => note('preparation', v),
+    effort: v => { if (!/^\d+([.,]\d+)?$/.test(v)) throw httpError(400, 'effort : un nombre d’heures'); },
+    echeance: v => { if (!/^\d{4}-\d{2}-\d{2}$/.test(v)) throw httpError(400, 'echeance : une date AAAA-MM-JJ'); }
+  };
+  const propres = {};
+  for (const [k, brut] of Object.entries(champs)) {
+    if (!VERIF[k]) throw httpError(400, 'Ce champ ne s’écrit pas ici : ' + k);
+    const v = String(brut ?? '').trim().replace(',', '.');
+    if (v) VERIF[k](v); else if (k === 'statut') throw httpError(400, 'Il faut un statut');
+    propres[k] = v;
+  }
+  const avant = t.h.statut, apres = propres.statut || avant, finit = s => regles.fins.includes(s) && s !== 'publie', today = dayKey(new Date());
+  const raison = String(pourquoi || '').replace(/\s+/g, ' ').trim().slice(0, 200);
+  if (finit(apres) && !finit(avant) && !raison) throw httpError(400, 'Dis pourquoi tu l’écartes');
+  if (avant === 'publie' && propres.statut && apres !== avant) throw httpError(400, 'Cette vidéo est publiée : son statut ne change plus');
+  const e = enTeteDe(t.text);
+  if (!e) throw httpError(400, 'Cette fiche n’a pas d’en-tête');
+  for (const [k, v] of Object.entries(propres)) { if (v) e.set(k, v); else e.retire(k); }
+  e.set('maj', today);
+  let texte = e.texte();
+  const ligne = finit(apres) && !finit(avant) ? today + ' : ' + raison + '.' : finit(avant) && !finit(apres) ? today + ' : remise en ' + apres + '.' : '';
+  if (ligne) {
+    const L = texte.split('\n'), i = L.findIndex(l => l.trim() === '## ' + VIDEO_ECARTEE);
+    if (i < 0) texte = texte.replace(/\s*$/, '') + '\n\n## ' + VIDEO_ECARTEE + '\n\n' + ligne + '\n';
+    else {
+      let k = i + 1; while (k < L.length && !L[k].startsWith('## ')) k++;
+      while (k > i + 1 && !L[k - 1].trim()) k--;
+      L.splice(k, 0, ligne); texte = L.join('\n');
+    }
+  }
+  ecrireSur(t.abs, texte);
+  return { ok: true, chemin: t.rel, index: await runIndex(t.root) };
+}
+async function archiverVideo({ chemin }) {
+  const t = cibleVideo(chemin);
+  if (t.h.statut === 'publie' || !videoRegles(t.root).fins.includes(t.h.statut)) throw httpError(400, 'Seule une vidéo écartée s’archive');
+  const dest = editorTarget('archives/' + t.rel, false);
+  if (fs.existsSync(dest.abs)) throw httpError(409, 'Une archive porte déjà ce nom : ' + dest.rel);
+  fs.mkdirSync(path.dirname(dest.abs), { recursive: true });
+  fs.renameSync(t.abs, dest.abs);
+  return { ok: true, chemin: dest.rel, index: await runIndex(t.root) };
+}
+
 /* ---------------------------- REGLAGES: the settings page (reglages/) ----------------------------
    AIOS: the Réglages tab reads systeme/metadonnees.md (the socle's tables, read only, and those of « Ce workspace »),
    with how much each domain, type, status, field and skill family is used, then applies a list of gestures. It rewrites
@@ -1945,7 +2075,7 @@ function needsFirstRefresh() {
 const MIME = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg',
   '.webp': 'image/webp', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.ico': 'image/x-icon', '.gif': 'image/gif', '.mp4': 'video/mp4', '.txt': 'text/plain' };
 const PUBLIC_FILES = new Set(['index.html', 'os.html', 'copy.css', 'copy.js', 'shell-extras.js', 'view-transitions.js', 'widgets.html']);
-const PUBLIC_DIRS = ['assets', 'brain', 'views', 'fichiers', 'bibliotheque', 'projets', 'competences', 'connecteurs', 'outbox', 'reglages', 'routines', 'orbite', 'disque'];
+const PUBLIC_DIRS = ['assets', 'brain', 'views', 'fichiers', 'bibliotheque', 'projets', 'competences', 'connecteurs', 'outbox', 'reglages', 'routines', 'videos', 'orbite', 'disque'];
 function publicFile(p2) {
   let rel; try { rel = decodeURIComponent(p2).replace(/^\/+/, ''); } catch (_) { return null; }
   if (!rel || rel.includes('\0') || rel.includes('\\')) return null;
@@ -2021,6 +2151,8 @@ const server = http.createServer(async (req, res) => {
     /* ---- the connectors page ---- */
     if (p2 === '/local/connecteurs' && !post) { try { return sendJson(res, await listConnecteurs()); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); } }
     /* ---- the outbox page ---- */
+    if (p2 === '/local/videos' && !post) { try { return sendJson(res, listVideos()); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); } }
+    if (p2 === '/local/videos/lire' && !post) { try { return sendJson(res, await lireVideo(u.searchParams.get('chemin'))); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); } }
     if (p2 === '/local/routines' && !post) { try { return sendJson(res, lireRoutines()); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); } }
     if (p2 === '/local/reglages' && !post) { try { return sendJson(res, lireReglages()); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); } }
     if (p2 === '/local/outbox' && !post) { try { return sendJson(res, await listOutbox()); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); } }
@@ -2077,6 +2209,10 @@ const server = http.createServer(async (req, res) => {
     if (post && p2 === '/local/outbox/valider') {
       let q; try { q = JSON.parse(await readBody(req) || '{}'); } catch (e) { return sendJson(res, { error: e.status ? e.message : 'le corps de la requête n’est pas du JSON' }, e.status || 400); }
       try { return sendJson(res, await validerOutbox(q)); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); }
+    }
+    if (post && ['/local/videos/creer', '/local/videos/regler', '/local/videos/archiver'].includes(p2)) {
+      let q; try { q = JSON.parse(await readBody(req) || '{}'); } catch (e) { return sendJson(res, { error: e.status ? e.message : 'le corps de la requête n’est pas du JSON' }, e.status || 400); }
+      try { return sendJson(res, await (p2 === '/local/videos/creer' ? creerVideo : p2 === '/local/videos/regler' ? reglerVideo : archiverVideo)(q)); } catch (e) { return sendJson(res, { error: e.message }, e.status || 500); }
     }
     if (post && p2 === '/local/competences/retour') {
       let q; try { q = JSON.parse(await readBody(req) || '{}'); } catch (e) { return sendJson(res, { error: e.status ? e.message : 'le corps de la requête n’est pas du JSON' }, e.status || 400); }
@@ -2137,6 +2273,8 @@ const server = http.createServer(async (req, res) => {
     if (p2 === '/outbox/') return serveFile(req, res, path.join(KIT, 'outbox', 'index.html'));
     if (p2 === '/reglages/') return serveFile(req, res, path.join(KIT, 'reglages', 'index.html'));
     if (p2 === '/routines/') return serveFile(req, res, path.join(KIT, 'routines', 'index.html'));
+    if (p2 === '/videos') { res.writeHead(302, { Location: '/videos/' }); return res.end(); }
+    if (p2 === '/videos/') return serveFile(req, res, path.join(KIT, 'videos', 'index.html'));
     if (p2 === '/bibliotheque/') return serveFile(req, res, path.join(KIT, 'bibliotheque', 'index.html'));
     if (p2.startsWith('/artifacts/')) {
       let rel; try { rel = decodeURIComponent(p2.slice('/artifacts/'.length)); } catch (_) { rel = null; }
