@@ -679,6 +679,9 @@ def vues_en_trop(attendus):
 
 def main():
     verifier_seulement = "--check" in sys.argv
+    if not verifier_seulement:
+        from score import calculer  # le score des vidéos s'écrit dans les en-têtes, avant les vues qui les lisent
+        calculer()
     perimes = []
     attendus = list(cibles())
     for chemin in vues_en_trop({c for c, _ in attendus}):
