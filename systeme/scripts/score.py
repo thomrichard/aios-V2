@@ -8,6 +8,7 @@ score prévu. Le champ maj ne bouge pas : un score n'est pas une retouche. index
 
   python3 systeme/scripts/score.py          écrit les scores, et dit quelles fiches n'en ont pas
   python3 systeme/scripts/score.py --essai  dit ce qu'il écrirait, sans rien écrire
+  python3 systeme/scripts/score.py --a-mesurer  réussit s'il reste une fiche sans potentiel ou sans preuve (pour ne lancer l'IA que s'il y a du travail)
 """
 import argparse
 import glob
@@ -108,7 +109,11 @@ def calculer(essai=False):
 def main():
     parseur = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parseur.add_argument("--essai", action="store_true", help="dit ce qu'il écrirait, sans rien écrire")
+    parseur.add_argument("--a-mesurer", action="store_true", help="réussit s'il reste une fiche sans potentiel ou sans preuve")
     args = parseur.parse_args()
+    if args.a_mesurer:
+        _, sans_score = calculer(essai=True)
+        return 0 if any({"potentiel", "preuve"} & set(manque) for _, manque in sans_score) else 1
     changes, sans_score = calculer(args.essai)
     for rel, score in changes:
         print(f"{rel} : score {'retiré' if score is None else score}")
