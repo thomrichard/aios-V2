@@ -18,6 +18,7 @@ from lancer import dossier_lourds
 RACINE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 IMAGES = (".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg")
 PLAFONDS = [("AGENTS.md", 150), ("memory/MEMORY.md", 100)]
+SKILL_PLAFOND, SKILL_INDEX = 80, 120
 
 erreurs, avertissements = [], []
 
@@ -283,15 +284,20 @@ def controler_plafonds():
     plafonds = list(PLAFONDS)
     if os.path.isdir(chemin("routers")):
         plafonds += [(f"routers/{n}", 50) for n in os.listdir(chemin("routers")) if n.endswith(".md")]
-    if os.path.isdir(chemin("skills")):
-        for nom in os.listdir(chemin("skills")):
-            if os.path.exists(chemin("skills", nom, "SKILL.md")):
-                plafonds.append((f"skills/{nom}/SKILL.md", 60))
     for rel, maximum in plafonds:
         if os.path.exists(chemin(rel)):
             n = len(lignes_ecrites(rel))
             if n > maximum:
                 avertissements.append(f"{rel} fait {n} lignes, hors blocs générés (plafond : {maximum})")
+    if os.path.isdir(chemin("skills")):
+        for nom in sorted(os.listdir(chemin("skills"))):
+            rel = f"skills/{nom}/SKILL.md"
+            if os.path.exists(chemin(rel)):
+                n = len(lignes_ecrites(rel))
+                if n > SKILL_INDEX:
+                    avertissements.append(f"{rel} fait {n} lignes, hors blocs générés : au-delà de {SKILL_INDEX}, il devient un index qui renvoie vers references/")
+                elif n > SKILL_PLAFOND:
+                    avertissements.append(f"{rel} fait {n} lignes, hors blocs générés : au-dessus de {SKILL_PLAFOND}, le détail peut aller dans references/")
 
 
 def controler_index():

@@ -89,10 +89,10 @@
         out.push({ s, cle: s.id + ':cout', texte: fmtTok(parLancement(s)) + ' tokens par lancement : ' + Math.round(parLancement(s) / mediane) + ' fois la médiane de tes skills.' });
       if (d.mesure && r30(s) >= 5 && s.usage.r7 === 0)
         out.push({ s, cle: s.id + ':arret', texte: 'Lancée ' + s.usage.r30 + ' fois ces 30 derniers jours, plus du tout cette semaine.' });
-      if (s.lignes > s.plafond)
-        out.push({ s, cle: s.id + ':taille', texte: s.lignes + ' lignes : au-dessus du plafond de ' + s.plafond + '. Le détail peut aller dans references/.' });
-      else if (s.lignes >= s.plafond - 4)
-        out.push({ s, cle: s.id + ':taille', texte: s.lignes + ' lignes sur ' + s.plafond + ' : bientôt au plafond. Le détail peut aller dans references/.' });
+      if (s.lignes > s.plafondIndex)
+        out.push({ s, cle: s.id + ':taille', texte: s.lignes + ' lignes : au-delà de ' + s.plafondIndex + ', le SKILL.md devient un index qui renvoie vers references/.' });
+      else if (s.lignes > s.plafond)
+        out.push({ s, cle: s.id + ':taille', texte: s.lignes + ' lignes : au-dessus de ' + s.plafond + '. Le détail peut aller dans references/.' });
       if (familles().length && !s.famille)
         out.push({ s, cle: s.id + ':famille', texte: 'Sans famille : ajoute-la dans l’en-tête de son SKILL.md (metadata:, puis famille:).' });
       else if (familles().length && !familleDe(s))

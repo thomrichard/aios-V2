@@ -19,7 +19,7 @@ Un retour qui ne vise pas une skill, mais ta façon de travailler en général, 
 ## Appliquer
 « Applique les retours de <skill> », ou une `calibrate` qui les reprend :
 1. Lis `feedback.md` et la skill. Regroupe les retours qui disent la même chose.
-2. Propose les changements, numérotés, et applique ceux que l'utilisateur choisit. La skill reste sous 60 lignes : le détail va dans `references/`.
+2. Propose les changements, numérotés, et applique ceux que l'utilisateur choisit. La skill vise 80 lignes au plus : le détail va dans `references/`. Au-delà de 120, elle devient un index qui y renvoie.
 3. Coche chaque retour traité et complète la fin de sa ligne : `- [x] … · appliqué le AAAA-MM-JJ`, ou `- [x] … · écarté : <pourquoi>`. Ne supprime aucune ligne.
 4. Ajoute une ligne au journal des changements de la skill. Puis lance `python3 systeme/scripts/index.py` et `python3 systeme/scripts/verifier.py`, sans sauter cette étape.
 
@@ -29,3 +29,4 @@ Un retour qui ne vise pas une skill, mais ta façon de travailler en général, 
 
 ## Journal des changements
 - 2026-10-23 · création, pour aller avec calibrate (reprise de Jay E | RoboNuggets) · garder un retour sans couper le travail, et l'appliquer à froid
+- 2026-11-03 · plafond d'une skill · 80 lignes, une alerte de 81 à 120, un index vers references/ au-delà

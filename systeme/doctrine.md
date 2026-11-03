@@ -82,5 +82,5 @@ Le socle fournit une base qui marche sans rien changer. Les domaines et les type
 | `routers/<domaine>.md` | 50 lignes |
 | `memory/MEMORY.md` | 100 lignes |
 | `_index.md` | 100 lignes |
-| `SKILL.md` | 60 lignes |
+| `SKILL.md` | 80 lignes. De 81 à 120 : une alerte. Au-delà de 120 : il devient un index qui renvoie vers `references/` |
 | `outbox/points/` | 7 jours |

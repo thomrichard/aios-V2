@@ -965,7 +965,8 @@ async function projectChanges(rel, since) {
    Skill column of systeme/routines.md), whether it comes from the socle (git ls-tree socle/main, when that remote
    exists) and its usage (data/arms-usage.json, written by refresh/usage.mjs). Read only, but for one action: a note
    added to feedback.md, the line /note writes. */
-const SKILL_MAX_LINES = 60;
+const SKILL_MAX_LINES = 80;
+const SKILL_INDEX_LINES = 120;
 const cellsOf = line => line.trim().replace(/^\||\|$/g, '').split('|').map(s => s.trim());
 const isRule = c => /^[-: ]*$/.test(c[0] || '-');
 const unquote = s => s.replace(/`/g, '').trim();
@@ -1095,7 +1096,7 @@ async function listSkills() {
       id, nom: h.name || id, chemin: rel, ...splitDescription(h.description || ''), famille: h.famille || '',
       origine: socle ? (socle.has(id) ? 'socle' : 'perso') : '', etapes: skillSteps(body), journal: skillJournal(body),
       retours: notes.attente, faits: notes.faits.length, feedback: fs.existsSync(path.join(root, 'skills', id, 'feedback.md')) ? 'skills/' + id + '/feedback.md' : '',
-      sert: uses.get(id) || [], lignes: text.replace(/\n$/, '').split(/\r?\n/).length, plafond: SKILL_MAX_LINES, m: Math.round(st.mtimeMs),
+      sert: uses.get(id) || [], lignes: text.replace(/\n$/, '').split(/\r?\n/).length, plafond: SKILL_MAX_LINES, plafondIndex: SKILL_INDEX_LINES, m: Math.round(st.mtimeMs),
       usage: u ? { r7: u.runs7 || 0, r30: u.runs30 || 0, tok30: u.tok30 || 0, cout30: u.cost30 || 0, der: u.last || null, jours: u.days || null } : null
     });
   }
