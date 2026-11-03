@@ -2,7 +2,7 @@
 
 Chaque skill a son dossier : `skills/<nom>/`
 
-- `SKILL.md` : court (60 lignes au plus), gabarit dans `systeme/gabarits/SKILL.md`
+- `SKILL.md` : court, gabarit dans `systeme/gabarits/SKILL.md`. 80 lignes au plus, c'est l'idéal. De 81 à 120 : une alerte. Au-delà de 120 : il devient un index qui renvoie vers `references/`
 - `references/` : exemples et principes ; les images y sont listées dans `references/_images.md`
 - `feedback.md` : les retours mis de côté par `/note`, appliqués quand l'utilisateur le demande
 
