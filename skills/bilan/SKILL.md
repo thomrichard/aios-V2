@@ -34,7 +34,7 @@ Relis toute la session et trie en quatre, puis montre l'inventaire en 5 à 8 lig
 ## 4. Rien ne traîne
 - Un livrable promis dans le chat mais jamais écrit → écris-le maintenant.
 - Un process lancé (serveur, rendu, script) → arrête-le, ou signale-le.
-- `git status` : des changements non commités → signale-les et propose un commit. Jamais de push sans accord.
+- Git : la sauvegarde de nuit enregistre le travail chaque jour, ne propose pas de commit en session. Si elle n'est pas en place (`systeme/routines.md`), dis-le en une ligne. Jamais de push sans accord.
 
 ## 5. Le bilan, puis le récap
 Écris le bilan dans `journal/clotures/<sujet>-AA-MM.md`, avec un en-tête de type `cloture` et `statut: a-valider` (gabarit : `systeme/gabarits/fiche.md`). Ses parties : **Périmètre** · **Réalisé** · **Décisions** · **Écrit où** (les chemins) · **Propositions non engagées** · **Limites** · **Point de reprise** (la phrase exacte pour reprendre chaque sujet ouvert, que `reprendre` relira). Il attend dans l'Outbox ; « Valider » le passe à `clos`.
@@ -55,3 +55,4 @@ Le récap, dans le chat, en 5 à 10 lignes : **Fait** · **Écrit où** · **En 
 - 2026-10-27 · règles et décisions · une décision vit dans la fiche de son projet, une règle dans journal/regles.md
 - 2026-10-28 · jalons et livrables · la page Projets les lit dans la fiche du projet
 - 2026-10-30 · close devient bilan ; le bilan s'écrit toujours, en a-valider, et attend dans l'Outbox ; fermer clôt sans bilan · l'Outbox ne montre plus que ce qui attend une validation
+- 2026-11-03 · plus de proposition de commit · les commits sont une sauvegarde quotidienne, pas un sujet de session
