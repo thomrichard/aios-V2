@@ -12,7 +12,7 @@
   const VIVIER = ['sujet', 'retenu'];
   const LIMITE = 3;
   const RAISONS = ['pas le bon moment', 'déjà fait ailleurs', 'plus envie', 'hors de mes cibles'];
-  const NOMS = { sujet: 'Sujet', retenu: 'Retenu', titre: 'Titre', ecriture: 'Écriture', tournage: 'Tournage', montage: 'Montage', 'en-pause': 'En pause', publie: 'Publiée', abandonne: 'Écartée' };
+  const NOMS = { sujet: 'Sujet', retenu: 'Retenu', titre: 'Titre', ecriture: 'Écriture', tournage: 'Tournage', montage: 'Montage', programme: 'Programmée', 'en-pause': 'En pause', publie: 'Publiée', abandonne: 'Écartée' };
   const nom = s => NOMS[s] || s.charAt(0).toUpperCase() + s.slice(1).replace(/-/g, ' ');
   const CRITERES = ['potentiel', 'preuve', 'objectif', 'affinite', 'preparation', 'effort'];
   const S = { d: null, filtre: 'tous', sous: 'vivantes', fiche: null, sale: {}, archive: null };
@@ -116,9 +116,9 @@
     const colonnes = d.statuts.filter(s => !VIVIER.includes(s) && s !== ecart);
     const trente = new Date(d.aujourdhui + 'T12:00:00'); trente.setDate(trente.getDate() - 30); const depuis = trente.toISOString().slice(0, 10);
     const dans = s => d.videos.filter(v => v.statut === s && (s !== 'publie' || String(v.sortie || v.maj) >= depuis)).sort((a, b) => String(b.sortie || b.maj).localeCompare(String(a.sortie || a.maj)));
-    const encours = d.videos.filter(v => colonnes.includes(v.statut) && v.statut !== colonnes[0] && !d.fins.includes(v.statut)).length;
+    const encours = d.videos.filter(v => colonnes.includes(v.statut) && v.statut !== colonnes[0] && v.statut !== 'programme' && !d.fins.includes(v.statut)).length;
     const options = cur => d.statuts.filter(s => s !== 'publie' || cur === 'publie').map(s => '<option value="' + esc(s) + '"' + (s === cur ? ' selected' : '') + '>' + esc(s === ecart ? 'Écarter…' : s === 'retenu' ? 'Retour au vivier' : s === 'sujet' ? 'Retour en sujet' : nom(s)) + '</option>').join('');
-    const VIDES = { titre: 'Retiens une idée dans le Vivier.', ecriture: 'Aucun script en cours.', tournage: 'Rien à tourner.', montage: 'Rien au montage.', 'en-pause': 'Rien en pause.', publie: 'Rien de publié depuis 30 jours.' };
+    const VIDES = { titre: 'Retiens une idée dans le Vivier.', ecriture: 'Aucun script en cours.', tournage: 'Rien à tourner.', montage: 'Rien au montage.', programme: 'Rien de programmé.', 'en-pause': 'Rien en pause.', publie: 'Rien de publié depuis 30 jours.' };
     const cols = colonnes.map(s => {
       const cartes = dans(s).map(v => '<article class="carte"><button type="button" class="lien-fiche" data-fiche="' + esc(v.chemin) + '">' + esc(v.titre) + '</button>' +
         '<div class="puces">' + (v.objectif ? puce(v.objectif) : '') + (v.score !== '' ? puce('score ' + v.score, 'accent') : '') + (v.projet ? puce('projet lié') : '') + '</div>' +

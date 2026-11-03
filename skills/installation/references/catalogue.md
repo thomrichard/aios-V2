@@ -27,7 +27,7 @@ Explique chaque mot en une phrase, avec un exemple :
 
 | Type | Ce que c'est | Statuts | Fin | Chemin |
 |---|---|---|---|---|
-| video | Une vidéo, de l'idée aux stats à 30 jours : une seule fiche, seul son statut avance | sujet, retenu, titre, ecriture, tournage, montage, en-pause, publie, abandonne | publie, abandonne | `domaines/<domaine>/<slug>-<date>.md` |
+| video | Une vidéo, de l'idée aux stats à 30 jours : une seule fiche, seul son statut avance | sujet, retenu, titre, ecriture, tournage, montage, programme, en-pause, publie, abandonne | publie, abandonne | `domaines/<domaine>/<slug>-<date>.md` |
 | post | Un post sur un réseau social | sujet, en-cours, a-valider, publie | publie | `domaines/<domaine>/<slug>-<date>.md` |
 | newsletter | Une édition de la newsletter | sujet, en-cours, a-valider, publie | publie | `domaines/<domaine>/<slug>-<date>.md` |
 | proposition | Une proposition commerciale | en-cours, envoyee, signee, refusee | signee, refusee | `domaines/<domaine>/<slug>.md` |
