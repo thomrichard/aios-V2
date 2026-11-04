@@ -12,7 +12,7 @@ import sys
 
 from index import (DEBUT_CARTE, DEBUT_PROJETS, DOSSIERS, FIN_CARTE, FIN_PROJETS, IGNORES, LOURDS, META,
                    chemin_attendu, chemins, domaines, famille_de, familles, les_processus, lire_entete, mots,
-                   skills_utilisees, slug_de, tableaux, types_regles)
+                   skills_dispensees, skills_utilisees, slug_de, tableaux, types_regles)
 from lancer import dossier_lourds
 
 RACINE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -145,9 +145,10 @@ def controler_familles():
     connues = familles()
     if not connues or not os.path.isdir(chemin("skills")):
         return
+    dispensees = skills_dispensees()
     for nom in sorted(os.listdir(chemin("skills"))):
         fichier = chemin("skills", nom, "SKILL.md")
-        if not os.path.exists(fichier):
+        if not os.path.exists(fichier) or nom in dispensees:
             continue
         famille = famille_de(fichier)
         if not famille:
@@ -290,9 +291,10 @@ def controler_plafonds():
             if n > maximum:
                 avertissements.append(f"{rel} fait {n} lignes, hors blocs générés (plafond : {maximum})")
     if os.path.isdir(chemin("skills")):
+        dispensees = skills_dispensees()
         for nom in sorted(os.listdir(chemin("skills"))):
             rel = f"skills/{nom}/SKILL.md"
-            if os.path.exists(chemin(rel)):
+            if os.path.exists(chemin(rel)) and nom not in dispensees:
                 n = len(lignes_ecrites(rel))
                 if n > SKILL_INDEX:
                     avertissements.append(f"{rel} fait {n} lignes, hors blocs générés : au-delà de {SKILL_INDEX}, il devient un index qui renvoie vers references/")
