@@ -967,6 +967,17 @@ async function projectChanges(rel, since) {
    added to feedback.md, the line /note writes. */
 const SKILL_MAX_LINES = 80;
 const SKILL_INDEX_LINES = 120;
+/* The skills taken as they are from an outside author: the « Skill dispensée » table of systeme/metadonnees.md */
+function skillsDispensees(root) {
+  const out = new Set(); let dans = false;
+  for (const l of readText(path.join(root, 'systeme', 'metadonnees.md')).split(/\r?\n/)) {
+    if (!l.startsWith('|')) { dans = false; continue; }
+    const c = l.split('|')[1].trim().replace(/`/g, '');
+    if (c === 'Skill dispensée') dans = true;
+    else if (dans && c && !/^[-: ]+$/.test(c)) out.add(c);
+  }
+  return out;
+}
 const cellsOf = line => line.trim().replace(/^\||\|$/g, '').split('|').map(s => s.trim());
 const isRule = c => /^[-: ]*$/.test(c[0] || '-');
 const unquote = s => s.replace(/`/g, '').trim();
@@ -1087,6 +1098,7 @@ async function listSkills() {
   let names = []; try { names = fs.readdirSync(path.join(root, 'skills'), { withFileTypes: true }).filter(e => e.isDirectory() && !e.name.startsWith('.')).map(e => e.name).sort(); } catch (_) { }
   const familles = skillFamilies(root), uses = skillUses(root), socle = await socleSkills(root), usage = skillUsage();
   const skills = [];
+  const dispensees = skillsDispensees(root);
   for (const id of names) {
     const rel = 'skills/' + id + '/SKILL.md', abs = path.join(root, rel);
     let st; try { st = fs.statSync(abs); } catch (_) { continue; }
@@ -1096,7 +1108,7 @@ async function listSkills() {
       id, nom: h.name || id, chemin: rel, ...splitDescription(h.description || ''), famille: h.famille || '',
       origine: socle ? (socle.has(id) ? 'socle' : 'perso') : '', etapes: skillSteps(body), journal: skillJournal(body),
       retours: notes.attente, faits: notes.faits.length, feedback: fs.existsSync(path.join(root, 'skills', id, 'feedback.md')) ? 'skills/' + id + '/feedback.md' : '',
-      sert: uses.get(id) || [], lignes: text.replace(/\n$/, '').split(/\r?\n/).length, plafond: SKILL_MAX_LINES, plafondIndex: SKILL_INDEX_LINES, m: Math.round(st.mtimeMs),
+      sert: uses.get(id) || [], lignes: text.replace(/\n$/, '').split(/\r?\n/).length, plafond: SKILL_MAX_LINES, plafondIndex: SKILL_INDEX_LINES, dispensee: dispensees.has(id), m: Math.round(st.mtimeMs),
       usage: u ? { r7: u.runs7 || 0, r30: u.runs30 || 0, tok30: u.tok30 || 0, cout30: u.cost30 || 0, der: u.last || null, jours: u.days || null } : null
     });
   }

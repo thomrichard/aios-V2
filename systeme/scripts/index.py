@@ -146,6 +146,11 @@ def familles():
     return trouvees
 
 
+def skills_dispensees():
+    """Les skills reprises telles quelles, du tableau « Skill dispensée » de systeme/metadonnees.md : ni plafond ni famille."""
+    return {r.get("Skill dispensée", "").strip("`") for r in tableaux(META, "Skill dispensée")} - {""}
+
+
 def famille_de(chemin):
     """La famille d'une skill : la ligne « famille: » de l'en-tête de son SKILL.md, sous « metadata: » ou non."""
     try:

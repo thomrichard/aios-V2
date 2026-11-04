@@ -84,3 +84,5 @@ Le socle fournit une base qui marche sans rien changer. Les domaines et les type
 | `_index.md` | 100 lignes |
 | `SKILL.md` | 80 lignes. De 81 à 120 : une alerte. Au-delà de 120 : il devient un index qui renvoie vers `references/` |
 | `outbox/points/` | 7 jours |
+
+Une skill reprise telle quelle d'un auteur extérieur peut être dispensée du plafond et de la famille : une ligne dans le tableau « Skill dispensée » de la section « Ce workspace » de `systeme/metadonnees.md`.
