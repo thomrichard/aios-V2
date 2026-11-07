@@ -26,3 +26,6 @@ Ce que le projet produit : `- [<nom>](<chemin ou lien>) · <état>` ; état : à
 
 ## Sources
 Ce qui nourrit le projet : `- [<nom>](<chemin ou lien>)`.
+
+## Historique
+Les bilans de session (skill `bilan`), le plus récent en haut ; les 3 derniers seulement, les autres dans `archives/historique/<slug>.md`.

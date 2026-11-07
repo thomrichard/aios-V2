@@ -643,6 +643,22 @@ function readForEditor(rel) {
   const utf8 = Buffer.from(content, 'utf8').equals(buf);
   return { ...base, content, hash: sha1(buf), editable: !base.generated && utf8, notUtf8: !utf8 || undefined };
 }
+/* AIOS: what the explorer shows (Fichiers, Orbes, Disque). These views are for the person, to find a file: the
+   fiches, the images and the documents. What is written for the agent (data, code, transcripts, generated indexes)
+   and archives/ stay out; a link from a fiche still opens them. Every other feature keeps the full listFiles(). */
+const POUR_MOI_EXT = new Set(['.md', '.markdown', '.pdf', '.docx', '.xlsx', '.pptx', '.excalidraw', ...Object.keys(IMAGE_TYPES)]);
+const pourMoi = f => POUR_MOI_EXT.has(path.extname(f.p).toLowerCase()) && !/(^|\/)_(index|images)\.md$/.test(f.p) && !f.p.startsWith('archives/');
+function listFilesForMe() {
+  const all = listFiles();
+  if (all.error) return all;
+  const files = [], caches = [], dirs = new Set();
+  for (const f of all.files) {
+    if (!pourMoi(f)) { caches.push(f.p); continue; }
+    files.push(f);
+    const parts = f.p.split('/'); for (let i = 1; i < parts.length; i++) dirs.add(parts.slice(0, i).join('/'));
+  }
+  return { ...all, files, dirs: all.dirs.filter(d => dirs.has(d)), caches };
+}
 /* a search in the text of every Markdown and text file: accents and case do not count */
 const fold = s => String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 function searchFiles(q) {
@@ -650,7 +666,7 @@ function searchFiles(q) {
   if (needle.length < 2) return { q, results: [] };
   const { root, files } = listFiles(), results = [];
   for (const f of files) {
-    if ((f.k !== 'md' && f.k !== 'text') || f.s > READ_MAX) continue;
+    if ((f.k !== 'md' && f.k !== 'text') || f.s > READ_MAX || !pourMoi(f)) continue;
     let text; try { text = fs.readFileSync(path.join(root, f.p), 'utf8'); } catch (_) { continue; }
     const folded = fold(text);
     let at = folded.indexOf(needle);
@@ -1842,8 +1858,8 @@ function reglerRoutine({ cle, cron, etat, plafond, niveau }) {
 const ORBITE_HORS = new Set(['archives', 'vues', 'systeme', 'interface', 'outbox', 'skills', 'routers', 'domaines']);
 const ORBITE_COULEURS = ['#2EE6C9', '#B69CFF', '#FBBF24', '#F472B6', '#4DA8FF', '#4ADE80', '#FF7A45', '#67E8F9'];
 const ORBITE_NEUTRE = '#9DB0AC', ORBITE_NOMMES = 12, ORBITE_LISTE = 2000;
-/* the files a level counts: everything but the generated indexes and the image lists */
-const orbiteCompte = f => !/(^|\/)_(index|images)\.md$/.test(f.p);
+/* the files a level counts: the ones the explorer shows (pourMoi) */
+const orbiteCompte = f => pourMoi(f);
 function orbiteDomaines(root) {
   const seen = new Map();
   for (const r of tablesOf(readText(path.join(root, 'systeme', 'metadonnees.md')), 'Domaine')) {
@@ -2144,7 +2160,7 @@ const server = http.createServer(async (req, res) => {
     /* ---- the file editor ---- */
     if (p2.startsWith('/local/files') && !post) {
       try {
-        if (p2 === '/local/files') return sendJson(res, listFiles());
+        if (p2 === '/local/files') return sendJson(res, listFilesForMe());
         if (p2 === '/local/files/read') { const r = readForEditor(u.searchParams.get('path')); if (u.searchParams.get('stat')) delete r.content; return sendJson(res, r); }
         if (p2 === '/local/files/search') return sendJson(res, searchFiles(u.searchParams.get('q')));
         if (p2 === '/local/files/raw') return serveRaw(req, res, u.searchParams.get('path'));

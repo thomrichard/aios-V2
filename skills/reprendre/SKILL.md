@@ -13,10 +13,10 @@ metadata:
    - les projets actifs d'`AGENTS.md`, puis `projets/<slug>.md` ;
    - le routeur du domaine ;
    - les dernières lignes de `journal/log.md` ;
-   - `journal/clotures/` et `journal/entretiens/` ;
+   - `journal/entretiens/`, puis `archives/historique/` pour un vieux bilan ;
    - les lignes « à reprendre » de `inbox/capture.md`, et `outbox/questions.md`.
    Plusieurs candidats : une seule question pour choisir. Rien : dis-le, et propose d'en faire un projet.
-2. **Lis l'essentiel, pas tout :** la fiche du projet (statut, prochaine étape, tâches, décisions, fichiers) ; les dernières lignes du journal ; le dernier bilan de clôture, s'il existe. Les fichiers liés (`vues/projet-<slug>.md` les liste tous, où qu'ils soient rangés) : leur en-tête d'abord, leur contenu seulement si la prochaine action en dépend.
+2. **Lis l'essentiel, pas tout :** la fiche du projet (statut, prochaine étape, tâches, décisions, fichiers) ; les dernières lignes du journal ; la dernière entrée de sa partie « Historique », s'il y en a une (son point de reprise). Les fichiers liés (`vues/projet-<slug>.md` les liste tous, où qu'ils soient rangés) : leur en-tête d'abord, leur contenu seulement si la prochaine action en dépend.
 3. **Donne le point, en 5 à 8 lignes :**
    - **Où on en est**, en une phrase ;
    - **Décidé** : les choix faits, et ce qu'on a écarté ;
@@ -36,3 +36,4 @@ metadata:
 - 2026-10-23 · création · se remettre à niveau sans tout réexpliquer ; l'autre moitié de close
 - 2026-10-27 · règles et décisions · une décision vit dans la fiche de son projet, une règle dans journal/regles.md
 - 2026-10-30 · close devient bilan et fermer · les deux écrivent le point de reprise
+- 2026-11-07 · le dernier bilan se lit dans la partie « Historique » de la fiche du projet · journal/clotures/ n'existe plus
