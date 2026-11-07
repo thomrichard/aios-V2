@@ -13,6 +13,7 @@ import os
 import re
 import sys
 import unicodedata
+import urllib.parse
 
 RACINE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DOSSIERS = ["projets", "processus", "domaines", "savoir", "bibliotheques"]
@@ -444,7 +445,59 @@ def vues():
         sommaire.append(f"| [projet-{slug}](projet-{slug}.md) | {cellule(resume)} | {len(par_projet[slug])} |")
     if len(sommaire) == 8:
         sommaire[-2:] = ["Aucune vue pour l'instant."]
+    groupes = hors_fiche()
+    if groupes:
+        yield os.path.join(VUES, "hors-fiche.md"), vue_hors_fiche(groupes)
+        sommaire.append(f"| [hors-fiche](hors-fiche.md) | Les fichiers qui ne sont pas des fiches et qu'aucune fiche ne lie : "
+                        f"ils s'ouvrent d'ici | {sum(len(n) for n in groupes.values())} |")
     yield os.path.join(VUES, "_index.md"), "\n".join(sommaire) + "\n"
+
+
+def hors_fiche():
+    """Les fichiers qui ne sont pas des fiches (.md) et qu'aucune fiche ne lie, dans les dossiers indexés :
+    {dossier relatif: [noms]}. La navigation ne montre que les fiches ; cette liste garde une porte vers le reste."""
+    lies, autres = set(), []
+    for base in DOSSIERS + ["journal"]:
+        for dossier, sous, fichiers in os.walk(os.path.join(RACINE, base)):
+            sous[:] = sorted(s for s in sous if not s.startswith(".") and s != "__pycache__")
+            for nom in sorted(fichiers):
+                chemin = os.path.join(dossier, nom)
+                if nom.startswith("."):
+                    continue
+                if not nom.endswith(".md"):
+                    autres.append(chemin)
+                    continue
+                if nom in IGNORES:
+                    continue
+                with open(chemin, encoding="utf-8", errors="ignore") as f:
+                    texte = f.read()
+                for lien in re.findall(r"\]\(<?([^)\s>]+)", texte) + re.findall(r"`([^`\s]+\.[A-Za-z0-9]{2,5})`", texte):
+                    lien = urllib.parse.unquote(lien.split("#")[0])
+                    if lien and "://" not in lien:
+                        lies.add(os.path.normpath(os.path.join(dossier, lien)))
+                        lies.add(os.path.normpath(os.path.join(RACINE, lien)))
+    groupes = {}
+    for chemin in autres:
+        if os.path.normpath(chemin) in lies:
+            continue
+        rel = os.path.relpath(chemin, RACINE).replace(os.sep, "/")
+        groupes.setdefault(os.path.dirname(rel), []).append(os.path.basename(rel))
+    return groupes
+
+
+def vue_hors_fiche(groupes):
+    total = sum(len(n) for n in groupes.values())
+    lignes = ["# vues · hors fiche", "", AVERTISSEMENT, "",
+              f"Les {total} fichiers qui ne sont pas des fiches (documents, images, données, code) et qu'aucune fiche "
+              "ne lie. La navigation ne les montre pas : ils s'ouvrent d'ici. Pour qu'un fichier sorte de cette liste, "
+              "ajoute son lien dans la fiche de son dossier.", "",
+              "| Dossier | Fichiers |", "|---|---|"]
+    for dossier in sorted(groupes):
+        lignes.append(f"| {dossier} | {len(groupes[dossier])} |")
+    for dossier in sorted(groupes):
+        lignes += ["", f"## {dossier}", ""]
+        lignes.append(" · ".join(f"[{n}](../{urllib.parse.quote(dossier + '/' + n)})" for n in groupes[dossier]))
+    return "\n".join(lignes) + "\n"
 
 
 def skills():
