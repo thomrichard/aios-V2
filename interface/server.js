@@ -644,9 +644,9 @@ function readForEditor(rel) {
   return { ...base, content, hash: sha1(buf), editable: !base.generated && utf8, notUtf8: !utf8 || undefined };
 }
 /* AIOS: what the explorer shows (Fichiers, Orbes, Disque). These views are for the person, to find a file: the
-   fiches, the images and the documents. What is written for the agent (data, code, transcripts, generated indexes)
-   and archives/ stay out; a link from a fiche still opens them. Every other feature keeps the full listFiles(). */
-const POUR_MOI_EXT = new Set(['.md', '.markdown', '.pdf', '.docx', '.xlsx', '.pptx', '.excalidraw', ...Object.keys(IMAGE_TYPES)]);
+   fiches and the documents. Images, and what is written for the agent (data, code, transcripts, generated indexes)
+   and archives/, stay out; a link or an image in a fiche still opens them, and the Bibliothèque keeps the images. Every other feature keeps the full listFiles(). */
+const POUR_MOI_EXT = new Set(['.md', '.markdown', '.pdf', '.docx', '.xlsx', '.pptx', '.excalidraw']);
 const pourMoi = f => POUR_MOI_EXT.has(path.extname(f.p).toLowerCase()) && !/(^|\/)_(index|images)\.md$/.test(f.p) && !f.p.startsWith('archives/');
 function listFilesForMe() {
   const all = listFiles();
