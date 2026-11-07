@@ -32,7 +32,7 @@
   };
 
   const S = {
-    files: [], byPath: new Map(), dirs: new Set(), root: '', sig: '', loaded: false,
+    files: [], byPath: new Map(), dirs: new Set(), caches: new Set(), root: '', sig: '', loaded: false,
     open: new Set(store.get('open', null) || ['domaines']), firstVisit: store.get('open', null) === null,
     q: '', filters: { type: '', statut: '', domaine: '', projet: '' }, hits: null, hitsFor: '',
     results: [], sel: -1, doc: null, mode: store.get('mode', 'preview'), edition: false, saving: false, blobs: new Map()
@@ -131,7 +131,7 @@
     const sig = (d.files || []).map(f => f.p + ':' + f.m + ':' + f.s).join('\n') + '\n' + (d.dirs || []).join('\n');
     if (sig === S.sig) { if (!S.doc) paintRecent(); return; }
     S.sig = sig;
-    S.files = d.files || []; S.byPath = new Map(S.files.map(f => [f.p, f])); S.dirs = new Set(d.dirs || []); S.root = d.root || S.root; S.loaded = true;
+    S.files = d.files || []; S.byPath = new Map(S.files.map(f => [f.p, f])); S.dirs = new Set(d.dirs || []); S.caches = new Set(d.caches || []); S.root = d.root || S.root; S.loaded = true;
     if (S.firstVisit) { for (const p of S.dirs) if (/^domaines\/[^/]+$/.test(p)) S.open.add(p); S.firstVisit = false; }
     paintFilters(); paintSide(); if (!S.doc) paintRecent();
     if (S.doc && !S.byPath.has(S.doc.path)) checkDisk();
@@ -532,7 +532,8 @@
     if (/^(https?:|mailto:)/i.test(href)) { window.open(href, '_blank', 'noopener'); return; }
     if (href.startsWith('#')) { pv.querySelector('#' + CSS.escape(decodeURIComponent(href.slice(1))))?.scrollIntoView({ block: 'start', behavior: 'smooth' }); return; }
     const p = resolve(href);
-    if (S.byPath.has(p)) openFile(p);
+    /* AIOS: a file kept out of the explorer (data, transcript) still opens from a link in its fiche */
+    if (S.byPath.has(p) || S.caches.has(p)) openFile(p);
     else if (S.dirs.has(p.replace(/\/$/, ''))) { revealDir(p.replace(/\/$/, '')); }
     else toast('Introuvable : ' + p, 'bad');
   });

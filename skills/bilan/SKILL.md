@@ -1,14 +1,14 @@
 ---
 name: bilan
-description: Clôt une session et écrit son bilan à valider : fait l'inventaire (décisions, livrables, ce qui n'existe que dans le chat, sujets ouverts), écrit tout à sa place (journal, fiches, projets, mémoire), fait de chaque sujet ouvert une tâche à reprendre, vérifie que rien ne traîne (Git, process lancés), puis écrit le bilan dans journal/clotures/ (statut a-valider), qui attend dans l'Outbox. Pour clore sans bilan : fermer. Déclencheurs : « bilan », « /bilan », « fais le bilan », « clôture la session », « close » (son ancien nom).
+description: Clôt une session et écrit son bilan à valider : fait l'inventaire (décisions, livrables, ce qui n'existe que dans le chat, sujets ouverts), écrit tout à sa place (journal, fiches, projets, mémoire), fait de chaque sujet ouvert une tâche à reprendre, vérifie que rien ne traîne (Git, process lancés), puis écrit le bilan dans la partie « Historique » de la fiche du projet, où seuls les 3 derniers restent. Pour clore sans bilan : fermer. Déclencheurs : « bilan », « /bilan », « fais le bilan », « clôture la session », « close » (son ancien nom).
 metadata:
   famille: sessions
 ---
 # bilan
 
-Après `bilan`, le chat peut disparaître sans aucune perte : ce qui a de la valeur vit sur le disque, le reste est jetable. On perd rarement la décision ; on perd le chemin : les options écartées, et pourquoi. Le bilan, lui, attend dans l'Outbox que l'utilisateur le relise et le valide.
+Après `bilan`, le chat peut disparaître sans aucune perte : ce qui a de la valeur vit sur le disque, le reste est jetable. On perd rarement la décision ; on perd le chemin : les options écartées, et pourquoi. Le bilan ne fait pas un fichier de plus : il s'ajoute en tête de la partie « Historique » de la fiche du projet, et se valide dans le chat.
 
-`fermer` fait les parties 1 à 4, sans bilan : rien n'attend dans l'Outbox.
+`fermer` fait les parties 1 à 4, sans bilan.
 
 ## 1. L'inventaire
 Relis toute la session et trie en quatre, puis montre l'inventaire en 5 à 8 lignes avant d'écrire :
@@ -37,11 +37,25 @@ Relis toute la session et trie en quatre, puis montre l'inventaire en 5 à 8 lig
 - Git : la sauvegarde de nuit enregistre le travail chaque jour, ne propose pas de commit en session. Si elle n'est pas en place (`systeme/routines.md`), dis-le en une ligne. Jamais de push sans accord.
 
 ## 5. Le bilan, puis le récap
-Écris le bilan dans `journal/clotures/<sujet>-AA-MM.md`, avec un en-tête de type `cloture` et `statut: a-valider` (gabarit : `systeme/gabarits/fiche.md`). Ses parties : **Périmètre** · **Réalisé** · **Décisions** · **Écrit où** (les chemins) · **Propositions non engagées** · **Limites** · **Point de reprise** (la phrase exacte pour reprendre chaque sujet ouvert, que `reprendre` relira). Il attend dans l'Outbox ; « Valider » le passe à `clos`.
+Ajoute le bilan en tête de la partie `## Historique` de `projets/<slug>.md` (crée la partie en bas de la fiche si elle manque). Il tient en une entrée courte, sans recopier ce qui est déjà ailleurs dans la fiche (les décisions vont dans « Décisions », les tâches dans « Tâches ») :
+
+```
+### AAAA-MM-JJ · <sujet>
+<ce qui est fait, en une ou deux phrases>
+Écrit où : <les chemins>
+Non engagé : <les propositions écartées ou en suspens, s'il y en a>
+Point de reprise :
+- « <la phrase exacte pour reprendre chaque sujet ouvert, que reprendre relira> »
+```
+
+- Seuls les 3 derniers bilans restent dans la fiche. Le plus ancien en trop part, tel quel, en tête de `archives/historique/<slug>.md` (en-tête de type `cloture`, `statut: clos`, à la création du fichier).
+- Plusieurs projets touchés : une entrée dans chacun, chacune sur sa part.
+- Aucun projet : pas d'historique ; la ligne de `journal/log.md` porte le sujet, et chaque point de reprise devient une ligne « à reprendre » de `inbox/capture.md` (partie 3).
+- Montre l'entrée dans le chat : c'est là qu'elle se valide. Rien n'attend dans l'Outbox.
 
 Puis lance `python3 systeme/scripts/index.py`, puis `python3 systeme/scripts/verifier.py`, jusqu'à « Tout est en ordre ».
 
-Le récap, dans le chat, en 5 à 10 lignes : **Fait** · **Écrit où** · **En attente** · **Point de reprise**, et le chemin du bilan. Si l'utilisateur t'a corrigé pendant la session, propose `calibrate`.
+Le récap, dans le chat, en 5 à 10 lignes : **Fait** · **Écrit où** · **En attente** · **Point de reprise**, et la fiche où le bilan s'est ajouté. Si l'utilisateur t'a corrigé pendant la session, propose `calibrate`.
 
 ## Garde-fous
 - Ne rien inventer : entre « décidé » et « exploré », dans le doute, écris « exploré ».
@@ -56,3 +70,4 @@ Le récap, dans le chat, en 5 à 10 lignes : **Fait** · **Écrit où** · **En 
 - 2026-10-28 · jalons et livrables · la page Projets les lit dans la fiche du projet
 - 2026-10-30 · close devient bilan ; le bilan s'écrit toujours, en a-valider, et attend dans l'Outbox ; fermer clôt sans bilan · l'Outbox ne montre plus que ce qui attend une validation
 - 2026-11-03 · plus de proposition de commit · les commits sont une sauvegarde quotidienne, pas un sujet de session
+- 2026-11-07 · le bilan s'ajoute à la partie « Historique » de la fiche du projet, 3 au plus, les autres dans archives/historique/ ; plus de fichier dans journal/clotures/ · des bilans à part doublaient la fiche du projet dans la recherche

@@ -54,7 +54,7 @@ Un fichier `a-valider`, ou de type `livrable`, s'affiche dans `outbox/index.html
 | concept | Une connaissance durable | en-cours, clos | clos | `savoir/<slug>.md` |
 | source | Une source à lire ou lue : un article, un PDF, une vidéo | a-lire, lue | lue | `savoir/<slug>.md` |
 | entretien | La fiche d'un entretien `grill-me` | en-cours, clos | clos | `journal/entretiens/<slug>-<date>.md` |
-| cloture | Le bilan d'une session, écrit par la skill `bilan` | a-valider, clos | clos | `journal/clotures/<slug>-<date>.md` |
+| cloture | Les anciens bilans d'un projet, sortis de sa partie « Historique » par la skill `bilan` | clos | clos | `archives/historique/<slug>.md` |
 | profil | Le profil d'installation, déposé dans `inbox/` | — | — | — |
 
 ## Familles de skills
