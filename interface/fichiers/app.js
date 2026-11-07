@@ -484,7 +484,7 @@
       if (/^(data:image\/)/i.test(s)) { img.src = s; return; }
       if (/^[a-z]+:/i.test(s) || s.startsWith('//')) { img.classList.add('far'); img.title = 'Image en ligne : pas affichée ici'; return; }
       const p = resolve(s);
-      if (S.byPath.get(p)?.k === 'image') blobUrl(p).then(u => { if (u) img.src = u; });
+      if (S.byPath.get(p)?.k === 'image' || (S.caches.has(p) && /\.(png|jpe?g|gif|webp|svg|avif|bmp|ico)$/i.test(p))) blobUrl(p).then(u => { if (u) img.src = u; });
       else { img.classList.add('far'); img.title = 'Image introuvable : ' + p; }
     });
     pvPane.scrollTop = top;
