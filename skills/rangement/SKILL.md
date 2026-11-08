@@ -13,10 +13,11 @@ Tu tournes la nuit, seul : tu ne poses aucune question et tu ne devines rien. Ce
 2. **L'inbox.** Pour chaque élément, sauf `capture.md` et ceux qui sont déjà dans `outbox/questions.md` :
    - texte brut, lien, PDF, vidéo, son → `fiche`, puis `classer` ;
    - document texte déjà écrit, image → `classer`.
-3. **La capture.** Chaque ligne de `inbox/capture.md` → `fiche` (suis la consigne écrite après « consigne : »), puis `classer`.
+3. **La capture.** Chaque ligne de `inbox/capture.md` → `fiche` (suis la consigne écrite après « consigne : »), puis `classer`. Une ligne « à reprendre » reste en place : elle revient dans le point du jour quand son moment arrive.
 4. Lance `python3 systeme/scripts/index.py`, puis `python3 systeme/scripts/verifier.py`.
 5. **Le point du jour**, dans `outbox/points/AAAA-MM-JJ.md` (date : `date +%F`) :
    - en tête, `- [ ] Lu` ;
+   - « À reprendre aujourd'hui » : les lignes « à reprendre » de `inbox/capture.md` dont la consigne donne un moment (une date, un mois) qui tombe aujourd'hui ou est passé ; pour chacune, le sujet en quelques mots et son point de reprise entre guillemets. Une ligne sans date n'y va pas ; si aucune n'est due, pas de rubrique ;
    - « Rangé cette nuit » : une ligne par élément, avec son lien ;
    - « Questions en attente » : leur nombre, et le lien vers `outbox/questions.md` ;
    - « Routines » : les lignes `routine` de `journal/log.md` écrites depuis le dernier point du jour, telles quelles ; un échec ou un abandon passe aussi dans « À regarder » ;
@@ -33,3 +34,4 @@ Tu tournes la nuit, seul : tu ne poses aucune question et tu ne devines rien. Ce
 - 2026-10-23 · création · vider l'inbox sans deviner, et mettre les questions de côté pour la journée
 - 2026-10-23 · rubrique « Routines » dans le point du jour · les routines directes laissent une ligne dans `journal/log.md`, le point du jour la reprend
 - 2026-10-30 · `outbox/ranges.md` compte parmi les fichiers qui ont leur place dans `outbox/` · l'onglet Outbox y garde la trace des fichiers validés dans la journée ; la nuit ne le touche pas
+- 2026-11-08 · rubrique « À reprendre aujourd'hui » dans le point du jour, et les lignes « à reprendre » de la capture restent en place · un rappel daté ne revenait nulle part le jour venu
