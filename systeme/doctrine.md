@@ -64,14 +64,14 @@ Le socle fournit une base qui marche sans rien changer. Les domaines et les type
 | Section | Qui la remplit | Quand elle change |
 |---|---|---|
 | Qui (nom de l'agent, rôle, ton, qui est l'utilisateur) | la skill `installation`, depuis le profil ou l'entretien | seulement à la demande de l'utilisateur |
-| Objectifs (les cibles de l'année) | la skill `installation` | à chaque revue trimestrielle : l'agent vérifie que les cibles sont toujours vraies face aux OKR, et propose la mise à jour |
+| Objectifs (les cibles de l'année) | `systeme/scripts/index.py`, depuis la partie « Cibles de l'année » de `domaines/operations/okr.md` (la skill `installation` la remplit) | à chaque lancement du script ; on ne l'écrit jamais à la main. À chaque revue trimestrielle, l'agent vérifie dans `okr.md` que les cibles sont toujours vraies, et propose la mise à jour |
 | Carte des domaines | `systeme/scripts/index.py`, depuis `systeme/metadonnees.md` | à chaque lancement du script ; on ne l'écrit jamais à la main |
 | Projets actifs | `systeme/scripts/index.py`, depuis l'en-tête des fichiers de `projets/` | à chaque lancement du script ; on ne l'écrit jamais à la main |
 | Règles, comment tu travailles | l'agent, après accord | quand une règle manque ou qu'une correction revient ; une ligne, au bon endroit, et le pourquoi dans `journal/regles.md` |
 
-- Les cibles de l'année font foi dans `AGENTS.md` ; les OKR du trimestre dans `domaines/operations/okr.md`. On ne recopie pas l'un dans l'autre.
+- Les cibles de l'année et les OKR du trimestre font foi dans `domaines/operations/okr.md`, un seul endroit à changer. `AGENTS.md` garde une copie générée des cibles, pour que l'agent les ait sous les yeux à chaque session.
 - Jamais de réécriture complète sans demande.
-- Au-delà de 150 lignes écrites à la main (la carte et les projets actifs, générés, ne comptent pas), le détail part dans un routeur ou dans `systeme/`.
+- Au-delà de 150 lignes écrites à la main (les cibles, la carte et les projets actifs, générés, ne comptent pas), le détail part dans un routeur ou dans `systeme/`.
 - Le `CLAUDE.md` global de la machine reste vide : tout vit dans le workspace, donc tout reste portable.
 
 ## Plafonds

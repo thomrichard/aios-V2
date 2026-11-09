@@ -13,11 +13,15 @@ Ce que tu sais d'autre sur l'utilisateur est dans `memory/` (souvenirs `user_`).
 
 ## Objectifs
 
-Les cibles de l'année font foi ici ; le détail du trimestre est dans `domaines/operations/okr.md`.
+Les cibles de l'année se règlent dans `domaines/operations/okr.md`, partie « Cibles de l'année », jamais ici : `systeme/scripts/index.py` les recopie. Le détail du trimestre est dans le même fichier.
+
+<!-- Début des cibles : recopiées par systeme/scripts/index.py depuis la partie « Cibles de l'année » de domaines/operations/okr.md. Change-les là-bas. -->
 
 1. À définir (skill `installation`)
 2. À définir
 3. À définir
+
+<!-- Fin des cibles -->
 
 Filtre : chaque proposition doit rapprocher d'une de ces cibles. Sinon, dis-le en une ligne avant de continuer.
 

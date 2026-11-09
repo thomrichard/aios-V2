@@ -10,7 +10,8 @@ import re
 import subprocess
 import sys
 
-from index import (DEBUT_CARTE, DEBUT_PROJETS, DOSSIERS, FIN_CARTE, FIN_PROJETS, IGNORES, LOURDS, META,
+from index import (DEBUT_CARTE, DEBUT_CIBLES, DEBUT_PROJETS, DOSSIERS, FIN_CARTE, FIN_CIBLES, FIN_PROJETS,
+                   IGNORES, LOURDS, META,
                    chemin_attendu, chemins, domaines, famille_de, familles, les_processus, lire_entete, mots,
                    skills_dispensees, skills_utilisees, slug_de, tableaux, types_regles)
 from lancer import dossier_lourds
@@ -122,7 +123,7 @@ def obligatoire(regle, type_):
 
 def controler_domaines():
     """Chaque domaine réglé dans systeme/metadonnees.md a son routeur, chaque routeur a son domaine,
-    et AGENTS.md garde les balises de ses blocs générés (carte des domaines, projets actifs)."""
+    et AGENTS.md garde les balises de ses blocs générés (cibles de l'année, carte des domaines, projets actifs)."""
     noms = [nom for nom, _ in domaines()]
     for nom in noms:
         if not os.path.exists(chemin("routers", f"{nom}.md")):
@@ -134,7 +135,8 @@ def controler_domaines():
                 avertissements.append(f"routers/{fichier} : domaine absent de systeme/metadonnees.md")
     if os.path.exists(chemin("AGENTS.md")):
         texte = "\n".join(lignes_de("AGENTS.md"))
-        for bloc, debut, fin in (("la carte des domaines", DEBUT_CARTE, FIN_CARTE),
+        for bloc, debut, fin in (("les cibles de l'année", DEBUT_CIBLES, FIN_CIBLES),
+                                 ("la carte des domaines", DEBUT_CARTE, FIN_CARTE),
                                  ("les projets actifs", DEBUT_PROJETS, FIN_PROJETS)):
             if debut not in texte or fin not in texte:
                 avertissements.append(f"AGENTS.md a perdu les balises de {bloc} : ce bloc n'est plus généré")
@@ -269,12 +271,12 @@ def controler_lourds():
 
 
 def lignes_ecrites(rel):
-    """Les lignes écrites à la main : sans les blocs générés (la carte et les projets actifs d'AGENTS.md)."""
+    """Les lignes écrites à la main : sans les blocs générés (les cibles, la carte et les projets actifs d'AGENTS.md)."""
     gardees, dans_bloc = [], False
     for ligne in lignes_de(rel):
-        if ligne.strip() in (DEBUT_CARTE, DEBUT_PROJETS):
+        if ligne.strip() in (DEBUT_CIBLES, DEBUT_CARTE, DEBUT_PROJETS):
             dans_bloc = True
-        elif ligne.strip() in (FIN_CARTE, FIN_PROJETS):
+        elif ligne.strip() in (FIN_CIBLES, FIN_CARTE, FIN_PROJETS):
             dans_bloc = False
         elif not dans_bloc:
             gardees.append(ligne)
