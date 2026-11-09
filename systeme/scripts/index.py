@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Génère les _index.md depuis les en-têtes des fichiers, les vues (vues/ : un index par type et par projet,
-tous domaines confondus), la page outbox/index.html (sorties, process, skills), la carte des domaines et les projets
-actifs d'AGENTS.md, et les réglages de l'interface (départements, routines, applications) depuis
+tous domaines confondus), la page outbox/index.html (sorties, process, skills), les cibles de l'année (recopiées
+de domaines/operations/okr.md), la carte des domaines et les projets actifs d'AGENTS.md, et les réglages de l'interface (départements, routines, applications) depuis
 systeme/metadonnees.md, systeme/routines.md et systeme/connexions.md.
 
 Usage : python3 systeme/scripts/index.py [--check]
@@ -25,7 +25,11 @@ FIN_CARTE = "<!-- Fin de la carte -->"
 DEBUT_PROJETS = ("<!-- Début des projets actifs : générés par systeme/scripts/index.py depuis l'en-tête "
                  "des fichiers de projets/. -->")
 FIN_PROJETS = "<!-- Fin des projets actifs -->"
-META = os.path.join(RACINE, "systeme", "metadonnees.md")
+DEBUT_CIBLES = ("<!-- Début des cibles : recopiées par systeme/scripts/index.py depuis la partie « Cibles de l'année » "
+                "de domaines/operations/okr.md. Change-les là-bas. -->")
+FIN_CIBLES = "<!-- Fin des cibles -->"
+OKR = os.path.join(RACINE, "domaines", "operations", "okr.md")
+META =os.path.join(RACINE, "systeme", "metadonnees.md")
 VUES = os.path.join(RACINE, "vues")
 LOURDS = (".mp4", ".mov", ".m4v", ".mkv", ".avi", ".webm", ".mp3", ".wav", ".m4a", ".aac", ".flac", ".ogg", ".opus")
 COULEURS = ["#00bcd4", "#e040fb", "#fdd835", "#43a047", "#f44336", "#ec407a", "#26a69a", "#8d6e63"]
@@ -230,10 +234,24 @@ def projets_actifs():
     return lignes or ["Aucun pour l'instant."]
 
 
+def cibles_annee():
+    """Les lignes de la partie « Cibles de l'année » de okr.md, telles quelles ; vide si elle manque."""
+    try:
+        with open(OKR, encoding="utf-8") as f:
+            texte = f.read()
+    except (OSError, UnicodeDecodeError):
+        return []
+    m = re.search(r"^## Cibles de l['’]année[^\n]*\n(.*?)(?=^## |\Z)", texte, re.M | re.S)
+    return m.group(1).strip().splitlines() if m and m.group(1).strip() else []
+
+
 def agents():
-    """AGENTS.md, avec la carte des domaines et les projets actifs régénérés entre leurs balises."""
+    """AGENTS.md, avec les cibles de l'année, la carte des domaines et les projets actifs régénérés entre leurs balises."""
     with open(os.path.join(RACINE, "AGENTS.md"), encoding="utf-8") as f:
         texte = f.read()
+    cibles = cibles_annee()
+    if cibles:
+        texte = remplacer_bloc(texte, DEBUT_CIBLES, FIN_CIBLES, cibles)
     carte = ["| Domaine | Ce qu'il couvre | Routeur |", "|---|---|---|"]
     carte += [f"| {nom} | {cellule(couvre)} | `routers/{nom}.md` |" for nom, couvre in domaines()]
     texte = remplacer_bloc(texte, DEBUT_CARTE, FIN_CARTE, carte)

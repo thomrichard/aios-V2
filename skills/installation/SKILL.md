@@ -1,6 +1,6 @@
 ---
 name: installation
-description: Installe et personnalise l'AIOS. Reprend le profil déposé dans inbox/ s'il existe, pose avec grill-me les questions imposées qui restent, remplit AGENTS.md (identité, objectifs, domaines), crée les routeurs, puis vérifie le workspace. À lancer une fois après le clonage, ou pour refaire la personnalisation. Déclencheurs : « installe l'AIOS », « installation », « personnalise mon AIOS ».
+description: Installe et personnalise l'AIOS. Reprend le profil déposé dans inbox/ s'il existe, pose avec grill-me les questions imposées qui restent, remplit AGENTS.md (identité, domaines) et les objectifs dans okr.md, crée les routeurs, puis vérifie le workspace. À lancer une fois après le clonage, ou pour refaire la personnalisation. Déclencheurs : « installe l'AIOS », « installation », « personnalise mon AIOS ».
 metadata:
   famille: systeme
 ---
@@ -27,6 +27,7 @@ metadata:
 1. Pour chaque domaine : sa ligne et ses types (avec leurs statuts) dans la section « Ce workspace » de `systeme/metadonnees.md`, un routeur (gabarit `systeme/gabarits/routeur.md`) et un dossier `domaines/<domaine>/`. N'écris pas la carte d'`AGENTS.md` : `index.py` la recopie. Le domaine `operations` existe déjà.
    Ajoute aussi, pour tout le monde, le type `idee` et le champ `ressortir` (`references/catalogue.md`, « Pour tout le monde : les idées »), sauf refus.
 2. Un fichier par projet en cours (gabarit `systeme/gabarits/projet.md`) ; `index.py` l'ajoute aux projets actifs d'`AGENTS.md`.
+   Les cibles de l'année vont dans la partie « Cibles de l'année » de `domaines/operations/okr.md`, jamais dans `AGENTS.md` : `index.py` les y recopie.
 3. Le profil part dans `archives/inbox/AAAA-MM/`.
 4. Lance `systeme/scripts/index.py`, puis `systeme/scripts/verifier.py`, jusqu'à « Tout est en ordre ».
 5. Active le contrôle avant chaque commit : `git config core.hooksPath systeme/hooks`.
@@ -41,7 +42,7 @@ metadata:
 - Si une section est déjà remplie, montre-la et demande s'il faut la garder.
 - Une réponse « je ne sais pas » s'écrit « À définir » ; elle reviendra dans le point du jour.
 - Ne demande jamais une clé d'API dans le chat : indique de la coller dans `.env`.
-- N'écris rien de personnel hors de `AGENTS.md` (Qui, Objectifs), `memory/`, `routers/`, `projets/`, `domaines/`, `journal/` et la section « Ce workspace » de `systeme/metadonnees.md`.
+- N'écris rien de personnel hors de `AGENTS.md` (Qui), `memory/`, `routers/`, `projets/`, `domaines/`, `journal/` et la section « Ce workspace » de `systeme/metadonnees.md`.
 - Ne branche aucun outil et ne crée aucune routine pendant l'installation : note-les seulement.
 
 ## Journal des changements
@@ -56,3 +57,4 @@ metadata:
 - 2026-10-24 · Q15, le dépôt privé (distant `prive`) · la sauvegarde de nuit y pousse le travail du jour
 - 2026-10-24 · le type `idee` et le champ `ressortir` pour tout le monde · les envies « un jour, peut-être » ont leur place dès l'installation
 - 2026-10-27 · règles et décisions · une décision vit dans la fiche de son projet, une règle dans journal/regles.md
+- 2026-11-09 · les cibles de l'année s'écrivent dans okr.md, index.py les recopie dans AGENTS.md · une seule source pour les chiffres, toujours sous les yeux de l'agent
