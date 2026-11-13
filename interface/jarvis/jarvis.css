@@ -1,0 +1,37 @@
+/* SM4RT Jarvis: what is proper to the assistant page. The look (variables, night and day, colours) and the shared
+   pieces (buttons, Apparence) live in ../assets/theme.css. */
+
+.barre{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
+.barre-d{display:flex;gap:4px;align-items:center}
+.fil-ariane{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+#ici{color:var(--texte-doux)}
+#reglages{left:auto;right:24px;top:56px;bottom:auto}
+.tete{display:flex;flex-direction:column;gap:10px}
+.tete h1{margin:0;font:600 40px/1.05 var(--police-titre);letter-spacing:-.03em}
+.tete p{margin:0;font-size:15px;color:var(--texte-doux)}
+#main{height:100vh;max-width:820px;width:100%}
+
+/* the conversation, then the sentence to send, always in sight */
+.fil{flex:1;min-height:0;overflow-y:auto;list-style:none;margin:0;padding:4px 0;display:flex;flex-direction:column;gap:12px}
+.ligne{display:flex;flex-direction:column;gap:6px;max-width:85%}
+.ligne p{margin:0;padding:10px 14px;border-radius:var(--rayon);font-size:15px;line-height:1.45;overflow-wrap:anywhere}
+.ligne.moi{align-self:flex-end}
+.ligne.moi p{background:var(--accent-doux);border:1px solid var(--accent-bord)}
+.ligne.lui{align-self:flex-start}
+.ligne.lui p{background:var(--surface-2);border:1px solid var(--bord)}
+.ligne.attente p{color:var(--texte-pale)}
+.ligne.erreur p{border-color:var(--danger)}
+.ligne small{font:11px var(--mono);color:var(--texte-pale);padding-left:14px}
+.resultats{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.resultat{width:100%;display:flex;flex-direction:column;gap:3px;padding:10px 14px;text-align:left;font:inherit;color:var(--texte);cursor:pointer;border-radius:var(--rayon-petit);background:transparent;border:1px solid var(--bord)}
+.resultat:hover{border-color:var(--accent-bord)}
+.resultat:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.resultat b{font-size:14px;font-weight:600}
+.resultat span{font-size:13px;color:var(--texte-doux)}
+.saisie{display:flex;gap:8px;padding:8px}
+.saisie input{flex:1;min-width:0;min-height:40px;padding:0 12px;font:inherit;font-size:15px;color:var(--texte);background:transparent;border:0;outline:0}
+.saisie:focus-within{border-color:var(--accent-bord)}
+@media (max-width:640px){
+  .tete h1{font-size:32px}
+  .ligne{max-width:100%}
+}

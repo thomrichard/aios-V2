@@ -82,3 +82,7 @@ Les scripts n'utilisent que Python 3, sans dépendance.
 - Claude Code lit-il `AGENTS.md` sans import ? L'import `@AGENTS.md` marche dans tous les cas.
 - Le support des skills (`SKILL.md`) dans Gemini CLI.
 - L'emplacement des skills pour Codex (`.agents/skills`).
+
+## Licence
+
+MIT : voir `LICENSE`. Le dossier `interface/` garde la licence MIT de son auteur, Jay E | RoboNuggets (`interface/LICENSE`).

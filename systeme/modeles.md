@@ -17,6 +17,7 @@ Une skill absente de ce tableau prend le niveau `moyen`.
 | audit | grand | haut |
 | installation | moyen | moyen |
 | grill-me | moyen | moyen |
+| jarvis | petit | bas |
 
 L'effort est indicatif : `lancer.py` ne le transmet pas encore à l'agent.
 

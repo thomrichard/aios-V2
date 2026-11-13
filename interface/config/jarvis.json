@@ -1,0 +1,9 @@
+{
+  "note": "La liste blanche de Jarvis : il n'ouvre que ces applications, et seulement si elles sont installées. Ajoute les tiennes : nom (comme tu le dis), app (le nom exact dans le dossier Applications du Mac), pour (quand l'ouvrir). Pour l'instant, ouvrir une application ne marche que sur Mac.",
+  "apps": [
+    { "nom": "Finder", "app": "Finder", "pour": "Les dossiers et les fichiers du Mac, le disque, les téléchargements." },
+    { "nom": "Notes", "app": "Notes", "pour": "Prendre une note rapide dans l'app Notes du Mac." },
+    { "nom": "Calendrier", "app": "Calendar", "pour": "L'app Calendrier du Mac." },
+    { "nom": "Safari", "app": "Safari", "pour": "Le navigateur : internet, une page web, une recherche." }
+  ]
+}
