@@ -1,5 +1,6 @@
-/* SM4RT menu: the left menu shared by every page of the socle (the home and its Orbes 3D and Disque, Projets, Jarvis, Vidéos, Skills,
-   Connecteurs, Routines, Fichiers, Bibliothèque, Outbox, and Réglages at the bottom). A page asks for it with <body data-page="projets"> and this script,
+/* SM4RT menu: the left menu shared by every page of the socle (the home and its Orbes 3D and Disque, Projets, Skills,
+   Connecteurs, Routines, Fichiers, Outbox, and Réglages at the bottom; Vidéos, Jarvis and Bibliothèque stay out of it for now,
+   their pages still answer at their address). A page asks for it with <body data-page="projets"> and this script,
    nothing else. It folds to a narrow rail (kept in this browser, the same for every page), marks the page you are on,
    shows how many files wait for your validation in the Outbox, and refreshes the data (routines, skills, connectors, usage). In the shell's
    frames, a click asks the shell to change tab (message sm4rt-menu); on its own, a page links to the others. */
@@ -17,13 +18,10 @@
   const ITEMS = [
     ['accueil', 'Accueil', '/', '<path d="M3 10.5 10 4l7 6.5V17a1 1 0 0 1-1 1h-4v-5H8v5H4a1 1 0 0 1-1-1z"/>'],
     ['projets', 'Projets', '/projets/', '<rect x="3" y="3" width="14" height="14" rx="3"/><path d="M7 7v6M10 7v3M13 7v5"/>'],
-    ['jarvis', 'Jarvis', '/jarvis/', '<circle cx="10" cy="10" r="7"/><circle cx="10" cy="10" r="2.5"/>'],
-    ['videos', 'Vidéos', '/videos/', '<rect x="2.5" y="4.5" width="15" height="11" rx="2.5"/><path d="m8.5 8 3.5 2-3.5 2z"/>'],
     ['skills', 'Skills', '/competences/', '<path d="M11 2 4 11h5l-1 7 7-9h-5l1-7z"/>'],
     ['connecteurs', 'Connecteurs', '/connecteurs/', '<path d="M7.5 2.5v4M12.5 2.5v4M5 6.5h10v3a5 5 0 0 1-10 0z"/><path d="M10 14.5v3"/>'],
     ['routines', 'Routines', '/routines/', '<circle cx="10" cy="10.5" r="7"/><path d="M10 6.5v4l2.6 2.6M7.5 2.5h5"/>'],
     ['fichiers', 'Fichiers', '/fichiers/', '<path d="M5 2.5h6.5L15 6v11.5H5z"/><path d="M11 2.5V6h4M8 10h4M8 13h4"/>'],
-    ['bibliotheque', 'Bibliothèque', '/bibliotheque/', '<rect x="3" y="4" width="14" height="12" rx="2"/><circle cx="7.5" cy="8.5" r="1.5"/><path d="m3.5 14.5 4.5-4 3 3 2-2 3.5 3"/>'],
     ['outbox', 'Outbox', '/outbox/', '<path d="M3 12v4a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-4"/><path d="M10 13V3M6 7l4-4 4 4"/>']
   ];
   const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
