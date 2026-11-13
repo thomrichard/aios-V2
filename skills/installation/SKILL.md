@@ -58,3 +58,4 @@ metadata:
 - 2026-10-24 · le type `idee` et le champ `ressortir` pour tout le monde · les envies « un jour, peut-être » ont leur place dès l'installation
 - 2026-10-27 · règles et décisions · une décision vit dans la fiche de son projet, une règle dans journal/regles.md
 - 2026-11-09 · les cibles de l'année s'écrivent dans okr.md, index.py les recopie dans AGENTS.md · une seule source pour les chiffres, toujours sous les yeux de l'agent
+- 2026-11-13 · Smarty, nom proposé par défaut pour l'agent (Q1) · un nom prêt pour qui n'en a pas en tête

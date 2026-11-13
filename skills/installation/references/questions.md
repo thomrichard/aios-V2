@@ -10,7 +10,7 @@ Pour la Q7, explique d'abord les mots domaine, type et statut, puis propose des 
 
 | # | Bloc | Question | Où l'écrire |
 |---|---|---|---|
-| 1 | Identité | Comment s'appelle ton agent ? | `AGENTS.md`, section Qui |
+| 1 | Identité | Comment s'appelle ton agent ? Propose Smarty, le nom par défaut : il le garde ou en choisit un autre. | `AGENTS.md`, section Qui |
 | 2 | Identité | Quel rôle lui donnes-tu (par exemple « chef de cabinet », « bras droit ») ? | `AGENTS.md`, section Qui |
 | 3 | Identité | Qui es-tu, en une phrase : ton métier et tes activités ? | `AGENTS.md`, section Qui |
 | 4 | Identité | Comment veux-tu qu'il te parle : langue, tutoiement ou vouvoiement (tutoiement par défaut), ton, longueur, et ce qu'il ne doit jamais écrire ? | `AGENTS.md`, section Qui ; les interdits en souvenirs `feedback_` dans `memory/` |

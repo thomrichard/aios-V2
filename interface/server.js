@@ -211,11 +211,13 @@ const PERSONAL_FROM = new RegExp(CFG.personalFrom || '@(gmail|googlemail|yahoo|o
 const jsonFrom = out => { const i = out.indexOf('{'); if (i < 0) throw new Error('pas de JSON renvoyé par la commande e-mail'); return JSON.parse(out.slice(i)); };
 const gwsParams = o => process.platform === 'win32' ? '"' + JSON.stringify(o).replace(/"/g, '\\"') + '"' : JSON.stringify(o);
 const MAIL_CATS = { partenariat: 'partnerships', coaching: 'leads', perso: 'personal', autre: 'other' };
+/* AIOS: the rules learned from « À classer » live in one file of the workspace: os-config.json "email.regles", else systeme/mail-apprentissage.md */
+const mailRulesFile = root => path.join(root, ...String(EMAIL.regles || 'systeme/mail-apprentissage.md').split('/').filter(s => s && s !== '..'));
 const AUTO_FROM = /no-?reply|notification|newsletter|mailer-daemon|do-?not-?reply/i;
 function mailRules() {
   const root = workspaceRoot(); if (!root) return [];
   try {
-    return fs.readFileSync(path.join(root, 'domaines', 'operations', 'mail-apprentissage.md'), 'utf8').split('\n')
+    return fs.readFileSync(mailRulesFile(root), 'utf8').split('\n')
       .map(l => l.match(/^\|\s*(expediteur|domaine|mot)\s*\|\s*(.+?)\s*\|\s*(partenariat|coaching|perso|autre)\s*\|/i))
       .filter(Boolean).map(m => ({ type: m[1].toLowerCase(), value: m[2].toLowerCase(), kind: MAIL_CATS[m[3].toLowerCase()] }));
   } catch (_) { return []; }
@@ -230,8 +232,12 @@ function learnMail(q) {
   if (!['expediteur', 'domaine', 'mot'].includes(scope) || !MAIL_CATS[cat]) throw new Error('règle inconnue');
   if (!value || value.length > 80 || /[|\n\r]/.test(value)) throw new Error('valeur refusée');
   const root = workspaceRoot(); if (!root) throw new Error('aucun workspace défini');
-  const f = path.join(root, 'domaines', 'operations', 'mail-apprentissage.md');
-  let txt = fs.readFileSync(f, 'utf8');
+  const f = mailRulesFile(root);
+  let txt; try { txt = fs.readFileSync(f, 'utf8'); } catch (e) {
+    if (e.code !== 'ENOENT') throw e;
+    const d = new Date().toISOString().slice(0, 10);
+    txt = `---\ntype: tableau\nresume: Les règles de tri des e-mails apprises dans l'accueil (« À classer ») : expéditeur, domaine ou mot, et sa catégorie\nstatut: en-cours\ndomaine: operations\ncree: ${d}\nmaj: ${d}\n---\n# Tri des e-mails : ce que l'accueil a appris\n\n| Type | Valeur | Catégorie |\n|---|---|---|\n`;
+  }
   const line = `| ${scope} | ${value} | ${cat} |`;
   if (!txt.split('\n').some(l => l.trim().toLowerCase() === line)) {
     txt = txt.replace(/\n*$/, '\n') + line + '\n';
@@ -2305,13 +2311,18 @@ const MIME = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css
   '.webp': 'image/webp', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.ico': 'image/x-icon', '.gif': 'image/gif', '.mp4': 'video/mp4', '.txt': 'text/plain' };
 const PUBLIC_FILES = new Set(['index.html', 'os.html', 'copy.css', 'copy.js', 'shell-extras.js', 'view-transitions.js', 'widgets.html']);
 const PUBLIC_DIRS = ['assets', 'brain', 'views', 'fichiers', 'bibliotheque', 'projets', 'competences', 'connecteurs', 'outbox', 'reglages', 'routines', 'videos', 'jarvis', 'orbite', 'disque'];
+const DEFAUT_FILES = new Set(['assets/home-orb-mini.js', 'brain/_icons.js', 'brain/snapshot-expansions.js', 'brain/snapshot.js', 'data/arms-usage.js', 'data/snapshot.js']);
 function publicFile(p2) {
   let rel; try { rel = decodeURIComponent(p2).replace(/^\/+/, ''); } catch (_) { return null; }
   if (!rel || rel.includes('\0') || rel.includes('\\')) return null;
   const top = rel.split('/')[0];
   if (!PUBLIC_FILES.has(rel) && !(PUBLIC_DIRS.includes(top) && rel.includes('/'))) return null;
   const abs = inside(KIT, rel);
-  try { return abs && fs.statSync(abs).isFile() ? abs : null; } catch (_) { return null; }
+  try { if (abs && fs.statSync(abs).isFile()) return abs; } catch (_) { }
+  /* AIOS: the files refresh/ writes are not in Git (each workspace builds its own); until the first refresh, the page
+     gets the empty version kept in defaut/ */
+  if (DEFAUT_FILES.has(rel)) { const d = path.join(KIT, 'defaut', rel); try { if (fs.statSync(d).isFile()) return d; } catch (_) { } }
+  return null;
 }
 function serveFile(req, res, file, extraHead = {}) {
   fs.stat(file, (err, st) => {
