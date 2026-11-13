@@ -35,7 +35,8 @@ metadata:
    S'il a donné un dépôt privé (Q15), ajoute-le comme distant : `git remote add prive <adresse>`. La routine « Sauvegarde de nuit » y poussera une fois en place.
 6. Rappelle de laisser vide le `CLAUDE.md` global de la machine.
 7. L'interface : si `node --version` donne 18 ou plus, lance `node interface/refresh/run.mjs`, puis propose `python3 systeme/scripts/interface.py installer` pour la garder allumée ; sinon, dis comment installer Node.
-8. Termine par un résumé : ce qui est rempli, ce qui reste « À définir ».
+8. Les routines : montre-les (`python3 systeme/scripts/routines.py etat`) et propose d'allumer celles qui entretiennent l'AIOS la nuit : `python3 systeme/scripts/routines.py installer rangement validation-de-nuit`, plus `sauvegarde-de-nuit` s'il a donné un dépôt privé (Q15). Allume-les après son oui seulement. Dis-lui qu'un ordinateur éteint ou endormi les lance à son réveil.
+9. Termine par un résumé : ce qui est rempli, ce qui reste « À définir », et les routines en place.
 
 ## Garde-fous
 - Propose avant de demander : pour les domaines et les types, une suggestion de `references/catalogue.md`, expliquée en mots simples, à garder, renommer ou retirer.
@@ -43,7 +44,7 @@ metadata:
 - Une réponse « je ne sais pas » s'écrit « À définir » ; elle reviendra dans le point du jour.
 - Ne demande jamais une clé d'API dans le chat : indique de la coller dans `.env`.
 - N'écris rien de personnel hors de `AGENTS.md` (Qui), `memory/`, `routers/`, `projets/`, `domaines/`, `journal/` et la section « Ce workspace » de `systeme/metadonnees.md`.
-- Ne branche aucun outil et ne crée aucune routine pendant l'installation : note-les seulement.
+- Ne branche aucun outil pendant l'installation : note-le seulement. Les routines ne s'allument qu'à l'étape 8, après son oui.
 
 ## Journal des changements
 - 2026-10-22 · création · questions imposées pour remplir AGENTS.md
@@ -59,3 +60,4 @@ metadata:
 - 2026-10-27 · règles et décisions · une décision vit dans la fiche de son projet, une règle dans journal/regles.md
 - 2026-11-09 · les cibles de l'année s'écrivent dans okr.md, index.py les recopie dans AGENTS.md · une seule source pour les chiffres, toujours sous les yeux de l'agent
 - 2026-11-13 · Smarty, nom proposé par défaut pour l'agent (Q1) · un nom prêt pour qui n'en a pas en tête
+- 2026-11-13 · à la fin, propose d'allumer les routines de nuit avec routines.py · un AIOS neuf qui s'entretient seul dès le premier soir

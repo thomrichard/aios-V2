@@ -17,22 +17,6 @@
       "cron": "0 2 * * *"
     },
     {
-      "id": "veille",
-      "name": "Veille (exemple)",
-      "source": "planificateur",
-      "desc": "lundi, 1 h · skill veille · passive",
-      "status": "paused",
-      "cron": "0 1 * * 1"
-    },
-    {
-      "id": "fiches-youtube",
-      "name": "Fiches YouTube",
-      "source": "planificateur",
-      "desc": "dimanche et jeudi, 1 h · sans IA · exemple · directe, passive : met à jour les fiches vidéo de `domaines/contenu/`",
-      "status": "paused",
-      "cron": "0 1 * * 0,4"
-    },
-    {
       "id": "validation-de-nuit",
       "name": "Validation de nuit",
       "source": "planificateur",
@@ -47,14 +31,6 @@
       "desc": "chaque nuit, 3 h · sans IA · directe, passive : envoie le travail du jour vers prive",
       "status": "paused",
       "cron": "0 3 * * *"
-    },
-    {
-      "id": "audit",
-      "name": "Audit",
-      "source": "planificateur",
-      "desc": "le 1er du mois, 1 h · skill audit · passive",
-      "status": "paused",
-      "cron": "0 1 1 * *"
     }
   ]
 }
