@@ -152,6 +152,7 @@ Avant de dire « c'est fait », vérifie : relance le test ou relis le fichier. 
 
 - Une routine = un prompt qui appelle une skill, lancé par `systeme/scripts/lancer.py` depuis un planificateur neutre (cron, launchd, Hermes).
 - Une routine directe lance une commande, sans IA : à préférer quand il n'y a rien à juger.
+- Les mettre en place sur ta machine : `python3 systeme/scripts/routines.py installer <routine>` (ou `--toutes`) ; `etat` dit ce qui est en place, `retirer` l'enlève.
 - Liste, horaires, type (active ou passive), plafond de coût et état (`à construire`, `en place`, `en pause`, `à la demande`) : `systeme/routines.md`. Chaque passage laisse une ligne dans `journal/routines.jsonl` ; l'onglet Routines la lit.
 
 ## Connexions
