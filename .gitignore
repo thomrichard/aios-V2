@@ -7,6 +7,13 @@ __pycache__/
 # interface : ce que le kit écrit en marchant, et ses clés
 interface/data/*.json
 interface/data/*.jsonl
+# ce que refresh/ écrit pour chaque workspace ; la version vide reste dans interface/defaut/
+interface/assets/home-orb-mini.js
+interface/brain/_icons.js
+interface/brain/snapshot-expansions.js
+interface/brain/snapshot.js
+interface/data/arms-usage.js
+interface/data/snapshot.js
 interface/os-runs/
 interface/artifacts/_trash/
 interface/snapshots/calendar.json
