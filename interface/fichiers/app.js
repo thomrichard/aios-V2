@@ -38,6 +38,7 @@
     results: [], sel: -1, doc: null, mode: store.get('mode', 'preview'), edition: false, saving: false, blobs: new Map()
   };
   const src = $('src'), hl = $('hl'), pv = $('preview'), pvPane = $('preview-pane');
+  let notes = null;   /* the comments on the open file (commentaires.js), made once everything below exists */
 
   /* ---------------------------- server ---------------------------- */
   async function api(url, opts) {
@@ -179,10 +180,11 @@
   function fileRow(f, depth, extra = '') {
     const m = metaOf(f), nom = baseName(f.p), titre = titreDe(f), resume = resumeDe(f);
     const tip = [titre, resume, f.p].filter(Boolean).join('\n');
-    const on = S.doc?.path === f.p;
+    const on = S.doc?.path === f.p, nc = notes ? notes.count(f.p) : 0;
     return `<div class="row file k-${f.k}${f.g ? ' gen' : ''}${on ? ' on' : ''}" role="treeitem" tabindex="${on ? 0 : -1}" aria-selected="${on}" data-file="${esc(f.p)}" style="--d:${depth}" title="${esc(tip)}">`
       + `<span class="ic">${ICONS[f.k] || ICONS.other}</span><span class="txt"><span class="l1"><span class="tt">${esc(titre)}${extra}</span>${autreNom(titre, nom) ? `<span class="fn">${esc(nom)}</span>` : ''}</span>`
       + (resume ? `<span class="rs">${esc(resume)}</span>` : '') + '</span>'
+      + (nc ? `<span class="nc" title="${nc} commentaire${nc > 1 ? 's' : ''}">${nc}</span>` : '')
       + (m.statut ? `<span class="st st-${esc(m.statut)}">${esc(m.statut)}</span>` : '') + (on && dirty() ? '<span class="dot" title="Non enregistré">●</span>' : '') + '</div>';
   }
   function paintTree() {
@@ -320,6 +322,7 @@
       src.scrollTop = 0; pvPane.scrollTop = 0;
     } else { src.value = ''; paintOther(); }
     paintMode(); paintState(); paintBanner(); syncEditable(); paintEdition();
+    notes?.doc();
   }
   /* reading, or writing: the buttons of the head follow */
   function paintEdition() {
@@ -354,6 +357,7 @@
     if ((m === 'preview' || m === 'split') && textDoc()) renderPreview(true);
     if (m === 'split') requestAnimationFrame(syncFromEditor);
     syncEditable();
+    notes?.mode();
   }
   function setMode(m) {
     if (!['preview', 'source', 'split'].includes(m)) return;
@@ -488,6 +492,7 @@
       else { img.classList.add('far'); img.title = 'Image introuvable : ' + p; }
     });
     pvPane.scrollTop = top;
+    notes?.rendered();
   }
   function resolve(href) {
     let h = String(href).split('#')[0].split('?')[0];
@@ -785,7 +790,7 @@
     if (r.error) { paintState(); toast('Pas enregistré : ' + r.error, 'bad'); return false; }
     d0.saved = text; d0.hash = r.hash; d0.mtime = r.mtime; d0.changed = false;
     if (r.content !== undefined && src.value === text) { lineEnds(d0, r.content); const sel = [src.selectionStart, src.selectionEnd], top = src.scrollTop; setText(d0.saved); src.setSelectionRange(...sel); src.scrollTop = top; }
-    paintState(); paintBanner();
+    paintState(); paintBanner(); notes?.mode();
     if (r.index?.ran && !r.index.ok) toast('Enregistré. Les index ne sont pas à jour : ' + r.index.message, 'warn');
     else toast(r.index?.ran ? 'Enregistré · index à jour' : 'Enregistré', 'ok');
     load();
@@ -813,8 +818,8 @@
   }
   setInterval(checkDisk, 5000);
   setInterval(() => { if (!document.hidden) load(); }, 30000);
-  addEventListener('focus', () => { checkDisk(); load(); });
-  document.addEventListener('visibilitychange', () => { if (!document.hidden) { checkDisk(); load(); } });
+  addEventListener('focus', () => { checkDisk(); load(); notes?.refresh(); });
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) { checkDisk(); load(); notes?.refresh(); } });
   addEventListener('beforeunload', e => { if (dirty()) { e.preventDefault(); e.returnValue = ''; } });
 
   /* ---------------------------- clicks and keys ---------------------------- */
@@ -928,8 +933,10 @@
     if (d.action === 'shown') { load(); checkDisk(); }
   });
 
+  notes = window.FilesNotes({ $, S, pv, pvPane, api, post, toast, esc, store, ago, openFile, textDoc, modeNow, dirty, paintSide,
+    titre: p => { const f = S.byPath.get(p); return f ? titreDe(f) : baseName(p); } });
   (async () => {
-    await load();
+    await Promise.all([load(), notes.refresh()]);
     const want = new URLSearchParams(location.search).get('f') || (location.hash.length > 1 ? decodeURIComponent(location.hash.slice(1)) : '') || store.get('last', '');
     if (want && S.byPath.has(want) && !S.doc) openFile(want);
     if (embedded) parent.postMessage({ type: 'files-copy-ready' }, '*');
