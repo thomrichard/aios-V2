@@ -39,3 +39,8 @@ interface/package-lock.json
 *.[fF][lL][aA][cC]
 *.[oO][gG][gG]
 *.[oO][pP][uU][sS]
+
+# inbox : les archives et installeurs déposés restent sur cet ordinateur (GitHub refuse un fichier de plus de 100 Mo)
+inbox/*.zip
+inbox/*.dmg
+inbox/*.pkg

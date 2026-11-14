@@ -14,6 +14,7 @@ Ranger, c'est mettre les bonnes métadonnées : la place s'en déduit. Tu ne tou
    - un document texte déjà écrit : il reçoit l'en-tête (étape 3) ;
    - du texte brut, un lien, un PDF, une vidéo, un son : il lui faut d'abord une fiche ; lance `fiche`, qui te rend la main ;
    - une image : choisis le dossier qui s'en sert, déplace-la, écris sa ligne dans le `_images.md` de ce dossier (gabarit `systeme/gabarits/images.md`). C'est fini.
+   - un fichier déjà rangé que `verifier.py` dit « pas à sa place » : cherche d'abord une autre fiche du même objet (même lien, même titre). Un doublon se fusionne : la fiche la plus à jour reste, l'autre part dans `archives/`, et les liens suivent. Si son dossier a plusieurs fichiers mais pas de fiche à son nom, c'est sans doute un objet : propose de lui écrire sa fiche plutôt que de le vider.
 3. Choisis chaque champ dans les réglages : le type, le domaine, le statut (celui de départ si rien ne dit mieux), un résumé d'une ligne, le projet s'il en sert un (`projets/`), `cree` (la date de l'élément, sinon aujourd'hui), `maj`, et `source` pour une capture. Rien hors des réglages : s'il manque un type ou un domaine, propose de l'ajouter dans « Ce workspace ».
 4. Lance `python3 systeme/scripts/ranger.py <fichier> --essai`, regarde où il va, puis relance sans `--essai`. S'il refuse, lis sa raison : corrige l'en-tête, ou pose la question.
 5. Si l'élément ouvre un nouveau dossier dans un domaine, ajoute-le au routeur du domaine. Une image qui a suivi sa fiche a besoin de sa ligne dans `_images.md`.
@@ -32,3 +33,4 @@ Ranger, c'est mettre les bonnes métadonnées : la place s'en déduit. Tu ne tou
 
 ## Journal des changements
 - 2026-10-23 · création · ranger, c'est mettre les bonnes métadonnées ; la place s'en déduit
+- 2026-11-14 · un fichier signalé « pas à sa place » : chercher d'abord un doublon (on fusionne) ou un dossier-objet sans fiche (on l'écrit) · les mêmes alertes revenaient chaque jour sans que personne ne tranche

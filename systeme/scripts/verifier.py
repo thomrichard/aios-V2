@@ -222,6 +222,21 @@ def controler_reglages():
                                   "contenir <slug> et n'utiliser que <domaine>, <date> et <slug>")
 
 
+def objet_du_haut(base, dossier):
+    """Le dossier-objet (<nom>/<nom>.md) le plus haut qui contient ce dossier, lui compris ; None s'il n'y en a pas.
+    Sous domaines/, le dossier du domaine n'en est jamais un."""
+    plancher = chemin(base)
+    rel = os.path.relpath(dossier, plancher)
+    if base == "domaines" and rel != ".":
+        plancher = os.path.join(plancher, rel.split(os.sep)[0])
+    haut, d = None, dossier
+    while d.startswith(plancher + os.sep):
+        if os.path.exists(os.path.join(d, os.path.basename(d) + ".md")):
+            haut = d
+        d = os.path.dirname(d)
+    return haut
+
+
 def controler_entetes():
     """Chaque en-tête suit systeme/metadonnees.md, et chaque fichier est au chemin que son type lui donne."""
     if not os.path.exists(META):
@@ -242,14 +257,20 @@ def controler_entetes():
                     avertissements.append(f"{rel} n'a pas d'en-tête (gabarit : systeme/gabarits/fiche.md)")
                     continue
                 avertissements.extend(ecarts_entete(e, rel, *regles))
-                # Dans un objet de plusieurs fichiers (<nom>/<nom>.md), seule la fiche du dossier a une place réglée.
-                if nom != parent + ".md" and os.path.exists(os.path.join(dossier, parent + ".md")):
+                # Dans un objet de plusieurs fichiers (<nom>/<nom>.md), seule la fiche de l'objet du haut a une place
+                # réglée : ses autres fichiers, et les sous-objets qu'il contient, le suivent.
+                haut = objet_du_haut(base, dossier)
+                if haut and os.path.join(dossier, nom) != os.path.join(haut, os.path.basename(haut) + ".md"):
                     continue
                 modele = modeles.get(e.get("type", ""))
                 attendu = modele and chemin_attendu(modele, e, slug_de(parent if nom == parent + ".md" else nom))
                 if attendu and rel not in (attendu, attendu[:-3] + "/" + os.path.basename(attendu)):
-                    avertissements.append(f"{rel} n'est pas à sa place : d'après son en-tête, il va dans {attendu} "
-                                          "(systeme/scripts/ranger.py l'y range)")
+                    message = f"{rel} n'est pas à sa place : d'après son en-tête, il va dans {attendu}"
+                    voisins = [n for n in fichiers if n.endswith(".md") and n not in IGNORES]
+                    if not haut and len(voisins) > 1 and os.path.dirname(rel) != os.path.dirname(attendu):
+                        d = os.path.dirname(rel)
+                        message += f" ; mais si {d}/ est un objet, c'est lui qui manque de sa fiche ({d}/{parent}.md)"
+                    avertissements.append(message + " (écarte d'abord un doublon ; systeme/scripts/ranger.py le range)")
 
 
 def controler_lourds():
