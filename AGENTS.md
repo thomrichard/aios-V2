@@ -98,8 +98,9 @@ Avant de dire « c'est fait », vérifie : relance le test ou relis le fichier. 
 7. Quand un fichier bouge ou qu'un projet démarre, mets à jour le routeur concerné dans le même tour. Un routeur donne les routes et les fichiers durables ; un fichier ponctuel (un post, un short) n'y entre pas, `_index.md` le liste. La carte et les projets actifs ci-dessus suivent avec `systeme/scripts/index.py`.
 8. Nommage : minuscules, tirets, sans espaces ni accents. Daté : `<slug>-AA-MM.md` (l'année et le mois de son champ `cree`). Durable : `<slug>.md`. Pas de dossier par type : le type est dans l'en-tête, seul le domaine est un dossier. Un objet qui a plusieurs fichiers a son dossier ; il peut contenir des sous-objets, chacun dans un dossier à son nom avec sa fiche.
 9. Ne supprime rien : déplace dans `archives/`.
-10. Pas de vidéo ni de son dans le dépôt : ils vont dans le dossier des fichiers lourds (`FICHIERS_LOURDS` dans `.env`), et leur fiche garde leur chemin (champ `fichier`).
+10. Pas de vidéo ni de son dans le dépôt : ils vont dans le dossier des fichiers lourds (`FICHIERS_LOURDS` dans `.env`), et leur fiche garde leur chemin (champ `fichier`). Pas de données de collecte non plus : elles vivent hors du dépôt, avec l'outil qui les produit.
 11. Les skills système, `systeme/scripts/`, `systeme/doctrine.md` et la base de `systeme/metadonnees.md` restent neutres, sans rien de personnel : ils forment le socle du kit.
+12. Le socle garde le cœur ; le reste est un plugin, avec son code, ses données, ses routines et ses skills. Une nouvelle fonction naît en plugin : `systeme/doctrine.md`, « Le cœur et les plugins ».
 
 ## S'améliorer
 

@@ -37,6 +37,7 @@ La place exacte d'un fichier se déduit de son en-tête : colonne « Chemin » d
 | Une capture de l'extérieur (veille, e-mail) | `inbox/`, avec `source:` dans l'en-tête ; le rangement de 2 h la classe |
 | Un PDF, un lien, un fichier qui ne peut pas porter d'en-tête | une fiche à son nom (skill `fiche`), qui le résume et lui sert d'index ; le fichier va à côté d'elle |
 | Une vidéo, un son | le dossier des fichiers lourds (`FICHIERS_LOURDS` dans `.env`, un dossier Google Drive synchronisé par exemple), hors du dépôt ; sa fiche reste dans le workspace, champ `fichier` |
+| Des données de collecte (ce qu'un script rapporte en volume : captures, exports, planches, sous-titres) | hors du dépôt, dans le dossier de l'outil ou du plugin qui les produit, avec sa propre sauvegarde ; le workspace n'en garde que la fiche |
 | Une image | le dossier qui s'en sert, avec sa ligne dans `_images.md` |
 | Une question du rangement qui attend ta réponse | `outbox/questions.md` ; l'élément attend dans l'inbox |
 | Un profil d'installation | `inbox/`, puis `archives/inbox/` une fois installé |
@@ -45,6 +46,16 @@ La place exacte d'un fichier se déduit de son en-tête : colonne « Chemin » d
 | Le code d'un tiers (l'interface de Jay) | `interface/`, avec sa licence ; il garde ses propres règles (pas d'en-tête, pas d'`_index.md`) |
 | Un élément de l'inbox déjà traité | `archives/inbox/AAAA-MM/` |
 | Un point du jour coché ou vieux de plus de 7 jours | `archives/outbox/` |
+
+## Le cœur et les plugins
+
+Le socle garde le cœur : les fiches et leurs en-têtes, les deux portes (inbox et outbox), les projets, la mémoire, les routines et leur alerte, les skills système, les connexions, les réglages, et l'interface qui les montre. Tout le reste est un plugin : une veille, un éditeur vidéo, un tableau de bord, le lien avec une plateforme.
+
+- Un plugin apporte ce qu'il lui faut : son code, ses données, ses routines, ses skills. Rien de lui ne vit dans le cœur, et le cœur marche sans lui.
+- L'interface les lance depuis une page à vignettes (à construire) : une vignette par plugin, avec un lien vers lui ; un plugin pas encore installé reste visible, grisé.
+- Un plugin est personnel (il sert un seul workspace et y reste) ou partagé (il se publie, et d'autres le branchent).
+- Une nouvelle fonction naît en plugin. Ce qui vit déjà dans un workspace migre quand on y touche.
+- Le contrat d'un plugin (où il vit, comment il se déclare, comment on le branche) s'écrira avec le premier plugin partagé.
 
 ## En-tête
 
@@ -84,5 +95,6 @@ Le socle fournit une base qui marche sans rien changer. Les domaines et les type
 | `_index.md` | 100 lignes |
 | `SKILL.md` | 80 lignes. De 81 à 120 : une alerte. Au-delà de 120 : il devient un index qui renvoie vers `references/` |
 | `outbox/points/` | 7 jours |
+| Un fichier du dépôt | 50 Mo. Au-delà : une alerte, et la sauvegarde de nuit s'arrête (GitHub refuse un fichier de plus de 100 Mo) |
 
 Une skill reprise telle quelle d'un auteur extérieur peut être dispensée du plafond et de la famille : une ligne dans le tableau « Skill dispensée » de la section « Ce workspace » de `systeme/metadonnees.md`.

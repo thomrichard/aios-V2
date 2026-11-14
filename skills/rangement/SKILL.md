@@ -21,7 +21,8 @@ Tu tournes la nuit, seul : tu ne poses aucune question et tu ne devines rien. Ce
    - « Rangé cette nuit » : une ligne par élément, avec son lien ;
    - « Questions en attente » : leur nombre, et le lien vers `outbox/questions.md` ;
    - « Routines » : les lignes `routine` de `journal/log.md` écrites depuis le dernier point du jour, telles quelles ; un échec ou un abandon passe aussi dans « À regarder » ;
-   - « À regarder » : les alertes du vérificateur, et les « À définir » d'`AGENTS.md` ;
+   - « À regarder » : les erreurs et les alertes du vérificateur, et les « À définir » d'`AGENTS.md` ;
+   - « Projets actifs » : leur nombre, en une ligne (les fiches de `projets/` au statut `actif`). Rien de plus : c'est l'utilisateur qui juge s'il y en a trop ;
    - s'il n'y a rien, une seule ligne : « Rien à signaler. »
 6. Ajoute une ligne à `journal/log.md` : `- AAAA-MM-JJ · processus rangement | <n> rangés, <n> questions`.
 
@@ -35,3 +36,4 @@ Tu tournes la nuit, seul : tu ne poses aucune question et tu ne devines rien. Ce
 - 2026-10-23 · rubrique « Routines » dans le point du jour · les routines directes laissent une ligne dans `journal/log.md`, le point du jour la reprend
 - 2026-10-30 · `outbox/ranges.md` compte parmi les fichiers qui ont leur place dans `outbox/` · l'onglet Outbox y garde la trace des fichiers validés dans la journée ; la nuit ne le touche pas
 - 2026-11-08 · rubrique « À reprendre aujourd'hui » dans le point du jour, et les lignes « à reprendre » de la capture restent en place · un rappel daté ne revenait nulle part le jour venu
+- 2026-11-14 · le point du jour donne le nombre de projets actifs, et les erreurs du vérificateur avec ses alertes · treize projets ouverts sans que rien ne le montre ; une erreur ne bloque plus la sauvegarde, elle doit donc se voir ici
