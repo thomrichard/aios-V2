@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Contrôle le workspace : source unique, liens vers skills/, index d'images, mémoire, process, domaines, en-têtes,
-plafonds, index et carte à jour.
+plafonds, taille des fichiers, index et carte à jour.
 
-Usage : python3 systeme/scripts/verifier.py
+Usage : python3 systeme/scripts/verifier.py               tout le contrôle
+        python3 systeme/scripts/verifier.py --sauvegarde  seulement ce qui ferait échouer l'envoi vers GitHub
 Code de sortie 1 s'il y a une erreur ; les avertissements ne bloquent pas.
+Avec --sauvegarde : rien quand tout va bien, code 1 si un fichier dépasse le plafond (la sauvegarde de nuit s'arrête).
 """
 import os
 import re
@@ -20,6 +22,7 @@ RACINE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file_
 IMAGES = (".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg")
 PLAFONDS = [("AGENTS.md", 150), ("memory/MEMORY.md", 100)]
 SKILL_PLAFOND, SKILL_INDEX = 80, 120
+FICHIER_LOURD = 50  # Mo : au-delà, un fichier ne part plus dans le dépôt (GitHub refuse 100 Mo)
 
 erreurs, avertissements = [], []
 
@@ -325,6 +328,33 @@ def controler_plafonds():
                     avertissements.append(f"{rel} fait {n} lignes, hors blocs générés : au-dessus de {SKILL_PLAFOND}, le détail peut aller dans references/")
 
 
+def fichiers_trop_gros():
+    """[(chemin, Mo)] des fichiers que Git prendrait (suivis, ou nouveaux et pas ignorés) au-dessus du plafond.
+    Hors d'un dépôt Git, rien."""
+    try:
+        r = subprocess.run(["git", "-C", RACINE, "ls-files", "-co", "--exclude-standard", "-z"],
+                           capture_output=True, text=True, timeout=120)
+    except (OSError, subprocess.SubprocessError):
+        return []
+    if r.returncode != 0:
+        return []
+    gros = []
+    for rel in r.stdout.split("\0"):
+        p = chemin(*rel.split("/")) if rel else ""
+        if p and os.path.isfile(p) and not os.path.islink(p):
+            taille = os.path.getsize(p)
+            if taille > FICHIER_LOURD * 1024 * 1024:
+                gros.append((rel, round(taille / 1024 / 1024)))
+    return sorted(gros)
+
+
+def controler_taille():
+    for rel, mo in fichiers_trop_gros():
+        avertissements.append(f"{rel} fait {mo} Mo (plafond : {FICHIER_LOURD} Mo) : GitHub refuse un fichier de plus de "
+                              "100 Mo, et la sauvegarde de nuit s'arrête. Sors-le du dépôt (le dossier des fichiers "
+                              "lourds, ou celui de l'outil qui l'a produit), ou ajoute-le à .gitignore")
+
+
 def controler_index():
     script = chemin("systeme", "scripts", "index.py")
     resultat = subprocess.run([sys.executable, script, "--check"], capture_output=True, text=True)
@@ -333,6 +363,12 @@ def controler_index():
 
 
 def main():
+    if "--sauvegarde" in sys.argv[1:]:
+        gros = fichiers_trop_gros()
+        for rel, mo in gros:
+            print(f"ERREUR  {rel} fait {mo} Mo (plafond : {FICHIER_LOURD} Mo) : la sauvegarde s'arrête, GitHub refuserait "
+                  "l'envoi. Sors-le du dépôt ou ajoute-le à .gitignore")
+        return 1 if gros else 0
     controler_import("CLAUDE.md", "## Spécifique Claude")
     controler_import("GEMINI.md", None)
     controler_liens()
@@ -344,6 +380,7 @@ def main():
     controler_entetes()
     controler_lourds()
     controler_plafonds()
+    controler_taille()
     controler_index()
     for e in erreurs:
         print(f"ERREUR  {e}")
