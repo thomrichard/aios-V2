@@ -1474,7 +1474,8 @@ async function jarvisDemande(q) {
 
 /* ---------------------------- OUTBOX: the outbox page (outbox/) ----------------------------
    AIOS: the Outbox tab shows, at this moment, what waits for your validation: every file whose header says
-   statut: a-valider (the report of a /bilan, a deliverable, a meeting report), and nothing else. A fiche that describes
+   statut: a-valider (a deliverable that has to go out), and nothing else. A file with a source: field was made by a
+   routine from outside (a capture): the point du jour cites it, the Outbox does not (2026-11-14). A fiche that describes
    a file without a header (a PDF, a picture, a video) leads to that file: the one beside it with the same name, or the
    one its fichier: field names in the heavy files folder. « Valider » gives the file the end status of its type
    (clos, as systeme/metadonnees.md says) and maj: today (POST /local/outbox/valider): nothing moves.
@@ -1559,7 +1560,7 @@ function listOutbox() {
   if (!root) return { error: 'Aucun workspace défini (config/workspace.json)', entrees: [] };
   const all = listFiles(), lourds = heavyDir(root), voisins = new Map(), idx = outboxProjects(root), projets = {};
   for (const f of all.files) { const d = path.posix.dirname(f.p); if (!voisins.has(d)) voisins.set(d, []); voisins.get(d).push(f); }
-  const entrees = all.files.filter(f => f.h && f.h.statut === 'a-valider' && !f.g && !OUTBOX_HORS.some(h => f.p.startsWith(h))).map(f => {
+  const entrees = all.files.filter(f => f.h && f.h.statut === 'a-valider' && !f.h.source && !f.g && !OUTBOX_HORS.some(h => f.p.startsWith(h))).map(f => {
     const h = f.h, base = path.posix.basename(f.p).replace(/\.md$/i, '');
     /* the file the fiche describes: the one beside it with its name, else the one its fichier: field names */
     let cible = null;

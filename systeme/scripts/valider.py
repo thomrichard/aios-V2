@@ -3,7 +3,8 @@
 dernière retouche (champ maj, sinon cree) a plus de N jours (3 par défaut) prend le statut de fin de son type
 (clos, d'après systeme/metadonnees.md), et maj prend la date du jour. Le fichier ne bouge pas.
 
-Une ligne dans journal/log.md dit ce qui a été validé ; le point du jour la reprend. Sans IA : c'est une routine
+Validé par la nuit ne veut pas dire lu : la trace dans outbox/ranges.md porte « nuit, non lu », et la ligne de
+journal/log.md dit combien sont passés sans lecture ; le point du jour la reprend. Sans IA : c'est une routine
 directe (systeme/routines.md).
 
   python3 systeme/scripts/valider.py            valide ce qui attend depuis plus de 3 jours
@@ -92,17 +93,24 @@ def main():
     if not faits:
         print(f"Rien n'attend depuis plus de {a.jours} jours.")
         return 0
-    print(("Validerait" if a.essai else "Validé") + f" ({len(faits)}) :")
+    print(("Validerait" if a.essai else "Validé") + f" par la nuit, non lu ({len(faits)}) :")
     for rel in faits:
         print("  " + rel)
     if not a.essai:
+        # la trace de l'Outbox, marquée « nuit, non lu » : personne n'a relu ces fichiers
+        quand = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
+        ranges = os.path.join(RACINE, "outbox", "ranges.md")
+        os.makedirs(os.path.dirname(ranges), exist_ok=True)
+        coupe_r = os.path.exists(ranges) and os.path.getsize(ranges) > 0 and not open(ranges, "rb").read().endswith(b"\n")
+        with open(ranges, "a", encoding="utf-8") as f:
+            f.write(("\n" if coupe_r else "") + "".join(f"- {quand} · {rel} · nuit, non lu\n" for rel in faits))
         journal = os.path.join(RACINE, "journal", "log.md")
         os.makedirs(os.path.dirname(journal), exist_ok=True)
         noms = ", ".join(os.path.basename(r)[:-3] for r in faits[:5]) + (f" et {len(faits) - 5} autres" if len(faits) > 5 else "")
         coupe = os.path.exists(journal) and os.path.getsize(journal) > 0 and not open(journal, "rb").read().endswith(b"\n")
         with open(journal, "a", encoding="utf-8") as f:
             f.write(("\n" if coupe else "") + f"- {aujourdhui.isoformat()} · routine valider | {len(faits)} fichier{'s' if len(faits) > 1 else ''} "
-                    f"validé{'s' if len(faits) > 1 else ''} seul{'s' if len(faits) > 1 else ''} après {a.jours} jours : {noms}\n")
+                    f"validé{'s' if len(faits) > 1 else ''} par la nuit sans lecture après {a.jours} jours : {noms}\n")
     return 0
 
 

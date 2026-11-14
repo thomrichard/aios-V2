@@ -41,7 +41,7 @@ Obligatoire pour : `tous`, `tous sauf <types>`, une liste de types, ou `aucun`.
 Les statuts se lisent dans l'ordre de leur vie : le premier est celui de départ. « Fin » : ceux qui la terminent ; dans un autre statut, l'objet est vivant (un projet vivant s'affiche dans les projets actifs d'`AGENTS.md`).
 Un type sans statut (« — ») n'a pas de champ `statut`. Un mot est soit un type, soit un statut, jamais les deux.
 « Chemin » : où vit un fichier de ce type. `<domaine>` vient de l'en-tête, `<date>` aussi : l'année et le mois de son champ `cree`, écrits `AA-MM`. `<slug>` vient de son nom. Pas de dossier par type : le type est dans l'en-tête, seul le domaine est un dossier. Un objet de plusieurs fichiers devient un dossier du même nom (`<slug>/<slug>.md`). `systeme/scripts/ranger.py` range un fichier à ce chemin ; « — » : il ne se range pas tout seul.
-Un fichier `a-valider`, ou de type `livrable`, s'affiche dans `outbox/index.html` ; un fichier `a-valider` attend aussi dans l'onglet Outbox, jusqu'à son statut de fin.
+Un fichier `a-valider`, ou de type `livrable`, s'affiche dans `outbox/index.html` ; un fichier `a-valider` sans champ `source` attend aussi dans l'onglet Outbox, jusqu'à son statut de fin.
 
 | Type | Ce que c'est | Statuts | Fin | Chemin |
 |---|---|---|---|---|

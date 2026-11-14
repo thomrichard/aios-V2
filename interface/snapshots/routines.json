@@ -20,9 +20,17 @@
       "id": "validation-de-nuit",
       "name": "Validation de nuit",
       "source": "planificateur",
-      "desc": "chaque nuit, 1 h · sans IA · directe, passive : valide seul ce qui attend dans l'Outbox depuis plus de 3 jours (statut de fin, le fichier ne bouge pas)",
+      "desc": "chaque nuit, 1 h · sans IA · directe, passive : valide seul ce qui attend dans l'Outbox depuis plus de 3 jours (statut de fin, le fichier ne bouge pas), marqué « nuit, non lu » dans `outbox/ranges.md` et dans le journal",
       "status": "paused",
       "cron": "0 1 * * *"
+    },
+    {
+      "id": "points-ouverts",
+      "name": "Points ouverts",
+      "source": "planificateur",
+      "desc": "chaque nuit, 1 h 30 · sans IA · directe, passive : regroupe dans `outbox/points-ouverts.md` la prochaine étape de chaque projet, les points de reprise des derniers bilans et les alertes du vérificateur présentes depuis 3 jours ; l'agent les passe en revue en session",
+      "status": "paused",
+      "cron": "30 1 * * *"
     },
     {
       "id": "sauvegarde-de-nuit",

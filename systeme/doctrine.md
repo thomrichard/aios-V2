@@ -16,7 +16,7 @@
 | Routine | `systeme/routines.md` | — |
 | Connexion | `systeme/connexions.md` | — |
 | Décision d'un projet | la partie « Décisions » de `projets/<slug>.md` | — |
-| Un fichier validé dans l'onglet Outbox, ou par la validation de nuit après 3 jours | son statut de fin (`clos`) et `maj` dans son en-tête ; le fichier ne bouge pas | — |
+| Un fichier validé dans l'onglet Outbox, ou par la validation de nuit après 3 jours | son statut de fin (`clos`) et `maj` dans son en-tête ; le fichier ne bouge pas. Validé par la nuit ne veut pas dire lu : sa ligne dans `outbox/ranges.md` porte « nuit, non lu » | — |
 | Règle (vaut pour tout le workspace) | `journal/regles.md` | la ligne courte dans `AGENTS.md` |
 
 ## Où va quoi
@@ -28,7 +28,7 @@ La place exacte d'un fichier se déduit de son en-tête : colonne « Chemin » d
 | Un objet d'un domaine | `domaines/<domaine>/` ; un dossier à lui s'il a plusieurs fichiers, qui peut contenir des sous-objets (un dossier à leur nom, avec leur fiche) ; seule la fiche de l'objet du haut a une place réglée |
 | Une production datée (post, newsletter) | `domaines/<domaine>/<slug>-AA-MM.md`, sans dossier par type |
 | Un livrable, texte ou visuel | dans son domaine, jamais dans `outbox/` |
-| Ce qui sort (`outbox/`) | l'onglet Outbox montre ce qui attend ta validation : les fichiers en `a-valider`, là où ils sont rangés ; « Valider » leur donne leur statut de fin. Y vivent aussi le point du jour (`outbox/points/`), les questions en attente (`outbox/questions.md`) et la page `outbox/index.html` (générée). Un livrable reste dans son domaine |
+| Ce qui sort (`outbox/`) | l'onglet Outbox ne montre que les livrables qui doivent sortir, là où ils sont rangés : les fichiers en `a-valider` sans champ `source:` (ce qu'une routine produit seule, le point du jour le cite) ; « Valider » leur donne leur statut de fin. Ce qu'on écrit en session naît dans son statut de fin : on l'a vu. Y vivent aussi le point du jour (`outbox/points/`), les questions en attente (`outbox/questions.md`) et la page `outbox/index.html` (générée). Un livrable reste dans son domaine |
 | Un projet | `projets/<slug>.md` ; ses fichiers restent dans leur domaine |
 | Une idée « un jour, peut-être » | dans son domaine, type `idee` (skill `idees`) ; toutes les idées : `vues/idee.md` |
 | Un process (une suite de skills qui revient) | `processus/<slug>.md` ; ses skills restent dans `skills/` |
@@ -39,13 +39,14 @@ La place exacte d'un fichier se déduit de son en-tête : colonne « Chemin » d
 | Une vidéo, un son | le dossier des fichiers lourds (`FICHIERS_LOURDS` dans `.env`, un dossier Google Drive synchronisé par exemple), hors du dépôt ; sa fiche reste dans le workspace, champ `fichier` |
 | Des données de collecte (ce qu'un script rapporte en volume : captures, exports, planches, sous-titres) | hors du dépôt, dans le dossier de l'outil ou du plugin qui les produit, avec sa propre sauvegarde ; le workspace n'en garde que la fiche |
 | Une image | le dossier qui s'en sert, avec sa ligne dans `_images.md` |
-| Une question du rangement qui attend ta réponse | `outbox/questions.md` ; l'élément attend dans l'inbox |
+| Une question du rangement qui attend ta réponse | `outbox/questions.md` ; l'élément attend dans l'inbox. Sans réponse après 14 jours, le rangement applique la proposition si elle se défait (jamais supprimer, installer, envoyer ni dépenser) |
+| Ce qui reste ouvert (prochaines étapes des projets, points de reprise des bilans, alertes qui durent) | `outbox/points-ouverts.md`, généré chaque nuit par `systeme/scripts/points_ouverts.py` ; l'agent le passe en revue en session |
 | Un profil d'installation | `inbox/`, puis `archives/inbox/` une fois installé |
 | Un entretien (`grill-me`) | `journal/entretiens/<sujet>-AA-MM.md` |
 | Le bilan d'une session (`bilan`) | la partie « Historique » de `projets/<slug>.md` (les 3 derniers) ; les plus anciens : `archives/historique/<slug>.md` |
 | Le code d'un tiers (l'interface de Jay) | `interface/`, avec sa licence ; il garde ses propres règles (pas d'en-tête, pas d'`_index.md`) |
 | Un élément de l'inbox déjà traité | `archives/inbox/AAAA-MM/` |
-| Un point du jour coché ou vieux de plus de 7 jours | `archives/outbox/` |
+| Un point du jour vieux de plus de 7 jours | `archives/outbox/` |
 
 ## Le cœur et les plugins
 

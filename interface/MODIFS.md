@@ -41,3 +41,4 @@ SM4RT est tiré de l'Agentic OS v2 de Jay E | RoboNuggets (licence MIT : sa lign
 37. Le menu de l'alpha (2026-11-13) : Accueil, Projets, Skills, Connecteurs, Routines, Fichiers, Outbox, et Réglages en bas. Vidéos, Jarvis et Bibliothèque sortent du menu (`assets/menu.js`, la liste `ITEMS`) ; leur code reste, leurs pages répondent encore à leur adresse, et elles reviendront en modules.
 
 Pour reprendre une nouvelle version du kit : remplacer le dossier, puis refaire ces changements.
+38. L'Outbox ne montre plus que les livrables qui doivent sortir (2026-11-14) : `listOutbox` (`server.js`) ne garde que les fichiers en `a-valider` sans champ `source`. Ce qu'une routine produit seule (une capture, avec `source:`) n'attend plus de validation : le point du jour le cite.

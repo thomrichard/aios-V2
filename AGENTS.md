@@ -28,9 +28,11 @@ Filtre : chaque proposition doit rapprocher d'une de ces cibles. Sinon, dis-le e
 ## Les deux portes
 
 - `inbox/` : ce qui entre. Ce que l'utilisateur dépose, et ce que les routines de capture (veille) rapportent de l'extérieur, avec `source:` dans l'en-tête. Tu n'y déposes jamais tes propres productions ; tu la vides en rangeant.
-- `outbox/` : ce qui sort. L'onglet Outbox montre ce qui attend ta validation, à l'instant T : chaque fichier en `a-valider` (un livrable, un compte-rendu), là où il est rangé ; « Valider » lui donne son statut de fin, et ce qui attend depuis plus de 3 jours se valide seul la nuit (`systeme/scripts/valider.py`). Une discussion close par `/fermer` n'y laisse rien. Y vivent aussi le point du jour (`outbox/points/`), les questions en attente (`outbox/questions.md`) et la page `outbox/index.html` (générée). Un livrable reste dans son domaine.
-- Chaque nuit à 2 h, la skill `rangement` vide l'inbox (avec `fiche` et `classer`) et écrit le point du jour. L'outbox, elle, se remplit dans la journée. Ce qui demande une réponse attend dans `outbox/questions.md`.
+- `outbox/` : ce qui sort. L'onglet Outbox ne montre que les livrables qui doivent sortir (un PDF, une image, un texte à envoyer ou à publier) : chaque fichier en `a-valider`, là où il est rangé ; « Valider » lui donne son statut de fin, et ce qui attend depuis plus de 3 jours se valide seul la nuit, marqué « non lu » (`systeme/scripts/valider.py`). Ce qu'une routine produit seule (un fichier avec `source:`) n'y va pas : le point du jour le cite. Une discussion close par `/fermer` n'y laisse rien. Y vivent aussi le point du jour (`outbox/points/`), les questions en attente (`outbox/questions.md`) et la page `outbox/index.html` (générée). Un livrable reste dans son domaine.
+- Ce qu'on écrit ensemble en session naît dans son statut de fin (ou `en-cours`) : l'utilisateur l'a vu, il ne passe pas par l'Outbox. S'il doit sortir, mets-le en `a-valider`.
+- Chaque nuit à 2 h, la skill `rangement` vide l'inbox (avec `fiche` et `classer`) et écrit le point du jour. L'outbox, elle, se remplit dans la journée. Ce qui demande une réponse attend dans `outbox/questions.md` ; sans réponse après 14 jours, la nuit applique la proposition si elle se défait.
 - En début de session, si `outbox/questions.md` contient des questions, dis combien en une ligne et propose d'y répondre.
+- Même chose pour `outbox/points-ouverts.md` (généré chaque nuit ; une alerte du vérificateur présente depuis 3 jours y devient une question à trancher) : dis combien en une ligne, et si l'utilisateur dit oui, passe-les en revue, une question à la fois.
 
 ## Carte des domaines
 
