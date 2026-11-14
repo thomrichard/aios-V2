@@ -175,6 +175,49 @@ def essais_alerte(copie, base):
     essai("alerte : un même problème n'est signalé qu'une fois", sortie == "", sortie)
 
 
+def essais_relecture(copie):
+    """Ce qui évite que l'utilisateur croule sous la relecture : la validation de nuit dit « non lu », et une alerte
+    qui dure devient une question dans les points ouverts."""
+    vieux = (datetime.date.today() - datetime.timedelta(days=10)).isoformat()
+    fiche = os.path.join("domaines", "operations", "essai-a-valider.md")
+    ecrire(copie, fiche, f"---\ntype: livrable\nresume: Un livrable d'essai\nstatut: a-valider\ndomaine: operations\n"
+                         f"cree: {vieux}\nmaj: {vieux}\n---\n# Essai\n")
+    code, sortie = script(copie, "valider.py", "--jours", "3")
+    with open(os.path.join(copie, fiche), encoding="utf-8") as f:
+        entete = f.read()
+    essai("validation de nuit : un fichier qui attend depuis 10 jours prend son statut de fin",
+          code == 0 and "statut: a-valider" not in entete, sortie + entete[:200])
+    try:
+        with open(os.path.join(copie, "outbox", "ranges.md"), encoding="utf-8") as f:
+            trace = f.read()
+    except OSError:
+        trace = ""
+    essai("validation de nuit : sa trace dit « nuit, non lu »", "essai-a-valider.md · nuit, non lu" in trace, trace[-200:])
+    with open(os.path.join(copie, "journal", "log.md"), encoding="utf-8") as f:
+        essai("validation de nuit : le journal dit « sans lecture »", "par la nuit sans lecture" in f.read())
+    os.remove(os.path.join(copie, fiche))
+
+    # une erreur du vérificateur qui dure : le premier passage retient le jour où elle est apparue
+    ecrire(copie, os.path.join("domaines", "essai-sans-ligne.png"), "image d'essai")
+    code, sortie = script(copie, "points_ouverts.py")
+    ouverts = os.path.join(copie, "outbox", "points-ouverts.md")
+    with open(ouverts, encoding="utf-8") as f:
+        premier = f.read()
+    essai("points ouverts : le fichier s'écrit, sans alerte le premier jour",
+          code == 0 and "## Projets" in premier and "## Alertes à trancher" not in premier, sortie + premier[-300:])
+    etat = os.path.join(copie, "journal", "alertes.json")
+    with open(etat, encoding="utf-8") as f:
+        vues = json.load(f)
+    with open(etat, "w", encoding="utf-8") as f:
+        json.dump({cle: (datetime.date.today() - datetime.timedelta(days=5)).isoformat() for cle in vues}, f)
+    script(copie, "points_ouverts.py")
+    with open(ouverts, encoding="utf-8") as f:
+        second = f.read()
+    essai("points ouverts : une alerte présente depuis 3 jours devient une question à trancher",
+          "## Alertes à trancher" in second and "_images.md" in second, second[-300:])
+    os.remove(os.path.join(copie, "domaines", "essai-sans-ligne.png"))
+
+
 def main():
     base = tempfile.mkdtemp(prefix="aios-essais-")
     try:
@@ -183,6 +226,7 @@ def main():
         essais_sauvegarde(copie, prive)
         essais_journal(copie)
         essais_alerte(copie, base)
+        essais_relecture(copie)
     finally:
         if "--garder" in sys.argv[1:]:
             print(f"Copie gardée : {base}")

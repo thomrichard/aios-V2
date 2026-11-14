@@ -21,10 +21,28 @@ Ranger, c'est mettre les bonnes métadonnées : la place s'en déduit. Tu ne tou
 
 ## Quand tu hésites
 - En discussion : une seule question, avec ta proposition.
-- Sans discussion (la routine de nuit) : ne devine jamais. Laisse l'élément où il est, et ajoute une ligne à `outbox/questions.md` : `- AAAA-MM-JJ · <chemin> · <ta question> · proposition : <type, domaine, projet>`.
+- Sans discussion (la routine de nuit) : ne devine jamais. Laisse l'élément où il est, et ajoute une question à `outbox/questions.md`, dans ce format (la première ligne reste une seule ligne de liste ; les trois suivantes sont des paragraphes indentés de deux espaces, séparés par une ligne vide) :
+
+  ```
+  - AAAA-MM-JJ · <chemin> · <la question> · proposition : <ta proposition>
+
+    Contexte : <une ou deux phrases simples : ce qu'est l'élément, et pourquoi tu bloques>
+
+    Choix : <choix 1> | <choix 2> | <choix 3>
+
+    Réponse :
+  ```
+
+  - La question : une phrase courte, en mots simples, qui finit par « ? » et qu'on comprend sans ouvrir l'élément. Pas de jargon ni de chemin dans la question : le chemin est juste avant.
+  - Les choix : deux à quatre réponses possibles, chacune en quelques mots, qui disent ce que tu feras (« Ranger dans savoir/ comme source », « Laisser dans l'inbox »).
+  - La proposition : le choix que tu conseilles. Sans réponse après 14 jours, le rangement l'applique seul si elle se défait.
+  - « Réponse : » reste vide : l'utilisateur y écrit sa réponse, dans le fichier.
 
 ## Les questions en attente
-« Réponds aux questions du rangement » : pour chaque ligne de `outbox/questions.md`, pose la question avec ta proposition, range l'élément, puis retire la ligne. Une réponse « plus tard » laisse la ligne.
+« Réponds aux questions du rangement » :
+- Une question dont la « Réponse : » est remplie : applique la réponse sans la reposer (range l'élément, ou fais ce qui est écrit), puis retire la question entière (sa ligne et ses paragraphes).
+- Une question sans réponse : pose-la avec ta proposition, range l'élément, puis retire la question. Une réponse « plus tard » la laisse en place.
+- Une ancienne question sur une seule ligne, sans paragraphes : traite-la comme une question sans réponse.
 
 ## Garde-fous
 - Ne modifie jamais le corps d'un fichier ; ne supprime rien.
@@ -34,3 +52,4 @@ Ranger, c'est mettre les bonnes métadonnées : la place s'en déduit. Tu ne tou
 ## Journal des changements
 - 2026-10-23 · création · ranger, c'est mettre les bonnes métadonnées ; la place s'en déduit
 - 2026-11-14 · un fichier signalé « pas à sa place » : chercher d'abord un doublon (on fusionne) ou un dossier-objet sans fiche (on l'écrit) · les mêmes alertes revenaient chaque jour sans que personne ne tranche
+- 2026-11-14 · des questions plus claires (une question simple, le contexte, les choix) et un champ « Réponse : » ; une réponse écrite s'applique sans être reposée · une question d'une ligne, avec un chemin et du jargon, ne se comprenait pas sans ouvrir l'élément
