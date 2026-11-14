@@ -31,6 +31,14 @@
       "desc": "chaque nuit, 3 h · sans IA · directe, passive : envoie le travail du jour vers prive",
       "status": "paused",
       "cron": "0 3 * * *"
+    },
+    {
+      "id": "alerte-des-routines",
+      "name": "Alerte des routines",
+      "source": "planificateur",
+      "desc": "chaque jour, 8 h 15 · sans IA · directe, passive : signale une routine « en place » dont le dernier passage a échoué (code différent de 0) ou qui n'a pas tourné alors que son cron le prévoyait (`journal/routines.jsonl`) ; notification sur Mac et ligne dans `journal/log.md`, que le point du jour reprend ; rien quand tout va bien. Un même problème n'est signalé qu'une fois, puis de nouveau après 3 jours",
+      "status": "paused",
+      "cron": "15 8 * * *"
     }
   ]
 }

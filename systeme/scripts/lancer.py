@@ -2,9 +2,10 @@
 """Lance une skill sans discussion, avec l'agent choisi dans .env et le modèle de systeme/modeles.md.
 Lance aussi une routine directe de systeme/routines.md : sa commande, sans IA.
 
-Usage : python3 systeme/scripts/lancer.py <skill ou routine> [--modele NOM] [--agent claude|codex|gemini] [--essai]
+Usage : python3 systeme/scripts/lancer.py <skill ou routine> [--modele NOM] [--agent claude|codex|gemini] [--essai] [--consigne TEXTE]
   <routine> : son nom en minuscules, sans accents, avec des tirets (« Fiches YouTube » → fiches-youtube).
   --essai : affiche la commande sans la lancer.
+  --consigne : une précision pour ce passage seulement, ajoutée au prompt.
 
 Chaque passage laisse une ligne dans journal/routines.jsonl : ce qui a été lancé, le début, la fin, le code de sortie,
 l'agent, le modèle, les dernières lignes de la sortie et, pour claude, les tokens et le coût au tarif de l'API.
@@ -19,11 +20,13 @@ import re
 import shlex
 import subprocess
 import sys
+import tempfile
 import unicodedata
 
 RACINE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 COMMANDES = {"claude": "claude -p", "codex": "codex exec", "gemini": "gemini -p"}
 JOURNAL = os.path.join(RACINE, "journal", "routines.jsonl")
+MESURE = "LANCER_MESURE"  # chemin d'un fichier où une skill lancée par une routine directe laisse sa mesure, au lieu de sa ligne du journal
 
 
 def lire_env():
@@ -55,12 +58,13 @@ def cle_de(nom):
 
 
 def routine_directe(nom):
-    """La commande d'une routine directe de systeme/routines.md, ou None."""
+    """(commande, clé du journal) d'une routine directe de systeme/routines.md, ou None.
+    La clé est celle de l'interface : la skill de la ligne si elle en a une, sinon le nom de la routine."""
     from index import tableau
     for r in tableau(os.path.join(RACINE, "systeme", "routines.md"), "Routine"):
         commande = r.get("Commande", "").strip("`")
         if commande not in ("", "—", "-") and cle_de(r["Routine"]) == nom:
-            return commande
+            return commande, r.get("Skill", "").strip("`").strip("—-") or nom
     return None
 
 
@@ -138,6 +142,7 @@ def main():
     p.add_argument("--modele")
     p.add_argument("--agent")
     p.add_argument("--essai", action="store_true")
+    p.add_argument("--consigne", help="une précision pour ce passage seulement, ajoutée au prompt (par exemple la fiche à traiter)")
     a = p.parse_args()
 
     if en_pause(a.skill) and not a.essai:
@@ -145,12 +150,27 @@ def main():
         return 0
     directe = routine_directe(a.skill)
     if directe:
+        commande_directe, cle = directe
         if a.essai:
-            print(directe)
+            print(commande_directe)
             return 0
         debut = maintenant()
-        code, sortie, _ = executer(directe, shell=True)
-        noter(a.skill, debut, code, sortie, directe=True)
+        # si la commande lance une skill, celle-ci y laisse sa mesure : un seul passage dans le journal, pas deux
+        fd, fichier_mesure = tempfile.mkstemp(prefix="lancer-", suffix=".json")
+        os.close(fd)
+        os.environ[MESURE] = fichier_mesure
+        try:
+            code, sortie, _ = executer(commande_directe, shell=True)
+            try:
+                with open(fichier_mesure, encoding="utf-8") as f:
+                    mesure = json.loads(f.read() or "{}")
+            except (OSError, ValueError):
+                mesure = {}
+        finally:
+            os.environ.pop(MESURE, None)
+            if os.path.exists(fichier_mesure):
+                os.remove(fichier_mesure)
+        noter(cle, debut, code, sortie, directe=True, **mesure)
         return code
 
     if not re.fullmatch(r"[a-z0-9-]+", a.skill) or not os.path.exists(os.path.join(RACINE, "skills", a.skill, "SKILL.md")):
@@ -175,6 +195,8 @@ def main():
         commande += ["--model", modele]
 
     prompt = f"Exécute la skill définie dans skills/{a.skill}/SKILL.md, en suivant AGENTS.md."
+    if a.consigne:
+        prompt += " Consigne de ce passage : " + " ".join(a.consigne.split())
     commande.append(prompt)
 
     # claude dit ses tokens et son coût quand on lui demande du JSON : la mesure va dans le journal
@@ -186,7 +208,16 @@ def main():
         return 0
     debut = maintenant()
     code, sortie, mesure = executer(commande, json_claude=json_claude)
-    noter(a.skill, debut, code, sortie, skill=a.skill, agent=agent, modele=modele, **mesure)
+    plus = {"skill": a.skill, "agent": agent, "modele": modele, **mesure}
+    if os.environ.get(MESURE):
+        # lancée par une routine directe : c'est elle qui écrit le passage, avec cette mesure
+        try:
+            with open(os.environ[MESURE], "w", encoding="utf-8") as f:
+                json.dump(plus, f)
+            return code
+        except OSError:
+            pass
+    noter(a.skill, debut, code, sortie, **plus)
     return code
 
 

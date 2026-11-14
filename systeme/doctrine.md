@@ -25,7 +25,7 @@ La place exacte d'un fichier se déduit de son en-tête : colonne « Chemin » d
 
 | Ce que c'est | Où ça va |
 |---|---|
-| Un objet d'un domaine | `domaines/<domaine>/` ; un dossier à lui s'il a plusieurs fichiers |
+| Un objet d'un domaine | `domaines/<domaine>/` ; un dossier à lui s'il a plusieurs fichiers, qui peut contenir des sous-objets (un dossier à leur nom, avec leur fiche) ; seule la fiche de l'objet du haut a une place réglée |
 | Une production datée (post, newsletter) | `domaines/<domaine>/<slug>-AA-MM.md`, sans dossier par type |
 | Un livrable, texte ou visuel | dans son domaine, jamais dans `outbox/` |
 | Ce qui sort (`outbox/`) | l'onglet Outbox montre ce qui attend ta validation : les fichiers en `a-valider`, là où ils sont rangés ; « Valider » leur donne leur statut de fin. Y vivent aussi le point du jour (`outbox/points/`), les questions en attente (`outbox/questions.md`) et la page `outbox/index.html` (générée). Un livrable reste dans son domaine |
@@ -56,7 +56,7 @@ Le socle fournit une base qui marche sans rien changer. Les domaines et les type
 
 - Minuscules, tirets, sans espaces ni accents.
 - Daté : `<slug>-AA-MM.md`, le titre d'abord, puis l'année et le mois de `cree`. Durable : `<slug>.md`. Le point du jour garde le nom de son jour (`outbox/points/AAAA-MM-JJ.md`).
-- Pas de dossier par type : le type est dans l'en-tête. Seul le domaine est un dossier ; un objet de plusieurs fichiers a le sien.
+- Pas de dossier par type : le type est dans l'en-tête. Seul le domaine est un dossier ; un objet de plusieurs fichiers a le sien, et ses sous-objets y vivent.
 - Pas de dossier fourre-tout (`notes/`, `misc/`, `tmp/`). Un nouveau dossier se justifie par deux « oui » sur trois : concept nouveau, usage répété le mois suivant, place pour une future skill.
 
 ## Mettre à jour AGENTS.md
@@ -79,7 +79,7 @@ Le socle fournit une base qui marche sans rien changer. Les domaines et les type
 | Fichier | Plafond |
 |---|---|
 | `AGENTS.md` | 150 lignes, sans la carte ni les projets actifs (générés) |
-| `routers/<domaine>.md` | 50 lignes |
+| `routers/<domaine>.md` | 50 lignes : les routes et les fichiers durables ; un fichier ponctuel (un post, un short) n'y entre pas, `_index.md` le liste |
 | `memory/MEMORY.md` | 100 lignes |
 | `_index.md` | 100 lignes |
 | `SKILL.md` | 80 lignes. De 81 à 120 : une alerte. Au-delà de 120 : il devient un index qui renvoie vers `references/` |
