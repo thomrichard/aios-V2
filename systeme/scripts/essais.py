@@ -60,6 +60,12 @@ def copier(base):
             os.symlink(os.readlink(source), cible)
         elif os.path.isfile(source):
             shutil.copy2(source, cible)
+    # un journal vierge : les essais ne dépendent pas de ce que les routines du workspace ont déjà fait
+    for nom in ("routines.jsonl", "alertes.json", "alertes-routines.json"):
+        try:
+            os.remove(os.path.join(copie, "journal", nom))
+        except OSError:
+            pass
     git(base, "init", "-q", "--bare", prive)
     git(copie, "init", "-q", "-b", "main")
     for cle, valeur in (("user.name", "Essai"), ("user.email", "essai@example.invalid"), ("commit.gpgsign", "false")):

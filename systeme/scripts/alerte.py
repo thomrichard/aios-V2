@@ -141,7 +141,8 @@ def examiner(routines, passages, agents, maintenant):
         cles = {c for c in (skill, cle_de(nom)) if c}
         if cles & lances:
             continue
-        vus = sorted(p for c in cles for p in passages.get(c, []))
+        # triés par leur début seulement : deux passages de la même seconde gardent l'ordre du journal
+        vus = sorted((p for c in cles for p in passages.get(c, [])), key=lambda p: p[0])
         if vus and vus[-1][1] != 0:
             debut, code, sortie = vus[-1]
             fin = next((l for l in reversed(sortie) if l.strip()), "")
