@@ -88,7 +88,7 @@ Pour chaque skill, commande ou agent de l'ancien AIOS, dans cet ordre :
 
 2. **Elle vient d'un auteur extérieur, d'un plugin ou d'une application** (un dossier de plugin, un fichier `skills-lock.json`, des skills synchronisées par une application) : laisser. Elle se réinstalle avec son outil : ajoute-la à « À faire toi-même ».
 3. **Elle est à l'utilisateur.** Demande si elle sert encore. Sinon : laisser.
-4. **Elle sert encore : adapter.** Écris `skills/<nom>/SKILL.md` au gabarit `systeme/gabarits/SKILL.md` :
+4. **Elle sert encore : adapter.** Une ancienne skill décrit souvent une façon de faire dépassée. Avant de la réécrire, regarde comment l'utilisateur fait aujourd'hui (ses fichiers récents du même genre, ses règles, sa mémoire) et réécris-la sur cette pratique. Garde de l'ancienne ce qui vaut encore, dis ce que tu retires, et pose à l'utilisateur les un ou deux choix qui lui reviennent. Si une skill chargée par une application fait presque la même chose, écris dans la nouvelle qu'elle la remplace ici. Puis écris `skills/<nom>/SKILL.md` au gabarit `systeme/gabarits/SKILL.md` :
    - l'en-tête : `name`, une `description` avec ses mots déclencheurs, et une famille de `systeme/metadonnees.md` (aucune ne convient : propose-en une dans « Ce workspace ») ;
    - 80 lignes au plus : le détail, les exemples et les longs gabarits vont dans `references/` ;
    - les anciens chemins (`1 - Projets/`, `3 - Ressources/`) deviennent ceux de ce workspace, les `[[liens]]` deviennent des chemins ;

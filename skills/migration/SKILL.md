@@ -60,3 +60,4 @@ L'utilisateur peut s'arrêter après n'importe quelle couche : ce qui est fait r
 - 2026-11-24 · après le premier essai sur un vrai vault : suivre les imports du `CLAUDE.md`, les dossiers à plat, les notes sensibles jamais ouvertes, aucune commande Git dans l'ancien dossier, ce qui a déjà été repris à la main · 24 remarques de l'essai
 - 2026-11-24 · quatrième proposition, « carte » : les fichiers restent dans l'ancien dossier, une fiche ici dit ce qu'ils contiennent · demandée trois fois sur dix-huit réponses au premier essai
 - 2026-11-24 · avant l'accord, chaque ligne est relue contre le workspace d'aujourd'hui · à la première reprise, 5 règles sur 12 ont changé de sort : un doublon et trois règles qui différaient d'ici
+- 2026-11-24 · une skill reprise se réécrit sur la pratique d'aujourd'hui, pas sur l'ancienne · sur cinq skills reprises au premier essai, les cinq décrivaient une façon de faire dépassée
