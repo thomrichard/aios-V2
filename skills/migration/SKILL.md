@@ -25,7 +25,7 @@ L'ancien AIOS reste où il est, intact. On reprend ce qui sert ; le reste viendr
 
 ## 3. La reprise, une couche à la fois
 Dans l'ordre : règles, mémoire, projets et domaines, skills, fichiers. Pour chaque couche :
-1. Demande l'accord sur ses lignes.
+1. Relis chaque ligne à reprendre contre ce workspace tel qu'il est aujourd'hui (ses règles, sa mémoire, les références de ses skills). Dis ce qui existe déjà ici, et ce qui diffère d'ici : c'est là que l'utilisateur tranche. Puis demande l'accord ; pour les règles et la mémoire, ligne par ligne.
 2. Enregistre l'état du workspace (un commit, « Avant la migration : <couche> »), sans rien envoyer : la couche pourra se défaire.
 3. Applique ses lignes, comme le dit sa partie de `references/correspondance.md`. Tu copies depuis l'ancien dossier, tu ne déplaces pas.
 4. Lance `python3 systeme/scripts/index.py`, puis `verifier.py`, jusqu'à « Tout est en ordre ».
@@ -59,3 +59,4 @@ L'utilisateur peut s'arrêter après n'importe quelle couche : ce qui est fait r
 - 2026-11-24 · création · beaucoup d'utilisateurs ont déjà un AIOS rangé autrement, et l'installation n'en reprenait que le profil
 - 2026-11-24 · après le premier essai sur un vrai vault : suivre les imports du `CLAUDE.md`, les dossiers à plat, les notes sensibles jamais ouvertes, aucune commande Git dans l'ancien dossier, ce qui a déjà été repris à la main · 24 remarques de l'essai
 - 2026-11-24 · quatrième proposition, « carte » : les fichiers restent dans l'ancien dossier, une fiche ici dit ce qu'ils contiennent · demandée trois fois sur dix-huit réponses au premier essai
+- 2026-11-24 · avant l'accord, chaque ligne est relue contre le workspace d'aujourd'hui · à la première reprise, 5 règles sur 12 ont changé de sort : un doublon et trois règles qui différaient d'ici
