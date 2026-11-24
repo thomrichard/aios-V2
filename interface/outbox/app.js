@@ -117,7 +117,7 @@
     }
   });
   $('tout').onclick = () => valide(S.d.entrees.map(e => e.p));
-  $('questions').onclick = () => ouvrirFichier('outbox/questions.md');
+  $('questions').onclick = () => ouvrirFichier('bureau/questions.md');
 
   /* ---------------------------- appearance, keys, refresh ---------------------------- */
   function marqueApparence() {

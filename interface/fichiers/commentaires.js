@@ -1,6 +1,6 @@
 /* SM4RT file editor: the comments on the open file (the Fichiers tab).
    AIOS: a layer over the styled view that never touches the file. Select a passage, « Commenter » appears; or comment
-   the whole file. The comments live in outbox/commentaires.json (/local/commentaires), which keeps only the living
+   the whole file. The comments live in bureau/commentaires.json (/local/commentaires), which keeps only the living
    ones: « Résoudre » takes one out, and the agent takes out those it dealt with. A comment keeps its passage as a quote
    with a little text before and after; at each drawing of the view the page looks for it again in the text (spaces and
    line breaks do not count) and paints it with the CSS Custom Highlight API, so the page's own text is never wrapped
@@ -392,10 +392,10 @@
       const groups = new Map(), cal = [];
       for (const c of list) { if (c.calibrer) { cal.push(c); continue; } if (!groups.has(c.fiche)) groups.set(c.fiche, []); groups.get(c.fiche).push(c); }
       const out = [
-        `Mes commentaires sur ${new Set(list.map(c => c.fiche)).size > 1 ? 'des fiches' : 'une fiche'}, laissés dans l’onglet Fichiers (${date}). Ils attendent dans outbox/commentaires.json, chacun avec son id.`,
+        `Mes commentaires sur ${new Set(list.map(c => c.fiche)).size > 1 ? 'des fiches' : 'une fiche'}, laissés dans l’onglet Fichiers (${date}). Ils attendent dans bureau/commentaires.json, chacun avec son id.`,
         '',
         'Pour chaque commentaire : fais le changement demandé dans la fiche, ou dis-moi pourquoi tu ne le fais pas. Ne touche à rien d’autre. Le passage cité vient du texte mis en forme : il peut différer un peu du Markdown.',
-        'Quand un commentaire est traité, retire-le de outbox/commentaires.json.'
+        'Quand un commentaire est traité, retire-le de bureau/commentaires.json.'
       ];
       for (const [p, cs] of groups) {
         out.push('', `## ${p}${cs[0].perdue ? ' (introuvable : déplacée ou archivée ?)' : ''}`, '');

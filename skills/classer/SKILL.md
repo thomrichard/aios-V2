@@ -21,7 +21,7 @@ Ranger, c'est mettre les bonnes métadonnées : la place s'en déduit. Tu ne tou
 
 ## Quand tu hésites
 - En discussion : une seule question, avec ta proposition.
-- Sans discussion (la routine de nuit) : ne devine jamais. Laisse l'élément où il est, et ajoute une question à `outbox/questions.md`, dans ce format (la première ligne reste une seule ligne de liste ; les trois suivantes sont des paragraphes indentés de deux espaces, séparés par une ligne vide) :
+- Sans discussion (la routine de nuit) : ne devine jamais. Laisse l'élément où il est, et ajoute une question à `bureau/questions.md`, dans ce format (la première ligne reste une seule ligne de liste ; les trois suivantes sont des paragraphes indentés de deux espaces, séparés par une ligne vide) :
 
   ```
   - AAAA-MM-JJ · <chemin> · <la question> · proposition : <ta proposition>

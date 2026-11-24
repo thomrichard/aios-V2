@@ -206,7 +206,7 @@ def essais_relecture(copie):
     # une erreur du vérificateur qui dure : le premier passage retient le jour où elle est apparue
     ecrire(copie, os.path.join("domaines", "essai-sans-ligne.png"), "image d'essai")
     code, sortie = script(copie, "points_ouverts.py")
-    ouverts = os.path.join(copie, "outbox", "points-ouverts.md")
+    ouverts = os.path.join(copie, "bureau", "points-ouverts.md")
     with open(ouverts, encoding="utf-8") as f:
         premier = f.read()
     essai("points ouverts : le fichier s'écrit, sans alerte le premier jour",

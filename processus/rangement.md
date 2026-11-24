@@ -1,6 +1,6 @@
 ---
 type: processus
-resume: Vider l'inbox, ranger l'outbox et écrire le point du jour
+resume: Vider l'inbox, ranger le bureau et écrire le point du jour
 domaine: operations
 declencheur: routine, chaque nuit à 2 h ; ou à la demande
 statut: actif
@@ -11,7 +11,7 @@ maj: 2026-10-23
 
 | Étape | Skill | Ce qu'on décide | Qui décide |
 |---|---|---|---|
-| Archiver les points du jour cochés ou vieux de plus de 7 jours | `rangement` | — | l'IA |
+| Archiver les points du jour du bureau vieux de plus de 7 jours | `rangement` | — | l'IA |
 | Écrire une fiche pour le texte brut, les liens et les fichiers sans en-tête | `fiche` | ce que dit la fiche | l'IA |
 | Donner ses métadonnées à chaque élément ; `ranger.py` le range | `classer` | le type, le domaine, le statut, le projet ; dans le doute, une question pour la journée | l'IA |
 | Écrire le point du jour | `rangement` | ce qui mérite ton attention | l'IA |

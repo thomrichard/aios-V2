@@ -42,3 +42,4 @@ SM4RT est tiré de l'Agentic OS v2 de Jay E | RoboNuggets (licence MIT : sa lign
 
 Pour reprendre une nouvelle version du kit : remplacer le dossier, puis refaire ces changements.
 38. L'Outbox ne montre plus que les livrables qui doivent sortir (2026-11-14) : `listOutbox` (`server.js`) ne garde que les fichiers en `a-valider` sans champ `source`. Ce qu'une routine produit seule (une capture, avec `source:`) n'attend plus de validation : le point du jour le cite.
+39. Le bureau (2026-11-23) : les questions du rangement et les commentaires vivent dans `bureau/` (`countQuestions`, `NOTES_REL` dans `server.js`) ; `bureau` rejoint `ORBITE_HORS` et l’ordre de l’arbre de `fichiers/app.js`. Pas encore d’onglet Bureau.

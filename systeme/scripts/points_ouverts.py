@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regroupe les points ouverts dans outbox/points-ouverts.md : la prochaine étape de chaque projet vivant, et les
+"""Regroupe les points ouverts dans bureau/points-ouverts.md : la prochaine étape de chaque projet vivant, et les
 points de reprise du dernier bilan de chaque projet vivant (partie « Historique » de sa fiche), et les alertes du
 vérificateur présentes depuis au moins 3 jours (le jour où chacune est apparue est retenu dans journal/alertes.json).
 L'agent les passe ensuite en revue avec l'utilisateur, en session : une routine de nuit ne peut pas poser
@@ -20,7 +20,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from index import RACINE, lire_entete, types_regles  # noqa: E402
 
-SORTIE = os.path.join(RACINE, "outbox", "points-ouverts.md")
+SORTIE = os.path.join(RACINE, "bureau", "points-ouverts.md")
 ETAT = os.path.join(RACINE, "journal", "alertes.json")
 JOURS = 3
 
@@ -102,6 +102,7 @@ def main():
         return
     with open(ETAT, "w", encoding="utf-8") as f:
         json.dump(etat, f, ensure_ascii=False, indent=1, sort_keys=True)
+    os.makedirs(os.path.dirname(SORTIE), exist_ok=True)
     with open(SORTIE, "w", encoding="utf-8") as f:
         f.write(contenu(anciennes))
 

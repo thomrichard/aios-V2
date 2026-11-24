@@ -28,7 +28,8 @@ La place exacte d'un fichier se déduit de son en-tête : colonne « Chemin » d
 | Un objet d'un domaine | `domaines/<domaine>/` ; un dossier à lui s'il a plusieurs fichiers, qui peut contenir des sous-objets (un dossier à leur nom, avec leur fiche) ; seule la fiche de l'objet du haut a une place réglée |
 | Une production datée (post, newsletter) | `domaines/<domaine>/<slug>-AA-MM.md`, sans dossier par type |
 | Un livrable, texte ou visuel | dans son domaine, jamais dans `outbox/` |
-| Ce qui sort (`outbox/`) | l'onglet Outbox ne montre que les livrables qui doivent sortir, là où ils sont rangés : les fichiers en `a-valider` sans champ `source:` (ce qu'une routine produit seule, le point du jour le cite) ; « Valider » leur donne leur statut de fin. Ce qu'on écrit en session naît dans son statut de fin : on l'a vu. Y vivent aussi le point du jour (`outbox/points/`), les questions en attente (`outbox/questions.md`) et la page `outbox/index.html` (générée). Un livrable reste dans son domaine |
+| Ce qui sort (`outbox/`) | l'onglet Outbox ne montre que les livrables qui doivent sortir, là où ils sont rangés : les fichiers en `a-valider` sans champ `source:` (ce qu'une routine produit seule, le point du jour le cite) ; « Valider » leur donne leur statut de fin. Ce qu'on écrit en session naît dans son statut de fin : on l'a vu. Y vivent aussi la trace de ce qui est validé (`outbox/ranges.md`) et la page `outbox/index.html` (générée). Un livrable reste dans son domaine |
+| Ce qui est en cours (`bureau/`) | ce qui t'attend aujourd'hui : le point du jour (`bureau/points/`), les questions du rangement (`bureau/questions.md`), les points ouverts (`bureau/points-ouverts.md`) et les commentaires laissés sur les fiches (`bureau/commentaires.json`). Rien n'y sort : ce qui part va dans `outbox/` |
 | Un projet | `projets/<slug>.md` ; ses fichiers restent dans leur domaine |
 | Une idée « un jour, peut-être » | dans son domaine, type `idee` (skill `idees`) ; toutes les idées : `vues/idee.md` |
 | Un process (une suite de skills qui revient) | `processus/<slug>.md` ; ses skills restent dans `skills/` |
@@ -39,18 +40,18 @@ La place exacte d'un fichier se déduit de son en-tête : colonne « Chemin » d
 | Une vidéo, un son | le dossier des fichiers lourds (`FICHIERS_LOURDS` dans `.env`, un dossier Google Drive synchronisé par exemple), hors du dépôt ; sa fiche reste dans le workspace, champ `fichier` |
 | Des données de collecte (ce qu'un script rapporte en volume : captures, exports, planches, sous-titres) | hors du dépôt, dans le dossier de l'outil ou du plugin qui les produit, avec sa propre sauvegarde ; le workspace n'en garde que la fiche |
 | Une image | le dossier qui s'en sert, avec sa ligne dans `_images.md` |
-| Une question du rangement qui attend ta réponse | `outbox/questions.md` ; l'élément attend dans l'inbox. Sans réponse après 14 jours, le rangement applique la proposition si elle se défait (jamais supprimer, installer, envoyer ni dépenser) |
-| Ce qui reste ouvert (prochaines étapes des projets, points de reprise des bilans, alertes qui durent) | `outbox/points-ouverts.md`, généré chaque nuit par `systeme/scripts/points_ouverts.py` ; l'agent le passe en revue en session |
+| Une question du rangement qui attend ta réponse | `bureau/questions.md` ; l'élément attend dans l'inbox. Sans réponse après 14 jours, le rangement applique la proposition si elle se défait (jamais supprimer, installer, envoyer ni dépenser) |
+| Ce qui reste ouvert (prochaines étapes des projets, points de reprise des bilans, alertes qui durent) | `bureau/points-ouverts.md`, généré chaque nuit par `systeme/scripts/points_ouverts.py` ; l'agent le passe en revue en session |
 | Un profil d'installation | `inbox/`, puis `archives/inbox/` une fois installé |
 | Un entretien (`grill-me`) | `journal/entretiens/<sujet>-AA-MM.md` |
 | Le bilan d'une session (`bilan`) | la partie « Historique » de `projets/<slug>.md` (les 3 derniers) ; les plus anciens : `archives/historique/<slug>.md` |
 | Le code d'un tiers (l'interface de Jay) | `interface/`, avec sa licence ; il garde ses propres règles (pas d'en-tête, pas d'`_index.md`) |
 | Un élément de l'inbox déjà traité | `archives/inbox/AAAA-MM/` |
-| Un point du jour vieux de plus de 7 jours | `archives/outbox/` |
+| Un point du jour vieux de plus de 7 jours | `archives/bureau/` |
 
 ## Le cœur et les plugins
 
-Le socle garde le cœur : les fiches et leurs en-têtes, les deux portes (inbox et outbox), les projets, la mémoire, les routines et leur alerte, les skills système, les connexions, les réglages, et l'interface qui les montre. Tout le reste est un plugin : une veille, un éditeur vidéo, un tableau de bord, le lien avec une plateforme.
+Le socle garde le cœur : les fiches et leurs en-têtes, les deux portes (inbox et outbox) et le bureau, les projets, la mémoire, les routines et leur alerte, les skills système, les connexions, les réglages, et l'interface qui les montre. Tout le reste est un plugin : une veille, un éditeur vidéo, un tableau de bord, le lien avec une plateforme.
 
 - Un plugin apporte ce qu'il lui faut : son code, ses données, ses routines, ses skills. Rien de lui ne vit dans le cœur, et le cœur marche sans lui.
 - L'interface les lance depuis une page à vignettes (à construire) : une vignette par plugin, avec un lien vers lui ; un plugin pas encore installé reste visible, grisé.
@@ -67,7 +68,7 @@ Le socle fournit une base qui marche sans rien changer. Les domaines et les type
 ## Nommage
 
 - Minuscules, tirets, sans espaces ni accents.
-- Daté : `<slug>-AA-MM.md`, le titre d'abord, puis l'année et le mois de `cree`. Durable : `<slug>.md`. Le point du jour garde le nom de son jour (`outbox/points/AAAA-MM-JJ.md`).
+- Daté : `<slug>-AA-MM.md`, le titre d'abord, puis l'année et le mois de `cree`. Durable : `<slug>.md`. Le point du jour garde le nom de son jour (`bureau/points/AAAA-MM-JJ.md`).
 - Pas de dossier par type : le type est dans l'en-tête. Seul le domaine est un dossier ; un objet de plusieurs fichiers a le sien, et ses sous-objets y vivent.
 - Pas de dossier fourre-tout (`notes/`, `misc/`, `tmp/`). Un nouveau dossier se justifie par deux « oui » sur trois : concept nouveau, usage répété le mois suivant, place pour une future skill.
 
@@ -95,7 +96,7 @@ Le socle fournit une base qui marche sans rien changer. Les domaines et les type
 | `memory/MEMORY.md` | 100 lignes |
 | `_index.md` | 100 lignes |
 | `SKILL.md` | 80 lignes. De 81 à 120 : une alerte. Au-delà de 120 : il devient un index qui renvoie vers `references/` |
-| `outbox/points/` | 7 jours |
+| `bureau/points/` | 7 jours |
 | Un fichier du dépôt | 50 Mo. Au-delà : une alerte, et la sauvegarde de nuit s'arrête (GitHub refuse un fichier de plus de 100 Mo) |
 
 Une skill reprise telle quelle d'un auteur extérieur peut être dispensée du plafond et de la famille : une ligne dans le tableau « Skill dispensée » de la section « Ce workspace » de `systeme/metadonnees.md`.
