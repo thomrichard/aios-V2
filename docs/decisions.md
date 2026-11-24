@@ -286,3 +286,9 @@ Les choix qui ont façonné le socle, et leur pourquoi. Une entrée par décisio
 - **Pourquoi.** Le mot « outbox » désignait à la fois un dossier, un onglet, un statut et un tableau de bord : on ne savait plus ce qu'il voulait dire. Séparer ce qui part de ce qui est en cours rend chaque mot net.
 - **Écarté.** Un onglet Bureau dans l'interface : il viendra plus tard. Mettre les projets sur le bureau.
 - **Pour un workspace déjà installé.** La mise à jour déplace les points du jour et `questions.md`. Déplace toi-même `outbox/points-ouverts.md` et `outbox/commentaires.json` dans `bureau/` s'ils existent, et les vieux points de `archives/outbox/` dans `archives/bureau/`.
+
+## 2026-11-24 · Reprendre un ancien AIOS
+
+- **Décision.** Une skill système `migration` reprend un ancien AIOS dans un workspace installé à côté. Elle lit l'ancien dossier sans y écrire, écrit un inventaire (`journal/entretiens/migration-AA-MM.md` : une ligne par élément, avec « reprendre », « adapter » ou « laisser »), puis applique après accord, une couche à la fois : règles, mémoire, projets et domaines, skills, fichiers. Elle porte une table de correspondance pour la structure IPCRA (celle de la skill `aios-bootstrap`) ; pour une autre structure, elle écrit sa correspondance et la fait valider. `installation` la propose à la fin quand le profil vient d'un ancien AIOS.
+- **Pourquoi.** Beaucoup d'utilisateurs ont déjà un AIOS rangé autrement. L'installation n'en reprenait que le profil : les règles, la mémoire et les skills restaient dans l'ancien, et l'utilisateur gardait deux systèmes.
+- **Écarté.** Convertir l'ancien dossier sur place : on écrase, sans retour arrière. Tout verser dans `inbox/` : le rangement de nuit traite 20 éléments par nuit. Reprendre les clés, les connecteurs et les routines : l'utilisateur les rebranche lui-même, la skill en donne la liste. Un nouveau type pour l'inventaire : `entretien` suffit.

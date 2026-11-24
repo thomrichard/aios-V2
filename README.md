@@ -50,6 +50,7 @@ Le reste (skills deck, agenda, e-mails, stats) se branche avec les guides de `in
 
 1. **Préparer son profil.** Avec la skill `grill-me` et la liste `skills/installation/references/questions.md`, on répond aux questions imposées. On obtient un profil, sur le gabarit `skills/installation/references/profil.md`. C'est l'étape à faire avant un atelier ; sans dépôt sous la main, on peut donner ces trois fichiers à n'importe quel Claude.
 2. **Installer en une phrase.** On donne à son agent l'adresse du socle et son profil (voir plus haut). L'installation reprend le profil, ne pose que les questions restantes, et range chaque réponse à sa place.
+3. **Reprendre un ancien AIOS.** Tu as déjà un AIOS rangé autrement : installe celui-ci à côté, avec l'ancien `CLAUDE.md` comme profil, puis écris « reprends mon ancien AIOS : <dossier> ». La skill `migration` rend un inventaire, puis reprend ce qui sert, une couche à la fois : règles, mémoire, projets, skills, fichiers. L'ancien dossier n'est jamais modifié.
 
 ## L'installation à la main
 
