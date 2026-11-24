@@ -37,6 +37,7 @@ metadata:
 7. L'interface : si `node --version` donne 18 ou plus, lance `node interface/refresh/run.mjs`, puis propose `python3 systeme/scripts/interface.py installer` pour la garder allumée ; sinon, dis comment installer Node.
 8. Les routines : montre-les (`python3 systeme/scripts/routines.py etat`) et propose d'allumer celles qui entretiennent l'AIOS la nuit : `python3 systeme/scripts/routines.py installer rangement validation-de-nuit alerte-des-routines`, plus `sauvegarde-de-nuit` s'il a donné un dépôt privé (Q15). L'alerte des routines prévient le matin quand l'une d'elles a échoué ou n'a pas tourné. Allume-les après son oui seulement. Dis-lui qu'un ordinateur éteint ou endormi les lance à son réveil.
 9. Termine par un résumé : ce qui est rempli, ce qui reste « À définir », et les routines en place.
+10. Si le profil était un ancien AIOS (son `CLAUDE.md`, son dossier), propose de reprendre le reste avec la skill `migration` : règles, mémoire, projets, skills, fichiers. Ne la lance qu'après son oui.
 
 ## Garde-fous
 - Propose avant de demander : pour les domaines et les types, une suggestion de `references/catalogue.md`, expliquée en mots simples, à garder, renommer ou retirer.
@@ -62,3 +63,4 @@ metadata:
 - 2026-11-13 · Smarty, nom proposé par défaut pour l'agent (Q1) · un nom prêt pour qui n'en a pas en tête
 - 2026-11-13 · à la fin, propose d'allumer les routines de nuit avec routines.py · un AIOS neuf qui s'entretient seul dès le premier soir
 - 2026-11-14 · l'alerte des routines s'allume avec les routines de nuit · une sauvegarde bloquée sept nuits de suite n'avait été vue par personne
+- 2026-11-24 · à la fin, propose `migration` quand le profil vient d'un ancien AIOS · l'installation n'en reprend que le profil
