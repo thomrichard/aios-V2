@@ -65,14 +65,15 @@ La nuit, l'agent travaille seul. Quand il hésite, il ne devine pas : il met l'�
 
 Le « socle » est la partie commune à tous les AIOS : règles, scripts, skills de base. Il ne contient rien de personnel. Ta personnalisation va dans des endroits précis (ton profil dans `AGENTS.md`, tes domaines dans la section « Ce workspace » de `systeme/metadonnees.md`, ta mémoire, tes projets). Tu peux donc récupérer les mises à jour du socle sans perdre ce qui est à toi.
 
-## Au quotidien : deux portes
+## Au quotidien : deux portes et un bureau
 
-Tu n'as que deux dossiers à connaître. Tout le reste est rangé pour l'IA.
+Tu n'as que trois dossiers à connaître. Tout le reste est rangé pour l'IA.
 
 - **`inbox/`, la porte d'entrée.** Tu y déposes tout, en vrac : un fichier, une dictée, un lien, une note. Le fichier `inbox/capture.md` sert aux idées rapides : une par ligne.
-- **`outbox/`, la porte de sortie.** Tu y lis le point du jour (`outbox/points/`), les questions qui attendent ta réponse (`outbox/questions.md`) et une page (`outbox/index.html`) qui montre ce qui est prêt.
+- **`outbox/`, la porte de sortie.** Ce qui doit partir, et une page (`outbox/index.html`) qui montre ce qui est prêt.
+- **`bureau/`, ce qui est en cours.** Ce que tu regardes aujourd'hui : le point du jour (`bureau/points/`), les questions qui attendent ta réponse (`bureau/questions.md`), les points ouverts (`bureau/points-ouverts.md`) et les commentaires laissés sur les fiches. Rien n'en sort ; les projets restent dans `projets/`.
 
-Chaque nuit à 2 h, le rangement vide l'inbox, range chaque élément à sa place et t'écrit le point du jour.
+Chaque nuit à 2 h, le rangement vide l'inbox, range chaque élément à sa place et pose le point du jour sur ton bureau.
 
 ```mermaid
 flowchart LR
@@ -80,15 +81,16 @@ flowchart LR
     Veille([Routines de capture]) -- "ce qu'elles trouvent dehors" --> Inbox
     Inbox --> Nuit{{Rangement de nuit, 2 h}}
     Nuit -- "range à sa place" --> Domaines[domaines/, savoir/, projets/…]
-    Nuit -- "écrit" --> Outbox[outbox/]
-    Domaines -. "un livrable à valider s'y affiche" .-> Outbox
-    Outbox -- "point du jour, questions, vitrine" --> Toi
+    Nuit -- "écrit" --> Bureau[bureau/]
+    Bureau -- "point du jour, questions" --> Toi
+    Domaines -. "un livrable à valider s'y affiche" .-> Outbox[outbox/]
+    Outbox -- "ce qui part" --> Toi
 ```
 
-Deux règles tiennent ces portes propres :
+Deux règles tiennent ces dossiers propres :
 
 - **L'outbox est une vitrine, pas un rangement.** Un livrable reste dans son domaine. Il apparaît dans la page de l'outbox grâce à son statut `a-valider`. *Exemple : une proposition commerciale à relire reste dans `domaines/clients/` ; tu la vois dans l'outbox tant qu'elle attend ta validation.*
-- **La nuit, aucune question.** Ce qui demande une réponse attend dans `outbox/questions.md`. En début de session, l'agent te dit combien il y en a et propose d'y répondre.
+- **La nuit, aucune question.** Ce qui demande une réponse attend sur le bureau, dans `bureau/questions.md`. En début de session, l'agent te dit combien il y en a et propose d'y répondre.
 
 ### Le chemin d'un élément, de l'inbox à sa place
 
@@ -108,7 +110,7 @@ flowchart TD
     B -- "image" --> I["rangée dans le dossier qui s'en sert,<br/>avec sa ligne dans _images.md"]
     F --> C["classer : choisit type, domaine,<br/>statut, résumé, projet"]
     C --> D{Sûr de lui ?}
-    D -- non --> Q["une question dans outbox/questions.md ;<br/>l'élément attend dans l'inbox"]
+    D -- non --> Q["une question dans bureau/questions.md ;<br/>l'élément attend dans l'inbox"]
     D -- oui --> R["ranger.py : déplace le fichier<br/>à la place que donne son en-tête"]
     R --> P[Sa place, pour toute sa vie]
     R -- "vidéo ou son" --> L["dossier des fichiers lourds,<br/>hors du dépôt ; la fiche garde son chemin"]

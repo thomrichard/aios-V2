@@ -23,7 +23,8 @@ L'agent fait tout : il récupère le socle, dépose ton profil dans `inbox/` et 
 ## Ce que tu touches
 
 - `inbox/` : tu y déposes tout (fichiers, liens, notes, dictées). Elle est vidée chaque nuit à 2 h : chaque élément reçoit ses métadonnées et se range tout seul.
-- `outbox/` : tu y lis le point du jour (`outbox/points/`), les questions qui attendent ta réponse (`outbox/questions.md`) et la page `outbox/index.html`, qui montre tout ce qui est sorti, tes process et tes skills.
+- `bureau/` : tu y lis ce qui t'attend aujourd'hui : le point du jour (`bureau/points/`), les questions qui attendent ta réponse (`bureau/questions.md`) et les points ouverts (`bureau/points-ouverts.md`).
+- `outbox/` : ce qui doit partir, et la page `outbox/index.html`, qui montre tes livrables, tes process et tes skills.
 
 Le reste est rangé pour l'IA. Tu n'as jamais besoin de l'ouvrir.
 

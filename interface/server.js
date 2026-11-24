@@ -28,7 +28,7 @@
      /local/files            every file of the workspace with its header (GET)
      /local/files/read /local/files/raw /local/files/search   one file's text, an image, a search in the text (GET)
      /local/files/save       saves one file, then runs systeme/scripts/index.py (POST, local pages only)
-     /local/commentaires     the comments left on files, in outbox/commentaires.json (GET; POST adds, edits, removes)
+     /local/commentaires     the comments left on files, in bureau/commentaires.json (GET; POST adds, edits, removes)
      /local/assets           every image, font and PDF, with its line from _images.md (GET, the Bibliothèque tab)
    Project page (the Projets tab, GET; edits go through /local/files/save)
      /local/projets          every project with its header and progress
@@ -733,13 +733,13 @@ function serveRaw(req, res, rel) {
 }
 
 /* ---- comments on a file (the Fichiers tab) ----
-   AIOS: the comments left on a file live in one waiting file, outbox/commentaires.json, never in the file itself.
+   AIOS: the comments left on a file live in one waiting file, bureau/commentaires.json, never in the file itself.
    It keeps only living comments: one that is dealt with (by the agent after « Envoyer à l’agent », or « Résoudre ») leaves
    it, with no archive. A comment keeps the passage it is about (citation) with a little text before and after
    (avant, apres), so the page finds it again after the text changes; without a passage it is about the whole file.
    A write checks the file as the editor does (in the workspace, not hidden, not a secret, not generated) and never
    overwrites a waiting file that does not read as JSON: the agent may edit it by hand. */
-const NOTES_REL = 'outbox/commentaires.json', NOTES_MAX = 2000, NOTE_ID = /^c-[a-z0-9]{4,16}$/;
+const NOTES_REL = 'bureau/commentaires.json', NOTES_MAX = 2000, NOTE_ID = /^c-[a-z0-9]{4,16}$/;
 const NOTE_KEYS = ['id', 'fiche', 'cree', 'citation', 'avant', 'apres', 'pos', 'ligne', 'texte', 'calibrer', 'envoye', 'maj'];
 const NOTES_NOTE = 'Les commentaires vivants laissés dans l’onglet Fichiers. Un commentaire traité sort de ce fichier (par son id), sans archive. Écrit par interface/server.js (/local/commentaires).';
 const noteClip = (s, n) => String(s ?? '').replace(/\r\n?/g, '\n').slice(0, n);
@@ -1505,7 +1505,7 @@ function finDe(root, type) {
   return 'clos';
 }
 function countQuestions(root) {
-  return readText(path.join(root, 'outbox', 'questions.md')).split(/\r?\n/).filter(l => /^\s*[-*]\s+\S/.test(l)).length;
+  return readText(path.join(root, 'bureau', 'questions.md')).split(/\r?\n/).filter(l => /^\s*[-*]\s+\S/.test(l)).length;
 }
 
 /* projects: the slug and title of each project of projets/, the files each cites in Livrables or Sources, and the folders it cites */
@@ -2062,7 +2062,7 @@ function reglerRoutine({ cle, cron, etat, plafond, niveau }) {
    systeme/metadonnees.md and the top folders that keep an _index.md, with the skills and the connectors further out.
    A folder: its sub-folders, or its files (the 12 most recent named, the others as dust). The server counts, the page
    draws: no level ever sends the 2,000 files. */
-const ORBITE_HORS = new Set(['archives', 'vues', 'systeme', 'interface', 'outbox', 'skills', 'routers', 'domaines']);
+const ORBITE_HORS = new Set(['archives', 'vues', 'systeme', 'interface', 'outbox', 'bureau', 'skills', 'routers', 'domaines']);
 const ORBITE_COULEURS = ['#2EE6C9', '#B69CFF', '#FBBF24', '#F472B6', '#4DA8FF', '#4ADE80', '#FF7A45', '#67E8F9'];
 const ORBITE_NEUTRE = '#9DB0AC', ORBITE_NOMMES = 12, ORBITE_LISTE = 2000;
 /* the files a level counts: the ones the explorer shows (pourMoi) */

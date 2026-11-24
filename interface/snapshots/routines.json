@@ -28,7 +28,7 @@
       "id": "points-ouverts",
       "name": "Points ouverts",
       "source": "planificateur",
-      "desc": "chaque nuit, 1 h 30 · sans IA · directe, passive : regroupe dans `outbox/points-ouverts.md` la prochaine étape de chaque projet, les points de reprise des derniers bilans et les alertes du vérificateur présentes depuis 3 jours ; l'agent les passe en revue en session",
+      "desc": "chaque nuit, 1 h 30 · sans IA · directe, passive : regroupe dans `bureau/points-ouverts.md` la prochaine étape de chaque projet, les points de reprise des derniers bilans et les alertes du vérificateur présentes depuis 3 jours ; l'agent les passe en revue en session",
       "status": "paused",
       "cron": "30 1 * * *"
     },

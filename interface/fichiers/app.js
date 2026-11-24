@@ -19,7 +19,7 @@
     set(k, v) { try { localStorage.setItem('sm4rt-fichiers:' + k, JSON.stringify(v)); } catch (_) { } }
   };
   /* the top folders: the domains first, then the two doors, then the rest */
-  const ORDER = ['domaines', 'projets', 'processus', 'inbox', 'outbox', 'journal', 'savoir', 'bibliotheques', 'memory', 'skills', 'routers', 'vues', 'systeme', 'docs', 'archives'];
+  const ORDER = ['domaines', 'projets', 'processus', 'inbox', 'outbox', 'bureau', 'journal', 'savoir', 'bibliotheques', 'memory', 'skills', 'routers', 'vues', 'systeme', 'docs', 'archives'];
   const FIELDS = { type: 'Tous', statut: 'Tous' };
   const BIG = 250 * 1024;   /* above this, no colours under the text box: typing stays instant */
   const ICONS = {

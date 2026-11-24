@@ -567,13 +567,7 @@ def ligne_processus(nom, e, liste, derniers):
 
 
 def page_outbox():
-    points_dir = os.path.join(RACINE, "outbox", "points")
-    points = sorted((p for p in os.listdir(points_dir) if p.endswith(".md")), reverse=True) \
-        if os.path.isdir(points_dir) else []
-    lignes = []
-    for p in points:
-        lignes.append(f'<tr><td>{html.escape(p[:-3])}</td><td>Point du jour</td>'
-                      f'<td><a href="points/{html.escape(p)}">{html.escape(p)}</a></td><td></td></tr>')
+    lignes = []  # le point du jour vit dans bureau/ : l'outbox ne montre que ce qui sort
     for maj, chemin, e in livrables():
         lignes.append(f'<tr><td>{html.escape(maj)}</td><td>{html.escape(e.get("resume", ""))}</td>'
                       f'<td><a href="../{html.escape(chemin)}">{html.escape(chemin)}</a></td>'

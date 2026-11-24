@@ -14,7 +14,7 @@ metadata:
    - le routeur du domaine ;
    - les dernières lignes de `journal/log.md` ;
    - `journal/entretiens/`, puis `archives/historique/` pour un vieux bilan ;
-   - les lignes « à reprendre » de `inbox/capture.md`, et `outbox/questions.md`.
+   - les lignes « à reprendre » de `inbox/capture.md`, et `bureau/questions.md`.
    Plusieurs candidats : une seule question pour choisir. Rien : dis-le, et propose d'en faire un projet.
 2. **Lis l'essentiel, pas tout :** la fiche du projet (statut, prochaine étape, tâches, décisions, fichiers) ; les dernières lignes du journal ; la dernière entrée de sa partie « Historique », s'il y en a une (son point de reprise). Les fichiers liés (`vues/projet-<slug>.md` les liste tous, où qu'ils soient rangés) : leur en-tête d'abord, leur contenu seulement si la prochaine action en dépend.
 3. **Donne le point, en 5 à 8 lignes :**
