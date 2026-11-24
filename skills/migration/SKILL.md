@@ -1,6 +1,6 @@
 ---
 name: migration
-description: Reprend un ancien AIOS dans celui-ci, installé à côté. Lit l'ancien dossier sans y écrire, rend un inventaire (une ligne par élément : reprendre, adapter ou laisser), puis applique après accord, une couche à la fois : règles, mémoire, projets et domaines, skills, fichiers. À lancer après l'installation. Déclencheurs : « reprends mon ancien AIOS », « migre mon AIOS », « migration », « reprends la skill X de mon ancien AIOS ».
+description: Reprend un ancien AIOS dans celui-ci, installé à côté. Lit l'ancien dossier sans y écrire, rend un inventaire (une ligne par élément : reprendre, adapter, laisser, ou garder une carte), puis applique après accord, une couche à la fois : règles, mémoire, projets et domaines, skills, fichiers. À lancer après l'installation. Déclencheurs : « reprends mon ancien AIOS », « migre mon AIOS », « migration », « reprends la skill X de mon ancien AIOS ».
 metadata:
   famille: systeme
 ---
@@ -19,7 +19,7 @@ L'ancien AIOS reste où il est, intact. On reprend ce qui sert ; le reste viendr
 3. Une autre structure : écris ta propre correspondance, dossier par dossier, sur le modèle de cette table, et fais-la valider avant l'inventaire.
 
 ## 2. L'inventaire
-1. Écris `journal/entretiens/migration-AA-MM.md`, avec le gabarit `references/inventaire.md` : une ligne par élément, ta proposition (reprendre, adapter, laisser), son pourquoi en quelques mots, et où il irait.
+1. Écris `journal/entretiens/migration-AA-MM.md`, avec le gabarit `references/inventaire.md` : une ligne par élément, ta proposition (reprendre, adapter, laisser, ou carte), son pourquoi en quelques mots, et où il irait.
 2. Un dossier de plus de 20 fichiers : une ligne par sous-dossier, pas par fichier ; s'il est à plat, une ligne par groupe de son index, ou par type. Un groupe dont une partie se reprend et l'autre non : deux lignes.
 3. Montre l'inventaire, une couche après l'autre. L'utilisateur corrige tes propositions ; tu mets le tableau à jour. Rien n'est encore repris.
 
@@ -58,3 +58,4 @@ L'utilisateur peut s'arrêter après n'importe quelle couche : ce qui est fait r
 ## Journal des changements
 - 2026-11-24 · création · beaucoup d'utilisateurs ont déjà un AIOS rangé autrement, et l'installation n'en reprenait que le profil
 - 2026-11-24 · après le premier essai sur un vrai vault : suivre les imports du `CLAUDE.md`, les dossiers à plat, les notes sensibles jamais ouvertes, aucune commande Git dans l'ancien dossier, ce qui a déjà été repris à la main · 24 remarques de l'essai
+- 2026-11-24 · quatrième proposition, « carte » : les fichiers restent dans l'ancien dossier, une fiche ici dit ce qu'ils contiennent · demandée trois fois sur dix-huit réponses au premier essai

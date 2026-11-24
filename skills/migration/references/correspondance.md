@@ -107,7 +107,8 @@ Seulement ce qui sert encore. Propose par sous-dossier, pas par fichier, et écr
 4. Un `[[lien]]` vers une note reprise devient un lien Markdown avec son chemin. Vers une note laissée : garde le texte, sans les crochets.
 5. Une image suit sa note, avec sa ligne dans `_images.md`. Une vidéo ou un son part dans le dossier des fichiers lourds (`ranger.py` le fait) ; si ce dossier n'est pas réglé, laisse le fichier et dis-le.
 6. Un fichier propre à un outil (un canvas, une base Obsidian) : laisser, sauf demande.
-7. À la fin du lot, montre où chaque fichier est allé, et attends le oui avant le lot suivant.
+7. **Une carte.** Un dossier que l'utilisateur veut garder en vue sans le reprendre (un projet fermé, une grosse réserve de notes) : écris une seule fiche ici, avec `fiche` puis `classer`. Elle dit ce qu'on y a fait, liste ses fichiers ou ses sous-dossiers, une ligne chacun, et donne le chemin de l'ancien dossier. L'utilisateur y choisit plus tard ce qu'il reprend.
+8. À la fin du lot, montre où chaque fichier est allé, et attends le oui avant le lot suivant.
 
 ## À faire toi-même
 

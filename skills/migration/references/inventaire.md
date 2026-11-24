@@ -2,7 +2,7 @@
 
 Un seul fichier par migration : `journal/entretiens/migration-AA-MM.md`. Il dit ce que devient chaque élément de l'ancien AIOS, et il permet de reprendre après une pause.
 
-- **Proposition** : `reprendre` (tel quel, à sa nouvelle place), `adapter` (réécrit pour ce workspace) ou `laisser` (il reste dans l'ancien dossier).
+- **Proposition** : `reprendre` (tel quel, à sa nouvelle place), `adapter` (réécrit pour ce workspace), `laisser` (il reste dans l'ancien dossier), ou `carte` (il reste dans l'ancien dossier, et une fiche ici dit ce qu'il contient et où le retrouver).
 - **État** : vide tant que rien n'est fait ; puis `fait AAAA-MM-JJ`, ou `laissé`.
 - Une ligne par élément ; au-delà de 20 fichiers dans un dossier, une ligne par sous-dossier (ou par groupe, s'il est à plat), avec son nombre de fichiers. Un groupe au sort mixte : deux lignes.
 - Pour les fichiers, « Où il va » dit aussi le nombre de lots : 45 fichiers, 3 lots.
