@@ -4,7 +4,8 @@ Un seul fichier par migration : `journal/entretiens/migration-AA-MM.md`. Il dit 
 
 - **Proposition** : `reprendre` (tel quel, à sa nouvelle place), `adapter` (réécrit pour ce workspace) ou `laisser` (il reste dans l'ancien dossier).
 - **État** : vide tant que rien n'est fait ; puis `fait AAAA-MM-JJ`, ou `laissé`.
-- Une ligne par élément ; au-delà de 20 fichiers dans un dossier, une ligne par sous-dossier, avec son nombre de fichiers.
+- Une ligne par élément ; au-delà de 20 fichiers dans un dossier, une ligne par sous-dossier (ou par groupe, s'il est à plat), avec son nombre de fichiers. Un groupe au sort mixte : deux lignes.
+- Pour les fichiers, « Où il va » dit aussi le nombre de lots : 45 fichiers, 3 lots.
 - Le pourquoi tient en quelques mots : « doublon de `bilan` », « projet fini en mars », « sert chaque semaine ».
 
 ```markdown
@@ -65,5 +66,5 @@ Structure : <IPCRA, ou la correspondance validée, en une ligne>
 
 ## Questions ouvertes
 
-- <ce que l'ancien AIOS ne dit pas, et qu'il faut demander>
+- <ce que l'ancien AIOS ne dit pas, et qu'il faut demander> · proposition : <ta proposition>
 ```
