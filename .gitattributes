@@ -1,0 +1,12 @@
+# Journaux en ajout seul : les lignes des deux côtés se gardent.
+journal/log.md merge=union
+journal/routines.jsonl merge=union
+
+# Fichiers générés par systeme/scripts/index.py : on garde notre version, puis index.py les refait
+# (systeme/scripts/synchro.sh déclare le pilote « ours » sur chaque machine).
+_index.md merge=ours
+vues/*.md merge=ours
+outbox/index.html merge=ours
+interface/config/departments.json merge=ours
+interface/config/apps.json merge=ours
+interface/snapshots/routines.json merge=ours
