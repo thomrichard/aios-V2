@@ -183,6 +183,9 @@ def main():
         print(f"Agent inconnu : {agent} (claude, codex ou gemini)")
         return 1
     commande = shlex.split(env.get(f"CMD_{agent.upper()}", COMMANDES[agent]))
+    # Le jeton longue durée de claude (claude setup-token) : une session de nuit ne peut pas se reconnecter seule
+    if env.get("CLAUDE_CODE_OAUTH_TOKEN"):
+        os.environ["CLAUDE_CODE_OAUTH_TOKEN"] = env["CLAUDE_CODE_OAUTH_TOKEN"]
 
     modele = a.modele
     if not modele:
