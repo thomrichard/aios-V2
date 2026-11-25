@@ -36,9 +36,17 @@
       "id": "sauvegarde-de-nuit",
       "name": "Sauvegarde de nuit",
       "source": "planificateur",
-      "desc": "chaque nuit, 3 h · sans IA · directe, passive : récupère ce que tes autres machines ont envoyé, puis envoie le travail du jour vers prive",
+      "desc": "chaque nuit, 3 h · sans IA · directe, passive : sur l'ordinateur, jamais sur un serveur ; enregistre le travail du jour, récupère ce que tes autres machines ont envoyé, refait les fichiers générés, puis envoie vers prive",
       "status": "paused",
       "cron": "0 3 * * *"
+    },
+    {
+      "id": "synchro-serveur",
+      "name": "Synchro serveur",
+      "source": "planificateur",
+      "desc": "chaque nuit, 4 h 20 · sans IA · directe, passive : sur un serveur seulement, après la sauvegarde de l'ordinateur ; récupère GitHub sans fusion ; si une fiche non enregistrée ou un enregistrement pas encore envoyé bloque, ne touche à rien et sort en échec",
+      "status": "ondemand",
+      "cron": "20 4 * * *"
     },
     {
       "id": "alerte-des-routines",

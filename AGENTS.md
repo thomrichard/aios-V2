@@ -87,6 +87,8 @@ Ordre de recherche : d'abord la carte (ce fichier), puis le routeur, l'index ou 
 
 Demande avant de supprimer ou d'écraser un fichier, de réécrire l'historique Git, de toucher un système externe (envoyer, publier, modifier un outil en ligne), d'installer un logiciel ou de dépenser de l'argent ; dans ce dernier cas, donne le coût estimé et attends le oui. Lire, chercher, construire et tester se font sans demander.
 
+Sur un serveur : tout ce qu'une session crée ou modifie y reste jusqu'au « valide » de l'utilisateur, sans commit ni envoi sur GitHub avant ; après le « valide », envoie avec `bash systeme/scripts/synchro.sh envoyer "<message>"`. La sauvegarde de nuit ne tourne pas sur un serveur : `systeme/routines.md`, « Sur un serveur ».
+
 Avant de dire « c'est fait », vérifie : relance le test ou relis le fichier. Dis-le si une tâche s'est interrompue. Avant un gros travail (plus de cinq minutes), préviens en une ligne.
 
 ## Règles
