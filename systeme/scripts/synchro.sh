@@ -21,6 +21,25 @@ sur_main() {
   return 1
 }
 
+# Fusionne ce qu'on vient de récupérer. Une autre routine peut écrire pendant ce temps (sa ligne de journal,
+# quand plusieurs routines partent à la même seconde au réveil de la machine) : Git refuse alors de fusionner
+# par-dessus un fichier pas enregistré. On enregistre donc juste avant de fusionner, et on recommence si ça arrive encore.
+fusionner() {
+  local message="$1" tour
+  for tour in 1 2 3; do
+    git add -A
+    if ! git diff --cached --quiet; then git commit -q --no-verify -m "$message"; fi
+    if git merge -q --no-edit "$DEPOT/$BRANCHE" >/dev/null 2>&1; then return 0; fi
+    # Une fusion commencée puis arrêtée : un vrai conflit, pas une écriture en cours.
+    if git rev-parse -q --verify MERGE_HEAD >/dev/null; then
+      echo "en conflit : $(git diff --name-only --diff-filter=U | head -10 | tr '\n' ' ')"
+      git merge --abort 2>/dev/null
+      return 1
+    fi
+  done
+  return 1
+}
+
 envoyer() {
   local message="${1:-Sauvegarde de nuit}"
   sur_main || return 1
@@ -30,8 +49,11 @@ envoyer() {
   # Deux essais : si une autre machine a envoyé entre la fusion et l'envoi, on refusionne une fois.
   local essai
   for essai in 1 2; do
-    if ! git pull -q --no-rebase --no-edit "$DEPOT" "$BRANCHE"; then
-      git merge --abort 2>/dev/null
+    if ! git fetch -q "$DEPOT" "$BRANCHE"; then
+      echo "GitHub injoignable : rien n'est envoyé, l'enregistrement reste sur cette machine"
+      return 1
+    fi
+    if ! fusionner "$message"; then
       echo "fusion avec GitHub bloquée par un conflit : rien n'est envoyé, l'enregistrement reste sur cette machine"
       return 1
     fi
